@@ -1,0 +1,389 @@
+# MD ROC Return v3.15 —— 五院政府与立法院（由 _tools/make_gov.py 生成）
+# 变量：TAI_gov_<premier|legis|judicial|exam|control> = 人选编号；TAI_ly_* = 立法院席次（225 席）；TAI_gy_* = 施政效果
+
+# Scope: ROC-CHI。按执政党选默认阁揆；总统不得兼任行政院长，所以跳过总统本人
+TAI_gov_pick_default_premier = {
+	if = {
+		limit = { check_variable = { ruling_party = 1 } }
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_lien_chan } } } set_variable = { TAI_gov_premier = 1 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_ma_ying_jeou } } } set_variable = { TAI_gov_premier = 2 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_eric_chu } } } set_variable = { TAI_gov_premier = 3 } }
+	}
+	else_if = {
+		limit = { check_variable = { ruling_party = 14 } }
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_james_soong } } } set_variable = { TAI_gov_premier = 6 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_eric_chu } } } set_variable = { TAI_gov_premier = 3 } }
+	}
+	else_if = {
+		limit = { check_variable = { ruling_party = 2 } }
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_wang_bingzhang } } } set_variable = { TAI_gov_premier = 7 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_xu_wenli } } } set_variable = { TAI_gov_premier = 8 } }
+	}
+	else_if = {
+		limit = { check_variable = { ruling_party = 3 } }
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_zheng_jianbang } } } set_variable = { TAI_gov_premier = 9 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_xu_jialu } } } set_variable = { TAI_gov_premier = 11 } }
+	}
+	else_if = {
+		limit = { check_variable = { ruling_party = 16 } }
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_xu_jialu } } } set_variable = { TAI_gov_premier = 11 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_zheng_jianbang } } } set_variable = { TAI_gov_premier = 9 } }
+	}
+	else = {
+		if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_hao_bo_cun } } } set_variable = { TAI_gov_premier = 12 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_ma_ying_jeou } } } set_variable = { TAI_gov_premier = 2 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_lien_chan } } } set_variable = { TAI_gov_premier = 1 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_eric_chu } } } set_variable = { TAI_gov_premier = 3 } }
+		else_if = { limit = { NOT = { has_country_leader = { name = ROC_ldr_xu_jialu } } } set_variable = { TAI_gov_premier = 11 } }
+	}
+}
+
+# Scope: ROC-CHI。每月检查：新任总统恰是现任行政院长时，依宪法去职并换人
+TAI_gov_president_check = {
+	if = { limit = { check_variable = { TAI_gov_premier = 1 } has_country_leader = { name = ROC_ldr_lien_chan } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 2 } has_country_leader = { name = ROC_ldr_ma_ying_jeou } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 3 } has_country_leader = { name = ROC_ldr_eric_chu } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 4 } has_country_leader = { name = ROC_ldr_wang_yang } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 5 } has_country_leader = { name = ROC_ldr_chen_liangyu } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 6 } has_country_leader = { name = ROC_ldr_james_soong } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 7 } has_country_leader = { name = ROC_ldr_wang_bingzhang } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 8 } has_country_leader = { name = ROC_ldr_xu_wenli } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 9 } has_country_leader = { name = ROC_ldr_zheng_jianbang } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 10 } has_country_leader = { name = ROC_ldr_hu_jintao } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 11 } has_country_leader = { name = ROC_ldr_xu_jialu } } set_country_flag = TAI_gov_pres_conflict }
+	if = { limit = { check_variable = { TAI_gov_premier = 12 } has_country_leader = { name = ROC_ldr_hao_bo_cun } } set_country_flag = TAI_gov_pres_conflict }
+	if = {
+		limit = { has_country_flag = TAI_gov_pres_conflict }
+		clr_country_flag = TAI_gov_pres_conflict
+		TAI_gov_pick_default_premier = yes
+		set_variable = { TAI_gov_premier_since = global.num_days }
+		TAI_gov_recalc = yes
+		country_event = { id = TAI_gov.9 days = 1 }
+	}
+}
+
+# Scope: ROC-CHI。光复时或旧存档首次调用：任命首任五院院长、选出第一届立法院
+TAI_gov_init = {
+	if = {
+		limit = { NOT = { has_variable = TAI_gov_premier } }
+		TAI_gov_pick_default_premier = yes
+		set_variable = { TAI_gov_legis = 1 }
+		set_variable = { TAI_gov_judicial = 1 }
+		set_variable = { TAI_gov_exam = 1 }
+		set_variable = { TAI_gov_control = 1 }
+		set_variable = { TAI_gov_last_party = ruling_party }
+		set_variable = { TAI_gov_premier_since = global.num_days }
+		TAI_ly_election = yes
+	}
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_five_yuan_modifier } } } add_dynamic_modifier = { modifier = TAI_five_yuan_modifier } }
+	TAI_gov_recalc = yes
+}
+
+# Scope: ROC-CHI。立委选举：席次 = 225 × 政党支持度
+TAI_ly_election = {
+	set_variable = { TAI_ly_kmt = party_pop_array^1 }
+	multiply_variable = { TAI_ly_kmt = 225 }
+	round_variable = TAI_ly_kmt
+	set_variable = { TAI_ly_dp = party_pop_array^2 }
+	multiply_variable = { TAI_ly_dp = 225 }
+	round_variable = TAI_ly_dp
+	set_variable = { TAI_ly_sd = party_pop_array^3 }
+	multiply_variable = { TAI_ly_sd = 225 }
+	round_variable = TAI_ly_sd
+	set_variable = { TAI_ly_pfp = party_pop_array^14 }
+	multiply_variable = { TAI_ly_pfp = 225 }
+	round_variable = TAI_ly_pfp
+	set_variable = { TAI_ly_cpc = party_pop_array^4 }
+	multiply_variable = { TAI_ly_cpc = 225 }
+	round_variable = TAI_ly_cpc
+	set_variable = { TAI_ly_next_election = global.num_days }
+	add_to_variable = { TAI_ly_next_election = 1095 }
+	add_to_variable = { TAI_ly_term = 1 }
+	TAI_gov_recalc = yes
+}
+
+# Scope: ROC-CHI。重新计算执政联盟席次、施政效果、面板数字
+TAI_gov_recalc = {
+	set_variable = { TAI_ly_other = 225 }
+	subtract_from_variable = { TAI_ly_other = TAI_ly_kmt }
+	subtract_from_variable = { TAI_ly_other = TAI_ly_dp }
+	subtract_from_variable = { TAI_ly_other = TAI_ly_sd }
+	subtract_from_variable = { TAI_ly_other = TAI_ly_pfp }
+	subtract_from_variable = { TAI_ly_other = TAI_ly_cpc }
+	clamp_variable = { var = TAI_ly_other min = 0 max = 225 }
+	set_variable = { TAI_ly_gov = 0 }
+	if = { limit = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } add_to_variable = { TAI_ly_gov = TAI_ly_kmt } }
+	if = { limit = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } add_to_variable = { TAI_ly_gov = TAI_ly_dp } }
+	if = { limit = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } add_to_variable = { TAI_ly_gov = TAI_ly_sd } }
+	if = { limit = { OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } } add_to_variable = { TAI_ly_gov = TAI_ly_pfp } }
+	if = { limit = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } add_to_variable = { TAI_ly_gov = TAI_ly_cpc } }
+	if = { limit = { NOT = { check_variable = { ruling_party = 1 } check_variable = { ruling_party = 2 } check_variable = { ruling_party = 3 } check_variable = { ruling_party = 14 } check_variable = { ruling_party = 4 } } }
+		set_temp_variable = { ly_t = TAI_ly_other }
+		multiply_temp_variable = { ly_t = 0.4 }
+		add_to_variable = { TAI_ly_gov = ly_t }
+	}
+	clamp_variable = { var = TAI_ly_gov min = 0 max = 225 }
+	round_variable = TAI_ly_gov
+	set_variable = { TAI_ly_support = TAI_ly_gov }
+	divide_variable = { TAI_ly_support = 225 }
+	set_variable = { TAI_ly_support_pct = TAI_ly_support }
+	multiply_variable = { TAI_ly_support_pct = 100 }
+	set_variable = { TAI_ly_kmt_pct = TAI_ly_kmt }
+	divide_variable = { TAI_ly_kmt_pct = 2.25 }
+	set_variable = { TAI_ly_dp_pct = TAI_ly_dp }
+	divide_variable = { TAI_ly_dp_pct = 2.25 }
+	set_variable = { TAI_ly_sd_pct = TAI_ly_sd }
+	divide_variable = { TAI_ly_sd_pct = 2.25 }
+	set_variable = { TAI_ly_pfp_pct = TAI_ly_pfp }
+	divide_variable = { TAI_ly_pfp_pct = 2.25 }
+	set_variable = { TAI_ly_cpc_pct = TAI_ly_cpc }
+	divide_variable = { TAI_ly_cpc_pct = 2.25 }
+	set_variable = { TAI_ly_other_pct = TAI_ly_other }
+	divide_variable = { TAI_ly_other_pct = 2.25 }
+	# 施政效果
+	set_variable = { TAI_gy_pp = 0 }
+	set_variable = { TAI_gy_stab = 0 }
+	set_variable = { TAI_gy_res = 0 }
+	set_variable = { TAI_gy_build = 0 }
+	set_variable = { TAI_gy_ws = 0 }
+	if = { limit = { check_variable = { TAI_gov_premier = 1 } } add_to_variable = { TAI_gy_pp = 0.1 } add_to_variable = { TAI_gy_stab = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 2 } } add_to_variable = { TAI_gy_stab = 0.04 } add_to_variable = { TAI_gy_build = 0.05 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 3 } } add_to_variable = { TAI_gy_build = 0.1 } add_to_variable = { TAI_gy_pp = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 4 } } add_to_variable = { TAI_gy_build = 0.08 } add_to_variable = { TAI_gy_stab = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 5 } } add_to_variable = { TAI_gy_build = 0.06 } add_to_variable = { TAI_gy_pp = 0.05 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 6 } } add_to_variable = { TAI_gy_pp = 0.08 } add_to_variable = { TAI_gy_build = 0.05 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 7 } } add_to_variable = { TAI_gy_stab = 0.03 } add_to_variable = { TAI_gy_res = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 8 } } add_to_variable = { TAI_gy_pp = 0.05 } add_to_variable = { TAI_gy_stab = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 9 } } add_to_variable = { TAI_gy_stab = 0.05 } add_to_variable = { TAI_gy_pp = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 10 } } add_to_variable = { TAI_gy_stab = 0.05 } add_to_variable = { TAI_gy_build = 0.05 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 11 } } add_to_variable = { TAI_gy_res = 0.05 } add_to_variable = { TAI_gy_stab = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 12 } } add_to_variable = { TAI_gy_ws = 0.05 } add_to_variable = { TAI_gy_stab = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_legis = 1 } } add_to_variable = { TAI_gy_pp = 0.05 } }
+	if = { limit = { check_variable = { TAI_gov_legis = 2 } } add_to_variable = { TAI_gy_ws = 0.03 } add_to_variable = { TAI_gy_pp = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_legis = 3 } } add_to_variable = { TAI_gy_stab = 0.02 } add_to_variable = { TAI_gy_pp = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_legis = 4 } } add_to_variable = { TAI_gy_stab = 0.02 } add_to_variable = { TAI_gy_res = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_legis = 5 } } add_to_variable = { TAI_gy_res = 0.03 } add_to_variable = { TAI_gy_pp = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_judicial = 1 } } add_to_variable = { TAI_gy_stab = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_judicial = 2 } } add_to_variable = { TAI_gy_pp = 0.03 } add_to_variable = { TAI_gy_stab = 0.01 } }
+	if = { limit = { check_variable = { TAI_gov_judicial = 3 } } add_to_variable = { TAI_gy_stab = 0.02 } add_to_variable = { TAI_gy_build = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_exam = 1 } } add_to_variable = { TAI_gy_res = 0.03 } }
+	if = { limit = { check_variable = { TAI_gov_exam = 2 } } add_to_variable = { TAI_gy_pp = 0.03 } add_to_variable = { TAI_gy_stab = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_exam = 3 } } add_to_variable = { TAI_gy_res = 0.02 } add_to_variable = { TAI_gy_stab = 0.01 } }
+	if = { limit = { check_variable = { TAI_gov_control = 1 } } add_to_variable = { TAI_gy_stab = 0.04 } }
+	if = { limit = { check_variable = { TAI_gov_control = 2 } } add_to_variable = { TAI_gy_stab = 0.02 } add_to_variable = { TAI_gy_pp = 0.02 } }
+	if = { limit = { check_variable = { TAI_gov_control = 3 } } add_to_variable = { TAI_gy_stab = 0.02 } add_to_variable = { TAI_gy_build = 0.02 } }
+	if = {
+		limit = { check_variable = { TAI_ly_support < 0.5 } }
+		set_country_flag = TAI_ly_minority
+		add_to_variable = { TAI_gy_pp = -0.10 }
+		add_to_variable = { TAI_gy_stab = -0.03 }
+	}
+	else = { clr_country_flag = TAI_ly_minority }
+	if = { limit = { check_variable = { TAI_gov_premier = 1 } } set_variable = { TAI_gov_premier_party = 1 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 2 } } set_variable = { TAI_gov_premier_party = 1 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 3 } } set_variable = { TAI_gov_premier_party = 1 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 4 } } set_variable = { TAI_gov_premier_party = 1 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 5 } } set_variable = { TAI_gov_premier_party = 1 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 6 } } set_variable = { TAI_gov_premier_party = 14 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 7 } } set_variable = { TAI_gov_premier_party = 2 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 8 } } set_variable = { TAI_gov_premier_party = 2 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 9 } } set_variable = { TAI_gov_premier_party = 3 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 10 } } set_variable = { TAI_gov_premier_party = 3 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 11 } } set_variable = { TAI_gov_premier_party = 16 } }
+	if = { limit = { check_variable = { TAI_gov_premier = 12 } } set_variable = { TAI_gov_premier_party = 0 } }
+	TAI_ly_dots = yes
+	TAI_gov_daily = yes
+	force_update_dynamic_modifier = yes
+}
+
+# Scope: ROC-CHI。面板倒计时
+TAI_gov_daily = {
+	set_variable = { TAI_ly_days_left = TAI_ly_next_election }
+	subtract_from_variable = { TAI_ly_days_left = global.num_days }
+	clamp_variable = { var = TAI_ly_days_left min = 0 max = 1200 }
+	set_variable = { TAI_gov_premier_days = global.num_days }
+	subtract_from_variable = { TAI_gov_premier_days = TAI_gov_premier_since }
+}
+
+# Scope: ROC-CHI，每月：立委改选、执政党更替后提名新阁揆、少数政府的倒阁风险
+TAI_gov_monthly = {
+	TAI_gov_president_check = yes
+	if = {
+		limit = { check_variable = { global.num_days > TAI_ly_next_election } }
+		TAI_ly_election = yes
+		country_event = { id = TAI_gov.3 days = 1 }
+	}
+	if = {
+		limit = { NOT = { check_variable = { TAI_gov_last_party = ruling_party } } }
+		set_variable = { TAI_gov_last_party = ruling_party }
+		if = { limit = { NOT = { check_variable = { TAI_gov_premier_party = ruling_party } } } country_event = { id = TAI_gov.1 days = 3 } }
+	}
+	if = {
+		limit = { has_country_flag = TAI_ly_minority NOT = { has_country_flag = TAI_ly_noconf_cd } }
+		random_list = {
+			6 = { set_country_flag = { flag = TAI_ly_noconf_cd days = 365 } country_event = { id = TAI_gov.4 days = 2 } }
+			94 = { }
+		}
+	}
+	# v3.19 动态席次：党员跳槽（每月向支持度靠拢 3%）与零星倒戈
+	TAI_ly_drift = yes
+	random_list = {
+		76 = { }
+		12 = { set_temp_variable = { ly_shift = random } multiply_temp_variable = { ly_shift = 4 } add_to_temp_variable = { ly_shift = 1 } TAI_ly_shift_from_gov = yes }
+		12 = { set_temp_variable = { ly_shift = random } multiply_temp_variable = { ly_shift = 4 } add_to_temp_variable = { ly_shift = 1 } TAI_ly_shift_to_gov = yes }
+	}
+	TAI_gov_recalc = yes
+}
+
+# Scope: ROC-CHI。立法院行使同意权（gov_nominee = 被提名人编号）
+TAI_gov_vote_premier = {
+	if = {
+		limit = { check_variable = { TAI_ly_support > 0.499 } }
+		custom_effect_tooltip = TAI_gov_vote_pass_tt
+		TAI_gov_seat_premier = yes
+	}
+	else = {
+		custom_effect_tooltip = TAI_gov_vote_risky_tt
+		random_list = {
+			55 = { TAI_gov_seat_premier = yes }
+			45 = { country_event = { id = TAI_gov.2 days = 1 } }
+		}
+	}
+}
+TAI_gov_seat_premier = {
+	set_temp_variable = { gov_pres_bad = 0 }
+	if = { limit = { check_variable = { gov_nominee = 1 } has_country_leader = { name = ROC_ldr_lien_chan } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 2 } has_country_leader = { name = ROC_ldr_ma_ying_jeou } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 3 } has_country_leader = { name = ROC_ldr_eric_chu } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 4 } has_country_leader = { name = ROC_ldr_wang_yang } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 5 } has_country_leader = { name = ROC_ldr_chen_liangyu } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 6 } has_country_leader = { name = ROC_ldr_james_soong } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 7 } has_country_leader = { name = ROC_ldr_wang_bingzhang } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 8 } has_country_leader = { name = ROC_ldr_xu_wenli } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 9 } has_country_leader = { name = ROC_ldr_zheng_jianbang } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 10 } has_country_leader = { name = ROC_ldr_hu_jintao } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 11 } has_country_leader = { name = ROC_ldr_xu_jialu } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = { limit = { check_variable = { gov_nominee = 12 } has_country_leader = { name = ROC_ldr_hao_bo_cun } } set_temp_variable = { gov_pres_bad = 1 } }
+	if = {
+		limit = { check_variable = { gov_pres_bad = 0 } }
+		set_variable = { TAI_gov_premier = gov_nominee }
+		set_variable = { TAI_gov_premier_since = global.num_days }
+		TAI_gov_recalc = yes
+	}
+}
+
+
+# Scope: ROC-CHI，每月：席次向各党支持度靠拢 3%（党员跳槽、补选）
+TAI_ly_drift = {
+	set_temp_variable = { ly_t = party_pop_array^1 }
+	multiply_temp_variable = { ly_t = 225 }
+	subtract_from_temp_variable = { ly_t = TAI_ly_kmt }
+	multiply_temp_variable = { ly_t = 0.03 }
+	add_to_variable = { TAI_ly_kmt = ly_t }
+	clamp_variable = { var = TAI_ly_kmt min = 0 max = 225 }
+	set_temp_variable = { ly_t = party_pop_array^2 }
+	multiply_temp_variable = { ly_t = 225 }
+	subtract_from_temp_variable = { ly_t = TAI_ly_dp }
+	multiply_temp_variable = { ly_t = 0.03 }
+	add_to_variable = { TAI_ly_dp = ly_t }
+	clamp_variable = { var = TAI_ly_dp min = 0 max = 225 }
+	set_temp_variable = { ly_t = party_pop_array^3 }
+	multiply_temp_variable = { ly_t = 225 }
+	subtract_from_temp_variable = { ly_t = TAI_ly_sd }
+	multiply_temp_variable = { ly_t = 0.03 }
+	add_to_variable = { TAI_ly_sd = ly_t }
+	clamp_variable = { var = TAI_ly_sd min = 0 max = 225 }
+	set_temp_variable = { ly_t = party_pop_array^14 }
+	multiply_temp_variable = { ly_t = 225 }
+	subtract_from_temp_variable = { ly_t = TAI_ly_pfp }
+	multiply_temp_variable = { ly_t = 0.03 }
+	add_to_variable = { TAI_ly_pfp = ly_t }
+	clamp_variable = { var = TAI_ly_pfp min = 0 max = 225 }
+	set_temp_variable = { ly_t = party_pop_array^4 }
+	multiply_temp_variable = { ly_t = 225 }
+	subtract_from_temp_variable = { ly_t = TAI_ly_cpc }
+	multiply_temp_variable = { ly_t = 0.03 }
+	add_to_variable = { TAI_ly_cpc = ly_t }
+	clamp_variable = { var = TAI_ly_cpc min = 0 max = 225 }
+}
+
+# Scope: ROC-CHI。执政党增加 ly_shift 席：先从无党籍拉拢，不够再从最大的在野党挖角
+TAI_ly_shift_to_gov = {
+	round_temp_variable = ly_shift
+	set_temp_variable = { ly_add = ly_shift }
+	set_temp_variable = { ly_rem = ly_shift }
+	subtract_from_temp_variable = { ly_rem = TAI_ly_other }
+	if = {
+		limit = { check_variable = { ly_rem > 0 } }
+		set_temp_variable = { ly_best = -1 }
+		set_temp_variable = { ly_best_v = 0 }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } check_variable = { TAI_ly_kmt > ly_best_v } } set_temp_variable = { ly_best_v = TAI_ly_kmt } set_temp_variable = { ly_best = 1 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } check_variable = { TAI_ly_dp > ly_best_v } } set_temp_variable = { ly_best_v = TAI_ly_dp } set_temp_variable = { ly_best = 2 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } check_variable = { TAI_ly_sd > ly_best_v } } set_temp_variable = { ly_best_v = TAI_ly_sd } set_temp_variable = { ly_best = 3 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } } check_variable = { TAI_ly_pfp > ly_best_v } } set_temp_variable = { ly_best_v = TAI_ly_pfp } set_temp_variable = { ly_best = 14 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } check_variable = { TAI_ly_cpc > ly_best_v } } set_temp_variable = { ly_best_v = TAI_ly_cpc } set_temp_variable = { ly_best = 4 } }
+		if = {
+			limit = { check_variable = { ly_rem > ly_best_v } }
+			set_temp_variable = { ly_rem = ly_best_v }
+			set_temp_variable = { ly_add = TAI_ly_other }
+			add_to_temp_variable = { ly_add = ly_rem }
+		}
+		if = { limit = { check_variable = { ly_best = 1 } } subtract_from_variable = { TAI_ly_kmt = ly_rem } }
+		if = { limit = { check_variable = { ly_best = 2 } } subtract_from_variable = { TAI_ly_dp = ly_rem } }
+		if = { limit = { check_variable = { ly_best = 3 } } subtract_from_variable = { TAI_ly_sd = ly_rem } }
+		if = { limit = { check_variable = { ly_best = 14 } } subtract_from_variable = { TAI_ly_pfp = ly_rem } }
+		if = { limit = { check_variable = { ly_best = 4 } } subtract_from_variable = { TAI_ly_cpc = ly_rem } }
+	}
+	if = { limit = { check_variable = { ruling_party = 1 } } add_to_variable = { TAI_ly_kmt = ly_add } clamp_variable = { var = TAI_ly_kmt min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 2 } } add_to_variable = { TAI_ly_dp = ly_add } clamp_variable = { var = TAI_ly_dp min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 3 } } add_to_variable = { TAI_ly_sd = ly_add } clamp_variable = { var = TAI_ly_sd min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 14 } } add_to_variable = { TAI_ly_pfp = ly_add } clamp_variable = { var = TAI_ly_pfp min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 4 } } add_to_variable = { TAI_ly_cpc = ly_add } clamp_variable = { var = TAI_ly_cpc min = 0 max = 225 } }
+	TAI_gov_recalc = yes
+}
+
+# Scope: ROC-CHI。执政党有 ly_shift 席倒戈成为无党籍
+TAI_ly_shift_from_gov = {
+	round_temp_variable = ly_shift
+	if = { limit = { check_variable = { ruling_party = 1 } } subtract_from_variable = { TAI_ly_kmt = ly_shift } clamp_variable = { var = TAI_ly_kmt min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 2 } } subtract_from_variable = { TAI_ly_dp = ly_shift } clamp_variable = { var = TAI_ly_dp min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 3 } } subtract_from_variable = { TAI_ly_sd = ly_shift } clamp_variable = { var = TAI_ly_sd min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 14 } } subtract_from_variable = { TAI_ly_pfp = ly_shift } clamp_variable = { var = TAI_ly_pfp min = 0 max = 225 } }
+	if = { limit = { check_variable = { ruling_party = 4 } } subtract_from_variable = { TAI_ly_cpc = ly_shift } clamp_variable = { var = TAI_ly_cpc min = 0 max = 225 } }
+	TAI_gov_recalc = yes
+}
+
+# Scope: ROC-CHI。立法院半圆席位点：一席一点（225 点）
+TAI_ly_dots = {
+	if = { limit = { NOT = { has_variable = TAI_ly_dot^224 } } resize_array = { array = TAI_ly_dot value = 7 size = 225 } }
+	set_temp_variable = { pc_cpc = TAI_ly_cpc }
+	round_temp_variable = pc_cpc
+	set_temp_variable = { pcum_1 = pc_cpc }
+	set_temp_variable = { pc_sd = TAI_ly_sd }
+	round_temp_variable = pc_sd
+	set_temp_variable = { pcum_2 = pcum_1 }
+	add_to_temp_variable = { pcum_2 = pc_sd }
+	set_temp_variable = { pc_dp = TAI_ly_dp }
+	round_temp_variable = pc_dp
+	set_temp_variable = { pcum_3 = pcum_2 }
+	add_to_temp_variable = { pcum_3 = pc_dp }
+	set_temp_variable = { pc_other = TAI_ly_other }
+	round_temp_variable = pc_other
+	set_temp_variable = { pcum_4 = pcum_3 }
+	add_to_temp_variable = { pcum_4 = pc_other }
+	set_temp_variable = { pc_pfp = TAI_ly_pfp }
+	round_temp_variable = pc_pfp
+	set_temp_variable = { pcum_5 = pcum_4 }
+	add_to_temp_variable = { pcum_5 = pc_pfp }
+	for_loop_effect = {
+		start = 0
+		end = 225
+		value = pk
+		if = { limit = { check_variable = { pk < pcum_1 } } set_variable = { TAI_ly_dot^pk = 6 } }
+		else_if = { limit = { check_variable = { pk < pcum_2 } } set_variable = { TAI_ly_dot^pk = 3 } }
+		else_if = { limit = { check_variable = { pk < pcum_3 } } set_variable = { TAI_ly_dot^pk = 2 } }
+		else_if = { limit = { check_variable = { pk < pcum_4 } } set_variable = { TAI_ly_dot^pk = 5 } }
+		else_if = { limit = { check_variable = { pk < pcum_5 } } set_variable = { TAI_ly_dot^pk = 4 } }
+		else = { set_variable = { TAI_ly_dot^pk = 1 } }
+	}
+}

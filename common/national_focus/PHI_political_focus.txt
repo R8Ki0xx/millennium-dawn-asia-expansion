@@ -1,0 +1,775 @@
+# MD ROC Return v3.20 —— 菲律宾政治线（由 _tools/v320_phi.py 生成）
+focus_tree = {
+	id = philippines_political_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = PHI
+			NOT = { has_country_flag = PHI_political_line_done }
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = PHIP_post_edsa
+		icon = filipino_unity
+		x = 11
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_post_edsa"
+			add_political_power = 100
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PHIP_a_straight_path
+		icon = Election_graphics
+		x = 2
+		y = 2
+		cost = 7
+		prerequisite = { focus = PHIP_post_edsa }
+		mutually_exclusive = { focus = PHIP_b_strongman focus = PHIP_c_coalition focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_straight_path"
+			set_temp_variable = { rul_party_temp = 2 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_a_clean_gov
+		icon = MEX_War_on_corruption
+		x = 0
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_a_straight_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_clean_gov"
+			set_temp_variable = { temp_change = -30 }
+			PHI_change_the_strength_of_corruption = yes
+			if = { limit = { NOT = { has_idea = PHIP_clean_government_idea } } add_ideas = PHIP_clean_government_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_a_oslo_talks
+		icon = peaceduuude
+		x = 2
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_a_straight_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_oslo_talks"
+			set_temp_variable = { temp_change = -20 }
+			PHI_change_strength_of_npa = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_a_anti_dynasty
+		icon = control_judiciary
+		x = 4
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_a_straight_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_anti_dynasty"
+			set_country_flag = PHI_anti_dynasty_law_active
+			set_temp_variable = { temp_change = -10 }
+			PHI_change_the_strength_of_corruption = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_a_bangsamoro
+		icon = autonomy
+		x = 0
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_a_clean_gov focus = PHIP_a_anti_dynasty }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_bangsamoro"
+			set_temp_variable = { temp_change = -40 }
+			PHI_change_strength_of_milf = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_a_us_alliance
+		icon = align_to_america
+		x = 4
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_a_anti_dynasty }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_us_alliance"
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_us_ally } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_phi_us_ally }
+			}
+			if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_us_cool } } }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_a_end_insurgency
+		icon = treaty2
+		x = 2
+		y = 5
+		cost = 10
+		prerequisite = { focus = PHIP_a_oslo_talks }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = PHIP_npa_low_tt
+			check_variable = { PHI_strength_of_npa < 30 }
+			}
+		}
+		bypass = {
+			has_country_flag = PHI_ended_the_communist_insurgency
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_end_insurgency"
+			set_country_flag = PHI_ended_the_communist_insurgency
+			PHI_end_the_communist_insurgency = yes
+			add_stability = 0.05
+			add_political_power = 75
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_a_final
+		icon = democratic_stability
+		x = 2
+		y = 6
+		cost = 10
+		prerequisite = { focus = PHIP_a_bangsamoro focus = PHIP_a_us_alliance }
+		prerequisite = { focus = PHIP_a_end_insurgency }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_a_final"
+			add_political_power = 75
+			add_stability = 0.04
+			country_event = { id = roc_asia.20 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_b_strongman
+		icon = Generic_Policeman
+		x = 8
+		y = 2
+		cost = 7
+		prerequisite = { focus = PHIP_post_edsa }
+		mutually_exclusive = { focus = PHIP_a_straight_path focus = PHIP_c_coalition focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_strongman"
+			set_temp_variable = { rul_party_temp = 5 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 5 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+			if = { limit = { NOT = { has_idea = PHIP_strongman_idea } } add_ideas = PHIP_strongman_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_b_drug_war
+		icon = Generic_Jungle_Insurgency
+		x = 6
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_b_strongman }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_drug_war"
+			set_temp_variable = { temp_change = -10 }
+			PHI_change_the_strength_of_corruption = yes
+			add_war_support = 0.03
+			add_stability = -0.02
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_b_crush_npa
+		icon = generic_counter_insurgency_icon
+		x = 8
+		y = 3
+		cost = 10
+		prerequisite = { focus = PHIP_b_strongman }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_crush_npa"
+			set_temp_variable = { temp_change = -25 }
+			PHI_change_strength_of_npa = yes
+			army_experience = 15
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_b_federalism
+		icon = Focus_Parliament_Constitution
+		x = 10
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_b_strongman }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_federalism"
+			add_political_power = 50
+			set_temp_variable = { temp_change = -30 }
+			PHI_change_strength_of_milf = yes
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_b_build_build_build
+		icon = construct_infrastructure
+		x = 6
+		y = 4
+		cost = 10
+		prerequisite = { focus = PHIP_b_drug_war }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_build_build_build"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_b_terror_designation
+		icon = communist_purge
+		x = 8
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_b_crush_npa }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = PHIP_npa_low_tt
+			check_variable = { PHI_strength_of_npa < 30 }
+			}
+		}
+		bypass = {
+			has_country_flag = PHI_ended_the_communist_insurgency
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_terror_designation"
+			set_country_flag = PHI_ended_the_communist_insurgency
+			PHI_end_the_communist_insurgency = yes
+			add_stability = 0.03
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_b_independent_foreign
+		icon = align_to_china
+		x = 10
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_b_federalism }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_independent_foreign"
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_china_pivot } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_phi_china_pivot }
+			}
+			if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_us_cool } } }
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PHIP_b_final
+		icon = oligarchs
+		x = 8
+		y = 5
+		cost = 10
+		prerequisite = { focus = PHIP_b_build_build_build focus = PHIP_b_independent_foreign }
+		prerequisite = { focus = PHIP_b_terror_designation }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_b_final"
+			add_political_power = 75
+			add_stability = 0.03
+			country_event = { id = roc_asia.21 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_c_coalition
+		icon = coalition_army
+		x = 14
+		y = 2
+		cost = 7
+		prerequisite = { focus = PHIP_post_edsa }
+		mutually_exclusive = { focus = PHIP_a_straight_path focus = PHIP_b_strongman focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_coalition"
+			set_temp_variable = { rul_party_temp = 1 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+			if = { limit = { NOT = { has_idea = PHIP_coalition_idea } } add_ideas = PHIP_coalition_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_c_economy_first
+		icon = economic_prosperity
+		x = 12
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_c_coalition }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_economy_first"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_c_peace_dev_teams
+		icon = bread_and_peace
+		x = 14
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_c_coalition }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_peace_dev_teams"
+			set_temp_variable = { temp_change = -15 }
+			PHI_change_strength_of_npa = yes
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_c_bpo_remittances
+		icon = economic_it
+		x = 16
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_c_coalition }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_bpo_remittances"
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+			set_temp_variable = { percent_change = 2 }
+			set_temp_variable = { influence_target = USA }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_c_amnesty
+		icon = diplomatic_treaty
+		x = 12
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_c_economy_first focus = PHIP_c_peace_dev_teams }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_amnesty"
+			set_temp_variable = { temp_change = -20 }
+			PHI_change_strength_of_npa = yes
+			set_temp_variable = { temp_change = -30 }
+			PHI_change_strength_of_milf = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_c_end_insurgency
+		icon = peace
+		x = 14
+		y = 4
+		cost = 10
+		prerequisite = { focus = PHIP_c_peace_dev_teams }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = PHIP_npa_low_tt
+			check_variable = { PHI_strength_of_npa < 30 }
+			}
+		}
+		bypass = {
+			has_country_flag = PHI_ended_the_communist_insurgency
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_end_insurgency"
+			set_country_flag = PHI_ended_the_communist_insurgency
+			PHI_end_the_communist_insurgency = yes
+			add_stability = 0.04
+			army_experience = 15
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_c_balanced_diplomacy
+		icon = align_to_asean
+		x = 16
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_c_bpo_remittances }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_balanced_diplomacy"
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_us_ally } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_phi_us_ally }
+			}
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_phi_china_pivot } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_phi_china_pivot }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_c_final
+		icon = legislative_palace
+		x = 14
+		y = 5
+		cost = 10
+		prerequisite = { focus = PHIP_c_amnesty focus = PHIP_c_balanced_diplomacy }
+		prerequisite = { focus = PHIP_c_end_insurgency }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_c_final"
+			add_political_power = 75
+			add_stability = 0.03
+			country_event = { id = roc_asia.22 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_d_people_power
+		icon = social_democracy
+		x = 20
+		y = 2
+		cost = 7
+		prerequisite = { focus = PHIP_post_edsa }
+		mutually_exclusive = { focus = PHIP_a_straight_path focus = PHIP_b_strongman focus = PHIP_c_coalition }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_people_power"
+			set_temp_variable = { rul_party_temp = 3 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 3 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+			if = { limit = { NOT = { has_idea = PHIP_social_democracy_idea } } add_ideas = PHIP_social_democracy_idea }
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = PHIP_d_land_reform
+		icon = focus_generic_land_redistribution
+		x = 18
+		y = 3
+		cost = 10
+		prerequisite = { focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_land_reform"
+			set_temp_variable = { temp_opinion = 15 }
+			change_farmers_opinion = yes
+			set_temp_variable = { temp_opinion = -15 }
+			change_landowners_opinion = yes
+			set_temp_variable = { temp_change = -20 }
+			PHI_change_strength_of_npa = yes
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PHIP_d_legalize_left
+		icon = union_negotiations
+		x = 20
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_legalize_left"
+			set_temp_variable = { party_index = 4 }
+			set_temp_variable = { party_popularity_increase = 0.05 }
+			set_temp_variable = { temp_outlook_increase = 0.05 }
+			change_relative_party_popularity = yes
+			set_temp_variable = { temp_change = -15 }
+			PHI_change_strength_of_npa = yes
+			set_temp_variable = { temp_opinion = 8 }
+			change_labour_unions_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_d_labour_rights
+		icon = Farmers_strike
+		x = 22
+		y = 3
+		cost = 7
+		prerequisite = { focus = PHIP_d_people_power }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_labour_rights"
+			set_temp_variable = { temp_opinion = 12 }
+			change_labour_unions_opinion = yes
+			set_temp_variable = { temp_opinion = -8 }
+			change_industrial_conglomerates_opinion = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_d_universal_health
+		icon = generic_healthcare
+		x = 18
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_d_land_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_universal_health"
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PHIP_d_ceasefire
+		icon = white_peace
+		x = 20
+		y = 4
+		cost = 10
+		prerequisite = { focus = PHIP_d_legalize_left }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = PHIP_npa_low_tt
+			check_variable = { PHI_strength_of_npa < 30 }
+			}
+		}
+		bypass = {
+			has_country_flag = PHI_ended_the_communist_insurgency
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_ceasefire"
+			set_country_flag = PHI_ended_the_communist_insurgency
+			PHI_end_the_communist_insurgency = yes
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_d_non_aligned
+		icon = align_to_asean
+		x = 22
+		y = 4
+		cost = 7
+		prerequisite = { focus = PHIP_d_labour_rights }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_non_aligned"
+			add_political_power = 50
+			set_temp_variable = { percent_change = 2 }
+			set_temp_variable = { influence_target = CHI }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PHIP_d_final
+		icon = welfare
+		x = 20
+		y = 5
+		cost = 10
+		prerequisite = { focus = PHIP_d_universal_health focus = PHIP_d_non_aligned }
+		prerequisite = { focus = PHIP_d_ceasefire }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_d_final"
+			add_political_power = 75
+			add_stability = 0.04
+			country_event = { id = roc_asia.23 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PHIP_new_consensus
+		icon = Election
+		x = 11
+		y = 8
+		cost = 10
+		prerequisite = { focus = PHIP_a_final focus = PHIP_b_final focus = PHIP_c_final focus = PHIP_d_final }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PHIP_new_consensus"
+			if = { limit = { NOT = { has_idea = PHIP_national_consensus_idea } } add_ideas = PHIP_national_consensus_idea }
+			set_country_flag = PHI_political_line_done
+			if = { limit = { has_dynamic_modifier = { modifier = PHI_npa_insurgency_dynamic_modifier } } set_country_flag = PHI_ended_the_communist_insurgency PHI_end_the_communist_insurgency = yes }
+			country_event = { id = roc_asia.24 days = 1 }
+			load_focus_tree = { tree = generic_focus keep_completed = yes }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+}

@@ -1,0 +1,200 @@
+# MD ROC Return v3.9 —— 港澳问题
+TAI_hk_macau_category = {
+	TAI_dec_hkg_sovereignty = {
+		icon = GFX_decision_generic_china
+		cost = 50
+		days_re_enable = 90
+		visible = {
+			country_exists = HKG
+			NOT = { HKG = { is_subject_of = ROOT } }
+			NOT = { has_country_flag = TAI_hkg_settled }
+			NOT = { has_country_flag = TAI_hkg_integrating }
+		}
+		available = { NOT = { has_war_with = HKG } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_hkg_sovereignty"
+			HKG = { country_event = { id = roc_return.97 days = 2 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	TAI_dec_hkg_autonomy = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		visible = {
+			country_exists = HKG
+			HKG = { is_subject_of = ROOT }
+			NOT = { has_country_flag = TAI_hkg_settled }
+			NOT = { has_country_flag = TAI_hkg_integrating }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_hkg_autonomy"
+			set_country_flag = TAI_hkg_settled
+			set_country_flag = TAI_hkg_autonomy
+			add_stability = 0.03
+			add_ideas = TAI_hkg_sar_dividend_idea
+			HKG = {
+				add_stability = 0.05
+				TAI_hkg_roc_sar_setup = yes
+			}
+			custom_effect_tooltip = TAI_hkg_tree_tt
+		}
+		ai_will_do = { base = 30 modifier = { factor = 2 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } }
+	}
+
+	TAI_dec_hkg_integrate = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 365
+		visible = {
+			country_exists = HKG
+			OR = {
+				has_country_flag = TAI_hkg_integrating
+				AND = {
+					HKG = { is_subject_of = ROOT }
+					NOT = { has_country_flag = TAI_hkg_settled }
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_hkg_integrate"
+			set_country_flag = TAI_hkg_integrating
+			HKG = { add_ideas = TAI_sar_integration_idea }
+		}
+		remove_effect = {
+			clr_country_flag = TAI_hkg_integrating
+			set_country_flag = TAI_hkg_settled
+			if = {
+				limit = { country_exists = HKG HKG = { is_subject_of = ROOT } }
+				add_state_core = 595
+				annex_country = { target = HKG transfer_troops = yes }
+				add_stability = 0.02
+				add_political_power = 50
+			}
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	TAI_dec_hkg_reclaim = {
+		icon = GFX_decision_generic_military
+		cost = 25
+		visible = {
+			country_exists = HKG
+			HKG = { is_subject_of = ROOT }
+			NOT = { has_country_flag = TAI_hkg_settled }
+			NOT = { has_country_flag = TAI_hkg_integrating }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_hkg_reclaim"
+			set_country_flag = TAI_hkg_settled
+			add_state_core = 595
+			annex_country = { target = HKG transfer_troops = yes }
+			add_stability = -0.05
+			every_country = {
+				limit = { OR = { tag = ENG tag = USA } }
+				add_opinion_modifier = { target = ROOT modifier = TAI_sar_crackdown }
+			}
+			595 = { add_compliance = -10 }
+		}
+		ai_will_do = { base = 5 modifier = { factor = 4 has_global_flag = TAI_RETURN_FOCUS_PATH } }
+	}
+
+	TAI_dec_mac_sovereignty = {
+		icon = GFX_decision_generic_china
+		cost = 50
+		days_re_enable = 90
+		visible = {
+			country_exists = MAC
+			NOT = { MAC = { is_subject_of = ROOT } }
+			NOT = { has_country_flag = TAI_mac_settled }
+			NOT = { has_country_flag = TAI_mac_integrating }
+		}
+		available = { NOT = { has_war_with = MAC } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_mac_sovereignty"
+			MAC = { country_event = { id = roc_return.97 days = 2 } }
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	TAI_dec_mac_autonomy = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		visible = {
+			country_exists = MAC
+			MAC = { is_subject_of = ROOT }
+			NOT = { has_country_flag = TAI_mac_settled }
+			NOT = { has_country_flag = TAI_mac_integrating }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_mac_autonomy"
+			set_country_flag = TAI_mac_settled
+			set_country_flag = TAI_mac_autonomy
+			add_stability = 0.03
+			add_ideas = TAI_mac_sar_dividend_idea
+			MAC = {
+				add_stability = 0.05
+				add_ideas = TAI_mac_roc_sar_idea
+			}
+			
+		}
+		ai_will_do = { base = 30 modifier = { factor = 2 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } }
+	}
+
+	TAI_dec_mac_integrate = {
+		icon = GFX_decision_generic_construction
+		cost = 75
+		days_remove = 365
+		visible = {
+			country_exists = MAC
+			OR = {
+				has_country_flag = TAI_mac_integrating
+				AND = {
+					MAC = { is_subject_of = ROOT }
+					NOT = { has_country_flag = TAI_mac_settled }
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_mac_integrate"
+			set_country_flag = TAI_mac_integrating
+			MAC = { add_ideas = TAI_sar_integration_idea }
+		}
+		remove_effect = {
+			clr_country_flag = TAI_mac_integrating
+			set_country_flag = TAI_mac_settled
+			if = {
+				limit = { country_exists = MAC MAC = { is_subject_of = ROOT } }
+				add_state_core = 1106
+				annex_country = { target = MAC transfer_troops = yes }
+				add_stability = 0.02
+				add_political_power = 50
+			}
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	TAI_dec_mac_reclaim = {
+		icon = GFX_decision_generic_military
+		cost = 25
+		visible = {
+			country_exists = MAC
+			MAC = { is_subject_of = ROOT }
+			NOT = { has_country_flag = TAI_mac_settled }
+			NOT = { has_country_flag = TAI_mac_integrating }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_mac_reclaim"
+			set_country_flag = TAI_mac_settled
+			add_state_core = 1106
+			annex_country = { target = MAC transfer_troops = yes }
+			add_stability = -0.05
+			every_country = {
+				limit = { OR = { tag = ENG tag = USA } }
+				add_opinion_modifier = { target = ROOT modifier = TAI_sar_crackdown }
+			}
+			1106 = { add_compliance = -10 }
+		}
+		ai_will_do = { base = 5 modifier = { factor = 4 has_global_flag = TAI_RETURN_FOCUS_PATH } }
+	}
+}

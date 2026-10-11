@@ -1,0 +1,31 @@
+# MD ROC Return v3.20 —— 韩国、菲律宾、越南的国策国家精神
+ideas = {
+	country = {
+		KORX_demographic_policy = { picture = family_supports modifier = { stability_factor = 0.03 consumer_goods_factor = 0.02 political_power_gain = 0.03 } }
+		KORX_independent_deterrent_idea = { picture = nko_nuclear_test_idea modifier = { war_support_factor = 0.10 stability_factor = -0.03 trade_opinion_factor = -0.10 } }
+		KORX_nuclear_sharing_idea = { picture = generic_military_support modifier = { army_org_factor = 0.03 war_support_factor = 0.03 political_power_gain = -0.03 } }
+		KORX_k_defense_idea = { picture = Korea_Aerospace_Industries modifier = { production_speed_arms_factory_factor = 0.05 research_speed_factor = 0.03 tax_gain_multiplier_modifier = 0.03 } }
+		KORX_new_republic_idea = { picture = KOR_democracy modifier = { stability_factor = 0.05 political_power_gain = 0.08 } }
+		KORX_green_shipbuilding_idea = { picture = Daewoo_Shipbuilding modifier = { industrial_capacity_dockyard = 0.15 tax_gain_multiplier_modifier = 0.02 } }
+		KORX_hallyu_idea = { picture = generic_tourism modifier = { tax_gain_multiplier_modifier = 0.04 stability_factor = 0.02 trade_opinion_factor = 0.05 } }
+		PHIP_clean_government_idea = { picture = sov_agency_anti_corrupt_idea modifier = { political_power_gain = 0.05 stability_factor = 0.03 } }
+		PHIP_strongman_idea = { picture = politicised_army modifier = { stability_factor = 0.04 war_support_factor = 0.05 political_power_gain = 0.03 } }
+		PHIP_coalition_idea = { picture = generic_political_reform modifier = { political_power_gain = 0.06 stability_factor = 0.02 } }
+		PHIP_social_democracy_idea = { picture = Labor_Reform modifier = { stability_factor = 0.05 consumer_goods_factor = -0.02 political_power_gain = 0.03 } }
+		PHIP_national_consensus_idea = { picture = international_treaty2 modifier = { stability_factor = 0.05 political_power_gain = 0.05 } }
+		VIEX_doi_moi_2_idea = { picture = modern_reformist modifier = { tax_gain_multiplier_modifier = 0.06 research_speed_factor = 0.03 political_power_gain = 0.02 } }
+		VIEX_party_discipline_idea = { picture = party_before_country modifier = { stability_factor = 0.05 political_power_gain = 0.05 tax_gain_multiplier_modifier = -0.03 } }
+		VIEX_multiparty_idea = { picture = democratic_party modifier = { political_power_gain = 0.05 trade_opinion_factor = 0.10 stability_factor = -0.02 } }
+		VIEX_red_junta_idea = { picture = army_problems modifier = { war_support_factor = 0.10 stability_factor = 0.05 trade_opinion_factor = -0.05 } }
+		VIEX_blazing_furnace_idea = { picture = sov_agency_anti_corrupt_idea modifier = { political_power_gain = 0.05 stability_factor = 0.02 production_speed_buildings_factor = -0.03 } }
+		VIEX_fdi_hub_idea = { picture = export_economy modifier = { production_speed_buildings_factor = 0.08 trade_opinion_factor = 0.05 consumer_goods_factor = -0.02 } }
+		VIEX_mekong_granary_idea = { picture = roc21_skm_white_rice_6528d394 modifier = { stability_factor = 0.03 tax_gain_multiplier_modifier = 0.03 } }
+		VIEX_digital_vietnam_idea = { picture = microchip_spirit modifier = { research_speed_factor = 0.05 tax_gain_multiplier_modifier = 0.03 } }
+		VIEX_north_south_artery_idea = { picture = maritime_industry modifier = { production_speed_infrastructure_factor = 0.10 production_speed_buildings_factor = 0.03 } }
+		VIEX_total_defense_idea = { picture = generic_military_reform modifier = { conscription_factor = 0.10 army_org_factor = 0.04 war_support_factor = 0.03 } }
+		VIEX_maritime_militia_idea = { picture = naval_reform_spirit modifier = { navy_max_range_factor = 0.10 naval_coordination = 0.05 } }
+		VIEX_bamboo_diplomacy_idea = { picture = ASEAN_partner modifier = { trade_opinion_factor = 0.10 political_power_gain = 0.04 } }
+		VIEX_asian_tiger_idea = { picture = export_economy modifier = { tax_gain_multiplier_modifier = 0.08 stability_factor = 0.03 production_speed_buildings_factor = 0.04 } }
+		VIEX_climate_resilience_idea = { picture = roc21_mpl_floodgates_1cb588e2 modifier = { stability_factor = 0.02 production_speed_buildings_factor = 0.02 } }
+	}
+}

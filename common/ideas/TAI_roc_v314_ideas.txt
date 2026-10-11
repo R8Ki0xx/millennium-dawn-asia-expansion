@@ -1,0 +1,23 @@
+# MD ROC Return v3.14 —— 产业、国军装备与边疆国策的国家精神
+ideas = {
+	country = {
+		TAI_semiconductor_fund_idea = { picture = microchip_spirit modifier = { research_speed_factor = 0.04 production_factory_efficiency_gain_factor = 0.03 } }
+		TAI_internet_economy_idea = { picture = internet_icon modifier = { research_speed_factor = 0.02 production_speed_buildings_factor = 0.05 } }
+		TAI_digital_fabi_idea = { picture = digitalize_idea modifier = { tax_gain_multiplier_modifier = 0.05 consumer_goods_factor = -0.02 } }
+		TAI_financial_center_idea = { picture = CHI_bank_of_china modifier = { tax_gain_multiplier_modifier = 0.05 stability_factor = 0.02 } }
+		TAI_energy_independence_idea = { picture = nuclear_energy modifier = { production_factory_efficiency_gain_factor = 0.03 consumer_goods_factor = -0.02 } }
+		TAI_rare_earth_idea = { picture = generic_oil modifier = { local_resources_factor = 0.10 } }
+		TAI_auto_industry_idea = { picture = sov_electrocar_vaz_idea modifier = { production_speed_industrial_complex_factor = 0.05 consumer_goods_factor = -0.02 } }
+		TAI_grain_security_idea = { picture = agriculture modifier = { stability_factor = 0.03 monthly_population = 0.05 } }
+		TAI_economic_zones_idea = { picture = chinese_gateway modifier = { production_speed_buildings_factor = 0.05 trade_opinion_factor = 0.05 } }
+		TAI_space_power_idea = { picture = sov_spaceforce_idea modifier = { research_speed_factor = 0.03 political_power_gain = 0.05 } }
+		TAI_new_army_idea = { picture = army_tank_good modifier = { army_org_factor = 0.05 army_attack_factor = 0.03 army_defence_factor = 0.03 } }
+		TAI_two_ocean_navy_idea = { picture = generic_navy_carrier_bonus modifier = { naval_damage_factor = 0.05 industrial_capacity_dockyard = 0.05 navy_max_range_factor = 0.10 } }
+		TAI_air_power_idea = { picture = CHI_air_force modifier = { air_attack_factor = 0.05 air_defence_factor = 0.05 experience_gain_air = 0.05 } }
+		TAI_tibet_autonomy_idea = { picture = state_religion_buddhism modifier = { stability_factor = 0.03 political_power_gain = 0.03 } }
+		TAI_plateau_fund_idea = { picture = TIB_tibetan_politics modifier = { production_speed_buildings_factor = 0.03 production_speed_infrastructure_factor = 0.10 } }
+		TAI_xinjiang_harmony_idea = { picture = chinese_mongolia modifier = { stability_factor = 0.02 political_power_gain = 0.05 } }
+		TAI_greater_bay_idea = { picture = legacy_of_handover_hong_kong modifier = { tax_gain_multiplier_modifier = 0.05 trade_opinion_factor = 0.05 } }
+		TAI_five_races_unity_idea = { picture = roc21_china_five_races_soldier_9deaf7bf modifier = { stability_factor = 0.05 war_support_factor = 0.03 political_power_gain = 0.05 } }
+	}
+}

@@ -1,0 +1,8 @@
+# MD ROC Return v3.9 —— 港澳问题
+TAI_hk_macau_category = {
+	icon = GFX_decision_generic_china
+	priority = 650
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi has_country_flag = TAI_hk_macau_unlocked }
+	visible_when_empty = yes
+}

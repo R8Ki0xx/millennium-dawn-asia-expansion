@@ -1,0 +1,19 @@
+# MD ROC Return v3.12 —— 国家地位精神补齐
+on_actions = {
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_global_flag = ROC_tag_switch_done NOT = { has_idea = super_power } NOT = { has_idea = great_power } NOT = { has_idea = large_power } NOT = { has_idea = regional_power } NOT = { has_idea = minor_power } NOT = { has_idea = non_power } }
+				add_country_to_power_ranking = yes
+			}
+		}
+	}
+	on_monthly_PRC = {
+		effect = {
+			if = {
+				limit = { NOT = { has_idea = super_power } NOT = { has_idea = great_power } NOT = { has_idea = large_power } NOT = { has_idea = regional_power } NOT = { has_idea = minor_power } NOT = { has_idea = non_power } }
+				add_country_to_power_ranking = yes
+			}
+		}
+	}
+}

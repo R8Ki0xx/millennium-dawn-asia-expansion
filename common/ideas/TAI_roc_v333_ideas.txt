@@ -1,0 +1,24 @@
+# MD ROC Return v3.33 —— 台湾时代政治线与巴基斯坦的国家精神
+ideas = {
+	country = {
+		TAIP_status_quo_idea = { picture = roc30_ger_status_quo_505d495e modifier = { stability_factor = 0.04 political_power_gain = 0.03 } }
+		TAIP_three_links_idea = { picture = roc30_blr_transport_troops_idea_7a1b3b93 modifier = { tax_gain_multiplier_modifier = 0.05 stability_factor = 0.02 } }
+		TAIP_sunflower_idea = { picture = roc30_ger_student_protest_1b369348 modifier = { political_power_gain = 0.06 stability_factor = -0.01 } }
+		TAIP_mask_idea = { picture = roc30_health_care_03d77781 modifier = { stability_factor = 0.03 research_speed_factor = 0.03 } }
+		TAIP_chip_idea = { picture = roc30_microchip_spirit_063b4ed4 modifier = { research_speed_factor = 0.05 tax_gain_multiplier_modifier = 0.05 } }
+		TAIP_energy_idea = { picture = roc30_nuclear_power_11ef4c27 modifier = { stability_factor = -0.01 political_power_gain = 0.04 } }
+		PAKX_hybrid_idea = { picture = party_before_country modifier = { stability_factor = 0.04 political_power_gain = 0.02 } }
+		PAKX_democracy_idea = { picture = democratic_party modifier = { political_power_gain = 0.05 stability_factor = -0.02 } }
+		PAKX_army_rule_idea = { picture = army_problems modifier = { war_support_factor = 0.08 stability_factor = 0.04 trade_opinion_factor = -0.05 } }
+		PAKX_deterrence_idea = { picture = generic_military_reform modifier = { war_support_factor = 0.05 army_org_factor = 0.03 } }
+		PAKX_navy_idea = { picture = naval_reform_spirit modifier = { navy_max_range_factor = 0.10 naval_coordination = 0.05 } }
+		PAKX_cpec_idea = { picture = maritime_industry modifier = { production_speed_infrastructure_factor = 0.10 production_speed_buildings_factor = 0.03 } }
+		PAKX_imf_idea = { picture = export_economy modifier = { tax_gain_multiplier_modifier = 0.05 stability_factor = -0.02 } }
+		PAKX_textile_idea = { picture = agricultural_reforms modifier = { tax_gain_multiplier_modifier = 0.04 stability_factor = 0.02 } }
+		PAKX_counterterror_idea = { picture = army_problems modifier = { war_support_factor = 0.04 stability_factor = -0.02 } }
+		PAKX_flood_idea = { picture = agricultural_reforms modifier = { stability_factor = 0.03 production_speed_buildings_factor = 0.02 } }
+		PAKX_sco_idea = { picture = ASEAN_partner modifier = { trade_opinion_factor = 0.08 political_power_gain = 0.03 } }
+		PAKX_roc_idea = { picture = modern_reformist modifier = { trade_opinion_factor = 0.05 research_speed_factor = 0.02 } }
+		PAKX_digital_idea = { picture = microchip_spirit modifier = { research_speed_factor = 0.04 tax_gain_multiplier_modifier = 0.03 } }
+	}
+}

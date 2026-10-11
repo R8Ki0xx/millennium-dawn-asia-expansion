@@ -1,0 +1,37 @@
+# MD ROC Return v3.9
+ideas = {
+	country = {
+		TAI_nato_standards_idea = {
+			picture = NATO_member
+			modifier = { army_org_factor = 0.05 training_time_army_factor = -0.10 experience_gain_army = 0.05 }
+		}
+		TAI_alliance_leader_idea = {
+			picture = roc21_eng_commonwealth_of_nations__96a8567f
+			modifier = { political_power_gain = 0.10 trade_opinion_factor = 0.15 }
+		}
+		TAI_asian_order_idea = {
+			picture = roc21_chi_liberation_of_east_asia_78b2aecb
+			modifier = { political_power_gain = 0.10 stability_factor = 0.05 research_speed_factor = 0.03 }
+		}
+		TAI_hkg_sar_dividend_idea = {
+			picture = roc21_legacy_of_handover_hong_kong_2816cef8
+			modifier = { political_power_gain = 0.05 consumer_goods_factor = -0.02 }
+		}
+		TAI_mac_sar_dividend_idea = {
+			picture = roc21_moc_casino_de_monte_carlo_9dccf092
+			modifier = { political_power_gain = 0.03 }
+		}
+		TAI_hkg_roc_sar_idea = {
+			picture = HKG_basic_law
+			modifier = { stability_factor = 0.05 political_power_gain = 0.05 }
+		}
+		TAI_mac_roc_sar_idea = {
+			picture = HKG_basic_law
+			modifier = { stability_factor = 0.05 tax_gain_multiplier_modifier = 0.05 }
+		}
+		TAI_sar_integration_idea = {
+			picture = hkg_crisis
+			modifier = { stability_factor = -0.05 political_power_gain = -0.05 }
+		}
+	}
+}

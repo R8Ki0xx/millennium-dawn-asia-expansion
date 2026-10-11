@@ -1,0 +1,6 @@
+# MD ROC Return v3.5 —— 国民大会
+TAI_national_assembly_modifier = {
+	icon = GFX_idea_CHI_three_principles_of_the_people
+	political_power_gain = TAI_na_pp
+	stability_factor = TAI_na_stab
+}

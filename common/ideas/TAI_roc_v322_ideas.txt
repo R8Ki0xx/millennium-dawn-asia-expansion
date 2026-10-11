@@ -1,0 +1,51 @@
+# MD ROC Return v3.22 —— 叙利亚内战相关国家精神
+ideas = {
+	country = {
+		SYRX_siege_strategy_idea = { picture = roc30_burning_syria_b5af00c4 modifier = { army_org_factor = 0.05 stability_factor = -0.05 political_power_gain = -0.05 } }
+		SYRX_reconciliation_idea = { picture = roc30_cpc_peace_is_first_c1ac9fbf modifier = { stability_factor = 0.05 political_power_gain = 0.05 } }
+		SYRX_ndf_idea = { picture = roc30_syr_alawite_army_05b11154 modifier = { conscription_factor = 0.10 army_org_factor = 0.03 stability_factor = -0.02 } }
+		SYRX_axis_idea = { picture = roc30_syrian_hezbollah_b559b963 modifier = { army_attack_factor = 0.08 political_power_gain = -0.05 stability_factor = -0.02 } }
+		SYRX_russia_idea = { picture = roc30_syr_syrian_air_power_5381bfd8 modifier = { air_attack_factor = 0.10 army_attack_factor = 0.04 political_power_gain = -0.05 } }
+		SYRX_chem_deal_idea = { picture = roc30_sov_chemical_weapons_icon_bf9ae119 modifier = { stability_factor = 0.03 political_power_gain = 0.05 } }
+		SYRX_war_economy_idea = { picture = roc30_war_economy_31f0bcdd modifier = { production_speed_arms_factory_factor = 0.08 consumer_goods_factor = 0.10 stability_factor = -0.03 } }
+		SYRF_council_idea = { picture = roc30_syr_mejd_council_b02dd938 modifier = { political_power_gain = 0.08 stability_factor = 0.02 } }
+		SYRF_local_councils_idea = { picture = roc30_syr_mejd_council_b02dd938 modifier = { stability_factor = 0.04 political_power_gain = 0.03 } }
+		SYRF_turkey_idea = { picture = roc30_turkish_airlines_turkey_47ed20ee modifier = { army_org_factor = 0.04 political_power_gain = -0.05 } }
+		SYRF_sna_idea = { picture = roc30_syrian_nationalism_8551304e modifier = { army_attack_factor = 0.05 army_org_factor = 0.04 } }
+		SYRN_salvation_gov_idea = { picture = roc30_syrian_salvation_government__97a56dbc modifier = { stability_factor = 0.05 political_power_gain = 0.08 } }
+		SYRN_command_idea = { picture = roc30_syr_army_of_lions_idea_aef8d666 modifier = { army_attack_factor = 0.06 army_org_factor = 0.05 } }
+		SYRN_crossings_idea = { picture = roc30_bul_idea_revitalizing_medite_17f6ee58 modifier = { tax_gain_multiplier_modifier = 0.06 political_power_gain = 0.03 } }
+		SYRL_baath_ideals_idea = { picture = roc30_baath_party_e00b3004 modifier = { stability_factor = 0.05 political_power_gain = 0.08 corruption_cost_factor = -0.10 } }
+		SYRL_no_dynasty_idea = { picture = roc30_afg_family_idea_2f339e10 modifier = { corruption_cost_factor = -0.20 stability_factor = 0.03 } }
+		SYRL_merit_idea = { picture = roc30_services_syria_cb_idea_fce8e762 modifier = { political_power_gain = 0.05 research_speed_factor = 0.03 } }
+		SYRL_land_idea = { picture = roc30_rus_unfinished_land_reform_4b60440c modifier = { stability_factor = 0.04 political_power_gain = 0.03 } }
+		SYRL_plan_idea = { picture = roc30_sov_five_year_plan_d7f62d4e modifier = { industrial_capacity_factory = 0.05 stability_factor = 0.02 } }
+		SYRL_coop_idea = { picture = roc30_arab_workers_union_1cbdc9ad modifier = { stability_factor = 0.04 consumer_goods_factor = -0.03 } }
+		SYRL_welfare_idea = { picture = roc30_syrian_health_care_reform_017c842a modifier = { stability_factor = 0.05 research_speed_factor = 0.03 } }
+		SYRL_npf_idea = { picture = roc30_sov_popular_front_of_democra_10a7bf97 modifier = { political_power_gain = 0.10 stability_factor = 0.02 } }
+		SYRL_union_idea = { picture = roc30_mla_trade_union_council_d501480f modifier = { stability_factor = 0.03 consumer_goods_factor = -0.02 } }
+		SYRL_civil_idea = { picture = roc30_bbr_citizen_republic_idea_4f127e74 modifier = { stability_factor = 0.06 political_power_gain = 0.03 } }
+		SYRB_security_state_idea = { picture = roc30_arab_intelligence_agency_cde932ba modifier = { stability_factor = 0.05 political_power_gain = -0.05 } }
+		SYRB_social_market_idea = { picture = roc30_ger_socialist_market_economy_38852e22 modifier = { tax_gain_multiplier_modifier = 0.06 stability_factor = -0.02 consumer_goods_factor = 0.02 } }
+		SYRB_iran_pact_idea = { picture = roc30_iran_aid_aircraft_dfbf8684 modifier = { army_org_factor = 0.03 political_power_gain = 0.03 stability_factor = -0.01 } }
+		SYRB_turkey_idea = { picture = roc30_syr_rifat_egy_friendship_ded347e2 modifier = { tax_gain_multiplier_modifier = 0.04 stability_factor = 0.02 } }
+		SYRB_drought_idea = { picture = roc30_hou_famine_43fb93ed modifier = { stability_factor = -0.04 consumer_goods_factor = 0.03 } }
+		SYRL_pension_idea = { picture = roc30_fra_pension_riots_289824bd modifier = { stability_factor = 0.04 political_power_gain = 0.03 } }
+		SYRL_self_reliance_idea = { picture = roc30_nsm_steel_belt_industry_7f63836c modifier = { industrial_capacity_factory = 0.04 consumer_goods_factor = -0.02 stability_factor = 0.02 } }
+		SYRL_media_idea = { picture = roc30_syr_freedom_media_icon_d5f7587a modifier = { political_power_gain = 0.05 stability_factor = 0.02 } }
+		ISIX_caliphate_idea = { picture = true_caliphate modifier = { political_power_gain = 0.10 stability_factor = 0.03 war_support_factor = 0.05 } }
+		ISIX_hisbah_idea = { picture = counter_terror_spirit modifier = { stability_factor = 0.05 consumer_goods_factor = -0.02 } }
+		ISIX_oil_idea = { picture = power_projection_spirit modifier = { tax_gain_multiplier_modifier = 0.10 trade_opinion_factor = -0.10 } }
+		ISIX_media_idea = { picture = islamist_media modifier = { political_power_gain = 0.05 conscription_factor = 0.05 } }
+		ISIX_foreign_fighters_idea = { picture = foreign_jihadis modifier = { conscription_factor = 0.15 army_morale_factor = 0.05 stability_factor = -0.02 } }
+		ISIX_tunnels_idea = { picture = counter_insurgency_spirit modifier = { army_defence_factor = 0.10 land_reinforce_rate = 0.05 } }
+		ISIX_underground_idea = { picture = cybercaliphate modifier = { army_attack_factor = -0.05 stability_factor = 0.02 political_power_gain = 0.03 } }
+		ROJX_democratic_confederalism_idea = { picture = kurdish_dem_part modifier = { stability_factor = 0.05 political_power_gain = 0.05 } }
+		ROJX_women_idea = { picture = syria_jewish_rights_guaranteed2 modifier = { conscription_factor = 0.05 stability_factor = 0.03 } }
+		ROJX_ypg_idea = { picture = pkk_idea modifier = { army_attack_factor = 0.05 army_morale_factor = 0.08 } }
+		ROJX_coalition_idea = { picture = power_projection_spirit modifier = { air_attack_factor = 0.08 army_attack_factor = 0.05 political_power_gain = -0.05 } }
+		ROJX_oil_idea = { picture = iranian_aid modifier = { tax_gain_multiplier_modifier = 0.08 } }
+		ROJX_camps_idea = { picture = pal_refugee_camp modifier = { stability_factor = -0.04 political_power_gain = -0.04 } }
+		ROJX_turkey_pressure_idea = { picture = burning_rojava modifier = { stability_factor = -0.04 army_defence_factor = 0.05 } }
+	}
+}

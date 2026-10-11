@@ -1,0 +1,559 @@
+# MD ROC Return —— 光复后的 CHI 使用装饰标签 CHI_ROC：沿用台湾时期（TAI）的兵模
+# 由 _tools 生成：每个 TAI_*_entity 克隆为 CHI_ROC_*_entity
+
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_1_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_2_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_3_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_4_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_5_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_6_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_7_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Air_Inf_Bat_entity"
+	clone = "TAI_Arm_Air_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_1_entity"
+	clone = "TAI_Arm_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_2_entity"
+	clone = "TAI_Arm_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_3_entity"
+	clone = "TAI_Arm_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_4_entity"
+	clone = "TAI_Arm_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_5_entity"
+	clone = "TAI_Arm_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_6_entity"
+	clone = "TAI_Arm_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_7_entity"
+	clone = "TAI_Arm_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Inf_Bat_entity"
+	clone = "TAI_Arm_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_1_entity"
+	clone = "TAI_Arm_Marine_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_2_entity"
+	clone = "TAI_Arm_Marine_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_3_entity"
+	clone = "TAI_Arm_Marine_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_4_entity"
+	clone = "TAI_Arm_Marine_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_5_entity"
+	clone = "TAI_Arm_Marine_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_6_entity"
+	clone = "TAI_Arm_Marine_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_7_entity"
+	clone = "TAI_Arm_Marine_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Arm_Marine_Bat_entity"
+	clone = "TAI_Arm_Marine_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_CM32_entity"
+	clone = "TAI_CM32_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_1_entity"
+	clone = "TAI_L_Air_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_2_entity"
+	clone = "TAI_L_Air_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_3_entity"
+	clone = "TAI_L_Air_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_4_entity"
+	clone = "TAI_L_Air_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_5_entity"
+	clone = "TAI_L_Air_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_6_entity"
+	clone = "TAI_L_Air_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_7_entity"
+	clone = "TAI_L_Air_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_Inf_Bat_entity"
+	clone = "TAI_L_Air_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_1_entity"
+	clone = "TAI_L_Air_assault_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_2_entity"
+	clone = "TAI_L_Air_assault_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_3_entity"
+	clone = "TAI_L_Air_assault_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_4_entity"
+	clone = "TAI_L_Air_assault_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_5_entity"
+	clone = "TAI_L_Air_assault_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_6_entity"
+	clone = "TAI_L_Air_assault_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_7_entity"
+	clone = "TAI_L_Air_assault_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Air_assault_Bat_entity"
+	clone = "TAI_L_Air_assault_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_1_entity"
+	clone = "TAI_L_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_2_entity"
+	clone = "TAI_L_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_3_entity"
+	clone = "TAI_L_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_4_entity"
+	clone = "TAI_L_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_5_entity"
+	clone = "TAI_L_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_6_entity"
+	clone = "TAI_L_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_7_entity"
+	clone = "TAI_L_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Inf_Bat_entity"
+	clone = "TAI_L_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_1_entity"
+	clone = "TAI_L_Marine_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_2_entity"
+	clone = "TAI_L_Marine_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_3_entity"
+	clone = "TAI_L_Marine_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_4_entity"
+	clone = "TAI_L_Marine_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_5_entity"
+	clone = "TAI_L_Marine_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_6_entity"
+	clone = "TAI_L_Marine_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_7_entity"
+	clone = "TAI_L_Marine_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_L_Marine_Bat_entity"
+	clone = "TAI_L_Marine_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_MD_infantry_2_entity"
+	clone = "TAI_MD_infantry_2_entity"
+}
+entity = {
+	name = "CHI_ROC_MD_mechanized_entity"
+	clone = "TAI_MD_mechanized_entity"
+}
+entity = {
+	name = "CHI_ROC_MD_motorized_entity"
+	clone = "TAI_MD_motorized_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechinfantry1_entity"
+	clone = "TAI_MDmechinfantry1_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechinfantry2_entity"
+	clone = "TAI_MDmechinfantry2_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechinfantry3_entity"
+	clone = "TAI_MDmechinfantry3_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechinfantry_entity"
+	clone = "TAI_MDmechinfantry_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechmarine1_entity"
+	clone = "TAI_MDmechmarine1_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechmarine2_entity"
+	clone = "TAI_MDmechmarine2_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechmarine3_entity"
+	clone = "TAI_MDmechmarine3_entity"
+}
+entity = {
+	name = "CHI_ROC_MDmechmarine4_entity"
+	clone = "TAI_MDmechmarine4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_1_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_2_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_3_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_4_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_5_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_6_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_7_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Air_Inf_Bat_entity"
+	clone = "TAI_Mech_Air_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_1_entity"
+	clone = "TAI_Mech_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_2_entity"
+	clone = "TAI_Mech_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_3_entity"
+	clone = "TAI_Mech_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_4_entity"
+	clone = "TAI_Mech_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_5_entity"
+	clone = "TAI_Mech_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_6_entity"
+	clone = "TAI_Mech_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_7_entity"
+	clone = "TAI_Mech_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Inf_Bat_entity"
+	clone = "TAI_Mech_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_1_entity"
+	clone = "TAI_Mech_Marine_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_2_entity"
+	clone = "TAI_Mech_Marine_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_3_entity"
+	clone = "TAI_Mech_Marine_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_4_entity"
+	clone = "TAI_Mech_Marine_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_5_entity"
+	clone = "TAI_Mech_Marine_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_6_entity"
+	clone = "TAI_Mech_Marine_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_7_entity"
+	clone = "TAI_Mech_Marine_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mech_Marine_Bat_entity"
+	clone = "TAI_Mech_Marine_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_1_entity"
+	clone = "TAI_Militia_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_2_entity"
+	clone = "TAI_Militia_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_3_entity"
+	clone = "TAI_Militia_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_4_entity"
+	clone = "TAI_Militia_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_5_entity"
+	clone = "TAI_Militia_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_6_entity"
+	clone = "TAI_Militia_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_7_entity"
+	clone = "TAI_Militia_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Militia_Bat_entity"
+	clone = "TAI_Militia_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_1_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_2_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_3_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_4_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_5_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_6_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_7_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Air_Inf_Bat_entity"
+	clone = "TAI_Mot_Air_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_1_entity"
+	clone = "TAI_Mot_Inf_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_2_entity"
+	clone = "TAI_Mot_Inf_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_3_entity"
+	clone = "TAI_Mot_Inf_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_4_entity"
+	clone = "TAI_Mot_Inf_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_5_entity"
+	clone = "TAI_Mot_Inf_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_6_entity"
+	clone = "TAI_Mot_Inf_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_7_entity"
+	clone = "TAI_Mot_Inf_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Inf_Bat_entity"
+	clone = "TAI_Mot_Inf_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_1_entity"
+	clone = "TAI_Mot_Marine_Bat_1_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_2_entity"
+	clone = "TAI_Mot_Marine_Bat_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_3_entity"
+	clone = "TAI_Mot_Marine_Bat_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_4_entity"
+	clone = "TAI_Mot_Marine_Bat_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_5_entity"
+	clone = "TAI_Mot_Marine_Bat_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_6_entity"
+	clone = "TAI_Mot_Marine_Bat_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_7_entity"
+	clone = "TAI_Mot_Marine_Bat_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Mot_Marine_Bat_entity"
+	clone = "TAI_Mot_Marine_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_2_entity"
+	clone = "TAI_Special_Forces_2_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_3_entity"
+	clone = "TAI_Special_Forces_3_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_4_entity"
+	clone = "TAI_Special_Forces_4_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_5_entity"
+	clone = "TAI_Special_Forces_5_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_6_entity"
+	clone = "TAI_Special_Forces_6_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_7_entity"
+	clone = "TAI_Special_Forces_7_entity"
+}
+entity = {
+	name = "CHI_ROC_Special_Forces_entity"
+	clone = "TAI_Special_Forces_entity"
+}
+entity = {
+	name = "CHI_ROC_armor_Bat_entity"
+	clone = "TAI_armor_Bat_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_entity"
+	clone = "TAI_infantry_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_mg_left_entity"
+	clone = "TAI_infantry_weapon_mg_left_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_mg_long_idle_entity"
+	clone = "TAI_infantry_weapon_mg_long_idle_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_mg_right_entity"
+	clone = "TAI_infantry_weapon_mg_right_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_rifle_left_entity"
+	clone = "TAI_infantry_weapon_rifle_left_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_rifle_long_idle_entity"
+	clone = "TAI_infantry_weapon_rifle_long_idle_entity"
+}
+entity = {
+	name = "CHI_ROC_infantry_weapon_rifle_right_entity"
+	clone = "TAI_infantry_weapon_rifle_right_entity"
+}

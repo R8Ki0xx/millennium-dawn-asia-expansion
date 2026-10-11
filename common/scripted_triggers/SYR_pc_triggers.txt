@@ -1,0 +1,7 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会
+# Scope: SYR。政权体制（复兴党、民族社会党、共产党等「国进阵」系的政党或军队执政）：议会由政权操控
+SYR_regime_mode = {
+	OR = {
+		check_variable = { ruling_party = 7 } check_variable = { ruling_party = 20 } check_variable = { ruling_party = 21 } check_variable = { ruling_party = 4 } check_variable = { ruling_party = 13 } check_variable = { ruling_party = 18 } check_variable = { ruling_party = 5 } check_variable = { ruling_party = 22 }
+	}
+}

@@ -1,0 +1,14 @@
+# MD ROC Return v3.33
+opinion_modifiers = {
+	TAIP_ext_mainland_ties = { value = 20 }
+	TAIP_ext_us_support = { value = 15 }
+	TAIP_ext_strait_tension = { value = -20 }
+	TAIP_ext_pfp_middle = { value = 15 }
+	TAI_ext_pak_china = { value = 25 }
+	TAI_ext_pak_us = { value = 15 }
+	TAI_ext_pak_india = { value = -30 }
+	TAI_ext_pak_roc = { value = 15 }
+	TAI_ext_pak_imf = { value = -10 }
+	TAI_ext_pak_gulf = { value = 15 }
+	TAI_ext_pak_militancy = { value = -20 }
+}

@@ -1,0 +1,19 @@
+# MD ROC Return v3.14 —— 南京总统府：南京易主时换版；旧存档补发
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { has_global_flag = TAI_nanjing_palace FROM.FROM = { state = 536 } }
+				TAI_roc_palace_update = yes
+			}
+		}
+	}
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi controls_state = 536 NOT = { has_global_flag = TAI_nanjing_palace } }
+				TAI_roc_palace_unveil = yes
+			}
+		}
+	}
+}

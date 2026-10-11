@@ -1,0 +1,74 @@
+# MD ROC Return v3.10 —— 光复后中华民国的派系平衡：台湾旧部 ↔ 大陆新进
+TAI_roc_faction_balance = {
+	initial_value = -0.4
+
+	left_side = TAI_roc_old_guard
+	right_side = TAI_roc_newcomers
+
+	decision_category = TAI_roc_bop_category
+
+	range = {
+		id = TAI_roc_bop_shared_rule
+		min = -0.20
+		max = 0.20
+		modifier = {
+			stability_factor = 0.05
+			political_power_gain = 0.05
+		}
+	}
+	side = {
+		id = TAI_roc_old_guard
+		icon = GFX_TAI_roc_bop_old_guard
+		range = {
+			id = TAI_roc_bop_old_guard_rule
+			min = -0.60
+			max = -0.20
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = 0.03
+				compliance_growth = -0.05
+			}
+		}
+		range = {
+			id = TAI_roc_bop_taipei_clique
+			min = -1.00
+			max = -0.60
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.05
+				compliance_growth = -0.10
+				resistance_growth = 0.10
+			}
+			on_activate = {
+				country_event = { id = roc_return.120 days = 1 }
+			}
+		}
+	}
+	side = {
+		id = TAI_roc_newcomers
+		icon = GFX_TAI_roc_bop_newcomers
+		range = {
+			id = TAI_roc_bop_mainland_rise
+			min = 0.20
+			max = 0.60
+			modifier = {
+				compliance_growth = 0.10
+				conscription_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		range = {
+			id = TAI_roc_bop_local_strongmen
+			min = 0.60
+			max = 1.00
+			modifier = {
+				compliance_growth = 0.15
+				stability_factor = -0.05
+				political_power_gain = -0.10
+			}
+			on_activate = {
+				country_event = { id = roc_return.121 days = 1 }
+			}
+		}
+	}
+}

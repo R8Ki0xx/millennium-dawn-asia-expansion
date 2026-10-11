@@ -1,0 +1,3657 @@
+# 中华民国（TAI）国策树 TAI_roc_return_focus —— 千禧黎明子模组 MD ROC Return
+# 由 _tools/gen_trees.py 生成
+
+focus_tree = {
+	id = TAI_roc_return_focus
+	country = {
+		factor = 0
+		modifier = { add = 30 original_tag = TAI }
+	}
+	default = no
+	shared_focus = CSW_cross_strait_war
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1400 }
+
+	shortcut = {
+		name = TAI_silicon_island
+		target = TAI_silicon_island
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_new_millennium_roc
+		target = TAI_new_millennium_roc
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_national_glory_plan
+		target = TAI_national_glory_plan
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_armed_forces_modernization
+		target = TAI_armed_forces_modernization
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_pragmatic_diplomacy
+		target = TAI_pragmatic_diplomacy
+		scroll_wheel_factor = 0.75
+	}
+
+	focus = {
+		id = TAI_silicon_island
+		icon = TAI_tsmc
+		x = 6
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_silicon_island"
+			add_ideas = TAI_silicon_island_idea
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_hsinchu_expansion
+		icon = TAI_umc
+		x = 3
+		y = 1
+		cost = 7
+		prerequisite = { focus = TAI_silicon_island }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_hsinchu_expansion"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 1155 598 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 1155 598 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+			add_tech_bonus = { name = TAI_hsinchu_expansion bonus = 0.5 uses = 2 category = CAT_information_technology }
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_ten_new_constructions
+		icon = TAI_tires
+		x = 9
+		y = 1
+		cost = 7
+		prerequisite = { focus = TAI_silicon_island }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_EXPENDITURE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_ten_new_constructions"
+			add_ideas = TAI_ten_new_constructions_idea
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_sacred_mountain
+		icon = TAI_tsmc
+		x = 1
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_hsinchu_expansion }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_sacred_mountain"
+			add_tech_bonus = { name = TAI_sacred_mountain bonus = 0.5 uses = 2 category = CAT_microchips }
+			add_tech_bonus = { name = TAI_sacred_mountain bonus = 0.3 uses = 1 category = CAT_industry }
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_broadband_island
+		icon = TAI_dlink
+		x = 4
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_hsinchu_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_broadband_island"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+			add_tech_bonus = { name = TAI_broadband_island bonus = 0.5 uses = 1 category = CAT_internet }
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_panel_industry
+		icon = TAI_auo
+		x = 0
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_sacred_mountain }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_panel_industry"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 1157 1156 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			add_tech_bonus = { name = TAI_panel_industry bonus = 0.3 uses = 1 category = CAT_industry }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_foundry_alliance
+		icon = TAI_umc
+		x = 2
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_sacred_mountain }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_foundry_alliance"
+			add_tech_bonus = { name = TAI_foundry_alliance bonus = 0.4 uses = 2 category = CAT_microchips }
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 1155 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_e_government
+		icon = computer
+		x = 4
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_broadband_island }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_e_government"
+			add_political_power = 75
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_pc_kingdom
+		icon = blr_foxcon
+		x = 0
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_panel_industry }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_pc_kingdom"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_ic_design
+		icon = focus_chips
+		x = 2
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_foundry_alliance }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_ic_design"
+			add_tech_bonus = { name = TAI_ic_design bonus = 0.5 uses = 2 category = CAT_information_technology }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_mobile_taiwan
+		icon = TAI_htc
+		x = 4
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_e_government }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mobile_taiwan"
+			add_tech_bonus = { name = TAI_mobile_taiwan bonus = 0.5 uses = 1 category = CAT_internet }
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = internet_station level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_biotech
+		icon = pharma_drugs
+		x = 1
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_pc_kingdom focus = TAI_ic_design }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_biotech"
+			add_tech_bonus = { name = TAI_biotech bonus = 0.5 uses = 2 category = CAT_genetics }
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_digital_content
+		icon = TAI_videocards
+		x = 3
+		y = 5
+		cost = 5
+		prerequisite = { focus = TAI_ic_design focus = TAI_mobile_taiwan }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_digital_content"
+			add_stability = 0.02
+			add_tech_bonus = { name = TAI_digital_content bonus = 0.3 uses = 1 category = CAT_information_technology }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_silicon_shield
+		icon = TAI_videocards
+		x = 2
+		y = 6
+		cost = 10
+		prerequisite = { focus = TAI_biotech focus = TAI_digital_content }
+		prerequisite = { focus = TAI_foundry_alliance }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_silicon_shield"
+			swap_ideas = { remove_idea = TAI_silicon_island_idea add_idea = TAI_silicon_shield_idea }
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_high_speed_rail
+		icon = prc_railroad
+		x = 6
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_ten_new_constructions }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_high_speed_rail"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 1156 1157 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 1156 1157 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_fourth_nuclear_plant
+		icon = tai_power_company
+		x = 8
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_ten_new_constructions }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_fourth_nuclear_plant"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = nuclear_reactor level = 1 instant_build = yes }
+			}
+			add_stability = -0.02
+			set_temp_variable = { treasury_change = -8 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_mrt_networks
+		icon = Generic_Train
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_ten_new_constructions }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mrt_networks"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_port_expansion
+		icon = civitavecchia_port
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_high_speed_rail focus = TAI_fourth_nuclear_plant }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_port_expansion"
+			599 = { add_building_construction = { type = naval_base level = 1 instant_build = yes } }
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_petrochemical
+		icon = modern_refinery_industry
+		x = 9
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_fourth_nuclear_plant }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_petrochemical"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 1156 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_renewables
+		icon = windmills
+		x = 11
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_mrt_networks }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_renewables"
+			add_tech_bonus = { name = TAI_renewables bonus = 0.5 uses = 2 category = CAT_renewable_energy }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_second_financial_reform
+		icon = chinese_glory
+		x = 8
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_port_expansion focus = TAI_petrochemical }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_second_financial_reform"
+			add_ideas = TAI_financial_reform_idea
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_tourism_doubling
+		icon = economic_tourism
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_renewables focus = TAI_mrt_networks }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_tourism_doubling"
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_three_links
+		icon = trade_with_taiwan
+		x = 6
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_second_financial_reform }
+		mutually_exclusive = { focus = TAI_go_south_policy }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_three_links"
+			add_ideas = TAI_three_links_idea
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw }
+				}
+			}
+			add_to_variable = { TAI_mainland_unrest = 3 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 2 check_variable = { ruling_party = 1 } }
+		}
+	}
+
+	focus = {
+		id = TAI_go_south_policy
+		icon = south_asian_tiger
+		x = 10
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_second_financial_reform }
+		mutually_exclusive = { focus = TAI_three_links }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_go_south_policy"
+			add_ideas = TAI_go_south_idea
+			every_country = { limit = { OR = { tag = VIE tag = PHI tag = SIA tag = MAY tag = IND tag = SIN } } add_opinion_modifier = { target = ROOT modifier = TAI_southbound_partner } }
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 2 check_variable = { ruling_party = 2 } }
+		}
+	}
+
+	focus = {
+		id = TAI_quality_agriculture
+		icon = TAI_fruits
+		x = 12
+		y = 5
+		cost = 5
+		prerequisite = { focus = TAI_tourism_doubling }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_quality_agriculture"
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_cross_strait_ecfa
+		icon = trade_with_china
+		x = 6
+		y = 6
+		cost = 7
+		prerequisite = { focus = TAI_three_links }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_cross_strait_ecfa"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_to_variable = { TAI_mainland_unrest = 3 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_asean_fta
+		icon = trade_with_asean
+		x = 10
+		y = 6
+		cost = 7
+		prerequisite = { focus = TAI_go_south_policy }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_asean_fta"
+			set_temp_variable = { treasury_change = 8 }
+			modify_treasury_effect = yes
+			every_country = { limit = { OR = { tag = SIN tag = NZL } } add_opinion_modifier = { target = ROOT modifier = TAI_southbound_partner } }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_health_insurance_reform
+		icon = generic_healthcare
+		x = 12
+		y = 6
+		cost = 5
+		prerequisite = { focus = TAI_quality_agriculture }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_health_insurance_reform"
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_asia_pacific_hub
+		icon = TAI_asus
+		x = 8
+		y = 7
+		cost = 10
+		prerequisite = { focus = TAI_cross_strait_ecfa focus = TAI_asean_fta }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_asia_pacific_hub"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = offices level = 1 instant_build = yes }
+			}
+			add_political_power = 75
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_second_economic_miracle
+		icon = economic_prosperity
+		x = 5
+		y = 8
+		cost = 10
+		prerequisite = { focus = TAI_asia_pacific_hub }
+		prerequisite = { focus = TAI_silicon_shield }
+		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_second_economic_miracle"
+			add_ideas = TAI_economic_miracle_idea
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_new_millennium_roc
+		icon = TAI_kmt
+		x = 22
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_new_millennium_roc"
+			add_political_power = 75
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_cross_strait_crossroads
+		icon = one_china_policy_kmt
+		x = 20
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_new_millennium_roc }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_cross_strait_crossroads"
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_judicial_reform
+		icon = judicial_yuan
+		x = 24
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_new_millennium_roc }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_judicial_reform"
+			add_stability = 0.03
+			# v3.3
+			TAI_dbf_black_gold_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_constitutional_orthodoxy
+		icon = focus_CHI_restore_the_old_republic
+		x = 18
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_cross_strait_crossroads }
+		mutually_exclusive = { focus = TAI_taiwan_first }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_constitutional_orthodoxy"
+			add_ideas = TAI_roc_orthodoxy
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.08 }
+			set_temp_variable = { temp_outlook_increase = 0.08 }
+			change_relative_party_popularity = yes
+			if = { limit = { NOT = { check_variable = { ruling_party = 1 } } }
+				country_event = { id = roc_return.1 days = 3 }
+			}
+			set_country_flag = TAI_pan_blue_path
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 10 has_global_flag = TAI_RETURN_FOCUS_PATH } # v3.8
+			modifier = { factor = 10 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } }
+		}
+	}
+
+	focus = {
+		id = TAI_taiwan_first
+		icon = TAI_dpp
+		x = 26
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_cross_strait_crossroads }
+		mutually_exclusive = { focus = TAI_constitutional_orthodoxy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_taiwan_first"
+			add_ideas = TAI_taiwan_identity
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.08 }
+			set_temp_variable = { temp_outlook_increase = 0.08 }
+			change_relative_party_popularity = yes
+			set_country_flag = TAI_pan_green_path
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 10 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 0 has_global_flag = TAI_RETURN_FOCUS_PATH } # v3.8
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+			modifier = { factor = 3 check_variable = { ruling_party = 2 } }
+		}
+	}
+
+	focus = {
+		id = TAI_legislative_reform
+		icon = legislative_yuan
+		x = 22
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_cross_strait_crossroads focus = TAI_judicial_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_legislative_reform"
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_legislative_halving
+		icon = Focus_Parliament_Constitution
+		x = 22
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_legislative_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_legislative_halving"
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_seventh_amendment
+		icon = adopt_the_peoples_constitution
+		x = 22
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_legislative_halving }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_seventh_amendment"
+			add_political_power = 75
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_sunshine_laws
+		icon = civil_service
+		x = 22
+		y = 6
+		cost = 5
+		prerequisite = { focus = TAI_seventh_amendment }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CORRUPTION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_sunshine_laws"
+			add_stability = 0.03
+			# v3.3
+			TAI_dbf_black_gold_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_mature_democracy
+		icon = democratic_stability
+		x = 22
+		y = 7
+		cost = 10
+		prerequisite = { focus = TAI_sunshine_laws }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mature_democracy"
+			add_ideas = TAI_mature_democracy_idea
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_three_principles_revival
+		icon = focus_PRC_adopt_sun_yat_sens_principles
+		x = 16
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_constitutional_orthodoxy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_three_principles_revival"
+			add_political_power = 100
+			add_stability = 0.03
+			add_to_variable = { TAI_mainland_unrest = 3 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_lien_soong_alliance
+		icon = TAI_pfp
+		x = 18
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_constitutional_orthodoxy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_lien_soong_alliance"
+			add_ideas = TAI_pan_blue_unity_idea
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.05 }
+			set_temp_variable = { temp_outlook_increase = 0.05 }
+			change_relative_party_popularity = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_purge_black_gold
+		icon = TAI_kmt
+		x = 20
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_constitutional_orthodoxy }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CORRUPTION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_purge_black_gold"
+			add_stability = 0.05
+			add_political_power = -50
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.04 }
+			set_temp_variable = { temp_outlook_increase = 0.04 }
+			change_relative_party_popularity = yes
+			# v3.3
+			TAI_dbf_black_gold_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_kmt_party_reform
+		icon = TAI_kmt
+		x = 16
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_three_principles_revival }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_kmt_party_reform"
+			add_political_power = 75
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.03 }
+			set_temp_variable = { temp_outlook_increase = 0.03 }
+			change_relative_party_popularity = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_strengthen_unification_council
+		icon = control_yuan
+		x = 18
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_three_principles_revival focus = TAI_lien_soong_alliance }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_strengthen_unification_council"
+			add_political_power = 75
+			add_to_variable = { TAI_mainland_unrest = 3 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_five_yuan_reform
+		icon = legislative_yuan
+		x = 20
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_purge_black_gold }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_five_yuan_reform"
+			add_stability = 0.04
+			add_political_power = 75
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_party_assets_trust
+		icon = treasure_chest
+		x = 15
+		y = 5
+		cost = 5
+		prerequisite = { focus = TAI_kmt_party_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_party_assets_trust"
+			add_stability = 0.03
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.03 }
+			set_temp_variable = { temp_outlook_increase = 0.03 }
+			change_relative_party_popularity = yes
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_chinese_culture_renaissance
+		icon = focus_CHI_cradle_of_civilization
+		x = 17
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_kmt_party_reform focus = TAI_strengthen_unification_council }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_chinese_culture_renaissance"
+			add_ideas = TAI_culture_renaissance_idea
+			add_to_variable = { TAI_mainland_unrest = 3 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_national_security_law
+		icon = national_sec_tai
+		x = 20
+		y = 5
+		cost = 5
+		prerequisite = { focus = TAI_five_yuan_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_national_security_law"
+			add_stability = 0.03
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_guidelines_for_unification
+		icon = focus_generic_improve_the_administration
+		x = 18
+		y = 6
+		cost = 10
+		prerequisite = { focus = TAI_strengthen_unification_council }
+		prerequisite = { focus = TAI_five_yuan_reform }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_guidelines_for_unification"
+			swap_ideas = { remove_idea = TAI_roc_orthodoxy add_idea = TAI_roc_orthodoxy_2 }
+			add_war_support = 0.05
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_status_quo
+		icon = national_sec_tai
+		x = 25
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_taiwan_first }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_status_quo"
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_transitional_justice
+		icon = TAI_np
+		x = 27
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_taiwan_first }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_transitional_justice"
+			add_stability = 0.03
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.04 }
+			set_temp_variable = { temp_outlook_increase = 0.04 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_referendum_act
+		icon = Election_graphics
+		x = 29
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_taiwan_first }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_referendum_act"
+			add_stability = 0.02
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_porcupine_strategy
+		icon = TAI_forces
+		x = 25
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_status_quo }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_porcupine_strategy"
+			add_ideas = TAI_porcupine_idea
+			army_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_def = 0.03 tooltip = army_defence_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_values_diplomacy
+		icon = align_to_taiwan
+		x = 27
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_transitional_justice }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_values_diplomacy"
+			every_country = { limit = { OR = { tag = USA tag = JAP tag = ENG tag = GER tag = FRA tag = AST tag = CAN } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_civil_society
+		icon = democracy_genericus
+		x = 29
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_referendum_act }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_civil_society"
+			add_stability = 0.04
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_whole_society_defense
+		icon = home_defense
+		x = 25
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_porcupine_strategy }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_whole_society_defense"
+			add_war_support = 0.05
+			add_manpower = 10000
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_indigenous_rights
+		icon = family
+		x = 29
+		y = 5
+		cost = 5
+		prerequisite = { focus = TAI_civil_society }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_indigenous_rights"
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_formosa_resilience
+		icon = TAI_soldier
+		x = 27
+		y = 6
+		cost = 10
+		prerequisite = { focus = TAI_whole_society_defense }
+		prerequisite = { focus = TAI_values_diplomacy }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_formosa_resilience"
+			add_ideas = TAI_formosa_resilience_idea
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_national_glory_plan
+		icon = usa_taiwan_sb_oon
+		x = 18
+		y = 7
+		cost = 5
+		prerequisite = { focus = TAI_guidelines_for_unification }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_national_glory_plan"
+			add_ideas = TAI_counteroffensive_preparation
+			set_country_flag = TAI_mainland_work_active
+			custom_effect_tooltip = TAI_unrest_mechanic_tt
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_atk = 0.02 tooltip = army_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+		}
+	}
+
+	focus = {
+		id = TAI_mainland_work_conference
+		icon = national_sec_tai
+		x = 14
+		y = 8
+		cost = 3
+		prerequisite = { focus = TAI_national_glory_plan }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mainland_work_conference"
+			custom_effect_tooltip = TAI_unlock_mainland_work_decisions_tt
+			set_country_flag = TAI_mainland_decisions_unlocked
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_intelligence_war
+		icon = espionage
+		x = 16
+		y = 8
+		cost = 3
+		prerequisite = { focus = TAI_national_glory_plan }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_intelligence_war"
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.02
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_amphibious_corps
+		icon = roc_marine_corps
+		x = 19
+		y = 8
+		cost = 5
+		prerequisite = { focus = TAI_national_glory_plan }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_amphibious_corps"
+			add_tech_bonus = { name = TAI_amphibious_corps bonus = 0.5 uses = 2 category = CAT_special_forces_equipment }
+			army_experience = 30
+			navy_experience = 30
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_amp = 0.1 tooltip = amphibious_invasion_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_atk = 0.02 tooltip = army_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_secure_us_acquiescence
+		icon = align_to_taiwan
+		x = 22
+		y = 8
+		cost = 3
+		prerequisite = { focus = TAI_national_glory_plan }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		available = {
+			country_exists = USA
+			NOT = { has_war_with = USA }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_secure_us_acquiescence"
+			USA = { country_event = { id = roc_return.2 days = 3 } }
+			custom_effect_tooltip = TAI_us_answer_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_war_economy
+		icon = industry_military
+		x = 25
+		y = 8
+		cost = 3
+		prerequisite = { focus = TAI_national_glory_plan }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_war_economy"
+			add_ideas = TAI_war_economy_idea
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_mainland_democracy_support
+		icon = china_lighthouse_of_democracy
+		x = 13
+		y = 9
+		cost = 3
+		prerequisite = { focus = TAI_mainland_work_conference }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mainland_democracy_support"
+			add_to_variable = { TAI_mainland_unrest = 10 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_popularity = { ideology = democratic popularity = 0.03 }
+					add_stability = -0.03
+				}
+			}
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_overseas_mobilization
+		icon = chinese_nationalism
+		x = 15
+		y = 9
+		cost = 3
+		prerequisite = { focus = TAI_mainland_work_conference }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_overseas_mobilization"
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			add_manpower = 20000
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_special_forces_raids
+		icon = army_nightvision
+		x = 17
+		y = 9
+		cost = 3
+		prerequisite = { focus = TAI_intelligence_war }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_special_forces_raids"
+			add_tech_bonus = { name = TAI_special_forces_raids bonus = 0.5 uses = 1 category = CAT_special_forces_equipment }
+			add_to_variable = { TAI_mainland_unrest = 4 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			army_experience = 20
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_brk = 0.03 tooltip = breakthrough_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_kinmen_matsu_bastion
+		icon = taiwan_garrison_command
+		x = 19
+		y = 9
+		cost = 3
+		prerequisite = { focus = TAI_amphibious_corps }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_kinmen_matsu_bastion"
+			430 = { add_building_construction = { type = naval_base level = 2 instant_build = yes } add_building_construction = { type = air_base level = 2 instant_build = yes } add_building_construction = { type = bunker level = 2 instant_build = yes } }
+			1109 = { add_building_construction = { type = naval_base level = 2 instant_build = yes } add_building_construction = { type = bunker level = 1 instant_build = yes } }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_def = 0.03 tooltip = army_defence_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_air_sea_superiority
+		icon = roc_navyforce
+		x = 21
+		y = 9
+		cost = 5
+		prerequisite = { focus = TAI_amphibious_corps }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_air_sea_superiority"
+			air_experience = 40
+			navy_experience = 40
+			add_tech_bonus = { name = TAI_air_sea_superiority bonus = 0.5 uses = 1 category = CAT_aircraft }
+			add_tech_bonus = { name = TAI_air_sea_superiority bonus = 0.5 uses = 1 category = CAT_naval }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_sup = 0.03 tooltip = air_superiority_efficiency_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_dmg = 0.03 tooltip = naval_damage_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_strategic_stockpile
+		icon = barrels
+		x = 25
+		y = 9
+		cost = 2
+		prerequisite = { focus = TAI_war_economy }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_strategic_stockpile"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = fuel_silo level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = fuel_silo level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_peaceful_unification_talks
+		icon = one_china_policy
+		x = 13
+		y = 10
+		cost = 5
+		prerequisite = { focus = TAI_mainland_democracy_support }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_FOREIGN_POLICY }
+		available = {
+			country_exists = CHI
+			NOT = { has_war_with = CHI }
+			custom_trigger_tooltip = {
+				tooltip = TAI_peace_talks_condition_tt
+				OR = {
+					CHI = { has_government = democratic }
+					CHI = { has_stability < 0.30 }
+					check_variable = { TAI_mainland_unrest > 69 }
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_peaceful_unification_talks"
+			CHI = { country_event = { id = roc_return.5 days = 2 } }
+			custom_effect_tooltip = TAI_peace_talks_tt
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 0 has_global_flag = TAI_RETURN_FOCUS_PATH } # v3.8
+			modifier = { factor = 10 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+		}
+	}
+
+	focus = {
+		id = TAI_ignite_mainland_uprising
+		icon = focus_CHI_guerrilla_warfare
+		x = 15
+		y = 10
+		cost = 5
+		prerequisite = { focus = TAI_mainland_democracy_support }
+		prerequisite = { focus = TAI_overseas_mobilization }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			country_exists = CHI
+			CHI = { NOT = { has_government = democratic } has_civil_war = no }
+			custom_trigger_tooltip = {
+				tooltip = TAI_uprising_condition_tt
+				check_variable = { TAI_mainland_unrest > 79 }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_ignite_mainland_uprising"
+			custom_effect_tooltip = TAI_uprising_tt
+			set_country_flag = TAI_uprising_started
+			set_country_flag = TAI_volunteer_phase
+			set_country_flag = { flag = TAI_uprising_young days = 60 }
+			set_variable = { TAI_volunteer_count = 0 }
+			CHI = {
+				start_civil_war = {
+					ideology = democratic
+					size = 0.35
+					states = { 537 538 534 532 562 }
+					set_country_flag = TAI_mainland_rebels
+					TAI = { country_event = { id = roc_return.8 days = 1 } }
+				}
+				country_event = { id = roc_return.60 days = 1 }
+			}
+			news_event = { id = roc_return.61 days = 2 }
+			country_event = { id = roc_return.190 days = 120 }
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+		}
+	}
+
+	focus = {
+		id = TAI_return_to_mainland
+		icon = TAI_civilwar_legacy
+		x = 19
+		y = 10
+		cost = 5
+		prerequisite = { focus = TAI_kinmen_matsu_bastion }
+		prerequisite = { focus = TAI_air_sea_superiority }
+		will_lead_to_war_with = CHI
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY }
+		available = {
+			country_exists = CHI
+			NOT = { has_war_with = CHI }
+			TAI_return_window_open = yes
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_return_to_mainland"
+			swap_ideas = { remove_idea = TAI_counteroffensive_preparation add_idea = TAI_counteroffensive }
+			add_war_support = 0.15
+			create_wargoal = { type = annex_everything target = CHI }
+			country_event = { id = roc_return.50 days = 1 }
+			CHI = { country_event = { id = roc_return.52 days = 2 } }
+			news_event = { id = roc_return.51 days = 2 }
+			if = { limit = { is_ai = yes } declare_war_on = { target = CHI type = annex_everything } }
+		}
+		ai_will_do = {
+			base = 0
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+			modifier = { factor = 5 has_global_flag = TAI_RETURN_FOCUS_PATH } # v3.8
+			modifier = { add = 20 TAI_return_window_open = yes }
+			modifier = { factor = 0 CHI = { has_stability > 0.40 } NOT = { any_country = { is_major = yes has_war_with = CHI } } }
+		}
+	}
+
+	focus = {
+		id = TAI_strait_blockade
+		icon = Generic_Submarine2
+		x = 22
+		y = 10
+		cost = 3
+		prerequisite = { focus = TAI_air_sea_superiority }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_strait_blockade"
+			add_tech_bonus = { name = TAI_strait_blockade bonus = 0.5 uses = 1 category = CAT_submarines }
+			navy_experience = 30
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH } # v3.8
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+		}
+	}
+
+	focus = {
+		id = TAI_general_mobilization
+		icon = army_mobilisation
+		x = 25
+		y = 10
+		cost = 3
+		prerequisite = { focus = TAI_strategic_stockpile }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_general_mobilization"
+			add_ideas = TAI_mobilization_idea
+			add_manpower = 50000
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_escalate_intervention
+		icon = peoples_liberation_army
+		x = 13
+		y = 11
+		cost = 3
+		prerequisite = { focus = TAI_ignite_mainland_uprising }
+		will_lead_to_war_with = CHI
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY }
+		available = {
+			has_country_flag = TAI_volunteer_phase
+			any_country = { has_country_flag = TAI_mainland_rebels }
+			custom_trigger_tooltip = {
+				tooltip = TAI_escalate_condition_tt
+				NOT = { has_country_flag = TAI_uprising_young }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_escalate_intervention"
+			TAI_escalate_effect = yes
+		}
+		ai_will_do = {
+			base = 40
+			modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAI_psychological_offensive
+		icon = Generic_War_Propaganda02
+		x = 15
+		y = 11
+		cost = 2
+		prerequisite = { focus = TAI_ignite_mainland_uprising focus = TAI_return_to_mainland }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		available = {
+			OR = {
+				has_war_with = CHI
+				has_country_flag = TAI_volunteer_phase
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_psychological_offensive"
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_war_support = -0.05
+					add_stability = -0.03
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_southeast_landings
+		icon = focus_CHI_southern_naval_logistics
+		x = 17
+		y = 11
+		cost = 2
+		prerequisite = { focus = TAI_return_to_mainland focus = TAI_ignite_mainland_uprising }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_NAVY }
+		available = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_southeast_landings"
+			add_timed_idea = { idea = TAI_landing_operations days = 240 }
+			army_experience = 25
+			country_event = { id = roc_return.53 days = 1 }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_amp = 0.1 tooltip = amphibious_invasion_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_pla_uprising
+		icon = Peoples_liberation_army_alt
+		x = 19
+		y = 11
+		cost = 3
+		prerequisite = { focus = TAI_return_to_mainland focus = TAI_ignite_mainland_uprising }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_ANNEXATION }
+		available = {
+			has_war_with = CHI
+			any_controlled_state = { TAI_is_mainland_state = yes }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_pla_uprising"
+			custom_effect_tooltip = TAI_defectors_tt
+			TAI_spawn_defectors = yes
+			TAI_spawn_defectors = yes
+			TAI_spawn_defectors = yes
+			set_country_flag = TAI_defection_decision_unlocked
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.05
+					add_war_support = -0.05
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_airborne_assault
+		icon = Generic_Transport_Aircraft
+		x = 21
+		y = 11
+		cost = 2
+		prerequisite = { focus = TAI_strait_blockade }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_AIRCRAFT }
+		available = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_airborne_assault"
+			add_tech_bonus = { name = TAI_airborne_assault bonus = 0.5 uses = 1 category = CAT_helicopters }
+			air_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_eff = 0.02 tooltip = air_mission_efficiency_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_brk = 0.02 tooltip = breakthrough_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 50
+			modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH } # v3.8
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_fujian
+		icon = focus_CHI_strengthening_our_resolve
+		x = 16
+		y = 12
+		cost = 2
+		prerequisite = { focus = TAI_southeast_landings focus = TAI_pla_uprising focus = TAI_psychological_offensive }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			controls_state = 537
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_fujian"
+			add_war_support = 0.05
+			add_political_power = 50
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.03
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_shanghai
+		icon = focus_CHI_retake_the_coastal_cities
+		x = 18
+		y = 12
+		cost = 2
+		prerequisite = { focus = TAI_southeast_landings focus = TAI_pla_uprising }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			controls_state = 540
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_shanghai"
+			add_war_support = 0.05
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.05
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_guangdong
+		icon = pearl_river_megacity
+		x = 20
+		y = 12
+		cost = 2
+		prerequisite = { focus = TAI_pla_uprising focus = TAI_airborne_assault }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			OR = { controls_state = 532 controls_state = 534 }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_guangdong"
+			add_war_support = 0.05
+			add_manpower = 20000
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.03
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_retake_nanjing
+		icon = roc_kmt_china
+		x = 17
+		y = 13
+		cost = 2
+		prerequisite = { focus = TAI_liberate_fujian focus = TAI_liberate_shanghai }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+		available = {
+			controls_state = 536
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_retake_nanjing"
+			add_war_support = 0.10
+			add_stability = 0.05
+			news_event = { id = roc_return.9 days = 1 }
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.10
+					add_war_support = -0.10
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_wuhan
+		icon = focus_CHI_decisive_battles
+		x = 19
+		y = 13
+		cost = 2
+		prerequisite = { focus = TAI_liberate_shanghai focus = TAI_liberate_guangdong }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			controls_state = 570
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_wuhan"
+			add_war_support = 0.05
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.05
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_northern_expedition
+		icon = Focus_Northern_Expedition
+		x = 17
+		y = 14
+		cost = 3
+		prerequisite = { focus = TAI_retake_nanjing }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_WAR_SUPPORT }
+		available = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_northern_expedition"
+			army_experience = 50
+			add_war_support = 0.05
+			add_timed_idea = { idea = TAI_northern_expedition_idea days = 180 }
+			country_event = { id = roc_return.55 days = 1 }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_atk = 0.03 tooltip = army_attack_factor_tt }
+			add_to_variable = { TAI_army_mor = 0.05 tooltip = army_morale_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_southwest
+		icon = focus_CHI_utilize_the_terrain
+		x = 20
+		y = 14
+		cost = 2
+		prerequisite = { focus = TAI_liberate_wuhan }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			OR = { controls_state = 586 controls_state = 583 }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_southwest"
+			add_war_support = 0.05
+			add_manpower = 20000
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_liberate_beiping
+		icon = war_against_china
+		x = 17
+		y = 15
+		cost = 2
+		prerequisite = { focus = TAI_northern_expedition }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			controls_state = 547
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_liberate_beiping"
+			add_war_support = 0.10
+			add_political_power = 100
+			news_event = { id = roc_return.56 days = 1 }
+			if = { limit = { country_exists = CHI }
+				CHI = {
+					add_stability = -0.10
+					add_war_support = -0.10
+				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = TAI_mainland_restored
+		icon = focus_CHI_cradle_of_civilization
+		x = 15
+		y = 16
+		cost = 5
+		prerequisite = { focus = TAI_liberate_beiping focus = TAI_peaceful_unification_talks }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		available = {
+			owns_state = 536
+			owns_state = 547
+			NOT = { has_war_with = CHI }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mainland_restored"
+			TAI_on_mainland_restored = yes
+			custom_effect_tooltip = TAI_tag_switch_tt
+			custom_effect_tooltip = TAI_new_tree_tt
+			news_event = { id = roc_return.14 days = 1 }
+			hidden_effect = { ROC_tag_switch = yes }
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = TAI_armed_forces_modernization
+		icon = TAI_forces
+		x = 37
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_armed_forces_modernization"
+			army_experience = 20
+			add_tech_bonus = { name = TAI_armed_forces_modernization bonus = 0.5 uses = 1 category = CAT_infantry }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_general_staff_modifier }
+			add_to_variable = { TAI_gs_plan = 0.05 tooltip = planning_speed_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_army_reform
+		icon = army_reform
+		x = 33
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_armed_forces_modernization }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_army_reform"
+			army_experience = 20
+			add_tech_bonus = { name = TAI_army_reform bonus = 0.5 uses = 1 category = CAT_small_arms }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_org = 0.03 tooltip = army_org_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_navy_modernization
+		icon = TAI_navy_forces
+		x = 37
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_armed_forces_modernization }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_navy_modernization"
+			navy_experience = 25
+			add_tech_bonus = { name = TAI_navy_modernization bonus = 0.5 uses = 1 category = CAT_frigates }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_org = 0.03 tooltip = navy_org_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_air_force_modernization
+		icon = TAI_air_forces
+		x = 41
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_armed_forces_modernization }
+		search_filters = { FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_air_force_modernization"
+			air_experience = 25
+			add_tech_bonus = { name = TAI_air_force_modernization bonus = 0.3 uses = 1 category = CAT_aircraft }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_def = 0.03 tooltip = air_defence_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_han_kuang_exercise
+		icon = taiwan_army_glory
+		x = 32
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_army_reform }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_han_kuang_exercise"
+			add_ideas = TAI_han_kuang_idea
+			army_experience = 30
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_xp = 0.03 tooltip = experience_gain_army_tt }
+			add_to_variable = { TAI_army_crd = 0.05 tooltip = coordination_bonus_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_conscription_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_conscription_reform
+		icon = TAI_trifle
+		x = 34
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_army_reform }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_conscription_reform"
+			add_ideas = TAI_reserve_mobilization_idea
+			# v3.3
+			TAI_dbf_conscription_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_marine_corps_expansion
+		icon = roc_marine_corps
+		x = 31
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_han_kuang_exercise }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_marine_corps_expansion"
+			add_tech_bonus = { name = TAI_marine_corps_expansion bonus = 0.5 uses = 1 category = CAT_special_forces_equipment }
+			army_experience = 20
+			add_manpower = 5000
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_amp = 0.05 tooltip = amphibious_invasion_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_atk = 0.02 tooltip = army_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_armor_modernization
+		icon = Armored_Troops
+		x = 33
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_han_kuang_exercise focus = TAI_conscription_reform }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_armor_modernization"
+			add_tech_bonus = { name = TAI_armor_modernization bonus = 0.5 uses = 1 category = CAT_tanks }
+			add_tech_bonus = { name = TAI_armor_modernization bonus = 0.5 uses = 1 category = CAT_armored_personnel_carriers }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_brk = 0.05 tooltip = breakthrough_factor_tt }
+			add_to_variable = { TAI_army_atk = 0.03 tooltip = army_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_army_aviation
+		icon = Generic_Attack_Helicopter
+		x = 35
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_conscription_reform }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_army_aviation"
+			add_tech_bonus = { name = TAI_army_aviation bonus = 0.5 uses = 2 category = CAT_helicopters }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_rec = 0.1 tooltip = recon_factor_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_eff = 0.02 tooltip = air_mission_efficiency_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_whampoa_spirit
+		icon = vampu_academy
+		x = 32
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_marine_corps_expansion focus = TAI_armor_modernization }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_whampoa_spirit"
+			add_ideas = TAI_whampoa_spirit_idea
+			army_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_mor = 0.05 tooltip = army_morale_factor_tt }
+			add_to_variable = { TAI_army_org = 0.03 tooltip = army_org_factor_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_conscription_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_special_forces
+		icon = army_rzso
+		x = 34
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_armor_modernization focus = TAI_army_aviation }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_special_forces"
+			add_tech_bonus = { name = TAI_special_forces bonus = 0.5 uses = 1 category = CAT_special_forces_equipment }
+			army_experience = 15
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_brk = 0.03 tooltip = breakthrough_factor_tt }
+			add_to_variable = { TAI_army_rec = 0.05 tooltip = recon_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_mobile_defense_doctrine
+		icon = army_doctrine
+		x = 33
+		y = 5
+		cost = 10
+		prerequisite = { focus = TAI_whampoa_spirit }
+		prerequisite = { focus = TAI_special_forces }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_mobile_defense_doctrine"
+			army_experience = 50
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_def = 0.08 tooltip = army_defence_factor_tt }
+			add_to_variable = { TAI_army_org = 0.05 tooltip = army_org_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_hsiung_feng_missiles
+		icon = Peoples_Liberation_Rocket_Force
+		x = 36
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_navy_modernization }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_hsiung_feng_missiles"
+			add_tech_bonus = { name = TAI_hsiung_feng_missiles bonus = 0.6 uses = 2 category = CAT_missiles }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_dmg = 0.05 tooltip = naval_damage_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_kidd_destroyers
+		icon = destroyers
+		x = 38
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_navy_modernization }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_kidd_destroyers"
+			add_tech_bonus = { name = TAI_kidd_destroyers bonus = 0.5 uses = 1 category = CAT_naval }
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+			navy_experience = 20
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_def = 0.05 tooltip = naval_defense_factor_tt }
+			add_to_variable = { TAI_navy_sub = 0.05 tooltip = navy_submarine_detection_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_indigenous_submarine
+		icon = Generic_Submarine1
+		x = 36
+		y = 3
+		cost = 10
+		prerequisite = { focus = TAI_hsiung_feng_missiles }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_indigenous_submarine"
+			add_tech_bonus = { name = TAI_indigenous_submarine bonus = 0.6 uses = 2 category = CAT_submarines }
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_sub = 0.05 tooltip = navy_submarine_detection_factor_tt }
+			add_to_variable = { TAI_navy_dmg = 0.03 tooltip = naval_damage_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_stealth_corvettes
+		icon = frigates
+		x = 38
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_kidd_destroyers }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_stealth_corvettes"
+			add_tech_bonus = { name = TAI_stealth_corvettes bonus = 0.5 uses = 2 category = CAT_corvettes }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_spd = 0.05 tooltip = naval_speed_factor_tt }
+			add_to_variable = { TAI_navy_dmg = 0.03 tooltip = naval_damage_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_coast_guard_administration
+		icon = border_patrol_increase
+		x = 37
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_indigenous_submarine focus = TAI_stealth_corvettes }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_coast_guard_administration"
+			navy_experience = 20
+			add_stability = 0.01
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_org = 0.03 tooltip = navy_org_factor_tt }
+			add_to_variable = { TAI_navy_rep = 0.05 tooltip = repair_speed_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_sea_control_doctrine
+		icon = naval_doctrine
+		x = 37
+		y = 5
+		cost = 10
+		prerequisite = { focus = TAI_coast_guard_administration }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_sea_control_doctrine"
+			navy_experience = 50
+			add_doctrine_cost_reduction = { name = TAI_sea_control_doctrine category = CAT_naval uses = 1 cost_reduction = 0.5 }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_dmg = 0.05 tooltip = naval_damage_factor_tt }
+			add_to_variable = { TAI_navy_def = 0.05 tooltip = naval_defense_factor_tt }
+			add_to_variable = { TAI_navy_mor = 0.05 tooltip = naval_morale_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_idf_upgrade
+		icon = taiwan_plane_upg
+		x = 40
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_air_force_modernization }
+		search_filters = { FOCUS_FILTER_AIRCRAFT FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_idf_upgrade"
+			add_tech_bonus = { name = TAI_idf_upgrade bonus = 0.5 uses = 2 category = CAT_aircraft }
+			air_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_agi = 0.05 tooltip = air_agility_factor_tt }
+			add_to_variable = { TAI_air_atk = 0.03 tooltip = air_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_f16_upgrade
+		icon = F16
+		x = 42
+		y = 2
+		cost = 7
+		prerequisite = { focus = TAI_air_force_modernization }
+		search_filters = { FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_f16_upgrade"
+			add_tech_bonus = { name = TAI_f16_upgrade bonus = 0.5 uses = 1 category = CAT_medium_aircraft }
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_atk = 0.05 tooltip = air_attack_factor_tt }
+			add_to_variable = { TAI_air_sup = 0.03 tooltip = air_superiority_efficiency_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_tien_kung_air_defense
+		icon = TAI_air_forces
+		x = 39
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_idf_upgrade }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_tien_kung_air_defense"
+			add_tech_bonus = { name = TAI_tien_kung bonus = 0.5 uses = 2 category = CAT_missiles }
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 599 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_air_base_hardening
+		icon = airforce_base_1
+		x = 41
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_idf_upgrade focus = TAI_f16_upgrade }
+		search_filters = { FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_air_base_hardening"
+			598 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			1157 = { add_building_construction = { type = air_base level = 2 instant_build = yes } }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_def = 0.05 tooltip = air_defence_factor_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_drone_program
+		icon = drone
+		x = 43
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_f16_upgrade }
+		search_filters = { FOCUS_FILTER_AIRCRAFT FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_drone_program"
+			add_tech_bonus = { name = TAI_drone_program bonus = 0.6 uses = 2 category = CAT_air_drones }
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_det = 0.1 tooltip = air_detection_tt }
+			add_to_variable = { TAI_air_eff = 0.03 tooltip = air_mission_efficiency_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_air_superiority_doctrine
+		icon = air_superiority
+		x = 41
+		y = 4
+		cost = 10
+		prerequisite = { focus = TAI_tien_kung_air_defense focus = TAI_air_base_hardening focus = TAI_drone_program }
+		search_filters = { FOCUS_FILTER_AIRCRAFT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_air_superiority_doctrine"
+			air_experience = 50
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_sup = 0.05 tooltip = air_superiority_efficiency_tt }
+			add_to_variable = { TAI_air_eff = 0.05 tooltip = air_mission_efficiency_tt }
+			add_to_variable = { TAI_air_xp = 0.03 tooltip = experience_gain_air_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_long_range_strike
+		icon = guided_missile
+		x = 40
+		y = 5
+		cost = 7
+		prerequisite = { focus = TAI_air_superiority_doctrine }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_long_range_strike"
+			add_tech_bonus = { name = TAI_long_range_strike bonus = 0.5 uses = 2 category = CAT_missiles }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_joint_operations
+		icon = TAI_forces
+		x = 37
+		y = 6
+		cost = 10
+		prerequisite = { focus = TAI_mobile_defense_doctrine }
+		prerequisite = { focus = TAI_sea_control_doctrine }
+		prerequisite = { focus = TAI_air_superiority_doctrine }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_joint_operations"
+			add_ideas = TAI_joint_operations_idea
+			navy_experience = 25
+			air_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_general_staff_modifier }
+			add_to_variable = { TAI_gs_plan = 0.05 tooltip = planning_speed_tt }
+			add_to_variable = { TAI_gs_maxplan = 0.05 tooltip = max_planning_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_iron_bastion
+		icon = military_fort2
+		x = 35
+		y = 7
+		cost = 10
+		prerequisite = { focus = TAI_joint_operations }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_iron_bastion"
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 1157 430 1109 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				prioritize = { 598 1157 430 1109 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = coastal_bunker level = 1 instant_build = yes }
+			}
+			add_war_support = 0.05
+			army_experience = 25
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_def = 0.05 tooltip = army_defence_factor_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_imbalance_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_defense_autonomy
+		icon = industry_military
+		x = 39
+		y = 7
+		cost = 10
+		prerequisite = { focus = TAI_joint_operations }
+		prerequisite = { focus = TAI_long_range_strike }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_defense_autonomy"
+			add_ideas = TAI_defense_autonomy_idea
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_general_staff_modifier }
+			add_to_variable = { TAI_gs_supply = -0.05 tooltip = supply_consumption_factor_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_imbalance_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_cyber_command
+		icon = army_cyberwar
+		x = 35
+		y = 8
+		cost = 7
+		prerequisite = { focus = TAI_iron_bastion }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_cyber_command"
+			add_tech_bonus = { name = TAI_cyber_command bonus = 0.5 uses = 2 category = CAT_internet }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_csist_expansion
+		icon = research
+		x = 39
+		y = 8
+		cost = 7
+		prerequisite = { focus = TAI_defense_autonomy }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_csist_expansion"
+			add_research_slot = 1
+			set_temp_variable = { treasury_change = -10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_pragmatic_diplomacy
+		icon = diplomacy
+		x = 49
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_pragmatic_diplomacy"
+			add_political_power = 50
+			add_ideas = TAI_pragmatic_diplomacy_idea
+			# v3.3
+			TAI_dbf_isolation_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_us_arms_sales
+		icon = trade_with_taiwan
+		x = 46
+		y = 1
+		cost = 7
+		prerequisite = { focus = TAI_pragmatic_diplomacy }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EQUIPMENT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_us_arms_sales"
+			if = { limit = { country_exists = USA }
+				USA = { add_opinion_modifier = { target = ROOT modifier = TAI_arms_customer } }
+			}
+			add_tech_bonus = { name = TAI_us_arms_sales bonus = 0.5 uses = 1 category = CAT_aircraft }
+			add_tech_bonus = { name = TAI_us_arms_sales bonus = 0.5 uses = 1 category = CAT_frigates }
+			set_temp_variable = { treasury_change = -8 }
+			modify_treasury_effect = yes
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_atk = 0.03 tooltip = air_attack_factor_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_imbalance_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_japan_partnership
+		icon = align_to_japan
+		x = 49
+		y = 1
+		cost = 5
+		prerequisite = { focus = TAI_pragmatic_diplomacy }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_japan_partnership"
+			every_country = { limit = { OR = { tag = JAP } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
+			add_tech_bonus = { name = TAI_japan_partnership bonus = 0.3 uses = 1 category = CAT_industry }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_secure_allies
+		icon = major_alliance
+		x = 52
+		y = 1
+		cost = 7
+		prerequisite = { focus = TAI_pragmatic_diplomacy }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_secure_allies"
+			every_country = { limit = { OR = { tag = PAR tag = GUA tag = HON tag = NIC tag = ELS tag = PAN tag = DOM tag = HAI tag = BLZ tag = SOL tag = MAR tag = TUL tag = NAU tag = PAU tag = SWA } } add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } }
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_taiwan_relations_act
+		icon = align_to_america
+		x = 45
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_us_arms_sales }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_taiwan_relations_act"
+			every_country = { limit = { OR = { tag = USA } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_us_trade_talks
+		icon = trade_with_america
+		x = 47
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_us_arms_sales }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_us_trade_talks"
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+			add_tech_bonus = { name = TAI_us_trade_talks bonus = 0.3 uses = 1 category = CAT_information_technology }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_japan_tech
+		icon = goal_JAP_protect_science
+		x = 49
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_japan_partnership }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_japan_tech"
+			add_tech_bonus = { name = TAI_japan_tech bonus = 0.4 uses = 1 category = CAT_microchips }
+			add_tech_bonus = { name = TAI_japan_tech bonus = 0.4 uses = 1 category = CAT_robotics }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_central_america_aid
+		icon = befriend_central_america
+		x = 51
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_secure_allies }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_central_america_aid"
+			every_country = { limit = { OR = { tag = GUA tag = HON tag = NIC tag = ELS tag = PAN tag = BLZ tag = DOM tag = HAI tag = PAR } } add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } }
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_pacific_allies
+		icon = pacific_islands_focus
+		x = 53
+		y = 2
+		cost = 5
+		prerequisite = { focus = TAI_secure_allies }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_pacific_allies"
+			every_country = { limit = { OR = { tag = SOL tag = MAR tag = TUL tag = NAU tag = PAU } } add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } }
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_us_military_exchange
+		icon = military_deal
+		x = 46
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_taiwan_relations_act focus = TAI_us_trade_talks }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_us_military_exchange"
+			army_experience = 25
+			navy_experience = 15
+			air_experience = 15
+			# v3.3
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_general_staff_modifier }
+			add_to_variable = { TAI_gs_xpf = 0.05 tooltip = experience_gain_army_factor_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_xp = 0.02 tooltip = experience_gain_army_tt }
+			force_update_dynamic_modifier = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_overseas_chinese_affairs
+		icon = chinese_nationalism
+		x = 48
+		y = 3
+		cost = 7
+		prerequisite = { focus = TAI_us_trade_talks focus = TAI_japan_tech }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_overseas_chinese_affairs"
+			every_country = { limit = { OR = { tag = SIN tag = MAY tag = SIA tag = IND tag = PHI } } add_opinion_modifier = { target = ROOT modifier = TAI_overseas_chinese_ties } }
+			add_manpower = 3000
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_europe_relations
+		icon = trade_with_europe
+		x = 50
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_japan_tech focus = TAI_central_america_aid }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_europe_relations"
+			every_country = { limit = { OR = { tag = ENG tag = FRA tag = GER tag = HOL tag = CZE tag = LIT } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_africa_allies
+		icon = africa
+		x = 52
+		y = 3
+		cost = 5
+		prerequisite = { focus = TAI_central_america_aid focus = TAI_pacific_allies }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_africa_allies"
+			every_country = { limit = { OR = { tag = SWA tag = BFA tag = CHA tag = SAO tag = MLW } } add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_wto_accession
+		icon = wto
+		x = 47
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_us_military_exchange focus = TAI_overseas_chinese_affairs }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_wto_accession"
+			set_temp_variable = { treasury_change = 8 }
+			modify_treasury_effect = yes
+			add_ideas = TAI_wto_member_idea
+			# v3.3
+			TAI_dbf_isolation_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_international_space
+		icon = focus_CHI_the_greater_game
+		x = 49
+		y = 4
+		cost = 7
+		prerequisite = { focus = TAI_overseas_chinese_affairs focus = TAI_europe_relations }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_international_space"
+			swap_ideas = { remove_idea = TAI_pragmatic_diplomacy_idea add_idea = TAI_international_space_idea }
+			# v3.3
+			TAI_dbf_isolation_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_who_bid
+		icon = united_nations
+		x = 51
+		y = 4
+		cost = 5
+		prerequisite = { focus = TAI_europe_relations focus = TAI_africa_allies }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_who_bid"
+			add_stability = 0.02
+			add_political_power = 50
+			# v3.3
+			TAI_dbf_isolation_reduce = yes
+			# /v3.3
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_de_facto_alliance
+		icon = alliance_USA_CHI
+		x = 47
+		y = 5
+		cost = 10
+		prerequisite = { focus = TAI_wto_accession }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		available = {
+			country_exists = USA
+			NOT = { has_war_with = USA }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_de_facto_alliance"
+			add_ideas = TAI_de_facto_alliance_idea
+			every_country = { limit = { OR = { tag = USA } } add_opinion_modifier = { target = ROOT modifier = TAI_arms_customer } }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = TAI_global_partner
+		icon = global_community
+		x = 51
+		y = 5
+		cost = 10
+		prerequisite = { focus = TAI_international_space focus = TAI_who_bid }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAI_global_partner"
+			add_political_power = 100
+			every_country = { limit = { OR = { tag = USA tag = JAP tag = ENG tag = FRA tag = GER tag = AST tag = CAN tag = KOR } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	# v3.33 party
+	focus = {
+		id = TAIP_root
+		icon = roc29_usa_america_economic_miracle_75227451
+		x = 30
+		y = 6
+		cost = 5
+		prerequisite = { focus = TAI_status_quo }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_root"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 50
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e1
+		icon = roc29_szc_ycp_from_party_to_govern_f7a6cbd9
+		x = 30
+		y = 7
+		cost = 7
+		prerequisite = { focus = TAIP_root }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e1"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e1_dpp
+		icon = roc29_focus_per_constitutional_mon_10cc9243
+		x = 27
+		y = 8
+		cost = 7
+		prerequisite = { focus = TAIP_e1 }
+		mutually_exclusive = { focus = TAIP_e1_kmt focus = TAIP_e1_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e1_dpp"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e1_kmt
+		icon = roc29_kmt_the_party_state_ba27722c
+		x = 30
+		y = 8
+		cost = 7
+		prerequisite = { focus = TAIP_e1 }
+		mutually_exclusive = { focus = TAIP_e1_dpp focus = TAIP_e1_pfp }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e1_kmt"
+			add_political_power = 50
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_mainland_ties } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_mainland_ties }
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e1_pfp
+		icon = TAI_pfp
+		x = 33
+		y = 8
+		cost = 7
+		prerequisite = { focus = TAIP_e1 }
+		mutually_exclusive = { focus = TAIP_e1_dpp focus = TAIP_e1_kmt }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e1_pfp"
+			add_political_power = 50
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_pfp_middle } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_pfp_middle }
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e2
+		icon = roc29_kmt_deepen_the_party_state_216709c1
+		x = 30
+		y = 9
+		cost = 7
+		prerequisite = { focus = TAIP_e1_dpp focus = TAIP_e1_kmt focus = TAIP_e1_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e2"
+			add_political_power = 75
+			add_stability = 0.03
+			country_event = { id = roc_asia.90 days = 2 }
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e2_dpp
+		icon = roc29_jap_law_order_011b374a
+		x = 27
+		y = 10
+		cost = 7
+		prerequisite = { focus = TAIP_e2 }
+		mutually_exclusive = { focus = TAIP_e2_kmt focus = TAIP_e2_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e2_dpp"
+			if = { limit = { NOT = { has_idea = TAIP_sunflower_idea } } add_ideas = TAIP_sunflower_idea }
+			add_stability = -0.01
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_strait_tension } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_strait_tension }
+			}
+			country_event = { id = roc_asia.91 days = 3 }
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e2_kmt
+		icon = roc29_tourism_development_a6fba535
+		x = 30
+		y = 10
+		cost = 7
+		prerequisite = { focus = TAIP_e2 }
+		mutually_exclusive = { focus = TAIP_e2_dpp focus = TAIP_e2_pfp }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e2_kmt"
+			if = { limit = { NOT = { has_idea = TAIP_three_links_idea } } add_ideas = TAIP_three_links_idea }
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_mainland_ties } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_mainland_ties }
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e2_pfp
+		icon = TAI_pfp
+		x = 33
+		y = 10
+		cost = 7
+		prerequisite = { focus = TAIP_e2 }
+		mutually_exclusive = { focus = TAIP_e2_dpp focus = TAIP_e2_kmt }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e2_pfp"
+			add_political_power = 50
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } }
+			add_opinion_modifier = { target = USA modifier = TAIP_ext_us_support }
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e3
+		icon = roc29_parliament_monarchism_two_pa_30ea34ba
+		x = 30
+		y = 11
+		cost = 7
+		prerequisite = { focus = TAIP_e2_dpp focus = TAIP_e2_kmt focus = TAIP_e2_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e3"
+			add_political_power = 75
+			add_stability = 0.02
+			country_event = { id = roc_asia.92 days = 2 }
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e3_dpp
+		icon = roc29_asian_investment_966b8147
+		x = 27
+		y = 12
+		cost = 7
+		prerequisite = { focus = TAIP_e3 }
+		mutually_exclusive = { focus = TAIP_e3_kmt focus = TAIP_e3_pfp }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e3_dpp"
+			if = { limit = { NOT = { has_idea = TAIP_mask_idea } } add_ideas = TAIP_mask_idea }
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e3_kmt
+		icon = roc29_diplomacy_d34ee6f7
+		x = 30
+		y = 12
+		cost = 7
+		prerequisite = { focus = TAIP_e3 }
+		mutually_exclusive = { focus = TAIP_e3_dpp focus = TAIP_e3_pfp }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e3_kmt"
+			add_political_power = 25
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_mainland_ties } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_mainland_ties }
+			}
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e3_pfp
+		icon = Focus_Parliament_Constitution
+		x = 33
+		y = 12
+		cost = 7
+		prerequisite = { focus = TAIP_e3 }
+		mutually_exclusive = { focus = TAIP_e3_dpp focus = TAIP_e3_kmt }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e3_pfp"
+			add_political_power = 50
+			add_stability = 0.01
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } }
+			add_opinion_modifier = { target = USA modifier = TAIP_ext_us_support }
+			}
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e4
+		icon = Election_graphics
+		x = 30
+		y = 13
+		cost = 7
+		prerequisite = { focus = TAIP_e3_dpp focus = TAIP_e3_kmt focus = TAIP_e3_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e4"
+			add_political_power = 75
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e4_dpp
+		icon = roc29_eng_silicon_glen_7a3f1ca3
+		x = 27
+		y = 14
+		cost = 7
+		prerequisite = { focus = TAIP_e4 }
+		mutually_exclusive = { focus = TAIP_e4_kmt focus = TAIP_e4_pfp }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e4_dpp"
+			if = { limit = { NOT = { has_idea = TAIP_chip_idea } } add_ideas = TAIP_chip_idea }
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e4_kmt
+		icon = roc29_meeting_27be1901
+		x = 30
+		y = 14
+		cost = 7
+		prerequisite = { focus = TAIP_e4 }
+		mutually_exclusive = { focus = TAIP_e4_dpp focus = TAIP_e4_pfp }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e4_kmt"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_mainland_ties } }
+			add_opinion_modifier = { target = CHI modifier = TAIP_ext_mainland_ties }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_e4_pfp
+		icon = roc29_ttm_nuclear_power_9b7c2c0e
+		x = 33
+		y = 14
+		cost = 7
+		prerequisite = { focus = TAIP_e4 }
+		mutually_exclusive = { focus = TAIP_e4_dpp focus = TAIP_e4_kmt }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_e4_pfp"
+			if = { limit = { NOT = { has_idea = TAIP_energy_idea } } add_ideas = TAIP_energy_idea }
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+
+	focus = {
+		id = TAIP_end
+		icon = roc29_kmt_50s_taiwan_begin_seperat_1fb3d5d9
+		x = 30
+		y = 15
+		cost = 7
+		prerequisite = { focus = TAIP_e4_dpp focus = TAIP_e4_kmt focus = TAIP_e4_pfp }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TAIP_end"
+			if = { limit = { NOT = { has_idea = TAIP_status_quo_idea } } add_ideas = TAIP_status_quo_idea }
+			add_stability = 0.04
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 30
+			modifier = { factor = 5 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			modifier = { factor = 0.2 has_global_flag = TAI_RETURN_FOCUS_PATH }
+		}
+	}
+	# /v3.33 party
+
+}

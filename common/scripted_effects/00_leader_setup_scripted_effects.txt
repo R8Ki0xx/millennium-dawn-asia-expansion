@@ -1,0 +1,894 @@
+## Contents
+# set_leader = yes
+# update_set_politics = yes
+# set_correct_ideology_trait = yes
+# set_failsafe_values = yes #for general politics
+# set_failsafe_change_leader = yes #only for on_action
+
+#Main Function
+set_leader = {
+	#will set correct outlook to place the newly generated leader in
+	hidden_effect = {
+		kill_country_leader = yes
+		update_set_politics = yes
+		#script per country - USoE is flag-based, not a real tag
+		if = { limit = { has_country_flag = USoE_country_leader } set_leader_USoE = yes }
+		else_if = { limit = { has_country_flag = ROC_new_chi } set_leader_ROC = yes }
+		else_if = {
+			limit = { is_dynamic_country = no }
+			meta_effect = {
+				text = {
+					set_leader_[TAG] = yes
+				}
+				TAG = "[?original_tag.GetTag]"
+			}
+		}
+
+		# We need to remove the current leader for the game to use random generation.
+		#It's OK if no leader was created in script!
+		set_correct_ideology_trait = yes
+
+		#term limit
+		if = {
+			limit = {
+				check_variable = { term_limit > 0 }
+			}
+			set_variable = { current_term = 1 }
+		}
+	}
+}
+
+update_set_politics = {
+	set_temp_variable = { outlook_party_index = ruling_party }
+	set_outlook_from_party_index = yes
+	if = {
+		limit = { check_variable = { outlook_id = 0 } }
+		if = { limit = { has_elections = yes }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+			}
+		}
+		else_if = { limit = { has_elections = no }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+			}
+		}
+		hidden_effect = {
+			meta_effect = {
+				text = {
+					set_party_name = {
+						ideology = democratic
+						name = "[SUBIDEOLOGY_NAME]"
+						long_name = "[SUBIDEOLOGY_NAME]"
+					}
+				}
+				SUBIDEOLOGY_NAME = "[show_ruling_party]"
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { outlook_id = 1 } }
+		if = { limit = { has_elections = yes }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = yes
+				}
+			}
+		}
+		else_if = { limit = { has_elections = no }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+			}
+		}
+		hidden_effect = {
+			meta_effect = {
+				text = {
+					set_party_name = {
+						ideology = communism
+						name = "[SUBIDEOLOGY_NAME]"
+						long_name = "[SUBIDEOLOGY_NAME]"
+					}
+				}
+				SUBIDEOLOGY_NAME = "[show_ruling_party]"
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { outlook_id = 2 } }
+		hidden_effect = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			meta_effect = {
+				text = {
+					set_party_name = {
+						ideology = fascism
+						name = "[SUBIDEOLOGY_NAME]"
+						long_name = "[SUBIDEOLOGY_NAME]"
+					}
+				}
+				SUBIDEOLOGY_NAME = "[show_ruling_party]"
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { outlook_id = 3 } }
+		if = { limit = { has_elections = yes }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+			}
+		}
+		else_if = { limit = { has_elections = no }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+		hidden_effect = {
+			meta_effect = {
+				text = {
+					set_party_name = {
+						ideology = neutrality
+						name = "[SUBIDEOLOGY_NAME]"
+						long_name = "[SUBIDEOLOGY_NAME]"
+					}
+				}
+				SUBIDEOLOGY_NAME = "[show_ruling_party]"
+			}
+		}
+	}
+	else = {
+		if = { limit = { has_elections = yes }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = yes
+				}
+			}
+		}
+		else_if = { limit = { has_elections = no }
+			hidden_effect = {
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+			}
+		}
+		hidden_effect = {
+			meta_effect = {
+				text = {
+					set_party_name = {
+						ideology = nationalist
+						name = "[SUBIDEOLOGY_NAME]"
+						long_name = "[SUBIDEOLOGY_NAME]"
+					}
+				}
+				SUBIDEOLOGY_NAME = "[show_ruling_party]"
+			}
+		}
+	}
+}
+
+set_correct_ideology_trait = {
+	if = {
+		limit = {
+			western_autocrats_are_in_power = yes
+			NOT = { has_country_leader_with_trait = western_Western_Autocracy }
+		}
+		add_country_leader_trait = western_Western_Autocracy
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 1 }
+			NOT = { has_country_leader_with_trait = western_conservatism }
+		}
+		add_country_leader_trait = western_conservatism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 2 }
+			NOT = { has_country_leader_with_trait = western_liberalism }
+		}
+		add_country_leader_trait = western_liberalism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 3 }
+			NOT = { has_country_leader_with_trait = western_socialism }
+		}
+		add_country_leader_trait = western_socialism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 4 }
+			NOT = { has_country_leader_with_trait = emerging_communist_state }
+		}
+		add_country_leader_trait = emerging_communist_state
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 5 }
+			NOT = { has_country_leader_with_trait = emerging_anarchist_communism }
+		}
+		add_country_leader_trait = emerging_anarchist_communism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 6 }
+			NOT = { has_country_leader_with_trait = emerging_Conservative }
+		}
+		add_country_leader_trait = emerging_Conservative
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 7 }
+			NOT = { has_country_leader_with_trait = emerging_Autocracy }
+		}
+		add_country_leader_trait = emerging_Autocracy
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 8 }
+			NOT = { has_country_leader_with_trait = emerging_Mod_Vilayat_e_Faqih }
+		}
+		add_country_leader_trait = emerging_Mod_Vilayat_e_Faqih
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 9 }
+			NOT = { has_country_leader_with_trait = emerging_Vilayat_e_Faqih }
+		}
+		add_country_leader_trait = emerging_Vilayat_e_Faqih
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 10 }
+			NOT = { has_country_leader_with_trait = salafist_Kingdom }
+		}
+		add_country_leader_trait = salafist_Kingdom
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 11 }
+			NOT = { has_country_leader_with_trait = salafist_Caliphate }
+		}
+		add_country_leader_trait = salafist_Caliphate
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 12 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_Muslim_Brotherhood }
+		}
+		add_country_leader_trait = neutrality_Neutral_Muslim_Brotherhood
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 13 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_Autocracy }
+		}
+		add_country_leader_trait = neutrality_Neutral_Autocracy
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 14 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_conservatism }
+		}
+		add_country_leader_trait = neutrality_Neutral_conservatism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 15 }
+			NOT = { has_country_leader_with_trait = neutrality_oligarchism }
+		}
+		add_country_leader_trait = neutrality_oligarchism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 16 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_Libertarian }
+		}
+		add_country_leader_trait = neutrality_Neutral_Libertarian
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 17 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_green }
+		}
+		add_country_leader_trait = neutrality_Neutral_green
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 18 }
+			NOT = { has_country_leader_with_trait = neutrality_neutral_Social }
+		}
+		add_country_leader_trait = neutrality_neutral_Social
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 19 }
+			NOT = { has_country_leader_with_trait = neutrality_Neutral_Communism }
+		}
+		add_country_leader_trait = neutrality_Neutral_Communism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 20 }
+			NOT = { has_country_leader_with_trait = nationalist_Nat_Populism }
+		}
+		add_country_leader_trait = nationalist_Nat_Populism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 21 }
+			NOT = { has_country_leader_with_trait = nationalist_Nat_Fascism }
+		}
+		add_country_leader_trait = nationalist_Nat_Fascism
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 22 }
+			NOT = { has_country_leader_with_trait = nationalist_Nat_Autocracy }
+		}
+		add_country_leader_trait = nationalist_Nat_Autocracy
+	}
+	else_if = {
+		limit = {
+			check_variable = { ruling_party = 23 }
+			NOT = { has_country_leader_with_trait = nationalist_Monarchist }
+		}
+		add_country_leader_trait = nationalist_Monarchist
+	}
+}
+
+set_failsafe_values = {
+	#Western
+	if = {
+		limit = {
+			democratic > 0
+			NOT = {
+				OR = {
+					check_variable = { party_pop_array^1 > 0 }
+					check_variable = { party_pop_array^2 > 0 }
+					check_variable = { party_pop_array^3 > 0 }
+					check_variable = { party_pop_array^0 > 0 }
+				}
+			}
+		}
+		if = { limit = { has_elections = yes }
+			random_list = {
+				2 = {
+					set_variable = { party_pop_array^3 = 0.3 }
+					set_variable = { party_pop_array^1 = 0.1 }
+					set_variable = { party_pop_array^2 = 0.1 }
+
+				}
+				2 = {
+					set_variable = { party_pop_array^1 = 0.3 }
+					set_variable = { party_pop_array^3 = 0.1 }
+					set_variable = { party_pop_array^2 = 0.1 }
+				}
+			}
+			else = {
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^0 = 0.3 }
+						set_variable = { party_pop_array^1 = 0.1 }
+						set_variable = { party_pop_array^3 = 0.1 }
+					}
+					2 = {
+						set_variable = { party_pop_array^0 = 0.5 }
+						set_variable = { party_pop_array^2 = 0.1 }
+						set_variable = { party_pop_array^3 = 0.1 }
+					}
+				}
+			}
+		}
+	}
+	#Emerging
+	if = {
+		limit = {
+			communism > 0
+			NOT = {
+				OR = {
+					check_variable = { party_pop_array^4 > 0 }
+					check_variable = { party_pop_array^6 > 0 }
+					check_variable = { party_pop_array^7 > 0 }
+					check_variable = { party_pop_array^9 > 0 }
+					check_variable = { party_pop_array^8 > 0 }
+					check_variable = { party_pop_array^5 > 0 }
+				}
+			}
+		}
+		if = { limit = { has_elections = yes }
+
+			if = { limit = { has_idea = shia }
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^9 = 0.5 } #iranian revolution is spreading
+						set_variable = { party_pop_array^8 = 0.2 }
+						set_variable = { party_pop_array^5 = 0.1 }
+
+					}
+					1 = {
+						set_variable = { party_pop_array^9 = 0.4 } #iranian revolution is spreading
+						set_variable = { party_pop_array^8 = 0.3 }
+						set_variable = { party_pop_array^5 = 0.2 }
+					}
+				}
+			}
+			if = { limit = { has_idea = western_country }
+				set_variable = { party_pop_array^5 = 0.5 } #left-wing radicalism can rise
+				set_variable = { party_pop_array^4 = 0.01 } #communism is dead
+			}
+			else_if = { limit = { OR = { has_country_flag = russian_proficient_flag has_country_flag = asian_nation_flag } } #soviet block and asia
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^6 = 0.3 } #reactionary
+						set_variable = { party_pop_array^4 = 0.1 } #communism can be a potent force still here
+					}
+					2 = {
+						set_variable = { party_pop_array^6 = 0.1 } #reactionary
+						set_variable = { party_pop_array^4 = 0.2 } #communism can be a potent force still here
+					}
+				}
+			}
+			else_if = { limit = { OR = { has_country_flag = central_america_nation_flag has_country_flag = caribbean_nation_flag has_country_flag = south_america_nation_flag } }
+				set_variable = { party_pop_array^5 = 0.5 } #revolutionary socialism is major force
+				set_variable = { party_pop_array^4 = 0.1 } #more hard core castroism is muted
+			}
+			else_if = { limit = { always = yes }
+				set_variable = { party_pop_array^5 = 0.5 } #generic left-radical movement
+			}
+		}
+		else_if = { limit = { has_elections = no }
+
+			if = { limit = { has_idea = shia }
+				set_variable = { party_pop_array^9 = 0.5 } #iranian revolution is spreading
+			}
+			if = { limit = { has_idea = western_country }
+				set_variable = { party_pop_array^4 = 0.5 } #communism is only viable western emerging autocratic force
+				set_variable = { party_pop_array^5 = 0.1 } #revolutionary socialism is supporting role
+			}
+			else_if = { limit = { OR = { has_country_flag = russian_proficient_flag has_country_flag = asian_nation_flag } } #soviet block and asia
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^7 = 0.3 } #reactionary autocrat
+						set_variable = { party_pop_array^4 = 0.1 } #communism can be a potent force still here
+					}
+					2 = {
+						set_variable = { party_pop_array^7 = 0.1 } #reactionary autocrat
+						set_variable = { party_pop_array^4 = 0.3 } #communism can be a potent force still here
+					}
+				}
+			}
+			else_if = { limit = { OR = { has_country_flag = central_america_nation_flag has_country_flag = caribbean_nation_flag has_country_flag = south_america_nation_flag } }
+				set_variable = { party_pop_array^4 = 0.5 } #communism! viva Che!
+			}
+			else = {
+				set_variable = { party_pop_array^7 = 0.5 } #generic autocracy
+			}
+		}
+	}
+	#Non-aligned
+	if = {
+		limit = {
+			neutrality > 0
+			NOT = {
+				OR = {
+					check_variable = { party_pop_array^14 > 0 }
+					check_variable = { party_pop_array^15 > 0 }
+					check_variable = { party_pop_array^18 > 0 }
+					check_variable = { party_pop_array^16 > 0 }
+					check_variable = { party_pop_array^13 > 0 }
+					check_variable = { party_pop_array^19 > 0 }
+					check_variable = { party_pop_array^17 > 0 }
+					check_variable = { party_pop_array^12 > 0 }
+				}
+			}
+		}
+		if = { limit = { has_elections = yes }
+
+			if = { limit = { is_in_array = { global.possible_muslim_brotherhood_nation = THIS.id } }
+				set_variable = { party_pop_array^12 = 0.5 } #Islamism!
+			}
+			else_if = { limit = { has_idea = western_country }
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^16 = 0.3 } #libertarian
+						set_variable = { party_pop_array^17 = 0.1 } #Green party
+					}
+					2 = {
+						set_variable = { party_pop_array^17 = 0.3 } #Green party
+						set_variable = { party_pop_array^16 = 0.1 } #libertarian
+						set_variable = { party_pop_array^18 = 0.02 }
+					}
+					2 = {
+						set_variable = { party_pop_array^17 = 0.2 } #Green party
+						set_variable = { party_pop_array^16 = 0.1 } #libertarian
+						set_variable = { party_pop_array^18 = 0.15 }
+					}
+				}
+			}
+			else_if = { limit = { has_country_flag = russian_proficient_flag } #soviet block
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^15 = 0.3 }
+						set_variable = { party_pop_array^19 = 0.1 } #communism can be a potent force still here
+					}
+					2 = {
+						set_variable = { party_pop_array^15 = 0.1 } #reactionary
+						set_variable = { party_pop_array^19 = 0.2 } #communism can be a potent force still here
+					}
+				}
+			}
+			else_if = { limit = { OR = { has_country_flag = central_america_nation_flag has_country_flag = caribbean_nation_flag has_country_flag = south_america_nation_flag } }
+				set_variable = { party_pop_array^14 = 0.5 }
+				set_variable = { party_pop_array^17 = 0.1 }
+			}
+			else = {
+				set_variable = { party_pop_array^14 = 0.5 }
+			}
+		}
+		else_if = { limit = { has_elections = no }
+
+			if = { limit = { is_in_array = { global.possible_muslim_brotherhood_nation = THIS.id } }
+				set_variable = { party_pop_array^12 = 0.5 } #Islamism!
+			}
+			if = { limit = { has_idea = western_country }
+				set_variable = { party_pop_array^13 = 0.5 }
+			}
+			else_if = { limit = { OR = { has_country_flag = russian_proficient_flag has_country_flag = asian_nation_flag } } #soviet block and asia
+				set_variable = { party_pop_array^19 = 0.5 }
+			}
+			else_if = { limit = { has_country_flag = asian_nation_flag } #asia
+				random_list = {
+					2 = {
+						set_variable = { party_pop_array^13 = 0.3 }
+					}
+					2 = {
+						set_variable = { party_pop_array^19 = 0.3 }
+					}
+				}
+			}
+			else_if = { limit = { OR = { has_country_flag = central_america_nation_flag has_country_flag = caribbean_nation_flag has_country_flag = south_america_nation_flag } }
+				set_variable = { party_pop_array^13 = 0.5 }
+			}
+			else = {
+				set_variable = { party_pop_array^13 = 0.5 }
+			}
+		}
+	}
+	#Salafism
+	if = {
+		limit = {
+			fascism > 0
+			NOT = {
+				OR = {
+					check_variable = { party_pop_array^10 > 0 }
+					check_variable = { party_pop_array^11 > 0 }
+				}
+			}
+		}
+		set_variable = { party_pop_array^11 = 0.5 }
+	}
+	#Nationalist
+	if = {
+		limit = {
+			nationalist > 0
+			NOT = {
+				OR = {
+					check_variable = { party_pop_array^22 > 0 }
+					check_variable = { party_pop_array^21 > 0 }
+					check_variable = { party_pop_array^20 > 0 }
+					check_variable = { party_pop_array^23 > 0 }
+				}
+			}
+		}
+		if = { limit = { has_elections = yes }
+			set_variable = { party_pop_array^20 = 0.5 }
+		}
+		else_if = { limit = { has_elections = no }
+
+			if = { limit = { OR = { has_idea = western_country Russian_Proficient = yes } } #soviet block
+				set_variable = { party_pop_array^21 = 0.5 }
+			}
+			else_if = { limit = { has_country_flag = asian_nation_flag } #asia
+				random_list = {
+					5 = {
+						set_variable = { party_pop_array^22 = 0.3 }
+					}
+					1 = {
+						set_variable = { party_pop_array^23 = 0.3 }
+					}
+				}
+			}
+			else = {
+				set_variable = { party_pop_array^22 = 0.5 }
+			}
+		}
+	}
+}
+
+## Failsafe set change ideology if none specified ##
+#intended for on_action
+
+set_failsafe_change_leader = {
+	if = {
+		limit = { NOT = { has_variable = ruling_party } }
+		set_failsafe_values = yes
+		clear_array = gov_coalition_array
+		set_temp_variable = { prevmax_temp = 0 }
+		if = { limit = { has_government = democratic }
+			if = {
+				limit = {
+					has_variable = party_pop_array^1
+					check_variable = { party_pop_array^1 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^1 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^2
+					check_variable = { party_pop_array^2 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^2 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^3
+					check_variable = { party_pop_array^3 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^3 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^0
+					check_variable = { party_pop_array^0 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^0 }
+			}
+			if = { limit = { check_variable = { prevmax_temp = party_pop_array^1 } }
+				set_variable = { ruling_party = 1 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^2 } }
+				set_variable = { ruling_party = 2 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^3 } }
+				set_variable = { ruling_party = 3 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^0 } }
+				set_variable = { ruling_party = 0 }
+			}
+		}
+
+		if = { limit = { has_government = communism }
+			if = {
+				limit = {
+					has_variable = party_pop_array^4
+					check_variable = { party_pop_array^4 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^4 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^6
+					check_variable = { party_pop_array^6 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^6 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^7
+					check_variable = { party_pop_array^7 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^7 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^9
+					check_variable = { party_pop_array^9 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^9 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^8
+					check_variable = { party_pop_array^8 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^8 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^5
+					check_variable = { party_pop_array^5 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^5 }
+			}
+			if = { limit = { check_variable = { prevmax_temp = party_pop_array^4 } }
+				set_variable = { ruling_party = 4 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^6 } }
+				set_variable = { ruling_party = 6 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^7 } }
+				set_variable = { ruling_party = 7 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^9 } }
+				set_variable = { ruling_party = 9 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^8 } }
+				set_variable = { ruling_party = 8 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^5 } }
+				set_variable = { ruling_party = 5 }
+			}
+		}
+
+		if = { limit = { has_government = neutrality }
+			if = {
+				limit = {
+					has_variable = party_pop_array^14
+					check_variable = { party_pop_array^14 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^14 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^15
+					check_variable = { party_pop_array^15 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^15 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^18
+					check_variable = { party_pop_array^18 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^18 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^16
+					check_variable = { party_pop_array^16 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^16 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^13
+					check_variable = { party_pop_array^13 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^13 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^19
+					check_variable = { party_pop_array^19 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^19 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^17
+					check_variable = { party_pop_array^17 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^17 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^12
+					check_variable = { party_pop_array^12 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^12 }
+			}
+			if = { limit = { check_variable = { prevmax_temp = party_pop_array^14 } }
+				set_variable = { ruling_party = 14 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^15 } }
+				set_variable = { ruling_party = 15 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^18 } }
+				set_variable = { ruling_party = 18 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^16 } }
+				set_variable = { ruling_party = 16 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^13 } }
+				set_variable = { ruling_party = 13 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^19 } }
+				set_variable = { ruling_party = 19 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^17 } }
+				set_variable = { ruling_party = 17 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^12 } }
+				set_variable = { ruling_party = 12 }
+			}
+		}
+		if = { limit = { has_government = nationalist }
+			if = {
+				limit = {
+					has_variable = party_pop_array^22
+					check_variable = { party_pop_array^22 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^22 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^21
+					check_variable = { party_pop_array^21 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^21 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^20
+					check_variable = { party_pop_array^20 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^20 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^23
+					check_variable = { party_pop_array^23 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^23 }
+			}
+			if = { limit = { check_variable = { prevmax_temp = party_pop_array^22 } }
+				set_variable = { ruling_party = 22 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^21 } }
+				set_variable = { ruling_party = 21 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^20 } }
+				set_variable = { ruling_party = 20 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^23 } }
+				set_variable = { ruling_party = 23 }
+			}
+		}
+
+		if = { limit = { has_government = fascism }
+			if = {
+				limit = {
+					has_variable = party_pop_array^10
+					check_variable = { party_pop_array^10 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^10 }
+			}
+			if = {
+				limit = {
+					has_variable = party_pop_array^11
+					check_variable = { party_pop_array^11 > prevmax_temp }
+				}
+				set_temp_variable = { prevmax_temp = party_pop_array^11 }
+			}
+			if = { limit = { check_variable = { prevmax_temp = party_pop_array^10 } }
+				set_variable = { ruling_party = 10 }
+			}
+			else_if = { limit = { check_variable = { prevmax_temp = party_pop_array^11 } }
+				set_variable = { ruling_party = 11 }
+			}
+		}
+		if = { limit = { is_dynamic_country = no }
+			set_leader = yes
+		}
+	}
+}

@@ -1,0 +1,22 @@
+# MD ROC Return v3.19 —— 边疆一体化（数值放在 CHI 的国家变量里，随进度减弱）
+TAI_frontier_xj_modifier = {
+	icon = GFX_idea_chi_chinese_unity
+	required_garrison_factor = CHI.TAI_fr_xj_garrison
+	resistance_growth = CHI.TAI_fr_xj_res
+	compliance_growth = CHI.TAI_fr_xj_comp
+	local_factories = CHI.TAI_fr_xj_fac
+}
+TAI_frontier_tb_modifier = {
+	icon = GFX_idea_chi_chinese_unity
+	required_garrison_factor = CHI.TAI_fr_tb_garrison
+	resistance_growth = CHI.TAI_fr_tb_res
+	compliance_growth = CHI.TAI_fr_tb_comp
+	local_factories = CHI.TAI_fr_tb_fac
+}
+TAI_frontier_im_modifier = {
+	icon = GFX_idea_chi_chinese_unity
+	required_garrison_factor = CHI.TAI_fr_im_garrison
+	resistance_growth = CHI.TAI_fr_im_res
+	compliance_growth = CHI.TAI_fr_im_comp
+	local_factories = CHI.TAI_fr_im_fac
+}

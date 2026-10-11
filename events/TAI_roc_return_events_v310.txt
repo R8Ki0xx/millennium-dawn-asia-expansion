@@ -1,0 +1,326 @@
+# MD ROC Return v3.10 —— 国民大会常会、改选、总统选举、议案、派系平衡
+add_namespace = roc_return
+
+# 常会开幕
+country_event = {
+	id = roc_return.100
+	title = roc_return.100.t
+	desc = roc_return.100.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.100.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		add_political_power = 75
+		add_stability = 0.03
+	}
+	option = {
+		name = roc_return.100.b
+		trigger = { check_variable = { TAI_na_support < 0.5 } }
+		add_stability = -0.03
+	}
+}
+
+# 国大代表改选结果
+country_event = {
+	id = roc_return.101
+	title = roc_return.101.t
+	desc = roc_return.101.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = roc_return.101.a
+		add_political_power = 25
+	}
+}
+
+# 国民大会选举总统
+country_event = {
+	id = roc_return.102
+	title = roc_return.102.t
+	desc = roc_return.102.d
+	picture = GFX_TAI_ev_48_PRC_rc_kmt_win
+	is_triggered_only = yes
+	option = {
+		name = roc_return.102.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		add_stability = 0.03
+		add_political_power = 50
+	}
+	option = {
+		name = roc_return.102.b
+		trigger = { check_variable = { TAI_na_support < 0.5 } }
+		custom_effect_tooltip = TAI_na_largest_party_tt
+		TAI_na_largest_party_takes_over = yes
+		add_stability = -0.03
+	}
+}
+
+# 议案：年度总预算案
+country_event = {
+	id = roc_return.110
+	title = roc_return.110.t
+	desc = roc_return.110.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.110.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		set_temp_variable = { treasury_change = 4 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.110.b
+		add_political_power = -50
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.110.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：国防特别预算
+country_event = {
+	id = roc_return.111
+	title = roc_return.111.t
+	desc = roc_return.111.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.111.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		army_experience = 25
+		air_experience = 15
+		navy_experience = 15
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.111.b
+		add_political_power = -50
+		army_experience = 10
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.111.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：教育经费保障条例
+country_event = {
+	id = roc_return.112
+	title = roc_return.112.t
+	desc = roc_return.112.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.112.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		TAI_dbf_hearts_reduce = yes
+		add_stability = 0.01
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.112.b
+		add_political_power = -50
+		add_stability = 0.01
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.112.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：地方自治通则
+country_event = {
+	id = roc_return.113
+	title = roc_return.113.t
+	desc = roc_return.113.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.113.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		TAI_dbf_warlordism_reduce = yes
+		if = { limit = { has_power_balance = { id = TAI_roc_faction_balance } } add_power_balance_value = { id = TAI_roc_faction_balance value = 0.05 tooltip_side = TAI_roc_newcomers } }
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.113.b
+		add_political_power = -50
+		set_temp_variable = { ins_change = -3 }
+		TAI_insurgency_change = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.113.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：废止动员戡乱时期临时条款
+country_event = {
+	id = roc_return.114
+	title = roc_return.114.t
+	desc = roc_return.114.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.114.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		add_stability = 0.05
+		add_war_support = -0.03
+		set_temp_variable = { ins_change = 3 }
+		TAI_insurgency_change = yes
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.114.b
+		add_political_power = -50
+		add_stability = 0.02
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.114.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：大陆重建特别条例
+country_event = {
+	id = roc_return.115
+	title = roc_return.115.t
+	desc = roc_return.115.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.115.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		TAI_dbf_transition_reduce = yes
+		random_owned_controlled_state = {
+		limit = { TAI_is_mainland_state = yes }
+		add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.115.b
+		add_political_power = -50
+		random_owned_controlled_state = {
+		limit = { TAI_is_mainland_state = yes }
+		add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.115.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：边疆民族自治法
+country_event = {
+	id = roc_return.116
+	title = roc_return.116.t
+	desc = roc_return.116.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.116.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		set_temp_variable = { ins_change = -5 }
+		TAI_insurgency_change = yes
+		add_stability = 0.02
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.116.b
+		add_political_power = -50
+		set_temp_variable = { ins_change = -2 }
+		TAI_insurgency_change = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.116.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 议案：司法改革法案
+country_event = {
+	id = roc_return.117
+	title = roc_return.117.t
+	desc = roc_return.117.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.117.a
+		trigger = { check_variable = { TAI_na_support > 0.499 } }
+		TAI_dbf_black_gold_reduce = yes
+		add_stability = 0.01
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.117.b
+		add_political_power = -50
+		add_stability = 0.01
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.117.c
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 派系平衡：台北帮专权
+country_event = {
+	id = roc_return.120
+	title = roc_return.120.t
+	desc = roc_return.120.d
+	picture = GFX_TAI_ev_46_militarists_taiwan
+	is_triggered_only = yes
+	option = {
+		name = roc_return.120.a
+		add_political_power = 50
+		set_temp_variable = { ins_change = 3 }
+		TAI_insurgency_change = yes
+	}
+	option = {
+		name = roc_return.120.b
+		add_political_power = -50
+		add_power_balance_value = { id = TAI_roc_faction_balance value = 0.15 tooltip_side = TAI_roc_newcomers }
+	}
+}
+
+# 派系平衡：地方派系坐大
+country_event = {
+	id = roc_return.121
+	title = roc_return.121.t
+	desc = roc_return.121.d
+	picture = GFX_TAI_ev_60_Chinese_Farmer_Protest
+	is_triggered_only = yes
+	option = {
+		name = roc_return.121.a
+		TAI_dbf_warlordism_add = yes
+		add_stability = 0.02
+	}
+	option = {
+		name = roc_return.121.b
+		add_political_power = -50
+		add_power_balance_value = { id = TAI_roc_faction_balance value = -0.15 tooltip_side = TAI_roc_old_guard }
+	}
+}

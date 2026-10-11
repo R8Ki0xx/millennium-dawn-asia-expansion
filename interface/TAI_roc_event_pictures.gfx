@@ -1,0 +1,31 @@
+# MD ROC Return v3.7 —— 现代事件图（由 _tools/make_event_pics.py 生成；照片来自 TFR / 千禧黎明）
+spriteTypes = {
+	spriteType = { name = "GFX_TAI_ev_8_PRC_collapse2" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_8_PRC_collapse2.dds" }
+	spriteType = { name = "GFX_TAI_ev_9_taiwanwarlose" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_9_taiwanwarlose.dds" }
+	spriteType = { name = "GFX_TAI_ev_13_Taiwan_Flag" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_13_Taiwan_Flag.dds" }
+	spriteType = { name = "GFX_TAI_ev_30_Taiwan_Election" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_30_Taiwan_Election.dds" }
+	spriteType = { name = "GFX_TAI_ev_31_CHI_KMT_win_elections" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_31_CHI_KMT_win_elections.dds" }
+	spriteType = { name = "GFX_TAI_ev_41_Chinese_soldiers" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_41_Chinese_soldiers.dds" }
+	spriteType = { name = "GFX_TAI_ev_42_PRC_money" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_42_PRC_money.dds" }
+	spriteType = { name = "GFX_TAI_ev_43_CHI_detente" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_43_CHI_detente.dds" }
+	spriteType = { name = "GFX_TAI_ev_44_PRC_lib_victory_news" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_44_PRC_lib_victory_news.dds" }
+	spriteType = { name = "GFX_TAI_ev_46_militarists_taiwan" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_46_militarists_taiwan.dds" }
+	spriteType = { name = "GFX_TAI_ev_47_PRC_sun_yat_sen" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_47_PRC_sun_yat_sen.dds" }
+	spriteType = { name = "GFX_TAI_ev_48_PRC_rc_kmt_win" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_48_PRC_rc_kmt_win.dds" }
+	spriteType = { name = "GFX_TAI_ev_51_CHI_PRC_taiwan_strait_drill" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_51_CHI_PRC_taiwan_strait_drill.dds" }
+	spriteType = { name = "GFX_TAI_ev_53_invasion_taiwan" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_53_invasion_taiwan.dds" }
+	spriteType = { name = "GFX_TAI_ev_55_CHI_event_taiwan_32" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_55_CHI_event_taiwan_32.dds" }
+	spriteType = { name = "GFX_TAI_ev_60_Chinese_Farmer_Protest" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_60_Chinese_Farmer_Protest.dds" }
+	spriteType = { name = "GFX_TAI_ev_61_battle_of_beijing" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_61_battle_of_beijing.dds" }
+	spriteType = { name = "GFX_TAI_ev_62_china_civil_war_1" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_62_china_civil_war_1.dds" }
+	spriteType = { name = "GFX_TAI_ev_70_GFX_anti_kim_coup" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_70_GFX_anti_kim_coup.dds" }
+	spriteType = { name = "GFX_TAI_ev_73_North_Korean_Congress" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_73_North_Korean_Congress.dds" }
+	spriteType = { name = "GFX_TAI_ev_74_South_Korea_Intervention" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_74_South_Korea_Intervention.dds" }
+	spriteType = { name = "GFX_TAI_ev_75_south_korea" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_75_south_korea.dds" }
+	spriteType = { name = "GFX_TAI_ev_76_South_Korean_Army" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_76_South_Korean_Army.dds" }
+	spriteType = { name = "GFX_TAI_ev_81_PRC_mao_protest" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_81_PRC_mao_protest.dds" }
+	spriteType = { name = "GFX_TAI_ev_82_battle_of_beijing2" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_82_battle_of_beijing2.dds" }
+	spriteType = { name = "GFX_TAI_ev_83_PRC_national_militia" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_83_PRC_national_militia.dds" }
+	spriteType = { name = "GFX_TAI_ev_85_PRC_pla_soldiers_parade_cool" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_85_PRC_pla_soldiers_parade_cool.dds" }
+	spriteType = { name = "GFX_TAI_ev_86_PRC_nat_victory_news" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_86_PRC_nat_victory_news.dds" }
+}

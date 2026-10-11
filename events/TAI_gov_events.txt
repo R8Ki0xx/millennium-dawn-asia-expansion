@@ -1,0 +1,336 @@
+# MD ROC Return v3.15 —— 五院政府（由 _tools/make_gov.py 生成）
+add_namespace = TAI_gov
+
+# 提名行政院长
+country_event = {
+	id = TAI_gov.1
+	title = TAI_gov.1.t
+	desc = TAI_gov.1.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.1.o_lien_chan
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 1 } } OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_lien_chan } } }
+		set_temp_variable = { gov_nominee = 1 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_ma_ying_jeou
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 2 } } OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_ma_ying_jeou } } }
+		set_temp_variable = { gov_nominee = 2 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_eric_chu
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 3 } } OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_eric_chu } } }
+		set_temp_variable = { gov_nominee = 3 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_wang_yang
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 4 } } has_country_flag = ROC_ccp_reformers OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_wang_yang } } }
+		set_temp_variable = { gov_nominee = 4 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_chen_liangyu
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 5 } } has_country_flag = ROC_ccp_reformers OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_chen_liangyu } } }
+		set_temp_variable = { gov_nominee = 5 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 1 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_james_soong
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 6 } } OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } NOT = { has_country_leader = { name = ROC_ldr_james_soong } } }
+		set_temp_variable = { gov_nominee = 6 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 14 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_wang_bingzhang
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 7 } } OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_wang_bingzhang } } }
+		set_temp_variable = { gov_nominee = 7 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 2 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_xu_wenli
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 8 } } OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_xu_wenli } } }
+		set_temp_variable = { gov_nominee = 8 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 2 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_zheng_jianbang
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 9 } } OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_zheng_jianbang } } }
+		set_temp_variable = { gov_nominee = 9 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 3 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_hu_jintao
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 10 } } has_country_flag = ROC_ccp_reformers OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } NOT = { has_country_leader = { name = ROC_ldr_hu_jintao } } }
+		set_temp_variable = { gov_nominee = 10 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 3 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_xu_jialu
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 11 } } OR = { check_variable = { ruling_party = 16 } } NOT = { has_country_leader = { name = ROC_ldr_xu_jialu } } }
+		set_temp_variable = { gov_nominee = 11 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 16 } } }
+	}
+	option = {
+		name = TAI_gov.1.o_hao_bocun
+		trigger = { NOT = { check_variable = { TAI_gov_premier = 12 } } always = yes NOT = { has_country_leader = { name = ROC_ldr_hao_bo_cun } } }
+		set_temp_variable = { gov_nominee = 12 }
+		TAI_gov_vote_premier = yes
+		ai_chance = { base = 10
+			modifier = { factor = 3 check_variable = { ruling_party = 0 } } }
+	}
+	option = {
+		name = TAI_gov.1.keep
+		TAI_gov_recalc = yes
+		ai_chance = { base = 1 }
+	}
+}
+
+# 立法院否决
+country_event = {
+	id = TAI_gov.2
+	title = TAI_gov.2.t
+	desc = TAI_gov.2.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.2.a
+		add_political_power = -25
+		country_event = { id = TAI_gov.1 days = 7 }
+	}
+	option = {
+		name = TAI_gov.2.b
+		add_stability = -0.03
+		TAI_ly_election = yes
+		country_event = { id = TAI_gov.3 days = 1 }
+		country_event = { id = TAI_gov.1 days = 10 }
+	}
+}
+
+# 立法委员选举结果
+country_event = {
+	id = TAI_gov.3
+	title = TAI_gov.3.t
+	desc = TAI_gov.3.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.3.a
+		TAI_gov_recalc = yes
+	}
+}
+
+# 倒阁案
+country_event = {
+	id = TAI_gov.4
+	title = TAI_gov.4.t
+	desc = TAI_gov.4.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.4.a
+		add_political_power = -50
+		country_event = { id = TAI_gov.1 days = 3 }
+		ai_chance = { base = 6 }
+	}
+	option = {
+		name = TAI_gov.4.b
+		add_stability = -0.04
+		TAI_ly_election = yes
+		country_event = { id = TAI_gov.3 days = 1 }
+		ai_chance = { base = 4 }
+	}
+}
+
+# 总统不得兼任行政院长
+country_event = {
+	id = TAI_gov.9
+	title = TAI_gov.9.t
+	desc = TAI_gov.9.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.9.a
+		country_event = { id = TAI_gov.1 days = 3 }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.9.b
+		ai_chance = { base = 1 }
+	}
+}
+
+# 提名立法院长
+country_event = {
+	id = TAI_gov.5
+	title = TAI_gov.5.t
+	desc = TAI_gov.5.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.5.o_han_kuo_yu
+		trigger = { NOT = { check_variable = { TAI_gov_legis = 1 } } }
+		set_variable = { TAI_gov_legis = 1 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.5.o_zhao_shao_kang
+		trigger = { NOT = { check_variable = { TAI_gov_legis = 2 } } }
+		set_variable = { TAI_gov_legis = 2 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.5.o_yok_mu_ming
+		trigger = { NOT = { check_variable = { TAI_gov_legis = 3 } } }
+		set_variable = { TAI_gov_legis = 3 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.5.o_qin_yongmin
+		trigger = { NOT = { check_variable = { TAI_gov_legis = 4 } } }
+		set_variable = { TAI_gov_legis = 4 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.5.o_ding_shisun
+		trigger = { NOT = { check_variable = { TAI_gov_legis = 5 } } }
+		set_variable = { TAI_gov_legis = 5 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.5.keep
+		ai_chance = { base = 1 }
+	}
+}
+
+# 提名司法院长
+country_event = {
+	id = TAI_gov.6
+	title = TAI_gov.6.t
+	desc = TAI_gov.6.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.6.o_wan_exiang
+		trigger = { NOT = { check_variable = { TAI_gov_judicial = 1 } } }
+		set_variable = { TAI_gov_judicial = 1 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.6.o_liu_xiaobo
+		trigger = { NOT = { check_variable = { TAI_gov_judicial = 2 } } }
+		set_variable = { TAI_gov_judicial = 2 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.6.o_wong_min
+		trigger = { NOT = { check_variable = { TAI_gov_judicial = 3 } } }
+		set_variable = { TAI_gov_judicial = 3 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.6.keep
+		ai_chance = { base = 1 }
+	}
+}
+
+# 提名考试院长
+country_event = {
+	id = TAI_gov.7
+	title = TAI_gov.7.t
+	desc = TAI_gov.7.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.7.o_li_ao
+		trigger = { NOT = { check_variable = { TAI_gov_exam = 1 } } }
+		set_variable = { TAI_gov_exam = 1 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.7.o_he_luli
+		trigger = { NOT = { check_variable = { TAI_gov_exam = 2 } } }
+		set_variable = { TAI_gov_exam = 2 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.7.o_chin_jin
+		trigger = { NOT = { check_variable = { TAI_gov_exam = 3 } } }
+		set_variable = { TAI_gov_exam = 3 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.7.keep
+		ai_chance = { base = 1 }
+	}
+}
+
+# 提名监察院长
+country_event = {
+	id = TAI_gov.8
+	title = TAI_gov.8.t
+	desc = TAI_gov.8.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = TAI_gov.8.o_hou_yu_ih
+		trigger = { NOT = { check_variable = { TAI_gov_control = 1 } } }
+		set_variable = { TAI_gov_control = 1 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.8.o_ai_weiwei
+		trigger = { NOT = { check_variable = { TAI_gov_control = 2 } } }
+		set_variable = { TAI_gov_control = 2 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.8.o_he_wei
+		trigger = { NOT = { check_variable = { TAI_gov_control = 3 } } }
+		set_variable = { TAI_gov_control = 3 }
+		TAI_gov_recalc = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = TAI_gov.8.keep
+		ai_chance = { base = 1 }
+	}
+}

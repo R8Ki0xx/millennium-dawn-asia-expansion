@@ -1,0 +1,171 @@
+# MD ROC Return v3.19 —— 五族共和 · 边疆一体化（由 _tools/v319_frontier.py 生成）
+
+# Scope: CHI。按进度重算新疆的州修正
+TAI_fr_xj_recalc = {
+	set_temp_variable = { fr_gap = 100 }
+	subtract_from_temp_variable = { fr_gap = TAI_fr_xj }
+	divide_temp_variable = { fr_gap = 100 }
+	clamp_temp_variable = { var = fr_gap min = 0 max = 1 }
+	set_variable = { TAI_fr_xj_garrison = fr_gap }
+	multiply_variable = { TAI_fr_xj_garrison = 0.6 }
+	set_variable = { TAI_fr_xj_res = fr_gap }
+	multiply_variable = { TAI_fr_xj_res = 0.25 }
+	set_variable = { TAI_fr_xj_comp = fr_gap }
+	multiply_variable = { TAI_fr_xj_comp = -0.2 }
+	set_variable = { TAI_fr_xj_fac = fr_gap }
+	multiply_variable = { TAI_fr_xj_fac = -0.3 }
+	every_owned_state = {
+		limit = { OR = { state = 592 state = 591 } }
+		if = {
+			limit = { check_variable = { CHI.TAI_fr_xj < 100 } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_frontier_xj_modifier } } } add_dynamic_modifier = { modifier = TAI_frontier_xj_modifier } }
+		}
+		else = {
+			if = { limit = { has_dynamic_modifier = { modifier = TAI_frontier_xj_modifier } } remove_dynamic_modifier = { modifier = TAI_frontier_xj_modifier } }
+		}
+	}
+}
+# Scope: CHI。新疆一体化进度 +fr_d
+TAI_fr_xj_add = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_xj_done } }
+		custom_effect_tooltip = TAI_fr_xj_add_tt
+		add_to_variable = { TAI_fr_xj = fr_d }
+		clamp_variable = { var = TAI_fr_xj min = 0 max = 100 }
+		if = {
+			limit = { check_variable = { TAI_fr_xj > 99.9 } }
+			set_country_flag = TAI_fr_xj_done
+			country_event = { id = roc_return.161 days = 1 }
+		}
+		TAI_fr_xj_recalc = yes
+	}
+}
+# Scope: CHI。按进度重算西藏的州修正
+TAI_fr_tb_recalc = {
+	set_temp_variable = { fr_gap = 100 }
+	subtract_from_temp_variable = { fr_gap = TAI_fr_tb }
+	divide_temp_variable = { fr_gap = 100 }
+	clamp_temp_variable = { var = fr_gap min = 0 max = 1 }
+	set_variable = { TAI_fr_tb_garrison = fr_gap }
+	multiply_variable = { TAI_fr_tb_garrison = 0.6 }
+	set_variable = { TAI_fr_tb_res = fr_gap }
+	multiply_variable = { TAI_fr_tb_res = 0.25 }
+	set_variable = { TAI_fr_tb_comp = fr_gap }
+	multiply_variable = { TAI_fr_tb_comp = -0.2 }
+	set_variable = { TAI_fr_tb_fac = fr_gap }
+	multiply_variable = { TAI_fr_tb_fac = -0.3 }
+	every_owned_state = {
+		limit = { OR = { state = 589 state = 588 state = 585 } }
+		if = {
+			limit = { check_variable = { CHI.TAI_fr_tb < 100 } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_frontier_tb_modifier } } } add_dynamic_modifier = { modifier = TAI_frontier_tb_modifier } }
+		}
+		else = {
+			if = { limit = { has_dynamic_modifier = { modifier = TAI_frontier_tb_modifier } } remove_dynamic_modifier = { modifier = TAI_frontier_tb_modifier } }
+		}
+	}
+}
+# Scope: CHI。西藏一体化进度 +fr_d
+TAI_fr_tb_add = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_tb_done } }
+		custom_effect_tooltip = TAI_fr_tb_add_tt
+		add_to_variable = { TAI_fr_tb = fr_d }
+		clamp_variable = { var = TAI_fr_tb min = 0 max = 100 }
+		if = {
+			limit = { check_variable = { TAI_fr_tb > 99.9 } }
+			set_country_flag = TAI_fr_tb_done
+			country_event = { id = roc_return.162 days = 1 }
+		}
+		TAI_fr_tb_recalc = yes
+	}
+}
+# Scope: CHI。按进度重算内蒙古的州修正
+TAI_fr_im_recalc = {
+	set_temp_variable = { fr_gap = 100 }
+	subtract_from_temp_variable = { fr_gap = TAI_fr_im }
+	divide_temp_variable = { fr_gap = 100 }
+	clamp_temp_variable = { var = fr_gap min = 0 max = 1 }
+	set_variable = { TAI_fr_im_garrison = fr_gap }
+	multiply_variable = { TAI_fr_im_garrison = 0.6 }
+	set_variable = { TAI_fr_im_res = fr_gap }
+	multiply_variable = { TAI_fr_im_res = 0.25 }
+	set_variable = { TAI_fr_im_comp = fr_gap }
+	multiply_variable = { TAI_fr_im_comp = -0.2 }
+	set_variable = { TAI_fr_im_fac = fr_gap }
+	multiply_variable = { TAI_fr_im_fac = -0.3 }
+	every_owned_state = {
+		limit = { OR = { state = 556 state = 1097 state = 1072 } }
+		if = {
+			limit = { check_variable = { CHI.TAI_fr_im < 100 } }
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_frontier_im_modifier } } } add_dynamic_modifier = { modifier = TAI_frontier_im_modifier } }
+		}
+		else = {
+			if = { limit = { has_dynamic_modifier = { modifier = TAI_frontier_im_modifier } } remove_dynamic_modifier = { modifier = TAI_frontier_im_modifier } }
+		}
+	}
+}
+# Scope: CHI。内蒙古一体化进度 +fr_d
+TAI_fr_im_add = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_im_done } }
+		custom_effect_tooltip = TAI_fr_im_add_tt
+		add_to_variable = { TAI_fr_im = fr_d }
+		clamp_variable = { var = TAI_fr_im min = 0 max = 100 }
+		if = {
+			limit = { check_variable = { TAI_fr_im > 99.9 } }
+			set_country_flag = TAI_fr_im_done
+			country_event = { id = roc_return.163 days = 1 }
+		}
+		TAI_fr_im_recalc = yes
+	}
+}
+# Scope: CHI。光复时或旧存档：设定初始进度
+TAI_fr_init = {
+	if = { limit = { NOT = { has_variable = TAI_fr_xj } } set_variable = { TAI_fr_xj = 15 } }
+	TAI_fr_xj_recalc = yes
+	if = { limit = { NOT = { has_variable = TAI_fr_tb } } set_variable = { TAI_fr_tb = 25 } }
+	TAI_fr_tb_recalc = yes
+	if = { limit = { NOT = { has_variable = TAI_fr_im } } set_variable = { TAI_fr_im = 45 } }
+	TAI_fr_im_recalc = yes
+	set_country_flag = TAI_fr_initialized
+}
+# Scope: CHI，每月：自然进展（稳定度高于 50% 时 +0.3/月）与随机的边疆事件
+TAI_fr_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_xj_done } }
+		if = { limit = { has_stability > 0.5 } set_temp_variable = { fr_d = 0.3 } hidden_effect = { TAI_fr_xj_add = yes } }
+		else = { TAI_fr_xj_recalc = yes }
+		if = {
+			limit = { NOT = { has_country_flag = TAI_fr_xj_unrest_cd } }
+			random_list = {
+				4 = { set_country_flag = { flag = TAI_fr_xj_unrest_cd days = 240 } country_event = { id = roc_return.164 days = 3 } }
+				96 = { }
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_tb_done } }
+		if = { limit = { has_stability > 0.5 } set_temp_variable = { fr_d = 0.3 } hidden_effect = { TAI_fr_tb_add = yes } }
+		else = { TAI_fr_tb_recalc = yes }
+		if = {
+			limit = { NOT = { has_country_flag = TAI_fr_tb_unrest_cd } }
+			random_list = {
+				4 = { set_country_flag = { flag = TAI_fr_tb_unrest_cd days = 240 } country_event = { id = roc_return.165 days = 3 } }
+				96 = { }
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TAI_fr_im_done } }
+		if = { limit = { has_stability > 0.5 } set_temp_variable = { fr_d = 0.3 } hidden_effect = { TAI_fr_im_add = yes } }
+		else = { TAI_fr_im_recalc = yes }
+		if = {
+			limit = { NOT = { has_country_flag = TAI_fr_im_unrest_cd } }
+			random_list = {
+				4 = { set_country_flag = { flag = TAI_fr_im_unrest_cd days = 240 } country_event = { id = roc_return.166 days = 3 } }
+				96 = { }
+			}
+		}
+	}
+}

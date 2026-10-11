@@ -1,0 +1,61 @@
+# MD ROC Return v3.13 —— 外交事件
+add_namespace = roc_return
+
+country_event = {
+	id = roc_return.130
+	title = roc_return.130.t
+	desc = roc_return.130.d
+	picture = GFX_TAI_ev_44_PRC_lib_victory_news
+	is_triggered_only = yes
+	option = {
+		name = roc_return.130.a
+		add_ideas = TAI_olympic_glory_idea
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+	}
+}
+
+country_event = {
+	id = roc_return.131
+	title = roc_return.131.t
+	desc = roc_return.131.d
+	picture = GFX_UN_event_global_1
+	is_triggered_only = yes
+	option = {
+		name = roc_return.131.a
+		add_ideas = TAI_g8_member_idea
+	}
+}
+
+country_event = {
+	id = roc_return.132
+	title = roc_return.132.t
+	desc = roc_return.132.d
+	picture = GFX_TAI_ev_43_CHI_detente
+	is_triggered_only = yes
+	option = {
+		name = roc_return.132.a
+		if = { limit = { country_exists = RAJ } RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_diplo_partner } } }
+		add_stability = 0.03
+		add_political_power = 50
+	}
+	option = {
+		name = roc_return.132.b
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = roc_return.133
+	title = roc_return.133.t
+	desc = roc_return.133.d
+	picture = GFX_TAI_ev_44_PRC_lib_victory_news
+	is_triggered_only = yes
+	option = {
+		name = roc_return.133.a
+		set_temp_variable = { treasury_change = 6 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+	}
+}

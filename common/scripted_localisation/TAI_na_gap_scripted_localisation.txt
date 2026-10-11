@@ -1,0 +1,16 @@
+# MD ROC Return v3.24 —— 国民大会修宪 / 过半 / 罢免进度（由 _tools/make_na_gui.py 生成）
+defined_text = {
+	name = TAI_na_gap_amend_text
+	text = { trigger = { check_variable = { TAI_na_gap_amend = 0 } } localization_key = TAI_na_gap_amend_ok }
+	text = { localization_key = TAI_na_gap_amend_need }
+}
+defined_text = {
+	name = TAI_na_gap_half_text
+	text = { trigger = { check_variable = { TAI_na_gap_half = 0 } } localization_key = TAI_na_gap_half_ok }
+	text = { localization_key = TAI_na_gap_half_need }
+}
+defined_text = {
+	name = TAI_na_gap_recall_text
+	text = { trigger = { check_variable = { TAI_na_gov < 1000 } } localization_key = TAI_na_gap_recall_bad }
+	text = { localization_key = TAI_na_gap_recall_ok }
+}

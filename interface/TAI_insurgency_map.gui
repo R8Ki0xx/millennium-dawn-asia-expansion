@@ -1,0 +1,26 @@
+# MD ROC Return v3.5 —— 中共残余势力地图
+guitypes = {
+	containerWindowType = {
+		name = "TAI_insurgency_map_window"
+		size = { width = 50 height = 342 }
+		position = { x = 10 y = 0 }
+		iconType = { name = "TAI_ins_base_icon" spriteType = "GFX_TAI_ins_base" position = { x = 70 y = -40 } pdx_tooltip = "TAI_ins_base_tooltip" }
+		iconType = { name = "TAI_ins_552_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 357 y = 37 } pdx_tooltip = "TAI_ins_552_tooltip" }
+		iconType = { name = "TAI_ins_554_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 364 y = 17 } pdx_tooltip = "TAI_ins_554_tooltip" }
+		iconType = { name = "TAI_ins_555_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 362 y = -40 } pdx_tooltip = "TAI_ins_555_tooltip" }
+		iconType = { name = "TAI_ins_1095_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 340 y = 40 } pdx_tooltip = "TAI_ins_1095_tooltip" }
+		iconType = { name = "TAI_ins_1096_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 385 y = 1 } pdx_tooltip = "TAI_ins_1096_tooltip" }
+		iconType = { name = "TAI_ins_1097_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 323 y = -40 } pdx_tooltip = "TAI_ins_1097_tooltip" }
+		iconType = { name = "TAI_ins_547_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 321 y = 59 } pdx_tooltip = "TAI_ins_547_tooltip" }
+		iconType = { name = "TAI_ins_548_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 330 y = 62 } pdx_tooltip = "TAI_ins_548_tooltip" }
+		iconType = { name = "TAI_ins_549_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 312 y = 65 } pdx_tooltip = "TAI_ins_549_tooltip" }
+		iconType = { name = "TAI_ins_434_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 312 y = 44 } pdx_tooltip = "TAI_ins_434_tooltip" }
+		iconType = { name = "TAI_ins_558_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 291 y = 60 } pdx_tooltip = "TAI_ins_558_tooltip" }
+		iconType = { name = "TAI_ins_556_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 212 y = 13 } pdx_tooltip = "TAI_ins_556_tooltip" }
+		iconType = { name = "TAI_ins_559_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 261 y = 65 } pdx_tooltip = "TAI_ins_559_tooltip" }
+		iconType = { name = "TAI_ins_560_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 188 y = 42 } pdx_tooltip = "TAI_ins_560_tooltip" }
+		iconType = { name = "TAI_ins_1072_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 257 y = 67 } pdx_tooltip = "TAI_ins_1072_tooltip" }
+		iconType = { name = "TAI_ins_588_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 166 y = 67 } pdx_tooltip = "TAI_ins_588_tooltip" }
+		iconType = { name = "TAI_ins_592_icon" spriteType = "GFX_TAI_ins_blank" position = { x = 70 y = -5 } pdx_tooltip = "TAI_ins_592_tooltip" }
+	}
+}

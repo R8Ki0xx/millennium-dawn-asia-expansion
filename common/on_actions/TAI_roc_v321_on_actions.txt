@@ -1,0 +1,49 @@
+# MD ROC Return v3.21
+on_actions = {
+	# 每周：已经占领相应地区的反攻国策自动完成
+	on_weekly_TAI = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = CHI
+					NOT = { has_global_flag = ROC_tag_switch_done }
+				}
+				TAI_liberation_autocomplete = yes
+			}
+		}
+	}
+	# 每月（新 CHI）：政党线入口的旗标；老存档补清内战军队精神
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi }
+				TAI_roc_gov_flags_update = yes
+				if = {
+					limit = { NOT = { has_country_flag = ROC_cwdebuff_cleared_v321 } }
+					ROC_clear_civil_war_debuff = yes
+				}
+			}
+		}
+	}
+	# 内战结束（ROOT 是胜者，FROM 是败者）：志愿军阶段的善后
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = TAI
+					TAI = { has_country_flag = TAI_volunteer_phase }
+					FROM = { has_country_flag = TAI_mainland_rebels }
+				}
+				TAI = { country_event = { id = roc_return.191 days = 1 } }
+			}
+			else_if = {
+				limit = {
+					country_exists = TAI
+					TAI = { has_country_flag = TAI_volunteer_phase }
+					has_country_flag = TAI_mainland_rebels
+				}
+				TAI = { country_event = { id = roc_return.192 days = 1 } }
+			}
+		}
+	}
+}

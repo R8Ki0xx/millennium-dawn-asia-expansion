@@ -1,0 +1,61 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会面板（由 _tools/make_syr_gui.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_SYR_pc_header" texturefile = "gfx/interface/scripted_gui/SYR_pc/pc_header.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_pc_bg" texturefile = "gfx/interface/scripted_gui/SYR_pc/pc_bg.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_pc_seat" texturefile = "gfx/interface/scripted_gui/SYR_pc/pc_seat.dds" noOfFrames = 6 legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_pc_indicator" texturefile = "gfx/interface/bop/bop_indicator.dds" noOfFrames = 2 }
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_isl"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_isl.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_sec"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_sec.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_ind"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_ind.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_npf"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_npf.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_baath"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_baath.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_SYR_pc_tbar_gov"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_pc/tbar_gov.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_pc/tbar_gov_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

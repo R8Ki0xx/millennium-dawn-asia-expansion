@@ -1,0 +1,443 @@
+# MD ROC Return v3.19 —— 旧存档说明、边疆一体化、中华民国专属事件（由 _tools/patch_v319.py 生成）
+add_namespace = roc_return
+
+# v3.19 旧存档说明
+country_event = {
+	id = roc_return.160
+	title = roc_return.160.t
+	desc = roc_return.160.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = { name = roc_return.160.a }
+}
+
+# 新疆一体化完成
+country_event = {
+	id = roc_return.161
+	title = roc_return.161.t
+	desc = roc_return.161.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	immediate = { TAI_fr_xj_recalc = yes }
+	option = {
+		name = roc_return.161.a
+		add_stability = 0.05
+		add_political_power = 75
+		every_owned_state = { limit = { OR = { state = 592 state = 591 } } add_compliance = 20 }
+	}
+}
+
+# 新疆的骚动
+country_event = {
+	id = roc_return.164
+	title = roc_return.164.t
+	desc = roc_return.164.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = roc_return.164.a
+		set_temp_variable = { fr_d = -3 }
+		TAI_fr_xj_add = yes
+		every_owned_state = { limit = { OR = { state = 592 state = 591 } } add_compliance = 5 }
+		add_stability = -0.01
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = roc_return.164.b
+		add_political_power = -30
+		set_temp_variable = { fr_d = 3 }
+		TAI_fr_xj_add = yes
+		ai_chance = { base = 2 }
+	}
+}
+# 西藏一体化完成
+country_event = {
+	id = roc_return.162
+	title = roc_return.162.t
+	desc = roc_return.162.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	immediate = { TAI_fr_tb_recalc = yes }
+	option = {
+		name = roc_return.162.a
+		add_stability = 0.05
+		add_political_power = 75
+		every_owned_state = { limit = { OR = { state = 589 state = 588 state = 585 } } add_compliance = 20 }
+	}
+}
+
+# 西藏的骚动
+country_event = {
+	id = roc_return.165
+	title = roc_return.165.t
+	desc = roc_return.165.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = roc_return.165.a
+		set_temp_variable = { fr_d = -3 }
+		TAI_fr_tb_add = yes
+		every_owned_state = { limit = { OR = { state = 589 state = 588 state = 585 } } add_compliance = 5 }
+		add_stability = -0.01
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = roc_return.165.b
+		add_political_power = -30
+		set_temp_variable = { fr_d = 3 }
+		TAI_fr_tb_add = yes
+		ai_chance = { base = 2 }
+	}
+}
+# 内蒙古一体化完成
+country_event = {
+	id = roc_return.163
+	title = roc_return.163.t
+	desc = roc_return.163.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	immediate = { TAI_fr_im_recalc = yes }
+	option = {
+		name = roc_return.163.a
+		add_stability = 0.05
+		add_political_power = 75
+		every_owned_state = { limit = { OR = { state = 556 state = 1097 state = 1072 } } add_compliance = 20 }
+	}
+}
+
+# 内蒙古的骚动
+country_event = {
+	id = roc_return.166
+	title = roc_return.166.t
+	desc = roc_return.166.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+	option = {
+		name = roc_return.166.a
+		set_temp_variable = { fr_d = -3 }
+		TAI_fr_im_add = yes
+		every_owned_state = { limit = { OR = { state = 556 state = 1097 state = 1072 } } add_compliance = 5 }
+		add_stability = -0.01
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = roc_return.166.b
+		add_political_power = -30
+		set_temp_variable = { fr_d = 3 }
+		TAI_fr_im_add = yes
+		ai_chance = { base = 2 }
+	}
+}
+# 双十国庆
+country_event = {
+	id = roc_return.171
+	title = roc_return.171.t
+	desc = roc_return.171.d
+	picture = GFX_TAI_ev_85_PRC_pla_soldiers_parade_cool
+	is_triggered_only = yes
+	option = {
+		name = roc_return.171.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.171.a"
+		set_temp_variable = { treasury_change = -3 } modify_treasury_effect = yes
+		add_war_support = 0.05
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.171.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.171.b"
+		add_political_power = 25
+		set_temp_variable = { dbf_d = 0.150 } TAI_dbf_hearts_ease = yes
+		ai_chance = { base = 7 }
+	}
+}
+
+# 中山陵谒陵
+country_event = {
+	id = roc_return.172
+	title = roc_return.172.t
+	desc = roc_return.172.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+	option = {
+		name = roc_return.172.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.172.a"
+		add_stability = 0.03
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = 0.02 } set_temp_variable = { temp_outlook_increase = 0.02 } change_relative_party_popularity = yes
+		ai_chance = { base = 10 }
+	}
+}
+
+# 国都之争
+country_event = {
+	id = roc_return.173
+	title = roc_return.173.t
+	desc = roc_return.173.d
+	picture = GFX_TAI_ev_48_PRC_rc_kmt_win
+	is_triggered_only = yes
+	option = {
+		name = roc_return.173.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.173.a"
+		add_stability = 0.02
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = 0.01 } set_temp_variable = { temp_outlook_increase = 0.01 } change_relative_party_popularity = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.173.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.173.b"
+		set_capital = { state = 547 }
+		add_political_power = -100
+		add_stability = -0.03
+		add_war_support = 0.03
+		ai_chance = { base = 7 }
+	}
+}
+
+# 故宫文物北返
+country_event = {
+	id = roc_return.174
+	title = roc_return.174.t
+	desc = roc_return.174.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = roc_return.174.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.174.a"
+		add_stability = 0.03
+		add_political_power = -25
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.174.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.174.b"
+		add_political_power = 25
+		ai_chance = { base = 7 }
+	}
+}
+
+# 土地确权
+country_event = {
+	id = roc_return.175
+	title = roc_return.175.t
+	desc = roc_return.175.d
+	picture = GFX_TAI_ev_60_Chinese_Farmer_Protest
+	is_triggered_only = yes
+	option = {
+		name = roc_return.175.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.175.a"
+		add_stability = -0.03
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		set_temp_variable = { dbf_d = 0.300 } TAI_dbf_transition_ease = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.175.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.175.b"
+		add_stability = 0.01
+		add_popularity = { ideology = communism popularity = 0.02 }
+		ai_chance = { base = 7 }
+	}
+}
+
+# 国企私有化风潮
+country_event = {
+	id = roc_return.176
+	title = roc_return.176.t
+	desc = roc_return.176.d
+	picture = GFX_TAI_ev_42_PRC_money
+	is_triggered_only = yes
+	option = {
+		name = roc_return.176.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.176.a"
+		set_temp_variable = { treasury_change = 20 } modify_treasury_effect = yes
+		add_stability = -0.05
+		set_temp_variable = { dbf_d = -0.600 } TAI_dbf_transition_ease = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.176.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.176.b"
+		add_political_power = -50
+		set_temp_variable = { dbf_d = 0.450 } TAI_dbf_transition_ease = yes
+		ai_chance = { base = 7 }
+	}
+}
+
+# 退伍官兵安置
+country_event = {
+	id = roc_return.177
+	title = roc_return.177.t
+	desc = roc_return.177.d
+	picture = GFX_TAI_ev_83_PRC_national_militia
+	is_triggered_only = yes
+	option = {
+		name = roc_return.177.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.177.a"
+		set_temp_variable = { treasury_change = -5 } modify_treasury_effect = yes
+		set_temp_variable = { dbf_d = 0.450 } TAI_dbf_pla_remnants_ease = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.177.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.177.b"
+		set_temp_variable = { treasury_change = -1 } modify_treasury_effect = yes
+		set_temp_variable = { dbf_d = -0.300 } TAI_dbf_pla_remnants_ease = yes
+		ai_chance = { base = 7 }
+	}
+}
+
+# 繁简字之争
+country_event = {
+	id = roc_return.178
+	title = roc_return.178.t
+	desc = roc_return.178.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = roc_return.178.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.178.a"
+		add_stability = -0.02
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = 0.02 } set_temp_variable = { temp_outlook_increase = 0.02 } change_relative_party_popularity = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.178.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.178.b"
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 报禁解除
+country_event = {
+	id = roc_return.179
+	title = roc_return.179.t
+	desc = roc_return.179.d
+	picture = GFX_TAI_ev_44_PRC_lib_victory_news
+	is_triggered_only = yes
+	option = {
+		name = roc_return.179.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.179.a"
+		add_stability = -0.02
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		set_temp_variable = { dbf_d = 0.300 } TAI_dbf_hearts_ease = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.179.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.179.b"
+		add_political_power = 25
+		ai_chance = { base = 7 }
+	}
+}
+
+# 六四平反
+country_event = {
+	id = roc_return.180
+	title = roc_return.180.t
+	desc = roc_return.180.d
+	picture = GFX_TAI_ev_81_PRC_mao_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_return.180.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.180.a"
+		add_stability = 0.03
+		set_temp_variable = { dbf_d = 0.450 } TAI_dbf_hearts_ease = yes
+		add_popularity = { ideology = communism popularity = -0.03 }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.180.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.180.b"
+		add_political_power = 25
+		add_stability = -0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 毛泽东纪念堂的去留
+country_event = {
+	id = roc_return.181
+	title = roc_return.181.t
+	desc = roc_return.181.d
+	picture = GFX_TAI_ev_81_PRC_mao_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_return.181.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.181.a"
+		add_stability = 0.01
+		add_popularity = { ideology = communism popularity = 0.02 }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.181.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.181.b"
+		add_stability = -0.03
+		add_popularity = { ideology = communism popularity = -0.03 }
+		add_war_support = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 宗教自由
+country_event = {
+	id = roc_return.182
+	title = roc_return.182.t
+	desc = roc_return.182.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = roc_return.182.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.182.a"
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		set_temp_variable = { fr_d = 3 } TAI_fr_xj_add = yes
+		set_temp_variable = { fr_d = 3 } TAI_fr_tb_add = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.182.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.182.b"
+		add_political_power = 25
+		ai_chance = { base = 7 }
+	}
+}
+
+# 黄埔军校复校
+country_event = {
+	id = roc_return.183
+	title = roc_return.183.t
+	desc = roc_return.183.d
+	picture = GFX_TAI_ev_41_Chinese_soldiers
+	is_triggered_only = yes
+	option = {
+		name = roc_return.183.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.183.a"
+		set_temp_variable = { treasury_change = -3 } modify_treasury_effect = yes
+		army_experience = 25
+		add_war_support = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 台商西进
+country_event = {
+	id = roc_return.184
+	title = roc_return.184.t
+	desc = roc_return.184.d
+	picture = GFX_TAI_ev_42_PRC_money
+	is_triggered_only = yes
+	option = {
+		name = roc_return.184.a
+		log = "[GetDateText]: [Root.GetName]: event roc_return.184.a"
+		set_temp_variable = { treasury_change = 10 } modify_treasury_effect = yes
+		set_temp_variable = { dbf_d = 0.300 } TAI_dbf_transition_ease = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_return.184.b
+		log = "[GetDateText]: [Root.GetName]: event roc_return.184.b"
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}

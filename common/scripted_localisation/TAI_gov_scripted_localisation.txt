@@ -1,0 +1,229 @@
+# MD ROC Return v3.15 —— 五院院长（由 _tools/make_gov.py 生成）
+defined_text = {
+	name = TAI_gov_premier_pic
+	text = { trigger = { check_variable = { TAI_gov_premier = 1 } } localization_key = GFX_TAI_gov_lien_chan }
+	text = { trigger = { check_variable = { TAI_gov_premier = 2 } } localization_key = GFX_TAI_gov_ma_ying_jeou }
+	text = { trigger = { check_variable = { TAI_gov_premier = 3 } } localization_key = GFX_TAI_gov_eric_chu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 4 } } localization_key = GFX_TAI_gov_wang_yang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 5 } } localization_key = GFX_TAI_gov_chen_liangyu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 6 } } localization_key = GFX_TAI_gov_james_soong }
+	text = { trigger = { check_variable = { TAI_gov_premier = 7 } } localization_key = GFX_TAI_gov_wang_bingzhang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 8 } } localization_key = GFX_TAI_gov_xu_wenli }
+	text = { trigger = { check_variable = { TAI_gov_premier = 9 } } localization_key = GFX_TAI_gov_zheng_jianbang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 10 } } localization_key = GFX_TAI_gov_hu_jintao }
+	text = { trigger = { check_variable = { TAI_gov_premier = 11 } } localization_key = GFX_TAI_gov_xu_jialu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 12 } } localization_key = GFX_TAI_gov_hao_bocun }
+	text = { localization_key = GFX_TAI_gov_lien_chan }
+}
+defined_text = {
+	name = TAI_gov_premier_name
+	text = { trigger = { check_variable = { TAI_gov_premier = 1 } } localization_key = TAI_gov_n_lien_chan }
+	text = { trigger = { check_variable = { TAI_gov_premier = 2 } } localization_key = TAI_gov_n_ma_ying_jeou }
+	text = { trigger = { check_variable = { TAI_gov_premier = 3 } } localization_key = TAI_gov_n_eric_chu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 4 } } localization_key = TAI_gov_n_wang_yang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 5 } } localization_key = TAI_gov_n_chen_liangyu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 6 } } localization_key = TAI_gov_n_james_soong }
+	text = { trigger = { check_variable = { TAI_gov_premier = 7 } } localization_key = TAI_gov_n_wang_bingzhang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 8 } } localization_key = TAI_gov_n_xu_wenli }
+	text = { trigger = { check_variable = { TAI_gov_premier = 9 } } localization_key = TAI_gov_n_zheng_jianbang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 10 } } localization_key = TAI_gov_n_hu_jintao }
+	text = { trigger = { check_variable = { TAI_gov_premier = 11 } } localization_key = TAI_gov_n_xu_jialu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 12 } } localization_key = TAI_gov_n_hao_bocun }
+	text = { localization_key = TAI_gov_n_lien_chan }
+}
+defined_text = {
+	name = TAI_gov_premier_party
+	text = { trigger = { check_variable = { TAI_gov_premier = 1 } } localization_key = TAI_gov_party_lien_chan }
+	text = { trigger = { check_variable = { TAI_gov_premier = 2 } } localization_key = TAI_gov_party_ma_ying_jeou }
+	text = { trigger = { check_variable = { TAI_gov_premier = 3 } } localization_key = TAI_gov_party_eric_chu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 4 } } localization_key = TAI_gov_party_wang_yang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 5 } } localization_key = TAI_gov_party_chen_liangyu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 6 } } localization_key = TAI_gov_party_james_soong }
+	text = { trigger = { check_variable = { TAI_gov_premier = 7 } } localization_key = TAI_gov_party_wang_bingzhang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 8 } } localization_key = TAI_gov_party_xu_wenli }
+	text = { trigger = { check_variable = { TAI_gov_premier = 9 } } localization_key = TAI_gov_party_zheng_jianbang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 10 } } localization_key = TAI_gov_party_hu_jintao }
+	text = { trigger = { check_variable = { TAI_gov_premier = 11 } } localization_key = TAI_gov_party_xu_jialu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 12 } } localization_key = TAI_gov_party_hao_bocun }
+	text = { localization_key = TAI_gov_party_lien_chan }
+}
+defined_text = {
+	name = TAI_gov_premier_eff
+	text = { trigger = { check_variable = { TAI_gov_premier = 1 } } localization_key = TAI_gov_eff_lien_chan }
+	text = { trigger = { check_variable = { TAI_gov_premier = 2 } } localization_key = TAI_gov_eff_ma_ying_jeou }
+	text = { trigger = { check_variable = { TAI_gov_premier = 3 } } localization_key = TAI_gov_eff_eric_chu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 4 } } localization_key = TAI_gov_eff_wang_yang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 5 } } localization_key = TAI_gov_eff_chen_liangyu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 6 } } localization_key = TAI_gov_eff_james_soong }
+	text = { trigger = { check_variable = { TAI_gov_premier = 7 } } localization_key = TAI_gov_eff_wang_bingzhang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 8 } } localization_key = TAI_gov_eff_xu_wenli }
+	text = { trigger = { check_variable = { TAI_gov_premier = 9 } } localization_key = TAI_gov_eff_zheng_jianbang }
+	text = { trigger = { check_variable = { TAI_gov_premier = 10 } } localization_key = TAI_gov_eff_hu_jintao }
+	text = { trigger = { check_variable = { TAI_gov_premier = 11 } } localization_key = TAI_gov_eff_xu_jialu }
+	text = { trigger = { check_variable = { TAI_gov_premier = 12 } } localization_key = TAI_gov_eff_hao_bocun }
+	text = { localization_key = TAI_gov_eff_lien_chan }
+}
+defined_text = {
+	name = TAI_gov_legis_pic
+	text = { trigger = { check_variable = { TAI_gov_legis = 1 } } localization_key = GFX_TAI_gov_han_kuo_yu }
+	text = { trigger = { check_variable = { TAI_gov_legis = 2 } } localization_key = GFX_TAI_gov_zhao_shao_kang }
+	text = { trigger = { check_variable = { TAI_gov_legis = 3 } } localization_key = GFX_TAI_gov_yok_mu_ming }
+	text = { trigger = { check_variable = { TAI_gov_legis = 4 } } localization_key = GFX_TAI_gov_qin_yongmin }
+	text = { trigger = { check_variable = { TAI_gov_legis = 5 } } localization_key = GFX_TAI_gov_ding_shisun }
+	text = { localization_key = GFX_TAI_gov_han_kuo_yu }
+}
+defined_text = {
+	name = TAI_gov_legis_name
+	text = { trigger = { check_variable = { TAI_gov_legis = 1 } } localization_key = TAI_gov_n_han_kuo_yu }
+	text = { trigger = { check_variable = { TAI_gov_legis = 2 } } localization_key = TAI_gov_n_zhao_shao_kang }
+	text = { trigger = { check_variable = { TAI_gov_legis = 3 } } localization_key = TAI_gov_n_yok_mu_ming }
+	text = { trigger = { check_variable = { TAI_gov_legis = 4 } } localization_key = TAI_gov_n_qin_yongmin }
+	text = { trigger = { check_variable = { TAI_gov_legis = 5 } } localization_key = TAI_gov_n_ding_shisun }
+	text = { localization_key = TAI_gov_n_han_kuo_yu }
+}
+defined_text = {
+	name = TAI_gov_legis_party
+	text = { trigger = { check_variable = { TAI_gov_legis = 1 } } localization_key = TAI_gov_party_han_kuo_yu }
+	text = { trigger = { check_variable = { TAI_gov_legis = 2 } } localization_key = TAI_gov_party_zhao_shao_kang }
+	text = { trigger = { check_variable = { TAI_gov_legis = 3 } } localization_key = TAI_gov_party_yok_mu_ming }
+	text = { trigger = { check_variable = { TAI_gov_legis = 4 } } localization_key = TAI_gov_party_qin_yongmin }
+	text = { trigger = { check_variable = { TAI_gov_legis = 5 } } localization_key = TAI_gov_party_ding_shisun }
+	text = { localization_key = TAI_gov_party_han_kuo_yu }
+}
+defined_text = {
+	name = TAI_gov_legis_eff
+	text = { trigger = { check_variable = { TAI_gov_legis = 1 } } localization_key = TAI_gov_eff_han_kuo_yu }
+	text = { trigger = { check_variable = { TAI_gov_legis = 2 } } localization_key = TAI_gov_eff_zhao_shao_kang }
+	text = { trigger = { check_variable = { TAI_gov_legis = 3 } } localization_key = TAI_gov_eff_yok_mu_ming }
+	text = { trigger = { check_variable = { TAI_gov_legis = 4 } } localization_key = TAI_gov_eff_qin_yongmin }
+	text = { trigger = { check_variable = { TAI_gov_legis = 5 } } localization_key = TAI_gov_eff_ding_shisun }
+	text = { localization_key = TAI_gov_eff_han_kuo_yu }
+}
+defined_text = {
+	name = TAI_gov_judicial_pic
+	text = { trigger = { check_variable = { TAI_gov_judicial = 1 } } localization_key = GFX_TAI_gov_wan_exiang }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 2 } } localization_key = GFX_TAI_gov_liu_xiaobo }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 3 } } localization_key = GFX_TAI_gov_wong_min }
+	text = { localization_key = GFX_TAI_gov_wan_exiang }
+}
+defined_text = {
+	name = TAI_gov_judicial_name
+	text = { trigger = { check_variable = { TAI_gov_judicial = 1 } } localization_key = TAI_gov_n_wan_exiang }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 2 } } localization_key = TAI_gov_n_liu_xiaobo }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 3 } } localization_key = TAI_gov_n_wong_min }
+	text = { localization_key = TAI_gov_n_wan_exiang }
+}
+defined_text = {
+	name = TAI_gov_judicial_party
+	text = { trigger = { check_variable = { TAI_gov_judicial = 1 } } localization_key = TAI_gov_party_wan_exiang }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 2 } } localization_key = TAI_gov_party_liu_xiaobo }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 3 } } localization_key = TAI_gov_party_wong_min }
+	text = { localization_key = TAI_gov_party_wan_exiang }
+}
+defined_text = {
+	name = TAI_gov_judicial_eff
+	text = { trigger = { check_variable = { TAI_gov_judicial = 1 } } localization_key = TAI_gov_eff_wan_exiang }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 2 } } localization_key = TAI_gov_eff_liu_xiaobo }
+	text = { trigger = { check_variable = { TAI_gov_judicial = 3 } } localization_key = TAI_gov_eff_wong_min }
+	text = { localization_key = TAI_gov_eff_wan_exiang }
+}
+defined_text = {
+	name = TAI_gov_exam_pic
+	text = { trigger = { check_variable = { TAI_gov_exam = 1 } } localization_key = GFX_TAI_gov_li_ao }
+	text = { trigger = { check_variable = { TAI_gov_exam = 2 } } localization_key = GFX_TAI_gov_he_luli }
+	text = { trigger = { check_variable = { TAI_gov_exam = 3 } } localization_key = GFX_TAI_gov_chin_jin }
+	text = { localization_key = GFX_TAI_gov_li_ao }
+}
+defined_text = {
+	name = TAI_gov_exam_name
+	text = { trigger = { check_variable = { TAI_gov_exam = 1 } } localization_key = TAI_gov_n_li_ao }
+	text = { trigger = { check_variable = { TAI_gov_exam = 2 } } localization_key = TAI_gov_n_he_luli }
+	text = { trigger = { check_variable = { TAI_gov_exam = 3 } } localization_key = TAI_gov_n_chin_jin }
+	text = { localization_key = TAI_gov_n_li_ao }
+}
+defined_text = {
+	name = TAI_gov_exam_party
+	text = { trigger = { check_variable = { TAI_gov_exam = 1 } } localization_key = TAI_gov_party_li_ao }
+	text = { trigger = { check_variable = { TAI_gov_exam = 2 } } localization_key = TAI_gov_party_he_luli }
+	text = { trigger = { check_variable = { TAI_gov_exam = 3 } } localization_key = TAI_gov_party_chin_jin }
+	text = { localization_key = TAI_gov_party_li_ao }
+}
+defined_text = {
+	name = TAI_gov_exam_eff
+	text = { trigger = { check_variable = { TAI_gov_exam = 1 } } localization_key = TAI_gov_eff_li_ao }
+	text = { trigger = { check_variable = { TAI_gov_exam = 2 } } localization_key = TAI_gov_eff_he_luli }
+	text = { trigger = { check_variable = { TAI_gov_exam = 3 } } localization_key = TAI_gov_eff_chin_jin }
+	text = { localization_key = TAI_gov_eff_li_ao }
+}
+defined_text = {
+	name = TAI_gov_control_pic
+	text = { trigger = { check_variable = { TAI_gov_control = 1 } } localization_key = GFX_TAI_gov_hou_yu_ih }
+	text = { trigger = { check_variable = { TAI_gov_control = 2 } } localization_key = GFX_TAI_gov_ai_weiwei }
+	text = { trigger = { check_variable = { TAI_gov_control = 3 } } localization_key = GFX_TAI_gov_he_wei }
+	text = { localization_key = GFX_TAI_gov_hou_yu_ih }
+}
+defined_text = {
+	name = TAI_gov_control_name
+	text = { trigger = { check_variable = { TAI_gov_control = 1 } } localization_key = TAI_gov_n_hou_yu_ih }
+	text = { trigger = { check_variable = { TAI_gov_control = 2 } } localization_key = TAI_gov_n_ai_weiwei }
+	text = { trigger = { check_variable = { TAI_gov_control = 3 } } localization_key = TAI_gov_n_he_wei }
+	text = { localization_key = TAI_gov_n_hou_yu_ih }
+}
+defined_text = {
+	name = TAI_gov_control_party
+	text = { trigger = { check_variable = { TAI_gov_control = 1 } } localization_key = TAI_gov_party_hou_yu_ih }
+	text = { trigger = { check_variable = { TAI_gov_control = 2 } } localization_key = TAI_gov_party_ai_weiwei }
+	text = { trigger = { check_variable = { TAI_gov_control = 3 } } localization_key = TAI_gov_party_he_wei }
+	text = { localization_key = TAI_gov_party_hou_yu_ih }
+}
+defined_text = {
+	name = TAI_gov_control_eff
+	text = { trigger = { check_variable = { TAI_gov_control = 1 } } localization_key = TAI_gov_eff_hou_yu_ih }
+	text = { trigger = { check_variable = { TAI_gov_control = 2 } } localization_key = TAI_gov_eff_ai_weiwei }
+	text = { trigger = { check_variable = { TAI_gov_control = 3 } } localization_key = TAI_gov_eff_he_wei }
+	text = { localization_key = TAI_gov_eff_hou_yu_ih }
+}
+defined_text = {
+	name = TAI_gov_president_pic
+	text = { trigger = { has_country_leader = { name = ROC_ldr_hao_bo_cun } } localization_key = GFX_TAI_gov_pres_hao_bo_cun }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_lien_chan } } localization_key = GFX_TAI_gov_pres_lien_chan }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_ma_ying_jeou } } localization_key = GFX_TAI_gov_pres_ma_ying_jeou }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_eric_chu } } localization_key = GFX_TAI_gov_pres_eric_chu }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_hou_yu_ih } } localization_key = GFX_TAI_gov_pres_hou_yu_ih }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_wang_bingzhang } } localization_key = GFX_TAI_gov_pres_wang_bingzhang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_liu_xiaobo } } localization_key = GFX_TAI_gov_pres_liu_xiaobo }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_wong_min } } localization_key = GFX_TAI_gov_pres_wong_min }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_qin_yongmin } } localization_key = GFX_TAI_gov_pres_qin_yongmin }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_xu_wenli } } localization_key = GFX_TAI_gov_pres_xu_wenli }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_he_luli } } localization_key = GFX_TAI_gov_pres_he_luli }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_wan_exiang } } localization_key = GFX_TAI_gov_pres_wan_exiang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_zheng_jianbang } } localization_key = GFX_TAI_gov_pres_zheng_jianbang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_li_keqiang } } localization_key = GFX_TAI_gov_pres_li_keqiang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_wu_bangguo } } localization_key = GFX_TAI_gov_pres_wu_bangguo }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_bo_xilai } } localization_key = GFX_TAI_gov_pres_bo_xilai }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_he_wei } } localization_key = GFX_TAI_gov_pres_he_wei }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_li_ao } } localization_key = GFX_TAI_gov_pres_li_ao }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_yok_mu_ming } } localization_key = GFX_TAI_gov_pres_yok_mu_ming }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_james_soong } } localization_key = GFX_TAI_gov_pres_james_soong }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_xu_jialu } } localization_key = GFX_TAI_gov_pres_xu_jialu }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_chin_jin } } localization_key = GFX_TAI_gov_pres_chin_jin }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_zhao_shao_kang } } localization_key = GFX_TAI_gov_pres_zhao_shao_kang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_han_kuo_yu } } localization_key = GFX_TAI_gov_pres_han_kuo_yu }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_tang_yao_ming } } localization_key = GFX_TAI_gov_pres_tang_yao_ming }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_li_jie } } localization_key = GFX_TAI_gov_pres_li_jie }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_jin_youzhi } } localization_key = GFX_TAI_gov_pres_jin_youzhi }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_wang_yang } } localization_key = GFX_TAI_gov_pres_wang_yang }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_chen_liangyu } } localization_key = GFX_TAI_gov_pres_chen_liangyu }
+	text = { trigger = { has_country_leader = { name = ROC_ldr_hu_jintao } } localization_key = GFX_TAI_gov_pres_hu_jintao }
+	text = { localization_key = GFX_TAI_gov_pres_none }
+}
+defined_text = {
+	name = TAI_gov_ly_status_word
+	text = { trigger = { check_variable = { TAI_ly_support > 0.499 } } localization_key = TAI_gov_ly_majority_word }
+	text = { localization_key = TAI_gov_ly_minority_word }
+}
+defined_text = {
+	name = TAI_gov_ly_status_text
+	text = { trigger = { check_variable = { TAI_ly_support > 0.499 } } localization_key = TAI_gov_ly_majority }
+	text = { localization_key = TAI_gov_ly_minority }
+}

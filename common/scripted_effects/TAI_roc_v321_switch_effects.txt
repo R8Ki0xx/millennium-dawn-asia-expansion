@@ -1,0 +1,1070 @@
+# MD ROC Return v3.21 —— 换 tag 之后的善后（由 _tools/v321_switch.py 生成）
+
+# Scope: CHI（新）。照千禧 add_civil_war_debuff 的写法：先置旗标，千禧的到期事件就不会往下一级转
+ROC_clear_civil_war_debuff = {
+	set_country_flag = manual_civil_war_debuff_removal
+	remove_ideas = civil_war_disorganised_military_1
+	remove_ideas = civil_war_disorganised_military_2_military
+	remove_ideas = civil_war_disorganised_military_2_production
+	remove_ideas = civil_war_disorganised_military_2_experience
+	remove_ideas = civil_war_disorganised_military_3_military
+	remove_ideas = civil_war_disorganised_military_3_production
+	remove_ideas = civil_war_disorganised_military_3_experience
+	remove_ideas = civil_war_disorganised_military_4_military
+	remove_ideas = civil_war_disorganised_military_4_production
+	remove_ideas = civil_war_disorganised_military_4_experience
+	remove_ideas = civil_war_disorganised_military_5_military
+	remove_ideas = civil_war_disorganised_military_5_production
+	remove_ideas = civil_war_disorganised_military_5_experience
+	clr_country_flag = manual_civil_war_debuff_removal
+	set_country_flag = ROC_cwdebuff_cleared_v321
+}
+
+# Scope: CHI（新）。合并装备：科技并入中共残余政权的、再按千禧开局的设计重建中华民国与中共的装备设计
+ROC_merge_equipment = {
+	if = { limit = { country_exists = PRC } inherit_technology = PRC }
+	# 中华民国：CM-11
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		 name = "CM-11"
+		 type = medium_tank_chassis_0
+		modules = {
+		 main_armament_slot = tank_small_medium_cannon_2
+		 secondary_armament_slot = afv_coax_machine_gun_2
+		ammunition_load_slot = mixed_main_ammo_2
+		 turret_type_slot = tank_soviet_turret
+		 suspension_type_slot = tank_torsion_bar_suspension_medium
+		 armor_type_slot = tank_steel_armor_gen1
+		 engine_type_slot = tank_diesel_engine_gen2
+		 reload_type_slot = manual_loading
+		 special_type_slot_1 = smoke_launchers_2
+		 special_type_slot_2 = additional_mg
+		 special_type_slot_4 = tank_battlestation_2
+		 }
+		 upgrades = {
+		 tank_nsb_armor_upgrade = 4
+		 }
+		 icon = "gfx/interface/technologies/TAI/LAND/MBT1.dds"
+		 model = "TAI_armor_Bat_entity"
+		 }
+	}
+	# 中华民国：CM-21
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		 name = "CM-21"
+		 type = medium_tank_amphibious_chassis_1
+		modules = {
+		 main_armament_slot = afv_machine_gun
+		reload_type_slot = manual_loading
+		ammunition_load_slot = machine_gun_ammo_1
+		 turret_type_slot = tank_no_turret
+		 suspension_type_slot = tank_torsion_bar_suspension_light
+		 engine_type_slot = tank_diesel_engine_gen2
+		 armor_type_slot = afv_alum_armor_gen1
+		 special_type_slot_1 = afv_gun_ports
+		 special_type_slot_2 = smoke_launchers_2
+		 special_type_slot_3 = afv_reverse_doors
+		 special_type_slot_4 = tank_battlestation_1
+		special_type_slot_5 = afv_troop_capacity
+		 special_type_slot_6 = spaced_armor_gen1
+		 }
+		 upgrades = {
+		 tank_nsb_armor_upgrade = 2
+		 }
+		 icon = "gfx/interface/technologies/TAI/LAND/APC1.dds"
+		 }
+	}
+	# 中华民国：F-CK-1 Ching-kuo
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = { #Light Fighter
+		name = "F-CK-1 Ching-kuo"
+		type = small_plane_strike_airframe_2
+		modules = {
+		fixed_main_weapon_slot = weap_mp_light_hardpoint_2
+		fixed_gun_slot = weap_multi_gun_2
+		engine_type_slot = engine_light_double_2
+		avionics_type_slot = avionics_manned_3
+		wingform_type_slot = wing_diamond
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_redundant_3
+		}
+		}
+	}
+	# 中华民国：Cheng Kung Class
+	create_equipment_variant = {
+	name = "Cheng Kung Class"
+	type = frigate_hull_2
+	#name_group = TAI_DD_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_light_surface_diesel_power_1
+	fixed_ship_fire_control_system_slot = module_analog_fire_control
+	fixed_ship_radar_slot = module_sonar_2
+	fixed_ship_auxillary_slot_2 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot_1 = module_torpedoes_2
+	fixed_ship_auxillary_slot = module_fuel_tank
+	fixed_ship_battery_slot = module_127mm_battery
+	front_1_custom_slot = module_ciws_2
+	rear_1_custom_slot = module_naval_missile_mount_quad
+	fixed_ship_missile_ammo_slot = module_naval_ammo_balanced_2
+	}
+	role_icon_index = 12
+	}
+	# 中华民国：Kang Ding Class
+	create_equipment_variant = {
+	name = "Kang Ding Class"
+	type = frigate_hull_3
+	#name_group = TAI_DD_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_light_surface_diesel_power_1
+	fixed_ship_fire_control_system_slot = module_digital_integrated_fire_control
+	fixed_ship_radar_slot = module_radar_3
+	fixed_ship_auxillary_slot_2 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot_1 = module_chain_gun
+	fixed_ship_auxillary_slot = module_fuel_tank
+	fixed_ship_battery_slot = module_76mm_gun_1
+	front_1_custom_slot = module_naval_missile_mount_quad
+	rear_1_custom_slot = module_naval_missile_mount_quad
+	fixed_ship_missile_ammo_slot = module_naval_ammo_balanced_2
+	}
+	role_icon_index = 12
+	}
+	# 中华民国：Hai Lung Class
+	create_equipment_variant = {
+	name = "Hai Lung Class"
+	type = attack_submarine_hull_2
+	#name_group = TAI_SS_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_sub_diesel_electric_power
+	fixed_ship_radar_slot = module_sonar_2
+	fixed_ship_auxillary_slot_3 = module_fuel_tank
+	fixed_ship_auxillary_slot_2 = module_sub_esm_1
+	fixed_ship_auxillary_slot_1 = module_torpedoes_2
+	fixed_ship_auxillary_slot = module_torpedoes_2
+	fixed_ship_battery_slot = module_anti_ship_torpedoes_2
+	}
+	role_icon_index = 27
+	}
+	# 中共：ZTZ-96
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "ZTZ-96"
+		type = medium_tank_chassis_1
+		modules = {
+		main_armament_slot = tank_medium_cannon_2
+		secondary_armament_slot = afv_coax_machine_gun_2
+		ammunition_load_slot = mixed_main_ammo_2
+		turret_type_slot = tank_soviet_turret
+		suspension_type_slot = tank_torsion_bar_suspension_medium
+		armor_type_slot = nera_armor_gen1
+		engine_type_slot = tank_diesel_engine_gen3
+		reload_type_slot = automatic_loading
+		special_type_slot_1 = smoke_launchers_2
+		special_type_slot_2 = additional_mg
+		special_type_slot_4 = tank_battlestation_2
+		special_type_slot_6 = spaced_armor_gen1
+		}
+		upgrades = {
+		tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/MBT3.dds"
+		model = "CHI_ZTZ96_entity"
+		}
+	}
+	# 中共：ZTZ-99
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "ZTZ-99" #pre production ZTZ99
+		type = medium_tank_chassis_2
+		modules = {
+		main_armament_slot = tank_medium_cannon_2
+		secondary_armament_slot = afv_coax_machine_gun_2
+		ammunition_load_slot = mixed_main_ammo_2
+		turret_type_slot = tank_base_tank_turret
+		suspension_type_slot = tank_torsion_bar_suspension_medium
+		armor_type_slot = nera_armor_gen1
+		engine_type_slot = tank_diesel_engine_gen4
+		reload_type_slot = automatic_loading
+		special_type_slot_1 = smoke_launchers_2
+		special_type_slot_2 = additional_mg
+		special_type_slot_3 = smoothbore_atgm_gen2
+		special_type_slot_4 = tank_battlestation_2_thermal
+		special_type_slot_6 = reactive_armor_gen2
+		}
+		upgrades = {
+		tank_nsb_armor_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/ZTZ-98.dds"
+		model = "CHI_ZTZ99_entity"
+		}
+	}
+	# 中共：Z-9W
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "Z-9W"
+		type = heavy_tank_chassis_1
+		modules = {
+		chassis_type_slot = helicopter_medium_chassis
+		helicopter_body_layout = gunship_layout
+		helicopter_body_mount_1 = helicopter_multiple_atgm_gen1
+		engine_type_slot = helicopter_turbine_engine_gen2
+		defence_type_slot = flare_launchers
+		sensor_and_avionics_slot = sensors_and_avionics_gen_2
+		helicopter_body_mount_2 = helicopter_rocket_pod_gen1
+		}
+		upgrades = {
+		helicopter_nsb_upgrade = 0
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/AH2.dds"
+		}
+	}
+	# 中共：ZSL92A
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "ZSL92A" #also know WZ-551
+		type = medium_tank_amphibious_chassis_1
+		modules = {
+		main_armament_slot = afv_machine_gun
+		reload_type_slot = automatic_loading
+		ammunition_load_slot = machine_gun_ammo_2
+		turret_type_slot = tank_no_turret
+		suspension_type_slot = tank_wheeled_suspension_medium
+		armor_type_slot = tank_steel_armor_gen1
+		engine_type_slot = tank_diesel_engine_gen3
+		special_type_slot_4 = tank_battlestation_1
+		special_type_slot_2 = afv_reverse_doors
+		special_type_slot_1 = afv_troop_capacity
+		}
+		upgrades = {
+		tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/ZSL-92.dds"
+		model = "WZ551_entity"
+		}
+	}
+	# 中共：ZBD-04
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "ZBD-04"
+		type = medium_tank_flame_chassis_2
+		modules = {
+		main_armament_slot = afv_assault_gun_2
+		secondary_armament_slot = afv_coax_autocannon_2
+		reload_type_slot = automatic_loading
+		ammunition_load_slot = anti_infantry_main_ammo_2
+		turret_type_slot = tank_base_tank_turret
+		suspension_type_slot = tank_torsion_bar_suspension_medium
+		armor_type_slot = afv_alum_armor_gen2
+		engine_type_slot = tank_diesel_engine_gen2
+		special_type_slot_2 = smoke_launchers_2
+		special_type_slot_3 = afv_troop_capacity
+		special_type_slot_4 = tank_battlestation_2_thermal
+		}
+		upgrades = {
+		tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/IFV4.dds"
+		model = "CHI_ZBD04_entity"
+		}
+	}
+	# 中共：PHZ-89
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "PHZ-89"
+		type = medium_tank_rocket_chassis_1
+		modules = {
+		main_armament_slot = art_med_rocket_gen2
+		turret_type_slot = tank_base_tank_turret
+		reload_type_slot = thirty_two_missile_pack
+		ammunition_load_slot = artillery_light_ammo_2
+		suspension_type_slot = tank_torsion_bar_suspension_medium
+		engine_type_slot = tank_diesel_engine_gen2
+		special_type_slot_1 = mine_ammo_1
+		special_type_slot_2 = cluster_ammo_1
+		special_type_slot_4 = tank_battlestation_2
+		}
+		upgrades = {
+		tank_nsb_fire_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/SPR2.dds"
+		}
+	}
+	# 中共：PZL-45
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "PZL-45"
+		type = medium_tank_artillery_chassis_1
+		modules = {
+		main_armament_slot = art_med_gun_gen2
+		reload_type_slot = automatic_loading
+		ammunition_load_slot = artillery_medium_ammo_2
+		turret_type_slot = tank_base_tank_turret
+		suspension_type_slot = tank_torsion_bar_suspension_medium
+		engine_type_slot = tank_diesel_engine_gen2
+		special_type_slot_1 = empty
+		special_type_slot_2 = empty
+		special_type_slot_4 = tank_battlestation_2
+		}
+		upgrades = {
+		tank_nsb_fire_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/SPG3.dds"
+		}
+	}
+	# 中共：PGZ-95
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "PGZ-95"
+		type = medium_tank_aa_chassis_1
+		modules = {
+		main_armament_slot = missile_launcher_system
+		reload_type_slot = eight_missile_pack
+		ammunition_load_slot = spaa_short_range_missiles_2
+		turret_type_slot = tank_base_tank_turret
+		suspension_type_slot = tank_torsion_bar_suspension_light
+		engine_type_slot = tank_diesel_engine_gen1
+		secondary_armament_slot = spaa_light_autocannon2
+		special_type_slot_1 = smoke_launchers
+		special_type_slot_2 = empty
+		special_type_slot_3 = empty
+		special_type_slot_4 = spaa_radar_gen1
+		}
+		upgrades = {
+		tank_nsb_fire_upgrade = 0
+		}
+		icon = "GFX_CHI_SP_Anti_Air_2_medium"
+		}
+	}
+	# 中共：Type-63A
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "Type-63A"
+		type = medium_tank_destroyer_chassis_0
+		modules = {
+		main_armament_slot = tank_small_cannon_2
+		secondary_armament_slot = afv_coax_machine_gun_2
+		ammunition_load_slot = mixed_main_ammo_2
+		turret_type_slot = tank_soviet_turret
+		suspension_type_slot = tank_torsion_bar_suspension_light
+		engine_type_slot = tank_diesel_engine_gen3
+		armor_type_slot = tank_steel_armor_gen1
+		reload_type_slot = manual_loading
+		special_type_slot_1 = smoke_launchers_2
+		special_type_slot_2 = additional_mg #normly smoothbore_atgm_gen2
+		special_type_slot_3 = empty
+		special_type_slot_4 = tank_battlestation_2_thermal
+		}
+		upgrades = {
+		tank_nsb_armor_upgrade = 3
+		tank_nsb_engine_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/CHI/LAND/Type-63A.dds"
+		}
+	}
+	# 中共：Type-87
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "Type-87"
+		type = Anti_Air_0
+		upgrades = {
+		AA_fire_control = 2
+		}
+		icon = "gfx/interface/technologies/SOV/INF/ZU-23-2.dds"
+		}
+	}
+	# 中共：QW-1 Vanguard
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "QW-1 Vanguard"
+		type = Anti_Air_1
+		upgrades = {
+		AA_fire_control = 2
+		}
+		}
+	}
+	# 中共：QBZ-03
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "QBZ-03"
+		type = infantry_weapons_3
+		icon = "gfx/interface/technologies/CHI/INF/QBZ03.dds"
+		upgrades = {
+		inf_eq_heavy_weapons = 3
+		}
+		}
+	}
+	# 中共：Z-8
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		create_equipment_variant = {
+		name = "Z-8"
+		type = transport_helicopter_1
+		upgrades = {
+		}
+		icon = "gfx/interface/technologies/CHI/HELI/Z-8A.dds"
+		}
+	}
+	# 中共：J-7E
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "J-7E"
+		type = small_plane_strike_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_mp_light_hardpoint_2
+		fixed_gun_slot = weap_multi_gun_1
+		engine_type_slot = engine_light_single_2
+		avionics_type_slot = avionics_manned_1
+		wingform_type_slot = wing_delta_canard
+		special_slot_type_1 = spec_countermeasures_1
+		}
+		upgrades = {
+		plane_bba_radar_upgrade = 1
+		plane_bba_engine_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/J-7E.dds"
+		model = "CHI_small_plane_airframe_1_entity"
+		}
+	}
+	# 中共：J-8B
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "J-8B"
+		type = medium_plane_fighter_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_a2a_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_2
+		fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
+		engine_type_slot = engine_jet_double_1
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_delta
+		special_slot_type_1 = spec_countermeasures_1
+		}
+		upgrades = {
+		plane_bba_radar_upgrade = 1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/J-8B.dds"
+		model = "CHI_medium_plane_fighter_airframe_1_entity"
+		}
+	}
+	# 中共：JH-7 Flying Leopard
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "JH-7 Flying Leopard"
+		type = medium_plane_cas_airframe_2
+		modules = {
+		fixed_main_weapon_slot = weap_ag_cas_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_2
+		fixed_auxiliary_weapon_slot_1 = weap_mp_light_hardpoint_2
+		engine_type_slot = engine_jet_double_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_delta
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_tgp_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/JH-7.dds"
+		model = "CHI_medium_plane_cas_airframe_2_entity"
+		}
+	}
+	# 中共：J-11 Yinglong
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "J-11 Yinglong"
+		type = medium_plane_fighter_airframe_2
+		modules = {
+		fixed_main_weapon_slot = weap_a2a_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_3
+		fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_1
+		fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2 #R-73
+		engine_type_slot = engine_jet_double_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_swept
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_refuel_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/J-11.dds"
+		model = "CHI_medium_plane_fighter_airframe_2_entity"
+		}
+	}
+	# 中共：Su-30MKK
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Su-30MKK"
+		type = medium_plane_airframe_2
+		modules = {
+		fixed_main_weapon_slot = weap_mp_med_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_3
+		fixed_auxiliary_weapon_slot_1 = weap_a2a_hardpoint_1
+		fixed_auxiliary_weapon_slot_2 = weap_mp_light_hardpoint_2 #R-73
+		engine_type_slot = engine_jet_double_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_swept
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_refuel_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/Su-30MKK.dds"
+		model = "CHI_medium_plane_airframe_2_entity"
+		}
+	}
+	# 中共：Nanchang Q-5II
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Nanchang Q-5II"
+		type = small_plane_cas_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_ag_cas_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_1
+		engine_type_slot = engine_light_double_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_swept
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_tgp_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/Q-5Jia.dds"
+		model = "CHI_Q5_entity"
+		}
+	}
+	# 中共：Xian H-6E-F
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Xian H-6E-F" #heavy bomber
+		type = large_plane_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_ag_strat_1
+		engine_type_slot = engine_jet_double_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_swept
+		special_slot_type_2 = spec_refuel_2
+		special_slot_type_3 = empty
+		fixed_auxiliary_weapon_slot_1 = empty
+		fixed_auxiliary_weapon_slot_2 = weap_ag_cas_hardpoint_2
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/H-6E.dds"
+		model = "CHI_large_plane_airframe_1_entity"
+		}
+	}
+	# 中共：Shaanxi Y-8
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Shaanxi Y-8"
+		type = large_plane_air_transport_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_buff_transport
+		engine_type_slot = engine_jet_quad_1
+		avionics_type_slot = avionics_manned_1
+		wingform_type_slot = wing_straight
+		special_slot_type_1 = empty
+		special_slot_type_2 = empty
+		special_slot_type_3 = empty
+		fixed_auxiliary_weapon_slot_1 = empty
+		fixed_auxiliary_weapon_slot_2 = empty
+		}
+		icon = "gfx/interface/technologies/SOV/AIR/An-12.dds"
+		model = "SOV_AN12_entity"
+		}
+	}
+	# 中共：Shaanxi Y-8X
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Shaanxi Y-8X"
+		type = large_plane_maritime_patrol_airframe_1
+		modules = {
+		fixed_main_weapon_slot = weap_as_hardpoint_1
+		engine_type_slot = engine_prop_quad_1
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_straight
+		special_slot_type_1 = empty
+		special_slot_type_2 = spec_mad_1
+		special_slot_type_3 = spec_redundant_2
+		fixed_auxiliary_weapon_slot_1 = weap_as_hardpoint_1
+		fixed_auxiliary_weapon_slot_2 = weap_as_hardpoint_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/Y-8X.dds"
+		}
+	}
+	# 中共：Hongdu JL-8
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Hongdu JL-8" #Also K-8
+		type = small_plane_strike_airframe_2
+		modules = {
+		fixed_main_weapon_slot = weap_mp_med_hardpoint_1
+		fixed_gun_slot = weap_multi_gun_2
+		engine_type_slot = engine_light_single_2
+		avionics_type_slot = avionics_manned_2
+		wingform_type_slot = wing_straight
+		special_slot_type_1 = spec_countermeasures_1
+		special_slot_type_2 = spec_redundant_1
+		}
+		icon = "gfx/interface/technologies/CHI/AIR/JL-8.dds"
+		}
+	}
+	# 中共：Su-27M
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Su-27M"
+		type = AS_Fighter2
+		upgrades = {
+		plane_range_upgrade = 2
+		plane_engine_upgrade = 1
+		}
+		}
+	}
+	# 中共：Su-24M
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		create_equipment_variant = {
+		name = "Su-24M"
+		type = Strike_fighter2
+		upgrades = {
+		strike_gun_upgrade = 1
+		plane_range_upgrade = 1
+		plane_engine_upgrade = 1
+		plane_reliability_upgrade = 0
+		}
+		}
+	}
+	# 中共：Type 051B Class
+	create_equipment_variant = {
+	name = "Type 051B Class"
+	type = destroyer_hull_2
+	name_group = CHI_DD_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_surface_diesel_power_1
+	fixed_ship_fire_control_system_slot = module_capital_digital_integrated_fire_control
+	fixed_ship_radar_slot = module_radar_3
+	fixed_ship_auxillary_slot_3 = module_naval_vls_cells_64
+	fixed_ship_auxillary_slot_2 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot = module_torpedoes_2
+	fixed_ship_battery_slot = module_76mm_gun_2
+	front_1_custom_slot = module_76mm_gun_2
+	mid_1_custom_slot = module_ciws_2
+	mid_2_custom_slot = module_naval_missile_mount_quad
+	rear_1_custom_slot = module_light_helipad_1
+	fixed_ship_missile_ammo_slot = module_naval_ammo_balanced_2
+	}
+	role_icon_index = 14
+	icon = "gfx/interface/technologies/CHI/NAV/51B.dds"
+	}
+	# 中共：Type 053H2G Class
+	create_equipment_variant = {
+	name = "Type 053H2G Class"
+	type = frigate_hull_2
+	name_group = CHI_DD_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_light_surface_diesel_power_1
+	fixed_ship_fire_control_system_slot = module_analog_fire_control
+	fixed_ship_radar_slot = module_radar_3
+	fixed_ship_auxillary_slot_2 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot_1 = module_torpedoes_2
+	fixed_ship_auxillary_slot = module_ciws_2
+	fixed_ship_battery_slot = module_76mm_gun_2
+	front_1_custom_slot = module_ciws_2
+	rear_1_custom_slot = module_light_helipad_1
+	fixed_ship_missile_ammo_slot = module_naval_ammo_anti_ship_2
+	}
+	role_icon_index = 12
+	}
+	# 中共：Naresuan Class
+	create_equipment_variant = {
+	name = "Naresuan Class"
+	type = frigate_hull_3
+	name_group = CHI_FRIGATE_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_light_surface_diesel_power_1
+	fixed_ship_fire_control_system_slot = module_analog_fire_control
+	fixed_ship_radar_slot = module_radar_2
+	fixed_ship_auxillary_slot_2 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot_1 = module_naval_missile_mount_quad
+	fixed_ship_auxillary_slot = module_ciws_1
+	fixed_ship_battery_slot = module_76mm_gun_2
+	front_1_custom_slot = module_76mm_gun_2
+	rear_1_custom_slot = module_ciws_1
+	fixed_ship_missile_ammo_slot = module_naval_ammo_balanced_2
+	}
+	role_icon_index = 12
+	icon = "gfx/interface/technologies/CHI/NAV/053H3.dds"
+	}
+	# 中共：Type 091 Class
+	create_equipment_variant = {
+	name = "Type 091 Class"
+	type = attack_submarine_hull_2
+	name_group = CHI_SS_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_sub_early_reactor_power
+	fixed_ship_radar_slot = module_sonar_2
+	fixed_ship_auxillary_slot_2 = module_sub_esm_1
+	fixed_ship_auxillary_slot_1 = module_torpedoes_2
+	fixed_ship_auxillary_slot = module_torpedoes_2
+	fixed_ship_battery_slot = module_anti_ship_torpedoes_1
+	}
+	role_icon_index = 29
+	icon = "gfx/interface/technologies/CHI/NAV/091.dds"
+	}
+	# 中共：Type 039 Class
+	create_equipment_variant = {
+	name = "Type 039 Class"
+	type = attack_submarine_hull_3
+	name_group = CHI_SS_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_sub_diesel_electric_power
+	fixed_ship_radar_slot = module_sonar_2
+	fixed_ship_auxillary_slot_3 = module_torpedoes_2
+	fixed_ship_auxillary_slot_2 = module_sub_esm_1
+	fixed_ship_auxillary_slot_1 = module_minelaying
+	fixed_ship_auxillary_slot = module_torpedoes_2
+	fixed_ship_battery_slot = module_anti_ship_torpedoes_2
+	}
+	role_icon_index = 27
+	icon = "gfx/interface/technologies/CHI/NAV/039.dds"
+	}
+	# 中共：Type 092 Class
+	create_equipment_variant = {
+	name = "Type 092 Class"
+	type = missile_submarine_hull_1
+	#name_group = CHI_SS_HISTORICAL
+	modules = {
+	fixed_ship_engine_slot = module_sub_adv_reactor_power
+	fixed_ship_radar_slot = module_sonar_1
+	fixed_ship_auxillary_slot_3 = empty
+	fixed_ship_auxillary_slot_2 = empty
+	fixed_ship_auxillary_slot_1 = module_naval_sub_vls_cells_8
+	fixed_ship_auxillary_slot = module_torpedoes_1
+	fixed_ship_battery_slot = module_anti_ship_torpedoes_1
+	fixed_ship_missile_ammo_slot = module_naval_sub_ammo_land_attack_2
+	}
+	role_icon_index = 30
+	icon = "gfx/interface/technologies/CHI/NAV/092.dds"
+	}
+}
+
+# Scope: CHI（新）。重建生产线：先中华民国的（每条 3 厂），再并入中共的（每条 2 厂）
+ROC_rebuild_production = {
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_0
+			creator = "CHI"
+			version_name = "CM-11"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_amphibious_chassis_1
+			creator = "CHI"
+			version_name = "CM-21"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_strike_airframe_2
+			creator = "CHI"
+			version_name = "F-CK-1 Ching-kuo"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = frigate_hull_2
+			creator = "CHI"
+			version_name = "Cheng Kung Class"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = frigate_hull_3
+			creator = "CHI"
+			version_name = "Kang Ding Class"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = attack_submarine_hull_2
+			creator = "CHI"
+			version_name = "Hai Lung Class"
+		}
+		requested_factories = 3
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_1
+			creator = "CHI"
+			version_name = "ZTZ-96"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_2
+			creator = "CHI"
+			version_name = "ZTZ-99"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = heavy_tank_chassis_1
+			creator = "CHI"
+			version_name = "Z-9W"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_amphibious_chassis_1
+			creator = "CHI"
+			version_name = "ZSL92A"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_flame_chassis_2
+			creator = "CHI"
+			version_name = "ZBD-04"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_rocket_chassis_1
+			creator = "CHI"
+			version_name = "PHZ-89"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_artillery_chassis_1
+			creator = "CHI"
+			version_name = "PZL-45"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_aa_chassis_1
+			creator = "CHI"
+			version_name = "PGZ-95"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_destroyer_chassis_0
+			creator = "CHI"
+			version_name = "Type-63A"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = Anti_Air_0
+			creator = "CHI"
+			version_name = "Type-87"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = Anti_Air_1
+			creator = "CHI"
+			version_name = "QW-1 Vanguard"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = infantry_weapons_3
+			creator = "CHI"
+			version_name = "QBZ-03"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = transport_helicopter_1
+			creator = "CHI"
+			version_name = "Z-8"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_strike_airframe_1
+			creator = "CHI"
+			version_name = "J-7E"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_fighter_airframe_1
+			creator = "CHI"
+			version_name = "J-8B"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_cas_airframe_2
+			creator = "CHI"
+			version_name = "JH-7 Flying Leopard"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_fighter_airframe_2
+			creator = "CHI"
+			version_name = "J-11 Yinglong"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_plane_airframe_2
+			creator = "CHI"
+			version_name = "Su-30MKK"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_cas_airframe_1
+			creator = "CHI"
+			version_name = "Nanchang Q-5II"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_airframe_1
+			creator = "CHI"
+			version_name = "Xian H-6E-F"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_air_transport_airframe_1
+			creator = "CHI"
+			version_name = "Shaanxi Y-8"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = large_plane_maritime_patrol_airframe_1
+			creator = "CHI"
+			version_name = "Shaanxi Y-8X"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_strike_airframe_2
+			creator = "CHI"
+			version_name = "Hongdu JL-8"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = AS_Fighter2
+			creator = "CHI"
+			version_name = "Su-27M"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = Strike_fighter2
+			creator = "CHI"
+			version_name = "Su-24M"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_hull_2
+			creator = "CHI"
+			version_name = "Type 051B Class"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = frigate_hull_2
+			creator = "CHI"
+			version_name = "Type 053H2G Class"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = frigate_hull_3
+			creator = "CHI"
+			version_name = "Naresuan Class"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = attack_submarine_hull_2
+			creator = "CHI"
+			version_name = "Type 091 Class"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = attack_submarine_hull_3
+			creator = "CHI"
+			version_name = "Type 039 Class"
+		}
+		requested_factories = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = missile_submarine_hull_1
+			creator = "CHI"
+			version_name = "Type 092 Class"
+		}
+		requested_factories = 2
+	}
+}
+
+# Scope: CHI（新）。换 tag 之后统一执行
+TAI_roc_v321_takeover = {
+	ROC_clear_civil_war_debuff = yes
+	ROC_merge_equipment = yes
+	ROC_rebuild_production = yes
+}

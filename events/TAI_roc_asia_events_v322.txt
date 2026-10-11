@@ -1,0 +1,439 @@
+# MD ROC Return v3.22 —— 叙利亚内战相关事件（由 _tools/patch_v322.py 生成）
+add_namespace = roc_asia
+
+# 财阀的资产
+country_event = {
+	id = roc_asia.70
+	title = roc_asia.70.t
+	desc = roc_asia.70.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.70.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.70.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.70.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.70.b"
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 复兴党第十一次代表大会
+country_event = {
+	id = roc_asia.71
+	title = roc_asia.71.t
+	desc = roc_asia.71.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.71.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.71.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.71.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.71.b"
+		add_stability = 0.03
+		ai_chance = { base = 7 }
+	}
+}
+
+# 全国对话大会
+country_event = {
+	id = roc_asia.72
+	title = roc_asia.72.t
+	desc = roc_asia.72.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.72.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.72.a"
+		add_stability = 0.04
+		add_political_power = 50
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.72.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.72.b"
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 新复兴共和国
+country_event = {
+	id = roc_asia.73
+	title = roc_asia.73.t
+	desc = roc_asia.73.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.73.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.73.a"
+		add_political_power = 100
+		add_stability = 0.04
+		ai_chance = { base = 10 }
+	}
+}
+
+# 东古塔的毒气
+country_event = {
+	id = roc_asia.60
+	title = roc_asia.60.t
+	desc = roc_asia.60.d
+	picture = GFX_USA_syria_missile_strike
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.60.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.60.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.60.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.60.b"
+		add_war_support = 0.03
+		add_stability = -0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 俄罗斯战机抵达赫梅明
+country_event = {
+	id = roc_asia.61
+	title = roc_asia.61.t
+	desc = roc_asia.61.d
+	picture = GFX_hezbollahi_soldier_on_tank
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.61.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.61.a"
+		add_war_support = 0.05
+		add_political_power = -25
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.61.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.61.b"
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 阿斯塔纳的降级区
+country_event = {
+	id = roc_asia.62
+	title = roc_asia.62.t
+	desc = roc_asia.62.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.62.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.62.a"
+		add_stability = 0.04
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+}
+
+# 解放组织的转型
+country_event = {
+	id = roc_asia.63
+	title = roc_asia.63.t
+	desc = roc_asia.63.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.63.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.63.a"
+		add_stability = 0.03
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.63.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.63.b"
+		add_war_support = 0.04
+		ai_chance = { base = 7 }
+	}
+}
+
+# 土耳其军队越境
+country_event = {
+	id = roc_asia.64
+	title = roc_asia.64.t
+	desc = roc_asia.64.d
+	picture = GFX_TUR_syrian_border_attack
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.64.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.64.a"
+		add_war_support = 0.04
+		add_political_power = -25
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.64.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.64.b"
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 化学武器库存清空
+country_event = {
+	id = roc_asia.69
+	title = roc_asia.69.t
+	desc = roc_asia.69.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.69.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.69.a"
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 最后一辆军车
+country_event = {
+	id = roc_asia.74
+	title = roc_asia.74.t
+	desc = roc_asia.74.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.74.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.74.a"
+		add_political_power = -25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.74.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.74.b"
+		add_political_power = 25
+		add_stability = -0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 手机里的标语
+country_event = {
+	id = roc_asia.75
+	title = roc_asia.75.t
+	desc = roc_asia.75.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.75.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.75.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.75.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.75.b"
+		add_war_support = 0.03
+		add_stability = -0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 起草宪章
+country_event = {
+	id = roc_asia.76
+	title = roc_asia.76.t
+	desc = roc_asia.76.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.76.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.76.a"
+		add_political_power = 50
+		add_stability = 0.03
+		ai_chance = { base = 10 }
+	}
+}
+
+# 哈里发降临摩苏尔
+country_event = {
+	id = roc_asia.65
+	title = roc_asia.65.t
+	desc = roc_asia.65.d
+	picture = GFX_islamic_state
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.65.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.65.a"
+		add_political_power = 50
+		add_war_support = 0.05
+		ai_chance = { base = 10 }
+	}
+}
+
+# 科巴尼的春天
+country_event = {
+	id = roc_asia.66
+	title = roc_asia.66.t
+	desc = roc_asia.66.d
+	picture = GFX_kurd_rally
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.66.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.66.a"
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.03
+		ai_chance = { base = 10 }
+	}
+}
+
+# 阿夫林的陷落
+country_event = {
+	id = roc_asia.67
+	title = roc_asia.67.t
+	desc = roc_asia.67.d
+	picture = GFX_TUR_syrian_border_attack
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.67.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.67.a"
+		add_war_support = 0.04
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 隐入地下
+country_event = {
+	id = roc_asia.68
+	title = roc_asia.68.t
+	desc = roc_asia.68.d
+	picture = GFX_isis_war_over
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.68.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.68.a"
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+}
+
+# 人民议会选举
+country_event = {
+	id = roc_asia.80
+	title = roc_asia.80.t
+	desc = roc_asia.80.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.80.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.80.a"
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+}
+
+# 紧急状态结束
+country_event = {
+	id = roc_asia.81
+	title = roc_asia.81.t
+	desc = roc_asia.81.d
+	picture = GFX_damascus_spring
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.81.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.81.a"
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 新政党的诞生
+country_event = {
+	id = roc_asia.82
+	title = roc_asia.82.t
+	desc = roc_asia.82.d
+	picture = GFX_syria_damascus_spring
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.82.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.82.a"
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+}
+
+# 新宪法公投
+country_event = {
+	id = roc_asia.83
+	title = roc_asia.83.t
+	desc = roc_asia.83.d
+	picture = GFX_news_damascus_spring
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.83.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.83.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 34 岁的总统
+country_event = {
+	id = roc_asia.84
+	title = roc_asia.84.t
+	desc = roc_asia.84.d
+	picture = GFX_death_of_hafez_al_assad
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.84.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.84.a"
+		add_political_power = 50
+		add_stability = -0.01
+		ai_chance = { base = 10 }
+	}
+}
+
+# 2007 年总统公投
+country_event = {
+	id = roc_asia.85
+	title = roc_asia.85.t
+	desc = roc_asia.85.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.85.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.85.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 2014 年总统选举
+country_event = {
+	id = roc_asia.86
+	title = roc_asia.86.t
+	desc = roc_asia.86.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.86.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.86.a"
+		add_political_power = 75
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}

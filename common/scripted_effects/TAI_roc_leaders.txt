@@ -1,0 +1,428 @@
+# 由 _tools/patch_v311.py 生成 —— 光复后 CHI(中华民国) 各政党的领导人候选人（按顺序轮替；用完后由游戏随机生成）
+set_leader_ROC = {
+	if = { limit = { check_variable = { ruling_party = 0 } }
+		if = { limit = { check_variable = { ROC_Western_Autocracy_leader = 0 } }
+			add_to_variable = { ROC_Western_Autocracy_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_hao_bo_cun
+				picture = "gfx/leaders/TAI/Hao_Bo_Cun.dds"
+				ideology = Western_Autocracy
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Western_Autocracy_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 1 } }
+		if = { limit = { has_country_flag = ROC_ccp_reformers NOT = { has_country_flag = ROC_ldr_used_wang_yang } NOT = { check_variable = { b = 1 } } }   # v3.15
+			set_country_flag = ROC_ldr_used_wang_yang
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_wang_yang
+				picture = "gfx/leaders/CHI/Wang_Yang.dds"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } clr_country_flag = ROC_ldr_used_wang_yang }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { has_country_flag = ROC_ccp_reformers NOT = { has_country_flag = ROC_ldr_used_chen_liangyu } NOT = { check_variable = { b = 1 } } }   # v3.15
+			set_country_flag = ROC_ldr_used_chen_liangyu
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_chen_liangyu
+				picture = "gfx/leaders/CHI/Chen_Liangyu.dds"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } clr_country_flag = ROC_ldr_used_chen_liangyu }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_conservatism_leader = 0 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_conservatism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_lien_chan
+				picture = "gfx/leaders/TAI/Lien_Chan.dds"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_conservatism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_conservatism_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_conservatism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_ma_ying_jeou
+				picture = "gfx/leaders/TAI/Ma_Ying-jeou.dds"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_conservatism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_conservatism_leader = 2 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_conservatism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_eric_chu
+				picture = "gfx/leaders/TAI/eric_chu.dds"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_conservatism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_conservatism_leader = 3 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_conservatism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_hou_yu_ih
+				picture = "gfx/leaders/ROC/hou_yu_ih.png"
+				ideology = conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_conservatism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 2 } }
+		if = { limit = { check_variable = { ROC_liberalism_leader = 0 } }
+			add_to_variable = { ROC_liberalism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_wang_bingzhang
+				picture = "gfx/leaders/CHI/Wang_Bingzhang.dds"
+				ideology = liberalism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_liberalism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_liberalism_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_liberalism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_liu_xiaobo
+				picture = "gfx/leaders/CHI/Liu_Xiaobo.dds"
+				ideology = liberalism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_liberalism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_liberalism_leader = 2 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_liberalism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_wong_min
+				picture = "gfx/leaders/CHI/wong_min.dds"
+				ideology = liberalism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_liberalism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_liberalism_leader = 3 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_liberalism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_qin_yongmin
+				picture = "gfx/leaders/CHI/Qin_Yongmin.dds"
+				ideology = liberalism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_liberalism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_liberalism_leader = 4 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_liberalism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_xu_wenli
+				picture = "gfx/leaders/CHI/Xu_Wenli.dds"
+				ideology = liberalism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_liberalism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 3 } }
+		if = { limit = { has_country_flag = ROC_ccp_reformers NOT = { has_country_flag = ROC_ldr_used_hu_jintao } NOT = { check_variable = { b = 1 } } }   # v3.15
+			set_country_flag = ROC_ldr_used_hu_jintao
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_hu_jintao
+				picture = "gfx/leaders/CHI/Hu_jintao.dds"
+				ideology = socialism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } clr_country_flag = ROC_ldr_used_hu_jintao }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_socialism_leader = 0 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_socialism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_he_luli
+				picture = "gfx/leaders/CHI/He_Luli.dds"
+				ideology = socialism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_socialism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_socialism_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_socialism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_wan_exiang
+				picture = "gfx/leaders/CHI/Wan_Exiang.dds"
+				ideology = socialism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_socialism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_socialism_leader = 2 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_socialism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_zheng_jianbang
+				picture = "gfx/leaders/ROC/zheng_jianbang.png"
+				ideology = socialism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_socialism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 4 } }
+		if = { limit = { check_variable = { ROC_communist_state_leader = 0 } }
+			add_to_variable = { ROC_communist_state_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_li_keqiang
+				picture = "gfx/leaders/CHI/Li_Keqiang.dds"
+				ideology = communist_state
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_communist_state_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_communist_state_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_communist_state_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_wu_bangguo
+				picture = "gfx/leaders/CHI/Wu_Bangguo.dds"
+				ideology = communist_state
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_communist_state_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_communist_state_leader = 2 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_communist_state_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_bo_xilai
+				picture = "gfx/leaders/CHI/bo_xilai.dds"
+				ideology = communist_state
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_communist_state_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 5 } }
+		if = { limit = { check_variable = { ROC_anarchist_communism_leader = 0 } }
+			add_to_variable = { ROC_anarchist_communism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_he_wei
+				picture = "gfx/leaders/ROC/he_wei.png"
+				ideology = anarchist_communism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_anarchist_communism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 6 } }
+		if = { limit = { check_variable = { ROC_Conservative_leader = 0 } }
+			add_to_variable = { ROC_Conservative_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_li_ao
+				picture = "gfx/leaders/TAI/li_ao.dds"
+				ideology = Conservative
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Conservative_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_Conservative_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_Conservative_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_yok_mu_ming
+				picture = "gfx/leaders/TAI/yok_mu_ming.dds"
+				ideology = Conservative
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Conservative_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 14 } }
+		if = { limit = { check_variable = { ROC_Neutral_conservatism_leader = 0 } }
+			add_to_variable = { ROC_Neutral_conservatism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_james_soong
+				picture = "gfx/leaders/TAI/James_Soong.dds"
+				ideology = Neutral_conservatism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Neutral_conservatism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 16 } }
+		if = { limit = { check_variable = { ROC_Neutral_Libertarian_leader = 0 } }
+			add_to_variable = { ROC_Neutral_Libertarian_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_xu_jialu
+				picture = "gfx/leaders/CHI/Xu_Jialu.dds"
+				ideology = Neutral_Libertarian
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Neutral_Libertarian_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 18 } }
+		if = { limit = { check_variable = { ROC_neutral_Social_leader = 0 } }
+			add_to_variable = { ROC_neutral_Social_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_chin_jin
+				picture = "gfx/leaders/CHI/Chin_Jin.dds"
+				ideology = neutral_Social
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_neutral_Social_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 20 } }
+		if = { limit = { check_variable = { ROC_Nat_Populism_leader = 0 } }
+			add_to_variable = { ROC_Nat_Populism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_zhao_shao_kang
+				picture = "gfx/leaders/ROC/zhao_shao_kang.png"
+				ideology = Nat_Populism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Populism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_Nat_Populism_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_Nat_Populism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_han_kuo_yu
+				picture = "gfx/leaders/ROC/han_kuo_yu.png"
+				ideology = Nat_Populism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Populism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 21 } }
+		if = { limit = { check_variable = { ROC_Nat_Fascism_leader = 0 } }
+			add_to_variable = { ROC_Nat_Fascism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_he_fuhua
+				picture = "gfx/leaders/ROC/nbs_leader_1.png"
+				ideology = Nat_Fascism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Fascism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_Nat_Fascism_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_Nat_Fascism_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_teng_zhenhan
+				picture = "gfx/leaders/ROC/nbs_leader_2.png"
+				ideology = Nat_Fascism
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Fascism_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 22 } }
+		if = { limit = { check_variable = { ROC_Nat_Autocracy_leader = 0 } }
+			add_to_variable = { ROC_Nat_Autocracy_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_tang_yao_ming
+				picture = "gfx/leaders/TAI/Tang_Yao_Ming.dds"
+				ideology = Nat_Autocracy
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Autocracy_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_Nat_Autocracy_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_Nat_Autocracy_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_li_jie
+				picture = "gfx/leaders/TAI/Li_Jie.dds"
+				ideology = Nat_Autocracy
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Nat_Autocracy_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else_if = { limit = { check_variable = { ruling_party = 23 } }
+		if = { limit = { check_variable = { ROC_Monarchist_leader = 0 } }
+			add_to_variable = { ROC_Monarchist_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_jin_youzhi
+				picture = "gfx/leaders/CHI/jin_youzhi.dds"
+				ideology = Monarchist
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Monarchist_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+		if = { limit = { check_variable = { ROC_Monarchist_leader = 1 } NOT = { check_variable = { b = 1 } } }
+			add_to_variable = { ROC_Monarchist_leader = 1 }
+			hidden_effect = { kill_country_leader = yes }
+			create_country_leader = {
+				name = ROC_ldr_jin_yuzhang
+				picture = "gfx/leaders/CHI/jin_youzhi.dds"
+				ideology = Monarchist
+				traits = { }
+			}
+			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { ROC_Monarchist_leader = 1 } }
+			set_temp_variable = { b = 1 }
+		}
+	}
+	else = { set_leader_CHI = yes }
+}

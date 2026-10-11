@@ -1,0 +1,22 @@
+# MD ROC Return v3.19 —— 国民大会
+TAI_national_assembly_category = {
+	# v3.19 用政治点数调整国民大会席次
+	TAI_na_lobby_delegates = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 30
+		days_remove = 30
+		days_re_enable = 90
+		visible = { has_country_flag = ROC_new_chi OR = { check_variable = { ruling_party = 1 } check_variable = { ruling_party = 2 } check_variable = { ruling_party = 3 } check_variable = { ruling_party = 4 } check_variable = { ruling_party = 14 } } }
+		available = { check_variable = { TAI_na_support < 0.95 } }
+		remove_effect = {
+			custom_effect_tooltip = TAI_na_lobby_delegates_tt
+			hidden_effect = {
+				set_temp_variable = { na_shift = random }
+				multiply_temp_variable = { na_shift = 90 }
+				add_to_temp_variable = { na_shift = 60 }
+				TAI_na_shift_to_gov = yes
+			}
+		}
+		ai_will_do = { base = 1 modifier = { factor = 4 check_variable = { TAI_na_support < 0.5 } } }
+	}
+}

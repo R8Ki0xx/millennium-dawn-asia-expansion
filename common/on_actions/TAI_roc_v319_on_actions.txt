@@ -1,0 +1,37 @@
+# MD ROC Return v3.19
+on_actions = {
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi NOT = { has_country_flag = ROC_fix_v319 } }
+				TAI_roc_v319_old_save = yes
+			}
+			if = {
+				limit = { has_country_flag = ROC_new_chi }
+				# 常任理事国必然是联合国会员
+				if = {
+					limit = { has_idea = p5_member NOT = { is_in_array = { global.UN_general_assembly = THIS } } }
+					TAI_roc_join_un_assembly = yes
+				}
+				TAI_dbf_monthly = yes
+				if = { limit = { has_country_flag = TAI_fr_initialized } TAI_fr_monthly = yes }
+				TAI_roc_flavor_monthly = yes
+			}
+		}
+	}
+	on_monthly_TAI = {
+		effect = {
+			TAI_dbf_monthly = yes
+		}
+	}
+
+	# v3.19：旧存档里已载入独立国策树的特区香港，换回千禧的香港国策树（第五条政治线就是原来的独立树）
+	on_monthly_HKG = {
+		effect = {
+			if = {
+				limit = { has_country_flag = HKG_roc_sar NOT = { has_focus_tree = hong_kong } }
+				load_focus_tree = { tree = hong_kong keep_completed = yes }
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+# MD ROC Return v3.14 —— 国民大会面板（由 _tools/make_na_gui.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_TAI_na_header" texturefile = "gfx/interface/scripted_gui/TAI_na/na_header.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_na_bg" texturefile = "gfx/interface/scripted_gui/TAI_na/na_bg.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_na_seat" texturefile = "gfx/interface/scripted_gui/TAI_na/na_seat.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_decision_TAI_roc_flag" texturefile = "gfx/interface/decisions/decision_TAI_roc_flag.dds" }
+	spriteType = { name = "GFX_TAI_na_indicator" texturefile = "gfx/interface/bop/bop_indicator.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_TAI_roc_bop_old_guard" texturefile = "gfx/interface/bop/TAI_roc_bop_old_guard.dds" }
+	spriteType = { name = "GFX_TAI_roc_bop_newcomers" texturefile = "gfx/interface/bop/TAI_roc_bop_newcomers.dds" }
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_kmt"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_kmt.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_dp"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_dp.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_sd"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_sd.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_pfp"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_pfp.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_cpc"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_cpc.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_other"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_other.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_TAI_na_tbar_gov"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_na/tbar_gov.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_na/tbar_gov_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

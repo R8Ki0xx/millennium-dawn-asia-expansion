@@ -1,0 +1,32 @@
+add_namespace = roc_return
+
+# 罢免危机
+country_event = {
+	id = roc_return.90
+	title = roc_return.90.t
+	desc = roc_return.90.d
+	picture = GFX_TAI_sunflower
+	is_triggered_only = yes
+	option = {
+		name = roc_return.90.c
+		trigger = { check_variable = { TAI_na_gov > 1000 } }
+		add_stability = -0.03
+		add_political_power = -50
+	}
+	option = {
+		name = roc_return.90.a
+		custom_effect_tooltip = TAI_na_largest_party_tt
+		TAI_na_largest_party_takes_over = yes
+		add_stability = -0.08
+	}
+	option = {
+		name = roc_return.90.b
+		add_political_power = -100
+		add_stability = -0.04
+		TAI_na_reseat = yes
+		set_variable = { TAI_na_bonus = 0 }
+		add_to_variable = { TAI_na_term = 1 }
+		set_variable = { TAI_na_session = 0 }
+		TAI_na_recalc = yes
+	}
+}

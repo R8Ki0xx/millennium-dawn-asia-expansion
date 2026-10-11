@@ -1,0 +1,102 @@
+# MD ROC Return v3.3 —— 中华民国三军精神（变量驱动，仿千禧黎明 CHI_landforce_modifier / USA_dynamic_modifier_us_army）与可消除 debuff
+# 由 _tools/patch_military.py 生成
+
+TAI_roc_army_modifier = {
+	icon = GFX_idea_chi_whampoa_military_academy
+	army_org_factor = TAI_army_org
+	army_attack_factor = TAI_army_atk
+	army_defence_factor = TAI_army_def
+	breakthrough_factor = TAI_army_brk
+	training_time_army_factor = TAI_army_trn
+	experience_gain_army = TAI_army_xp
+	recon_factor = TAI_army_rec
+	coordination_bonus = TAI_army_crd
+	army_morale_factor = TAI_army_mor
+}
+
+TAI_roc_navy_modifier = {
+	icon = GFX_idea_CHI_republic_of_china_navy
+	navy_org_factor = TAI_navy_org
+	naval_damage_factor = TAI_navy_dmg
+	naval_defense_factor = TAI_navy_def
+	naval_speed_factor = TAI_navy_spd
+	navy_submarine_detection_factor = TAI_navy_sub
+	amphibious_invasion = TAI_navy_amp
+	repair_speed_factor = TAI_navy_rep
+	experience_gain_navy = TAI_navy_xp
+	naval_morale_factor = TAI_navy_mor
+}
+
+TAI_roc_airforce_modifier = {
+	icon = GFX_idea_USA_airi
+	air_attack_factor = TAI_air_atk
+	air_defence_factor = TAI_air_def
+	air_agility_factor = TAI_air_agi
+	air_mission_efficiency = TAI_air_eff
+	air_superiority_efficiency = TAI_air_sup
+	air_detection = TAI_air_det
+	experience_gain_air = TAI_air_xp
+}
+
+TAI_roc_general_staff_modifier = {
+	icon = GFX_idea_department_of_defense
+	planning_speed = TAI_gs_plan
+	max_planning = TAI_gs_maxplan
+	supply_consumption_factor = TAI_gs_supply
+	experience_gain_army_factor = TAI_gs_xpf
+}
+
+TAI_dbf_black_gold = {
+	icon = GFX_idea_mnt_organised_crime_idea
+	political_power_gain = TAI_dbf_black_gold_political_power_gain
+	stability_factor = TAI_dbf_black_gold_stability_factor
+}
+
+TAI_dbf_isolation = {
+	icon = GFX_idea_isolation
+	trade_opinion_factor = TAI_dbf_isolation_trade_opinion_factor
+	political_power_gain = TAI_dbf_isolation_political_power_gain
+}
+
+TAI_dbf_conscription = {
+	icon = GFX_idea_chi_forced_conscription
+	conscription_factor = TAI_dbf_conscription_conscription_factor
+	training_time_army_factor = TAI_dbf_conscription_training_time_army_factor
+}
+
+TAI_dbf_imbalance = {
+	icon = GFX_idea_army_cons
+	war_support_factor = TAI_dbf_imbalance_war_support_factor
+	army_defence_factor = TAI_dbf_imbalance_army_defence_factor
+}
+
+TAI_dbf_hearts = {
+	icon = GFX_idea_generic_civil_unrest
+	resistance_growth = TAI_dbf_hearts_resistance_growth
+	compliance_growth = TAI_dbf_hearts_compliance_growth
+	stability_factor = TAI_dbf_hearts_stability_factor
+}
+
+TAI_dbf_pla_remnants = {
+	icon = GFX_idea_PRC_pla_ground_force
+	army_org_factor = TAI_dbf_pla_remnants_army_org_factor
+	conscription_factor = TAI_dbf_pla_remnants_conscription_factor
+}
+
+TAI_dbf_transition = {
+	icon = GFX_idea_inflation3
+	production_factory_efficiency_gain_factor = TAI_dbf_transition_production_factory_efficiency_gain_factor
+	consumer_goods_factor = TAI_dbf_transition_consumer_goods_factor
+}
+
+TAI_dbf_warlordism = {
+	icon = GFX_idea_chi_warlord_integration
+	political_power_gain = TAI_dbf_warlordism_political_power_gain
+	production_speed_buildings_factor = TAI_dbf_warlordism_production_speed_buildings_factor
+}
+
+TAI_dbf_carpetbag = {
+	icon = GFX_idea_corruption_6
+	political_power_gain = TAI_dbf_carpetbag_political_power_gain
+	stability_factor = TAI_dbf_carpetbag_stability_factor
+}

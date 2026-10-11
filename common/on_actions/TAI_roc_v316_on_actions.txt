@@ -1,0 +1,25 @@
+# MD ROC Return v3.16
+on_actions = {
+	on_monthly_CHI = {
+		effect = {
+			# 旧存档：光复时没复制意识形态支持度，共产主义（农工党）支持度虚高。只修一次：超过 4% 的部分转给民主阵营
+			if = {
+				limit = { has_country_flag = ROC_new_chi NOT = { has_country_flag = ROC_pop_fix_v316 } }
+				set_country_flag = ROC_pop_fix_v316
+				set_temp_variable = { roc_com_x = party_popularity@communism }
+				subtract_from_temp_variable = { roc_com_x = 0.04 }
+				if = {
+					limit = { check_variable = { roc_com_x > 0 } }
+					add_popularity = { ideology = democratic popularity = roc_com_x }
+					multiply_temp_variable = { roc_com_x = -1 }
+					add_popularity = { ideology = communism popularity = roc_com_x }
+				}
+			}
+		}
+	}
+	on_daily_CHI = {
+		effect = {
+			if = { limit = { has_country_flag = ROC_new_chi has_variable = TAI_gov_premier } TAI_gov_daily = yes }
+		}
+	}
+}

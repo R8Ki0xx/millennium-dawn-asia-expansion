@@ -1,0 +1,101 @@
+# MD ROC Return v3.9 —— 阵营与港澳
+add_namespace = roc_return
+
+# 邀请加入亚太民主同盟（发给受邀国）
+country_event = {
+	id = roc_return.95
+	title = roc_return.95.t
+	desc = roc_return.95.d
+	picture = GFX_TAI_ev_43_CHI_detente
+	is_triggered_only = yes
+	option = {
+		name = roc_return.95.a
+		log = "[GetDateText]: [This.GetName]: roc_return.95.a executed"
+		FROM = { add_to_faction = ROOT }
+		add_opinion_modifier = { target = FROM modifier = TAI_korea_support }
+		ai_chance = {
+			base = 40
+			modifier = { factor = 2 has_opinion = { target = FROM value > 50 } }
+			modifier = { factor = 0.2 has_opinion = { target = FROM value < 0 } }
+			modifier = { factor = 0 has_government = communism }
+		}
+	}
+	option = {
+		name = roc_return.95.b
+		log = "[GetDateText]: [This.GetName]: roc_return.95.b executed"
+		ai_chance = { base = 30 }
+	}
+}
+
+# 邀请共同加入北约（发给受邀国）
+country_event = {
+	id = roc_return.96
+	title = roc_return.96.t
+	desc = roc_return.96.d
+	picture = GFX_UN_event_global_1
+	is_triggered_only = yes
+	option = {
+		name = roc_return.96.a
+		log = "[GetDateText]: [This.GetName]: roc_return.96.a executed"
+		custom_effect_tooltip = TAI_join_nato_tt
+		hidden_effect = { TAI_join_nato_effect = yes }
+		ai_chance = {
+			base = 40
+			modifier = { factor = 2 has_opinion = { target = USA value > 50 } }
+			modifier = { factor = 0 has_government = communism }
+		}
+	}
+	option = {
+		name = roc_return.96.b
+		log = "[GetDateText]: [This.GetName]: roc_return.96.b executed"
+		ai_chance = { base = 40 }
+	}
+}
+
+# 中华民国要求接管港澳宗主权（发给香港/澳门）
+country_event = {
+	id = roc_return.97
+	title = roc_return.97.t
+	desc = roc_return.97.d
+	picture = GFX_TAI_ev_13_Taiwan_Flag
+	is_triggered_only = yes
+	option = {
+		name = roc_return.97.a
+		log = "[GetDateText]: [This.GetName]: roc_return.97.a executed"
+		if = { limit = { tag = HKG } FROM = { TAI_take_hkg_sar = yes } }
+		if = { limit = { tag = MAC } FROM = { TAI_take_mac_sar = yes } }
+		FROM = { country_event = { id = roc_return.20 days = 1 } }
+		ai_chance = {
+			base = 70
+			modifier = { factor = 0.3 is_subject = yes NOT = { is_subject_of = FROM } }
+		}
+	}
+	option = {
+		name = roc_return.97.b
+		log = "[GetDateText]: [This.GetName]: roc_return.97.b executed"
+		FROM = { country_event = { id = roc_return.98 days = 1 } }
+		ai_chance = { base = 30 }
+	}
+}
+
+# 港澳拒绝（发给民国）
+country_event = {
+	id = roc_return.98
+	title = roc_return.98.t
+	desc = roc_return.98.d
+	picture = GFX_HKG_protest_event_balance
+	is_triggered_only = yes
+	option = {
+		name = roc_return.98.a
+		log = "[GetDateText]: [This.GetName]: roc_return.98.a executed"
+		add_political_power = -25
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = roc_return.98.b
+		log = "[GetDateText]: [This.GetName]: roc_return.98.b executed"
+		create_wargoal = { type = annex_everything target = FROM }
+		add_war_support = -0.03
+		ai_chance = { base = 40 }
+	}
+}

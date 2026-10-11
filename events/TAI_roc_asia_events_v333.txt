@@ -1,0 +1,241 @@
+# MD ROC Return v3.33 —— 台湾时代政治线与巴基斯坦的事件（由 _tools/patch_v333.py 生成）
+add_namespace = roc_asia
+
+# 「不统不独不武」
+country_event = {
+	id = roc_asia.90
+	title = roc_asia.90.t
+	desc = roc_asia.90.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.90.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.90.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 三月的议场
+country_event = {
+	id = roc_asia.91
+	title = roc_asia.91.t
+	desc = roc_asia.91.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.91.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.91.a"
+		add_political_power = -25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.91.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.91.b"
+		add_stability = -0.02
+		add_war_support = 0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 第三次轮替
+country_event = {
+	id = roc_asia.92
+	title = roc_asia.92.t
+	desc = roc_asia.92.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.92.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.92.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 混合政体的定型
+country_event = {
+	id = roc_asia.100
+	title = roc_asia.100.t
+	desc = roc_asia.100.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.100.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.100.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.100.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.100.b"
+		add_war_support = 0.03
+		add_political_power = -25
+		ai_chance = { base = 7 }
+	}
+}
+
+# 军方的回归
+country_event = {
+	id = roc_asia.101
+	title = roc_asia.101.t
+	desc = roc_asia.101.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.101.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.101.a"
+		add_war_support = 0.03
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.101.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.101.b"
+		add_political_power = -25
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 首次完整的政党轮替
+country_event = {
+	id = roc_asia.102
+	title = roc_asia.102.t
+	desc = roc_asia.102.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.102.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.102.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.102.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.102.b"
+		add_stability = -0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 核威慑的完成
+country_event = {
+	id = roc_asia.103
+	title = roc_asia.103.t
+	desc = roc_asia.103.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.103.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.103.a"
+		add_war_support = 0.03
+		add_political_power = 25
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.103.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.103.b"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 走廊经济的成型
+country_event = {
+	id = roc_asia.104
+	title = roc_asia.104.t
+	desc = roc_asia.104.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.104.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.104.a"
+		add_political_power = 50
+		set_temp_variable = { treasury_change = 10 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.104.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.104.b"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = 5 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 7 }
+	}
+}
+
+# 全天候战略伙伴
+country_event = {
+	id = roc_asia.105
+	title = roc_asia.105.t
+	desc = roc_asia.105.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.105.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.105.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.105.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.105.b"
+		add_political_power = 25
+		ai_chance = { base = 7 }
+	}
+}
+
+# 2022 年的洪水
+country_event = {
+	id = roc_asia.106
+	title = roc_asia.106.t
+	desc = roc_asia.106.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.106.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.106.a"
+		set_temp_variable = { treasury_change = -5 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.106.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.106.b"
+		add_political_power = 25
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 共同发展的巴基斯坦
+country_event = {
+	id = roc_asia.107
+	title = roc_asia.107.t
+	desc = roc_asia.107.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.107.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.107.a"
+		add_political_power = 50
+		add_stability = 0.03
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.107.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.107.b"
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}

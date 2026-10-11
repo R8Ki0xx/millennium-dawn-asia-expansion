@@ -1,0 +1,7 @@
+# MD ROC Return v3.19 —— 光复后的中华民国使用国家安全局
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_tai
+	names = { TAI_roc_nsb_name }
+	default = { tag = CHI has_country_flag = ROC_new_chi }
+	available = { original_tag = CHI has_country_flag = ROC_new_chi }
+}

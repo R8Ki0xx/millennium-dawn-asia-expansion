@@ -1,0 +1,11 @@
+# MD ROC Return v3.18 —— 南极科考：旧存档补发
+on_actions = {
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi NOT = { has_country_flag = ROC_antarctica_fix_v318 } }
+				TAI_antarctica_takeover = yes
+			}
+		}
+	}
+}

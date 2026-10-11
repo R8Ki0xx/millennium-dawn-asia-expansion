@@ -1,0 +1,297 @@
+# MD ROC Return —— 覆盖千禧黎明 00_ideologies.txt：只给每个子意识形态加 color，并新增仅外观用的 Juche
+ideologies = {
+	#Western
+	democratic = {
+		types = {
+			conservatism = { color = { 30 66 231 } }
+			liberalism = { color = { 230 200 40 } }
+			socialism = { color = { 255 56 90 } }
+			Western_Autocracy = { color = { 73 73 176 } }
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+
+		color = { 0 0 255 }
+
+		rules = {
+			can_create_collaboration_government = no #Turn it off for now?
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = yes
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+		}
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 1.0
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+
+		can_be_boosted = yes
+
+		ai_democratic = yes # uses the democratic AI behaviour
+		ai_ideology_wanted_units_factor = 1.0 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
+	}
+
+	#Emerging
+	communism = {
+
+		types = {
+			communist_state = { color = { 140 35 35 } }
+			Juche = { can_be_randomly_selected = no color = { 117 26 8 } }  # MD ROC Return：朝鲜（仅外观）
+
+			Conservative = { color = { 111 117 128 } }
+
+			Autocracy = { color = { 125 105 105 } }
+
+			Vilayat_e_Faqih = { color = { 40 90 60 } }
+
+			Mod_Vilayat_e_Faqih = { color = { 105 130 102 } }
+
+			anarchist_communism = { color = { 189 54 67 } }
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+
+		color = { 0 179 60 }
+
+		ai_communist = yes # uses the commie AI behaviour
+		ai_ideology_wanted_units_factor = 1.0
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+		}
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 1.0
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+
+		can_be_boosted = yes
+	}
+
+	#Salafist
+	fascism = {
+
+		types = {
+
+			Kingdom = { color = { 60 90 40 } }
+
+			Caliphate = { color = { 45 40 35 } }
+
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+			"FACTION_NAME_FASCIST_2"
+			"FACTION_NAME_FASCIST_3"
+			"FACTION_NAME_FASCIST_4"
+			"FACTION_NAME_FASCIST_5"
+		}
+
+		color = { 0 0 0 }
+
+		war_impact_on_world_tension = 1.5
+		faction_impact_on_world_tension = 1.5
+
+		rules = {
+			can_create_collaboration_government = no #Turn it off for now?
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+		}
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+
+		can_be_boosted = yes
+
+		ai_fascist = yes # uses the fascist AI behaviour
+		ai_ideology_wanted_units_factor = 1.0
+	}
+
+	neutrality = {
+
+		types = {
+
+			Neutral_conservatism = { color = { 123 128 162 } }
+
+			oligarchism = { color = { 103 116 124 } }
+
+			neutral_Social = { color = { 222 80 117 } }
+
+			Neutral_Libertarian = { color = { 255 170 30 } }
+
+			Neutral_Autocracy = { color = { 88 88 88 } }
+
+			Neutral_Communism = { color = { 153 18 0 } }
+
+			Neutral_Muslim_Brotherhood = { color = { 120 150 110 } }
+
+			Neutral_green = { color = { 70 160 90 } }
+
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+
+		color = { 124 124 124 }
+
+
+		rules = {
+			can_create_collaboration_government = no #Turn it off for now?
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+		}
+
+		war_impact_on_world_tension = 0.50
+		faction_impact_on_world_tension = 0.50
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+
+		can_be_boosted = yes
+
+		ai_neutral = yes #
+		ai_ideology_wanted_units_factor = 1.0
+	}
+
+	nationalist = {
+
+		types = {
+
+			Nat_Autocracy = { color = { 104 91 62 } }
+
+			Nat_Fascism = { color = { 98 68 40 } }
+
+			Nat_Populism = { color = { 137 110 49 } }
+
+			Monarchist = { color = { 90 50 110 } }
+
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NATIONALIST_1"
+			"FACTION_NAME_NATIONALIST_2"
+			"FACTION_NAME_NATIONALIST_3"
+			"FACTION_NAME_NATIONALIST_4"
+		}
+
+		color = { 150 75 0 }
+
+
+		rules = {
+			can_create_collaboration_government = no #Turn it off for now?
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+			can_create_factions = no
+			can_boost_other_ideologies = yes
+
+		}
+
+		war_impact_on_world_tension = 1.5
+		faction_impact_on_world_tension = 1.5
+
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.20
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 5.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 5
+		}
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+
+		can_be_boosted = yes
+
+		ai_communist = yes #
+		ai_ideology_wanted_units_factor = 1.0
+	}
+}

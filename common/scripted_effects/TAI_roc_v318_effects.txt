@@ -1,0 +1,77 @@
+# MD ROC Return v3.18 —— 南极科考的继承
+
+# Scope: 即将被吞并的国家（旧 CHI 或 TAI）。记下它的科考站，并清掉「有科考站」旗标，千禧的 on_annex 就不会拆站
+TAI_antarctica_prepare = {
+	if = { limit = { has_idea = at_member } set_global_flag = TAI_roc_inherit_at_member }
+	if = { limit = { has_country_flag = is_antarctica_atcp_consultative_member } set_global_flag = TAI_roc_inherit_atcp }
+	for_each_loop = {
+		array = global.antarctica_station_ids
+		value = roc_sid
+		if = {
+			limit = {
+				check_variable = { roc_sid > 0 }
+				check_variable = { global.antarctica_station_exists^roc_sid > 0 }
+				check_variable = { global.antarctica_station_controller^roc_sid = THIS.id }
+			}
+			if = {
+				limit = { NOT = { is_in_array = { global.TAI_roc_station_handover = roc_sid } } }
+				add_to_array = { global.TAI_roc_station_handover = roc_sid }
+			}
+		}
+	}
+	clr_country_flag = antarctica_has_active_station
+}
+
+# Scope: 新 CHI（中华民国）。接收科考站、南极条约成员与协商国资格
+TAI_antarctica_takeover = {
+	set_country_flag = ROC_antarctica_fix_v318
+	# 中国是南极条约成员与协商国（1985 年起）；旧 CHI 有就照旧，旧存档也一律补上
+	if = { limit = { NOT = { has_idea = at_member } } add_ideas = at_member }
+	set_country_flag = is_antarctica_atcp_consultative_member
+	if = { limit = { NOT = { is_in_array = { global.atcp_members = THIS } } } add_to_array = { global.atcp_members = THIS } }
+	clr_global_flag = TAI_roc_inherit_at_member
+	clr_global_flag = TAI_roc_inherit_atcp
+	# 接收吞并前记下的科考站
+	for_each_loop = {
+		array = global.TAI_roc_station_handover
+		value = roc_sid
+		if = {
+			limit = { check_variable = { global.antarctica_station_exists^roc_sid > 0 } }
+			set_variable = { global.antarctica_station_controller^roc_sid = THIS.id }
+			if = { limit = { NOT = { is_in_array = { country_owned_station_ids = roc_sid } } } add_to_array = { country_owned_station_ids = roc_sid } }
+			set_country_flag = antarctica_has_active_station
+			set_country_flag = is_antarctic_research_station_constructed
+			set_variable = { selected_antarctica_station = roc_sid }
+			set_variable = { selected_antarctica_station_controller = THIS.id }
+		}
+	}
+	clear_array = global.TAI_roc_station_handover
+	# 没有接收到科考站（旧存档里长城站已被拆掉）：按千禧开局的配置重建长城站
+	if = {
+		limit = { NOT = { has_country_flag = antarctica_has_active_station } }
+		TAI_antarctica_rebuild_great_wall = yes
+	}
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = antarctica_laboratory_dynamic_modifier } } } add_dynamic_modifier = { modifier = antarctica_laboratory_dynamic_modifier } }
+	antarctica_rebuild_regular_at_member_list = yes
+	antarctica_recalculate_country_laboratory_effects = yes
+	add_to_variable = { global.missile_ui_updated = 1 }
+}
+
+# Scope: 新 CHI。长城站（千禧 MD_antarctica_on_actions.txt 开局配置：编号名称 12，坐标 1035,330）
+TAI_antarctica_rebuild_great_wall = {
+	set_temp_variable = { station_x = 1035 }
+	set_temp_variable = { station_y = 330 }
+	set_temp_variable = { station_name_id = 12 }
+	antarctica_create_startup_research_station = yes
+	if = {
+		limit = { check_variable = { station_id > 0 } }
+		set_temp_variable = { module_category = 1 } set_temp_variable = { module_id = 1 } antarctica_set_station_module = yes
+		set_temp_variable = { module_category = 2 } set_temp_variable = { module_id = 2 } antarctica_set_station_module = yes
+		set_temp_variable = { module_category = 3 } set_temp_variable = { module_id = 1 } antarctica_set_station_module = yes
+		set_temp_variable = { module_category = 4 } set_temp_variable = { module_id = 1 } antarctica_set_station_module = yes
+		set_temp_variable = { module_category = 5 } set_temp_variable = { module_id = 6 } antarctica_set_station_module = yes
+		antarctica_normalize_startup_station_slots = yes
+		set_variable = { selected_antarctica_station = station_id }
+		set_variable = { selected_antarctica_station_controller = THIS.id }
+	}
+}

@@ -1,0 +1,321 @@
+# MD ROC Return v3.10 —— 国民大会（由 _tools/patch_v310.py 生成；取代 v3.5 版本）
+#   3000 席；每届 6 次常会（每年一次，由任务 TAI_na_session_mission 倒计时）；每届结束改选。
+#   执政联盟 = 执政党 + 结盟政党（TAI_na_ally_*；大联合政府 TAI_gov_coalition 视为与国、民、社三党结盟）+ 拉拢的无党籍代表。
+
+# Scope: ROC-CHI. First call sets the term counters; every call re-seats the parties by current support.
+TAI_na_init = {
+	if = {
+		limit = { NOT = { has_variable = TAI_na_term } }
+		set_variable = { TAI_na_term = 4 }
+		set_variable = { TAI_na_session = 0 }
+		set_variable = { TAI_na_bonus = 0 }
+		set_variable = { TAI_na_low_months = 0 }
+		set_variable = { TAI_na_next_session = global.num_days }
+		add_to_variable = { TAI_na_next_session = 365 }
+	}
+	TAI_na_reseat = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_national_assembly_modifier } } } add_dynamic_modifier = { modifier = TAI_national_assembly_modifier } }
+	TAI_na_recalc = yes
+}
+
+# Scope: ROC-CHI. Seats = 3000 × party support
+TAI_na_reseat = {
+	set_variable = { TAI_na_kmt = party_pop_array^1 }
+	multiply_variable = { TAI_na_kmt = 3000 }
+	set_variable = { TAI_na_dp = party_pop_array^2 }
+	multiply_variable = { TAI_na_dp = 3000 }
+	set_variable = { TAI_na_sd = party_pop_array^3 }
+	multiply_variable = { TAI_na_sd = 3000 }
+	set_variable = { TAI_na_pfp = party_pop_array^14 }
+	multiply_variable = { TAI_na_pfp = 3000 }
+	# v3.19 cpc
+	set_variable = { TAI_na_cpc = party_pop_array^4 }
+	multiply_variable = { TAI_na_cpc = 3000 }
+}
+
+# Scope: ROC-CHI, monthly: seats only drift 2% towards support between elections (defections)
+TAI_na_monthly = {
+	set_temp_variable = { na_t = party_pop_array^1 }
+	multiply_temp_variable = { na_t = 3000 }
+	subtract_from_temp_variable = { na_t = TAI_na_kmt }
+	multiply_temp_variable = { na_t = 0.02 }
+	add_to_variable = { TAI_na_kmt = na_t }
+	set_temp_variable = { na_t = party_pop_array^2 }
+	multiply_temp_variable = { na_t = 3000 }
+	subtract_from_temp_variable = { na_t = TAI_na_dp }
+	multiply_temp_variable = { na_t = 0.02 }
+	add_to_variable = { TAI_na_dp = na_t }
+	set_temp_variable = { na_t = party_pop_array^3 }
+	multiply_temp_variable = { na_t = 3000 }
+	subtract_from_temp_variable = { na_t = TAI_na_sd }
+	multiply_temp_variable = { na_t = 0.02 }
+	add_to_variable = { TAI_na_sd = na_t }
+	set_temp_variable = { na_t = party_pop_array^14 }
+	multiply_temp_variable = { na_t = 3000 }
+	subtract_from_temp_variable = { na_t = TAI_na_pfp }
+	multiply_temp_variable = { na_t = 0.02 }
+	add_to_variable = { TAI_na_pfp = na_t }
+	# v3.19 cpc drift 与零星倒戈
+	set_temp_variable = { na_t = party_pop_array^4 }
+	multiply_temp_variable = { na_t = 3000 }
+	subtract_from_temp_variable = { na_t = TAI_na_cpc }
+	multiply_temp_variable = { na_t = 0.02 }
+	add_to_variable = { TAI_na_cpc = na_t }
+	random_list = {
+		80 = { }
+		10 = { set_temp_variable = { na_shift = random } multiply_temp_variable = { na_shift = 40 } add_to_temp_variable = { na_shift = 10 } TAI_na_shift_from_gov = yes }
+		10 = { set_temp_variable = { na_shift = random } multiply_temp_variable = { na_shift = 40 } add_to_temp_variable = { na_shift = 10 } TAI_na_shift_to_gov = yes }
+	}
+	multiply_variable = { TAI_na_bonus = 0.9 }
+	TAI_na_recalc = yes
+	if = { limit = { check_variable = { TAI_na_support < 0.334 } } add_to_variable = { TAI_na_low_months = 1 } }
+	else = { set_variable = { TAI_na_low_months = 0 } }
+	if = {
+		limit = { check_variable = { TAI_na_low_months > 2 } NOT = { has_country_flag = TAI_na_recall_cd } }
+		set_country_flag = { flag = TAI_na_recall_cd days = 365 }
+		country_event = { id = roc_return.90 days = 1 }
+	}
+}
+
+# Scope: ROC-CHI, daily: countdown shown on the panel
+TAI_na_daily = {
+	if = {
+		limit = { has_variable = TAI_na_next_session }
+		set_variable = { TAI_na_days_left = TAI_na_next_session }
+		subtract_from_variable = { TAI_na_days_left = global.num_days }
+		clamp_variable = { var = TAI_na_days_left min = 0 max = 400 }
+	}
+}
+
+# Scope: ROC-CHI
+TAI_na_recalc = {
+	set_variable = { TAI_na_other = 3000 }
+	subtract_from_variable = { TAI_na_other = TAI_na_kmt }
+	subtract_from_variable = { TAI_na_other = TAI_na_dp }
+	subtract_from_variable = { TAI_na_other = TAI_na_sd }
+	subtract_from_variable = { TAI_na_other = TAI_na_pfp }
+	subtract_from_variable = { TAI_na_other = TAI_na_cpc }
+	clamp_variable = { var = TAI_na_other min = 0 max = 3000 }
+	# 执政党
+	set_variable = { TAI_na_gov = 0 }
+	if = { limit = { check_variable = { ruling_party = 1 } } add_to_variable = { TAI_na_gov = TAI_na_kmt } }
+	else_if = { limit = { check_variable = { ruling_party = 2 } } add_to_variable = { TAI_na_gov = TAI_na_dp } }
+	else_if = { limit = { check_variable = { ruling_party = 3 } } add_to_variable = { TAI_na_gov = TAI_na_sd } }
+	else_if = { limit = { check_variable = { ruling_party = 14 } } add_to_variable = { TAI_na_gov = TAI_na_pfp } }
+	else_if = { limit = { check_variable = { ruling_party = 4 } } add_to_variable = { TAI_na_gov = TAI_na_cpc } }
+	else = { set_variable = { TAI_na_gov = TAI_na_other } multiply_variable = { TAI_na_gov = 0.3 } }
+	# 结盟政党
+	if = { limit = { OR = { has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } NOT = { check_variable = { ruling_party = 1 } } } add_to_variable = { TAI_na_gov = TAI_na_kmt } }
+	if = { limit = { OR = { has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } NOT = { check_variable = { ruling_party = 2 } } } add_to_variable = { TAI_na_gov = TAI_na_dp } }
+	if = { limit = { OR = { has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } NOT = { check_variable = { ruling_party = 3 } } } add_to_variable = { TAI_na_gov = TAI_na_sd } }
+	if = { limit = { has_country_flag = TAI_na_ally_pfp NOT = { check_variable = { ruling_party = 14 } } } add_to_variable = { TAI_na_gov = TAI_na_pfp } }
+	if = { limit = { has_country_flag = TAI_na_ally_cpc NOT = { check_variable = { ruling_party = 4 } } } add_to_variable = { TAI_na_gov = TAI_na_cpc } }
+	add_to_variable = { TAI_na_gov = TAI_na_bonus }
+	clamp_variable = { var = TAI_na_gov min = 0 max = 3000 }
+	set_variable = { TAI_na_support = TAI_na_gov }
+	divide_variable = { TAI_na_support = 3000 }
+	set_variable = { TAI_na_support_pct = TAI_na_support }
+	multiply_variable = { TAI_na_support_pct = 100 }
+	# 面板用的百分比
+	set_variable = { TAI_na_kmt_pct = TAI_na_kmt }
+	divide_variable = { TAI_na_kmt_pct = 30 }
+	set_variable = { TAI_na_dp_pct = TAI_na_dp }
+	divide_variable = { TAI_na_dp_pct = 30 }
+	set_variable = { TAI_na_sd_pct = TAI_na_sd }
+	divide_variable = { TAI_na_sd_pct = 30 }
+	set_variable = { TAI_na_pfp_pct = TAI_na_pfp }
+	divide_variable = { TAI_na_pfp_pct = 30 }
+	set_variable = { TAI_na_cpc_pct = TAI_na_cpc }
+	divide_variable = { TAI_na_cpc_pct = 30 }
+	set_variable = { TAI_na_other_pct = TAI_na_other }
+	divide_variable = { TAI_na_other_pct = 30 }
+	set_variable = { TAI_na_sessions_left = 6 }
+	subtract_from_variable = { TAI_na_sessions_left = TAI_na_session }
+	clamp_variable = { var = TAI_na_sessions_left min = 0 max = 6 }
+	# 国民大会修正
+	set_variable = { TAI_na_pp = TAI_na_support }
+	subtract_from_variable = { TAI_na_pp = 0.5 }
+	set_variable = { TAI_na_stab = TAI_na_pp }
+	multiply_variable = { TAI_na_pp = 0.4 }
+	multiply_variable = { TAI_na_stab = 0.2 }
+	if = { limit = { has_country_flag = TAI_na_virtualized } multiply_variable = { TAI_na_pp = 0.5 } multiply_variable = { TAI_na_stab = 0.5 } }
+	set_variable = { TAI_na_session_next = TAI_na_session }
+	add_to_variable = { TAI_na_session_next = 1 }
+	if = { limit = { check_variable = { TAI_na_session_next > 6 } } set_variable = { TAI_na_session_next = 1 } }
+	TAI_na_dots = yes
+	TAI_na_daily = yes
+	force_update_dynamic_modifier = yes
+}
+
+# Scope: ROC-CHI. Annual session (mission timeout or extraordinary session)
+TAI_na_hold_session = {
+	add_to_variable = { TAI_na_session = 1 }
+	if = {
+		limit = { check_variable = { TAI_na_session > 6 } }
+		# 任期届满：国大代表改选
+		set_variable = { TAI_na_session = 1 }
+		add_to_variable = { TAI_na_term = 1 }
+		TAI_na_reseat = yes
+		set_variable = { TAI_na_bonus = 0 }
+		TAI_na_recalc = yes
+		country_event = { id = roc_return.101 days = 1 }
+		if = {
+			limit = { NOT = { has_idea = TAI_amend_direct_election_idea } }
+			country_event = { id = roc_return.102 days = 4 }
+		}
+	}
+	TAI_na_recalc = yes
+	country_event = { id = roc_return.100 days = 0 }
+	random_list = {
+		25 = { country_event = { id = roc_return.110 days = 6 } }
+		25 = { country_event = { id = roc_return.111 days = 6 } }
+		25 = { country_event = { id = roc_return.112 days = 6 } }
+		25 = { country_event = { id = roc_return.113 days = 6 } }
+	}
+	random_list = {
+		25 = { country_event = { id = roc_return.114 days = 12 } }
+		25 = { country_event = { id = roc_return.115 days = 12 } }
+		25 = { country_event = { id = roc_return.116 days = 12 } }
+		25 = { country_event = { id = roc_return.117 days = 12 } }
+	}
+	set_variable = { TAI_na_next_session = global.num_days }
+	add_to_variable = { TAI_na_next_session = 366 }
+	TAI_na_daily = yes
+}
+
+# Scope: ROC-CHI. Largest party (or bloc) forms the government
+TAI_na_largest_party_takes_over = {
+	set_temp_variable = { na_best = TAI_na_kmt }
+	set_temp_variable = { rul_party_temp = 1 }
+	if = { limit = { check_variable = { TAI_na_dp > na_best } } set_temp_variable = { na_best = TAI_na_dp } set_temp_variable = { rul_party_temp = 2 } }
+	if = { limit = { check_variable = { TAI_na_sd > na_best } } set_temp_variable = { na_best = TAI_na_sd } set_temp_variable = { rul_party_temp = 3 } }
+	if = { limit = { check_variable = { TAI_na_pfp > na_best } } set_temp_variable = { na_best = TAI_na_pfp } set_temp_variable = { rul_party_temp = 14 } }
+	TAI_na_clear_alliances = yes
+	set_temp_variable = { change_leader_temp = 1 }
+	change_ruling_party_effect = yes
+	TAI_na_recalc = yes
+}
+
+TAI_na_clear_alliances = {
+	clr_country_flag = TAI_gov_coalition
+	clr_country_flag = TAI_na_ally_kmt
+	clr_country_flag = TAI_na_ally_dp
+	clr_country_flag = TAI_na_ally_sd
+	clr_country_flag = TAI_na_ally_pfp
+}
+
+# Scope: CHI (MD's committee category is kept alive by its missions: remove them every day while the ROC rules)
+TAI_ccp_mission_purge = {
+	if = { limit = { has_active_mission = CHI_16_national_congress_mission } remove_mission = CHI_16_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_17_national_congress_mission } remove_mission = CHI_17_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_18_national_congress_mission } remove_mission = CHI_18_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_19_national_congress_mission } remove_mission = CHI_19_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_20_national_congress_mission } remove_mission = CHI_20_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_21_national_congress_mission } remove_mission = CHI_21_national_congress_mission }
+	if = { limit = { has_active_mission = CHI_current_congress_mission } remove_mission = CHI_current_congress_mission }
+	if = { limit = { has_active_mission = CHI_yangtze_delta_integration_mission } remove_mission = CHI_yangtze_delta_integration_mission }
+	if = { limit = { has_active_mission = CHI_eleventh_five_year_plan_mission } remove_mission = CHI_eleventh_five_year_plan_mission }
+	if = { limit = { has_active_mission = CHI_grey_society_crisis } remove_mission = CHI_grey_society_crisis }
+}
+
+
+# v3.19 国民大会的倒戈与拉拢
+# Scope: ROC-CHI。执政党增加 na_shift 席：先从无党籍拉拢，不够再从最大的在野党挖角
+TAI_na_shift_to_gov = {
+	round_temp_variable = na_shift
+	set_temp_variable = { na_add = na_shift }
+	set_temp_variable = { na_rem = na_shift }
+	subtract_from_temp_variable = { na_rem = TAI_na_other }
+	if = {
+		limit = { check_variable = { na_rem > 0 } }
+		set_temp_variable = { na_best = -1 }
+		set_temp_variable = { na_best_v = 0 }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } check_variable = { TAI_na_kmt > na_best_v } } set_temp_variable = { na_best_v = TAI_na_kmt } set_temp_variable = { na_best = 1 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } check_variable = { TAI_na_dp > na_best_v } } set_temp_variable = { na_best_v = TAI_na_dp } set_temp_variable = { na_best = 2 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } check_variable = { TAI_na_sd > na_best_v } } set_temp_variable = { na_best_v = TAI_na_sd } set_temp_variable = { na_best = 3 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } } check_variable = { TAI_na_pfp > na_best_v } } set_temp_variable = { na_best_v = TAI_na_pfp } set_temp_variable = { na_best = 14 } }
+		if = { limit = { NOT = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } check_variable = { TAI_na_cpc > na_best_v } } set_temp_variable = { na_best_v = TAI_na_cpc } set_temp_variable = { na_best = 4 } }
+		if = {
+			limit = { check_variable = { na_rem > na_best_v } }
+			set_temp_variable = { na_rem = na_best_v }
+			set_temp_variable = { na_add = TAI_na_other }
+			add_to_temp_variable = { na_add = na_rem }
+		}
+		if = { limit = { check_variable = { na_best = 1 } } subtract_from_variable = { TAI_na_kmt = na_rem } }
+		if = { limit = { check_variable = { na_best = 2 } } subtract_from_variable = { TAI_na_dp = na_rem } }
+		if = { limit = { check_variable = { na_best = 3 } } subtract_from_variable = { TAI_na_sd = na_rem } }
+		if = { limit = { check_variable = { na_best = 14 } } subtract_from_variable = { TAI_na_pfp = na_rem } }
+		if = { limit = { check_variable = { na_best = 4 } } subtract_from_variable = { TAI_na_cpc = na_rem } }
+	}
+	if = { limit = { check_variable = { ruling_party = 1 } } add_to_variable = { TAI_na_kmt = na_add } clamp_variable = { var = TAI_na_kmt min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 2 } } add_to_variable = { TAI_na_dp = na_add } clamp_variable = { var = TAI_na_dp min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 3 } } add_to_variable = { TAI_na_sd = na_add } clamp_variable = { var = TAI_na_sd min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 14 } } add_to_variable = { TAI_na_pfp = na_add } clamp_variable = { var = TAI_na_pfp min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 4 } } add_to_variable = { TAI_na_cpc = na_add } clamp_variable = { var = TAI_na_cpc min = 0 max = 3000 } }
+	TAI_na_recalc = yes
+}
+
+# Scope: ROC-CHI。执政党有 na_shift 席倒戈成为无党籍
+TAI_na_shift_from_gov = {
+	round_temp_variable = na_shift
+	if = { limit = { check_variable = { ruling_party = 1 } } subtract_from_variable = { TAI_na_kmt = na_shift } clamp_variable = { var = TAI_na_kmt min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 2 } } subtract_from_variable = { TAI_na_dp = na_shift } clamp_variable = { var = TAI_na_dp min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 3 } } subtract_from_variable = { TAI_na_sd = na_shift } clamp_variable = { var = TAI_na_sd min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 14 } } subtract_from_variable = { TAI_na_pfp = na_shift } clamp_variable = { var = TAI_na_pfp min = 0 max = 3000 } }
+	if = { limit = { check_variable = { ruling_party = 4 } } subtract_from_variable = { TAI_na_cpc = na_shift } clamp_variable = { var = TAI_na_cpc min = 0 max = 3000 } }
+	TAI_na_recalc = yes
+}
+
+# v3.24 缺口：过半数 1501 席、修宪 2000 席、罢免线 1000 席
+TAI_na_gaps = {
+	set_variable = { TAI_na_gap_half = 1501 }
+	subtract_from_variable = { TAI_na_gap_half = TAI_na_gov }
+	clamp_variable = { var = TAI_na_gap_half min = 0 max = 3000 }
+	set_variable = { TAI_na_gap_amend = 2000 }
+	subtract_from_variable = { TAI_na_gap_amend = TAI_na_gov }
+	clamp_variable = { var = TAI_na_gap_amend min = 0 max = 3000 }
+	set_variable = { TAI_na_gap_recall = TAI_na_gov }
+	subtract_from_variable = { TAI_na_gap_recall = 1000 }
+	clamp_variable = { var = TAI_na_gap_recall min = 0 max = 3000 }
+}
+
+# v3.14 半圆席位图（v3.17：300 点，每点 10 席；各党点数按席次四舍五入，误差归国民党）
+TAI_na_dots = {
+	TAI_na_gaps = yes
+	if = { limit = { NOT = { has_variable = TAI_na_dot^299 } } resize_array = { array = TAI_na_dot value = 7 size = 300 } }
+	set_temp_variable = { pc_cpc = TAI_na_cpc }
+	multiply_temp_variable = { pc_cpc = 0.1 }
+	round_temp_variable = pc_cpc
+	set_temp_variable = { pcum_1 = pc_cpc }
+	set_temp_variable = { pc_sd = TAI_na_sd }
+	multiply_temp_variable = { pc_sd = 0.1 }
+	round_temp_variable = pc_sd
+	set_temp_variable = { pcum_2 = pcum_1 }
+	add_to_temp_variable = { pcum_2 = pc_sd }
+	set_temp_variable = { pc_dp = TAI_na_dp }
+	multiply_temp_variable = { pc_dp = 0.1 }
+	round_temp_variable = pc_dp
+	set_temp_variable = { pcum_3 = pcum_2 }
+	add_to_temp_variable = { pcum_3 = pc_dp }
+	set_temp_variable = { pc_other = TAI_na_other }
+	multiply_temp_variable = { pc_other = 0.1 }
+	round_temp_variable = pc_other
+	set_temp_variable = { pcum_4 = pcum_3 }
+	add_to_temp_variable = { pcum_4 = pc_other }
+	set_temp_variable = { pc_pfp = TAI_na_pfp }
+	multiply_temp_variable = { pc_pfp = 0.1 }
+	round_temp_variable = pc_pfp
+	set_temp_variable = { pcum_5 = pcum_4 }
+	add_to_temp_variable = { pcum_5 = pc_pfp }
+	for_loop_effect = {
+		start = 0
+		end = 300
+		value = pk
+		if = { limit = { check_variable = { pk < pcum_1 } } set_variable = { TAI_na_dot^pk = 6 } }
+		else_if = { limit = { check_variable = { pk < pcum_2 } } set_variable = { TAI_na_dot^pk = 3 } }
+		else_if = { limit = { check_variable = { pk < pcum_3 } } set_variable = { TAI_na_dot^pk = 2 } }
+		else_if = { limit = { check_variable = { pk < pcum_4 } } set_variable = { TAI_na_dot^pk = 5 } }
+		else_if = { limit = { check_variable = { pk < pcum_5 } } set_variable = { TAI_na_dot^pk = 4 } }
+		else = { set_variable = { TAI_na_dot^pk = 1 } }
+	}
+}

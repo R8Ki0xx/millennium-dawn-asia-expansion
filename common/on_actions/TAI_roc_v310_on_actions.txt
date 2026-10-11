@@ -1,0 +1,17 @@
+# MD ROC Return v3.10
+on_actions = {
+	on_daily_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi }
+				TAI_ccp_mission_purge = yes
+				# 旧存档补齐（光复发生在 v3.10 之前）
+				if = { limit = { NOT = { has_variable = TAI_na_term } } TAI_na_init = yes }
+				if = { limit = { has_power_balance = { id = CHI_factional_balance } } remove_power_balance = { id = CHI_factional_balance } }
+				if = { limit = { NOT = { has_power_balance = { id = TAI_roc_faction_balance } } } set_power_balance = { id = TAI_roc_faction_balance left_side = TAI_roc_old_guard right_side = TAI_roc_newcomers set_value = -0.4 } }
+				if = { limit = { NOT = { has_country_flag = TAI_hk_macau_unlocked } } set_country_flag = TAI_hk_macau_unlocked }
+				TAI_na_daily = yes
+			}
+		}
+	}
+}

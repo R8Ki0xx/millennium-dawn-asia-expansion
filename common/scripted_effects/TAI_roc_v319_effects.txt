@@ -1,0 +1,258 @@
+# MD ROC Return v3.19 —— 换 tag 的补完（由 _tools/v319_core.py 生成）
+
+# Scope: 即将被吞并的国家（旧 CHI 或 TAI）。记下它在各国的影响力份额（各国变量 TAI_roc_infl_rec，两次累加）
+TAI_roc_v319_record_influence = {
+	set_temp_variable = { roc_src = THIS.id }
+	every_country = {
+		limit = { NOT = { tag = CHI } NOT = { tag = TAI } is_in_array = { influence_array = roc_src } }
+		for_each_loop = {
+			array = influence_array
+			value = v
+			index = i
+			if = {
+				limit = { check_variable = { v = roc_src } }
+				add_to_variable = { TAI_roc_infl_rec = influence_array_val^i }
+			}
+		}
+	}
+}
+
+# Scope: 旧 CHI（被 PRC 吞并之前）。记下中共的核地位与核立场
+TAI_roc_v319_record_ccp = {
+	TAI_roc_v319_record_influence = yes
+	set_global_flag = TAI_roc_nuc_recorded
+	if = { limit = { has_idea = nuclear_power_off } set_global_flag = TAI_roc_nuc_off }
+	else_if = { limit = { has_idea = nuclear_power_def } set_global_flag = TAI_roc_nuc_def }
+	else_if = { limit = { has_idea = nuclear_energy } set_global_flag = TAI_roc_nuc_energy }
+	if = { limit = { has_idea = full_first_use } set_global_flag = TAI_roc_st_full }
+	else_if = { limit = { has_idea = tac_first_use_strat_retaliation } set_global_flag = TAI_roc_st_tac_first }
+	else_if = { limit = { has_idea = tac_and_strat_retaliation } set_global_flag = TAI_roc_st_tac_strat }
+	else_if = { limit = { has_idea = strategic_retaliation_only } set_global_flag = TAI_roc_st_strat }
+}
+
+# Scope: 新 CHI。把记下的影响力写回各国的 CHI 条目
+TAI_roc_v319_restore_influence = {
+	set_temp_variable = { roc_chi = THIS.id }
+	every_country = {
+		limit = { NOT = { tag = CHI } has_variable = TAI_roc_infl_rec }
+		set_temp_variable = { roc_add = TAI_roc_infl_rec }
+		clamp_temp_variable = { var = roc_add min = 0 max = 80 }
+		set_temp_variable = { roc_dst = -1 }
+		for_each_loop = {
+			array = influence_array
+			value = v
+			index = i
+			if = { limit = { check_variable = { v = roc_chi } } set_temp_variable = { roc_dst = i } }
+		}
+		if = {
+			limit = { check_variable = { roc_dst > -1 } }
+			if = { limit = { check_variable = { influence_array_val^roc_dst < roc_add } } set_variable = { influence_array_val^roc_dst = roc_add } }
+		}
+		else_if = {
+			limit = { check_variable = { roc_add > 0.01 } }
+			add_to_array = { influence_array = roc_chi }
+			add_to_array = { influence_array_val = roc_add }
+		}
+		recalculate_influence = yes
+		clear_variable = TAI_roc_infl_rec
+	}
+}
+
+# Scope: 新 CHI。复制台湾影响力时带过来的「CHI/TAI 影响自己」，并入国内影响力
+TAI_roc_v319_fix_self_influence = {
+	set_temp_variable = { roc_chi = THIS.id }
+	set_temp_variable = { roc_tai = TAI.id }
+	set_temp_variable = { roc_prc = PRC.id }
+	for_each_loop = {
+		array = influence_array
+		value = v
+		index = i
+		if = {
+			limit = { OR = { check_variable = { v = roc_chi } check_variable = { v = roc_tai } } }
+			add_to_variable = { domestic_influence_amount = influence_array_val^i }
+			set_variable = { influence_array_val^i = 0 }
+		}
+	}
+	recalculate_influence = yes
+}
+
+# Scope: 新 CHI。除毛派地下党（19）与复兴社（21）外，全部政党合法
+TAI_roc_legalize_parties = {
+	clr_country_flag = partyall_banned
+	if = {
+		limit = { NOT = { has_variable = party_banned_array^23 } }
+		resize_array = { array = party_banned_array value = 0 size = 24 }
+	}
+	for_loop_effect = {
+		start = 0
+		end = 24
+		value = v
+		set_variable = { party_banned_array^v = 0 }
+	}
+	set_variable = { party_banned_array^19 = 1 }
+	set_variable = { party_banned_array^21 = 1 }
+	set_country_flag = ROC_parties_legal_v319
+	update_dirty_politicsview_expanded = yes
+}
+
+# Scope: 新 CHI。共产主义（以合法在野的中国共产党为主）35%，其余意识形态按比例压到 65%
+TAI_roc_ccp_35 = {
+	set_country_flag = ROC_pop_fix_v316
+	set_country_flag = ROC_pop_fix_v319
+	set_temp_variable = { roc_rest = party_popularity@democratic }
+	add_to_temp_variable = { roc_rest = party_popularity@neutrality }
+	add_to_temp_variable = { roc_rest = party_popularity@fascism }
+	add_to_temp_variable = { roc_rest = party_popularity@nationalist }
+	if = { limit = { check_variable = { roc_rest < 0.05 } } set_temp_variable = { roc_rest = 0.05 } }
+	set_temp_variable = { roc_f = 0.65 }
+	divide_temp_variable = { roc_f = roc_rest }
+	set_temp_variable = { roc_pop_dem = party_popularity@democratic }
+	multiply_temp_variable = { roc_pop_dem = roc_f }
+	multiply_temp_variable = { roc_pop_dem = 100 }
+	set_temp_variable = { roc_pop_neu = party_popularity@neutrality }
+	multiply_temp_variable = { roc_pop_neu = roc_f }
+	multiply_temp_variable = { roc_pop_neu = 100 }
+	set_temp_variable = { roc_pop_fas = party_popularity@fascism }
+	multiply_temp_variable = { roc_pop_fas = roc_f }
+	multiply_temp_variable = { roc_pop_fas = 100 }
+	set_temp_variable = { roc_pop_nat = party_popularity@nationalist }
+	multiply_temp_variable = { roc_pop_nat = roc_f }
+	multiply_temp_variable = { roc_pop_nat = 100 }
+	set_popularities = { democratic = roc_pop_dem communism = 35 neutrality = roc_pop_neu fascism = roc_pop_fas nationalist = roc_pop_nat }
+	# 各党：非共产主义阵营等比例缩小；共产主义阵营 = 共产党 26%、农工党 4%、民盟 3%、新党 2%
+	for_loop_effect = {
+		start = 0
+		end = 24
+		value = v
+		if = {
+			limit = { OR = { check_variable = { v < 4 } check_variable = { v > 9 } } }
+			multiply_variable = { party_pop_array^v = roc_f }
+		}
+	}
+	set_variable = { party_pop_array^4 = 0.26 }
+	set_variable = { party_pop_array^5 = 0.04 }
+	set_variable = { party_pop_array^6 = 0.02 }
+	set_variable = { party_pop_array^7 = 0.03 }
+	set_variable = { party_pop_array^8 = 0 }
+	set_variable = { party_pop_array^9 = 0 }
+	add_up_party_totals = yes
+	set_party_positions = yes
+}
+
+# Scope: 新 CHI。核地位与核立场改用中共的（没有记录时用中共开局的：防御性核大国 + 战术与战略报复）
+TAI_roc_v319_nuclear = {
+	if = { limit = { has_global_flag = TAI_roc_nuc_off } add_ideas = nuclear_power_off }
+	else_if = { limit = { has_global_flag = TAI_roc_nuc_energy } add_ideas = nuclear_energy }
+	else = { add_ideas = nuclear_power_def }
+	if = { limit = { has_global_flag = TAI_roc_st_full } add_ideas = full_first_use }
+	else_if = { limit = { has_global_flag = TAI_roc_st_tac_first } add_ideas = tac_first_use_strat_retaliation }
+	else_if = { limit = { has_global_flag = TAI_roc_st_strat } add_ideas = strategic_retaliation_only }
+	else_if = { limit = { NOT = { has_global_flag = TAI_roc_nuc_energy } } add_ideas = tac_and_strat_retaliation }
+	clr_global_flag = TAI_roc_nuc_recorded
+	clr_global_flag = TAI_roc_nuc_off
+	clr_global_flag = TAI_roc_nuc_def
+	clr_global_flag = TAI_roc_nuc_energy
+	clr_global_flag = TAI_roc_st_full
+	clr_global_flag = TAI_roc_st_tac_first
+	clr_global_flag = TAI_roc_st_tac_strat
+	clr_global_flag = TAI_roc_st_strat
+}
+
+# Scope: 新 CHI。中日之间的历史仇怨（千禧中共开局的三项观感修正）
+TAI_roc_v319_japan = {
+	if = {
+		limit = { country_exists = JAP NOT = { has_country_flag = ROC_japan_grudge_v319 } }
+		set_country_flag = ROC_japan_grudge_v319
+		add_opinion_modifier = { target = JAP modifier = historic_enemies }
+		reverse_add_opinion_modifier = { target = JAP modifier = historic_enemies }
+		add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+		reverse_add_opinion_modifier = { target = JAP modifier = maritime_border_dispute }
+		add_opinion_modifier = { target = JAP modifier = refuse_to_apologize_for_warcrimes }
+	}
+}
+
+# Scope: 新 CHI。加入联合国大会（照千禧 recognition.71.a）
+TAI_roc_join_un_assembly = {
+	if = { limit = { has_idea = lacks_international_recognition } remove_ideas = lacks_international_recognition }
+	if = { limit = { has_idea = non_state_actor } remove_ideas = non_state_actor }
+	if = {
+		limit = { NOT = { is_in_array = { global.UN_general_assembly = THIS } } }
+		add_to_array = { global.UN_general_assembly = THIS }
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = united_nations_member } } } add_dynamic_modifier = { modifier = united_nations_member } }
+		recompute_un_2_3_number = yes
+		international_systems_force_update = yes
+	}
+	set_country_flag = un_member_flag
+	if = { limit = { has_idea = p5_member } set_country_flag = permanent_un_member_flag }
+}
+
+# Scope: 新 CHI。情报机构：没有机构时建立「国家安全局」（引擎无法给已有的机构改名）
+TAI_roc_v319_agency = {
+	if = {
+		limit = { NOT = { has_intelligence_agency = yes } }
+		create_intelligence_agency = { name = TAI_roc_nsb_name icon = GFX_intelligence_agency_logo_tai }
+	}
+}
+
+# Scope: 新 CHI。人民币
+TAI_roc_v319_currency = {
+	adopt_chinese_yuan_reserve = yes
+	update_currency_issuers = yes
+}
+
+# Scope: 新 CHI。光复时（CHI 吞并 TAI 之后）
+TAI_roc_v319_takeover = {
+	set_country_flag = ROC_fix_v319
+	TAI_capital_to_nanjing = yes
+	TAI_roc_v319_currency = yes
+	TAI_roc_v319_fix_self_influence = yes
+	TAI_roc_v319_restore_influence = yes
+	TAI_roc_v319_nuclear = yes
+	if = { limit = { has_idea = TAI_legacy_of_1949 } remove_ideas = TAI_legacy_of_1949 }
+	TAI_roc_v319_japan = yes
+	TAI_roc_v319_agency = yes
+	# 边疆一体化；千禧中共的新疆事件改由「边疆骚动」事件取代
+	TAI_fr_init = yes
+	set_country_flag = CHI_uighur_event_cd
+}
+
+# Scope: 新 CHI。旧存档（v3.19 之前光复的）补一次
+TAI_roc_v319_old_save = {
+	set_country_flag = ROC_fix_v319
+	TAI_roc_legalize_parties = yes
+	TAI_roc_ccp_35 = yes
+	TAI_roc_v319_currency = yes
+	TAI_roc_v319_fix_self_influence = yes
+	TAI_roc_v319_nuclear = yes
+	if = { limit = { has_idea = TAI_legacy_of_1949 } remove_ideas = TAI_legacy_of_1949 }
+	TAI_roc_v319_japan = yes
+	TAI_roc_v319_agency = yes
+	if = { limit = { has_idea = p5_member } TAI_roc_join_un_assembly = yes }
+	TAI_fr_init = yes
+	set_country_flag = CHI_uighur_event_cd
+	country_event = { id = roc_return.160 days = 1 }
+}
+
+# Scope: 光复后的 CHI，每月：中华民国专属事件（每个只发一次；两次之间至少隔 4 个月）
+TAI_roc_flavor_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_roc_flavor_cd } }
+		random_list = {
+			88 = { }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_171_done } set_country_flag = TAI_roc_ev_171_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.171 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_172_done } set_country_flag = TAI_roc_ev_172_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.172 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_173_done } set_country_flag = TAI_roc_ev_173_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.173 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_174_done } set_country_flag = TAI_roc_ev_174_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.174 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_175_done } set_country_flag = TAI_roc_ev_175_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.175 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_176_done } set_country_flag = TAI_roc_ev_176_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.176 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_177_done } set_country_flag = TAI_roc_ev_177_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.177 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_178_done } set_country_flag = TAI_roc_ev_178_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.178 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_179_done } set_country_flag = TAI_roc_ev_179_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.179 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_180_done } set_country_flag = TAI_roc_ev_180_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.180 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_181_done } set_country_flag = TAI_roc_ev_181_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.181 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_182_done } set_country_flag = TAI_roc_ev_182_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.182 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_183_done } set_country_flag = TAI_roc_ev_183_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.183 days = 2 } }
+			1 = { modifier = { factor = 0 has_country_flag = TAI_roc_ev_184_done } set_country_flag = TAI_roc_ev_184_done set_country_flag = { flag = TAI_roc_flavor_cd days = 120 } country_event = { id = roc_return.184 days = 2 } }
+		}
+	}
+}

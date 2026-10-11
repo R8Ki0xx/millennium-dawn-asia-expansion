@@ -1,0 +1,2359 @@
+# MD ROC Return v3.14 —— 国民大会面板（由 _tools/make_na_gui.py 生成）
+guiTypes = {
+	containerWindowType = {
+		name = "TAI_na_decision_gui"
+		size = { width = 492 height = 858 }
+		containerWindowType = {
+			name = "na_container"
+			position = { x = 2 y = 6 }
+			size = { width = 482 height = 844 }
+			iconType = {
+				name = "na_bg"
+				spriteType = "GFX_TAI_na_bg"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_header"
+				spriteType = "GFX_TAI_na_header"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_header_info"
+				position = { x = 76 y = 106 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_header"
+				maxWidth = 396
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_pres_pic"
+				spriteType = "GFX_TAI_gov_pres_none"
+				position = { x = 16 y = 152 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_pres_name"
+				position = { x = 108 y = 152 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_pres_name"
+				maxWidth = 360
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_pres_mode"
+				position = { x = 108 y = 176 }
+				font = "hoi_16mbs"
+				text = "TAI_na_gui_president"
+				maxWidth = 360
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_gap_amend"
+				position = { x = 120 y = 206 }
+				font = "hoi_16mbs"
+				text = "TAI_na_gui_gap_amend"
+				maxWidth = 340
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_gap_half"
+				position = { x = 120 y = 224 }
+				font = "hoi_16mbs"
+				text = "TAI_na_gui_gap_half"
+				maxWidth = 340
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_gap_recall"
+				position = { x = 120 y = 242 }
+				font = "hoi_16mbs"
+				text = "TAI_na_gui_gap_recall"
+				maxWidth = 340
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_seat_0"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 158 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_1"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 146 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_2"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 134 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_3"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 122 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_4"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 110 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_5"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 98 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_6"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 86 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_7"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 74 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_8"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 62 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_9"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 50 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_10"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 51 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_11"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 63 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_12"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 75 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_13"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 87 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_14"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 99 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_15"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 111 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_16"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 123 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_17"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 136 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_18"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 53 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_19"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 65 y = 464 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_20"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 148 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_21"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 77 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_22"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 160 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_23"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 89 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_24"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 102 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_25"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 114 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_26"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 55 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_27"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 68 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_28"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 126 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_29"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 80 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_30"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 139 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_31"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 93 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_32"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 59 y = 435 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_33"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 105 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_34"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 71 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_35"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 151 y = 462 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_36"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 118 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_37"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 84 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_38"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 164 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_39"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 131 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_40"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 97 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_41"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 64 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_42"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 76 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_43"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 110 y = 435 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_44"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 144 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_45"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 90 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_46"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 123 y = 437 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_47"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 70 y = 409 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_48"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 103 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_49"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 82 y = 411 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_50"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 157 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_51"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 137 y = 437 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_52"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 117 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_53"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 96 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_54"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 77 y = 396 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_55"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 170 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_56"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 130 y = 424 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_57"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 89 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_58"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 151 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_59"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 110 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_60"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 104 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_61"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 84 y = 384 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_62"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 144 y = 424 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_63"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 125 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_64"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 97 y = 387 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_65"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 165 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_66"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 119 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_67"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 138 y = 413 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_68"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 93 y = 373 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_69"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 112 y = 387 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_70"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 159 y = 425 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_71"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 106 y = 376 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_72"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 134 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_73"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 179 y = 439 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_74"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 153 y = 413 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_75"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 128 y = 388 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_76"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 102 y = 363 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_77"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 147 y = 402 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_78"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 122 y = 377 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_79"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 116 y = 366 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_80"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 176 y = 425 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_81"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 144 y = 389 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_82"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 113 y = 353 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_83"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 170 y = 414 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_84"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 138 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_85"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 132 y = 367 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_86"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 164 y = 404 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_87"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 126 y = 357 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_88"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 158 y = 393 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_89"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 124 y = 344 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_90"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 189 y = 429 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_91"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 155 y = 380 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_92"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 149 y = 369 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_93"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 144 y = 359 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_94"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 138 y = 348 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_95"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 187 y = 416 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_96"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 135 y = 335 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_97"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 181 y = 406 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_98"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 175 y = 395 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_99"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 169 y = 385 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_100"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 167 y = 372 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_101"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 161 y = 362 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_102"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 155 y = 351 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_103"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 150 y = 341 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_104"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 148 y = 328 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_105"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 202 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_106"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 182 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_107"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 162 y = 334 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_108"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 188 y = 388 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_109"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 168 y = 345 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_110"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 194 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_111"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 174 y = 355 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_112"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 160 y = 322 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_113"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 180 y = 365 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_114"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 200 y = 409 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_115"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 175 y = 329 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_116"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 181 y = 339 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_117"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 174 y = 316 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_118"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 195 y = 373 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_119"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 187 y = 350 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_120"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 201 y = 383 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_121"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 194 y = 360 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_122"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 208 y = 394 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_123"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 188 y = 324 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_124"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 215 y = 416 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_125"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 187 y = 312 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_126"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 195 y = 335 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_127"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 214 y = 404 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_128"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 201 y = 346 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_129"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 208 y = 369 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_130"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 208 y = 357 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_131"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 202 y = 321 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_132"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 201 y = 309 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_133"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 215 y = 380 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_134"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 208 y = 332 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_135"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 222 y = 391 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_136"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 215 y = 343 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_137"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 216 y = 319 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_138"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 215 y = 307 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_139"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 222 y = 366 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_140"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 222 y = 354 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_141"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 414 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_142"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 222 y = 330 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_143"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 402 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_144"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_145"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 342 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_146"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 318 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_147"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 229 y = 306 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_148"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 236 y = 390 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_149"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 236 y = 366 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_150"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 236 y = 354 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_151"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 236 y = 330 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_152"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 306 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_153"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 318 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_154"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 342 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_155"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_156"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 402 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_157"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 251 y = 330 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_158"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 244 y = 414 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_159"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 251 y = 354 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_160"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 251 y = 366 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_161"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 258 y = 307 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_162"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 257 y = 319 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_163"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 251 y = 391 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_164"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 258 y = 343 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_165"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 265 y = 332 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_166"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 258 y = 380 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_167"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 272 y = 309 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_168"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 271 y = 321 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_169"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 265 y = 357 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_170"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 265 y = 369 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_171"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 272 y = 346 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_172"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 259 y = 404 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_173"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 278 y = 335 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_174"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 286 y = 312 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_175"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 258 y = 416 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_176"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 285 y = 324 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_177"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 265 y = 394 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_178"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 272 y = 383 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_179"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 279 y = 360 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_180"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 286 y = 350 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_181"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 278 y = 373 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_182"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 299 y = 316 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_183"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 292 y = 339 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_184"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 298 y = 329 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_185"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 273 y = 409 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_186"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 293 y = 365 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_187"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 313 y = 322 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_188"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 279 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_189"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 299 y = 355 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_190"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 305 y = 345 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_191"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 285 y = 388 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_192"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 311 y = 334 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_193"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 291 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_194"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 271 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_195"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 325 y = 328 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_196"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 306 y = 372 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_197"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 312 y = 362 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_198"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 318 y = 351 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_199"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 324 y = 341 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_200"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 304 y = 385 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_201"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 298 y = 395 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_202"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 292 y = 406 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_203"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 338 y = 335 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_204"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 286 y = 416 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_205"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 335 y = 348 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_206"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 329 y = 359 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_207"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 324 y = 369 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_208"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 318 y = 380 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_209"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 284 y = 429 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_210"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 349 y = 344 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_211"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 315 y = 393 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_212"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 347 y = 357 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_213"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 309 y = 404 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_214"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 341 y = 367 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_215"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 303 y = 414 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_216"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 335 y = 378 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_217"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 360 y = 353 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_218"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 329 y = 389 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_219"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 297 y = 425 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_220"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 357 y = 366 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_221"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 326 y = 402 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_222"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 351 y = 377 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_223"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 371 y = 363 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_224"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 345 y = 388 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_225"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 320 y = 413 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_226"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 294 y = 439 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_227"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 339 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_228"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 367 y = 376 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_229"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 314 y = 425 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_230"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 361 y = 387 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_231"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 380 y = 373 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_232"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 335 y = 413 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_233"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 354 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_234"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 308 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_235"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 376 y = 387 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_236"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 329 y = 424 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_237"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 348 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_238"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 389 y = 384 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_239"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 369 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_240"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 322 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_241"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 363 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_242"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 384 y = 399 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_243"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 343 y = 424 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_244"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 303 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_245"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 396 y = 396 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_246"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 356 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_247"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 377 y = 410 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_248"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 336 y = 437 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_249"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 316 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_250"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 391 y = 411 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_251"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 370 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_252"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 403 y = 409 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_253"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 350 y = 437 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_254"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 383 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_255"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 329 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_256"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 363 y = 435 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_257"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 397 y = 423 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_258"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 409 y = 422 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_259"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 376 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_260"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 342 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_261"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 309 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_262"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 389 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_263"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 355 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_264"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 322 y = 462 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_265"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 402 y = 436 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_266"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 368 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_267"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 414 y = 435 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_268"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 334 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_269"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 380 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_270"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 393 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_271"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 347 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_272"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 405 y = 450 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_273"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 418 y = 449 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_274"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 359 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_275"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 371 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_276"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 384 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_277"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 313 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_278"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 396 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_279"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 325 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_280"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 408 y = 464 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_281"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 420 y = 463 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_282"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 337 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_283"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 350 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_284"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 362 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_285"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 374 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_286"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 386 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_287"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 398 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_288"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 410 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_289"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 422 y = 477 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_290"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 314 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_291"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 326 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_292"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 338 y = 491 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_293"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 350 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_294"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 362 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_295"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 374 y = 491 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_296"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 386 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_297"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 398 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_298"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 410 y = 492 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_seat_299"
+				spriteType = "GFX_TAI_na_seat"
+				position = { x = 422 y = 491 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_gov_count"
+				position = { x = 156 y = 452 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_gov_count"
+				maxWidth = 170
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+			}
+			iconType = {
+				name = "na_gov_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_gov"
+				position = { x = 151 y = 508 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m33_off"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 113 y = 530 }
+				frame = 1
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m33_on"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 113 y = 530 }
+				frame = 2
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m50_off"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 198 y = 530 }
+				frame = 1
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m50_on"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 198 y = 530 }
+				frame = 2
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m66_off"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 283 y = 530 }
+				frame = 1
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "na_m66_on"
+				spriteType = "GFX_TAI_na_indicator"
+				position = { x = 283 y = 530 }
+				frame = 2
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_kmt_label"
+				position = { x = 30 y = 597 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_kmt"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_kmt_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_kmt"
+				position = { x = 290 y = 599 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_dp_label"
+				position = { x = 30 y = 623 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_dp"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_dp_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_dp"
+				position = { x = 290 y = 625 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_sd_label"
+				position = { x = 30 y = 649 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_sd"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_sd_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_sd"
+				position = { x = 290 y = 651 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_pfp_label"
+				position = { x = 30 y = 675 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_pfp"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_pfp_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_pfp"
+				position = { x = 290 y = 677 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_cpc_label"
+				position = { x = 30 y = 701 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_cpc"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_cpc_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_cpc"
+				position = { x = 290 y = 703 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_other_label"
+				position = { x = 30 y = 727 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_other"
+				maxWidth = 255
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "na_other_bar"
+				quadTextureSprite = "GFX_TAI_na_tbar_other"
+				position = { x = 290 y = 729 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "na_countdown"
+				position = { x = 14 y = 780 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_countdown"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_term_info"
+				position = { x = 14 y = 802 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_term_info"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "na_recall_warning"
+				position = { x = 14 y = 802 }
+				font = "hoi_18mbs"
+				text = "TAI_na_gui_recall_warning"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+			}
+		}
+	}
+}

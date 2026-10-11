@@ -1,0 +1,5 @@
+# MD ROC Return v3.21 —— 两岸内战
+opinion_modifiers = {
+	CSW_ccp_request_aid = { value = 20 }
+	CSW_tai_lobby_us = { value = 15 }
+}

@@ -1,0 +1,33 @@
+# MD ROC Return v3.14 —— 南京总统府
+# 民国控制南京：民国版（青天白日旗）；中共或 PRC 控制：红旗版；其他国家：通用版。
+# global.TAI_palace_ver：0 = 尚无，1 = 民国版，2 = 红旗版，3 = 通用版
+TAI_roc_palace_update = {
+	if = {
+		limit = { has_global_flag = TAI_nanjing_palace }
+		536 = {
+			set_temp_variable = { palace_want = 3 }
+			if = { limit = { controller = { tag = CHI has_country_flag = ROC_new_chi } } set_temp_variable = { palace_want = 1 } }
+			else_if = { limit = { controller = { OR = { tag = CHI tag = PRC } } } set_temp_variable = { palace_want = 2 } }
+			if = {
+				limit = { NOT = { check_variable = { global.TAI_palace_ver = palace_want } } }
+				if = { limit = { check_variable = { global.TAI_palace_ver = 1 } } remove_building = { type = landmark_nanjing_presidential_palace level = 1 province = 11913 } }
+				else_if = { limit = { check_variable = { global.TAI_palace_ver = 2 } } remove_building = { type = landmark_nanjing_presidential_palace_prc level = 1 province = 11913 } }
+				else_if = { limit = { check_variable = { global.TAI_palace_ver = 3 } } remove_building = { type = landmark_nanjing_presidential_palace_gen level = 1 province = 11913 } }
+				if = { limit = { check_variable = { palace_want = 1 } } add_building_construction = { type = landmark_nanjing_presidential_palace level = 1 instant_build = yes province = 11913 } }
+				else_if = { limit = { check_variable = { palace_want = 2 } } add_building_construction = { type = landmark_nanjing_presidential_palace_prc level = 1 instant_build = yes province = 11913 } }
+				else = { add_building_construction = { type = landmark_nanjing_presidential_palace_gen level = 1 instant_build = yes province = 11913 } }
+				set_variable = { global.TAI_palace_ver = palace_want }
+			}
+		}
+	}
+}
+
+# 第一次出现：民国光复南京之后（KX 里也是 LKMT 打赢之后才出现）
+TAI_roc_palace_unveil = {
+	if = {
+		limit = { NOT = { has_global_flag = TAI_nanjing_palace } }
+		set_global_flag = TAI_nanjing_palace
+		TAI_roc_palace_update = yes
+		if = { limit = { has_dlc = "No Compromise, No Surrender" } news_event = { id = roc_return.140 days = 2 } }
+	}
+}

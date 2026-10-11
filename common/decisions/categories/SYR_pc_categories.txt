@@ -1,0 +1,9 @@
+# MD ROC Return v3.22
+SYR_people_council_category = {
+	icon = GFX_decision_syria
+	priority = 2000
+	allowed = { original_tag = SYR }
+	visible = { original_tag = SYR }
+	visible_when_empty = yes
+	scripted_gui = SYR_pc_GUI
+}

@@ -1,0 +1,369 @@
+# MD ROC Return v3.3 —— 三军精神与 debuff 机制（由 _tools/patch_military.py 生成）
+
+# Scope: TAI at game start
+TAI_military_init = {
+	set_variable = { TAI_army_org = 0.05 }
+	set_variable = { TAI_army_atk = 0.03 }
+	set_variable = { TAI_army_def = 0.08 }
+	set_variable = { TAI_army_brk = 0.0 }
+	set_variable = { TAI_army_trn = 0.0 }
+	set_variable = { TAI_army_xp = 0.02 }
+	set_variable = { TAI_army_rec = 0.0 }
+	set_variable = { TAI_army_crd = 0.0 }
+	set_variable = { TAI_army_mor = 0.0 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_army_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_army_modifier } }
+	set_variable = { TAI_navy_org = 0.05 }
+	set_variable = { TAI_navy_dmg = 0.03 }
+	set_variable = { TAI_navy_def = 0.05 }
+	set_variable = { TAI_navy_spd = 0.0 }
+	set_variable = { TAI_navy_sub = 0.05 }
+	set_variable = { TAI_navy_amp = 0.0 }
+	set_variable = { TAI_navy_rep = 0.0 }
+	set_variable = { TAI_navy_xp = 0.02 }
+	set_variable = { TAI_navy_mor = 0.0 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_navy_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_navy_modifier } }
+	set_variable = { TAI_air_atk = 0.03 }
+	set_variable = { TAI_air_def = 0.05 }
+	set_variable = { TAI_air_agi = 0.0 }
+	set_variable = { TAI_air_eff = 0.05 }
+	set_variable = { TAI_air_sup = 0.03 }
+	set_variable = { TAI_air_det = 0.0 }
+	set_variable = { TAI_air_xp = 0.02 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } }
+	set_variable = { TAI_gs_plan = 0.05 }
+	set_variable = { TAI_gs_maxplan = 0.03 }
+	set_variable = { TAI_gs_supply = 0.0 }
+	set_variable = { TAI_gs_xpf = 0.0 }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } }
+	TAI_dbf_black_gold_add = yes
+	TAI_dbf_isolation_add = yes
+	TAI_dbf_conscription_add = yes
+	TAI_dbf_imbalance_add = yes
+}
+
+# Scope: the revived CHI (TAI still exists). Copies the armed forces and the surviving debuffs.
+ROC_copy_military_from_TAI = {
+	set_variable = { TAI_army_org = TAI.TAI_army_org }
+	set_variable = { TAI_army_atk = TAI.TAI_army_atk }
+	set_variable = { TAI_army_def = TAI.TAI_army_def }
+	set_variable = { TAI_army_brk = TAI.TAI_army_brk }
+	set_variable = { TAI_army_trn = TAI.TAI_army_trn }
+	set_variable = { TAI_army_xp = TAI.TAI_army_xp }
+	set_variable = { TAI_army_rec = TAI.TAI_army_rec }
+	set_variable = { TAI_army_crd = TAI.TAI_army_crd }
+	set_variable = { TAI_army_mor = TAI.TAI_army_mor }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_army_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_army_modifier } }
+	set_variable = { TAI_navy_org = TAI.TAI_navy_org }
+	set_variable = { TAI_navy_dmg = TAI.TAI_navy_dmg }
+	set_variable = { TAI_navy_def = TAI.TAI_navy_def }
+	set_variable = { TAI_navy_spd = TAI.TAI_navy_spd }
+	set_variable = { TAI_navy_sub = TAI.TAI_navy_sub }
+	set_variable = { TAI_navy_amp = TAI.TAI_navy_amp }
+	set_variable = { TAI_navy_rep = TAI.TAI_navy_rep }
+	set_variable = { TAI_navy_xp = TAI.TAI_navy_xp }
+	set_variable = { TAI_navy_mor = TAI.TAI_navy_mor }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_navy_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_navy_modifier } }
+	set_variable = { TAI_air_atk = TAI.TAI_air_atk }
+	set_variable = { TAI_air_def = TAI.TAI_air_def }
+	set_variable = { TAI_air_agi = TAI.TAI_air_agi }
+	set_variable = { TAI_air_eff = TAI.TAI_air_eff }
+	set_variable = { TAI_air_sup = TAI.TAI_air_sup }
+	set_variable = { TAI_air_det = TAI.TAI_air_det }
+	set_variable = { TAI_air_xp = TAI.TAI_air_xp }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } }
+	set_variable = { TAI_gs_plan = TAI.TAI_gs_plan }
+	set_variable = { TAI_gs_maxplan = TAI.TAI_gs_maxplan }
+	set_variable = { TAI_gs_supply = TAI.TAI_gs_supply }
+	set_variable = { TAI_gs_xpf = TAI.TAI_gs_xpf }
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } } } add_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } }
+	if = { limit = { TAI = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } } } set_variable = { TAI_dbf_black_gold_lvl = TAI.TAI_dbf_black_gold_lvl } TAI_dbf_black_gold_recalc = yes add_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+	else = { TAI_dbf_black_gold_remove = yes }
+	if = { limit = { TAI = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } } } set_variable = { TAI_dbf_isolation_lvl = TAI.TAI_dbf_isolation_lvl } TAI_dbf_isolation_recalc = yes add_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+	else = { TAI_dbf_isolation_remove = yes }
+	if = { limit = { TAI = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } } } set_variable = { TAI_dbf_conscription_lvl = TAI.TAI_dbf_conscription_lvl } TAI_dbf_conscription_recalc = yes add_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+	else = { TAI_dbf_conscription_remove = yes }
+	TAI_dbf_imbalance_remove = yes
+	TAI_dbf_hearts_add = yes
+	TAI_dbf_pla_remnants_add = yes
+	TAI_dbf_transition_add = yes
+	TAI_dbf_warlordism_add = yes
+	TAI_dbf_carpetbag_add = yes
+	force_update_dynamic_modifier = yes
+}
+
+TAI_dbf_black_gold_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_black_gold_sev = TAI_dbf_black_gold_lvl }
+	multiply_variable = { TAI_dbf_black_gold_sev = 33.34 }
+	set_variable = { TAI_dbf_black_gold_political_power_gain = -0.05 }
+	multiply_variable = { TAI_dbf_black_gold_political_power_gain = TAI_dbf_black_gold_lvl }
+	set_variable = { TAI_dbf_black_gold_stability_factor = -0.02 }
+	multiply_variable = { TAI_dbf_black_gold_stability_factor = TAI_dbf_black_gold_lvl }
+}
+TAI_dbf_black_gold_add = {
+	set_variable = { TAI_dbf_black_gold_lvl = 3 }
+	TAI_dbf_black_gold_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } } } add_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+}
+TAI_dbf_black_gold_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		custom_effect_tooltip = TAI_dbf_black_gold_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_black_gold_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_black_gold_lvl < 1 } } TAI_dbf_black_gold_remove = yes }
+			else = { TAI_dbf_black_gold_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_black_gold_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } } remove_dynamic_modifier = { modifier = TAI_dbf_black_gold } custom_effect_tooltip = TAI_dbf_black_gold_remove_tt }
+	set_variable = { TAI_dbf_black_gold_lvl = 0 }
+}
+
+TAI_dbf_isolation_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_isolation_sev = TAI_dbf_isolation_lvl }
+	multiply_variable = { TAI_dbf_isolation_sev = 33.34 }
+	set_variable = { TAI_dbf_isolation_trade_opinion_factor = -0.1 }
+	multiply_variable = { TAI_dbf_isolation_trade_opinion_factor = TAI_dbf_isolation_lvl }
+	set_variable = { TAI_dbf_isolation_political_power_gain = -0.03 }
+	multiply_variable = { TAI_dbf_isolation_political_power_gain = TAI_dbf_isolation_lvl }
+}
+TAI_dbf_isolation_add = {
+	set_variable = { TAI_dbf_isolation_lvl = 3 }
+	TAI_dbf_isolation_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } } } add_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+}
+TAI_dbf_isolation_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+		custom_effect_tooltip = TAI_dbf_isolation_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_isolation_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_isolation_lvl < 1 } } TAI_dbf_isolation_remove = yes }
+			else = { TAI_dbf_isolation_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_isolation_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } } remove_dynamic_modifier = { modifier = TAI_dbf_isolation } custom_effect_tooltip = TAI_dbf_isolation_remove_tt }
+	set_variable = { TAI_dbf_isolation_lvl = 0 }
+}
+
+TAI_dbf_conscription_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_conscription_sev = TAI_dbf_conscription_lvl }
+	multiply_variable = { TAI_dbf_conscription_sev = 33.34 }
+	set_variable = { TAI_dbf_conscription_conscription_factor = -0.08 }
+	multiply_variable = { TAI_dbf_conscription_conscription_factor = TAI_dbf_conscription_lvl }
+	set_variable = { TAI_dbf_conscription_training_time_army_factor = 0.05 }
+	multiply_variable = { TAI_dbf_conscription_training_time_army_factor = TAI_dbf_conscription_lvl }
+}
+TAI_dbf_conscription_add = {
+	set_variable = { TAI_dbf_conscription_lvl = 3 }
+	TAI_dbf_conscription_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } } } add_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+}
+TAI_dbf_conscription_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+		custom_effect_tooltip = TAI_dbf_conscription_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_conscription_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_conscription_lvl < 1 } } TAI_dbf_conscription_remove = yes }
+			else = { TAI_dbf_conscription_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_conscription_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } } remove_dynamic_modifier = { modifier = TAI_dbf_conscription } custom_effect_tooltip = TAI_dbf_conscription_remove_tt }
+	set_variable = { TAI_dbf_conscription_lvl = 0 }
+}
+
+TAI_dbf_imbalance_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_imbalance_sev = TAI_dbf_imbalance_lvl }
+	multiply_variable = { TAI_dbf_imbalance_sev = 33.34 }
+	set_variable = { TAI_dbf_imbalance_war_support_factor = -0.03 }
+	multiply_variable = { TAI_dbf_imbalance_war_support_factor = TAI_dbf_imbalance_lvl }
+	set_variable = { TAI_dbf_imbalance_army_defence_factor = -0.03 }
+	multiply_variable = { TAI_dbf_imbalance_army_defence_factor = TAI_dbf_imbalance_lvl }
+}
+TAI_dbf_imbalance_add = {
+	set_variable = { TAI_dbf_imbalance_lvl = 3 }
+	TAI_dbf_imbalance_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } } } add_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+}
+TAI_dbf_imbalance_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+		custom_effect_tooltip = TAI_dbf_imbalance_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_imbalance_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_imbalance_lvl < 1 } } TAI_dbf_imbalance_remove = yes }
+			else = { TAI_dbf_imbalance_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_imbalance_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } } remove_dynamic_modifier = { modifier = TAI_dbf_imbalance } custom_effect_tooltip = TAI_dbf_imbalance_remove_tt }
+	set_variable = { TAI_dbf_imbalance_lvl = 0 }
+}
+
+TAI_dbf_hearts_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_hearts_sev = TAI_dbf_hearts_lvl }
+	multiply_variable = { TAI_dbf_hearts_sev = 33.34 }
+	set_variable = { TAI_dbf_hearts_resistance_growth = 0.1 }
+	multiply_variable = { TAI_dbf_hearts_resistance_growth = TAI_dbf_hearts_lvl }
+	set_variable = { TAI_dbf_hearts_compliance_growth = -0.05 }
+	multiply_variable = { TAI_dbf_hearts_compliance_growth = TAI_dbf_hearts_lvl }
+	set_variable = { TAI_dbf_hearts_stability_factor = -0.03 }
+	multiply_variable = { TAI_dbf_hearts_stability_factor = TAI_dbf_hearts_lvl }
+}
+TAI_dbf_hearts_add = {
+	set_variable = { TAI_dbf_hearts_lvl = 3 }
+	TAI_dbf_hearts_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } } } add_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+}
+TAI_dbf_hearts_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+		custom_effect_tooltip = TAI_dbf_hearts_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_hearts_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_hearts_lvl < 1 } } TAI_dbf_hearts_remove = yes }
+			else = { TAI_dbf_hearts_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_hearts_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } } remove_dynamic_modifier = { modifier = TAI_dbf_hearts } custom_effect_tooltip = TAI_dbf_hearts_remove_tt }
+	set_variable = { TAI_dbf_hearts_lvl = 0 }
+}
+
+TAI_dbf_pla_remnants_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_pla_remnants_sev = TAI_dbf_pla_remnants_lvl }
+	multiply_variable = { TAI_dbf_pla_remnants_sev = 33.34 }
+	set_variable = { TAI_dbf_pla_remnants_army_org_factor = -0.04 }
+	multiply_variable = { TAI_dbf_pla_remnants_army_org_factor = TAI_dbf_pla_remnants_lvl }
+	set_variable = { TAI_dbf_pla_remnants_conscription_factor = -0.05 }
+	multiply_variable = { TAI_dbf_pla_remnants_conscription_factor = TAI_dbf_pla_remnants_lvl }
+}
+TAI_dbf_pla_remnants_add = {
+	set_variable = { TAI_dbf_pla_remnants_lvl = 3 }
+	TAI_dbf_pla_remnants_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } } } add_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+}
+TAI_dbf_pla_remnants_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		custom_effect_tooltip = TAI_dbf_pla_remnants_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_pla_remnants_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_pla_remnants_lvl < 1 } } TAI_dbf_pla_remnants_remove = yes }
+			else = { TAI_dbf_pla_remnants_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_pla_remnants_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } } remove_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } custom_effect_tooltip = TAI_dbf_pla_remnants_remove_tt }
+	set_variable = { TAI_dbf_pla_remnants_lvl = 0 }
+}
+
+TAI_dbf_transition_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_transition_sev = TAI_dbf_transition_lvl }
+	multiply_variable = { TAI_dbf_transition_sev = 33.34 }
+	set_variable = { TAI_dbf_transition_production_factory_efficiency_gain_factor = -0.05 }
+	multiply_variable = { TAI_dbf_transition_production_factory_efficiency_gain_factor = TAI_dbf_transition_lvl }
+	set_variable = { TAI_dbf_transition_consumer_goods_factor = 0.02 }
+	multiply_variable = { TAI_dbf_transition_consumer_goods_factor = TAI_dbf_transition_lvl }
+}
+TAI_dbf_transition_add = {
+	set_variable = { TAI_dbf_transition_lvl = 3 }
+	TAI_dbf_transition_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_transition } } } add_dynamic_modifier = { modifier = TAI_dbf_transition } }
+}
+TAI_dbf_transition_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_transition } }
+		custom_effect_tooltip = TAI_dbf_transition_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_transition_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_transition_lvl < 1 } } TAI_dbf_transition_remove = yes }
+			else = { TAI_dbf_transition_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_transition_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_transition } } remove_dynamic_modifier = { modifier = TAI_dbf_transition } custom_effect_tooltip = TAI_dbf_transition_remove_tt }
+	set_variable = { TAI_dbf_transition_lvl = 0 }
+}
+
+TAI_dbf_warlordism_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_warlordism_sev = TAI_dbf_warlordism_lvl }
+	multiply_variable = { TAI_dbf_warlordism_sev = 33.34 }
+	set_variable = { TAI_dbf_warlordism_political_power_gain = -0.04 }
+	multiply_variable = { TAI_dbf_warlordism_political_power_gain = TAI_dbf_warlordism_lvl }
+	set_variable = { TAI_dbf_warlordism_production_speed_buildings_factor = -0.05 }
+	multiply_variable = { TAI_dbf_warlordism_production_speed_buildings_factor = TAI_dbf_warlordism_lvl }
+}
+TAI_dbf_warlordism_add = {
+	set_variable = { TAI_dbf_warlordism_lvl = 3 }
+	TAI_dbf_warlordism_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } } } add_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+}
+TAI_dbf_warlordism_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		custom_effect_tooltip = TAI_dbf_warlordism_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_warlordism_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_warlordism_lvl < 1 } } TAI_dbf_warlordism_remove = yes }
+			else = { TAI_dbf_warlordism_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_warlordism_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } } remove_dynamic_modifier = { modifier = TAI_dbf_warlordism } custom_effect_tooltip = TAI_dbf_warlordism_remove_tt }
+	set_variable = { TAI_dbf_warlordism_lvl = 0 }
+}
+
+TAI_dbf_carpetbag_recalc = {
+	# v3.19 sev
+	set_variable = { TAI_dbf_carpetbag_sev = TAI_dbf_carpetbag_lvl }
+	multiply_variable = { TAI_dbf_carpetbag_sev = 33.34 }
+	set_variable = { TAI_dbf_carpetbag_political_power_gain = -0.03 }
+	multiply_variable = { TAI_dbf_carpetbag_political_power_gain = TAI_dbf_carpetbag_lvl }
+	set_variable = { TAI_dbf_carpetbag_stability_factor = -0.02 }
+	multiply_variable = { TAI_dbf_carpetbag_stability_factor = TAI_dbf_carpetbag_lvl }
+}
+TAI_dbf_carpetbag_add = {
+	set_variable = { TAI_dbf_carpetbag_lvl = 3 }
+	TAI_dbf_carpetbag_recalc = yes
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } } } add_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+}
+TAI_dbf_carpetbag_reduce = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		custom_effect_tooltip = TAI_dbf_carpetbag_reduce_tt
+		hidden_effect = {
+			subtract_from_variable = { TAI_dbf_carpetbag_lvl = 1 }
+			if = { limit = { check_variable = { TAI_dbf_carpetbag_lvl < 1 } } TAI_dbf_carpetbag_remove = yes }
+			else = { TAI_dbf_carpetbag_recalc = yes force_update_dynamic_modifier = yes }
+		}
+	}
+}
+TAI_dbf_carpetbag_remove = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } } remove_dynamic_modifier = { modifier = TAI_dbf_carpetbag } custom_effect_tooltip = TAI_dbf_carpetbag_remove_tt }
+	set_variable = { TAI_dbf_carpetbag_lvl = 0 }
+}
+
+# Scope: NKO. Cosmetic only: the communist_state leader shows as Juche (deep red on the map / pie chart)
+TAI_nko_juche_look = {
+	if = { limit = { has_country_leader_ideology = communist_state } set_country_leader_ideology = Juche }
+}

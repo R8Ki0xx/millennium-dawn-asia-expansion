@@ -1,0 +1,14 @@
+# MD ROC Return v3.15 —— 中共改革派
+add_namespace = roc_return
+
+country_event = {
+	id = roc_return.150
+	title = roc_return.150.t
+	desc = roc_return.150.d
+	picture = GFX_TAI_ev_43_CHI_detente
+	is_triggered_only = yes
+	option = {
+		name = roc_return.150.a
+		add_political_power = 50
+	}
+}

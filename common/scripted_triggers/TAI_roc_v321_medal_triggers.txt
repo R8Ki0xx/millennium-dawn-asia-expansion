@@ -1,0 +1,17 @@
+# MD ROC Return v3.21 —— 勋章的可用条件（结构参考 LKMT 的 unit_medals_scripted_triggers）
+ROC_should_have_roc_medals_trigger = {
+	original_tag = CHI
+	has_country_flag = ROC_new_chi
+}
+# 左派（社民党、共产党、民革）执政或参与联合执政时，另有一套
+ROC_should_have_left_medals_trigger = {
+	original_tag = CHI
+	has_country_flag = ROC_new_chi
+	OR = {
+		check_variable = { ruling_party = 3 }
+		check_variable = { ruling_party = 4 }
+		check_variable = { ruling_party = 14 }
+		has_country_flag = TAI_na_ally_sd
+		has_country_flag = TAI_na_ally_cpc
+	}
+}

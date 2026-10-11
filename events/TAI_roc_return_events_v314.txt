@@ -1,0 +1,24 @@
+# MD ROC Return v3.14 —— 南京总统府
+add_namespace = roc_return
+
+news_event = {
+	id = roc_return.140
+	title = roc_return.140.t
+	desc = roc_return.140.d
+	picture = GFX_TAI_ev_nanjing_palace
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.140.a
+		trigger = { tag = CHI has_country_flag = ROC_new_chi }
+		log = "[GetDateText]: [This.GetName]: roc_return.140.a executed"
+		add_stability = 0.03
+		add_political_power = 50
+	}
+	option = {
+		name = roc_return.140.b
+		trigger = { NOT = { AND = { tag = CHI has_country_flag = ROC_new_chi } } }
+		log = "[GetDateText]: [This.GetName]: roc_return.140.b executed"
+	}
+}

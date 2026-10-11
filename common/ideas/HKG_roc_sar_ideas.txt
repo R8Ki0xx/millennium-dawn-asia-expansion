@@ -1,0 +1,69 @@
+# MD ROC Return v3.9 —— 香港民国特区（由 _tools/gen_hkg_tree.py 生成）
+ideas = {
+	country = {
+		HKG_roc_kmt_branch_idea = {
+			picture = roc21_chi_neo_kmt_4585e310
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.03
+			}
+		}
+		HKG_roc_exec_led_idea = {
+			picture = HKG_basic_law
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.03
+			}
+		}
+		HKG_roc_suffrage_idea = {
+			picture = HKG_basic_law
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				democratic_drift = 0.05
+			}
+		}
+		HKG_roc_icac_idea = {
+			picture = HK_police_department
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		HKG_roc_finance_hub_idea = {
+			picture = roc21_generic_company_bank_idea_25d549e8
+			modifier = {
+				tax_gain_multiplier_modifier = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+		HKG_roc_free_port_idea = {
+			picture = economic_prosperity
+			modifier = {
+				trade_opinion_factor = 0.20
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HKG_roc_tech_idea = {
+			picture = roc21_ger_research_investment_idea_efe698ea
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		HKG_roc_housing_idea = {
+			picture = HKG_housing_problem
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+		HKG_roc_selfrule_idea = {
+			picture = HKG_basic_law
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+	}
+}

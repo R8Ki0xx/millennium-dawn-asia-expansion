@@ -1,0 +1,89 @@
+# MD ROC Return v3.14 —— 南京总统府（原版地标，千禧黎明删掉了；KX 用的也是这一套模型）
+# 三个版本：民国版（青天白日旗）/ _prc 红旗版 / _gen 通用版，由 TAI_roc_palace_update 按南京的控制者切换
+@landmark_repair_speed_factor = 0.15
+
+buildings = {
+	landmark_nanjing_presidential_palace = {
+		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_nanjing_presidential_palace_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { CHI PRC }
+			modifiers = {
+				political_power_factor = 0.05
+			}
+		}
+	}
+
+	landmark_nanjing_presidential_palace_prc = {
+		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_nanjing_presidential_palace_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { CHI PRC }
+			modifiers = {
+				political_power_factor = 0.05
+			}
+		}
+	}
+
+	landmark_nanjing_presidential_palace_gen = {
+		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_nanjing_presidential_palace_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		drawn_at_distance = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { CHI PRC }
+			modifiers = {
+				political_power_factor = 0.05
+			}
+		}
+	}
+}

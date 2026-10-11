@@ -1,0 +1,9 @@
+# MD ROC Return v3.15 —— 五院院长与立法院的施政效果
+TAI_five_yuan_modifier = {
+	icon = GFX_idea_CHI_three_principles_of_the_people
+	political_power_factor = TAI_gy_pp
+	stability_factor = TAI_gy_stab
+	research_speed_factor = TAI_gy_res
+	production_speed_buildings_factor = TAI_gy_build
+	war_support_factor = TAI_gy_ws
+}

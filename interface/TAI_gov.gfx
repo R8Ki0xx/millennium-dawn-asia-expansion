@@ -1,0 +1,72 @@
+# MD ROC Return v3.17 —— 五院政府面板（由 _tools/make_gov.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_TAI_gov_header" texturefile = "gfx/interface/scripted_gui/TAI_gov/gov_header.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_bg" texturefile = "gfx/interface/scripted_gui/TAI_gov/gov_bg.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_seat" texturefile = "gfx/interface/scripted_gui/TAI_gov/seat.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_lien_chan" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_lien_chan.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_ma_ying_jeou" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_ma_ying_jeou.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_eric_chu" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_eric_chu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_wang_yang" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_wang_yang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_chen_liangyu" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_chen_liangyu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_james_soong" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_james_soong.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_wang_bingzhang" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_wang_bingzhang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_xu_wenli" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_xu_wenli.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_zheng_jianbang" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_zheng_jianbang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_hu_jintao" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_hu_jintao.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_xu_jialu" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_xu_jialu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_hao_bocun" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_hao_bocun.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_han_kuo_yu" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_han_kuo_yu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_zhao_shao_kang" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_zhao_shao_kang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_yok_mu_ming" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_yok_mu_ming.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_qin_yongmin" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_qin_yongmin.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_ding_shisun" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_ding_shisun.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_wan_exiang" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_wan_exiang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_liu_xiaobo" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_liu_xiaobo.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_wong_min" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_wong_min.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_li_ao" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_li_ao.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_he_luli" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_he_luli.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_chin_jin" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_chin_jin.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_hou_yu_ih" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_hou_yu_ih.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_ai_weiwei" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_ai_weiwei.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_he_wei" texturefile = "gfx/interface/scripted_gui/TAI_gov/p_he_wei.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_hao_bo_cun" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_hao_bo_cun.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_lien_chan" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_lien_chan.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_ma_ying_jeou" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_ma_ying_jeou.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_eric_chu" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_eric_chu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_hou_yu_ih" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_hou_yu_ih.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_wang_bingzhang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_wang_bingzhang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_liu_xiaobo" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_liu_xiaobo.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_wong_min" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_wong_min.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_qin_yongmin" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_qin_yongmin.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_xu_wenli" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_xu_wenli.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_he_luli" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_he_luli.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_wan_exiang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_wan_exiang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_zheng_jianbang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_zheng_jianbang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_li_keqiang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_li_keqiang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_wu_bangguo" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_wu_bangguo.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_bo_xilai" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_bo_xilai.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_he_wei" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_he_wei.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_li_ao" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_li_ao.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_yok_mu_ming" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_yok_mu_ming.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_james_soong" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_james_soong.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_xu_jialu" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_xu_jialu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_chin_jin" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_chin_jin.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_zhao_shao_kang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_zhao_shao_kang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_han_kuo_yu" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_han_kuo_yu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_tang_yao_ming" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_tang_yao_ming.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_li_jie" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_li_jie.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_jin_youzhi" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_jin_youzhi.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_wang_yang" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_wang_yang.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_chen_liangyu" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_chen_liangyu.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_hu_jintao" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_hu_jintao.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_TAI_gov_pres_none" texturefile = "gfx/interface/scripted_gui/TAI_gov/pr_none.dds" legacy_lazy_load = no }
+	progressBarType = {
+		name = "GFX_TAI_gov_tbar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/TAI_gov/tbar_ly.dds"
+		textureFile2 = "gfx/interface/scripted_gui/TAI_gov/tbar_ly_empty.dds"
+		size = { x = 180 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

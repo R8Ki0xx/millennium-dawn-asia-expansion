@@ -1,0 +1,42 @@
+# MD ROC Return v3.10 —— 国民大会面板的政党标记与总统选举方式
+defined_text = {
+	name = TAI_na_mark_kmt
+	text = { trigger = { check_variable = { ruling_party = 1 } } localization_key = TAI_na_mark_ruling }
+	text = { trigger = { OR = { has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } localization_key = TAI_na_mark_ally }
+	text = { localization_key = TAI_na_mark_none }
+}
+defined_text = {
+	name = TAI_na_mark_dp
+	text = { trigger = { check_variable = { ruling_party = 2 } } localization_key = TAI_na_mark_ruling }
+	text = { trigger = { OR = { has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } localization_key = TAI_na_mark_ally }
+	text = { localization_key = TAI_na_mark_none }
+}
+defined_text = {
+	name = TAI_na_mark_sd
+	text = { trigger = { check_variable = { ruling_party = 3 } } localization_key = TAI_na_mark_ruling }
+	text = { trigger = { OR = { has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } localization_key = TAI_na_mark_ally }
+	text = { localization_key = TAI_na_mark_none }
+}
+defined_text = {
+	name = TAI_na_mark_pfp
+	text = { trigger = { check_variable = { ruling_party = 14 } } localization_key = TAI_na_mark_ruling }
+	text = { trigger = { has_country_flag = TAI_na_ally_pfp } localization_key = TAI_na_mark_ally }
+	text = { localization_key = TAI_na_mark_none }
+}
+defined_text = {
+	name = TAI_na_president_mode
+	text = { trigger = { has_idea = TAI_amend_direct_election_idea } localization_key = TAI_na_president_direct }
+	text = { localization_key = TAI_na_president_indirect }
+}
+defined_text = {
+	name = TAI_na_session_result
+	text = { trigger = { check_variable = { TAI_na_support > 0.499 } } localization_key = TAI_na_session_pass }
+	text = { localization_key = TAI_na_session_fail }
+}
+# v3.19
+defined_text = {
+	name = TAI_na_mark_cpc
+	text = { trigger = { check_variable = { ruling_party = 4 } } localization_key = TAI_na_mark_ruling }
+	text = { trigger = { has_country_flag = TAI_na_ally_cpc } localization_key = TAI_na_mark_ally }
+	text = { localization_key = TAI_na_mark_none }
+}

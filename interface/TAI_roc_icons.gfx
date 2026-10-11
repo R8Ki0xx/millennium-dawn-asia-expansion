@@ -1,0 +1,4 @@
+# MD ROC Return v3.6 —— 自制关键节点/斜分国旗国策图标（其余沿用千禧黎明原版图标）
+spriteTypes = {
+	spriteType = { name = "GFX_decision_category_TAI_national_assembly" texturefile = "gfx/interface/goals/TAI_roc/cat_national_assembly.dds" }
+}

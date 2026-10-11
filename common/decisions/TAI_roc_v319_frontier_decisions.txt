@@ -1,0 +1,139 @@
+# MD ROC Return v3.19 —— 五族共和 · 边疆一体化（由 _tools/v319_frontier.py 生成）
+TAI_frontier_category = {
+	TAI_fr_xj_fund = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 30
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_xj_done } }
+		available = { OR = { controls_state = 592 controls_state = 591 } check_variable = { treasury > 5 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_xj_fund"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = { limit = { state = 592 } add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			set_temp_variable = { fr_d = 6 }
+			TAI_fr_xj_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_xj_talks = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 40
+		days_re_enable = 180
+		visible = { NOT = { has_country_flag = TAI_fr_xj_done } }
+		available = { OR = { controls_state = 592 controls_state = 591 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_xj_talks"
+			add_stability = -0.01
+			set_temp_variable = { fr_d = 8 }
+			TAI_fr_xj_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_xj_corps = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 35
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_xj_done } }
+		available = { OR = { controls_state = 592 controls_state = 591 } check_variable = { treasury > 3 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_xj_corps"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			592 = { add_compliance = 5 }
+			set_temp_variable = { fr_d = 5 }
+			TAI_fr_xj_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_tb_dialogue = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 45
+		days_re_enable = 240
+		visible = { NOT = { has_country_flag = TAI_fr_tb_done } }
+		available = { OR = { controls_state = 589 controls_state = 588 controls_state = 585 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_tb_dialogue"
+			add_stability = -0.01
+			set_temp_variable = { fr_d = 10 }
+			TAI_fr_tb_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_tb_religion = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 30
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_tb_done } }
+		available = { OR = { controls_state = 589 controls_state = 588 controls_state = 585 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_tb_religion"
+			589 = { add_compliance = 5 }
+			set_temp_variable = { fr_d = 6 }
+			TAI_fr_tb_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_tb_railway = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 25
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_tb_done } }
+		available = { OR = { controls_state = 589 controls_state = 588 controls_state = 585 } check_variable = { treasury > 6 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_tb_railway"
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = { limit = { state = 589 } add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			set_temp_variable = { fr_d = 5 }
+			TAI_fr_tb_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_im_league = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 30
+		days_re_enable = 180
+		visible = { NOT = { has_country_flag = TAI_fr_im_done } }
+		available = { OR = { controls_state = 556 controls_state = 1097 controls_state = 1072 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_im_league"
+			add_political_power = 10
+			set_temp_variable = { fr_d = 8 }
+			TAI_fr_im_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_im_grassland = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 20
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_im_done } }
+		available = { OR = { controls_state = 556 controls_state = 1097 controls_state = 1072 } check_variable = { treasury > 4 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_im_grassland"
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+			556 = { add_compliance = 5 }
+			set_temp_variable = { fr_d = 6 }
+			TAI_fr_im_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_fr_im_hulunbuir = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 25
+		days_re_enable = 120
+		visible = { NOT = { has_country_flag = TAI_fr_im_done } }
+		available = { OR = { controls_state = 556 controls_state = 1097 controls_state = 1072 } check_variable = { treasury > 4 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_fr_im_hulunbuir"
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = { limit = { state = 1097 } add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			set_temp_variable = { fr_d = 5 }
+			TAI_fr_im_add = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+}

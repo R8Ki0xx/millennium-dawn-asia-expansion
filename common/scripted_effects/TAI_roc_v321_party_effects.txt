@@ -1,0 +1,8 @@
+# MD ROC Return v3.21 —— 政党线入口的旗标（由 _tools/v321_party.py 生成）
+# Scope: 新 CHI，每月。执政党或执政联盟里的政党，都记一个「曾经执政」的旗标
+TAI_roc_gov_flags_update = {
+	if = { limit = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt } } set_country_flag = TAI_gov_kmt }
+	if = { limit = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp } } set_country_flag = TAI_gov_dp }
+	if = { limit = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd } } set_country_flag = TAI_gov_sd }
+	if = { limit = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } set_country_flag = TAI_gov_cpc }
+}

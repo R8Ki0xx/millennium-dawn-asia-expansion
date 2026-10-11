@@ -1,0 +1,18 @@
+# MD ROC Return v3.20
+opinion_modifiers = {
+	TAI_ext_kor_nuclear_alarm = { value = -40 }
+	TAI_ext_kor_roc_ties = { value = 25 }
+	TAI_ext_kor_thaad = { value = -30 }
+	TAI_ext_kor_umbrella = { value = 15 }
+	TAI_ext_phi_us_ally = { value = 20 }
+	TAI_ext_phi_china_pivot = { value = 25 }
+	TAI_ext_phi_us_cool = { value = -15 }
+	TAI_ext_vie_us_partner = { value = 20 }
+	TAI_ext_vie_china_coop = { value = 20 }
+	TAI_ext_vie_russia = { value = 20 }
+	TAI_ext_vie_india = { value = 15 }
+	TAI_ext_vie_japan = { value = 15 }
+	TAI_ext_vie_korea = { value = 15 }
+	TAI_ext_vie_scs_tension = { value = -35 }
+	TAI_ext_vie_roc = { value = 20 }
+}

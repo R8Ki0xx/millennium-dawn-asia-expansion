@@ -1,0 +1,5 @@
+# MD ROC Return v3.21
+# 作为 add_relation_rule_override 的 trigger，FROM 是志愿军的接收方
+TAI_volunteer_target_is_rebel = {
+	FROM = { has_country_flag = TAI_mainland_rebels }
+}

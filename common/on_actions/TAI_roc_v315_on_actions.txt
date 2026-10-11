@@ -1,0 +1,12 @@
+# MD ROC Return v3.15 —— 五院政府
+on_actions = {
+	on_monthly_CHI = {
+		effect = {
+			if = {
+				limit = { has_country_flag = ROC_new_chi }
+				if = { limit = { NOT = { has_variable = TAI_gov_premier } } TAI_gov_init = yes }
+				else = { TAI_gov_monthly = yes }
+			}
+		}
+	}
+}

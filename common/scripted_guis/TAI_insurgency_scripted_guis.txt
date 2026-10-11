@@ -1,0 +1,25 @@
+scripted_gui = {
+	TAI_insurgency_map_GUI = {
+		window_name = "TAI_insurgency_map_window"
+		context_type = decision_category
+		properties = {
+			TAI_ins_552_icon = { image = "[TAI_ins_552_img]" }
+			TAI_ins_554_icon = { image = "[TAI_ins_554_img]" }
+			TAI_ins_555_icon = { image = "[TAI_ins_555_img]" }
+			TAI_ins_1095_icon = { image = "[TAI_ins_1095_img]" }
+			TAI_ins_1096_icon = { image = "[TAI_ins_1096_img]" }
+			TAI_ins_1097_icon = { image = "[TAI_ins_1097_img]" }
+			TAI_ins_547_icon = { image = "[TAI_ins_547_img]" }
+			TAI_ins_548_icon = { image = "[TAI_ins_548_img]" }
+			TAI_ins_549_icon = { image = "[TAI_ins_549_img]" }
+			TAI_ins_434_icon = { image = "[TAI_ins_434_img]" }
+			TAI_ins_558_icon = { image = "[TAI_ins_558_img]" }
+			TAI_ins_556_icon = { image = "[TAI_ins_556_img]" }
+			TAI_ins_559_icon = { image = "[TAI_ins_559_img]" }
+			TAI_ins_560_icon = { image = "[TAI_ins_560_img]" }
+			TAI_ins_1072_icon = { image = "[TAI_ins_1072_img]" }
+			TAI_ins_588_icon = { image = "[TAI_ins_588_img]" }
+			TAI_ins_592_icon = { image = "[TAI_ins_592_img]" }
+		}
+	}
+}

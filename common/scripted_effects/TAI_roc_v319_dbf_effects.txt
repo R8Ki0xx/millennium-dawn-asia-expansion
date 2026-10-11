@@ -1,0 +1,165 @@
+# MD ROC Return v3.19 —— 逐步消除 debuff（由 _tools/v319_debuff.py 生成）
+
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_black_gold_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		subtract_from_variable = { TAI_dbf_black_gold_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_black_gold_lvl < 0.05 } } TAI_dbf_black_gold_remove = yes }
+		else = { TAI_dbf_black_gold_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_isolation_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+		subtract_from_variable = { TAI_dbf_isolation_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_isolation_lvl < 0.05 } } TAI_dbf_isolation_remove = yes }
+		else = { TAI_dbf_isolation_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_conscription_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+		subtract_from_variable = { TAI_dbf_conscription_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_conscription_lvl < 0.05 } } TAI_dbf_conscription_remove = yes }
+		else = { TAI_dbf_conscription_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_imbalance_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+		subtract_from_variable = { TAI_dbf_imbalance_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_imbalance_lvl < 0.05 } } TAI_dbf_imbalance_remove = yes }
+		else = { TAI_dbf_imbalance_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_hearts_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+		subtract_from_variable = { TAI_dbf_hearts_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_hearts_lvl < 0.05 } } TAI_dbf_hearts_remove = yes }
+		else = { TAI_dbf_hearts_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_pla_remnants_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		subtract_from_variable = { TAI_dbf_pla_remnants_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_pla_remnants_lvl < 0.05 } } TAI_dbf_pla_remnants_remove = yes }
+		else = { TAI_dbf_pla_remnants_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_transition_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_transition } }
+		subtract_from_variable = { TAI_dbf_transition_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_transition_lvl < 0.05 } } TAI_dbf_transition_remove = yes }
+		else = { TAI_dbf_transition_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_warlordism_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		subtract_from_variable = { TAI_dbf_warlordism_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_warlordism_lvl < 0.05 } } TAI_dbf_warlordism_remove = yes }
+		else = { TAI_dbf_warlordism_recalc = yes }
+	}
+}
+# 削弱 dbf_d 级（1 级 = 严重度 33）
+TAI_dbf_carpetbag_ease = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		subtract_from_variable = { TAI_dbf_carpetbag_lvl = dbf_d }
+		if = { limit = { check_variable = { TAI_dbf_carpetbag_lvl < 0.05 } } TAI_dbf_carpetbag_remove = yes }
+		else = { TAI_dbf_carpetbag_recalc = yes }
+	}
+}
+# Scope: TAI 或光复后的 CHI，每月：各项 debuff 自然恢复
+TAI_dbf_monthly = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_stability > 0.6 } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { check_variable = { TAI_ly_support > 0.499 } } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_black_gold_rate = dbf_d }
+		multiply_variable = { TAI_dbf_black_gold_rate = 33.34 }
+		TAI_dbf_black_gold_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { OR = { has_idea = p5_member is_in_faction = yes } } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_isolation_rate = dbf_d }
+		multiply_variable = { TAI_dbf_isolation_rate = 33.34 }
+		TAI_dbf_isolation_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_war_support > 0.5 } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_conscription_rate = dbf_d }
+		multiply_variable = { TAI_dbf_conscription_rate = 33.34 }
+		TAI_dbf_conscription_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_war_support > 0.5 } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_imbalance_rate = dbf_d }
+		multiply_variable = { TAI_dbf_imbalance_rate = 33.34 }
+		TAI_dbf_imbalance_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_stability > 0.6 } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { has_war = no } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_hearts_rate = dbf_d }
+		multiply_variable = { TAI_dbf_hearts_rate = 33.34 }
+		TAI_dbf_hearts_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_war = no } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { has_war_support > 0.4 } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_pla_remnants_rate = dbf_d }
+		multiply_variable = { TAI_dbf_pla_remnants_rate = 33.34 }
+		TAI_dbf_pla_remnants_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_transition } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_stability > 0.6 } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { has_war = no } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_transition_rate = dbf_d }
+		multiply_variable = { TAI_dbf_transition_rate = 33.34 }
+		TAI_dbf_transition_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_stability > 0.6 } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { check_variable = { TAI_ly_support > 0.499 } } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_warlordism_rate = dbf_d }
+		multiply_variable = { TAI_dbf_warlordism_rate = 33.34 }
+		TAI_dbf_warlordism_ease = yes
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		set_temp_variable = { dbf_d = 0.015 }
+		if = { limit = { has_stability > 0.6 } add_to_temp_variable = { dbf_d = 0.015 } }
+		if = { limit = { check_variable = { TAI_ly_support > 0.499 } } add_to_temp_variable = { dbf_d = 0.015 } }
+		set_variable = { TAI_dbf_carpetbag_rate = dbf_d }
+		multiply_variable = { TAI_dbf_carpetbag_rate = 33.34 }
+		TAI_dbf_carpetbag_ease = yes
+	}
+	force_update_dynamic_modifier = yes
+}

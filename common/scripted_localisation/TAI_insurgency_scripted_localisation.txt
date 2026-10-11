@@ -1,0 +1,238 @@
+defined_text = {
+	name = TAI_ins_552_img
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_552_3 }
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_552_2 }
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_552_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_552_tier
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 552 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_554_img
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_554_3 }
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_554_2 }
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_554_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_554_tier
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 554 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_555_img
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_555_3 }
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_555_2 }
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_555_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_555_tier
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 555 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_1095_img
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_1095_3 }
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_1095_2 }
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_1095_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_1095_tier
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 1095 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_1096_img
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_1096_3 }
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_1096_2 }
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_1096_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_1096_tier
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 1096 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_1097_img
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_1097_3 }
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_1097_2 }
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_1097_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_1097_tier
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 1097 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_547_img
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_547_3 }
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_547_2 }
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_547_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_547_tier
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 547 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_548_img
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_548_3 }
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_548_2 }
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_548_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_548_tier
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 548 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_549_img
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_549_3 }
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_549_2 }
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_549_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_549_tier
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 549 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_434_img
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_434_3 }
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_434_2 }
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_434_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_434_tier
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 434 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_558_img
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_558_3 }
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_558_2 }
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_558_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_558_tier
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 558 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_556_img
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_556_3 }
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_556_2 }
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_556_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_556_tier
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 556 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_559_img
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_559_3 }
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_559_2 }
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_559_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_559_tier
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 559 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_560_img
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_560_3 }
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_560_2 }
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_560_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_560_tier
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 560 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_1072_img
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_1072_3 }
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_1072_2 }
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_1072_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_1072_tier
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 1072 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_588_img
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_588_3 }
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_588_2 }
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_588_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_588_tier
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 588 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}
+defined_text = {
+	name = TAI_ins_592_img
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = GFX_TAI_ins_592_3 }
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = GFX_TAI_ins_592_2 }
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = GFX_TAI_ins_592_1 }
+	text = { localization_key = GFX_TAI_ins_blank }
+}
+defined_text = {
+	name = TAI_ins_592_tier
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } localization_key = TAI_ins_tier_3 }
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } localization_key = TAI_ins_tier_2 }
+	text = { trigger = { 592 = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } localization_key = TAI_ins_tier_1 }
+	text = { localization_key = TAI_ins_tier_0 }
+}

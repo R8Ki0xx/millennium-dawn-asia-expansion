@@ -1,0 +1,596 @@
+# MD ROC Return v3.21 —— 两岸共用国策树「两岸内战」（由 _tools/v321_csw.py 生成）
+# 共产党树（china_focus，复制自千禧的 05_china.txt）与台湾反攻树（TAI_roc_return_focus）共用；共产党侧、台湾侧用 allow_branch 区分
+
+shared_focus = {
+	id = CSW_cross_strait_war
+	icon = roc21_chi_chinese_civil_war_4d4dda93
+	x = 140
+	y = 19
+	offset = {
+		x = -78
+		y = -17
+		trigger = { has_focus_tree = TAI_roc_return_focus }
+	}
+	cost = 1
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		OR = {
+		has_civil_war = yes
+		has_country_flag = TAI_uprising_started
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_cross_strait_war"
+		add_political_power = 25
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 NOT = { OR = { has_civil_war = yes has_country_flag = TAI_uprising_started } } }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_martial_law
+	icon = roc21_sov_stronghold_of_law_and_or_bd766fee
+	x = -5
+	y = 1
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_cross_strait_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_martial_law"
+		add_stability = 0.05
+		add_war_support = 0.03
+		add_political_power = 50
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_mobilize_pla
+	icon = peoples_liberation_army
+	x = -3
+	y = 1
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_cross_strait_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_mobilize_pla"
+		army_experience = 25
+		add_war_support = 0.05
+		add_manpower = 50000
+		CSW_clear_civil_war_debuff = yes
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_purge_traitors
+	icon = roc21_prc_50s_purge_anti_party_ele_d4140aec
+	x = -6
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_martial_law }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_purge_traitors"
+		add_stability = -0.02
+		add_political_power = 75
+		if = {
+		limit = { country_exists = TAI }
+		TAI = {
+		add_to_variable = { TAI_mainland_unrest = -10 }
+		clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		}
+		}
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_blockade_rebels
+	icon = roc21_atw_target_the_food_supply_e15a1804
+	x = -4
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_martial_law focus = CSW_ccp_mobilize_pla }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_blockade_rebels"
+		add_war_support = 0.02
+		random_country = {
+		limit = { has_country_flag = TAI_mainland_rebels }
+		add_stability = -0.05
+		add_war_support = -0.03
+		}
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_seek_russia
+	icon = roc21_align_to_north_korea_48d50d86
+	x = -2
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_mobilize_pla }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_seek_russia"
+		add_political_power = 50
+		if = {
+		limit = { country_exists = SOV }
+		SOV = { add_opinion_modifier = { target = ROOT modifier = CSW_ccp_request_aid } }
+		add_opinion_modifier = { target = SOV modifier = CSW_ccp_request_aid }
+		}
+		if = {
+		limit = { country_exists = NKO }
+		NKO = { add_opinion_modifier = { target = ROOT modifier = CSW_ccp_request_aid } }
+		add_opinion_modifier = { target = NKO modifier = CSW_ccp_request_aid }
+		}
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_strait_deterrence
+	icon = industry_military
+	x = -5
+	y = 3
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_purge_traitors focus = CSW_ccp_blockade_rebels }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_strait_deterrence"
+		add_war_support = 0.03
+		if = {
+		limit = { country_exists = TAI }
+		TAI = { add_stability = -0.02 }
+		}
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_total_war
+	icon = roc21_total_war_41609ecd
+	x = -3
+	y = 3
+	relative_position_id = CSW_cross_strait_war
+	cost = 5
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_blockade_rebels focus = CSW_ccp_seek_russia }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_total_war"
+		add_ideas = CSW_total_war_idea
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_ccp_restore_order
+	icon = roc21_prc_50s_reinforce_party_cont_7eca1d77
+	x = -4
+	y = 4
+	relative_position_id = CSW_cross_strait_war
+	cost = 5
+	allow_branch = {
+		original_tag = CHI
+	}
+	prerequisite = { focus = CSW_ccp_strait_deterrence focus = CSW_ccp_total_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		NOT = { has_civil_war = yes }
+		NOT = {
+		any_country = { has_country_flag = TAI_mainland_rebels }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ccp_restore_order"
+		add_stability = 0.08
+		add_political_power = 100
+		CSW_clear_civil_war_debuff = yes
+		if = { limit = { has_idea = CSW_total_war_idea } remove_ideas = CSW_total_war_idea }
+	}
+	ai_will_do = {
+		base = 5000
+		modifier = { factor = 0 has_civil_war = no }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_volunteer_corps
+	icon = army_recruting
+	x = 5
+	y = 1
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_cross_strait_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		has_country_flag = TAI_volunteer_phase
+		check_variable = { TAI_volunteer_count < 8 }
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_volunteer_corps"
+		add_to_variable = { TAI_volunteer_count = 2 }
+		TAI_spawn_volunteers = yes
+		TAI_spawn_volunteers = yes
+		add_war_support = 0.03
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_arm_rebels
+	icon = army_military_industryy
+	x = 7
+	y = 1
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_cross_strait_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		has_country_flag = TAI_volunteer_phase
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_arm_rebels"
+		TAI_arm_rebels = yes
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_armed_intervention
+	icon = army_reform
+	x = 9
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_volunteer_corps }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		has_country_flag = TAI_volunteer_phase
+		NOT = { has_war_with = CHI }
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_armed_intervention"
+		TAI_armed_intervention = yes
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_recognize
+	icon = diplomatic_treaty
+	x = 4
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_volunteer_corps }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		has_country_flag = TAI_volunteer_phase
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_recognize"
+		add_political_power = 25
+		random_country = {
+		limit = { has_country_flag = TAI_mainland_rebels }
+		add_stability = 0.05
+		add_war_support = 0.05
+		}
+		CHI = { add_stability = -0.03 }
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_intel_ops
+	icon = Generic_Intelligence_Gathering
+	x = 6
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_volunteer_corps focus = CSW_tai_arm_rebels }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_intel_ops"
+		add_political_power = 50
+		CHI = { add_stability = -0.02 }
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_us_backing
+	icon = align_to_america
+	x = 8
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_arm_rebels }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		country_exists = USA
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_us_backing"
+		set_country_flag = TAI_us_backing_flag
+		USA = { add_opinion_modifier = { target = ROOT modifier = CSW_tai_lobby_us } }
+		add_opinion_modifier = { target = USA modifier = CSW_tai_lobby_us }
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_psychological_war
+	icon = roc21_sov_cyber_propaganda_farms_69c5cbde
+	x = 5
+	y = 3
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_recognize focus = CSW_tai_intel_ops }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_psychological_war"
+		CHI = {
+		add_war_support = -0.03
+		add_stability = -0.02
+		}
+		add_to_variable = { TAI_mainland_unrest = 5 }
+		clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_logistics_bridge
+	icon = navy
+	x = 7
+	y = 3
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_intel_ops focus = CSW_tai_us_backing }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_logistics_bridge"
+		random_owned_controlled_state = {
+		limit = { is_coastal = yes }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = { type = dockyard level = 1 instant_build = yes }
+		}
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_tai_join_the_war
+	icon = army_reform
+	x = 6
+	y = 4
+	relative_position_id = CSW_cross_strait_war
+	cost = 5
+	allow_branch = {
+		original_tag = TAI
+	}
+	prerequisite = { focus = CSW_tai_psychological_war focus = CSW_tai_logistics_bridge }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		has_country_flag = TAI_intervention_escalated
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_tai_join_the_war"
+		army_experience = 25
+		add_war_support = 0.05
+		add_political_power = 75
+	}
+	ai_will_do = {
+		base = 30
+		modifier = { factor = 0 has_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+		modifier = { factor = 0 has_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+	}
+}
+
+shared_focus = {
+	id = CSW_intl_lobby
+	icon = global_community
+	x = 0
+	y = 1
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	prerequisite = { focus = CSW_cross_strait_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_intl_lobby"
+		add_political_power = 40
+		if = {
+		limit = { original_tag = CHI country_exists = SOV }
+		SOV = { add_opinion_modifier = { target = ROOT modifier = CSW_ccp_request_aid } }
+		}
+		else_if = {
+		limit = { original_tag = TAI country_exists = JAP }
+		JAP = { add_opinion_modifier = { target = ROOT modifier = CSW_tai_lobby_us } }
+		}
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
+shared_focus = {
+	id = CSW_humanitarian_corridor
+	icon = Generic_Red_Cross
+	x = 0
+	y = 2
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	prerequisite = { focus = CSW_intl_lobby }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_humanitarian_corridor"
+		add_stability = 0.03
+		add_political_power = 40
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
+shared_focus = {
+	id = CSW_ceasefire_talks
+	icon = white_peace
+	x = 0
+	y = 3
+	relative_position_id = CSW_cross_strait_war
+	cost = 3
+	prerequisite = { focus = CSW_humanitarian_corridor }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	available = {
+		OR = {
+		has_civil_war = yes
+		has_country_flag = TAI_uprising_started
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_ceasefire_talks"
+		add_stability = 0.03
+		add_political_power = 50
+		set_global_flag = CSW_ceasefire_talks
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+
+shared_focus = {
+	id = CSW_new_order
+	icon = national_unity
+	x = 0
+	y = 5
+	relative_position_id = CSW_cross_strait_war
+	cost = 5
+	prerequisite = { focus = CSW_ceasefire_talks }
+	prerequisite = { focus = CSW_ccp_restore_order focus = CSW_tai_join_the_war }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus CSW_new_order"
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		base = 10
+	}
+}
+

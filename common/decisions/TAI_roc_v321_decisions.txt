@@ -1,0 +1,74 @@
+# MD ROC Return v3.21 —— 志愿军阶段与迁都的决议
+TAI_mainland_work_category = {
+	TAI_dec_more_volunteers = {
+		icon = GFX_decision_generic_army_support
+		cost = 50
+		days_re_enable = 30
+		visible = { has_country_flag = TAI_volunteer_phase }
+		available = {
+			has_country_flag = TAI_volunteer_phase
+			check_variable = { TAI_volunteer_count < 8 }
+			any_country = { has_country_flag = TAI_mainland_rebels }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_more_volunteers"
+			add_to_variable = { TAI_volunteer_count = 1 }
+			TAI_spawn_volunteers = yes
+			TAI_spawn_volunteers = yes
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	TAI_dec_armed_intervention = {
+		icon = GFX_decision_generic_army_support
+		cost = 100
+		fire_only_once = yes
+		visible = { has_country_flag = TAI_volunteer_phase NOT = { has_country_flag = TAI_armed_intervention } }
+		available = {
+			has_country_flag = TAI_volunteer_phase
+			NOT = { has_war_with = CHI }
+			any_country = { has_country_flag = TAI_mainland_rebels }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_armed_intervention"
+			TAI_armed_intervention = yes
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	TAI_dec_arm_rebels = {
+		icon = GFX_decision_generic_army_support
+		cost = 40
+		days_re_enable = 20
+		visible = { has_country_flag = TAI_volunteer_phase }
+		available = {
+			has_country_flag = TAI_volunteer_phase
+			any_country = { has_country_flag = TAI_mainland_rebels }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_arm_rebels"
+			TAI_arm_rebels = yes
+		}
+		ai_will_do = { base = 15 }
+	}
+}
+
+TAI_reconstruction_category = {
+	TAI_dec_move_capital_nanjing = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		days_re_enable = 365
+		visible = { has_country_flag = ROC_new_chi }
+		available = {
+			has_country_flag = ROC_new_chi
+			owns_state = 536
+			NOT = { capital_scope = { state = 536 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_move_capital_nanjing"
+			TAI_capital_to_nanjing = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+}
+

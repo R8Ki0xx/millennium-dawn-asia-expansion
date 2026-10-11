@@ -1,0 +1,384 @@
+# 中华人民共和国残余政权（PRC）过渡国策 —— MD ROC Return v3.4
+# 由 _tools/gen_prc_tree.py 生成
+
+focus_tree = {
+	id = PRC_transition_focus
+	country = {
+		factor = 0
+	}
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = PRC_after_beijing
+		icon = communist_china
+		x = 6
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_after_beijing"
+			add_political_power = 75
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = PRC_rebuild_central_committee
+		icon = focus_PRC_the_central_committee
+		x = 2
+		y = 1
+		cost = 7
+		prerequisite = { focus = PRC_after_beijing }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_rebuild_central_committee"
+			add_political_power = 75
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_rectification
+		icon = focus_PRC_yanan_rectification_movement
+		x = 1
+		y = 2
+		cost = 7
+		prerequisite = { focus = PRC_rebuild_central_committee }
+		mutually_exclusive = { focus = PRC_united_front }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_rectification"
+			add_stability = 0.08
+			set_temp_variable = { party_index = 4 }
+			set_temp_variable = { party_popularity_increase = 0.05 }
+			set_temp_variable = { temp_outlook_increase = 0.05 }
+			change_relative_party_popularity = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PRC_united_front
+		icon = focus_PRC_adopt_sun_yat_sens_principles
+		x = 3
+		y = 2
+		cost = 7
+		prerequisite = { focus = PRC_rebuild_central_committee }
+		mutually_exclusive = { focus = PRC_rectification }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_united_front"
+			add_political_power = 50
+			if = { limit = { country_exists = CHI CHI = { has_country_flag = ROC_new_chi } }
+				CHI = { set_temp_variable = { ins_change = 5 } TAI_insurgency_change = yes }
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PRC_underground_party
+		icon = communist_spies
+		x = 1
+		y = 3
+		cost = 7
+		prerequisite = { focus = PRC_rectification focus = PRC_united_front }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_underground_party"
+			if = { limit = { country_exists = CHI CHI = { has_country_flag = ROC_new_chi } }
+				CHI = { set_temp_variable = { ins_change = 10 } TAI_insurgency_change = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_peoples_democratic_dictatorship
+		icon = focus_PRC_consolidate_politcal_power
+		x = 3
+		y = 3
+		cost = 7
+		prerequisite = { focus = PRC_rectification focus = PRC_united_front }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_peoples_democratic_dictatorship"
+			add_stability = 0.10
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PRC_reorganize_remnants
+		icon = focus_PRC_peoples_liberation_army
+		x = 6
+		y = 1
+		cost = 7
+		prerequisite = { focus = PRC_after_beijing }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_reorganize_remnants"
+			army_experience = 25
+			set_temp_variable = { prc_div = 4 }
+			PRC_spawn_divisions = yes
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PRC_northeast_resistance
+		icon = focus_PRC_hundred_regiments_offensive
+		x = 5
+		y = 2
+		cost = 7
+		prerequisite = { focus = PRC_reorganize_remnants }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_northeast_resistance"
+			add_war_support = 0.08
+			if = { limit = { country_exists = CHI CHI = { has_country_flag = ROC_new_chi } }
+				CHI = { set_temp_variable = { ins_change = 5 } TAI_insurgency_change = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_peoples_war
+		icon = Generic_Soldiers_Defense
+		x = 7
+		y = 2
+		cost = 7
+		prerequisite = { focus = PRC_reorganize_remnants }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_peoples_war"
+			if = { limit = { NOT = { has_idea = PRC_peoples_war_idea } } add_ideas = PRC_peoples_war_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_guerrilla_tactics
+		icon = focus_PRC_eight_points_for_attention
+		x = 6
+		y = 3
+		cost = 7
+		prerequisite = { focus = PRC_northeast_resistance focus = PRC_peoples_war }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_guerrilla_tactics"
+			army_experience = 30
+			if = { limit = { country_exists = CHI CHI = { has_country_flag = ROC_new_chi } }
+				CHI = { set_temp_variable = { ins_change = 5 } TAI_insurgency_change = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_base_areas
+		icon = construction
+		x = 6
+		y = 4
+		cost = 10
+		prerequisite = { focus = PRC_guerrilla_tactics }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_base_areas"
+			random_owned_controlled_state = {
+				limit = { OR = { state = 552 state = 554 state = 555 state = 1095 state = 1096 state = 1097 } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = { OR = { state = 552 state = 554 state = 555 state = 1095 state = 1096 state = 1097 } }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			add_ideas = PRC_northeast_base_idea
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_third_civil_war
+		icon = focus_PRC_peoples_liberation_army
+		x = 6
+		y = 5
+		cost = 10
+		prerequisite = { focus = PRC_base_areas }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY }
+		available = {
+			country_exists = CHI
+			CHI = { has_country_flag = ROC_new_chi }
+			custom_trigger_tooltip = {
+				tooltip = PRC_third_civil_war_tt
+				CHI = { check_variable = { TAI_ccp_insurgency > 49 } }
+			}
+		}
+		bypass = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_third_civil_war"
+			custom_effect_tooltip = PRC_third_civil_war_effect_tt
+			CHI = { TAI_ccp_uprising = yes }
+		}
+		ai_will_do = {
+			base = 50
+		}
+	}
+
+	focus = {
+		id = PRC_march_south
+		icon = focus_PRC_assume_leadership
+		x = 6
+		y = 6
+		cost = 7
+		prerequisite = { focus = PRC_third_civil_war }
+		search_filters = { FOCUS_FILTER_ARMY }
+		available = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_march_south"
+			army_experience = 40
+			add_war_support = 0.10
+			set_temp_variable = { prc_div = 4 }
+			PRC_spawn_divisions = yes
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PRC_liberate_nanjing
+		icon = focus_PRC_the_chinese_century
+		x = 6
+		y = 7
+		cost = 10
+		prerequisite = { focus = PRC_march_south }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		available = {
+			has_war_with = CHI
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_liberate_nanjing"
+			add_state_claim = 536
+			add_state_claim = 547
+			add_war_support = 0.10
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PRC_seek_moscow_aid
+		icon = focus_PRC_join_comintern
+		x = 9
+		y = 1
+		cost = 7
+		prerequisite = { focus = PRC_after_beijing }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_seek_moscow_aid"
+			if = { limit = { country_exists = SOV } SOV = { add_opinion_modifier = { target = ROOT modifier = TAI_russia_partner } } }
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_nko_comrades
+		icon = NKO_border_iniatives
+		x = 11
+		y = 1
+		cost = 7
+		prerequisite = { focus = PRC_after_beijing }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_nko_comrades"
+			if = { limit = { country_exists = NKO } NKO = { add_opinion_modifier = { target = ROOT modifier = TAI_nko_detente } give_military_access = ROOT } }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PRC_international_communism
+		icon = communism16
+		x = 10
+		y = 2
+		cost = 7
+		prerequisite = { focus = PRC_seek_moscow_aid focus = PRC_nko_comrades }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_international_communism"
+			every_country = { limit = { OR = { tag = CUB tag = VIE tag = LAO tag = NKO } } add_opinion_modifier = { target = ROOT modifier = TAI_nko_detente } }
+			add_political_power = 50
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PRC_new_china
+		icon = peoples_republic_of_china
+		x = 6
+		y = 8
+		cost = 10
+		prerequisite = { focus = PRC_liberate_nanjing }
+		prerequisite = { focus = PRC_peoples_democratic_dictatorship }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PRC_new_china"
+			custom_effect_tooltip = PRC_victory_condition_tt
+			add_stability = 0.10
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+}

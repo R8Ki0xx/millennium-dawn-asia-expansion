@@ -1,0 +1,926 @@
+# MD ROC Return v3.21 —— 从已安装的 mod 里挑选的国策图标与国家精神图片（由 _tools/v321_icons.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_idea_roc21_chi_neo_kmt_4585e310" texturefile = "gfx/interface/ideas/roc21/chi_neo_kmt_4585e310.png" }
+	spriteType = { name = "GFX_idea_roc21_generic_company_bank_idea_25d549e8" texturefile = "gfx/interface/ideas/roc21/generic_company_bank_idea_25d549e8.dds" }
+	spriteType = { name = "GFX_idea_roc21_ger_research_investment_idea_efe698ea" texturefile = "gfx/interface/ideas/roc21/ger_research_investment_idea_efe698ea.png" }
+	spriteType = { name = "GFX_idea_roc21_microchip_spirit_063b4ed4" texturefile = "gfx/interface/ideas/roc21/microchip_spirit_063b4ed4.dds" }
+	spriteType = { name = "GFX_idea_roc21_generic_banking_reform_b85c3a71" texturefile = "gfx/interface/ideas/roc21/generic_banking_reform_b85c3a71.dds" }
+	spriteType = { name = "GFX_idea_roc21_prc_trade_exploitation_d49fbb18" texturefile = "gfx/interface/ideas/roc21/prc_trade_exploitation_d49fbb18.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_republic_of_china_navy_6c1bafa8" texturefile = "gfx/interface/ideas/roc21/chi_republic_of_china_navy_6c1bafa8.dds" }
+	spriteType = { name = "GFX_idea_roc21_chi_chinese_unity_8c9fbd45" texturefile = "gfx/interface/ideas/roc21/chi_chinese_unity_8c9fbd45.dds" }
+	spriteType = { name = "GFX_idea_roc21_jap_defense_of_taiwan_93baaac4" texturefile = "gfx/interface/ideas/roc21/jap_defense_of_taiwan_93baaac4.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_usa_treaty_a66c648c" texturefile = "gfx/interface/ideas/roc21/chi_usa_treaty_a66c648c.dds" }
+	spriteType = { name = "GFX_idea_roc21_united_nations_blue_c556a2aa" texturefile = "gfx/interface/ideas/roc21/united_nations_blue_c556a2aa.dds" }
+	spriteType = { name = "GFX_idea_roc21_training_law_military_academ_128620b3" texturefile = "gfx/interface/ideas/roc21/training_law_military_academ_128620b3.dds" }
+	spriteType = { name = "GFX_idea_roc21_reserve_divisions_02501730" texturefile = "gfx/interface/ideas/roc21/reserve_divisions_02501730.dds" }
+	spriteType = { name = "GFX_idea_roc21_eng_joint_air_training_schem_5d0aa6e9" texturefile = "gfx/interface/ideas/roc21/eng_joint_air_training_schem_5d0aa6e9.png" }
+	spriteType = { name = "GFX_idea_roc21_prc_50s_economic_ruin_caused_95c815a9" texturefile = "gfx/interface/ideas/roc21/prc_50s_economic_ruin_caused_95c815a9.png" }
+	spriteType = { name = "GFX_idea_roc21_usa_american_reconstruction_f5d6a70e" texturefile = "gfx/interface/ideas/roc21/usa_american_reconstruction_f5d6a70e.png" }
+	spriteType = { name = "GFX_idea_roc21_sov_economic_integration_526cf66d" texturefile = "gfx/interface/ideas/roc21/sov_economic_integration_526cf66d.png" }
+	spriteType = { name = "GFX_idea_roc21_usa_constitutional_protectio_60f43321" texturefile = "gfx/interface/ideas/roc21/usa_constitutional_protectio_60f43321.dds" }
+	spriteType = { name = "GFX_idea_roc21_pla_army_remnants_idea_eed90954" texturefile = "gfx/interface/ideas/roc21/pla_army_remnants_idea_eed90954.png" }
+	spriteType = { name = "GFX_idea_roc21_prc_economic_stabilization_5f25609b" texturefile = "gfx/interface/ideas/roc21/prc_economic_stabilization_5f25609b.png" }
+	spriteType = { name = "GFX_idea_roc21_hun_land_reform_in_progress_a5bfdcad" texturefile = "gfx/interface/ideas/roc21/hun_land_reform_in_progress_a5bfdcad.dds" }
+	spriteType = { name = "GFX_idea_roc21_chi_nationalize_industry_2_f_9f0649aa" texturefile = "gfx/interface/ideas/roc21/chi_nationalize_industry_2_f_9f0649aa.dds" }
+	spriteType = { name = "GFX_idea_roc21_state_capitalism_fc68f45b" texturefile = "gfx/interface/ideas/roc21/state_capitalism_fc68f45b.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_democracy_time_32a245bf" texturefile = "gfx/interface/ideas/roc21/chi_democracy_time_32a245bf.dds" }
+	spriteType = { name = "GFX_idea_roc21_chi_support_kmt_315047c9" texturefile = "gfx/interface/ideas/roc21/chi_support_kmt_315047c9.png" }
+	spriteType = { name = "GFX_idea_roc21_generic_war_economy_9c7fc957" texturefile = "gfx/interface/ideas/roc21/generic_war_economy_9c7fc957.dds" }
+	spriteType = { name = "GFX_idea_roc21_prc_volunteer_mobilization_ff57e80f" texturefile = "gfx/interface/ideas/roc21/prc_volunteer_mobilization_ff57e80f.dds" }
+	spriteType = { name = "GFX_idea_roc21_kmt_expedition_f3d1655b" texturefile = "gfx/interface/ideas/roc21/kmt_expedition_f3d1655b.png" }
+	spriteType = { name = "GFX_idea_roc21_mobile_warfare_7b66980f" texturefile = "gfx/interface/ideas/roc21/mobile_warfare_7b66980f.png" }
+	spriteType = { name = "GFX_idea_roc21_arms_industry_e5b1f39a" texturefile = "gfx/interface/ideas/roc21/arms_industry_e5b1f39a.dds" }
+	spriteType = { name = "GFX_idea_roc21_prc_trade_union_law_fe7329b0" texturefile = "gfx/interface/ideas/roc21/prc_trade_union_law_fe7329b0.dds" }
+	spriteType = { name = "GFX_idea_roc21_usa_taiwan_coop_39f6dfb3" texturefile = "gfx/interface/ideas/roc21/usa_taiwan_coop_39f6dfb3.dds" }
+	spriteType = { name = "GFX_idea_roc21_lao_balance_vin_prc_icon_48b4b261" texturefile = "gfx/interface/ideas/roc21/lao_balance_vin_prc_icon_48b4b261.dds" }
+	spriteType = { name = "GFX_idea_roc21_jap_transparent_government_ea1bc787" texturefile = "gfx/interface/ideas/roc21/jap_transparent_government_ea1bc787.png" }
+	spriteType = { name = "GFX_idea_roc21_prc_liberty_and_equality_ide_f493f682" texturefile = "gfx/interface/ideas/roc21/prc_liberty_and_equality_ide_f493f682.png" }
+	spriteType = { name = "GFX_idea_roc21_generic_nationalists_unity_i_6c86b6d6" texturefile = "gfx/interface/ideas/roc21/generic_nationalists_unity_i_6c86b6d6.dds" }
+	spriteType = { name = "GFX_idea_roc21_five_races_d0069e64" texturefile = "gfx/interface/ideas/roc21/five_races_d0069e64.dds" }
+	spriteType = { name = "GFX_idea_roc21_prc_world_factory_law_b031e1f2" texturefile = "gfx/interface/ideas/roc21/prc_world_factory_law_b031e1f2.png" }
+	spriteType = { name = "GFX_idea_roc21_szc_pan_whc_tax_reform_25f941d3" texturefile = "gfx/interface/ideas/roc21/szc_pan_whc_tax_reform_25f941d3.png" }
+	spriteType = { name = "GFX_idea_roc21_inc_china_money_e084b21f" texturefile = "gfx/interface/ideas/roc21/inc_china_money_e084b21f.png" }
+	spriteType = { name = "GFX_idea_roc21_high_command_headquarter_59484e02" texturefile = "gfx/interface/ideas/roc21/high_command_headquarter_59484e02.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_roc_army_d9fec7b3" texturefile = "gfx/interface/ideas/roc21/chi_roc_army_d9fec7b3.png" }
+	spriteType = { name = "GFX_idea_roc21_cor_combined_arms_74dd37dc" texturefile = "gfx/interface/ideas/roc21/cor_combined_arms_74dd37dc.png" }
+	spriteType = { name = "GFX_idea_roc21_peace_talk_with_china_77d34118" texturefile = "gfx/interface/ideas/roc21/peace_talk_with_china_77d34118.dds" }
+	spriteType = { name = "GFX_idea_roc21_trade_policy_export_focus_75face9c" texturefile = "gfx/interface/ideas/roc21/trade_policy_export_focus_75face9c.png" }
+	spriteType = { name = "GFX_idea_roc21_usa_china_coop_c336f9a3" texturefile = "gfx/interface/ideas/roc21/usa_china_coop_c336f9a3.dds" }
+	spriteType = { name = "GFX_idea_roc21_pol_independence_judiciary_2b6f1159" texturefile = "gfx/interface/ideas/roc21/pol_independence_judiciary_2b6f1159.dds" }
+	spriteType = { name = "GFX_idea_roc21_szc_kmt_lead_the_liberation__f94ab630" texturefile = "gfx/interface/ideas/roc21/szc_kmt_lead_the_liberation__f94ab630.png" }
+	spriteType = { name = "GFX_idea_roc21_great_power_0f58d165" texturefile = "gfx/interface/ideas/roc21/great_power_0f58d165.dds" }
+	spriteType = { name = "GFX_idea_roc21_chi_reimplementing_the_three_b7360766" texturefile = "gfx/interface/ideas/roc21/chi_reimplementing_the_three_b7360766.png" }
+	spriteType = { name = "GFX_idea_roc21_generic_free_market_economy__db4e9dba" texturefile = "gfx/interface/ideas/roc21/generic_free_market_economy__db4e9dba.png" }
+	spriteType = { name = "GFX_idea_roc21_monopoly_fdcbebe3" texturefile = "gfx/interface/ideas/roc21/monopoly_fdcbebe3.png" }
+	spriteType = { name = "GFX_idea_roc21_rus_for_freedom_and_democrac_fb46b07f" texturefile = "gfx/interface/ideas/roc21/rus_for_freedom_and_democrac_fb46b07f.dds" }
+	spriteType = { name = "GFX_idea_roc21_social_democracy_542066a0" texturefile = "gfx/interface/ideas/roc21/social_democracy_542066a0.dds" }
+	spriteType = { name = "GFX_idea_roc21_arg_social_welfare_fund_ns_43750564" texturefile = "gfx/interface/ideas/roc21/arg_social_welfare_fund_ns_43750564.dds" }
+	spriteType = { name = "GFX_idea_roc21_chi_idea_beiyang_government_4e929307" texturefile = "gfx/interface/ideas/roc21/chi_idea_beiyang_government_4e929307.png" }
+	spriteType = { name = "GFX_idea_roc21_provisional_government_fcb12245" texturefile = "gfx/interface/ideas/roc21/provisional_government_fcb12245.png" }
+	spriteType = { name = "GFX_idea_roc21_ptf_economic_reconstruction_ff9049aa" texturefile = "gfx/interface/ideas/roc21/ptf_economic_reconstruction_ff9049aa.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_army_1_9032ab71" texturefile = "gfx/interface/ideas/roc21/chi_army_1_9032ab71.dds" }
+	spriteType = { name = "GFX_idea_roc21_usa_rightful_president_idea_8bca03e9" texturefile = "gfx/interface/ideas/roc21/usa_rightful_president_idea_8bca03e9.png" }
+	spriteType = { name = "GFX_idea_roc21_reformed_constitution_ffe4be94" texturefile = "gfx/interface/ideas/roc21/reformed_constitution_ffe4be94.dds" }
+	spriteType = { name = "GFX_idea_roc21_chinese_war_effort_roc_aac229ba" texturefile = "gfx/interface/ideas/roc21/chinese_war_effort_roc_aac229ba.dds" }
+	spriteType = { name = "GFX_idea_roc21_manchuria_aviation_company_3a218169" texturefile = "gfx/interface/ideas/roc21/manchuria_aviation_company_3a218169.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_whampoa_military_academy_5ab6fc43" texturefile = "gfx/interface/ideas/roc21/chi_whampoa_military_academy_5ab6fc43.dds" }
+	spriteType = { name = "GFX_idea_roc21_prc_chinese_space_age_cf02d934" texturefile = "gfx/interface/ideas/roc21/prc_chinese_space_age_cf02d934.png" }
+	spriteType = { name = "GFX_idea_roc21_negev_summit_948e0038" texturefile = "gfx/interface/ideas/roc21/negev_summit_948e0038.dds" }
+	spriteType = { name = "GFX_idea_roc21_energy_security_aa829ea2" texturefile = "gfx/interface/ideas/roc21/energy_security_aa829ea2.dds" }
+	spriteType = { name = "GFX_idea_roc21_wrd_japan_trade_deal_b3877ea7" texturefile = "gfx/interface/ideas/roc21/wrd_japan_trade_deal_b3877ea7.dds" }
+	spriteType = { name = "GFX_idea_roc21_jap_economic_cooperation_sou_5dc545e0" texturefile = "gfx/interface/ideas/roc21/jap_economic_cooperation_sou_5dc545e0.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_the_chinese_dream_71cff3c6" texturefile = "gfx/interface/ideas/roc21/chi_the_chinese_dream_71cff3c6.dds" }
+	spriteType = { name = "GFX_idea_roc21_ocean_navy_2fb06b71" texturefile = "gfx/interface/ideas/roc21/ocean_navy_2fb06b71.dds" }
+	spriteType = { name = "GFX_idea_roc21_raj_south_asian_tiger_d50bcf49" texturefile = "gfx/interface/ideas/roc21/raj_south_asian_tiger_d50bcf49.png" }
+	spriteType = { name = "GFX_idea_roc21_usa_harvard_university_0e94d675" texturefile = "gfx/interface/ideas/roc21/usa_harvard_university_0e94d675.png" }
+	spriteType = { name = "GFX_idea_roc21_arm_sport_bf113e96" texturefile = "gfx/interface/ideas/roc21/arm_sport_bf113e96.dds" }
+	spriteType = { name = "GFX_idea_roc21_china_five_races_soldier_9deaf7bf" texturefile = "gfx/interface/ideas/roc21/china_five_races_soldier_9deaf7bf.png" }
+	spriteType = { name = "GFX_idea_roc21_skm_white_rice_6528d394" texturefile = "gfx/interface/ideas/roc21/skm_white_rice_6528d394.png" }
+	spriteType = { name = "GFX_idea_roc21_mpl_floodgates_1cb588e2" texturefile = "gfx/interface/ideas/roc21/mpl_floodgates_1cb588e2.dds" }
+	spriteType = { name = "GFX_idea_roc21_shx_beijing_influence_5f4133e3" texturefile = "gfx/interface/ideas/roc21/shx_beijing_influence_5f4133e3.png" }
+	spriteType = { name = "GFX_idea_roc21_prc_chinese_communist_party_1be7ba78" texturefile = "gfx/interface/ideas/roc21/prc_chinese_communist_party_1be7ba78.png" }
+	spriteType = { name = "GFX_idea_roc21_a_front_united_csp_kmt_194b833c" texturefile = "gfx/interface/ideas/roc21/a_front_united_csp_kmt_194b833c.png" }
+	spriteType = { name = "GFX_idea_roc21_bra_election_year_d631ba20" texturefile = "gfx/interface/ideas/roc21/bra_election_year_d631ba20.png" }
+	spriteType = { name = "GFX_idea_roc21_fra_total_class_war_16d48aaf" texturefile = "gfx/interface/ideas/roc21/fra_total_class_war_16d48aaf.png" }
+	spriteType = { name = "GFX_idea_roc21_eng_commonwealth_of_nations__96a8567f" texturefile = "gfx/interface/ideas/roc21/eng_commonwealth_of_nations__96a8567f.png" }
+	spriteType = { name = "GFX_idea_roc21_chi_liberation_of_east_asia_78b2aecb" texturefile = "gfx/interface/ideas/roc21/chi_liberation_of_east_asia_78b2aecb.png" }
+	spriteType = { name = "GFX_idea_roc21_legacy_of_handover_hong_kong_2816cef8" texturefile = "gfx/interface/ideas/roc21/legacy_of_handover_hong_kong_2816cef8.dds" }
+	spriteType = { name = "GFX_idea_roc21_moc_casino_de_monte_carlo_9dccf092" texturefile = "gfx/interface/ideas/roc21/moc_casino_de_monte_carlo_9dccf092.dds" }
+	spriteType = { name = "roc21_chi_chinese_civil_war_4d4dda93" texturefile = "gfx/interface/goals/roc21/chi_chinese_civil_war_4d4dda93.dds" }
+	spriteType = {
+		name = "roc21_chi_chinese_civil_war_4d4dda93_shine"
+		texturefile = "gfx/interface/goals/roc21/chi_chinese_civil_war_4d4dda93.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_chinese_civil_war_4d4dda93.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_chinese_civil_war_4d4dda93.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_sov_stronghold_of_law_and_or_bd766fee" texturefile = "gfx/interface/goals/roc21/sov_stronghold_of_law_and_or_bd766fee.png" }
+	spriteType = {
+		name = "roc21_sov_stronghold_of_law_and_or_bd766fee_shine"
+		texturefile = "gfx/interface/goals/roc21/sov_stronghold_of_law_and_or_bd766fee.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_stronghold_of_law_and_or_bd766fee.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_stronghold_of_law_and_or_bd766fee.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_prc_50s_purge_anti_party_ele_d4140aec" texturefile = "gfx/interface/goals/roc21/prc_50s_purge_anti_party_ele_d4140aec.png" }
+	spriteType = {
+		name = "roc21_prc_50s_purge_anti_party_ele_d4140aec_shine"
+		texturefile = "gfx/interface/goals/roc21/prc_50s_purge_anti_party_ele_d4140aec.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_50s_purge_anti_party_ele_d4140aec.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_50s_purge_anti_party_ele_d4140aec.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_atw_target_the_food_supply_e15a1804" texturefile = "gfx/interface/goals/roc21/atw_target_the_food_supply_e15a1804.png" }
+	spriteType = {
+		name = "roc21_atw_target_the_food_supply_e15a1804_shine"
+		texturefile = "gfx/interface/goals/roc21/atw_target_the_food_supply_e15a1804.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/atw_target_the_food_supply_e15a1804.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/atw_target_the_food_supply_e15a1804.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_align_to_north_korea_48d50d86" texturefile = "gfx/interface/goals/roc21/align_to_north_korea_48d50d86.dds" }
+	spriteType = {
+		name = "roc21_align_to_north_korea_48d50d86_shine"
+		texturefile = "gfx/interface/goals/roc21/align_to_north_korea_48d50d86.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/align_to_north_korea_48d50d86.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/align_to_north_korea_48d50d86.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_total_war_41609ecd" texturefile = "gfx/interface/goals/roc21/total_war_41609ecd.png" }
+	spriteType = {
+		name = "roc21_total_war_41609ecd_shine"
+		texturefile = "gfx/interface/goals/roc21/total_war_41609ecd.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/total_war_41609ecd.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/total_war_41609ecd.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_prc_50s_reinforce_party_cont_7eca1d77" texturefile = "gfx/interface/goals/roc21/prc_50s_reinforce_party_cont_7eca1d77.png" }
+	spriteType = {
+		name = "roc21_prc_50s_reinforce_party_cont_7eca1d77_shine"
+		texturefile = "gfx/interface/goals/roc21/prc_50s_reinforce_party_cont_7eca1d77.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_50s_reinforce_party_cont_7eca1d77.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_50s_reinforce_party_cont_7eca1d77.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_sov_cyber_propaganda_farms_69c5cbde" texturefile = "gfx/interface/goals/roc21/sov_cyber_propaganda_farms_69c5cbde.png" }
+	spriteType = {
+		name = "roc21_sov_cyber_propaganda_farms_69c5cbde_shine"
+		texturefile = "gfx/interface/goals/roc21/sov_cyber_propaganda_farms_69c5cbde.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_cyber_propaganda_farms_69c5cbde.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_cyber_propaganda_farms_69c5cbde.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_chi_beijing_nanjing_highway_b1f69deb" texturefile = "gfx/interface/goals/roc21/chi_beijing_nanjing_highway_b1f69deb.dds" }
+	spriteType = {
+		name = "roc21_chi_beijing_nanjing_highway_b1f69deb_shine"
+		texturefile = "gfx/interface/goals/roc21/chi_beijing_nanjing_highway_b1f69deb.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_beijing_nanjing_highway_b1f69deb.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_beijing_nanjing_highway_b1f69deb.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_tib_kmt_50s_yang_du_and_sun__117b6d45" texturefile = "gfx/interface/goals/roc21/tib_kmt_50s_yang_du_and_sun__117b6d45.dds" }
+	spriteType = {
+		name = "roc21_tib_kmt_50s_yang_du_and_sun__117b6d45_shine"
+		texturefile = "gfx/interface/goals/roc21/tib_kmt_50s_yang_du_and_sun__117b6d45.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/tib_kmt_50s_yang_du_and_sun__117b6d45.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/tib_kmt_50s_yang_du_and_sun__117b6d45.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_prc_inegrate_research_instit_2fb12bc5" texturefile = "gfx/interface/goals/roc21/prc_inegrate_research_instit_2fb12bc5.png" }
+	spriteType = {
+		name = "roc21_prc_inegrate_research_instit_2fb12bc5_shine"
+		texturefile = "gfx/interface/goals/roc21/prc_inegrate_research_instit_2fb12bc5.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_inegrate_research_instit_2fb12bc5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_inegrate_research_instit_2fb12bc5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_politics_human_rights_0acc11b6" texturefile = "gfx/interface/goals/roc21/politics_human_rights_0acc11b6.dds" }
+	spriteType = {
+		name = "roc21_politics_human_rights_0acc11b6_shine"
+		texturefile = "gfx/interface/goals/roc21/politics_human_rights_0acc11b6.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/politics_human_rights_0acc11b6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/politics_human_rights_0acc11b6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_generic_economic_business_ea_c3f3ea46" texturefile = "gfx/interface/goals/roc21/generic_economic_business_ea_c3f3ea46.dds" }
+	spriteType = {
+		name = "roc21_generic_economic_business_ea_c3f3ea46_shine"
+		texturefile = "gfx/interface/goals/roc21/generic_economic_business_ea_c3f3ea46.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/generic_economic_business_ea_c3f3ea46.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/generic_economic_business_ea_c3f3ea46.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_prc_guiding_role_market_46b8bce6" texturefile = "gfx/interface/goals/roc21/prc_guiding_role_market_46b8bce6.png" }
+	spriteType = {
+		name = "roc21_prc_guiding_role_market_46b8bce6_shine"
+		texturefile = "gfx/interface/goals/roc21/prc_guiding_role_market_46b8bce6.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_guiding_role_market_46b8bce6.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_guiding_role_market_46b8bce6.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_reopen_trade_ports_a8fc9661" texturefile = "gfx/interface/goals/roc21/reopen_trade_ports_a8fc9661.dds" }
+	spriteType = {
+		name = "roc21_reopen_trade_ports_a8fc9661_shine"
+		texturefile = "gfx/interface/goals/roc21/reopen_trade_ports_a8fc9661.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/reopen_trade_ports_a8fc9661.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/reopen_trade_ports_a8fc9661.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_prc_economic_computerization_cb679614" texturefile = "gfx/interface/goals/roc21/prc_economic_computerization_cb679614.png" }
+	spriteType = {
+		name = "roc21_prc_economic_computerization_cb679614_shine"
+		texturefile = "gfx/interface/goals/roc21/prc_economic_computerization_cb679614.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_economic_computerization_cb679614.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/prc_economic_computerization_cb679614.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_federal_gas_tax_fund_01d11b6d" texturefile = "gfx/interface/goals/roc21/federal_gas_tax_fund_01d11b6d.dds" }
+	spriteType = {
+		name = "roc21_federal_gas_tax_fund_01d11b6d_shine"
+		texturefile = "gfx/interface/goals/roc21/federal_gas_tax_fund_01d11b6d.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/federal_gas_tax_fund_01d11b6d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/federal_gas_tax_fund_01d11b6d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_sov_alliance_with_trade_unio_77a9006e" texturefile = "gfx/interface/goals/roc21/sov_alliance_with_trade_unio_77a9006e.png" }
+	spriteType = {
+		name = "roc21_sov_alliance_with_trade_unio_77a9006e_shine"
+		texturefile = "gfx/interface/goals/roc21/sov_alliance_with_trade_unio_77a9006e.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_alliance_with_trade_unio_77a9006e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/sov_alliance_with_trade_unio_77a9006e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_usb_zero_unemployment_initia_11e87e43" texturefile = "gfx/interface/goals/roc21/usb_zero_unemployment_initia_11e87e43.png" }
+	spriteType = {
+		name = "roc21_usb_zero_unemployment_initia_11e87e43_shine"
+		texturefile = "gfx/interface/goals/roc21/usb_zero_unemployment_initia_11e87e43.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/usb_zero_unemployment_initia_11e87e43.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/usb_zero_unemployment_initia_11e87e43.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_eng_negotiate_with_labour_un_95d04cfe" texturefile = "gfx/interface/goals/roc21/eng_negotiate_with_labour_un_95d04cfe.png" }
+	spriteType = {
+		name = "roc21_eng_negotiate_with_labour_un_95d04cfe_shine"
+		texturefile = "gfx/interface/goals/roc21/eng_negotiate_with_labour_un_95d04cfe.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/eng_negotiate_with_labour_un_95d04cfe.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/eng_negotiate_with_labour_un_95d04cfe.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_jap_defeat_constitutional_re_13ea7970" texturefile = "gfx/interface/goals/roc21/jap_defeat_constitutional_re_13ea7970.png" }
+	spriteType = {
+		name = "roc21_jap_defeat_constitutional_re_13ea7970_shine"
+		texturefile = "gfx/interface/goals/roc21/jap_defeat_constitutional_re_13ea7970.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/jap_defeat_constitutional_re_13ea7970.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/jap_defeat_constitutional_re_13ea7970.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_szc_pan_the_non_party_cabine_c97b9992" texturefile = "gfx/interface/goals/roc21/szc_pan_the_non_party_cabine_c97b9992.png" }
+	spriteType = {
+		name = "roc21_szc_pan_the_non_party_cabine_c97b9992_shine"
+		texturefile = "gfx/interface/goals/roc21/szc_pan_the_non_party_cabine_c97b9992.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/szc_pan_the_non_party_cabine_c97b9992.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/szc_pan_the_non_party_cabine_c97b9992.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_a_cabinet_of_the_partys_best_fbc465ae" texturefile = "gfx/interface/goals/roc21/a_cabinet_of_the_partys_best_fbc465ae.dds" }
+	spriteType = {
+		name = "roc21_a_cabinet_of_the_partys_best_fbc465ae_shine"
+		texturefile = "gfx/interface/goals/roc21/a_cabinet_of_the_partys_best_fbc465ae.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/a_cabinet_of_the_partys_best_fbc465ae.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/a_cabinet_of_the_partys_best_fbc465ae.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_communist_party_of_china_9574d25d" texturefile = "gfx/interface/goals/roc21/communist_party_of_china_9574d25d.dds" }
+	spriteType = {
+		name = "roc21_communist_party_of_china_9574d25d_shine"
+		texturefile = "gfx/interface/goals/roc21/communist_party_of_china_9574d25d.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/communist_party_of_china_9574d25d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/communist_party_of_china_9574d25d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_chi_central_political_warfar_db6cd68a" texturefile = "gfx/interface/goals/roc21/chi_central_political_warfar_db6cd68a.png" }
+	spriteType = {
+		name = "roc21_chi_central_political_warfar_db6cd68a_shine"
+		texturefile = "gfx/interface/goals/roc21/chi_central_political_warfar_db6cd68a.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_central_political_warfar_db6cd68a.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/chi_central_political_warfar_db6cd68a.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_bra_agrarian_rural_farmer_76a23739" texturefile = "gfx/interface/goals/roc21/bra_agrarian_rural_farmer_76a23739.dds" }
+	spriteType = {
+		name = "roc21_bra_agrarian_rural_farmer_76a23739_shine"
+		texturefile = "gfx/interface/goals/roc21/bra_agrarian_rural_farmer_76a23739.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/bra_agrarian_rural_farmer_76a23739.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/bra_agrarian_rural_farmer_76a23739.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc21_goals_cpc_rural_new_economy_8f3e0635" texturefile = "gfx/interface/goals/roc21/goals_cpc_rural_new_economy_8f3e0635.png" }
+	spriteType = {
+		name = "roc21_goals_cpc_rural_new_economy_8f3e0635_shine"
+		texturefile = "gfx/interface/goals/roc21/goals_cpc_rural_new_economy_8f3e0635.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/goals_cpc_rural_new_economy_8f3e0635.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc21/goals_cpc_rural_new_economy_8f3e0635.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

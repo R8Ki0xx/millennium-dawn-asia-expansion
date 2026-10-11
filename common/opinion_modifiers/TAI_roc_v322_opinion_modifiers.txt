@@ -1,0 +1,13 @@
+# MD ROC Return v3.22
+opinion_modifiers = {
+	SYR_ext_fsa_aid = { value = 20 }
+	SYR_ext_assad_crimes = { value = -40 }
+	SYR_ext_russia_ally = { value = 30 }
+	SYR_ext_iran_ally = { value = 25 }
+	SYR_ext_turkey_ally = { value = 25 }
+	SYR_ext_isis_hate = { value = -60 }
+	SYR_ext_left_baath = { value = 15 }
+	SYR_ext_isis_war = { value = -60 }
+	SYR_ext_ypg_aid = { value = 25 }
+	SYR_ext_tur_pkk = { value = -35 }
+}

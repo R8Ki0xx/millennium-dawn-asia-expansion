@@ -1,0 +1,6 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会的修正（变量见 SYR_pc_recalc）
+SYR_people_council_modifier = {
+	icon = GFX_idea_AFG_parliament_building
+	political_power_gain = SYR_pc_pp
+	stability_factor = SYR_pc_stab
+}

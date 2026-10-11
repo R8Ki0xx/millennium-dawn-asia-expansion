@@ -1,0 +1,272 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会（由 _tools/v322_council.py 生成）
+# 变量：SYR_pc_baath / npf / ind / sec / isl = 各议席组席次（共 250）；SYR_pc_term 届数；SYR_pc_el_count 自 2000 年起举行过的选举次数；SYR_pc_months_left 距下次选举的月数
+
+# Scope: SYR
+SYR_pc_init = {
+	if = {
+		limit = { NOT = { has_variable = SYR_pc_term } }
+		set_variable = { SYR_pc_term = 7 }
+		set_variable = { SYR_pc_el_count = 0 }
+		set_variable = { SYR_pc_months_left = 38 }
+		set_variable = { SYR_pc_speaker = 1 }
+		set_variable = { SYR_pc_baath = 135 }
+		set_variable = { SYR_pc_npf = 32 }
+		set_variable = { SYR_pc_sec = 0 }
+		set_variable = { SYR_pc_isl = 0 }
+		set_variable = { SYR_pc_ind = 83 }
+	}
+	if = { limit = { NOT = { has_dynamic_modifier = { modifier = SYR_people_council_modifier } } } add_dynamic_modifier = { modifier = SYR_people_council_modifier } }
+	SYR_pc_recalc = yes
+}
+
+# Scope: SYR。独立人士 = 250 − 其余各组；再算执政联盟、百分比、面板用变量与席位点
+SYR_pc_recalc = {
+	set_variable = { SYR_pc_ind = 250 }
+	subtract_from_variable = { SYR_pc_ind = SYR_pc_baath }
+	subtract_from_variable = { SYR_pc_ind = SYR_pc_npf }
+	subtract_from_variable = { SYR_pc_ind = SYR_pc_sec }
+	subtract_from_variable = { SYR_pc_ind = SYR_pc_isl }
+	clamp_variable = { var = SYR_pc_ind min = 0 max = 250 }
+	# 执政联盟：政权体制 = 复兴党 + 国进阵；伊斯兰主义执政 = 伊斯兰主义组；其余 = 世俗组；另加 3 成独立人士
+	if = {
+		limit = { SYR_regime_mode = yes }
+		set_variable = { SYR_pc_gov = SYR_pc_baath }
+		add_to_variable = { SYR_pc_gov = SYR_pc_npf }
+	}
+	else_if = {
+		limit = { OR = { check_variable = { ruling_party = 12 } check_variable = { ruling_party = 11 } check_variable = { ruling_party = 9 } check_variable = { ruling_party = 8 } check_variable = { ruling_party = 10 } check_variable = { ruling_party = 23 } } }
+		set_variable = { SYR_pc_gov = SYR_pc_isl }
+		set_temp_variable = { pc_ally = SYR_pc_ind }
+		multiply_temp_variable = { pc_ally = 0.3 }
+		round_temp_variable = pc_ally
+		add_to_variable = { SYR_pc_gov = pc_ally }
+	}
+	else = {
+		set_variable = { SYR_pc_gov = SYR_pc_sec }
+		set_temp_variable = { pc_ally = SYR_pc_ind }
+		multiply_temp_variable = { pc_ally = 0.3 }
+		round_temp_variable = pc_ally
+		add_to_variable = { SYR_pc_gov = pc_ally }
+	}
+	clamp_variable = { var = SYR_pc_gov min = 0 max = 250 }
+	set_variable = { SYR_pc_support = SYR_pc_gov }
+	divide_variable = { SYR_pc_support = 250 }
+	set_variable = { SYR_pc_support_pct = SYR_pc_support }
+	multiply_variable = { SYR_pc_support_pct = 100 }
+	set_variable = { SYR_pc_gov_pct = SYR_pc_support_pct }
+	set_variable = { SYR_pc_baath_pct = SYR_pc_baath }
+	multiply_variable = { SYR_pc_baath_pct = 0.4 }
+	set_variable = { SYR_pc_npf_pct = SYR_pc_npf }
+	multiply_variable = { SYR_pc_npf_pct = 0.4 }
+	set_variable = { SYR_pc_ind_pct = SYR_pc_ind }
+	multiply_variable = { SYR_pc_ind_pct = 0.4 }
+	set_variable = { SYR_pc_sec_pct = SYR_pc_sec }
+	multiply_variable = { SYR_pc_sec_pct = 0.4 }
+	set_variable = { SYR_pc_isl_pct = SYR_pc_isl }
+	multiply_variable = { SYR_pc_isl_pct = 0.4 }
+	# 农工配额：1973 年宪法规定农民与工人至少占一半席位；2012 年新宪法废除
+	if = { limit = { has_country_flag = SYR_pc_multiparty } set_variable = { SYR_pc_wp = 0 } }
+	else = {
+		set_variable = { SYR_pc_wp = SYR_pc_ind }
+		multiply_variable = { SYR_pc_wp = 0.1 }
+		round_variable = SYR_pc_wp
+		add_to_variable = { SYR_pc_wp = 125 }
+	}
+	# 议会修正：支持度高于一半时有利，政权体制下打折（橡皮图章）
+	set_variable = { SYR_pc_pp = SYR_pc_support }
+	subtract_from_variable = { SYR_pc_pp = 0.5 }
+	set_variable = { SYR_pc_stab = SYR_pc_pp }
+	multiply_variable = { SYR_pc_pp = 0.2 }
+	multiply_variable = { SYR_pc_stab = 0.1 }
+	if = { limit = { SYR_regime_mode = yes NOT = { has_country_flag = SYRL_council_power } } multiply_variable = { SYR_pc_pp = 0.5 } multiply_variable = { SYR_pc_stab = 0.5 } }
+	# 演讲者
+	if = { limit = { check_variable = { SYR_pc_el_count < 2 } } set_variable = { SYR_pc_speaker = 1 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 2 } } set_variable = { SYR_pc_speaker = 2 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 3 } } set_variable = { SYR_pc_speaker = 3 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 4 } } set_variable = { SYR_pc_speaker = 4 } }
+	else = { set_variable = { SYR_pc_speaker = 5 } }
+	SYR_pc_dots = yes
+	force_update_dynamic_modifier = yes
+}
+
+# Scope: SYR。政权操控的选举：照史实表，再按复兴党的支持度小幅浮动，世俗 / 伊斯兰主义反对派席次取决于开放程度
+SYR_pc_regime_seats = {
+	if = { limit = { check_variable = { SYR_pc_el_count = 1 } } set_variable = { SYR_pc_baath = 135 } set_variable = { SYR_pc_npf = 32 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 2 } } set_variable = { SYR_pc_baath = 134 } set_variable = { SYR_pc_npf = 38 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 3 } } set_variable = { SYR_pc_baath = 134 } set_variable = { SYR_pc_npf = 34 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 4 } } set_variable = { SYR_pc_baath = 168 } set_variable = { SYR_pc_npf = 32 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 5 } } set_variable = { SYR_pc_baath = 155 } set_variable = { SYR_pc_npf = 22 } }
+	else = { set_variable = { SYR_pc_baath = 165 } set_variable = { SYR_pc_npf = 20 } }
+	set_temp_variable = { pc_adj = party_pop_array^7 }
+	subtract_from_temp_variable = { pc_adj = 0.4 }
+	multiply_temp_variable = { pc_adj = 60 }
+	clamp_temp_variable = { var = pc_adj min = -15 max = 15 }
+	round_temp_variable = pc_adj
+	add_to_variable = { SYR_pc_baath = pc_adj }
+	set_variable = { SYR_pc_sec = 0 }
+	set_variable = { SYR_pc_isl = 0 }
+	if = { limit = { has_country_flag = SYR_party_law } set_variable = { SYR_pc_sec = 8 } set_variable = { SYR_pc_isl = 5 } }
+	else_if = { limit = { OR = { has_country_flag = SYR_emergency_lifted has_country_flag = SYR_pc_multiparty } } set_variable = { SYR_pc_sec = 3 } }
+}
+
+# Scope: SYR。竞争性选举：各组席数 = 支持度 × 225（独立人士占其余部分）
+SYR_pc_proportional_seats = {
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^7 }
+	multiply_temp_variable = { pc_t = 225 }
+	round_temp_variable = pc_t
+	set_variable = { SYR_pc_baath = pc_t }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^20 }
+	add_to_temp_variable = { pc_t = party_pop_array^4 }
+	add_to_temp_variable = { pc_t = party_pop_array^13 }
+	add_to_temp_variable = { pc_t = party_pop_array^5 }
+	add_to_temp_variable = { pc_t = party_pop_array^18 }
+	add_to_temp_variable = { pc_t = party_pop_array^21 }
+	add_to_temp_variable = { pc_t = party_pop_array^22 }
+	multiply_temp_variable = { pc_t = 225 }
+	round_temp_variable = pc_t
+	set_variable = { SYR_pc_npf = pc_t }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^0 }
+	add_to_temp_variable = { pc_t = party_pop_array^1 }
+	add_to_temp_variable = { pc_t = party_pop_array^2 }
+	add_to_temp_variable = { pc_t = party_pop_array^3 }
+	add_to_temp_variable = { pc_t = party_pop_array^6 }
+	add_to_temp_variable = { pc_t = party_pop_array^14 }
+	add_to_temp_variable = { pc_t = party_pop_array^17 }
+	add_to_temp_variable = { pc_t = party_pop_array^19 }
+	multiply_temp_variable = { pc_t = 225 }
+	round_temp_variable = pc_t
+	set_variable = { SYR_pc_sec = pc_t }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^8 }
+	add_to_temp_variable = { pc_t = party_pop_array^9 }
+	add_to_temp_variable = { pc_t = party_pop_array^10 }
+	add_to_temp_variable = { pc_t = party_pop_array^11 }
+	add_to_temp_variable = { pc_t = party_pop_array^12 }
+	add_to_temp_variable = { pc_t = party_pop_array^23 }
+	multiply_temp_variable = { pc_t = 225 }
+	round_temp_variable = pc_t
+	set_variable = { SYR_pc_isl = pc_t }
+}
+
+# Scope: SYR，每月（非政权体制）：席次向各党支持度靠拢 3%
+SYR_pc_drift = {
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^7 }
+	multiply_temp_variable = { pc_t = 225 }
+	subtract_from_temp_variable = { pc_t = SYR_pc_baath }
+	multiply_temp_variable = { pc_t = 0.03 }
+	add_to_variable = { SYR_pc_baath = pc_t }
+	clamp_variable = { var = SYR_pc_baath min = 0 max = 250 }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^20 }
+	add_to_temp_variable = { pc_t = party_pop_array^4 }
+	add_to_temp_variable = { pc_t = party_pop_array^13 }
+	add_to_temp_variable = { pc_t = party_pop_array^5 }
+	add_to_temp_variable = { pc_t = party_pop_array^18 }
+	add_to_temp_variable = { pc_t = party_pop_array^21 }
+	add_to_temp_variable = { pc_t = party_pop_array^22 }
+	multiply_temp_variable = { pc_t = 225 }
+	subtract_from_temp_variable = { pc_t = SYR_pc_npf }
+	multiply_temp_variable = { pc_t = 0.03 }
+	add_to_variable = { SYR_pc_npf = pc_t }
+	clamp_variable = { var = SYR_pc_npf min = 0 max = 250 }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^0 }
+	add_to_temp_variable = { pc_t = party_pop_array^1 }
+	add_to_temp_variable = { pc_t = party_pop_array^2 }
+	add_to_temp_variable = { pc_t = party_pop_array^3 }
+	add_to_temp_variable = { pc_t = party_pop_array^6 }
+	add_to_temp_variable = { pc_t = party_pop_array^14 }
+	add_to_temp_variable = { pc_t = party_pop_array^17 }
+	add_to_temp_variable = { pc_t = party_pop_array^19 }
+	multiply_temp_variable = { pc_t = 225 }
+	subtract_from_temp_variable = { pc_t = SYR_pc_sec }
+	multiply_temp_variable = { pc_t = 0.03 }
+	add_to_variable = { SYR_pc_sec = pc_t }
+	clamp_variable = { var = SYR_pc_sec min = 0 max = 250 }
+	set_temp_variable = { pc_t = 0 }
+	add_to_temp_variable = { pc_t = party_pop_array^8 }
+	add_to_temp_variable = { pc_t = party_pop_array^9 }
+	add_to_temp_variable = { pc_t = party_pop_array^10 }
+	add_to_temp_variable = { pc_t = party_pop_array^11 }
+	add_to_temp_variable = { pc_t = party_pop_array^12 }
+	add_to_temp_variable = { pc_t = party_pop_array^23 }
+	multiply_temp_variable = { pc_t = 225 }
+	subtract_from_temp_variable = { pc_t = SYR_pc_isl }
+	multiply_temp_variable = { pc_t = 0.03 }
+	add_to_variable = { SYR_pc_isl = pc_t }
+	clamp_variable = { var = SYR_pc_isl min = 0 max = 250 }
+}
+
+# Scope: SYR。举行选举
+SYR_pc_hold_election = {
+	add_to_variable = { SYR_pc_term = 1 }
+	add_to_variable = { SYR_pc_el_count = 1 }
+	if = { limit = { check_variable = { SYR_pc_el_count = 1 } } set_variable = { SYR_pc_months_left = 49 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 2 } } set_variable = { SYR_pc_months_left = 61 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 3 } } set_variable = { SYR_pc_months_left = 47 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 4 } } set_variable = { SYR_pc_months_left = 51 } }
+	else_if = { limit = { check_variable = { SYR_pc_el_count = 5 } } set_variable = { SYR_pc_months_left = 48 } }
+	else = { set_variable = { SYR_pc_months_left = 48 } }
+	if = { limit = { SYR_regime_mode = yes } SYR_pc_regime_seats = yes }
+	else = { SYR_pc_proportional_seats = yes }
+	SYR_pc_recalc = yes
+	country_event = { id = roc_asia.80 days = 1 }
+}
+
+# Scope: SYR，每月
+SYR_pc_monthly = {
+	SYR_pc_init = yes
+	if = { limit = { NOT = { SYR_regime_mode = yes } } SYR_pc_drift = yes SYR_pc_recalc = yes }
+	subtract_from_variable = { SYR_pc_months_left = 1 }
+	if = { limit = { check_variable = { SYR_pc_months_left < 1 } } SYR_pc_hold_election = yes }
+	# 2000 年：哈菲兹去世后议会在几分钟内把总统最低年龄从 40 岁降到 34 岁
+	if = { limit = { has_country_flag = Syria_Hafez_dead SYR_regime_mode = yes NOT = { has_country_flag = SYR_pc_age_amended } } set_country_flag = SYR_pc_age_amended country_event = { id = roc_asia.84 days = 1 } }
+	# 2007 年：议会提名唯一候选人，公投确认总统连任
+	if = { limit = { date > 2007.5.1 date < 2008.1.1 SYR_regime_mode = yes NOT = { has_country_flag = SYR_pc_ref2007 } } set_country_flag = SYR_pc_ref2007 country_event = { id = roc_asia.85 days = 1 } }
+	# 2014 年：新宪法后第一次多名候选人的总统选举
+	if = { limit = { date > 2014.6.1 date < 2015.1.1 SYR_regime_mode = yes has_country_flag = SYR_pc_multiparty NOT = { has_country_flag = SYR_pc_elec2014 } } set_country_flag = SYR_pc_elec2014 country_event = { id = roc_asia.86 days = 1 } }
+}
+
+# 决议用：拉拢独立人士
+SYR_pc_woo_baath = {
+	add_to_variable = { SYR_pc_baath = 6 }
+	SYR_pc_recalc = yes
+}
+SYR_pc_woo_npf = {
+	add_to_variable = { SYR_pc_npf = 4 }
+	SYR_pc_recalc = yes
+}
+
+# 半圆席位图：每点 1 席；各组点数 = 席次，误差归最右边的复兴党
+SYR_pc_dots = {
+	if = { limit = { NOT = { has_variable = SYR_pc_dot^249 } } resize_array = { array = SYR_pc_dot value = 6 size = 250 } }
+	set_temp_variable = { pc_isl = SYR_pc_isl }
+	round_temp_variable = pc_isl
+	set_temp_variable = { pcum_1 = pc_isl }
+	set_temp_variable = { pc_sec = SYR_pc_sec }
+	round_temp_variable = pc_sec
+	set_temp_variable = { pcum_2 = pcum_1 }
+	add_to_temp_variable = { pcum_2 = pc_sec }
+	set_temp_variable = { pc_ind = SYR_pc_ind }
+	round_temp_variable = pc_ind
+	set_temp_variable = { pcum_3 = pcum_2 }
+	add_to_temp_variable = { pcum_3 = pc_ind }
+	set_temp_variable = { pc_npf = SYR_pc_npf }
+	round_temp_variable = pc_npf
+	set_temp_variable = { pcum_4 = pcum_3 }
+	add_to_temp_variable = { pcum_4 = pc_npf }
+	for_loop_effect = {
+		start = 0
+		end = 250
+		value = pk
+		if = { limit = { check_variable = { pk < pcum_1 } } set_variable = { SYR_pc_dot^pk = 1 } }
+		else_if = { limit = { check_variable = { pk < pcum_2 } } set_variable = { SYR_pc_dot^pk = 2 } }
+		else_if = { limit = { check_variable = { pk < pcum_3 } } set_variable = { SYR_pc_dot^pk = 3 } }
+		else_if = { limit = { check_variable = { pk < pcum_4 } } set_variable = { SYR_pc_dot^pk = 4 } }
+		else = { set_variable = { SYR_pc_dot^pk = 5 } }
+	}
+}

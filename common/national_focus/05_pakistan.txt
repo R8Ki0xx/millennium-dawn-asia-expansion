@@ -1,0 +1,2173 @@
+# MD ROC Return v3.33 —— 巴基斯坦国策树（由 _tools/v333_pak1/2/3.py 生成）
+focus_tree = {
+	id = pakistan_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = PAK
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 60 y = 2600 }
+
+	focus = {
+		id = PAKX_p_root
+		icon = Focus_Parliament_Constitution
+		x = 45
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_root"
+			add_political_power = 100
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PAKX_p_hyb
+		icon = army_reform
+		x = 40
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_p_root }
+		mutually_exclusive = { focus = PAKX_p_dem focus = PAKX_p_army }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_hyb"
+			if = { limit = { NOT = { has_idea = PAKX_hybrid_idea } } add_ideas = PAKX_hybrid_idea }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_p_pm
+		icon = Election
+		x = 39
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_hyb }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_pm"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_judiciary
+		icon = control_judiciary
+		x = 41
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_hyb }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_judiciary"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_sec_council
+		icon = chiefs_of_staff_committee
+		x = 40
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_p_pm focus = PAKX_p_judiciary }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_sec_council"
+			add_political_power = 50
+			set_temp_variable = { temp_opinion = 6 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_patronage
+		icon = family
+		x = 39
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_p_pm }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_patronage"
+			add_political_power = 25
+			set_temp_variable = { temp_opinion = 4 }
+			change_small_medium_business_owners_opinion = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_p_clergy
+		icon = political_pressure
+		x = 41
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_p_judiciary }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_clergy"
+			add_political_power = 25
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_p_hyb_final
+		icon = Election
+		x = 40
+		y = 5
+		cost = 10
+		prerequisite = { focus = PAKX_p_patronage focus = PAKX_p_clergy focus = PAKX_p_sec_council }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_hyb_final"
+			add_political_power = 75
+			add_stability = 0.04
+			country_event = { id = roc_asia.100 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_p_dem
+		icon = democracy2
+		x = 44
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_p_root }
+		mutually_exclusive = { focus = PAKX_p_hyb focus = PAKX_p_army }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_dem"
+			if = { limit = { NOT = { has_idea = PAKX_democracy_idea } } add_ideas = PAKX_democracy_idea }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = PAKX_p_media
+		icon = liberal_press
+		x = 43
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_dem }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_media"
+			add_political_power = 25
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_elections
+		icon = elections_01
+		x = 45
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_dem }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_elections"
+			add_political_power = 25
+			liberal_policy_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_18th
+		icon = autonomy
+		x = 44
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_p_media focus = PAKX_p_elections }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_18th"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_elections_2
+		icon = Election
+		x = 46
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_p_elections }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_elections_2"
+			add_political_power = 25
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_civil_mil
+		icon = army_reform
+		x = 43
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_p_18th }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_civil_mil"
+			add_political_power = 25
+			set_temp_variable = { temp_opinion = -5 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_provinces
+		icon = autonomy
+		x = 46
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_p_elections_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_provinces"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_opposition
+		icon = political_pressure
+		x = 46
+		y = 6
+		cost = 7
+		prerequisite = { focus = PAKX_p_provinces }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_opposition"
+			add_political_power = 25
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_dem_final
+		icon = blue_democracy
+		x = 44
+		y = 5
+		cost = 10
+		prerequisite = { focus = PAKX_p_civil_mil focus = PAKX_p_provinces }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_dem_final"
+			add_political_power = 75
+			add_stability = 0.03
+			country_event = { id = roc_asia.102 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_p_army
+		icon = army_reform
+		x = 48
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_p_root }
+		mutually_exclusive = { focus = PAKX_p_hyb focus = PAKX_p_dem }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_army"
+			if = { limit = { NOT = { has_idea = PAKX_army_rule_idea } } add_ideas = PAKX_army_rule_idea }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	focus = {
+		id = PAKX_p_corps
+		icon = chiefs_of_staff_committee
+		x = 47
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_army }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_corps"
+			add_political_power = 50
+			set_temp_variable = { temp_opinion = 10 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_ordinance
+		icon = military_purge
+		x = 49
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_p_army }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_ordinance"
+			add_political_power = 25
+			add_stability = 0.04
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_intel
+		icon = secret_police
+		x = 48
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_p_corps focus = PAKX_p_ordinance }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_intel"
+			set_temp_variable = { temp_opinion = 8 }
+			change_intelligence_community_opinion = yes
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_judge_sub
+		icon = control_judiciary
+		x = 50
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_p_ordinance }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_judge_sub"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_p_army_final
+		icon = tatmadaw
+		x = 48
+		y = 5
+		cost = 10
+		prerequisite = { focus = PAKX_p_intel focus = PAKX_p_judge_sub }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_p_army_final"
+			add_political_power = 75
+			add_war_support = 0.05
+			country_event = { id = roc_asia.101 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_m_root
+		icon = army_reform
+		x = 4
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_root"
+			add_political_power = 50
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PAKX_m_army
+		icon = Armored_Troops
+		x = 1
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_m_root }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_army"
+			add_tech_bonus = {
+			name = PAKX_tb_armor
+			category = CAT_armor
+			uses = 1
+			bonus = 0.5
+			}
+			add_war_support = 0.02
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_m_nuke
+		icon = nuclear_energy
+		x = 4
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_m_root }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_nuke"
+			if = { limit = { NOT = { has_idea = PAKX_deterrence_idea } } add_ideas = PAKX_deterrence_idea }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_navy
+		icon = submarines
+		x = 7
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_m_root }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_navy"
+			navy_experience = 10
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_air
+		icon = air_superiority
+		x = 10
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_m_root }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_air"
+			air_experience = 10
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_isi
+		icon = secret_police
+		x = 0
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_m_army }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_isi"
+			set_temp_variable = { temp_opinion = 8 }
+			change_intelligence_community_opinion = yes
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_border
+		icon = border_war
+		x = 2
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_m_army }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_border"
+			add_war_support = 0.03
+			add_stability = -0.02
+			if = { limit = { NOT = { has_idea = PAKX_counterterror_idea } } add_ideas = PAKX_counterterror_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_missile
+		icon = guided_missile
+		x = 4
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_m_nuke }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_missile"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_sub
+		icon = Generic_Submarine1
+		x = 7
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_m_navy }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_sub"
+			navy_experience = 15
+			add_war_support = 0.02
+			if = { limit = { NOT = { has_idea = PAKX_navy_idea } } add_ideas = PAKX_navy_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_jf17
+		icon = air_superiority
+		x = 10
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_m_air }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_jf17"
+			air_experience = 15
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_ct
+		icon = military_purge
+		x = 0
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_m_isi focus = PAKX_m_border }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_ct"
+			add_stability = 0.03
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_industry
+		icon = industry_military
+		x = 3
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_m_missile }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_industry"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_coast
+		icon = frigates
+		x = 6
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_m_sub }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_coast"
+			navy_experience = 10
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_airdef
+		icon = military_fort2
+		x = 9
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_m_jf17 }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_airdef"
+			add_war_support = 0.02
+			air_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_drone
+		icon = drone
+		x = 2
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_m_ct focus = PAKX_m_industry }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_drone"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_drill
+		icon = army_reform
+		x = 5
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_m_industry focus = PAKX_m_coast }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_drill"
+			army_experience = 15
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_alliance
+		icon = military_deal
+		x = 7
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_m_coast focus = PAKX_m_airdef }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_alliance"
+			add_war_support = 0.03
+			add_political_power = 25
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_naval_base
+		icon = military_bases
+		x = 10
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_m_airdef }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_naval_base"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = dockyard level = 1 instant_build = yes }
+			}
+			navy_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_cyber
+		icon = military_purge
+		x = 1
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_m_drone }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_cyber"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_reserve
+		icon = army_reform
+		x = 8
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_m_alliance focus = PAKX_m_naval_base }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_reserve"
+			add_war_support = 0.02
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_final
+		icon = nuclear_energy
+		x = 4
+		y = 5
+		cost = 10
+		prerequisite = { focus = PAKX_m_drone focus = PAKX_m_drill focus = PAKX_m_alliance }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_final"
+			add_political_power = 75
+			add_war_support = 0.05
+			country_event = { id = roc_asia.103 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_m_sat
+		icon = drone
+		x = 11
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_m_naval_base }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_sat"
+			add_political_power = 25
+			army_experience = 5
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_m_coastguard
+		icon = frigates
+		x = 6
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_m_coast }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_m_coastguard"
+			add_stability = 0.02
+			navy_experience = 5
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_root
+		icon = five_year_plan
+		x = 15
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_root"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PAKX_e_imf
+		icon = treaty3
+		x = 16
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_e_root }
+		mutually_exclusive = { focus = PAKX_e_self }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_imf"
+			set_temp_variable = { treasury_change = 20 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+			if = { limit = { NOT = { has_idea = PAKX_imf_idea } } add_ideas = PAKX_imf_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_e_self
+		icon = industry_communism
+		x = 20
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_e_root }
+		mutually_exclusive = { focus = PAKX_e_imf }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_self"
+			add_political_power = 50
+			set_temp_variable = { temp_opinion = 4 }
+			change_industrial_conglomerates_opinion = yes
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_tax
+		icon = economic_robots
+		x = 15
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_imf }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_tax"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_debt
+		icon = union_negotiations
+		x = 17
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_imf }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_debt"
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+			add_stability = -0.01
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_power
+		icon = oil_trade
+		x = 19
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_self }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_power"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_textile
+		icon = asian_investment
+		x = 21
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_self }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_textile"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+			if = { limit = { NOT = { has_idea = PAKX_textile_idea } } add_ideas = PAKX_textile_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_telecom
+		icon = construction2
+		x = 23
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_self }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_telecom"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_remit
+		icon = union_negotiations
+		x = 21
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_e_textile }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_remit"
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_cpec
+		icon = trade_with_china
+		x = 17
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_e_tax focus = PAKX_e_debt focus = PAKX_e_power }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_cpec"
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			if = { limit = { NOT = { has_idea = PAKX_cpec_idea } } add_ideas = PAKX_cpec_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_e_agri
+		icon = economic_water_supply
+		x = 24
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_e_telecom }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_agri"
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_mining
+		icon = industry_communism
+		x = 26
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_e_agri }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_mining"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_gwadar
+		icon = trade_with_asean
+		x = 16
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_e_cpec }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_gwadar"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_e_motorway
+		icon = construction
+		x = 18
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_e_cpec }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_motorway"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_it
+		icon = generic_university
+		x = 22
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_e_textile focus = PAKX_e_telecom }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_it"
+			add_tech_bonus = {
+			name = PAKX_tb_it
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+			add_political_power = 25
+			if = { limit = { NOT = { has_idea = PAKX_digital_idea } } add_ideas = PAKX_digital_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_tourism
+		icon = economic_tourism
+		x = 28
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_e_mining }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_tourism"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_airport
+		icon = construction2
+		x = 27
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_e_mining }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_airport"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_banking
+		icon = asian_investment
+		x = 20
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_e_debt focus = PAKX_e_tax }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_banking"
+			add_stability = 0.02
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_stock
+		icon = asian_investment
+		x = 25
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_e_it focus = PAKX_e_mining }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_stock"
+			add_political_power = 25
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_e_final
+		icon = construction2
+		x = 19
+		y = 6
+		cost = 10
+		prerequisite = { focus = PAKX_e_gwadar focus = PAKX_e_motorway focus = PAKX_e_stock }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_e_final"
+			add_political_power = 75
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+			add_stability = 0.03
+			country_event = { id = roc_asia.104 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_f_root
+		icon = diplomacy
+		x = 60
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_root"
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PAKX_f_china
+		icon = align_to_china
+		x = 56
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_f_root }
+		mutually_exclusive = { focus = PAKX_f_us }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_china"
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_f_india
+		icon = align_to_india
+		x = 60
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_f_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_india"
+			add_war_support = 0.02
+			if = { limit = { country_exists = RAJ }
+			RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_india } }
+			add_opinion_modifier = { target = RAJ modifier = TAI_ext_pak_india }
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_f_us
+		icon = align_to_america
+		x = 64
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_f_root }
+		mutually_exclusive = { focus = PAKX_f_china }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_us"
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_us } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_pak_us }
+			}
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = PAKX_f_gulf
+		icon = treaty3
+		x = 68
+		y = 1
+		cost = 7
+		prerequisite = { focus = PAKX_f_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_gulf"
+			add_political_power = 25
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_f_cpec
+		icon = trade_with_china
+		x = 55
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_china }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_cpec"
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_weapons
+		icon = military_deal
+		x = 57
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_china }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_weapons"
+			add_war_support = 0.02
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_sco
+		icon = internationalism
+		x = 56
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_f_cpec focus = PAKX_f_weapons }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_sco"
+			add_political_power = 50
+			add_stability = 0.02
+			if = { limit = { NOT = { has_idea = PAKX_sco_idea } } add_ideas = PAKX_sco_idea }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_china_final
+		icon = align_to_china
+		x = 56
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAKX_f_sco }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_china_final"
+			add_political_power = 75
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+			country_event = { id = roc_asia.105 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_f_aid
+		icon = trade_with_america
+		x = 63
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_us }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_aid"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_us } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_pak_us }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_drone
+		icon = border_war
+		x = 65
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_us }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_drone"
+			add_war_support = -0.02
+			add_political_power = 25
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_f_afghan
+		icon = military_bases
+		x = 64
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_f_aid focus = PAKX_f_drone }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_afghan"
+			add_stability = -0.01
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_us_final
+		icon = align_to_america
+		x = 64
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAKX_f_afghan }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_us_final"
+			add_political_power = 50
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_us } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_pak_us }
+			}
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_f_kashmir
+		icon = border_war
+		x = 59
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_india }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_kashmir"
+			add_war_support = 0.04
+			add_stability = -0.02
+			if = { limit = { country_exists = RAJ }
+			RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_india } }
+			add_opinion_modifier = { target = RAJ modifier = TAI_ext_pak_india }
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = PAKX_f_indus
+		icon = water_dam
+		x = 61
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_india }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_indus"
+			add_political_power = 25
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_f_peace
+		icon = treaty
+		x = 60
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_f_kashmir focus = PAKX_f_indus }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_peace"
+			add_political_power = 50
+			add_stability = 0.02
+			if = { limit = { country_exists = RAJ }
+			RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_india } }
+			add_opinion_modifier = { target = RAJ modifier = TAI_ext_pak_india }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_gulf_money
+		icon = asian_investment
+		x = 68
+		y = 2
+		cost = 7
+		prerequisite = { focus = PAKX_f_gulf }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_gulf_money"
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_turkey_iran
+		icon = internationalism
+		x = 67
+		y = 3
+		cost = 7
+		prerequisite = { focus = PAKX_f_gulf_money }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_turkey_iran"
+			add_political_power = 25
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_f_saudi
+		icon = treaty3
+		x = 66
+		y = 4
+		cost = 7
+		prerequisite = { focus = PAKX_f_turkey_iran }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_saudi"
+			set_temp_variable = { treasury_change = 10 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_roc
+		icon = trade_with_asean
+		x = 62
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_f_peace focus = PAKX_f_turkey_iran }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		available = {
+			country_exists = CHI
+			CHI = { has_country_flag = ROC_new_chi }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_roc"
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_roc } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_roc }
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_roc_trade
+		icon = asian_investment
+		x = 62
+		y = 6
+		cost = 7
+		prerequisite = { focus = PAKX_f_roc }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_roc_trade"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_f_mediation
+		icon = internationalism
+		x = 58
+		y = 5
+		cost = 7
+		prerequisite = { focus = PAKX_f_china_final focus = PAKX_f_us_final }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_mediation"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_f_final
+		icon = internationalism
+		x = 60
+		y = 7
+		cost = 10
+		prerequisite = { focus = PAKX_f_mediation focus = PAKX_f_roc_trade focus = PAKX_f_gulf_money }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_f_final"
+			add_political_power = 100
+			add_stability = 0.03
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_china } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_pak_china }
+			}
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_us } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_pak_us }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_i_root
+		icon = welfare
+		x = 44
+		y = 9
+		cost = 7
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_root"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = PAKX_i_baloch
+		icon = autonomy
+		x = 39
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_baloch"
+			add_stability = -0.02
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_ttp
+		icon = military_purge
+		x = 41
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_ttp"
+			add_political_power = 25
+			add_stability = -0.03
+			if = { limit = { NOT = { has_idea = PAKX_counterterror_idea } } add_ideas = PAKX_counterterror_idea }
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_pak_militancy } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_pak_militancy }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_madrasa
+		icon = political_pressure
+		x = 43
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_madrasa"
+			add_political_power = 25
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_counter
+		icon = secret_police
+		x = 40
+		y = 11
+		cost = 7
+		prerequisite = { focus = PAKX_i_baloch focus = PAKX_i_ttp }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_counter"
+			add_stability = 0.03
+			set_temp_variable = { temp_opinion = 8 }
+			change_intelligence_community_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_nap
+		icon = control_judiciary
+		x = 42
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_counter focus = PAKX_i_madrasa }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_nap"
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_police
+		icon = military_purge
+		x = 44
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_nap }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_police"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_security_final
+		icon = military_purge
+		x = 40
+		y = 13
+		cost = 10
+		prerequisite = { focus = PAKX_i_nap }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_security_final"
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_i_refugees
+		icon = family
+		x = 41
+		y = 14
+		cost = 7
+		prerequisite = { focus = PAKX_i_security_final }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_refugees"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_stability = -0.01
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_i_edu
+		icon = education_reform
+		x = 46
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_edu"
+			add_stability = 0.02
+			add_tech_bonus = {
+			name = PAKX_tb_edu
+			category = CAT_industry
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_health
+		icon = generic_healthcare
+		x = 48
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_health"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_stability = 0.04
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_flood
+		icon = economic_water_supply
+		x = 50
+		y = 10
+		cost = 7
+		prerequisite = { focus = PAKX_i_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_flood"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+			country_event = { id = roc_asia.106 days = 3 }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_urban
+		icon = construction2
+		x = 46
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_edu }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_urban"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_media
+		icon = liberal_press
+		x = 48
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_health }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_media"
+			add_political_power = 25
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_climate
+		icon = sustainable_development
+		x = 50
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_flood }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_climate"
+			add_stability = 0.02
+			if = { limit = { NOT = { has_idea = PAKX_flood_idea } } add_ideas = PAKX_flood_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = PAKX_i_youth
+		icon = generic_university
+		x = 47
+		y = 13
+		cost = 7
+		prerequisite = { focus = PAKX_i_urban focus = PAKX_i_media }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_youth"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_i_census
+		icon = family
+		x = 46
+		y = 14
+		cost = 7
+		prerequisite = { focus = PAKX_i_youth }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_census"
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = PAKX_i_water2
+		icon = economic_water_supply
+		x = 51
+		y = 14
+		cost = 7
+		prerequisite = { focus = PAKX_i_climate }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_water2"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_ngo
+		icon = welfare
+		x = 52
+		y = 12
+		cost = 7
+		prerequisite = { focus = PAKX_i_climate }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_ngo"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = PAKX_i_social_final
+		icon = sustainable_development
+		x = 49
+		y = 14
+		cost = 10
+		prerequisite = { focus = PAKX_i_youth focus = PAKX_i_climate }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_social_final"
+			add_political_power = 75
+			add_stability = 0.04
+			country_event = { id = roc_asia.107 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = PAKX_i_final
+		icon = Focus_Parliament_Constitution
+		x = 44
+		y = 15
+		cost = 10
+		prerequisite = { focus = PAKX_i_security_final focus = PAKX_i_social_final }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PAKX_i_final"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+}

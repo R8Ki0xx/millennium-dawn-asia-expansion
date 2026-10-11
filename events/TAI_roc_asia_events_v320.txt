@@ -1,0 +1,264 @@
+# MD ROC Return v3.20 —— 韩国、菲律宾、越南的国策事件（由 _tools/patch_v320.py 生成）
+add_namespace = roc_asia
+
+# 修宪公投结果
+country_event = {
+	id = roc_asia.1
+	title = roc_asia.1.t
+	desc = roc_asia.1.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.1.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.1.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.1.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.1.b"
+		add_stability = -0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 改革的任期
+country_event = {
+	id = roc_asia.20
+	title = roc_asia.20.t
+	desc = roc_asia.20.d
+	picture = GFX_philippiens_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.20.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.20.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 强人时代的谢幕
+country_event = {
+	id = roc_asia.21
+	title = roc_asia.21.t
+	desc = roc_asia.21.d
+	picture = GFX_philippiens_malacanang
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.21.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.21.a"
+		add_political_power = 25
+		add_war_support = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 平稳的任期
+country_event = {
+	id = roc_asia.22
+	title = roc_asia.22.t
+	desc = roc_asia.22.d
+	picture = GFX_philippiens_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.22.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.22.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 进步联盟的第一个任期
+country_event = {
+	id = roc_asia.23
+	title = roc_asia.23.t
+	desc = roc_asia.23.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.23.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.23.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 政治线落幕
+country_event = {
+	id = roc_asia.24
+	title = roc_asia.24.t
+	desc = roc_asia.24.d
+	picture = GFX_philippiens_malacanang
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.24.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.24.a"
+		add_political_power = 50
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+}
+
+# 党代会：革新开放 2.0
+country_event = {
+	id = roc_asia.40
+	title = roc_asia.40.t
+	desc = roc_asia.40.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.40.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.40.a"
+		add_political_power = 25
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.40.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.40.b"
+		add_stability = 0.03
+		ai_chance = { base = 7 }
+	}
+}
+
+# 党的领导全面加强
+country_event = {
+	id = roc_asia.41
+	title = roc_asia.41.t
+	desc = roc_asia.41.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.41.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.41.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.41.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.41.b"
+		add_stability = -0.01
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 7 }
+	}
+}
+
+# 越南的首次多党选举
+country_event = {
+	id = roc_asia.42
+	title = roc_asia.42.t
+	desc = roc_asia.42.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.42.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.42.a"
+		add_political_power = 25
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.42.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.42.b"
+		add_stability = -0.01
+		ai_chance = { base = 7 }
+	}
+}
+
+# 军人治国的第一年
+country_event = {
+	id = roc_asia.43
+	title = roc_asia.43.t
+	desc = roc_asia.43.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.43.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.43.a"
+		add_war_support = 0.03
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.43.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.43.b"
+		add_political_power = -25
+		add_stability = 0.02
+		ai_chance = { base = 7 }
+	}
+}
+
+# 亚洲新虎
+country_event = {
+	id = roc_asia.44
+	title = roc_asia.44.t
+	desc = roc_asia.44.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.44.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.44.a"
+		add_political_power = 50
+		add_stability = 0.03
+		ai_chance = { base = 10 }
+	}
+}
+
+# 南沙对峙
+country_event = {
+	id = roc_asia.45
+	title = roc_asia.45.t
+	desc = roc_asia.45.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.45.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.45.a"
+		add_war_support = 0.03
+		add_political_power = 25
+		add_stability = -0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.45.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.45.b"
+		add_political_power = 25
+		if = { limit = { country_exists = CHI }
+		CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_china_coop } }
+		add_opinion_modifier = { target = CHI modifier = TAI_ext_vie_china_coop }
+		}
+		ai_chance = { base = 7 }
+	}
+}
+
+# 三角洲的盐碱化
+country_event = {
+	id = roc_asia.46
+	title = roc_asia.46.t
+	desc = roc_asia.46.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	option = {
+		name = roc_asia.46.a
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.46.a"
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = roc_asia.46.b
+		log = "[GetDateText]: [Root.GetName]: event roc_asia.46.b"
+		add_political_power = 25
+		add_stability = 0.01
+		ai_chance = { base = 7 }
+	}
+}

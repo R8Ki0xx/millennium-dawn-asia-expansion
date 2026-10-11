@@ -1,0 +1,1882 @@
+# MD ROC Return v3.17 —— 五院政府面板（由 _tools/make_gov.py 生成）
+guiTypes = {
+	containerWindowType = {
+		name = "TAI_gov_decision_gui"
+		size = { width = 492 height = 894 }
+		containerWindowType = {
+			name = "gov_container"
+			position = { x = 2 y = 6 }
+			size = { width = 482 height = 880 }
+			iconType = {
+				name = "gov_bg"
+				spriteType = "GFX_TAI_gov_bg"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_header"
+				spriteType = "GFX_TAI_gov_header"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_pres_pic"
+				spriteType = "GFX_TAI_gov_pres_none"
+				position = { x = 16 y = 144 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_pres_name"
+				position = { x = 108 y = 144 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_pres_name"
+				maxWidth = 360
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_pres_party"
+				position = { x = 108 y = 168 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_president"
+				maxWidth = 360
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "gov_premier_pic"
+				spriteType = "GFX_TAI_gov_lien_chan"
+				position = { x = 11 y = 288 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_premier_name"
+				position = { x = 6 y = 392 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_premier_name"
+				maxWidth = 86
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_premier"
+			}
+			instantTextBoxType = {
+				name = "gov_premier_party"
+				position = { x = 6 y = 416 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_premier_party"
+				maxWidth = 86
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_premier"
+			}
+			iconType = {
+				name = "gov_legis_pic"
+				spriteType = "GFX_TAI_gov_han_kuo_yu"
+				position = { x = 107 y = 288 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_legis_name"
+				position = { x = 102 y = 392 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_legis_name"
+				maxWidth = 86
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_legis"
+			}
+			instantTextBoxType = {
+				name = "gov_legis_party"
+				position = { x = 102 y = 416 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_legis_party"
+				maxWidth = 86
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_legis"
+			}
+			iconType = {
+				name = "gov_judicial_pic"
+				spriteType = "GFX_TAI_gov_wan_exiang"
+				position = { x = 203 y = 288 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_judicial_name"
+				position = { x = 198 y = 392 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_judicial_name"
+				maxWidth = 86
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_judicial"
+			}
+			instantTextBoxType = {
+				name = "gov_judicial_party"
+				position = { x = 198 y = 416 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_judicial_party"
+				maxWidth = 86
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_judicial"
+			}
+			iconType = {
+				name = "gov_exam_pic"
+				spriteType = "GFX_TAI_gov_li_ao"
+				position = { x = 299 y = 288 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_exam_name"
+				position = { x = 294 y = 392 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_exam_name"
+				maxWidth = 86
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_exam"
+			}
+			instantTextBoxType = {
+				name = "gov_exam_party"
+				position = { x = 294 y = 416 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_exam_party"
+				maxWidth = 86
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_exam"
+			}
+			iconType = {
+				name = "gov_control_pic"
+				spriteType = "GFX_TAI_gov_hou_yu_ih"
+				position = { x = 395 y = 288 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_control_name"
+				position = { x = 390 y = 392 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_control_name"
+				maxWidth = 86
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_control"
+			}
+			instantTextBoxType = {
+				name = "gov_control_party"
+				position = { x = 390 y = 416 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_control_party"
+				maxWidth = 86
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_tt_control"
+			}
+			iconType = {
+				name = "gov_ly_bar"
+				quadTextureSprite = "GFX_TAI_gov_tbar"
+				position = { x = 151 y = 766 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_status"
+				position = { x = 14 y = 470 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_status"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+				pdx_tooltip = "TAI_gov_ly_status_tt"
+			}
+			instantTextBoxType = {
+				name = "gov_effects"
+				position = { x = 14 y = 492 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_effects"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+				pdx_tooltip = "TAI_gov_effects_tt"
+			}
+			instantTextBoxType = {
+				name = "gov_ly_term"
+				position = { x = 300 y = 522 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_ly_term"
+				maxWidth = 170
+				maxHeight = 22
+				fixedsize = yes
+			}
+			iconType = {
+				name = "gov_seat_0"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 156 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_1"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 142 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_2"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 128 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_3"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 114 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_4"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 100 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_5"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 87 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_6"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 73 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_7"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 59 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_8"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 46 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_9"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 46 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_10"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 60 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_11"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 74 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_12"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 88 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_13"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 102 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_14"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 116 y = 730 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_15"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 129 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_16"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 49 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_17"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 144 y = 730 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_18"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 63 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_19"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 77 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_20"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 158 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_21"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 91 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_22"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 105 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_23"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 53 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_24"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 67 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_25"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 120 y = 713 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_26"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 82 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_27"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 134 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_28"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 96 y = 698 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_29"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 58 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_30"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 149 y = 713 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_31"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 111 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_32"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 73 y = 681 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_33"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 88 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_34"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 163 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_35"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 126 y = 696 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_36"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 65 y = 664 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_37"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 103 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_38"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 80 y = 665 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_39"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 141 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_40"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 119 y = 681 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_41"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 96 y = 665 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_42"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 74 y = 648 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_43"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 111 y = 667 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_44"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 158 y = 696 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_45"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 89 y = 651 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_46"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 135 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_47"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 84 y = 634 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_48"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 106 y = 650 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_49"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 128 y = 666 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_50"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 151 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_51"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 173 y = 699 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_52"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 99 y = 637 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_53"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 122 y = 653 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_54"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 95 y = 620 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_55"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 147 y = 666 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_56"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 118 y = 637 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_57"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 169 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_58"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 140 y = 653 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_59"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 111 y = 624 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_60"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 133 y = 640 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_61"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 163 y = 669 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_62"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 107 y = 608 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_63"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 130 y = 625 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_64"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 124 y = 612 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_65"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 186 y = 686 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_66"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 160 y = 654 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_67"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 153 y = 641 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_68"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 121 y = 597 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_69"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 147 y = 629 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_70"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 144 y = 614 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_71"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 183 y = 671 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_72"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 138 y = 602 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_73"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 177 y = 659 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_74"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 135 y = 587 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_75"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 175 y = 643 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_76"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 168 y = 632 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_77"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 161 y = 620 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_78"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 152 y = 593 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_79"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 159 y = 605 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_80"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 151 y = 578 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_81"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 201 y = 676 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_82"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 192 y = 650 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_83"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 177 y = 612 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_84"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 200 y = 662 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_85"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 184 y = 624 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_86"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 168 y = 586 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_87"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 175 y = 598 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_88"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 191 y = 636 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_89"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 167 y = 571 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_90"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 184 y = 580 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_91"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 193 y = 606 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_92"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 184 y = 566 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_93"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 192 y = 592 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_94"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 201 y = 618 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_95"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 209 y = 644 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_96"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 218 y = 671 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_97"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 209 y = 630 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_98"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 217 y = 657 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_99"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 201 y = 576 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_100"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 201 y = 562 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_101"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 210 y = 602 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_102"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 209 y = 588 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_103"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 218 y = 615 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_104"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 218 y = 573 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_105"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 218 y = 559 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_106"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 227 y = 641 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_107"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 226 y = 628 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_108"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 227 y = 600 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_109"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 227 y = 586 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_110"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 236 y = 668 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_111"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 236 y = 655 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_112"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 236 y = 614 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_113"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 236 y = 572 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_114"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 236 y = 558 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_115"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 244 y = 586 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_116"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 244 y = 600 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_117"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 245 y = 628 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_118"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 244 y = 641 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_119"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 253 y = 559 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_120"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 253 y = 573 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_121"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 253 y = 615 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_122"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 262 y = 588 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_123"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 261 y = 602 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_124"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 270 y = 562 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_125"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 254 y = 657 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_126"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 270 y = 576 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_127"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 253 y = 671 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_128"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 262 y = 630 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_129"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 262 y = 644 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_130"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 270 y = 618 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_131"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 279 y = 592 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_132"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 287 y = 566 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_133"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 278 y = 606 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_134"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 287 y = 580 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_135"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 304 y = 571 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_136"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 280 y = 636 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_137"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 296 y = 598 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_138"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 271 y = 662 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_139"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 287 y = 624 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_140"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 303 y = 586 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_141"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 294 y = 612 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_142"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 279 y = 650 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_143"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 270 y = 676 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_144"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 320 y = 578 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_145"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 312 y = 605 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_146"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 319 y = 593 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_147"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 296 y = 643 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_148"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 303 y = 632 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_149"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 310 y = 620 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_150"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 336 y = 587 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_151"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 294 y = 659 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_152"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 288 y = 671 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_153"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 333 y = 602 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_154"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 327 y = 614 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_155"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 324 y = 629 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_156"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 350 y = 597 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_157"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 318 y = 641 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_158"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 285 y = 686 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_159"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 311 y = 654 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_160"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 347 y = 612 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_161"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 341 y = 625 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_162"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 364 y = 608 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_163"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 308 y = 669 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_164"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 338 y = 640 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_165"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 302 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_166"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 331 y = 653 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_167"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 360 y = 624 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_168"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 353 y = 637 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_169"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 324 y = 666 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_170"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 376 y = 620 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_171"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 349 y = 653 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_172"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 372 y = 637 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_173"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 298 y = 699 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_174"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 320 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_175"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 343 y = 666 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_176"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 365 y = 650 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_177"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 387 y = 634 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_178"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 336 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_179"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 313 y = 696 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_180"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 382 y = 651 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_181"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 360 y = 667 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_182"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 397 y = 648 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_183"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 375 y = 665 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_184"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 352 y = 681 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_185"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 330 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_186"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 391 y = 665 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_187"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 368 y = 682 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_188"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 406 y = 664 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_189"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 308 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_190"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 345 y = 696 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_191"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 383 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_192"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 322 y = 713 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_193"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 360 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_194"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 398 y = 681 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_195"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 413 y = 680 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_196"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 375 y = 698 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_197"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 337 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_198"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 389 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_199"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 351 y = 713 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_200"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 404 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_201"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 418 y = 697 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_202"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 366 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_203"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 380 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_204"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 313 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_205"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 394 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_206"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 327 y = 730 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_207"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 408 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_208"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 422 y = 714 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_209"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 342 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_210"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 355 y = 730 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_211"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 369 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_212"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 383 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_213"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 397 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_214"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 411 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_215"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 425 y = 731 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_216"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 316 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_217"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 329 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_218"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 343 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_219"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 357 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_220"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 370 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_221"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 384 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_222"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 398 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_223"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 412 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "gov_seat_224"
+				spriteType = "GFX_TAI_gov_seat"
+				position = { x = 426 y = 748 }
+				frame = 7
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_gov"
+				position = { x = 161 y = 708 }
+				font = "hoi_18mbs"
+				text = "TAI_gov_gui_ly_gov"
+				maxWidth = 160
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+			}
+			instantTextBoxType = {
+				name = "gov_ly_status"
+				position = { x = 161 y = 730 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_status_short"
+				maxWidth = 160
+				maxHeight = 22
+				fixedsize = yes
+				format = centre
+				pdx_tooltip = "TAI_gov_ly_status_tt"
+			}
+			instantTextBoxType = {
+				name = "gov_ly_kmt"
+				position = { x = 32 y = 795 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_kmt"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_dp"
+				position = { x = 192 y = 795 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_dp"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_sd"
+				position = { x = 352 y = 795 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_sd"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_pfp"
+				position = { x = 32 y = 819 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_pfp"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_cpc"
+				position = { x = 192 y = 819 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_cpc"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_other"
+				position = { x = 352 y = 819 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_other"
+				maxWidth = 140
+				maxHeight = 22
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "gov_ly_next"
+				position = { x = 14 y = 843 }
+				font = "hoi_16mbs"
+				text = "TAI_gov_gui_ly_next"
+				maxWidth = 456
+				maxHeight = 22
+				fixedsize = yes
+			}
+		}
+	}
+}

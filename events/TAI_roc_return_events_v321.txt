@@ -1,0 +1,74 @@
+# MD ROC Return v3.21 —— 志愿军、升级介入、内战结局（由 _tools/patch_v321.py 生成）
+add_namespace = roc_return
+
+# 是否升级介入？
+country_event = {
+	id = roc_return.190
+	title = roc_return.190.t
+	desc = roc_return.190.d
+	picture = GFX_TAI_ev_8_PRC_collapse2
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = TAI_volunteer_phase
+		any_country = { has_country_flag = TAI_mainland_rebels }
+	}
+	option = {
+		name = roc_return.190.a
+		log = "[GetDateText]: [This.GetName]: roc_return.190.a executed"
+		TAI_escalate_effect = yes
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = roc_return.190.b
+		log = "[GetDateText]: [This.GetName]: roc_return.190.b executed"
+		add_political_power = 25
+		country_event = { id = roc_return.190 days = 60 }
+		ai_chance = { base = 40 }
+	}
+}
+
+# 起义军溃败
+country_event = {
+	id = roc_return.191
+	title = roc_return.191.t
+	desc = roc_return.191.d
+	picture = GFX_TAI_ev_61_battle_of_beijing
+	is_triggered_only = yes
+	option = {
+		name = roc_return.191.a
+		log = "[GetDateText]: [This.GetName]: roc_return.191.a executed"
+		TAI_volunteer_cleanup = yes
+		add_to_variable = { TAI_mainland_unrest = 10 tooltip = TAI_mainland_unrest_tt }
+		clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		add_political_power = -25
+		ai_chance = { base = 1 }
+	}
+}
+
+# 起义军夺取了政权
+country_event = {
+	id = roc_return.192
+	title = roc_return.192.t
+	desc = roc_return.192.d
+	picture = GFX_TAI_ev_43_CHI_detente
+	is_triggered_only = yes
+	option = {
+		name = roc_return.192.a
+		log = "[GetDateText]: [This.GetName]: roc_return.192.a executed"
+		TAI_volunteer_cleanup = yes
+		random_country = {
+			limit = { has_country_flag = TAI_mainland_rebels }
+			ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+		}
+		add_stability = 0.05
+		add_political_power = 100
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = roc_return.192.b
+		log = "[GetDateText]: [This.GetName]: roc_return.192.b executed"
+		TAI_volunteer_cleanup = yes
+		add_political_power = 25
+		ai_chance = { base = 30 }
+	}
+}

@@ -1,0 +1,47 @@
+# MD ROC Return v3.21 —— 中华民国勋章（图条与单枚图标取自 Kaiserreich: LKMT 内容拓展）
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ROC_medal_icon"
+		texturefile = "gfx/interface/medals/ROC_medal_strip.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ROC_medal_icon_large"
+		texturefile = "gfx/interface/medals/ROC_medal_strip_large.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ROC_medal_icon_lcs"
+		texturefile = "gfx/interface/medals/ROC_medal_lcs_strip.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ROC_medal_icon_lcs_large"
+		texturefile = "gfx/interface/medals/ROC_medal_lcs_strip_large.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_1"
+		texturefile = "gfx/interface/medals/ROC_medal_1.png"
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_2"
+		texturefile = "gfx/interface/medals/ROC_medal_2.png"
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_3"
+		texturefile = "gfx/interface/medals/ROC_medal_3.png"
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_4"
+		texturefile = "gfx/interface/medals/ROC_medal_4.png"
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_5"
+		texturefile = "gfx/interface/medals/ROC_medal_5.png"
+	}
+	spriteType = {
+		name = "GFX_ROC_CHI_medal_6"
+		texturefile = "gfx/interface/medals/ROC_medal_6.png"
+	}
+}

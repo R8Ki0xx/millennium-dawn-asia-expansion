@@ -1,0 +1,9 @@
+# MD ROC Return v3.15 —— 五院政府
+TAI_five_yuan_category = {
+	icon = GFX_decision_TAI_roc_flag
+	priority = 1990
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi }
+	visible_when_empty = yes
+	scripted_gui = TAI_gov_GUI
+}

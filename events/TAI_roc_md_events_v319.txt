@@ -1,0 +1,106 @@
+# MD ROC Return v3.19 —— 千禧中共事件的中华民国版（由 _tools/v319_events.py 生成）
+add_namespace = roc_md
+
+# 光复后的中华民国版：海南撞机
+country_event = {
+	id = roc_md.6
+	title = roc_md.6.t
+	desc = roc_md.6.d
+	picture = GFX_TAI_ev_51_CHI_PRC_taiwan_strait_drill
+	is_triggered_only = yes
+	option = {
+		name = roc_md.6.a
+		log = "[GetDateText]: [Root.GetName]: event roc_md.6.a"
+		add_opinion_modifier = { target = USA modifier = TAI_us_friendship }
+		add_political_power = -15
+		add_stability = 0.01
+	}
+	option = {
+		name = roc_md.6.b
+		log = "[GetDateText]: [Root.GetName]: event roc_md.6.b"
+		add_war_support = 0.03
+		add_popularity = { ideology = nationalist popularity = 0.02 }
+		add_political_power = 25
+	}
+}
+
+# 光复后的中华民国版：非典型肺炎
+country_event = {
+	id = roc_md.1
+	title = roc_md.1.t
+	desc = roc_md.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = roc_md.1.a
+		log = "[GetDateText]: [Root.GetName]: event roc_md.1.a"
+		add_stability = -0.02
+		add_political_power = 25
+		set_temp_variable = { dbf_d = 0.150 } TAI_dbf_hearts_ease = yes
+	}
+	option = {
+		name = roc_md.1.b
+		log = "[GetDateText]: [Root.GetName]: event roc_md.1.b"
+		add_stability = 0.01
+		add_political_power = -25
+	}
+}
+
+# 光复后的中华民国版：汶川大地震
+country_event = {
+	id = roc_md.2
+	title = roc_md.2.t
+	desc = roc_md.2.d
+	picture = GFX_TAI_ev_41_Chinese_soldiers
+	is_triggered_only = yes
+	option = {
+		name = roc_md.2.a
+		log = "[GetDateText]: [Root.GetName]: event roc_md.2.a"
+		army_experience = 10
+		set_temp_variable = { treasury_change = -5 } modify_treasury_effect = yes
+		add_stability = 0.03
+		set_temp_variable = { dbf_d = 0.300 } TAI_dbf_hearts_ease = yes
+	}
+	option = {
+		name = roc_md.2.b
+		log = "[GetDateText]: [Root.GetName]: event roc_md.2.b"
+		set_temp_variable = { treasury_change = -2 } modify_treasury_effect = yes
+		add_stability = -0.02
+	}
+}
+
+# 光复后的中华民国版：北京奥运会
+country_event = {
+	id = roc_md.3
+	title = roc_md.3.t
+	desc = roc_md.3.d
+	picture = GFX_TAI_ev_44_PRC_lib_victory_news
+	is_triggered_only = yes
+	option = {
+		name = roc_md.3.a
+		log = "[GetDateText]: [Root.GetName]: event roc_md.3.a"
+		set_temp_variable = { treasury_change = -8 } modify_treasury_effect = yes
+		add_political_power = 75
+		add_stability = 0.03
+		set_temp_variable = { dbf_d = 0.450 } TAI_dbf_isolation_ease = yes
+	}
+	option = {
+		name = roc_md.3.b
+		log = "[GetDateText]: [Root.GetName]: event roc_md.3.b"
+		add_political_power = 25
+	}
+}
+
+# 光复后的中华民国版：全国人口普查
+country_event = {
+	id = roc_md.51
+	title = roc_md.51.t
+	desc = roc_md.51.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = roc_md.51.a
+		log = "[GetDateText]: [Root.GetName]: event roc_md.51.a"
+		add_political_power = 50
+	}
+}

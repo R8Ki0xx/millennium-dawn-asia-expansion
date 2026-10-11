@@ -1,0 +1,113 @@
+# MD ROC Return v3.21 —— 中华民国勋章（结构参考 Kaiserreich: LKMT 内容拓展）
+@cost = 15
+
+unit_medals = {
+	ROC_order_blue_sky_white_sun = {
+		available = { ROC_should_have_roc_medals_trigger = yes }
+		frame = 1
+		icon = "GFX_ROC_medal_icon"
+
+		cost = @cost
+
+		unit_modifiers = {
+			breakthrough_factor = 0.05
+			army_attack_factor = 0.05
+		}
+		ship_modifiers = {
+			naval_damage_factor = 0.1
+			naval_critical_score_chance_factor = 0.1
+		}
+
+		officer_xp = 150
+	}
+	ROC_order_precious_tripod = {
+		available = { ROC_should_have_roc_medals_trigger = yes }
+		frame = 2
+		icon = "GFX_ROC_medal_icon"
+
+		cost = @cost
+
+		unit_modifiers = {
+			equipment_capture_factor = 0.05
+			recon_factor_while_entrenched = 0.1
+		}
+		ship_modifiers = {
+			naval_detection = 0.1
+			naval_mines_effect_reduction = 0.1
+		}
+
+		officer_xp = 150
+	}
+	ROC_order_cloud_and_banner = {
+		available = { ROC_should_have_roc_medals_trigger = yes }
+		frame = 3
+		icon = "GFX_ROC_medal_icon"
+
+		cost = @cost
+
+		unit_modifiers = {
+			army_org_factor = 0.05
+			breakthrough_factor = 0.05
+		}
+		ship_modifiers = {
+			navy_org_factor = 0.1
+			naval_critical_score_chance_factor = 0.1
+		}
+
+		officer_xp = 150
+	}
+	ROC_medal_loyalty_and_valor = {
+		available = { ROC_should_have_roc_medals_trigger = yes }
+		frame = 4
+		icon = "GFX_ROC_medal_icon"
+
+		cost = @cost
+
+		unit_modifiers = {
+			army_morale_factor = 0.1
+			experience_loss_factor = -0.1
+		}
+		ship_modifiers = {
+			naval_morale_factor = 0.5
+			experience_gain_navy_unit_factor = 0.25
+		}
+
+		officer_xp = 150
+	}
+	ROC_order_independence_freedom = {
+		available = { ROC_should_have_left_medals_trigger = yes }
+		frame = 1
+		icon = "GFX_ROC_medal_icon_lcs"
+
+		cost = @cost
+
+		unit_modifiers = {
+			supply_consumption_factor = -0.05
+			army_defence_factor = 0.05
+		}
+		ship_modifiers = {
+			naval_defense_factor = 0.1
+			naval_supply_consumption_factor = -0.1
+		}
+
+		officer_xp = 150
+	}
+	ROC_order_liberation = {
+		available = { ROC_should_have_left_medals_trigger = yes }
+		frame = 2
+		icon = "GFX_ROC_medal_icon_lcs"
+
+		cost = @cost
+
+		unit_modifiers = {
+			army_morale_factor = 0.1
+			army_attack_factor = 0.1
+		}
+		ship_modifiers = {
+			naval_morale_factor = 0.5
+			naval_damage_factor = 0.1
+		}
+
+		officer_xp = 150
+	}
+}

@@ -1,0 +1,7 @@
+# MD ROC Return v3.19 —— 五族共和 · 边疆一体化
+TAI_frontier_category = {
+	icon = GFX_decision_category_taiwan
+	priority = 1970
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi has_country_flag = TAI_fr_initialized }
+}

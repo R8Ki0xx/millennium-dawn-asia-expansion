@@ -1,0 +1,4 @@
+# MD ROC Return v3.14
+spriteTypes = {
+	spriteType = { name = "GFX_TAI_ev_nanjing_palace" texturefile = "gfx/event_pictures/TAI_roc/TAI_ev_nanjing_palace.dds" }
+}

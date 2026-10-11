@@ -1,0 +1,94 @@
+# MD ROC Return v3.15 —— 五院政府
+TAI_five_yuan_category = {
+	TAI_gov_nominate_premier = {
+		icon = GFX_decision_TAI_roc_flag
+		cost = 50
+		days_re_enable = 180
+		visible = { has_country_flag = ROC_new_chi }
+		complete_effect = { country_event = { id = TAI_gov.1 } }
+		ai_will_do = { base = 0 }
+	}
+	TAI_gov_nominate_legis = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 35
+		days_re_enable = 365
+		visible = { has_country_flag = ROC_new_chi }
+		complete_effect = { country_event = { id = TAI_gov.5 } }
+		ai_will_do = { base = 0 }
+	}
+	TAI_gov_nominate_judicial = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 35
+		days_re_enable = 365
+		visible = { has_country_flag = ROC_new_chi }
+		complete_effect = { country_event = { id = TAI_gov.6 } }
+		ai_will_do = { base = 0 }
+	}
+	TAI_gov_nominate_exam = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 35
+		days_re_enable = 365
+		visible = { has_country_flag = ROC_new_chi }
+		complete_effect = { country_event = { id = TAI_gov.7 } }
+		ai_will_do = { base = 0 }
+	}
+	TAI_gov_nominate_control = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 35
+		days_re_enable = 365
+		visible = { has_country_flag = ROC_new_chi }
+		complete_effect = { country_event = { id = TAI_gov.8 } }
+		ai_will_do = { base = 0 }
+	}
+	TAI_gov_dissolve_ly = {
+		icon = GFX_decision_generic_speech
+		cost = 75
+		days_re_enable = 730
+		visible = { has_country_flag = ROC_new_chi }
+		available = { has_country_flag = TAI_ly_minority }
+		complete_effect = {
+			add_stability = -0.03
+			TAI_ly_election = yes
+			country_event = { id = TAI_gov.3 days = 1 }
+		}
+		ai_will_do = { base = 1 }
+	}
+	# v3.19 用政治点数调整立法院席次（照千禧美国国会的游说决议：到期时结算）
+	TAI_gov_lobby_legislators = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		visible = { has_country_flag = ROC_new_chi OR = { check_variable = { ruling_party = 1 } check_variable = { ruling_party = 2 } check_variable = { ruling_party = 3 } check_variable = { ruling_party = 14 } check_variable = { ruling_party = 4 } } }
+		available = { check_variable = { TAI_ly_support < 0.98 } }
+		remove_effect = {
+			custom_effect_tooltip = TAI_gov_lobby_legislators_tt
+			hidden_effect = {
+				set_temp_variable = { ly_shift = random }
+				multiply_temp_variable = { ly_shift = 4 }
+				add_to_temp_variable = { ly_shift = 2 }
+				TAI_ly_shift_to_gov = yes
+			}
+		}
+		ai_will_do = { base = 1 modifier = { factor = 6 has_country_flag = TAI_ly_minority } }
+	}
+	TAI_gov_political_deal = {
+		icon = GFX_decision_generic_speech
+		cost = 60
+		days_remove = 45
+		days_re_enable = 120
+		visible = { has_country_flag = ROC_new_chi OR = { check_variable = { ruling_party = 1 } check_variable = { ruling_party = 2 } check_variable = { ruling_party = 3 } check_variable = { ruling_party = 14 } check_variable = { ruling_party = 4 } } }
+		available = { check_variable = { TAI_ly_support < 0.95 } }
+		complete_effect = { add_stability = -0.02 }
+		remove_effect = {
+			custom_effect_tooltip = TAI_gov_political_deal_tt
+			hidden_effect = {
+				set_temp_variable = { ly_shift = random }
+				multiply_temp_variable = { ly_shift = 6 }
+				add_to_temp_variable = { ly_shift = 6 }
+				TAI_ly_shift_to_gov = yes
+			}
+		}
+		ai_will_do = { base = 0 modifier = { add = 4 has_country_flag = TAI_ly_minority } }
+	}
+}

@@ -1,0 +1,18 @@
+# MD ROC Return v3.21 —— 至少有两条政党线已经收官（政党轮替）
+TAI_two_party_lines_done = {
+	custom_trigger_tooltip = {
+		tooltip = TAI_two_party_lines_tt
+		OR = {
+			AND = { has_completed_focus = TAI_kmt_era has_completed_focus = TAI_dp_liberal_china }
+			AND = { has_completed_focus = TAI_kmt_era has_completed_focus = TAI_sd_social_china }
+			AND = { has_completed_focus = TAI_kmt_era has_completed_focus = TAI_gc_grand_compromise }
+			AND = { has_completed_focus = TAI_kmt_era has_completed_focus = TAI_cpc_era }
+			AND = { has_completed_focus = TAI_dp_liberal_china has_completed_focus = TAI_sd_social_china }
+			AND = { has_completed_focus = TAI_dp_liberal_china has_completed_focus = TAI_gc_grand_compromise }
+			AND = { has_completed_focus = TAI_dp_liberal_china has_completed_focus = TAI_cpc_era }
+			AND = { has_completed_focus = TAI_sd_social_china has_completed_focus = TAI_gc_grand_compromise }
+			AND = { has_completed_focus = TAI_sd_social_china has_completed_focus = TAI_cpc_era }
+			AND = { has_completed_focus = TAI_gc_grand_compromise has_completed_focus = TAI_cpc_era }
+		}
+	}
+}

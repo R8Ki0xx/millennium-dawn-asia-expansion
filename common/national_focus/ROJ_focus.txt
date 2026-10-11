@@ -1,0 +1,602 @@
+# MD ROC Return v3.22 —— 罗贾瓦 / 叙利亚民主力量国策树（由 _tools/v322_isi.py 生成）
+focus_tree = {
+	id = rojava_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = ROJ
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = {
+		id = ROJX_autonomy
+		icon = syrianandrojava
+		x = 16
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_autonomy"
+			if = { limit = { NOT = { has_idea = ROJX_democratic_confederalism_idea } } add_ideas = ROJX_democratic_confederalism_idea }
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = ROJX_social_contract
+		icon = Focus_Parliament_Constitution
+		x = 4
+		y = 1
+		cost = 7
+		prerequisite = { focus = ROJX_autonomy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_social_contract"
+			add_stability = 0.03
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = ROJX_cantons
+		icon = autonomy
+		x = 0
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_social_contract }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_cantons"
+			add_stability = 0.03
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = ROJX_councils
+		icon = Decentralization
+		x = 4
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_social_contract }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_councils"
+			add_stability = 0.04
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = ROJX_women_cochair
+		icon = Communist_Feminism
+		x = 8
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_social_contract }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_women_cochair"
+			if = { limit = { NOT = { has_idea = ROJX_women_idea } } add_ideas = ROJX_women_idea }
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = ROJX_ecology
+		icon = eco_democracy
+		x = 2
+		y = 3
+		cost = 7
+		prerequisite = { focus = ROJX_cantons focus = ROJX_councils }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_ecology"
+			add_stability = 0.02
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = ROJX_multi_ethnic
+		icon = culturalautonomy
+		x = 6
+		y = 3
+		cost = 7
+		prerequisite = { focus = ROJX_councils focus = ROJX_women_cochair }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_multi_ethnic"
+			add_stability = 0.04
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_ypg_ypj
+		icon = YPG_1
+		x = 16
+		y = 1
+		cost = 7
+		prerequisite = { focus = ROJX_autonomy }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_ypg_ypj"
+			if = { limit = { NOT = { has_idea = ROJX_ypg_idea } } add_ideas = ROJX_ypg_idea }
+			army_experience = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = ROJX_asayish
+		icon = generic_counter_insurgency_icon
+		x = 20
+		y = 2
+		cost = 5
+		prerequisite = { focus = ROJX_ypg_ypj }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_asayish"
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_ypj_swords
+		icon = YPG_swords
+		x = 12
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_ypg_ypj }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_ypj_swords"
+			army_experience = 20
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_kobani
+		icon = attack_isis
+		x = 16
+		y = 2
+		cost = 10
+		prerequisite = { focus = ROJX_ypg_ypj }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_kobani"
+			add_war_support = 0.06
+			army_experience = 30
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_ypg_aid } }
+			add_opinion_modifier = { target = USA modifier = SYR_ext_ypg_aid }
+			}
+			country_event = { id = roc_asia.66 days = 3 }
+		}
+		ai_will_do = {
+			base = 45
+		}
+	}
+
+	focus = {
+		id = ROJX_sdf
+		icon = ypg_spec
+		x = 16
+		y = 3
+		cost = 10
+		prerequisite = { focus = ROJX_kobani }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_sdf"
+			add_manpower = 40000
+			army_experience = 25
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 45
+		}
+	}
+
+	focus = {
+		id = ROJX_tal_abyad
+		icon = align_to_kurdistan
+		x = 12
+		y = 4
+		cost = 10
+		prerequisite = { focus = ROJX_sdf }
+		search_filters = { FOCUS_FILTER_ARMY }
+		available = {
+			controls_state = 575
+		}
+		bypass = {
+			controls_state = 575
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_tal_abyad"
+			add_war_support = 0.04
+			army_experience = 20
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = ROJX_raqqa_campaign
+		icon = attack_syria
+		x = 16
+		y = 4
+		cost = 10
+		prerequisite = { focus = ROJX_sdf }
+		search_filters = { FOCUS_FILTER_ARMY }
+		available = {
+			controls_state = 191
+		}
+		bypass = {
+			controls_state = 191
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_raqqa_campaign"
+			add_war_support = 0.05
+			add_political_power = 100
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_ypg_aid } }
+			add_opinion_modifier = { target = USA modifier = SYR_ext_ypg_aid }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = ROJX_deir_ezzor
+		icon = seize_oil
+		x = 20
+		y = 4
+		cost = 10
+		prerequisite = { focus = ROJX_raqqa_campaign }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			controls_state = 995
+		}
+		bypass = {
+			controls_state = 995
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_deir_ezzor"
+			if = { limit = { NOT = { has_idea = ROJX_oil_idea } } add_ideas = ROJX_oil_idea }
+			set_temp_variable = { treasury_change = 25 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = ROJX_us_coalition
+		icon = align_to_america
+		x = 28
+		y = 1
+		cost = 7
+		prerequisite = { focus = ROJX_autonomy }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_us_coalition"
+			if = { limit = { NOT = { has_idea = ROJX_coalition_idea } } add_ideas = ROJX_coalition_idea }
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_ypg_aid } }
+			add_opinion_modifier = { target = USA modifier = SYR_ext_ypg_aid }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = ROJX_russia_channel
+		icon = align_to_russia
+		x = 24
+		y = 2
+		cost = 5
+		prerequisite = { focus = ROJX_us_coalition }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_russia_channel"
+			add_political_power = 50
+			if = { limit = { country_exists = SOV }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_ypg_aid } }
+			add_opinion_modifier = { target = SOV modifier = SYR_ext_ypg_aid }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = ROJX_damascus_talks
+		icon = diplomatic_treaty
+		x = 28
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_us_coalition }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_damascus_talks"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = ROJX_kurdish_ties
+		icon = greater_kurdistan
+		x = 32
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_us_coalition }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_kurdish_ties"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = ROJX_turkey_threat
+		icon = attack_turkey
+		x = 28
+		y = 3
+		cost = 7
+		prerequisite = { focus = ROJX_russia_channel focus = ROJX_damascus_talks }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_turkey_threat"
+			if = { limit = { NOT = { has_idea = ROJX_turkey_pressure_idea } } add_ideas = ROJX_turkey_pressure_idea }
+			if = { limit = { country_exists = TUR }
+			TUR = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_tur_pkk } }
+			add_opinion_modifier = { target = TUR modifier = SYR_ext_tur_pkk }
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = ROJX_olive_branch
+		icon = border_conflict_bunker
+		x = 24
+		y = 3
+		cost = 10
+		prerequisite = { focus = ROJX_russia_channel }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_olive_branch"
+			army_experience = 25
+			add_stability = -0.02
+			country_event = { id = roc_asia.67 days = 3 }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = ROJX_peace_spring
+		icon = attack_syria
+		x = 32
+		y = 3
+		cost = 10
+		prerequisite = { focus = ROJX_turkey_threat }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_peace_spring"
+			add_political_power = -25
+			army_experience = 20
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = ROJX_oil_fields
+		icon = oil_production
+		x = 36
+		y = 1
+		cost = 7
+		prerequisite = { focus = ROJX_autonomy }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_oil_fields"
+			if = { limit = { NOT = { has_idea = ROJX_oil_idea } } add_ideas = ROJX_oil_idea }
+			set_temp_variable = { treasury_change = 25 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_wheat
+		icon = wheat_field
+		x = 40
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_oil_fields }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_wheat"
+			add_stability = 0.03
+			set_temp_variable = { treasury_change = 15 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_reconstruction
+		icon = construction
+		x = 36
+		y = 2
+		cost = 7
+		prerequisite = { focus = ROJX_oil_fields }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available = {
+			controls_state = 191
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_reconstruction"
+			add_stability = 0.04
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = ROJX_camps
+		icon = refugees
+		x = 40
+		y = 3
+		cost = 7
+		prerequisite = { focus = ROJX_wheat focus = ROJX_reconstruction }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_camps"
+			if = { limit = { NOT = { has_idea = ROJX_camps_idea } } add_ideas = ROJX_camps_idea }
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = ROJX_federal_syria
+		icon = federal_republic_of_syria
+		x = 16
+		y = 6
+		cost = 10
+		prerequisite = { focus = ROJX_multi_ethnic }
+		prerequisite = { focus = ROJX_tal_abyad focus = ROJX_deir_ezzor }
+		mutually_exclusive = { focus = ROJX_independence focus = ROJX_integration }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_federal_syria"
+			add_stability = 0.05
+			add_political_power = 100
+			if = { limit = { country_exists = USA }
+			set_temp_variable = { percent_change = 2 }
+			set_temp_variable = { influence_target = USA }
+			change_influence_percentage = yes
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = ROJX_integration
+		icon = broken_syr_thing
+		x = 24
+		y = 6
+		cost = 10
+		prerequisite = { focus = ROJX_damascus_talks }
+		prerequisite = { focus = ROJX_peace_spring focus = ROJX_turkey_threat }
+		mutually_exclusive = { focus = ROJX_independence focus = ROJX_federal_syria }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_integration"
+			add_stability = 0.04
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = ROJX_independence
+		icon = greater_kurdistan
+		x = 32
+		y = 6
+		cost = 10
+		prerequisite = { focus = ROJX_kurdish_ties focus = ROJX_tal_abyad }
+		mutually_exclusive = { focus = ROJX_federal_syria focus = ROJX_integration }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ROJX_independence"
+			add_war_support = 0.08
+			add_political_power = 100
+			if = { limit = { country_exists = TUR }
+			TUR = { add_opinion_modifier = { target = ROOT modifier = SYR_ext_tur_pkk } }
+			add_opinion_modifier = { target = TUR modifier = SYR_ext_tur_pkk }
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+}

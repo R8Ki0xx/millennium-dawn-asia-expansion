@@ -1,0 +1,20 @@
+# MD ROC Return v3.19 —— 收拾河山
+TAI_dbf_category = {
+	icon = GFX_decision_category_taiwan
+	priority = 1980
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = {
+		OR = { has_country_flag = ROC_new_chi tag = TAI }
+		OR = {
+			has_dynamic_modifier = { modifier = TAI_dbf_black_gold }
+			has_dynamic_modifier = { modifier = TAI_dbf_isolation }
+			has_dynamic_modifier = { modifier = TAI_dbf_conscription }
+			has_dynamic_modifier = { modifier = TAI_dbf_imbalance }
+			has_dynamic_modifier = { modifier = TAI_dbf_hearts }
+			has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants }
+			has_dynamic_modifier = { modifier = TAI_dbf_transition }
+			has_dynamic_modifier = { modifier = TAI_dbf_warlordism }
+			has_dynamic_modifier = { modifier = TAI_dbf_carpetbag }
+		}
+	}
+}

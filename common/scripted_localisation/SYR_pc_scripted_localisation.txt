@@ -1,0 +1,34 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会面板的动态文字
+defined_text = {
+	name = SYR_pc_speaker_name
+	text = { trigger = { check_variable = { SYR_pc_speaker = 2 } } localization_key = SYR_pc_spk_2 }
+	text = { trigger = { check_variable = { SYR_pc_speaker = 3 } } localization_key = SYR_pc_spk_3 }
+	text = { trigger = { check_variable = { SYR_pc_speaker = 4 } } localization_key = SYR_pc_spk_4 }
+	text = { trigger = { check_variable = { SYR_pc_speaker = 5 } } localization_key = SYR_pc_spk_5 }
+	text = { localization_key = SYR_pc_spk_1 }
+}
+defined_text = {
+	name = SYR_pc_mode_text
+	text = { trigger = { SYR_regime_mode = yes } localization_key = SYR_pc_mode_regime }
+	text = { localization_key = SYR_pc_mode_open }
+}
+defined_text = {
+	name = SYR_pc_system_text
+	text = { trigger = { has_country_flag = SYR_pc_multiparty } localization_key = SYR_pc_sys_multi }
+	text = { localization_key = SYR_pc_sys_reserved }
+}
+defined_text = {
+	name = SYR_pc_quota_text
+	text = { trigger = { has_country_flag = SYR_pc_multiparty } localization_key = SYR_pc_quota_gone }
+	text = { localization_key = SYR_pc_quota_on }
+}
+defined_text = {
+	name = SYR_pc_mark_baath
+	text = { trigger = { check_variable = { ruling_party = 7 } } localization_key = SYR_pc_mark_ruling }
+	text = { localization_key = SYR_pc_mark_none }
+}
+defined_text = {
+	name = SYR_pc_mark_npf
+	text = { trigger = { SYR_regime_mode = yes } localization_key = SYR_pc_mark_ally }
+	text = { localization_key = SYR_pc_mark_none }
+}

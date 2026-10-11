@@ -1,0 +1,139 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会的决议
+SYR_people_council_category = {
+	SYR_dec_pc_woo_baath = {
+		icon = GFX_decision_generic_political_address
+		cost = 40
+		days_re_enable = 90
+		available = { SYR_regime_mode = yes check_variable = { SYR_pc_ind > 9 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_woo_baath"
+			SYR_pc_woo_baath = yes
+		}
+		ai_will_do = { base = 5 }
+	}
+
+	SYR_dec_pc_woo_npf = {
+		icon = GFX_decision_generic_political_address
+		cost = 25
+		days_re_enable = 60
+		available = { SYR_regime_mode = yes check_variable = { SYR_pc_ind > 5 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_woo_npf"
+			SYR_pc_woo_npf = yes
+		}
+		ai_will_do = { base = 5 }
+	}
+
+	SYR_dec_pc_lift_emergency = {
+		icon = GFX_decision_generic_political_address
+		cost = 50
+		fire_only_once = yes
+		visible = { NOT = { has_country_flag = SYR_emergency_lifted } }
+		available = { date > 2011.1.1 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_lift_emergency"
+			set_country_flag = SYR_emergency_lifted
+			add_stability = 0.04
+			add_political_power = 25
+			country_event = { id = roc_asia.81 days = 1 }
+		}
+		ai_will_do = { base = 20 modifier = { factor = 0 date < 2011.4.1 } modifier = { factor = 0 has_global_flag = GLOBAL_syrian_civil_war_started } }
+	}
+
+	SYR_dec_pc_party_law = {
+		icon = GFX_decision_generic_political_address
+		cost = 60
+		fire_only_once = yes
+		visible = { NOT = { has_country_flag = SYR_party_law } }
+		available = { has_country_flag = SYR_emergency_lifted date > 2011.7.1 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_party_law"
+			set_country_flag = SYR_party_law
+			add_stability = 0.02
+			add_political_power = 25
+			country_event = { id = roc_asia.82 days = 1 }
+		}
+		ai_will_do = { base = 15 modifier = { factor = 0 NOT = { has_country_flag = SYR_emergency_lifted } } }
+	}
+
+	SYR_dec_pc_constitution = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		fire_only_once = yes
+		visible = { NOT = { has_country_flag = SYR_pc_multiparty } }
+		available = {
+			custom_trigger_tooltip = { tooltip = SYR_pc_two_thirds_tt check_variable = { SYR_pc_support > 0.66 } }
+			date > 2011.12.1
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_constitution"
+			set_country_flag = SYR_pc_multiparty
+			add_stability = 0.03
+			add_political_power = 50
+			country_event = { id = roc_asia.83 days = 1 }
+		}
+		ai_will_do = { base = 15 modifier = { factor = 0 date < 2012.1.1 } }
+	}
+
+	SYR_dec_pc_counter_terror = {
+		icon = GFX_decision_generic_army_support
+		cost = 50
+		fire_only_once = yes
+		available = {
+			has_global_flag = GLOBAL_syrian_civil_war_started
+			custom_trigger_tooltip = { tooltip = SYR_pc_majority_tt check_variable = { SYR_pc_support > 0.5 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_counter_terror"
+			add_war_support = 0.04
+			add_stability = 0.02
+			add_political_power = -25
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	SYR_dec_pc_law10 = {
+		icon = GFX_decision_generic_political_address
+		cost = 50
+		fire_only_once = yes
+		available = {
+			has_global_flag = GLOBAL_syrian_civil_war_started
+			date > 2018.1.1
+			custom_trigger_tooltip = { tooltip = SYR_pc_majority_tt check_variable = { SYR_pc_support > 0.5 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_law10"
+			add_political_power = 50
+			set_temp_variable = { treasury_change = 30 }
+			modify_treasury_effect = yes
+			add_stability = -0.03
+		}
+		ai_will_do = { base = 15 }
+	}
+
+	SYR_dec_pc_dissolve = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		days_re_enable = 365
+		available = { date > 2001.1.1 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_dissolve"
+			SYR_pc_hold_election = yes
+			add_stability = -0.02
+		}
+		ai_will_do = { base = 0 }
+	}
+
+	SYR_dec_pc_eid_amnesty = {
+		icon = GFX_decision_generic_political_address
+		cost = 25
+		days_re_enable = 365
+		available = { has_country_flag = Syria_Hafez_dead }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_eid_amnesty"
+			add_stability = 0.02
+			add_political_power = 10
+		}
+		ai_will_do = { base = 6 }
+	}
+}

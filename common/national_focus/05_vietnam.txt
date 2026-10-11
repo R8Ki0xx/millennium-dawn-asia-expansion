@@ -1,0 +1,2314 @@
+# MD ROC Return v3.20 —— 越南国策树（由 _tools/v320_vie*.py 生成）
+focus_tree = {
+	id = vietnam_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = VIE
+		}
+	}
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 5 y = 2100 }
+
+	focus = {
+		id = VIEX_p_root
+		icon = communist_party_of_china
+		x = 46
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_p_root"
+			add_political_power = 100
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_start
+		icon = market_socialism
+		x = 40
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_p_root }
+		mutually_exclusive = { focus = VIEX_hl_start focus = VIEX_dem_start focus = VIEX_mj_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_start"
+			if = { limit = { NOT = { has_idea = VIEX_doi_moi_2_idea } } add_ideas = VIEX_doi_moi_2_idea }
+			set_temp_variable = { party_index = 19 }
+			set_temp_variable = { party_popularity_increase = 0.05 }
+			set_temp_variable = { temp_outlook_increase = 0.05 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_term_limit
+		icon = Focus_Parliament_Constitution
+		x = 39
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_dm_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_term_limit"
+			add_political_power = 50
+			set_temp_variable = { temp_opinion = 5 }
+			change_communist_cadres_opinion = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_furnace
+		icon = blr_anti_corruption_law
+		x = 41
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_dm_start }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_furnace"
+			decrease_corruption = yes
+			decrease_corruption = yes
+			if = { limit = { NOT = { has_idea = VIEX_blazing_furnace_idea } } add_ideas = VIEX_blazing_furnace_idea }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_state_core
+		icon = industry_communism
+		x = 39
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_dm_term_limit }
+		mutually_exclusive = { focus = VIEX_dm_private_core }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_state_core"
+			set_temp_variable = { temp_opinion = 6 }
+			change_communist_cadres_opinion = yes
+			set_temp_variable = { temp_opinion = -4 }
+			change_industrial_conglomerates_opinion = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_private_core
+		icon = asian_investment
+		x = 41
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_dm_furnace }
+		mutually_exclusive = { focus = VIEX_dm_state_core }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_private_core"
+			set_temp_variable = { temp_opinion = 8 }
+			change_small_medium_business_owners_opinion = yes
+			set_temp_variable = { temp_opinion = 6 }
+			change_industrial_conglomerates_opinion = yes
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_civil_space
+		icon = union_negotiations
+		x = 40
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_dm_state_core focus = VIEX_dm_private_core }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_civil_space"
+			add_stability = 0.03
+			liberal_policy_effect_small = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_dm_final
+		icon = liberalized_socialism
+		x = 40
+		y = 5
+		cost = 10
+		prerequisite = { focus = VIEX_dm_civil_space }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dm_final"
+			add_political_power = 75
+			add_stability = 0.04
+			country_event = { id = roc_asia.40 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_start
+		icon = communist_purge
+		x = 44
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_p_root }
+		mutually_exclusive = { focus = VIEX_dm_start focus = VIEX_dem_start focus = VIEX_mj_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_start"
+			if = { limit = { NOT = { has_idea = VIEX_party_discipline_idea } } add_ideas = VIEX_party_discipline_idea }
+			set_temp_variable = { party_index = 4 }
+			set_temp_variable = { party_popularity_increase = 0.08 }
+			set_temp_variable = { temp_outlook_increase = 0.08 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_ideology
+		icon = Communist_Education
+		x = 43
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_hl_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_ideology"
+			add_stability = 0.03
+			set_temp_variable = { temp_opinion = 6 }
+			change_communist_cadres_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_party_media
+		icon = great_firewall_china
+		x = 45
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_hl_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_party_media"
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_police
+		icon = secret_police
+		x = 43
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_hl_ideology }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_police"
+			add_stability = 0.03
+			set_temp_variable = { temp_opinion = 8 }
+			change_intelligence_community_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_state_plan
+		icon = five_year_plan
+		x = 45
+		y = 3
+		cost = 10
+		prerequisite = { focus = VIEX_hl_party_media }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_state_plan"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			set_temp_variable = { temp_opinion = -8 }
+			change_industrial_conglomerates_opinion = yes
+			set_temp_variable = { temp_opinion = 6 }
+			change_communist_cadres_opinion = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_hl_final
+		icon = communist_revolution_asia
+		x = 44
+		y = 4
+		cost = 10
+		prerequisite = { focus = VIEX_hl_police focus = VIEX_hl_state_plan }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_hl_final"
+			add_political_power = 75
+			add_stability = 0.05
+			country_event = { id = roc_asia.41 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_start
+		icon = democracy2
+		x = 48
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_p_root }
+		mutually_exclusive = { focus = VIEX_dm_start focus = VIEX_hl_start focus = VIEX_mj_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_start"
+			if = { limit = { NOT = { has_idea = VIEX_multiparty_idea } } add_ideas = VIEX_multiparty_idea }
+			set_temp_variable = { rul_party_temp = 2 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_association
+		icon = liberal_press
+		x = 47
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_dem_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_association"
+			add_stability = -0.02
+			liberal_policy_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_independent_candidates
+		icon = Election
+		x = 49
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_dem_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_independent_candidates"
+			add_political_power = 25
+			liberal_policy_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_judiciary
+		icon = control_judiciary
+		x = 47
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_dem_association }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_judiciary"
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_electoral_law
+		icon = elections_01
+		x = 49
+		y = 3
+		cost = 10
+		prerequisite = { focus = VIEX_dem_independent_candidates }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_electoral_law"
+			add_political_power = 50
+			set_politics = { ruling_party = democratic elections_allowed = yes }
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_dem_final
+		icon = blue_democracy
+		x = 48
+		y = 4
+		cost = 10
+		prerequisite = { focus = VIEX_dem_judiciary focus = VIEX_dem_electoral_law }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_dem_final"
+			add_political_power = 75
+			add_stability = 0.03
+			country_event = { id = roc_asia.42 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_start
+		icon = army_reform
+		x = 52
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_p_root }
+		mutually_exclusive = { focus = VIEX_dm_start focus = VIEX_hl_start focus = VIEX_dem_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_start"
+			if = { limit = { NOT = { has_idea = VIEX_red_junta_idea } } add_ideas = VIEX_red_junta_idea }
+			set_temp_variable = { rul_party_temp = 22 }
+			change_ruling_party_effect = yes
+			set_temp_variable = { party_index = 22 }
+			set_temp_variable = { party_popularity_increase = 0.1 }
+			set_temp_variable = { temp_outlook_increase = 0.1 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_security_council
+		icon = chiefs_of_staff_committee
+		x = 51
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_mj_start }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_security_council"
+			add_political_power = 50
+			set_temp_variable = { temp_opinion = 10 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_army_business
+		icon = industry_military
+		x = 53
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_mj_start }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_army_business"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { temp_opinion = 6 }
+			change_the_military_opinion = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_order
+		icon = military_purge
+		x = 51
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_mj_security_council }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_order"
+			add_stability = 0.04
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_rebuild
+		icon = construction
+		x = 53
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_mj_army_business }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_rebuild"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_mj_final
+		icon = tatmadaw
+		x = 52
+		y = 4
+		cost = 10
+		prerequisite = { focus = VIEX_mj_order focus = VIEX_mj_rebuild }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_mj_final"
+			add_political_power = 75
+			add_war_support = 0.05
+			country_event = { id = roc_asia.43 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_root
+		icon = economic_prosperity
+		x = 26
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_root"
+			add_political_power = 50
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = VIEX_e_agri
+		icon = mechanized_agriculture
+		x = 16
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_agri"
+			if = { limit = { NOT = { has_idea = VIEX_mekong_granary_idea } } add_ideas = VIEX_mekong_granary_idea }
+			set_temp_variable = { temp_opinion = 8 }
+			change_farmers_opinion = yes
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_rice
+		icon = agriculture2
+		x = 15
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_agri }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_rice"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_farmers_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_cash_crops
+		icon = rubber_production
+		x = 17
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_agri }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_cash_crops"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_aquaculture
+		icon = farming_sector
+		x = 16
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_e_rice focus = VIEX_e_cash_crops }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_aquaculture"
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_e_fdi
+		icon = asian_investment
+		x = 20
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_fdi"
+			if = { limit = { NOT = { has_idea = VIEX_fdi_hub_idea } } add_ideas = VIEX_fdi_hub_idea }
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_samsung
+		icon = align_to_south_korea
+		x = 19
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_fdi }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_samsung"
+			if = { limit = { country_exists = KOR }
+			KOR = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_korea } }
+			add_opinion_modifier = { target = KOR modifier = TAI_ext_vie_korea }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_intel
+		icon = microschip_production
+		x = 21
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_fdi }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_intel"
+			add_tech_bonus = {
+			name = VIEX_tb_semi
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_textiles
+		icon = textile_industry
+		x = 23
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_fdi }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_textiles"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { temp_opinion = 3 }
+			change_labour_unions_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_electronics
+		icon = economic_robots
+		x = 20
+		y = 3
+		cost = 10
+		prerequisite = { focus = VIEX_e_samsung focus = VIEX_e_intel }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_electronics"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			add_tech_bonus = {
+			name = VIEX_tb_electronics
+			category = CAT_industry
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_energy
+		icon = national_grid
+		x = 26
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_energy"
+			set_temp_variable = { treasury_change = 2 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_petrovietnam
+		icon = oil_companies
+		x = 25
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_energy }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_petrovietnam"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { temp_opinion = 8 }
+			change_fossil_fuel_industry_opinion = yes
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_offshore
+		icon = focus_generic_offshore_oil_rig
+		x = 25
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_e_petrovietnam }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_offshore"
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_hydro_coal
+		icon = hydroelectric
+		x = 27
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_energy }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_hydro_coal"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			add_stability = -0.01
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_renewable
+		icon = generic_solar
+		x = 27
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_e_hydro_coal }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_renewable"
+			add_tech_bonus = {
+			name = VIEX_tb_renewable
+			category = CAT_industry
+			uses = 1
+			bonus = 0.5
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_nuclear_ninhthuan
+		icon = nuclear_energy
+		x = 29
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_e_energy }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_nuclear_ninhthuan"
+			add_tech_bonus = {
+			name = VIEX_tb_nuclear
+			category = CAT_nuclear_reactors
+			uses = 1
+			bonus = 0.75
+			}
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 15
+		}
+	}
+
+	focus = {
+		id = VIEX_e_shipbuilding
+		icon = naval_industry
+		x = 24
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_e_offshore }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_shipbuilding"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { temp_opinion = 8 }
+			change_maritime_industry_opinion = yes
+			set_temp_variable = { treasury_change = 2 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_infra
+		icon = infrastructure
+		x = 32
+		y = 1
+		cost = 10
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_infra"
+			if = { limit = { NOT = { has_idea = VIEX_north_south_artery_idea } } add_ideas = VIEX_north_south_artery_idea }
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_highway
+		icon = highway_repairs
+		x = 31
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_infra }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_highway"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_hsr
+		icon = Generic_Railroads
+		x = 33
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_e_infra }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_hsr"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			if = { limit = { country_exists = JAP }
+			JAP = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_japan } }
+			add_opinion_modifier = { target = JAP modifier = TAI_ext_vie_japan }
+			}
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_e_metro
+		icon = Generic_Public_Works
+		x = 32
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_e_highway focus = VIEX_e_hsr }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_metro"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_e_ports
+		icon = maritime_trade
+		x = 32
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_e_metro }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_ports"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_maritime_industry_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_digital
+		icon = economic_internet
+		x = 36
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_digital"
+			if = { limit = { NOT = { has_idea = VIEX_digital_vietnam_idea } } add_ideas = VIEX_digital_vietnam_idea }
+			add_tech_bonus = {
+			name = VIEX_tb_internet
+			category = CAT_internet
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_e_viettel_fpt
+		icon = economic_it
+		x = 35
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_digital }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_viettel_fpt"
+			add_tech_bonus = {
+			name = VIEX_tb_5g
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_vinfast
+		icon = bmw_car
+		x = 37
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_e_digital }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_vinfast"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_us_partner } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_vie_us_partner }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_tourism
+		icon = economic_tourism
+		x = 36
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_e_viettel_fpt focus = VIEX_e_vinfast }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_tourism"
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_e_banking
+		icon = generic_banks
+		x = 35
+		y = 4
+		cost = 10
+		prerequisite = { focus = VIEX_e_tourism }
+		mutually_exclusive = { focus = VIEX_e_soe_reform }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_banking"
+			set_temp_variable = { temp_opinion = 10 }
+			change_international_bankers_opinion = yes
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_e_soe_reform
+		icon = economic_privatisation
+		x = 37
+		y = 4
+		cost = 10
+		prerequisite = { focus = VIEX_e_tourism }
+		mutually_exclusive = { focus = VIEX_e_banking }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_soe_reform"
+			set_temp_variable = { temp_opinion = 8 }
+			change_industrial_conglomerates_opinion = yes
+			set_temp_variable = { temp_opinion = -6 }
+			change_communist_cadres_opinion = yes
+			set_temp_variable = { treasury_change = 8 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_e_cptpp
+		icon = trade_with_asean
+		x = 30
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_e_root }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_cptpp"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { percent_change = 2 }
+			set_temp_variable = { influence_target = JAP }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_e_final
+		icon = south_asian_tiger
+		x = 26
+		y = 6
+		cost = 10
+		prerequisite = { focus = VIEX_e_electronics }
+		prerequisite = { focus = VIEX_e_shipbuilding focus = VIEX_e_renewable }
+		prerequisite = { focus = VIEX_e_ports }
+		prerequisite = { focus = VIEX_e_banking focus = VIEX_e_soe_reform }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_e_final"
+			if = { limit = { NOT = { has_idea = VIEX_asian_tiger_idea } } add_ideas = VIEX_asian_tiger_idea }
+			add_political_power = 100
+			add_stability = 0.03
+			country_event = { id = roc_asia.44 days = 3 }
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_m_root
+		icon = military_academy
+		x = 5
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_root"
+			add_political_power = 50
+			army_experience = 15
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = VIEX_m_slim_army
+		icon = army_reform
+		x = 1
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_m_root }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_slim_army"
+			if = { limit = { NOT = { has_idea = VIEX_total_defense_idea } } add_ideas = VIEX_total_defense_idea }
+			army_experience = 15
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_m_conscription
+		icon = conscription
+		x = 0
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_m_slim_army }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_conscription"
+			add_stability = 0.02
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_reserve
+		icon = mobilization_plan
+		x = 2
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_m_slim_army }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_reserve"
+			add_war_support = 0.03
+			army_experience = 10
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_border_defense
+		icon = military_fort
+		x = 1
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_m_conscription focus = VIEX_m_reserve }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_border_defense"
+			add_tech_bonus = {
+			name = VIEX_tb_mountain
+			category = CAT_infantry
+			category = CAT_small_arms
+			uses = 1
+			bonus = 0.5
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_navy
+		icon = navy
+		x = 5
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_m_root }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_navy"
+			navy_experience = 20
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_m_kilo
+		icon = Generic_Submarine1
+		x = 4
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_m_navy }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_kilo"
+			add_tech_bonus = {
+			name = VIEX_tb_kilo
+			category = CAT_submarines
+			category = CAT_attack_submarines
+			uses = 1
+			bonus = 0.75
+			}
+			if = { limit = { country_exists = SOV }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_russia } }
+			add_opinion_modifier = { target = SOV modifier = TAI_ext_vie_russia }
+			}
+			navy_experience = 20
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_m_frigates
+		icon = frigates
+		x = 6
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_m_navy }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_frigates"
+			add_tech_bonus = {
+			name = VIEX_tb_frigate
+			category = CAT_frigates
+			category = CAT_corvettes
+			uses = 1
+			bonus = 0.5
+			}
+			navy_experience = 15
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_m_antiship
+		icon = rocketry
+		x = 5
+		y = 3
+		cost = 10
+		prerequisite = { focus = VIEX_m_kilo focus = VIEX_m_frigates }
+		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_antiship"
+			add_tech_bonus = {
+			name = VIEX_tb_asm
+			category = CAT_naval
+			uses = 1
+			bonus = 0.5
+			}
+			add_war_support = 0.03
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_m_marines
+		icon = amphibious_assault
+		x = 7
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_m_frigates }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_marines"
+			army_experience = 15
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_militia
+		icon = border_patrol_increase
+		x = 3
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_m_navy }
+		search_filters = { FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_militia"
+			if = { limit = { NOT = { has_idea = VIEX_maritime_militia_idea } } add_ideas = VIEX_maritime_militia_idea }
+			set_temp_variable = { temp_opinion = 5 }
+			change_maritime_industry_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_air
+		icon = air_force
+		x = 9
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_m_root }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_air"
+			air_experience = 20
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_m_su30
+		icon = fighter_plane
+		x = 8
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_m_air }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_su30"
+			add_tech_bonus = {
+			name = VIEX_tb_su30
+			category = CAT_aircraft
+			uses = 1
+			bonus = 0.75
+			}
+			if = { limit = { country_exists = SOV }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_russia } }
+			add_opinion_modifier = { target = SOV modifier = TAI_ext_vie_russia }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_m_s300
+		icon = air_defense
+		x = 10
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_m_air }
+		search_filters = { FOCUS_FILTER_AIR FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_s300"
+			add_tech_bonus = {
+			name = VIEX_tb_s300
+			category = CAT_aircraft
+			uses = 1
+			bonus = 0.5
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_m_airbase
+		icon = airforce_base_1
+		x = 9
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_m_su30 focus = VIEX_m_s300 }
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_airbase"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			air_experience = 15
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_m_cyber
+		icon = cyberwarfare
+		x = 12
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_m_air }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_cyber"
+			add_tech_bonus = {
+			name = VIEX_tb_cyber
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+			set_temp_variable = { temp_opinion = 5 }
+			change_intelligence_community_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_military_industry
+		icon = industry_military
+		x = 12
+		y = 3
+		cost = 10
+		prerequisite = { focus = VIEX_m_cyber }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_military_industry"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			set_temp_variable = { temp_opinion = 8 }
+			change_defense_industry_opinion = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_m_final
+		icon = general_staff
+		x = 5
+		y = 6
+		cost = 10
+		prerequisite = { focus = VIEX_m_border_defense }
+		prerequisite = { focus = VIEX_m_antiship focus = VIEX_m_militia }
+		prerequisite = { focus = VIEX_m_airbase }
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_m_final"
+			add_political_power = 75
+			add_war_support = 0.05
+			army_experience = 30
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_d_root
+		icon = diplomacy
+		x = 63
+		y = 0
+		cost = 7
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_root"
+			if = { limit = { NOT = { has_idea = VIEX_bamboo_diplomacy_idea } } add_ideas = VIEX_bamboo_diplomacy_idea }
+			add_political_power = 50
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = VIEX_d_china
+		icon = align_to_china
+		x = 57
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_china"
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_d_china_coop
+		icon = trade_with_china
+		x = 55
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_china }
+		mutually_exclusive = { focus = VIEX_d_china_arb focus = VIEX_d_china_militarize }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_china_coop"
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_china_coop } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_vie_china_coop }
+			}
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { percent_change = 3 }
+			set_temp_variable = { influence_target = CHI }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_china_arb
+		icon = stop_illegal_fishing
+		x = 57
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_china }
+		mutually_exclusive = { focus = VIEX_d_china_coop focus = VIEX_d_china_militarize }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_china_arb"
+			add_political_power = 50
+			add_stability = 0.02
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_us_partner } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_vie_us_partner }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_china_militarize
+		icon = border_war
+		x = 59
+		y = 2
+		cost = 10
+		prerequisite = { focus = VIEX_d_china }
+		mutually_exclusive = { focus = VIEX_d_china_coop focus = VIEX_d_china_arb }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_china_militarize"
+			add_state_claim = 813
+			add_war_support = 0.05
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_scs_tension } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_vie_scs_tension }
+			}
+			set_country_flag = VIEX_scs_militarized
+			country_event = { id = roc_asia.45 days = 3 }
+		}
+		ai_will_do = {
+			base = 8
+		}
+	}
+
+	focus = {
+		id = VIEX_d_scs_code
+		icon = treaty3
+		x = 57
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_d_china_coop focus = VIEX_d_china_arb }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_scs_code"
+			add_political_power = 50
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_china_border
+		icon = trade_with_china
+		x = 55
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_d_china_coop }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_china_border"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_usa
+		icon = align_to_america
+		x = 62
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_usa"
+			add_political_power = 25
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_d_usa_partner
+		icon = trade_with_america
+		x = 61
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_usa }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_usa_partner"
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_us_partner } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_vie_us_partner }
+			}
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			set_temp_variable = { percent_change = 3 }
+			set_temp_variable = { influence_target = USA }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_d_arms_embargo
+		icon = american_military_agreement
+		x = 63
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_usa }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ARMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_arms_embargo"
+			army_experience = 10
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_us_partner } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_vie_us_partner }
+			}
+			add_tech_bonus = {
+			name = VIEX_tb_us_arms
+			category = CAT_small_arms
+			category = CAT_aircraft
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_cam_ranh
+		icon = military_bases
+		x = 62
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_d_usa_partner focus = VIEX_d_arms_embargo }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_cam_ranh"
+			add_political_power = 50
+			navy_experience = 10
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_d_russia
+		icon = align_to_russia
+		x = 66
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_russia"
+			if = { limit = { country_exists = SOV }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_russia } }
+			add_opinion_modifier = { target = SOV modifier = TAI_ext_vie_russia }
+			}
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = VIEX_d_rus_arms
+		icon = RussianArms
+		x = 65
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_russia }
+		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_rus_arms"
+			army_experience = 10
+			add_tech_bonus = {
+			name = VIEX_tb_ru_arms
+			category = CAT_armor
+			category = CAT_artillery
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_rus_energy
+		icon = oil_trade
+		x = 67
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_russia }
+		search_filters = { FOCUS_FILTER_ECONOMY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_rus_energy"
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_india
+		icon = align_to_india
+		x = 69
+		y = 1
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_india"
+			if = { limit = { country_exists = RAJ }
+			RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_india } }
+			add_opinion_modifier = { target = RAJ modifier = TAI_ext_vie_india }
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_d_india_navy
+		icon = trade_with_india
+		x = 69
+		y = 2
+		cost = 7
+		prerequisite = { focus = VIEX_d_india }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_NAVY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_india_navy"
+			navy_experience = 10
+			if = { limit = { country_exists = RAJ }
+			RAJ = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_india } }
+			add_opinion_modifier = { target = RAJ modifier = TAI_ext_vie_india }
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_d_japan
+		icon = trade_with_japan
+		x = 64
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_japan"
+			if = { limit = { country_exists = JAP }
+			JAP = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_japan } }
+			add_opinion_modifier = { target = JAP modifier = TAI_ext_vie_japan }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_korea
+		icon = align_to_south_korea
+		x = 66
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_korea"
+			if = { limit = { country_exists = KOR }
+			KOR = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_korea } }
+			add_opinion_modifier = { target = KOR modifier = TAI_ext_vie_korea }
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_laos_cambodia
+		icon = befriend_indochina
+		x = 57
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_laos_cambodia"
+			add_political_power = 25
+			set_temp_variable = { percent_change = 3 }
+			set_temp_variable = { influence_target = LAO }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_d_asean
+		icon = align_to_asean
+		x = 60
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_asean"
+			add_political_power = 50
+			add_stability = 0.02
+			set_temp_variable = { percent_change = 2 }
+			set_temp_variable = { influence_target = SIA }
+			change_influence_percentage = yes
+		}
+		ai_will_do = {
+			base = 35
+		}
+	}
+
+	focus = {
+		id = VIEX_d_mekong
+		icon = water_dam
+		x = 57
+		y = 5
+		cost = 7
+		prerequisite = { focus = VIEX_d_laos_cambodia }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_mekong"
+			add_political_power = 25
+			add_stability = 0.02
+			add_tech_bonus = {
+			name = VIEX_tb_water
+			category = CAT_industry
+			uses = 1
+			bonus = 0.5
+			}
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_d_roc
+		icon = trade_with_asean
+		x = 69
+		y = 3
+		cost = 7
+		prerequisite = { focus = VIEX_d_root }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
+		available = {
+			country_exists = CHI
+			CHI = { has_country_flag = ROC_new_chi }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_roc"
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_roc } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_vie_roc }
+			}
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_d_roc_trade
+		icon = asian_investment
+		x = 69
+		y = 4
+		cost = 7
+		prerequisite = { focus = VIEX_d_roc }
+		search_filters = { FOCUS_FILTER_TRADE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_roc_trade"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			set_temp_variable = { treasury_change = 4 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_d_final
+		icon = internationalism
+		x = 63
+		y = 6
+		cost = 10
+		prerequisite = { focus = VIEX_d_scs_code }
+		prerequisite = { focus = VIEX_d_cam_ranh focus = VIEX_d_arms_embargo }
+		prerequisite = { focus = VIEX_d_asean }
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_d_final"
+			add_political_power = 100
+			add_stability = 0.03
+			if = { limit = { country_exists = USA }
+			USA = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_us_partner } }
+			add_opinion_modifier = { target = USA modifier = TAI_ext_vie_us_partner }
+			}
+			if = { limit = { country_exists = CHI }
+			CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_ext_vie_china_coop } }
+			add_opinion_modifier = { target = CHI modifier = TAI_ext_vie_china_coop }
+			}
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+	focus = {
+		id = VIEX_s_root
+		icon = welfare
+		x = 43
+		y = 9
+		cost = 7
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_root"
+			add_political_power = 50
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+	focus = {
+		id = VIEX_s_education
+		icon = education_reform
+		x = 39
+		y = 10
+		cost = 7
+		prerequisite = { focus = VIEX_s_root }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_education"
+			add_tech_bonus = {
+			name = VIEX_tb_edu
+			category = CAT_industry
+			uses = 1
+			bonus = 0.5
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_s_health
+		icon = generic_healthcare
+		x = 41
+		y = 10
+		cost = 7
+		prerequisite = { focus = VIEX_s_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_health"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_stability = 0.04
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_s_climate
+		icon = economic_water_supply
+		x = 43
+		y = 10
+		cost = 10
+		prerequisite = { focus = VIEX_s_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_climate"
+			if = { limit = { NOT = { has_idea = VIEX_climate_resilience_idea } } add_ideas = VIEX_climate_resilience_idea }
+			country_event = { id = roc_asia.46 days = 3 }
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+
+	focus = {
+		id = VIEX_s_urban
+		icon = construction2
+		x = 45
+		y = 10
+		cost = 7
+		prerequisite = { focus = VIEX_s_root }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_urban"
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			add_stability = 0.03
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_s_minorities
+		icon = autonomy
+		x = 47
+		y = 10
+		cost = 7
+		prerequisite = { focus = VIEX_s_root }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_minorities"
+			add_stability = 0.03
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+
+	focus = {
+		id = VIEX_s_demography
+		icon = family
+		x = 42
+		y = 11
+		cost = 7
+		prerequisite = { focus = VIEX_s_education focus = VIEX_s_health }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_demography"
+			add_political_power = 25
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_s_youth
+		icon = generic_university
+		x = 44
+		y = 11
+		cost = 7
+		prerequisite = { focus = VIEX_s_urban focus = VIEX_s_minorities }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_youth"
+			add_tech_bonus = {
+			name = VIEX_tb_startup
+			category = CAT_information_technology
+			uses = 1
+			bonus = 0.5
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+
+	focus = {
+		id = VIEX_s_final
+		icon = sustainable_development
+		x = 43
+		y = 13
+		cost = 10
+		prerequisite = { focus = VIEX_s_demography }
+		prerequisite = { focus = VIEX_s_climate }
+		prerequisite = { focus = VIEX_s_youth }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VIEX_s_final"
+			add_political_power = 75
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 40
+		}
+	}
+
+}

@@ -1,0 +1,151 @@
+# MD ROC Return —— 覆盖千禧黎明的子意识形态地图模式；配色与 common/ideologies/00_ideologies.txt 一致
+scripted_map_modes = {
+	subideology_map_mode = {
+		top = {
+			type = country
+			color = {
+				if = { limit = { FROM = { original_tag = NKO } check_variable = { FROM.ruling_party = 4 } } # 朝鲜：深深红
+					set_temp_variable = { red = 0.459 }
+					set_temp_variable = { green = 0.102 }
+					set_temp_variable = { blue = 0.031 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 0 } } #Western_Autocracy 亲西方威权：海军蓝
+					set_temp_variable = { red = 0.286 }
+					set_temp_variable = { green = 0.286 }
+					set_temp_variable = { blue = 0.690 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 1 } } #conservatism 亲西方保守：宝蓝
+					set_temp_variable = { red = 0.118 }
+					set_temp_variable = { green = 0.259 }
+					set_temp_variable = { blue = 0.906 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 2 } } #liberalism 亲西方自由：金黄
+					set_temp_variable = { red = 0.902 }
+					set_temp_variable = { green = 0.784 }
+					set_temp_variable = { blue = 0.157 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 3 } } #socialism 亲西方社民：浅红
+					set_temp_variable = { red = 1.000 }
+					set_temp_variable = { green = 0.220 }
+					set_temp_variable = { blue = 0.353 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 4 } } #communist_state 共产主义国家（中共）：深红
+					set_temp_variable = { red = 0.549 }
+					set_temp_variable = { green = 0.137 }
+					set_temp_variable = { blue = 0.137 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 5 } } #anarchist_communism 左翼激进：玫红
+					set_temp_variable = { red = 0.741 }
+					set_temp_variable = { green = 0.212 }
+					set_temp_variable = { blue = 0.263 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 6 } } #Conservative 新兴保守/主权民主（统俄党）：深灰
+					set_temp_variable = { red = 0.435 }
+					set_temp_variable = { green = 0.459 }
+					set_temp_variable = { blue = 0.502 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 7 } } #Autocracy 新兴威权：深棕灰
+					set_temp_variable = { red = 0.490 }
+					set_temp_variable = { green = 0.412 }
+					set_temp_variable = { blue = 0.412 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 8 } } #Mod_Vilayat_e_Faqih 温和教法学家：青
+					set_temp_variable = { red = 0.412 }
+					set_temp_variable = { green = 0.510 }
+					set_temp_variable = { blue = 0.400 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 9 } } #Vilayat_e_Faqih 教法学家治国：墨绿
+					set_temp_variable = { red = 0.157 }
+					set_temp_variable = { green = 0.353 }
+					set_temp_variable = { blue = 0.235 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 10 } } #Kingdom 伊斯兰王国：橄榄绿
+					set_temp_variable = { red = 0.235 }
+					set_temp_variable = { green = 0.353 }
+					set_temp_variable = { blue = 0.157 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 11 } } #Caliphate 哈里发：黑
+					set_temp_variable = { red = 0.176 }
+					set_temp_variable = { green = 0.157 }
+					set_temp_variable = { blue = 0.137 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 12 } } #Neutral_Muslim_Brotherhood 穆兄会：薄荷
+					set_temp_variable = { red = 0.471 }
+					set_temp_variable = { green = 0.588 }
+					set_temp_variable = { blue = 0.431 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 13 } } #Neutral_Autocracy 不结盟威权/军政府：中灰
+					set_temp_variable = { red = 0.345 }
+					set_temp_variable = { green = 0.345 }
+					set_temp_variable = { blue = 0.345 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 14 } } #Neutral_conservatism 不结盟保守：天蓝
+					set_temp_variable = { red = 0.482 }
+					set_temp_variable = { green = 0.502 }
+					set_temp_variable = { blue = 0.635 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 15 } } #oligarchism 寡头：土金
+					set_temp_variable = { red = 0.404 }
+					set_temp_variable = { green = 0.455 }
+					set_temp_variable = { blue = 0.486 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 16 } } #Neutral_Libertarian 自由意志：橙
+					set_temp_variable = { red = 1.000 }
+					set_temp_variable = { green = 0.667 }
+					set_temp_variable = { blue = 0.118 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 17 } } #Neutral_green 绿党：绿
+					set_temp_variable = { red = 0.275 }
+					set_temp_variable = { green = 0.627 }
+					set_temp_variable = { blue = 0.353 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 18 } } #neutral_Social 不结盟社民：浅橙
+					set_temp_variable = { red = 0.871 }
+					set_temp_variable = { green = 0.314 }
+					set_temp_variable = { blue = 0.459 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 19 } } #Neutral_Communism 市场社会主义（越南）：朱红
+					set_temp_variable = { red = 0.600 }
+					set_temp_variable = { green = 0.071 }
+					set_temp_variable = { blue = 0.000 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 20 } } #Nat_Populism 民族民粹：深橙
+					set_temp_variable = { red = 0.537 }
+					set_temp_variable = { green = 0.431 }
+					set_temp_variable = { blue = 0.192 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 21 } } #Nat_Fascism 法西斯：深褐
+					set_temp_variable = { red = 0.384 }
+					set_temp_variable = { green = 0.267 }
+					set_temp_variable = { blue = 0.157 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 22 } } #Nat_Autocracy 民族威权/军人：军绿
+					set_temp_variable = { red = 0.408 }
+					set_temp_variable = { green = 0.357 }
+					set_temp_variable = { blue = 0.243 }
+				}
+				else_if = { limit = { check_variable = { FROM.ruling_party = 23 } } #Monarchist 君主派：紫
+					set_temp_variable = { red = 0.353 }
+					set_temp_variable = { green = 0.196 }
+					set_temp_variable = { blue = 0.431 }
+				}
+				else = {
+					set_temp_variable = { red = 0.251 }
+					set_temp_variable = { green = 0.251 }
+					set_temp_variable = { blue = 0.251 }
+				}
+
+				set_temp_variable = { alpha = 1.0 }
+			}
+		}
+
+		bottom = {
+			type = none
+		}
+
+		far_text = country
+		near_text = none
+
+		update_daily = yes
+	}
+}

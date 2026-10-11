@@ -1,0 +1,211 @@
+# MD ROC Return v3.21 —— 志愿军、升级介入、满足条件自动完成国策（由 _tools/v321_return.py 生成）
+
+# Scope: TAI。允许向起义军派志愿军，开放双向军事通行，并军援一批武器
+TAI_volunteer_support = {
+	set_rule = { can_send_volunteers = yes }
+	hidden_effect = {
+		add_relation_rule_override = {
+			can_send_volunteers = yes
+			trigger = TAI_volunteer_target_is_rebel
+			usage_desc = TAI_volunteer_target_tt
+		}
+	}
+	random_country = {
+		limit = { has_country_flag = TAI_mainland_rebels }
+		save_event_target_as = TAI_rebel_now
+		ROOT = {
+			add_ai_strategy = { type = send_volunteers_desire id = PREV value = 200 }
+			diplomatic_relation = { country = PREV relation = military_access active = yes }
+		}
+		diplomatic_relation = { country = ROOT relation = military_access active = yes }
+		add_stability = 0.03
+	}
+	send_equipment = { type = infantry_weapons_type amount = 600 target = event_target:TAI_rebel_now }
+	send_equipment = { type = artillery_equipment amount = 120 target = event_target:TAI_rebel_now }
+}
+
+# Scope: TAI。在起义军的州里生成一个「中华民国志愿军」师（沿用 TAI_spawn_defectors 的写法）
+TAI_spawn_volunteers = {
+	random_country = {
+		limit = { has_country_flag = TAI_mainland_rebels }
+		if = {
+			limit = { NOT = { has_country_flag = TAI_volunteer_template_created } }
+			division_template = {
+				name = "ROC Volunteer Division"
+				regiments = {
+					L_Inf_Bat = { x = 0 y = 0 }
+					L_Inf_Bat = { x = 0 y = 1 }
+					L_Inf_Bat = { x = 0 y = 2 }
+					L_Inf_Bat = { x = 1 y = 0 }
+					L_Inf_Bat = { x = 1 y = 1 }
+					L_Inf_Bat = { x = 1 y = 2 }
+				}
+				support = {
+					H_Engi_Comp = { x = 0 y = 0 }
+				}
+			}
+			set_country_flag = TAI_volunteer_template_created
+		}
+		random_owned_state = {
+			limit = { OR = { state = 537 state = 538 state = 534 state = 532 state = 562 } }
+			create_unit = {
+				division = "name = \"ROC Volunteer Division\" division_template = \"ROC Volunteer Division\" start_experience_factor = 0.5"
+				owner = PREV
+			}
+		}
+	}
+}
+
+# Scope: TAI。军援义军
+TAI_arm_rebels = {
+	random_country = {
+		limit = { has_country_flag = TAI_mainland_rebels }
+		save_event_target_as = TAI_rebel_now
+	}
+	send_equipment = { type = infantry_weapons_type amount = 500 target = event_target:TAI_rebel_now }
+	send_equipment = { type = artillery_equipment amount = 100 target = event_target:TAI_rebel_now }
+	send_equipment = { type = L_AT_Equipment amount = 60 target = event_target:TAI_rebel_now }
+	send_equipment = { type = AA_Equipment amount = 60 target = event_target:TAI_rebel_now }
+}
+
+# Scope: TAI。形势升级：召回志愿军，对中共宣战，并整编起义军
+TAI_escalate_effect = {
+	clr_country_flag = TAI_volunteer_phase
+	clr_country_flag = TAI_armed_intervention
+	set_country_flag = TAI_intervention_escalated
+	if = {
+		limit = { country_exists = CHI NOT = { has_war_with = CHI } }
+		declare_war_on = { target = CHI type = annex_everything }
+	}
+	if = {
+		limit = { any_country = { has_country_flag = TAI_mainland_rebels } }
+		random_country = {
+			limit = { has_country_flag = TAI_mainland_rebels }
+			save_event_target_as = TAI_rebel_now
+		}
+		recall_volunteers_from = event_target:TAI_rebel_now
+		annex_country = { target = event_target:TAI_rebel_now transfer_troops = yes }
+	}
+	if = {
+		limit = { has_idea = TAI_counteroffensive_preparation }
+		swap_ideas = { remove_idea = TAI_counteroffensive_preparation add_idea = TAI_counteroffensive }
+	}
+	add_war_support = 0.10
+	custom_effect_tooltip = TAI_escalate_tt
+}
+
+# Scope: TAI。武力干预：不吞并起义军，但国军以起义军盟友的身份直接对中共作战（比志愿军更进一步，比整编义军更克制）
+TAI_armed_intervention = {
+	set_country_flag = TAI_armed_intervention
+	if = {
+		limit = { any_country = { has_country_flag = TAI_mainland_rebels } }
+		random_country = {
+			limit = { has_country_flag = TAI_mainland_rebels }
+			save_event_target_as = TAI_rebel_now
+		}
+		if = {
+			limit = { country_exists = CHI NOT = { has_war_with = CHI } }
+			add_to_war = { targeted_alliance = event_target:TAI_rebel_now enemy = CHI hostility_reason = asked_to_join }
+		}
+	}
+	if = {
+		limit = { has_idea = TAI_counteroffensive_preparation }
+		swap_ideas = { remove_idea = TAI_counteroffensive_preparation add_idea = TAI_counteroffensive }
+	}
+	add_war_support = 0.05
+	custom_effect_tooltip = TAI_armed_intervention_tt
+}
+
+# Scope: TAI。内战结束后清理志愿军阶段的旗标
+TAI_volunteer_cleanup = {
+	clr_country_flag = TAI_volunteer_phase
+	clr_country_flag = TAI_uprising_young
+	clr_country_flag = TAI_armed_intervention
+	set_variable = { TAI_volunteer_count = 0 }
+}
+
+# Scope: TAI，每周。已经占领相应地区的反攻国策自动完成（会发奖励，也满足后续前置）
+TAI_liberation_autocomplete = {
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_fujian }
+			controls_state = 537
+		}
+		complete_national_focus = { focus = TAI_liberate_fujian use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_shanghai }
+			controls_state = 540
+		}
+		complete_national_focus = { focus = TAI_liberate_shanghai use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_guangdong }
+			OR = { controls_state = 532 controls_state = 534 }
+		}
+		complete_national_focus = { focus = TAI_liberate_guangdong use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_retake_nanjing }
+			controls_state = 536
+		}
+		complete_national_focus = { focus = TAI_retake_nanjing use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_wuhan }
+			controls_state = 570
+		}
+		complete_national_focus = { focus = TAI_liberate_wuhan use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_southwest }
+			OR = { controls_state = 586 controls_state = 583 }
+		}
+		complete_national_focus = { focus = TAI_liberate_southwest use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_liberate_beiping }
+			controls_state = 547
+		}
+		complete_national_focus = { focus = TAI_liberate_beiping use_side_message = yes }
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = TAI_northern_expedition }
+			controls_state = 547
+		}
+		complete_national_focus = { focus = TAI_northern_expedition use_side_message = yes }
+	}
+}
+
+# Scope: CHI。首都设在南京（默认），并去掉「建都北平」的精神
+TAI_capital_to_nanjing = {
+	set_capital = { state = 536 }
+	clr_country_flag = ROC_capital_beijing
+	if = { limit = { has_idea = TAI_beijing_capital_idea } remove_ideas = TAI_beijing_capital_idea }
+}
+
+# Scope: 任意国家。清除千禧的「内战军队」国家精神（旗标会让千禧的到期事件不再往下一级转）
+CSW_clear_civil_war_debuff = {
+	set_country_flag = manual_civil_war_debuff_removal
+	remove_ideas = civil_war_disorganised_military_1
+	remove_ideas = civil_war_disorganised_military_2_military
+	remove_ideas = civil_war_disorganised_military_2_production
+	remove_ideas = civil_war_disorganised_military_2_experience
+	remove_ideas = civil_war_disorganised_military_3_military
+	remove_ideas = civil_war_disorganised_military_3_production
+	remove_ideas = civil_war_disorganised_military_3_experience
+	remove_ideas = civil_war_disorganised_military_4_military
+	remove_ideas = civil_war_disorganised_military_4_production
+	remove_ideas = civil_war_disorganised_military_4_experience
+	remove_ideas = civil_war_disorganised_military_5_military
+	remove_ideas = civil_war_disorganised_military_5_production
+	remove_ideas = civil_war_disorganised_military_5_experience
+	clr_country_flag = manual_civil_war_debuff_removal
+}

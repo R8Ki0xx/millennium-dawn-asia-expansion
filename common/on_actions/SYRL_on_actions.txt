@@ -1,0 +1,13 @@
+# MD ROC Return v3.29 —— 叙利亚「左翼复兴党」AI 规则：开局设旗标
+# SYR_LEFT_BAATH_FOCUS_PATH 让 AI 优先走 SYRL；同时设 SYR_HISTORICAL_FOCUS_PATH，让 AI 先走千禧的巴沙尔继位国策
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { has_game_rule = { rule = SYRL_ai_behavior option = LEFT_BAATH } }
+				set_global_flag = SYR_LEFT_BAATH_FOCUS_PATH
+				set_global_flag = SYR_HISTORICAL_FOCUS_PATH
+			}
+		}
+	}
+}

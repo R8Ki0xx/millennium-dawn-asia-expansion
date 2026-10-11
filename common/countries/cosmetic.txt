@@ -1,0 +1,990 @@
+TUR_TURKEY_SYRIA_UNION = {
+	color = rgb { 83  245  129 }
+	color_ui = rgb { 83  245  129 }
+}
+
+SYR_baath_flag = {
+	color = rgb { 102 175 139 }
+	color_ui = rgb { 231 148 129 }
+}
+
+JOR_baath_flag = {
+	color = rgb { 102 175 139 }
+	color_ui = rgb { 231 148 129 }
+}
+
+EGY_baath_flag = {
+	color = rgb { 102 175 139 }
+	color_ui = rgb { 231 148 129 }
+}
+
+ENG_commonwealth_federation = {
+	color = rgb { 45 85 170 }
+	color_ui = rgb { 45 85 170 }
+}
+
+ENG_evil_britain = {
+	color = rgb { 255 48 0 }
+	color_ui = rgb { 255 48 0 }
+}
+
+UN_KOS = {
+	color = rgb { 185  62  97 }
+	color_ui = rgb { 163 17 31 }
+}
+KOS_democratic = {
+	color = rgb { 119 118 168 }
+	color_ui = rgb { 119 118 168 }
+}
+TUR_VANGUARD = {
+	color = rgb { 238  33  98 }
+	color_ui = rgb { 238  33  98 }
+}
+KDP_cosmetic = {
+	color = rgb { 238 248 0 }
+	color_ui = rgb { 238 248 0 }
+}
+
+ERI_ETH = {
+	color = rgb { 15 71 175 }
+	color_ui = rgb { 198 169 248 }
+}
+
+
+ITA_RomanEmpire = {
+	color = rgb { 250 0 0 }
+	color_ui = rgb { 250 0 0 }
+}
+
+ITA_RomanEmpire2 = {
+	color = rgb { 250 0 0 }
+	color_ui = rgb { 250 0 0 }
+}
+yugoslavia_restored = {
+	color = rgb { 87  45  112 }
+	color_ui = rgb { 163 17 31 }
+}
+bos_fed = {
+	color = rgb { 44  177  204 }
+	color_ui = rgb { 44  177  204 }
+}
+bos_fed2 = {
+	color = rgb { 0  57  137 }
+	color_ui = rgb { 44  177  204 }
+}
+BOS_islamic_revolt = {
+	color = rgb { 8  107  36 }
+	color_ui = rgb { 44  177  204 }
+}
+BOS_islamic_upper = {
+	color = rgb { 12  155  53 }
+	color_ui = rgb { 44  177  204 }
+}
+BOS_gov_old_name = {
+	color = rgb { 247  212  59 }
+	color_ui = rgb { 44  177  204 }
+}
+bos_srpska_colour_change = {
+	color = rgb { 209  184  24 }
+	color_ui = rgb { 44  177  204 }
+}
+bos_srpska_colour_change2 = {
+	color = rgb { 160  97  62 }
+	color_ui = rgb { 44  177  204 }
+}
+bos_srpska_colour_change3 = {
+	color = rgb { 163  45  45 }
+	color_ui = rgb { 44  177  204 }
+}
+bos_workers_republic = {
+	color = rgb { 155  28  30 }
+	color_ui = rgb { 163 17 31 }
+}
+hzg_fed = {
+	color = rgb { 44  177  204 }
+	color_ui = rgb { 44  177  204 }
+}
+rsk_fed = {
+	color = rgb { 44  177  204 }
+	color_ui = rgb { 44  177  204 }
+}
+#USoE
+USoE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+
+USoE_green = {
+	color = rgb { 53 130 36 }
+	color_ui = rgb { 53 130 36 }
+}
+
+USoE_com = {
+	color = rgb { 204 40 40 }
+	color_ui = rgb { 204 40 40 }
+}
+
+USoE_air = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_army = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_navy = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+
+USoE_BOR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_BOR_ANJ = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_GLU = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_HAB = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_HAN = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_HOH = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_NAP = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_ORA = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_SAV = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_WIN = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_WIT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+USoE_SAV = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+PMR_ROM_democratic_subject = {
+	color = rgb { 215 196 72 }
+	color_ui = rgb { 255 255 120 }
+}
+
+#EFS
+EFS_ALB = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ARM = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_AUS = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_AZE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_BEL = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_BLR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_BOS = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_BUL = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_CAT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_CRE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_CRO = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_CYP = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_CZE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_DEN = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ENG = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ENG_england = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_EST = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_FIN = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_FRA = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_FYR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_GEO = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_GER = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_GRE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_HOL = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+KUB_PR = {
+	color = rgb { 137 27 78 }
+	color_ui = rgb { 137 27 78 }
+}
+GOR_PR = {
+	color = rgb { 8 89 54 }
+	color_ui = rgb { 8 89 54 }
+}
+RUS_RFOR = {
+	color = rgb { 7 72 140 }
+	color_ui = rgb { 7 72 140 }
+}
+UN_iran_flag = {
+	color = rgb { 7 72 140 }
+	color_ui = rgb { 7 72 140 }
+}
+EFS_HUN = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ICE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_IRE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ITA = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_KOS = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_LAT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_LIT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_LUX = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_MLT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_MLV = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_MNT = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_NOR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_POL = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_POR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_ROM = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SCL = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SCO = {
+	color = rgb { 70 80 180 }
+	color_ui = rgb { 70 80 180 }
+}
+EFS_SER = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SLO = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SLV = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SPR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SWE = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_SWI = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_TUR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_UKR = {
+	color = rgb { 61 35 166 }
+	color_ui = rgb { 255 73 121 }
+}
+EFS_WAS = {
+	color = rgb { 30 150 30 }
+	color_ui = rgb { 30 150 30 }
+}
+
+SHA_AUTH_SS_fascism = {
+	color = rgb { 84 96 84 }
+	color_ui = rgb { 84 96 84 }
+}
+
+#BRM
+SHN_federation = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+WAA_federation = {
+	color = rgb { 50 120 120 }
+	color_ui = rgb { 50 120 120 }
+}
+KAR_federation = {
+	color = rgb { 76 76 153 }
+	color_ui = rgb { 76 76 153 }
+}
+KAC_federation = {
+	color = rgb { 130 120 80 }
+	color_ui = rgb { 130 120 80 }
+}
+
+#CHI
+ESB_chinese_puppet = {
+	color = rgb { 220 32 0 } #255 244 190
+	color_ui = rgb { 220 32 0 }
+}
+
+#AFG
+AFG_HAZ = {
+	color = rgb { 202 225 37 }
+	color_ui = rgb { 202 225 37 }
+}
+
+#Formables
+UAR_com = {
+	color = rgb { 207 60 43 }
+	color_ui = rgb { 207 60 43 }
+}
+
+
+POL_LIT = {
+	color = rgb { 255 78 114 }
+	color_ui = rgb { 255 78 114 }
+}
+POL_QUAD = {
+	color = rgb { 219 0 0 }
+	color_ui = rgb { 219 0 0 }
+}
+POL_LIT_QUAD = {
+	color = rgb { 84 1 228 }
+	color_ui = rgb { 84 1 228 }
+}
+POL_QUAD = {
+	color = rgb { 219 0 0 }
+	color_ui = rgb { 219 0 0 }
+}
+LIC_AUTH_SS = {
+	color = rgb { 255 170 0 }
+	color_ui = rgb { 215 170 0 }
+}
+ISIS_SAHEL = {
+	color = rgb { 75 124 17 }
+	color_ui = rgb { 75 124 17 }
+}
+PER_iranic_federation = {
+	color = rgb { 0 166 147 }
+	color_ui = rgb { 0 166 147 }
+}
+IRN_confederation_early = {
+	color = rgb { 0 166 147 }
+	color_ui = rgb { 0 166 147 }
+}
+PER_REB = {
+	color = rgb { 229 184 11 }
+	color_ui = rgb { 229 184 11 }
+}
+IRQ_1920_revolution_brigades = {
+	color = rgb { 132 133 100 }
+	color_ui = rgb { 132 133 100 }
+}
+IRQ_MNF = {
+	color = rgb { 170 205 209 }
+	color_ui = rgb { 170 205 209 }
+}
+IRQ_1920_revolution_brigades_post = {
+	color = rgb { 60 60 45 }
+	color_ui = rgb { 60 60 45 }
+}
+IRQ_GMCIR = {
+	color = rgb { 170 25 25 }
+	color_ui = rgb { 170 25 25 }
+}
+IRQ_JRTN = {
+	color = rgb { 181 21 0 }
+	color_ui = rgb { 191 40 40 }
+}
+IRQ_AlAwda = {
+	color = rgb { 162 150 111 }
+	color_ui = rgb { 191 0 0 }
+}
+IRQ_Islamic_Army_in_Iraq = {
+	color = rgb { 178 168 121 }
+	color_ui = rgb { 158 148 101 }
+}
+IRQ_hamas_of_iraq = {
+	color = rgb { 20 131 20 }
+	color_ui = rgb { 20 131 20 }
+}
+IRQ_shia_revolt = {
+	color = rgb { 255 228 2 }
+	color_ui = rgb { 255 228 2 }
+}
+IRQ_sunni_revolt_name = {
+	color = rgb { 181 21 0 }
+	color_ui = rgb { 181 21 0 }
+}
+IRQ_badr_revolt = {
+	color = rgb { 25 138 0 }
+	color_ui = rgb { 40 10 110 }
+}
+TAJ_islamist_government_2 = {
+	color = rgb { 80 80 80 }
+	color_ui = rgb { 80 80 80 }
+}
+TAJ_formable = {
+	color = rgb { 87 197 198 }
+	color_ui = rgb { 87 197 198 }
+}
+TAJ_REB = {
+	color = rgb { 84 168 102 }
+	color_ui = rgb { 84 168 102 }
+}
+SCA_soviet_onion = {
+	color = rgb { 228 113 122 }
+	color_ui = rgb { 228 113 122 }
+}
+TUR_NEW_TURKIC_STATE = {
+	color = rgb { 0 124 2 }
+	color_ui = rgb { 0 124 2 }
+}
+PKK_OTTOMAN_subject = {
+	color = rgb { 0 124 2 }
+	color_ui = rgb { 0 124 2 }
+}
+TUR_PAN_TURKIC = {
+	color = rgb { 117 254 241 }
+	color_ui = rgb { 117 254 241 }
+}
+PKK_TURKIC_subject = {
+	color = rgb { 117 254 241 }
+	color_ui = rgb { 117 254 241 }
+}
+TUR_VANGUARD = {
+	color = rgb { 115 8 0 }
+	color_ui = rgb { 115 8 0 }
+}
+PKK_VANGUARD_subject = {
+	color = rgb { 115 8 0 }
+	color_ui = rgb { 115 8 0 }
+}
+AZE_PER_STATE = {
+	color = rgb { 35 159 64 }
+	color_ui = rgb { 92 147 126 }
+}
+IRQ_VANGUARD = {
+	color = rgb { 115 8 0 }
+	color_ui = rgb { 115 8 0 }
+}
+PER_VANGUARD = {
+	color = rgb { 115 8 0 }
+	color_ui = rgb { 115 8 0 }
+}
+SYR_VANGUARD = {
+	color = rgb { 115 8 0 }
+	color_ui = rgb { 115 8 0 }
+}
+TUR_ANATOLIAN_SYNDICATE = {
+	color = rgb { 52 163 106 }
+	color_ui = rgb { 52 163 106 }
+}
+PKK_KURDISH_SYNDICATE = {
+	color = rgb { 52 163 106 }
+	color_ui = rgb { 52 163 106 }
+}
+TUR_WELSH_SYNDICATE = {
+	color = rgb { 52 163 106 }
+	color_ui = rgb { 52 163 106 }
+}
+TUR_SCOTTISH_SYNDICATE = {
+	color = rgb { 52 163 106 }
+	color_ui = rgb { 52 163 106 }
+}
+AUS_royal_puppet_german = {
+	color = rgb { 148 148 148 }
+	color_ui = rgb { 148 148 148 }
+}
+SWI_royal_puppet_german = {
+	color = rgb { 148 148 148 }
+	color_ui = rgb { 148 148 148 }
+}
+GER_franco_german_union = {
+	color = rgb { 137  7  30 }
+	color_ui = rgb { 137  7  30 }
+}
+BEL_royal_puppet_german = {
+	color = rgb { 148 148 148 }
+	color_ui = rgb { 148 148 148 }
+}
+GER_fourth_reich = {
+	color = rgb { 70 70 70 }
+	color_ui = rgb { 70 70 70 }
+}
+GER_empire = {
+	color = rgb { 128 128 128 }
+	color_ui = rgb { 115 115 115 }
+}
+SOU = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+SWE_Swedish_empire = {
+	color = rgb { 0 32 91 }
+	color_ui = rgb { 0 32 91 }
+
+}
+
+
+
+
+
+CZR_union = {
+	color = rgb { 100 149 237 }
+	color_ui = rgb { 65 105 225 }
+}
+BLR_democratic = {
+	color = rgb { 123 104 238 }
+	color_ui = rgb { 123 104 238 }
+}
+USA_BLR_STATE = {
+	color = rgb { 220 220 220 }
+	color_ui = rgb { 220 220 220 }
+}
+GER_com_reb_tech = {
+	color = rgb { 167 13 0 }
+	color_ui = rgb { 167 13 0 }
+}
+EGY_COPTIC = {
+	color = rgb { 181 224 255 }
+	color_ui = rgb { 181 224 255 }
+}
+VOJ_hungary = {
+	color = rgb { 249  126  98 }
+	color_ui = rgb { 138  163  117 }
+}
+SOV_soviet_empire = {
+	color = rgb { 139 0 0 }
+	color_ui = rgb { 139 0 0 }
+}
+SOV_USA = {
+	color = rgb { 87  133  247 }
+	color_ui = rgb { 97 170 255 }
+}
+SOV_kobnod = {
+	color = rgb { 213 78 240 }
+	color_ui = rgb { 213 78 240 }
+}
+SOV_USSR_AUTH_S = {
+	color = rgb { 167 30 30 }
+	color_ui = rgb { 167 30 30 }
+}
+SOV_AUTH_S_communism = {
+	color = rgb { 167 30 30 }
+	color_ui = rgb { 167 30 30 }
+}
+SOV_AUTH_S_nationalist = {
+	color = rgb { 108 70 117 }
+	color_ui = rgb { 108 70 117 }
+}
+SOV_romanov_empire = {
+	color = rgb { 108 70 117 }
+	color_ui = rgb { 108 70 117 }
+}
+SOV_ahistorical_flag_neutrality = {
+	color = rgb { 108 70 117 }
+	color_ui = rgb { 108 70 117 }
+}
+SOV_hyper_empire = {
+	color = rgb { 120 118 8 }
+	color_ui = rgb { 120 118 8 }
+}
+CUB_confederation = {
+	color = rgb { 112 128 144 }
+	color_ui = rgb { 112 128 144 }
+}
+HAM_democratic = {
+	color = rgb { 102 178 255 }
+	color_ui = rgb { 102 178 255 }
+}
+UKR_union_dem_neutrality = {
+	color = rgb { 107 12 12 }
+	color_ui = rgb { 107 12 12 }
+}
+FAR_green_klin = {
+	color = rgb { 144 255 96 }
+	color_ui = rgb { 144 255 96 }
+}
+UKR_SlavicUSSR = {
+	color = rgb { 192 192 192 }
+	color_ui = rgb { 192 192 192 }
+}
+UKR_AUTH_SS_nationalist = {
+	color = rgb { 219 30 30 }
+	color_ui = rgb { 219 30 30 }
+}
+UKR_vetrenko = {
+	color = rgb { 175 20 175 }
+	color_ui = rgb { 175 20 175 }
+}
+SSU_SPLA = {
+	color = rgb { 43 60 185 }
+	color_ui = rgb { 43 60 185 }
+}
+NEW_SUDAN = {
+	color = rgb { 130 8 105 }
+	color_ui = rgb { 130 8 105 }
+}
+DAR_DLF = {
+	color = rgb { 233 145 83 }
+	color_ui = rgb { 233 145 83 }
+}
+SUD_SPLMN = {
+	color = rgb { 215 45 109 }
+	color_ui = rgb { 215 45 109 }
+}
+SUD_SRF = {
+	color = rgb { 130 108 52 }
+	color_ui = rgb { 130 108 52 }
+}
+SSU_AZANIA = {
+	color = rgb { 62 95 138 }
+	color_ui = rgb { 62 95 138 }
+}
+SSU_NILE = {
+	color = rgb { 109 63 91 }
+	color_ui = rgb { 109 63 91 }
+}
+SSU_KUSH = {
+	color = rgb { 234 230 202 }
+	color_ui = rgb { 234 230 202 }
+}
+SLO_imperka = {
+	color = rgb { 255 140 0 }
+	color_ui = rgb { 255 140 0 }
+}
+CZE_imperka = {
+	color = rgb { 255 208 0 }
+	color_ui = rgb { 255 208 0 }
+}
+CZE_SLO_czechoslovakia = {
+	color = rgb { 0 153 153 }
+	color_ui = rgb { 0 153 153 }
+}
+LBA_ANSAR_AL_SHARIA = {
+	color = rgb { 24 10 60 }
+	color_ui = rgb { 24 10 60 }
+}
+LBA_SHURA_COUNCILS = {
+	color = rgb { 24 10 60 }
+	color_ui = rgb { 24 10 60 }
+}
+LBA_LIBYAN_NATIONAL_ARMY = {
+	color = rgb { 89 120 186 }
+	color_ui = rgb { 89 120 186 }
+}
+LBA_GENERAL_NATIONAL_CONGRESS = {
+	color = rgb { 57 5 106 }
+	color_ui = rgb { 57 5 106 }
+}
+ARM_United_States = {
+	color = rgb { 67  123  237 }
+	color_ui = rgb { 87 160 255 }
+}
+ARM_AUTH_S_nationalist = {
+	color = rgb { 226 207 30 }
+	color_ui = rgb { 226 207 30 }
+}
+ARM_AUTH_STWO_nationalist = {
+	color = rgb { 252 251 243 }
+	color_ui = rgb { 252 251 243 }
+}
+ARM_armen_empire_nationalist = {
+	color = rgb { 222 31 17 }
+	color_ui = rgb { 222 31 17 }
+}
+ARM_Monarch_Bagratuni_nationalist = {
+	color = rgb { 144 27 19 }
+	color_ui = rgb { 144 27 19 }
+}
+ARM_Monarch_Bagratuni_West_Armenia_nationalist = {
+	color = rgb { 144 27 19 }
+	color_ui = rgb { 144 27 19 }
+}
+
+PER_mullahs_government = {
+	color = rgb { 1 90 67 }
+	color_ui = rgb { 1 90 67 }
+}
+PER_revenge_flag = {
+	color = rgb { 1 90 67 }
+	color_ui = rgb { 1 90 67 }
+}
+
+YEM_REB = {
+	color = rgb { 97 143 165 }
+	color_ui = rgb { 128 195 230 }
+}
+
+### Post United Cosmetic Tags ###
+
+USB_arcadia_path = {
+	color = rgb { 30 58 150 }
+	color_ui = rgb { 30 58 150 }
+}
+CSA_arcadia_path = {
+	color = rgb { 30 58 150 }
+	color_ui = rgb { 30 58 150 }
+}
+CAS_pan_pacific_union = {
+	color = rgb { 191 196 37 }
+	color_ui = rgb { 191 196 37 }
+}
+CAS_cambria_path_complete = {
+	color = rgb { 120 61 1 }
+	color_ui = rgb { 120 61 1 }
+}
+LKT_Prairie_Federation = {
+	color = rgb { 252 186 3 }
+	color_ui = rgb { 252 186 3 }
+}
+LKT_Free_Fields_Society = {
+	color = rgb { 27 30 36 }
+	color_ui = rgb { 27 30 36 }
+}
+LKT_Grand_Duchy_Of_Yellowstone = {
+	color = rgb { 196 157 2 }
+	color_ui = rgb { 196 157 2 }
+}
+LKT_Cambrian_Nation = {
+	color = rgb { 120 61 1 }
+	color_ui = rgb { 120 61 1 }
+}
+IRQ_POZ = {
+	color = rgb { 197 92 106 }
+	color_ui = rgb { 255 120 138 }
+}
+IRQ_BOZ = {
+	color = rgb { 209  66  58 }
+	color_ui = rgb { 255 73 121 }
+}
+HOL_dietsland = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 245 118 0 }
+}
+HOL_fourth_reich = {
+	color = rgb { 255 128 0 }
+	color_ui = rgb { 245 118 0 }
+}
+SPR_EMPIRE = {
+	color = rgb { 242  205  94 }
+	color_ui = rgb { 245 118 0 }
+}
+SHB_Mansoor_clique = {
+	color = rgb { 132 133 100 }
+	color_ui = rgb { 132 133 100 }
+}
+SHB_Indha_clique = {
+	color = rgb { 132 133 100 }
+	color_ui = rgb { 132 133 100 }
+}
+SHB_Ayrow_clique = {
+	color = rgb { 132 133 100 }
+	color_ui = rgb { 132 133 100 }
+}
+SOM_ARPCT = {
+	color = rgb { 242 205 94 }
+	color_ui = rgb { 245 118 0 }
+}
+SHB_ICU = {
+	color = rgb { 132 133  00 }
+	color_ui = rgb { 132 133  00 }
+}
+SOM_Galmudug = {
+	color = rgb { 108 115 142 }
+	color_ui = rgb { 108 115 142 }
+}
+SHB_colour = {
+	color = rgb { 132 133 100 }
+	color_ui = rgb { 132 133 100 }
+}
+GRN_Kingdom_Of_Greenland = {
+	color = rgb { 133 168 171 }
+	color_ui = rgb { 133 168 171 }
+}
+GRN_Frozen_Federation = {
+	color = rgb { 97 177 212 }
+	color_ui = rgb { 97 177 212 }
+}
+
+# Event Horizon
+EH_USN = {
+	color = rgb { 67 123 237 }
+	color_ui = rgb { 67 123 237 }
+}
+EH_RCA = {
+	color = rgb { 210 16 52 }
+	color_ui = rgb { 210 16 52 }
+}
+EH_USM = {
+	color = rgb { 0 155 58 }
+	color_ui = rgb { 0 155 58 }
+}
+EH_EUF = {
+	color = rgb { 23 8 161 }
+	color_ui = rgb { 23 8 161 }
+}
+EH_AFD = {
+	color = rgb { 225 85 5 }
+	color_ui = rgb { 225 85 5 }
+}
+EH_CRU = {
+	color = rgb { 252 209 22 }
+	color_ui = rgb { 252 209 22 }
+}
+EH_ERF = {
+	color = rgb { 58 153 21 }
+	color_ui = rgb { 58 153 21 }
+}
+EH_CHN = {
+	color = rgb { 220 32 0 }
+	color_ui = rgb { 220 32 0 }
+}
+EH_ASE = {
+	color = rgb { 255 153 51 }
+	color_ui = rgb { 255 153 51 }
+}
+EH_EAC = {
+	color = rgb { 0 52 120 }
+	color_ui = rgb { 0 52 120 }
+}
+EH_ODU = {
+	color = rgb { 57 143 97 }
+	color_ui = rgb { 57 143 97 }
+}
+KHL = {
+	color = rgb { 255 153 51 }
+	color_ui = rgb { 255 153 51 }
+}
+
+JAP_EMPIRE = {
+	color = rgb { 255 191 191 }
+	color_ui = rgb { 255 191 191 }
+}
+
+JAP_EMPIRE_NAVAL = {
+	color = rgb { 255 191 191 }
+	color_ui = rgb { 255 191 191 }
+}
+
+# MD ROC Return —— 统一后的中华民国（CHI），烈焰升腾式国民政府蓝
+CHI_ROC = {
+	color = rgb { 5 85 166 }
+	color_ui = rgb { 5 85 166 }
+}
+# MD ROC Return —— 中华人民共和国残余政权（PRC），深红
+PRC_CCP = {
+	color = rgb { 170 15 15 }
+	color_ui = rgb { 200 30 30 }
+}

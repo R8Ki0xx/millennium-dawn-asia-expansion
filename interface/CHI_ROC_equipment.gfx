@@ -1,0 +1,179 @@
+# MD ROC Return —— CHI_ROC 装饰标签的装备图标（克隆 TAI）
+spriteTypes = {
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/INF1.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/TAI/INF/INF2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/TAI/INF/INF3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/TAI/INF/INF4.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/TAI/INF/INF5.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_infantry_weapons_6_medium"
+		texturefile = "gfx/interface/technologies/TAI/INF/INF6.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_tank_1_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/M72.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_tank_2_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/M47.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_tank_3_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/FGM148.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_tank_4_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/FGM246.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_tank_5_medium"
+		texturefile = "gfx/interface/technologies/USA/INF/HEL414.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_1_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U1.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_2_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_3_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_4_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U4.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_5_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U5.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_6_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U6.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_7_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U7.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_util_vehicle_8_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/U8.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Heavy_Anti_tank_1_medium"
+		texturefile = "gfx/interface/technologies/TAI/LAND/HAT1.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Heavy_Anti_tank_2_medium"
+		texturefile = "gfx/interface/technologies/TAI/LAND/HAT2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Heavy_Anti_tank_3_medium"
+		texturefile = "gfx/interface/technologies/TAI/LAND/HAT3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Heavy_Anti_tank_4_medium"
+		texturefile = "gfx/interface/technologies/TAI/LAND/HAT4.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Heavy_Anti_tank_5_medium"
+		texturefile = "gfx/interface/technologies/TAI/LAND/HAT5.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_artillery_1_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M101.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_artillery_2_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/ART2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_artillery_3_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/ART3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_artillery_4_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M585.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_artillery_5_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M667.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_artillery_1_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M101.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_artillery_2_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/ART2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_artillery_3_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/ART3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_artillery_4_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M585.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_artillery_5_medium"
+		texturefile = "gfx/interface/technologies/USA/LAND/M667.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_Air_0_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM43.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_Air_1_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM92.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_Air_2_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM92E.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_Air_3_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM194.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_Anti_Air_4_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM245.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_Anti_Air_0_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM43.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_Anti_Air_1_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM92.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_Anti_Air_2_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM92E.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_Anti_Air_3_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM194.dds"
+	}
+	spriteType = {
+		name = "GFX_CHI_ROC_nsb_Anti_Air_4_medium"
+		texturefile = "gfx/interface/technologies/0_generic/artillery/FIM245.dds"
+	}
+}

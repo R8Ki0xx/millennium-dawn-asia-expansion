@@ -1,0 +1,11 @@
+# MD ROC Return v3.22 —— 叙利亚人民议会
+on_actions = {
+	on_startup = {
+		effect = {
+			if = { limit = { country_exists = SYR } SYR = { SYR_pc_init = yes } }
+		}
+	}
+	on_monthly_SYR = {
+		effect = { SYR_pc_monthly = yes }
+	}
+}

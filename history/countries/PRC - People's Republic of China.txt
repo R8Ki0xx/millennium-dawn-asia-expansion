@@ -1,0 +1,110 @@
+capital = 547
+
+# 中华人民共和国残余政权（光复神州后由 ROC_tag_switch 创建，也可用 setowner 测试）
+# 结构照搬千禧黎明的可释放国家（TIB / ETK）：没有政党支持率的标签在获得省份时会导致除零闪退
+2000.1.1 = {
+	set_variable = { currency_strength = 0.65 }
+	set_variable = { gdp_per_capita = 3.452 }
+	add_ideas = {
+		semi_consumption_economy
+		corruption_level_08
+		defence_02
+		edu_02
+		health_01
+		social_01
+		bureau_02
+		police_04
+		volunteer_army
+		volunteer_women
+		chinese_yuan
+		partially_privatized_healthcare
+		standard_maintenance
+		standard_regulations
+		stable_growth
+		multi_ethnic_state_idea
+		lacks_international_recognition
+		no_currency_backing
+		intervention_local_security
+		heavily_regulated_immigration
+		officer_advanced_training
+		nuclear_power_def
+		tac_and_strat_retaliation
+		economic_motivated_mining
+		# Internal Factions
+		industrial_conglomerates
+		communist_cadres
+		the_military
+	}
+
+	# MD 通用动态修正（国家电网、通货膨胀、货币、芯片消耗）
+	add_dynamic_modifier = { modifier = energy_dynamic_modifier }
+	add_dynamic_modifier = { modifier = inflation_dynamic_modifier }
+	add_dynamic_modifier = { modifier = currency_effects_modifier }
+	add_dynamic_modifier = { modifier = civilian_microchip_consumption_modifier }
+
+	set_cosmetic_tag = PRC_CCP
+	set_technology = {
+		railway_system_01 = 1
+		infantry_mass_assault = 1
+		basic_computing = 1
+		integrated_circuit = 1
+		computing_1 = 1
+		radar = 1
+		internet_1 = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		electrification_1 = 1
+		construction1 = 1
+	}
+	if = {
+		limit = { NOT = { has_dlc = "La Resistance" } }
+		set_technology = {
+			decryption_1 = 1
+			encryption_1 = 1
+		}
+	}
+
+	init_influence = yes
+	set_variable = { domestic_influence_amount = 60 }
+	sort_influence = yes
+
+	create_country_leader = {
+		name = PRC_rump_leader
+		desc = PRC_rump_leader_desc
+		picture = "gfx/leaders/PRC/Xi_Jinping_military.dds"
+		expire = "2100.1.1"
+		ideology = communist_state
+		traits = {
+			emerging_communist_state
+		}
+	}
+
+	set_popularities = {
+		democratic = 10.0
+		communism = 70.0
+		fascism = 0.0
+		neutrality = 15.0
+		nationalist = 5.0
+	}
+	set_politics = {
+		ruling_party = communism
+		last_election = "1997.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	start_politics_input = yes
+	### Party Popularities
+	set_variable = { party_pop_array^2 = 0.05 } #liberalism
+	set_variable = { party_pop_array^3 = 0.05 } #socialism
+	set_variable = { party_pop_array^4 = 0.60 } #communist_state
+	set_variable = { party_pop_array^7 = 0.10 } #Autocracy
+	set_variable = { party_pop_array^18 = 0.15 } #neutral_Social
+	set_variable = { party_pop_array^22 = 0.05 } #Nat_Autocracy
+	### Ruling Party
+	set_variable = { ruling_party = 4 }
+	startup_politics = yes
+
+	set_variable = { overall_productivity = 650 }
+	set_variable = { cb_policy_rate = 3 }
+}

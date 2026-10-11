@@ -1,0 +1,2148 @@
+# MD ROC Return v3.31 —— 叙利亚国策 / 国家精神的图标（叙利亚相关图标池；由 _tools/v330_icons.py 生成）
+spriteTypes = {
+	spriteType = { name = "roc30_syria_ensure_leadership_auth_67660454" texturefile = "gfx/interface/goals/roc30/syria_ensure_leadership_auth_67660454.png" }
+	spriteType = {
+		name = "roc30_syria_ensure_leadership_auth_67660454_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_ensure_leadership_auth_67660454.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_ensure_leadership_auth_67660454.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_ensure_leadership_auth_67660454.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_martial_law_is_normali_02206c13" texturefile = "gfx/interface/goals/roc30/syria_martial_law_is_normali_02206c13.png" }
+	spriteType = {
+		name = "roc30_syria_martial_law_is_normali_02206c13_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_martial_law_is_normali_02206c13.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_martial_law_is_normali_02206c13.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_martial_law_is_normali_02206c13.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_market_and_national_fr_9f45cf15" texturefile = "gfx/interface/goals/roc30/syria_market_and_national_fr_9f45cf15.png" }
+	spriteType = {
+		name = "roc30_syria_market_and_national_fr_9f45cf15_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_market_and_national_fr_9f45cf15.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_market_and_national_fr_9f45cf15.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_market_and_national_fr_9f45cf15.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_party_baath_c98420bf" texturefile = "gfx/interface/goals/roc30/syr_party_baath_c98420bf.dds" }
+	spriteType = {
+		name = "roc30_syr_party_baath_c98420bf_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_party_baath_c98420bf.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_party_baath_c98420bf.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_party_baath_c98420bf.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_lion_of_syria_d4dfee3e" texturefile = "gfx/interface/goals/roc30/syr_lion_of_syria_d4dfee3e.png" }
+	spriteType = {
+		name = "roc30_syr_lion_of_syria_d4dfee3e_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_lion_of_syria_d4dfee3e.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_lion_of_syria_d4dfee3e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_lion_of_syria_d4dfee3e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syrian_army_543f5f1b" texturefile = "gfx/interface/goals/roc30/syrian_army_543f5f1b.dds" }
+	spriteType = {
+		name = "roc30_syrian_army_543f5f1b_shine"
+		texturefile = "gfx/interface/goals/roc30/syrian_army_543f5f1b.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_army_543f5f1b.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_army_543f5f1b.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_srd_reform_carabinieri_df71eab3" texturefile = "gfx/interface/goals/roc30/srd_reform_carabinieri_df71eab3.png" }
+	spriteType = {
+		name = "roc30_srd_reform_carabinieri_df71eab3_shine"
+		texturefile = "gfx/interface/goals/roc30/srd_reform_carabinieri_df71eab3.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/srd_reform_carabinieri_df71eab3.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/srd_reform_carabinieri_df71eab3.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_muslim_brotherhood_egy_b00d9cb6" texturefile = "gfx/interface/goals/roc30/muslim_brotherhood_egy_b00d9cb6.dds" }
+	spriteType = {
+		name = "roc30_muslim_brotherhood_egy_b00d9cb6_shine"
+		texturefile = "gfx/interface/goals/roc30/muslim_brotherhood_egy_b00d9cb6.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/muslim_brotherhood_egy_b00d9cb6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/muslim_brotherhood_egy_b00d9cb6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_uar_economy_syria_7a968674" texturefile = "gfx/interface/goals/roc30/focus_uar_economy_syria_7a968674.dds" }
+	spriteType = {
+		name = "roc30_focus_uar_economy_syria_7a968674_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_uar_economy_syria_7a968674.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_uar_economy_syria_7a968674.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_uar_economy_syria_7a968674.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_attack_the_wealthy_fam_ada45cb5" texturefile = "gfx/interface/goals/roc30/syria_attack_the_wealthy_fam_ada45cb5.png" }
+	spriteType = {
+		name = "roc30_syria_attack_the_wealthy_fam_ada45cb5_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_attack_the_wealthy_fam_ada45cb5.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_attack_the_wealthy_fam_ada45cb5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_attack_the_wealthy_fam_ada45cb5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_bash_freedom_media_123c9603" texturefile = "gfx/interface/goals/roc30/syr_bash_freedom_media_123c9603.dds" }
+	spriteType = {
+		name = "roc30_syr_bash_freedom_media_123c9603_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_bash_freedom_media_123c9603.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_bash_freedom_media_123c9603.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_bash_freedom_media_123c9603.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_local_elections_625c3414" texturefile = "gfx/interface/goals/roc30/focus_syria_local_elections_625c3414.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_local_elections_625c3414_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_local_elections_625c3414.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_local_elections_625c3414.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_local_elections_625c3414.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_medical_bushr_2372ba30" texturefile = "gfx/interface/goals/roc30/syr_medical_bushr_2372ba30.dds" }
+	spriteType = {
+		name = "roc30_syr_medical_bushr_2372ba30_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_medical_bushr_2372ba30.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_medical_bushr_2372ba30.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_medical_bushr_2372ba30.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_8th_march_revolution_43f16498" texturefile = "gfx/interface/goals/roc30/syr_8th_march_revolution_43f16498.dds" }
+	spriteType = {
+		name = "roc30_syr_8th_march_revolution_43f16498_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_8th_march_revolution_43f16498.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_8th_march_revolution_43f16498.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_8th_march_revolution_43f16498.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syrian_baath_officer_64f575de" texturefile = "gfx/interface/goals/roc30/syrian_baath_officer_64f575de.dds" }
+	spriteType = {
+		name = "roc30_syrian_baath_officer_64f575de_shine"
+		texturefile = "gfx/interface/goals/roc30/syrian_baath_officer_64f575de.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_baath_officer_64f575de.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_baath_officer_64f575de.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_end_exploitation_ea2aa21e" texturefile = "gfx/interface/goals/roc30/syria_end_exploitation_ea2aa21e.png" }
+	spriteType = {
+		name = "roc30_syria_end_exploitation_ea2aa21e_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_end_exploitation_ea2aa21e.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_end_exploitation_ea2aa21e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_end_exploitation_ea2aa21e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_bursha_old_feminism_12da7830" texturefile = "gfx/interface/goals/roc30/syr_bursha_old_feminism_12da7830.dds" }
+	spriteType = {
+		name = "roc30_syr_bursha_old_feminism_12da7830_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_bursha_old_feminism_12da7830.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_bursha_old_feminism_12da7830.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_bursha_old_feminism_12da7830.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_jap_accessible_education_4701c417" texturefile = "gfx/interface/goals/roc30/jap_accessible_education_4701c417.png" }
+	spriteType = {
+		name = "roc30_jap_accessible_education_4701c417_shine"
+		texturefile = "gfx/interface/goals/roc30/jap_accessible_education_4701c417.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/jap_accessible_education_4701c417.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/jap_accessible_education_4701c417.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_nelb_establishment_of_the_sy_0e898c41" texturefile = "gfx/interface/goals/roc30/nelb_establishment_of_the_sy_0e898c41.png" }
+	spriteType = {
+		name = "roc30_nelb_establishment_of_the_sy_0e898c41_shine"
+		texturefile = "gfx/interface/goals/roc30/nelb_establishment_of_the_sy_0e898c41.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/nelb_establishment_of_the_sy_0e898c41.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/nelb_establishment_of_the_sy_0e898c41.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_term_limit_eb61182b" texturefile = "gfx/interface/goals/roc30/term_limit_eb61182b.tga" }
+	spriteType = {
+		name = "roc30_term_limit_eb61182b_shine"
+		texturefile = "gfx/interface/goals/roc30/term_limit_eb61182b.tga"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/term_limit_eb61182b.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/term_limit_eb61182b.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_army_military_5a63fbd8" texturefile = "gfx/interface/goals/roc30/syr_army_military_5a63fbd8.dds" }
+	spriteType = {
+		name = "roc30_syr_army_military_5a63fbd8_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_army_military_5a63fbd8.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_army_military_5a63fbd8.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_army_military_5a63fbd8.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_egy_arab_socialism_b38293eb" texturefile = "gfx/interface/goals/roc30/egy_arab_socialism_b38293eb.png" }
+	spriteType = {
+		name = "roc30_egy_arab_socialism_b38293eb_shine"
+		texturefile = "gfx/interface/goals/roc30/egy_arab_socialism_b38293eb.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/egy_arab_socialism_b38293eb.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/egy_arab_socialism_b38293eb.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_the_farmer_owns_the_la_3c830d9e" texturefile = "gfx/interface/goals/roc30/syria_the_farmer_owns_the_la_3c830d9e.png" }
+	spriteType = {
+		name = "roc30_syria_the_farmer_owns_the_la_3c830d9e_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_the_farmer_owns_the_la_3c830d9e.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_the_farmer_owns_the_la_3c830d9e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_the_farmer_owns_the_la_3c830d9e.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_generic_arab_industry_b4a867cb" texturefile = "gfx/interface/goals/roc30/generic_arab_industry_b4a867cb.tga" }
+	spriteType = {
+		name = "roc30_generic_arab_industry_b4a867cb_shine"
+		texturefile = "gfx/interface/goals/roc30/generic_arab_industry_b4a867cb.tga"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_arab_industry_b4a867cb.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_arab_industry_b4a867cb.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_five_year_plan_3b3aa71d" texturefile = "gfx/interface/goals/roc30/five_year_plan_3b3aa71d.dds" }
+	spriteType = {
+		name = "roc30_five_year_plan_3b3aa71d_shine"
+		texturefile = "gfx/interface/goals/roc30/five_year_plan_3b3aa71d.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/five_year_plan_3b3aa71d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/five_year_plan_3b3aa71d.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_air_dam_fae475df" texturefile = "gfx/interface/goals/roc30/syr_air_dam_fae475df.dds" }
+	spriteType = {
+		name = "roc30_syr_air_dam_fae475df_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_air_dam_fae475df.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_air_dam_fae475df.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_air_dam_fae475df.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_arab_socialist_union_fd5d7327" texturefile = "gfx/interface/goals/roc30/arab_socialist_union_fd5d7327.dds" }
+	spriteType = {
+		name = "roc30_arab_socialist_union_fd5d7327_shine"
+		texturefile = "gfx/interface/goals/roc30/arab_socialist_union_fd5d7327.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/arab_socialist_union_fd5d7327.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/arab_socialist_union_fd5d7327.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_healthy_politics_3e60e863" texturefile = "gfx/interface/goals/roc30/syria_healthy_politics_3e60e863.png" }
+	spriteType = {
+		name = "roc30_syria_healthy_politics_3e60e863_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_healthy_politics_3e60e863.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_healthy_politics_3e60e863.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_healthy_politics_3e60e863.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_the_party_commands_the_dc055d29" texturefile = "gfx/interface/goals/roc30/syria_the_party_commands_the_dc055d29.png" }
+	spriteType = {
+		name = "roc30_syria_the_party_commands_the_dc055d29_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_the_party_commands_the_dc055d29.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_the_party_commands_the_dc055d29.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_the_party_commands_the_dc055d29.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_coalition_with_c_e90fd2ab" texturefile = "gfx/interface/goals/roc30/focus_syria_coalition_with_c_e90fd2ab.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_coalition_with_c_e90fd2ab_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_coalition_with_c_e90fd2ab.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_coalition_with_c_e90fd2ab.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_coalition_with_c_e90fd2ab.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_retain_a_limited_parli_d56a9135" texturefile = "gfx/interface/goals/roc30/syria_retain_a_limited_parli_d56a9135.png" }
+	spriteType = {
+		name = "roc30_syria_retain_a_limited_parli_d56a9135_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_retain_a_limited_parli_d56a9135.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_retain_a_limited_parli_d56a9135.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_retain_a_limited_parli_d56a9135.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_politics_for_all_0755b56b" texturefile = "gfx/interface/goals/roc30/syria_politics_for_all_0755b56b.png" }
+	spriteType = {
+		name = "roc30_syria_politics_for_all_0755b56b_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_politics_for_all_0755b56b.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_politics_for_all_0755b56b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_politics_for_all_0755b56b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_pan_arab_palestine_16c50f92" texturefile = "gfx/interface/goals/roc30/pan_arab_palestine_16c50f92.dds" }
+	spriteType = {
+		name = "roc30_pan_arab_palestine_16c50f92_shine"
+		texturefile = "gfx/interface/goals/roc30/pan_arab_palestine_16c50f92.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/pan_arab_palestine_16c50f92.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/pan_arab_palestine_16c50f92.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_union_of_arab_republics_abf4156a" texturefile = "gfx/interface/goals/roc30/union_of_arab_republics_abf4156a.tga" }
+	spriteType = {
+		name = "roc30_union_of_arab_republics_abf4156a_shine"
+		texturefile = "gfx/interface/goals/roc30/union_of_arab_republics_abf4156a.tga"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/union_of_arab_republics_abf4156a.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/union_of_arab_republics_abf4156a.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_generic_neutrality_focus_ara_75dfcb3a" texturefile = "gfx/interface/goals/roc30/generic_neutrality_focus_ara_75dfcb3a.dds" }
+	spriteType = {
+		name = "roc30_generic_neutrality_focus_ara_75dfcb3a_shine"
+		texturefile = "gfx/interface/goals/roc30/generic_neutrality_focus_ara_75dfcb3a.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_neutrality_focus_ara_75dfcb3a.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_neutrality_focus_ara_75dfcb3a.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_iraq_baath_party_iraq_bf8671f3" texturefile = "gfx/interface/goals/roc30/iraq_baath_party_iraq_bf8671f3.png" }
+	spriteType = {
+		name = "roc30_iraq_baath_party_iraq_bf8671f3_shine"
+		texturefile = "gfx/interface/goals/roc30/iraq_baath_party_iraq_bf8671f3.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/iraq_baath_party_iraq_bf8671f3.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/iraq_baath_party_iraq_bf8671f3.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_sov_new_public_dialogue_fcca36f7" texturefile = "gfx/interface/goals/roc30/sov_new_public_dialogue_fcca36f7.png" }
+	spriteType = {
+		name = "roc30_sov_new_public_dialogue_fcca36f7_shine"
+		texturefile = "gfx/interface/goals/roc30/sov_new_public_dialogue_fcca36f7.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/sov_new_public_dialogue_fcca36f7.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/sov_new_public_dialogue_fcca36f7.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_peace_and_reconc_bc9a9442" texturefile = "gfx/interface/goals/roc30/focus_syria_peace_and_reconc_bc9a9442.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_peace_and_reconc_bc9a9442_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_peace_and_reconc_bc9a9442.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_peace_and_reconc_bc9a9442.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_peace_and_reconc_bc9a9442.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_reconstruction_4329928e" texturefile = "gfx/interface/goals/roc30/focus_syria_reconstruction_4329928e.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_reconstruction_4329928e_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_reconstruction_4329928e.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_reconstruction_4329928e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_reconstruction_4329928e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_federal_republic_of_syria_e4f6d252" texturefile = "gfx/interface/goals/roc30/federal_republic_of_syria_e4f6d252.dds" }
+	spriteType = {
+		name = "roc30_federal_republic_of_syria_e4f6d252_shine"
+		texturefile = "gfx/interface/goals/roc30/federal_republic_of_syria_e4f6d252.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/federal_republic_of_syria_e4f6d252.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/federal_republic_of_syria_e4f6d252.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_iraq_war_d54ff095" texturefile = "gfx/interface/goals/roc30/syr_iraq_war_d54ff095.dds" }
+	spriteType = {
+		name = "roc30_syr_iraq_war_d54ff095_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_iraq_war_d54ff095.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_iraq_war_d54ff095.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_iraq_war_d54ff095.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_free_lebanon_state_244ddeaf" texturefile = "gfx/interface/goals/roc30/free_lebanon_state_244ddeaf.dds" }
+	spriteType = {
+		name = "roc30_free_lebanon_state_244ddeaf_shine"
+		texturefile = "gfx/interface/goals/roc30/free_lebanon_state_244ddeaf.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/free_lebanon_state_244ddeaf.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/free_lebanon_state_244ddeaf.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_resistance_89a50254" texturefile = "gfx/interface/goals/roc30/syria_resistance_89a50254.dds" }
+	spriteType = {
+		name = "roc30_syria_resistance_89a50254_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_resistance_89a50254.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_resistance_89a50254.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_resistance_89a50254.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syrian_air_force_1_0c13fd22" texturefile = "gfx/interface/goals/roc30/syrian_air_force_1_0c13fd22.dds" }
+	spriteType = {
+		name = "roc30_syrian_air_force_1_0c13fd22_shine"
+		texturefile = "gfx/interface/goals/roc30/syrian_air_force_1_0c13fd22.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_air_force_1_0c13fd22.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syrian_air_force_1_0c13fd22.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_friend_iran_ae547236" texturefile = "gfx/interface/goals/roc30/syr_friend_iran_ae547236.dds" }
+	spriteType = {
+		name = "roc30_syr_friend_iran_ae547236_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_friend_iran_ae547236.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_friend_iran_ae547236.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_friend_iran_ae547236.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_friend_turkey_439e917e" texturefile = "gfx/interface/goals/roc30/syr_friend_turkey_439e917e.dds" }
+	spriteType = {
+		name = "roc30_syr_friend_turkey_439e917e_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_friend_turkey_439e917e.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_friend_turkey_439e917e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_friend_turkey_439e917e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_mediterranean_fleet_a7a60941" texturefile = "gfx/interface/goals/roc30/syria_mediterranean_fleet_a7a60941.png" }
+	spriteType = {
+		name = "roc30_syria_mediterranean_fleet_a7a60941_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_mediterranean_fleet_a7a60941.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_mediterranean_fleet_a7a60941.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_mediterranean_fleet_a7a60941.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_russianarms_15956724" texturefile = "gfx/interface/goals/roc30/russianarms_15956724.dds" }
+	spriteType = {
+		name = "roc30_russianarms_15956724_shine"
+		texturefile = "gfx/interface/goals/roc30/russianarms_15956724.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/russianarms_15956724.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/russianarms_15956724.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_generic_secret_service_6eef781e" texturefile = "gfx/interface/goals/roc30/generic_secret_service_6eef781e.dds" }
+	spriteType = {
+		name = "roc30_generic_secret_service_6eef781e_shine"
+		texturefile = "gfx/interface/goals/roc30/generic_secret_service_6eef781e.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_secret_service_6eef781e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/generic_secret_service_6eef781e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_internet_censorship_f1b3e1bd" texturefile = "gfx/interface/goals/roc30/internet_censorship_f1b3e1bd.dds" }
+	spriteType = {
+		name = "roc30_internet_censorship_f1b3e1bd_shine"
+		texturefile = "gfx/interface/goals/roc30/internet_censorship_f1b3e1bd.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/internet_censorship_f1b3e1bd.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/internet_censorship_f1b3e1bd.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_poltical_balance_2c7ba731" texturefile = "gfx/interface/goals/roc30/focus_syria_poltical_balance_2c7ba731.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_poltical_balance_2c7ba731_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_poltical_balance_2c7ba731.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_poltical_balance_2c7ba731.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_poltical_balance_2c7ba731.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_national_banking_a6b23284" texturefile = "gfx/interface/goals/roc30/syr_national_banking_a6b23284.dds" }
+	spriteType = {
+		name = "roc30_syr_national_banking_a6b23284_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_national_banking_a6b23284.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_national_banking_a6b23284.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_national_banking_a6b23284.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_telecom_78cb328f" texturefile = "gfx/interface/goals/roc30/syria_telecom_78cb328f.dds" }
+	spriteType = {
+		name = "roc30_syria_telecom_78cb328f_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_telecom_78cb328f.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_telecom_78cb328f.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_telecom_78cb328f.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_economic_tourism_c7ed0bf2" texturefile = "gfx/interface/goals/roc30/economic_tourism_c7ed0bf2.dds" }
+	spriteType = {
+		name = "roc30_economic_tourism_c7ed0bf2_shine"
+		texturefile = "gfx/interface/goals/roc30/economic_tourism_c7ed0bf2.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/economic_tourism_c7ed0bf2.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/economic_tourism_c7ed0bf2.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_prc_tackle_youth_unemploymen_b258396d" texturefile = "gfx/interface/goals/roc30/prc_tackle_youth_unemploymen_b258396d.png" }
+	spriteType = {
+		name = "roc30_prc_tackle_youth_unemploymen_b258396d_shine"
+		texturefile = "gfx/interface/goals/roc30/prc_tackle_youth_unemploymen_b258396d.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/prc_tackle_youth_unemploymen_b258396d.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/prc_tackle_youth_unemploymen_b258396d.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_encourage_womens_equality_8a357492" texturefile = "gfx/interface/goals/roc30/encourage_womens_equality_8a357492.dds" }
+	spriteType = {
+		name = "roc30_encourage_womens_equality_8a357492_shine"
+		texturefile = "gfx/interface/goals/roc30/encourage_womens_equality_8a357492.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/encourage_womens_equality_8a357492.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/encourage_womens_equality_8a357492.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_secularize_education_09488a7d" texturefile = "gfx/interface/goals/roc30/secularize_education_09488a7d.tga" }
+	spriteType = {
+		name = "roc30_secularize_education_09488a7d_shine"
+		texturefile = "gfx/interface/goals/roc30/secularize_education_09488a7d.tga"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/secularize_education_09488a7d.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/secularize_education_09488a7d.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syria_ethnic_groups_51dad82c" texturefile = "gfx/interface/goals/roc30/syria_ethnic_groups_51dad82c.png" }
+	spriteType = {
+		name = "roc30_syria_ethnic_groups_51dad82c_shine"
+		texturefile = "gfx/interface/goals/roc30/syria_ethnic_groups_51dad82c.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_ethnic_groups_51dad82c.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syria_ethnic_groups_51dad82c.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_kurdish_supreme_comitee_a54352f6" texturefile = "gfx/interface/goals/roc30/kurdish_supreme_comitee_a54352f6.dds" }
+	spriteType = {
+		name = "roc30_kurdish_supreme_comitee_a54352f6_shine"
+		texturefile = "gfx/interface/goals/roc30/kurdish_supreme_comitee_a54352f6.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/kurdish_supreme_comitee_a54352f6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/kurdish_supreme_comitee_a54352f6.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_fpr_set_price_controls_8dc11b03" texturefile = "gfx/interface/goals/roc30/fpr_set_price_controls_8dc11b03.png" }
+	spriteType = {
+		name = "roc30_fpr_set_price_controls_8dc11b03_shine"
+		texturefile = "gfx/interface/goals/roc30/fpr_set_price_controls_8dc11b03.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/fpr_set_price_controls_8dc11b03.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/fpr_set_price_controls_8dc11b03.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_faf_building_blocks_of_a_new_dfd7bd4b" texturefile = "gfx/interface/goals/roc30/faf_building_blocks_of_a_new_dfd7bd4b.png" }
+	spriteType = {
+		name = "roc30_faf_building_blocks_of_a_new_dfd7bd4b_shine"
+		texturefile = "gfx/interface/goals/roc30/faf_building_blocks_of_a_new_dfd7bd4b.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/faf_building_blocks_of_a_new_dfd7bd4b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/faf_building_blocks_of_a_new_dfd7bd4b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_jap_rural_benefits_programme_15b58e2b" texturefile = "gfx/interface/goals/roc30/jap_rural_benefits_programme_15b58e2b.png" }
+	spriteType = {
+		name = "roc30_jap_rural_benefits_programme_15b58e2b_shine"
+		texturefile = "gfx/interface/goals/roc30/jap_rural_benefits_programme_15b58e2b.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/jap_rural_benefits_programme_15b58e2b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/jap_rural_benefits_programme_15b58e2b.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_eng_tax_cuts_and_deregulatio_720a7104" texturefile = "gfx/interface/goals/roc30/eng_tax_cuts_and_deregulatio_720a7104.png" }
+	spriteType = {
+		name = "roc30_eng_tax_cuts_and_deregulatio_720a7104_shine"
+		texturefile = "gfx/interface/goals/roc30/eng_tax_cuts_and_deregulatio_720a7104.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/eng_tax_cuts_and_deregulatio_720a7104.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/eng_tax_cuts_and_deregulatio_720a7104.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_oil_main_5bd3c13f" texturefile = "gfx/interface/goals/roc30/syr_oil_main_5bd3c13f.dds" }
+	spriteType = {
+		name = "roc30_syr_oil_main_5bd3c13f_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_oil_main_5bd3c13f.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_oil_main_5bd3c13f.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_oil_main_5bd3c13f.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_focus_syria_republican_const_e1d9bb7c" texturefile = "gfx/interface/goals/roc30/focus_syria_republican_const_e1d9bb7c.dds" }
+	spriteType = {
+		name = "roc30_focus_syria_republican_const_e1d9bb7c_shine"
+		texturefile = "gfx/interface/goals/roc30/focus_syria_republican_const_e1d9bb7c.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_republican_const_e1d9bb7c.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/focus_syria_republican_const_e1d9bb7c.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_syr_defense_companies_54982c2e" texturefile = "gfx/interface/goals/roc30/syr_defense_companies_54982c2e.dds" }
+	spriteType = {
+		name = "roc30_syr_defense_companies_54982c2e_shine"
+		texturefile = "gfx/interface/goals/roc30/syr_defense_companies_54982c2e.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_defense_companies_54982c2e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/syr_defense_companies_54982c2e.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_fra_justice_friendship_coope_f221bb9a" texturefile = "gfx/interface/goals/roc30/fra_justice_friendship_coope_f221bb9a.png" }
+	spriteType = {
+		name = "roc30_fra_justice_friendship_coope_f221bb9a_shine"
+		texturefile = "gfx/interface/goals/roc30/fra_justice_friendship_coope_f221bb9a.png"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/fra_justice_friendship_coope_f221bb9a.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/fra_justice_friendship_coope_f221bb9a.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "roc30_united_arabian_flag_cc4eac19" texturefile = "gfx/interface/goals/roc30/united_arabian_flag_cc4eac19.dds" }
+	spriteType = {
+		name = "roc30_united_arabian_flag_cc4eac19_shine"
+		texturefile = "gfx/interface/goals/roc30/united_arabian_flag_cc4eac19.dds"
+		effectfile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/united_arabian_flag_cc4eac19.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/roc30/united_arabian_flag_cc4eac19.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "GFX_idea_roc30_burning_syria_b5af00c4" texturefile = "gfx/interface/ideas/roc30/burning_syria_b5af00c4.dds" }
+	spriteType = { name = "GFX_idea_roc30_cpc_peace_is_first_c1ac9fbf" texturefile = "gfx/interface/ideas/roc30/cpc_peace_is_first_c1ac9fbf.png" }
+	spriteType = { name = "GFX_idea_roc30_syr_alawite_army_05b11154" texturefile = "gfx/interface/ideas/roc30/syr_alawite_army_05b11154.png" }
+	spriteType = { name = "GFX_idea_roc30_syrian_hezbollah_b559b963" texturefile = "gfx/interface/ideas/roc30/syrian_hezbollah_b559b963.dds" }
+	spriteType = { name = "GFX_idea_roc30_syr_syrian_air_power_5381bfd8" texturefile = "gfx/interface/ideas/roc30/syr_syrian_air_power_5381bfd8.png" }
+	spriteType = { name = "GFX_idea_roc30_sov_chemical_weapons_icon_bf9ae119" texturefile = "gfx/interface/ideas/roc30/sov_chemical_weapons_icon_bf9ae119.dds" }
+	spriteType = { name = "GFX_idea_roc30_war_economy_31f0bcdd" texturefile = "gfx/interface/ideas/roc30/war_economy_31f0bcdd.dds" }
+	spriteType = { name = "GFX_idea_roc30_syr_mejd_council_b02dd938" texturefile = "gfx/interface/ideas/roc30/syr_mejd_council_b02dd938.dds" }
+	spriteType = { name = "GFX_idea_roc30_turkish_airlines_turkey_47ed20ee" texturefile = "gfx/interface/ideas/roc30/turkish_airlines_turkey_47ed20ee.png" }
+	spriteType = { name = "GFX_idea_roc30_syrian_nationalism_8551304e" texturefile = "gfx/interface/ideas/roc30/syrian_nationalism_8551304e.dds" }
+	spriteType = { name = "GFX_idea_roc30_syrian_salvation_government__97a56dbc" texturefile = "gfx/interface/ideas/roc30/syrian_salvation_government__97a56dbc.dds" }
+	spriteType = { name = "GFX_idea_roc30_syr_army_of_lions_idea_aef8d666" texturefile = "gfx/interface/ideas/roc30/syr_army_of_lions_idea_aef8d666.png" }
+	spriteType = { name = "GFX_idea_roc30_bul_idea_revitalizing_medite_17f6ee58" texturefile = "gfx/interface/ideas/roc30/bul_idea_revitalizing_medite_17f6ee58.png" }
+	spriteType = { name = "GFX_idea_roc30_baath_party_e00b3004" texturefile = "gfx/interface/ideas/roc30/baath_party_e00b3004.dds" }
+	spriteType = { name = "GFX_idea_roc30_afg_family_idea_2f339e10" texturefile = "gfx/interface/ideas/roc30/afg_family_idea_2f339e10.dds" }
+	spriteType = { name = "GFX_idea_roc30_services_syria_cb_idea_fce8e762" texturefile = "gfx/interface/ideas/roc30/services_syria_cb_idea_fce8e762.dds" }
+	spriteType = { name = "GFX_idea_roc30_rus_unfinished_land_reform_4b60440c" texturefile = "gfx/interface/ideas/roc30/rus_unfinished_land_reform_4b60440c.png" }
+	spriteType = { name = "GFX_idea_roc30_sov_five_year_plan_d7f62d4e" texturefile = "gfx/interface/ideas/roc30/sov_five_year_plan_d7f62d4e.png" }
+	spriteType = { name = "GFX_idea_roc30_arab_workers_union_1cbdc9ad" texturefile = "gfx/interface/ideas/roc30/arab_workers_union_1cbdc9ad.dds" }
+	spriteType = { name = "GFX_idea_roc30_syrian_health_care_reform_017c842a" texturefile = "gfx/interface/ideas/roc30/syrian_health_care_reform_017c842a.dds" }
+	spriteType = { name = "GFX_idea_roc30_sov_popular_front_of_democra_10a7bf97" texturefile = "gfx/interface/ideas/roc30/sov_popular_front_of_democra_10a7bf97.png" }
+	spriteType = { name = "GFX_idea_roc30_mla_trade_union_council_d501480f" texturefile = "gfx/interface/ideas/roc30/mla_trade_union_council_d501480f.dds" }
+	spriteType = { name = "GFX_idea_roc30_bbr_citizen_republic_idea_4f127e74" texturefile = "gfx/interface/ideas/roc30/bbr_citizen_republic_idea_4f127e74.png" }
+	spriteType = { name = "GFX_idea_roc30_arab_intelligence_agency_cde932ba" texturefile = "gfx/interface/ideas/roc30/arab_intelligence_agency_cde932ba.dds" }
+	spriteType = { name = "GFX_idea_roc30_ger_socialist_market_economy_38852e22" texturefile = "gfx/interface/ideas/roc30/ger_socialist_market_economy_38852e22.png" }
+	spriteType = { name = "GFX_idea_roc30_iran_aid_aircraft_dfbf8684" texturefile = "gfx/interface/ideas/roc30/iran_aid_aircraft_dfbf8684.dds" }
+	spriteType = { name = "GFX_idea_roc30_syr_rifat_egy_friendship_ded347e2" texturefile = "gfx/interface/ideas/roc30/syr_rifat_egy_friendship_ded347e2.dds" }
+	spriteType = { name = "GFX_idea_roc30_hou_famine_43fb93ed" texturefile = "gfx/interface/ideas/roc30/hou_famine_43fb93ed.png" }
+	spriteType = { name = "GFX_idea_roc30_fra_pension_riots_289824bd" texturefile = "gfx/interface/ideas/roc30/fra_pension_riots_289824bd.png" }
+	spriteType = { name = "GFX_idea_roc30_nsm_steel_belt_industry_7f63836c" texturefile = "gfx/interface/ideas/roc30/nsm_steel_belt_industry_7f63836c.png" }
+	spriteType = { name = "GFX_idea_roc30_syr_freedom_media_icon_d5f7587a" texturefile = "gfx/interface/ideas/roc30/syr_freedom_media_icon_d5f7587a.dds" }
+	spriteType = { name = "GFX_idea_roc30_ger_status_quo_505d495e" texturefile = "gfx/interface/ideas/roc30/ger_status_quo_505d495e.png" }
+	spriteType = { name = "GFX_idea_roc30_blr_transport_troops_idea_7a1b3b93" texturefile = "gfx/interface/ideas/roc30/blr_transport_troops_idea_7a1b3b93.dds" }
+	spriteType = { name = "GFX_idea_roc30_ger_student_protest_1b369348" texturefile = "gfx/interface/ideas/roc30/ger_student_protest_1b369348.dds" }
+	spriteType = { name = "GFX_idea_roc30_health_care_03d77781" texturefile = "gfx/interface/ideas/roc30/health_care_03d77781.dds" }
+	spriteType = { name = "GFX_idea_roc30_microchip_spirit_063b4ed4" texturefile = "gfx/interface/ideas/roc30/microchip_spirit_063b4ed4.dds" }
+	spriteType = { name = "GFX_idea_roc30_nuclear_power_11ef4c27" texturefile = "gfx/interface/ideas/roc30/nuclear_power_11ef4c27.dds" }
+}

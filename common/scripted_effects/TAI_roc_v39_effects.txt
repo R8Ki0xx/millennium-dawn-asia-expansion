@@ -1,0 +1,57 @@
+# MD ROC Return v3.9 —— 北约与港澳
+
+# Scope: any country. Full NATO membership regardless of MD's can_join_NATO geography check (used by TAI_join_nato / roc_return.96).
+TAI_join_nato_effect = {
+	if = { limit = { is_in_faction = yes NOT = { has_idea = NATO_member } } leave_faction = yes }
+	for_each_scope_loop = {
+		array = global.nato_members
+		add_opinion_modifier = { target = PREV modifier = NATO_member_modifier }
+		reverse_add_opinion_modifier = { target = PREV modifier = NATO_member_modifier }
+	}
+	if = { limit = { has_idea = Major_Non_NATO_Ally } remove_ideas = Major_Non_NATO_Ally }
+	if = { limit = { NOT = { has_idea = NATO_member } } add_ideas = NATO_member }
+	add_to_tech_sharing_group = NATO_Tech_Share
+	random_scope_in_array = {
+		array = global.nato_members
+		limit = { is_faction_leader = yes }
+		add_to_faction = PREV
+	}
+}
+
+# Scope: CHI (ROC). Takes Hong Kong / Macau as a special administrative region (MD's own autonomy state, valid for an original_tag = CHI overlord).
+TAI_take_hkg_sar = {
+	puppet = HKG
+	set_autonomy = { target = HKG autonomy_state = autonomy_special_administrative_region_HKG }
+}
+TAI_take_mac_sar = {
+	puppet = MAC
+	set_autonomy = { target = MAC autonomy_state = autonomy_special_administrative_region_MAC }
+}
+
+# Scope: CHI (ROC). After the switch Hong Kong / Macau may still be subjects of the PRC rump: hand them to the ROC.
+TAI_transfer_sars = {
+	if = {
+		limit = { country_exists = HKG OR = { HKG = { is_subject_of = PRC } AND = { has_global_flag = TAI_hkg_was_sar HKG = { is_subject = no } } } }
+		TAI_take_hkg_sar = yes
+	}
+	if = {
+		limit = { country_exists = MAC OR = { MAC = { is_subject_of = PRC } AND = { has_global_flag = TAI_mac_was_sar MAC = { is_subject = no } } } }
+		TAI_take_mac_sar = yes
+	}
+}
+
+# Scope: HKG. Hong Kong becomes the ROC's SAR under KMT rule and gets its own focus tree.
+TAI_hkg_roc_sar_setup = {
+	set_country_flag = HKG_roc_sar
+	add_ideas = TAI_hkg_roc_sar_idea
+	# v3.19：「回归中华民国」已并入千禧的香港国策树
+	if = { limit = { NOT = { has_focus_tree = hong_kong } } load_focus_tree = { tree = hong_kong keep_completed = yes } }
+	set_temp_variable = { party_index = 1 }
+	set_temp_variable = { party_popularity_increase = 0.15 }
+	set_temp_variable = { temp_outlook_increase = 0.15 }
+	change_relative_party_popularity = yes
+	set_temp_variable = { rul_party_temp = 1 }
+	set_temp_variable = { change_leader_temp = 1 }
+	change_ruling_party_effect = yes
+	mark_focus_tree_layout_dirty = yes
+}

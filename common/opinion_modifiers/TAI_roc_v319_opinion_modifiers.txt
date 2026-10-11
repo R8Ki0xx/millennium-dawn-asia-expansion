@@ -1,0 +1,7 @@
+# MD ROC Return v3.19 —— 中俄关系
+opinion_modifiers = {
+	TAI_sov_partner = { value = 25 }
+	TAI_sov_strategic = { value = 40 }
+	TAI_sov_revanchism = { value = -60 }
+	TAI_us_friendship = { value = 20 decay = 0.5 }
+}

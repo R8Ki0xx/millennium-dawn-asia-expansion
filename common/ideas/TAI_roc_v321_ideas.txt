@@ -1,0 +1,10 @@
+# MD ROC Return v3.21 —— 政治线与内战相关的国家精神
+ideas = {
+	country = {
+		TAI_beijing_capital_idea = { picture = roc21_shx_beijing_influence_5f4133e3 modifier = { political_power_gain = 0.05 stability_factor = 0.02 } }
+		TAI_cpc_government_idea = { picture = roc21_prc_chinese_communist_party_1be7ba78 modifier = { stability_factor = 0.02 political_power_gain = 0.05 war_support_factor = 0.02 } }
+		TAI_cpc_era_idea = { picture = roc21_a_front_united_csp_kmt_194b833c modifier = { stability_factor = 0.05 political_power_gain = 0.1 war_support_factor = 0.03 } }
+		TAI_party_alternation_idea = { picture = roc21_bra_election_year_d631ba20 modifier = { stability_factor = 0.05 political_power_gain = 0.05 } }
+		CSW_total_war_idea = { picture = roc21_fra_total_class_war_16d48aaf modifier = { war_support_factor = 0.10 stability_factor = -0.05 conscription_factor = 0.10 consumer_goods_factor = 0.10 } }
+	}
+}

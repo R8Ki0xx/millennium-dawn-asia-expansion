@@ -1,0 +1,266 @@
+# MD ROC Return v3.4 —— 中共残余叛乱 / 第三次国共内战 / 中共复辟（由 _tools/patch_insurgency.py 生成）
+
+# Scope: ROC-CHI. temp var ins_change = amount
+TAI_insurgency_change = {
+	add_to_variable = { TAI_ccp_insurgency = ins_change tooltip = TAI_ccp_insurgency_tt }
+	clamp_variable = { var = TAI_ccp_insurgency min = 0 max = 100 }
+}
+
+# Scope: ROC-CHI, right after the tag switch
+TAI_insurgency_init = {
+	set_variable = { TAI_ccp_insurgency = 40 }
+	every_owned_state = { limit = { OR = { state = 552 state = 554 state = 555 state = 1095 state = 1096 state = 1097 } } add_dynamic_modifier = { modifier = TAI_red_insurgency_3 } }
+	every_owned_state = { limit = { OR = { state = 547 state = 548 state = 549 state = 434 state = 558 state = 556 } } add_dynamic_modifier = { modifier = TAI_red_insurgency_2 } }
+	every_owned_state = { limit = { OR = { state = 559 state = 560 state = 1072 state = 588 state = 592 } } add_dynamic_modifier = { modifier = TAI_red_insurgency_1 } }
+	TAI_insurgency_count = yes
+}
+
+# Scope: ROC-CHI
+TAI_insurgency_count = {
+	set_variable = { TAI_ins_severe = 0 }
+	set_variable = { TAI_ins_active = 0 }
+	set_variable = { TAI_ins_latent = 0 }
+	every_owned_state = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } PREV = { add_to_variable = { TAI_ins_severe = 1 } } }
+	every_owned_state = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } PREV = { add_to_variable = { TAI_ins_active = 1 } } }
+	every_owned_state = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } PREV = { add_to_variable = { TAI_ins_latent = 1 } } }
+}
+
+# Scope: state
+TAI_insurgency_upgrade = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_2 } add_dynamic_modifier = { modifier = TAI_red_insurgency_3 } }
+	else_if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_1 } add_dynamic_modifier = { modifier = TAI_red_insurgency_2 } }
+}
+TAI_insurgency_downgrade = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_3 } add_dynamic_modifier = { modifier = TAI_red_insurgency_2 } }
+	else_if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_2 } add_dynamic_modifier = { modifier = TAI_red_insurgency_1 } }
+	else_if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_1 } }
+}
+
+# Scope: ROC-CHI, monthly
+TAI_insurgency_monthly = {
+	TAI_insurgency_count = yes
+	set_temp_variable = { ins_change = TAI_ins_severe }
+	multiply_temp_variable = { ins_change = 0.5 }
+	set_temp_variable = { ins_a = TAI_ins_active }
+	multiply_temp_variable = { ins_a = 0.25 }
+	add_to_temp_variable = { ins_change = ins_a }
+	if = { limit = { country_exists = PRC } add_to_temp_variable = { ins_change = 2 } }
+	if = { limit = { has_war_with = PRC } add_to_temp_variable = { ins_change = 2 } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } } add_to_temp_variable = { ins_change = TAI_dbf_hearts_lvl } }
+	if = { limit = { has_stability > 0.6 } add_to_temp_variable = { ins_change = -2 } }
+	if = { limit = { check_variable = { TAI_ins_severe < 1 } } add_to_temp_variable = { ins_change = -1 } }
+	TAI_insurgency_change = yes
+	# escalation / slow recovery
+	if = {
+		limit = { check_variable = { TAI_ccp_insurgency > 50 } }
+		every_owned_state = { limit = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } random = { chance = 5 TAI_insurgency_upgrade = yes } }
+	}
+	else_if = {
+		limit = { check_variable = { TAI_ccp_insurgency < 20 } }
+		every_owned_state = { limit = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } random = { chance = 5 TAI_insurgency_downgrade = yes } }
+	}
+	TAI_insurgency_count = yes
+	# the ROC crushed a PRC rising
+	if = {
+		limit = { has_country_flag = TAI_third_civil_war NOT = { country_exists = PRC } }
+		clr_country_flag = TAI_third_civil_war
+		set_temp_variable = { ins_change = -20 }
+		TAI_insurgency_change = yes
+		country_event = { id = roc_return.88 days = 1 }
+	}
+}
+
+# Scope: PRC. temp var prc_div = number of divisions
+PRC_spawn_divisions = {
+	if = {
+		limit = { NOT = { has_country_flag = PRC_template_created } }
+		division_template = {
+			name = "PLA Remnant Division"
+			regiments = {
+				L_Inf_Bat = { x = 0 y = 0 }
+				L_Inf_Bat = { x = 0 y = 1 }
+				L_Inf_Bat = { x = 0 y = 2 }
+				L_Inf_Bat = { x = 1 y = 0 }
+				L_Inf_Bat = { x = 1 y = 1 }
+				L_Inf_Bat = { x = 1 y = 2 }
+			}
+			support = {
+				H_Engi_Comp = { x = 0 y = 0 }
+			}
+		}
+		set_country_flag = PRC_template_created
+	}
+	for_loop_effect = {
+		end = prc_div
+		capital_scope = { create_unit = { division = "name = \"PLA Remnant Division\" division_template = \"PLA Remnant Division\" start_experience_factor = 0.3" owner = PRC } }
+	}
+}
+
+# Scope: PRC (rump created at the tag switch, or revived by an uprising)
+PRC_setup_rump = {
+	# v3.12 rump power ranking
+	if = { limit = { NOT = { has_idea = super_power } NOT = { has_idea = great_power } NOT = { has_idea = large_power } NOT = { has_idea = regional_power } NOT = { has_idea = minor_power } NOT = { has_idea = non_power } } add_country_to_power_ranking = yes }
+	if = {
+		limit = { NOT = { has_country_flag = PRC_transition_tree } }
+		load_focus_tree = { tree = PRC_transition_focus keep_completed = no }
+		set_country_flag = PRC_transition_tree
+	}
+	if = { limit = { NOT = { has_idea = PRC_peoples_war_idea } } add_ideas = PRC_peoples_war_idea }
+	set_cosmetic_tag = PRC_CCP
+}
+
+# Scope: ROC-CHI. The CCP rises in the north: the third KMT-CCP civil war
+TAI_ccp_uprising = {
+	set_country_flag = TAI_third_civil_war
+	set_country_flag = { flag = TAI_uprising_cooldown days = 720 }
+	every_owned_state = {
+		limit = {
+			OR = {
+				has_dynamic_modifier = { modifier = TAI_red_insurgency_3 }
+				AND = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } OR = { state = 552 state = 554 state = 555 state = 1095 state = 1096 state = 1097 } }
+			}
+		}
+		set_state_flag = TAI_uprising_state
+		PRC = { transfer_state = PREV }
+	}
+	PRC = {
+		PRC_setup_rump = yes
+		if = {
+		limit = { NOT = { owns_state = 547 } }
+		if = { limit = { owns_state = 552 } set_capital = { state = 552 } }
+		else_if = { limit = { owns_state = 554 } set_capital = { state = 554 } }
+		else_if = { limit = { owns_state = 555 } set_capital = { state = 555 } }
+		else_if = { limit = { owns_state = 1095 } set_capital = { state = 1095 } }
+		else_if = { limit = { owns_state = 1096 } set_capital = { state = 1096 } }
+		else_if = { limit = { owns_state = 1097 } set_capital = { state = 1097 } }
+		else_if = { limit = { owns_state = 547 } set_capital = { state = 547 } }
+		else_if = { limit = { owns_state = 548 } set_capital = { state = 548 } }
+		else_if = { limit = { owns_state = 549 } set_capital = { state = 549 } }
+		else_if = { limit = { owns_state = 434 } set_capital = { state = 434 } }
+		else_if = { limit = { owns_state = 558 } set_capital = { state = 558 } }
+		else_if = { limit = { owns_state = 556 } set_capital = { state = 556 } }
+		}
+		set_temp_variable = { prc_div = 10 }
+		PRC_spawn_divisions = yes
+		add_war_support = 0.15
+		if = { limit = { NOT = { has_war_with = CHI } } declare_war_on = { target = CHI type = annex_everything } }
+		country_event = { id = roc_return.83 days = 1 }
+	}
+	set_variable = { TAI_ccp_insurgency = 40 }
+	TAI_insurgency_count = yes
+	country_event = { id = roc_return.81 days = 1 }
+	news_event = { id = roc_return.82 days = 1 }
+}
+
+# Scope: PRC. The CCP won the civil war
+PRC_victory_effect = {
+	set_global_flag = CCP_restored
+	if = {
+		limit = { country_exists = CHI }
+		# 国府再次迁台
+		CHI = { every_owned_state = { limit = { OR = { state = 1015 state = 1109 state = 1155 state = 1156 state = 1157 state = 1158 state = 430 state = 491 state = 598 state = 599 state = 600 } } TAI = { transfer_state = PREV } } }
+		if = {
+			limit = { country_exists = TAI }
+			TAI = {
+				set_variable = { treasury = CHI.treasury }
+				multiply_variable = { treasury = 0.25 }
+				add_political_power = 100
+				set_capital = { state = 598 }
+				country_event = { id = roc_return.87 days = 1 }
+			}
+			if = { limit = { CHI = { is_ai = no } } TAI = { change_tag_from = CHI } }
+		}
+		annex_country = { target = CHI transfer_troops = no }
+	}
+	clr_global_flag = ROC_tag_switch_done   # v3.9 order: before the trees are reloaded
+	CHI = { transfer_state = 547 }
+	CHI = { CCP_setup_from_PRC = yes }
+	if = { limit = { is_ai = no } CHI = { change_tag_from = PRC } }
+	every_unit_leader = { set_nationality = CHI }
+	CHI = {
+		annex_country = { target = PRC transfer_troops = yes }
+		set_capital = { state = 547 }
+		load_focus_tree = { tree = china_focus keep_completed = no }
+		CCP_restore_focuses = yes
+		CCP_restore_dynamic_modifiers = yes
+		mark_focus_tree_layout_dirty = yes
+		ingame_update_setup = yes
+		force_update_dynamic_modifier = yes
+	}
+	if = { limit = { country_exists = NKO } NKO = { mark_focus_tree_layout_dirty = yes } }
+	# v3.12 ccp power ranking
+	CHI = { add_country_to_power_ranking = yes }
+	# v3.14 palace
+	TAI_roc_palace_update = yes
+	# v3.15 five yuan
+	CHI = { if = { limit = { has_dynamic_modifier = { modifier = TAI_five_yuan_modifier } } remove_dynamic_modifier = { modifier = TAI_five_yuan_modifier } } }
+	news_event = { id = roc_return.86 days = 1 }
+}
+
+# Scope: the revived CHI (PRC still exists). Turns the ROC-CHI back into the CCP's China.
+CCP_setup_from_PRC = {
+	# v3.10 ccp bop：恢复千禧的中共派系平衡，结束国民大会
+	if = { limit = { has_power_balance = { id = TAI_roc_faction_balance } } remove_power_balance = { id = TAI_roc_faction_balance } }
+	if = { limit = { NOT = { has_power_balance = { id = CHI_factional_balance } } } set_power_balance = { id = CHI_factional_balance left_side = CHI_princeling_shanghai right_side = CHI_tuanpai_youth_league set_value = -0.35 } }
+	if = { limit = { has_active_mission = TAI_na_session_mission } remove_mission = TAI_na_session_mission }
+	clr_country_flag = ROC_new_chi
+	clr_country_flag = TAI_mainland_restored
+	clr_country_flag = TAI_pan_blue_path
+	clr_country_flag = TAI_us_backing_flag
+	clr_country_flag = TAI_third_civil_war
+	clr_country_flag = CHI_local_debt_resolved
+	set_country_flag = CCP_restored_china
+	if = { limit = { has_global_flag = CCP_had_ic } set_country_flag = CHI_ic_initialized }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_national_assembly_modifier } } remove_dynamic_modifier = { modifier = TAI_national_assembly_modifier } }
+	drop_cosmetic_tag = yes
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_roc_army_modifier } } remove_dynamic_modifier = { modifier = TAI_roc_army_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_roc_navy_modifier } } remove_dynamic_modifier = { modifier = TAI_roc_navy_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } } remove_dynamic_modifier = { modifier = TAI_roc_airforce_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } } remove_dynamic_modifier = { modifier = TAI_roc_general_staff_modifier } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } } remove_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } } remove_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } } remove_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } } remove_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } } remove_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } } remove_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_transition } } remove_dynamic_modifier = { modifier = TAI_dbf_transition } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } } remove_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } } remove_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+	every_owned_state = { limit = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } TAI_insurgency_clear = yes }
+	CCP_sync_ideas_from_PRC = yes
+	inherit_technology = PRC
+	set_variable = { treasury = PRC.treasury }
+	set_variable = { debt = PRC.debt }
+	set_variable = { corporate_tax_rate = PRC.corporate_tax_rate }
+	set_variable = { population_tax_rate = PRC.population_tax_rate }
+	if = { limit = { PRC = { has_variable = gdp_per_capita } } set_variable = { gdp_per_capita = PRC.gdp_per_capita } }
+	set_politics = { ruling_party = communism elections_allowed = no }
+	for_loop_effect = {
+		end = PRC.party_pop_array^num
+		value = v
+		set_variable = { party_pop_array^v = PRC.party_pop_array^v }
+	}
+	add_up_party_totals = yes
+	set_party_positions = yes
+	set_temp_variable = { rul_party_temp = 4 }
+	set_temp_variable = { change_leader_temp = 1 }
+	change_ruling_party_effect = yes
+	set_temp_variable = { roc_diff = PRC.political_power }
+	subtract_from_temp_variable = { roc_diff = political_power }
+	add_political_power = roc_diff
+	set_temp_variable = { roc_diff = PRC.has_stability }
+	subtract_from_temp_variable = { roc_diff = has_stability }
+	add_stability = roc_diff
+	set_temp_variable = { roc_diff = PRC.has_war_support }
+	subtract_from_temp_variable = { roc_diff = has_war_support }
+	add_war_support = roc_diff
+	set_temp_variable = { nation_to_copy_from = PRC.id }
+	copy_internal_factions = yes
+}
+
+# Scope: state
+TAI_insurgency_clear = {
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_3 } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_2 } }
+	if = { limit = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } remove_dynamic_modifier = { modifier = TAI_red_insurgency_1 } }
+}

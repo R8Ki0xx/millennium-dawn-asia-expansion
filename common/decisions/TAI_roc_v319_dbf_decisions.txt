@@ -1,0 +1,170 @@
+# MD ROC Return v3.19 —— 收拾河山（由 _tools/v319_debuff.py 生成）
+TAI_dbf_category = {
+	TAI_dbf_cure_black_gold = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 40
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_black_gold"
+			custom_effect_tooltip = TAI_dbf_cure_black_gold_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_black_gold_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_isolation = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 35
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_isolation } check_variable = { treasury > 2 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_isolation"
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_isolation_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_isolation_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_conscription = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 25
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_conscription } check_variable = { treasury > 3 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_conscription"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_conscription_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_conscription_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_imbalance = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 30
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_imbalance } check_variable = { treasury > 5 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_imbalance"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_imbalance_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_imbalance_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_hearts = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 30
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } check_variable = { treasury > 3 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_hearts"
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_hearts_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_hearts_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_pla_remnants = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 35
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } check_variable = { treasury > 2 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_pla_remnants"
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_pla_remnants_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_pla_remnants_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_transition = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 35
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_transition } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_transition } check_variable = { treasury > 4 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_transition"
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = TAI_dbf_cure_transition_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_transition_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_warlordism = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 45
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_warlordism"
+			custom_effect_tooltip = TAI_dbf_cure_warlordism_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_warlordism_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_cure_carpetbag = {
+		icon = GFX_decision_generic_colonial_administration
+		cost = 40
+		days_re_enable = 60
+		visible = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dbf_cure_carpetbag"
+			custom_effect_tooltip = TAI_dbf_cure_carpetbag_tt
+			hidden_effect = { set_temp_variable = { dbf_d = 0.45 } TAI_dbf_carpetbag_ease = yes force_update_dynamic_modifier = yes }
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dbf_mission_pla = {
+		icon = GFX_decision_generic_military
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 1095
+		activation = { has_country_flag = ROC_new_chi has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		available = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Mission TAI_dbf_mission_pla complete"
+			add_stability = 0.05
+			army_experience = 25
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Mission TAI_dbf_mission_pla timeout"
+			add_stability = -0.05
+			add_war_support = -0.03
+			set_temp_variable = { dbf_d = -0.5 }
+			TAI_dbf_pla_remnants_ease = yes
+		}
+	}
+	TAI_dbf_mission_black_gold = {
+		icon = GFX_decision_generic_police_action
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 730
+		activation = { has_country_flag = ROC_new_chi has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		available = { NOT = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Mission TAI_dbf_mission_black_gold complete"
+			add_political_power = 100
+			add_stability = 0.03
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Mission TAI_dbf_mission_black_gold timeout"
+			add_stability = -0.03
+			add_political_power = -50
+		}
+	}
+}
