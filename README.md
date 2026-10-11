@@ -2,6 +2,8 @@
 
 An alternative-history expansion for Millennium Dawn (Hearts of Iron IV): what if the Republic of China had really retaken the mainland after the war? 基于《千禧黎明》（Millennium Dawn）的亚洲架空扩展。它想回答一个问题：如果中华民国在战后真的「光复大陆」，亚洲的格局会怎样？
 
+**Steam 创意工坊 / Steam Workshop:** https://steamcommunity.com/sharedfiles/filedetails/?id=3817903608
+
 ## 主要内容 / Key features
 
 - **中华民国（台湾）两棵国策树**：光复前是以台湾为基地的「反攻大陆」路线（国光计划、三条统一路径、战时行动、光复南京与北平等）。光复神州后，国策树切换为建国路线：政治、经济、军事、外交四条主线，并包括光复后的行政重建与宪政时期。 / Two ROC (Taiwan) focus trees: a "Counterattack on the Mainland" path before the reconquest, then a nation-building path after it.
