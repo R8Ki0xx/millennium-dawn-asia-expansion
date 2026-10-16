@@ -1,0 +1,119 @@
+###########################################
+#  MD ROC Return events v3.4              #
+#  中共残余叛乱 / 第三次国共内战 / 中共复辟  #
+###########################################
+
+add_namespace = roc_return
+
+# 中共暴动（ROC 视角）
+country_event = {
+	id = roc_return.81
+	title = roc_return.81.t
+	desc = roc_return.81.d
+	picture = GFX_TAI_ev_81_PRC_mao_protest
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.81.a
+		log = "[GetDateText]: [This.GetName]: roc_return.81.a executed"
+		add_war_support = 0.10
+		add_stability = -0.05
+	}
+}
+
+# 第三次国共内战（新闻）
+news_event = {
+	id = roc_return.82
+	title = roc_return.82.t
+	desc = roc_return.82.d
+	picture = GFX_TAI_ev_82_battle_of_beijing2
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.82.a
+		log = "[GetDateText]: [This.GetName]: roc_return.82.a executed"
+	}
+}
+
+# 东北起义（PRC 视角）
+country_event = {
+	id = roc_return.83
+	title = roc_return.83.t
+	desc = roc_return.83.d
+	picture = GFX_TAI_ev_83_PRC_national_militia
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.83.a
+		log = "[GetDateText]: [This.GetName]: roc_return.83.a executed"
+		add_political_power = 50
+	}
+}
+
+# 人民共和国的胜利（PRC）
+country_event = {
+	id = roc_return.85
+	title = roc_return.85.t
+	desc = roc_return.85.d
+	picture = GFX_TAI_ev_85_PRC_pla_soldiers_parade_cool
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = CCP_restored }
+	}
+
+	option = {
+		name = roc_return.85.a
+		log = "[GetDateText]: [This.GetName]: roc_return.85.a executed"
+		custom_effect_tooltip = PRC_victory_effect_tt
+		hidden_effect = { PRC_victory_effect = yes }
+	}
+}
+
+# 新中国再度诞生（新闻）
+news_event = {
+	id = roc_return.86
+	title = roc_return.86.t
+	desc = roc_return.86.d
+	picture = GFX_TAI_ev_86_PRC_nat_victory_news
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.86.a
+		log = "[GetDateText]: [This.GetName]: roc_return.86.a executed"
+	}
+}
+
+# 国府再次迁台（TAI）
+country_event = {
+	id = roc_return.87
+	title = roc_return.87.t
+	desc = roc_return.87.d
+	picture = GFX_TAI_roc
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.87.a
+		log = "[GetDateText]: [This.GetName]: roc_return.87.a executed"
+		add_war_support = 0.05
+		add_stability = -0.05
+	}
+}
+
+# 叛乱被镇压（ROC）
+country_event = {
+	id = roc_return.88
+	title = roc_return.88.t
+	desc = roc_return.88.d
+	picture = GFX_TAI_taiwan
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.88.a
+		log = "[GetDateText]: [This.GetName]: roc_return.88.a executed"
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}

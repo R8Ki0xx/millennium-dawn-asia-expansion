@@ -62,6 +62,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		prerequisite = { focus = TAI_new_republic_era }
+		mutually_exclusive = { focus = TAI_relocate_capital_beijing }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			owns_state = 536
@@ -85,6 +86,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 		prerequisite = { focus = TAI_new_republic_era }
+		mutually_exclusive = { focus = TAI_return_capital_nanjing }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			owns_state = 547
@@ -181,7 +183,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		cost = 7
-		prerequisite = { focus = TAI_return_capital_nanjing }
+		prerequisite = { focus = TAI_return_capital_nanjing focus = TAI_relocate_capital_beijing }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_restore_provinces"

@@ -1,0 +1,427 @@
+###########################
+#  MD ROC Return events   #
+###########################
+
+add_namespace = roc_return
+
+# 泛蓝联盟组阁
+country_event = {
+	id = roc_return.1
+	title = roc_return.1.t
+	desc = roc_return.1.d
+	picture = GFX_TAI_roc
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.1.a
+		log = "[GetDateText]: [This.GetName]: roc_return.1.a executed"
+		set_temp_variable = { rul_party_temp = 1 }
+		set_temp_variable = { change_leader_temp = 1 }
+		change_ruling_party_effect = yes
+		add_stability = -0.03
+	}
+}
+
+# 美国：台北寻求默许
+country_event = {
+	id = roc_return.2
+	title = roc_return.2.t
+	desc = roc_return.2.d
+	picture = GFX_USA_event_cia
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.2.a
+		log = "[GetDateText]: [This.GetName]: roc_return.2.a executed"
+		FROM = {
+			add_ideas = TAI_us_backing
+			set_country_flag = TAI_us_backing_flag
+			country_event = { id = roc_return.3 days = 1 }
+		}
+		ai_chance = {
+			base = 40
+			modifier = { factor = 2 has_opinion = { target = CHI value < 0 } }
+			modifier = { factor = 2 has_war_with = CHI }
+			modifier = { factor = 0.5 has_opinion = { target = CHI value > 25 } }
+		}
+	}
+	option = {
+		name = roc_return.2.b
+		log = "[GetDateText]: [This.GetName]: roc_return.2.b executed"
+		FROM = { country_event = { id = roc_return.4 days = 1 } }
+		ai_chance = { base = 60 }
+	}
+}
+
+# 美方默许
+country_event = {
+	id = roc_return.3
+	title = roc_return.3.t
+	desc = roc_return.3.d
+	picture = GFX_CHI_event_american_chinese_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.3.a
+		log = "[GetDateText]: [This.GetName]: roc_return.3.a executed"
+		effect_tooltip = { add_ideas = TAI_us_backing }
+		custom_effect_tooltip = TAI_unlock_us_intervention_tt
+		add_war_support = 0.05
+	}
+}
+
+# 美方反对
+country_event = {
+	id = roc_return.4
+	title = roc_return.4.t
+	desc = roc_return.4.d
+	picture = GFX_USA_event_congress
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.4.a
+		log = "[GetDateText]: [This.GetName]: roc_return.4.a executed"
+		add_war_support = -0.05
+		add_stability = -0.02
+	}
+}
+
+# 北京：中华民国提出和平统一方案
+country_event = {
+	id = roc_return.5
+	title = roc_return.5.t
+	desc = roc_return.5.d
+	picture = GFX_CHI_event_china_taiwan_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.5.a
+		log = "[GetDateText]: [This.GetName]: roc_return.5.a executed"
+		custom_effect_tooltip = TAI_peace_accept_tt
+		FROM = { country_event = { id = roc_return.6 } }
+		FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+		ai_chance = {
+			base = 2
+			modifier = { factor = 25 has_government = democratic }
+			modifier = { factor = 5 has_stability < 0.25 }
+			modifier = { factor = 3 has_civil_war = yes }
+			modifier = { factor = 5 surrender_progress > 0.3 }
+		}
+	}
+	option = {
+		name = roc_return.5.b
+		log = "[GetDateText]: [This.GetName]: roc_return.5.b executed"
+		FROM = {
+			set_country_flag = TAI_peace_talks_refused
+			country_event = { id = roc_return.7 days = 1 }
+		}
+		add_stability = 0.02
+		ai_chance = { base = 98 }
+	}
+}
+
+# 北京接受统一
+country_event = {
+	id = roc_return.6
+	title = roc_return.6.t
+	desc = roc_return.6.d
+	picture = GFX_TAI_roc
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.6.a
+		log = "[GetDateText]: [This.GetName]: roc_return.6.a executed"
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+
+# 北京拒绝统一
+country_event = {
+	id = roc_return.7
+	title = roc_return.7.t
+	desc = roc_return.7.d
+	picture = GFX_CHI_event_taiwan_flag_down
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.7.a
+		log = "[GetDateText]: [This.GetName]: roc_return.7.a executed"
+		add_war_support = 0.05
+		add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+		clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+	}
+}
+
+# 大陆起义爆发
+country_event = {
+	id = roc_return.8
+	title = roc_return.8.t
+	desc = roc_return.8.d
+	picture = GFX_TAI_ev_8_PRC_collapse2
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.8.a
+		log = "[GetDateText]: [This.GetName]: roc_return.8.a executed"
+		TAI_volunteer_support = yes
+		TAI_spawn_volunteers = yes
+		TAI_spawn_volunteers = yes
+		add_to_variable = { TAI_volunteer_count = 2 }
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = roc_return.8.b
+		log = "[GetDateText]: [This.GetName]: roc_return.8.b executed"
+		TAI_volunteer_support = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.8.c
+		log = "[GetDateText]: [This.GetName]: roc_return.8.c executed"
+		TAI_volunteer_support = yes
+		TAI_spawn_volunteers = yes
+		add_to_variable = { TAI_volunteer_count = 1 }
+		TAI_armed_intervention = yes
+		ai_chance = { base = 10 }
+	}
+}
+
+# 光复南京（新闻）
+news_event = {
+	id = roc_return.9
+	title = roc_return.9.t
+	desc = roc_return.9.d
+	picture = GFX_TAI_ev_9_taiwanwarlose
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.9.a
+		log = "[GetDateText]: [This.GetName]: roc_return.9.a executed"
+	}
+}
+
+# 乌兰巴托：外蒙古问题
+country_event = {
+	id = roc_return.10
+	title = roc_return.10.t
+	desc = roc_return.10.d
+	picture = GFX_CHI_outer_mongolia_sar
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.10.a
+		log = "[GetDateText]: [This.GetName]: roc_return.10.a executed"
+		FROM = { country_event = { id = roc_return.12 } }
+		FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+		ai_chance = {
+			base = 5
+			modifier = { factor = 4 has_opinion = { target = FROM value > 50 } }
+			modifier = { factor = 3 has_stability < 0.30 }
+		}
+	}
+	option = {
+		name = roc_return.10.b
+		log = "[GetDateText]: [This.GetName]: roc_return.10.b executed"
+		FROM = {
+			set_country_flag = TAI_mongolia_refused
+			country_event = { id = roc_return.11 days = 1 }
+		}
+		ai_chance = { base = 95 }
+	}
+}
+
+# 外蒙拒绝
+country_event = {
+	id = roc_return.11
+	title = roc_return.11.t
+	desc = roc_return.11.d
+	picture = GFX_CHI_outer_mongolia_sar
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.11.a
+		log = "[GetDateText]: [This.GetName]: roc_return.11.a executed"
+		custom_effect_tooltip = TAI_mongolia_refused_tt
+	}
+}
+
+# 外蒙接受
+country_event = {
+	id = roc_return.12
+	title = roc_return.12.t
+	desc = roc_return.12.d
+	picture = GFX_CHI_outer_mongolia_sar
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.12.a
+		log = "[GetDateText]: [This.GetName]: roc_return.12.a executed"
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+
+# 港澳：回归中华民国？
+country_event = {
+	id = roc_return.13
+	title = roc_return.13.t
+	desc = roc_return.13.d
+	picture = GFX_TAI_ev_13_Taiwan_Flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.13.a
+		log = "[GetDateText]: [This.GetName]: roc_return.13.a executed"
+		FROM = { country_event = { id = roc_return.20 } }
+		FROM = { annex_country = { target = ROOT transfer_troops = yes } }
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = roc_return.13.b
+		log = "[GetDateText]: [This.GetName]: roc_return.13.b executed"
+		FROM = { country_event = { id = roc_return.21 days = 1 } }
+		ai_chance = { base = 20 }
+	}
+}
+
+# 光复神州（新闻）
+news_event = {
+	id = roc_return.14
+	title = roc_return.14.t
+	desc = roc_return.14.d
+	picture = GFX_TAI_roc_flag
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.14.a
+		log = "[GetDateText]: [This.GetName]: roc_return.14.a executed"
+	}
+}
+
+# 重返联合国（新闻）
+news_event = {
+	id = roc_return.15
+	title = roc_return.15.t
+	desc = roc_return.15.d
+	picture = GFX_UN_event_global_1
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.15.a
+		log = "[GetDateText]: [This.GetName]: roc_return.15.a executed"
+	}
+}
+
+# 秋海棠叶（新闻）
+news_event = {
+	id = roc_return.16
+	title = roc_return.16.t
+	desc = roc_return.16.d
+	picture = GFX_TAI_roc_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.16.a
+		log = "[GetDateText]: [This.GetName]: roc_return.16.a executed"
+	}
+}
+
+# 美国：中华民国请求参战
+country_event = {
+	id = roc_return.17
+	title = roc_return.17.t
+	desc = roc_return.17.d
+	picture = GFX_CHI_event_american_chinese_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.17.a
+		log = "[GetDateText]: [This.GetName]: roc_return.17.a executed"
+		add_to_war = {
+			targeted_alliance = FROM
+			enemy = CHI
+			hostility_reason = asked_to_join
+		}
+		FROM = { country_event = { id = roc_return.18 days = 1 } }
+		ai_chance = {
+			base = 15
+			modifier = { factor = 2 has_opinion = { target = CHI value < -25 } }
+			modifier = { factor = 2 CHI = { surrender_progress > 0.4 } }
+		}
+	}
+	option = {
+		name = roc_return.17.b
+		log = "[GetDateText]: [This.GetName]: roc_return.17.b executed"
+		FROM = { country_event = { id = roc_return.19 days = 1 } }
+		ai_chance = { base = 85 }
+	}
+}
+
+# 美国参战
+country_event = {
+	id = roc_return.18
+	title = roc_return.18.t
+	desc = roc_return.18.d
+	picture = GFX_battleship_event_USA
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.18.a
+		log = "[GetDateText]: [This.GetName]: roc_return.18.a executed"
+		add_war_support = 0.10
+	}
+}
+
+# 美国拒绝参战
+country_event = {
+	id = roc_return.19
+	title = roc_return.19.t
+	desc = roc_return.19.d
+	picture = GFX_USA_event_congress
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.19.a
+		log = "[GetDateText]: [This.GetName]: roc_return.19.a executed"
+		add_war_support = -0.03
+	}
+}
+
+# 港澳接受回归
+country_event = {
+	id = roc_return.20
+	title = roc_return.20.t
+	desc = roc_return.20.d
+	picture = GFX_event_CHI_flags
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.20.a
+		log = "[GetDateText]: [This.GetName]: roc_return.20.a executed"
+		add_stability = 0.02
+	}
+}
+
+# 港澳拒绝回归
+country_event = {
+	id = roc_return.21
+	title = roc_return.21.t
+	desc = roc_return.21.d
+	picture = GFX_HKG_protest_event_balance
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.21.a
+		log = "[GetDateText]: [This.GetName]: roc_return.21.a executed (peaceful)"
+		add_political_power = -25
+	}
+	option = {
+		name = roc_return.21.b
+		log = "[GetDateText]: [This.GetName]: roc_return.21.b executed (wargoal)"
+		create_wargoal = { type = annex_everything target = FROM }
+		add_war_support = -0.03
+	}
+}

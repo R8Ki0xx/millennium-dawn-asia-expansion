@@ -1,0 +1,7 @@
+# 东亚劳动力结构 —— values are maintained weekly by EA_labor_adjust (common/scripted_effects/TAI_roc_return_effects.txt)
+EA_labor_market_modifier = {
+	icon = GFX_idea_one_child_policy
+
+	total_workforce_modifier = EA_hidden_labor_var
+	agriculture_workers_modifier = EA_rural_labor_var
+}

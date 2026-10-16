@@ -1,0 +1,265 @@
+# MD ROC Return —— 光复神州后的标签切换
+#   1. 若中共仍有残余政权：CHI(中共) -> PRC（中华人民共和国残余政权）
+#   2. 复活 CHI 标签，复制 TAI 的全部经济、政治、科技、精神数据，清理旧中共内容
+#   3. 玩家控制权 TAI -> CHI，CHI 吞并 TAI（部队、将领随之转移）
+#   4. CHI 使用装饰标签 CHI_ROC（中华民国，TFR 式蓝色），载入光复后国策树
+# Scope: TAI
+
+ROC_tag_switch = {
+	set_global_flag = ROC_tag_switch_done
+	# v3.4 记录中共的国策，供日后复辟
+	CHI = { CCP_record_focuses = yes }
+	# v3.5 全国委员会
+	if = { limit = { CHI = { has_country_flag = CHI_ic_initialized } } set_global_flag = CCP_had_ic }
+	# /v3.5
+	# /v3.4
+
+	# v3.10 sar record：残余中共吞并旧 CHI 后港澳会独立，先记下它们原是特区
+	if = { limit = { country_exists = HKG HKG = { is_subject_of = CHI } } set_global_flag = TAI_hkg_was_sar }
+	if = { limit = { country_exists = MAC MAC = { is_subject_of = CHI } } set_global_flag = TAI_mac_was_sar }
+	### 1. 中共残余政权 -> PRC
+	if = {
+		limit = { country_exists = CHI }
+		CHI = {
+			every_unit_leader = { set_nationality = PRC }
+			random_owned_state = {
+				PRC = { transfer_state = PREV }
+			}
+			PRC = {
+				ingame_startup_nations_effect = yes
+				set_variable = { treasury = CHI.treasury }
+				set_variable = { debt = CHI.debt }
+				set_variable = { corporate_tax_rate = CHI.corporate_tax_rate }
+				set_variable = { population_tax_rate = CHI.population_tax_rate }
+				set_variable = { gdp_per_capita = CHI.gdp_per_capita }
+				inherit_technology = CHI
+				# v3.4 继承中共的精神、法律与政党支持度
+				PRC_sync_ideas_from_CHI = yes
+				for_loop_effect = {
+					end = CHI.party_pop_array^num
+					value = v
+					set_variable = { party_pop_array^v = CHI.party_pop_array^v }
+				}
+				add_up_party_totals = yes
+				set_party_positions = yes
+				# /v3.4
+																					}
+		}
+		# v3.18 antarctica：先记下旧 CHI 的科考站，免得被千禧的 on_annex 拆掉
+		# v3.19 record：中共的影响力与核立场
+		CHI = { TAI_roc_v319_record_ccp = yes }
+		CHI = { TAI_antarctica_prepare = yes }
+		PRC = {
+			annex_country = { target = CHI transfer_troops = yes }
+			set_politics = { ruling_party = communism elections_allowed = no }
+			set_popularities = { communism = 70 democratic = 10 neutrality = 15 nationalist = 5 fascism = 0 }
+			if = { limit = { NOT = { has_idea = lacks_international_recognition } } add_ideas = lacks_international_recognition }
+			set_country_flag = PRC_ccp_rump
+			# v3.4 过渡国策
+			PRC_setup_rump = yes
+			# /v3.4
+															set_cosmetic_tag = PRC_CCP
+			if = { limit = { NOT = { has_dynamic_modifier = { modifier = energy_dynamic_modifier } } } add_dynamic_modifier = { modifier = energy_dynamic_modifier } }
+			ingame_update_setup = yes
+			force_update_dynamic_modifier = yes
+			country_event = { id = roc_return.49 days = 1 }
+			# v3.12 prc power ranking
+			if = { limit = { NOT = { has_idea = super_power } NOT = { has_idea = great_power } NOT = { has_idea = large_power } NOT = { has_idea = regional_power } NOT = { has_idea = minor_power } NOT = { has_idea = non_power } } add_country_to_power_ranking = yes }
+		}
+	}
+
+	### 2. 复活 CHI 作为中华民国
+	CHI = { transfer_state = 536 }
+	CHI = {
+		ROC_setup_new_chi = yes
+		change_tag_from = TAI
+	}
+	TAI = { every_unit_leader = { set_nationality = CHI } }
+
+	### 3. CHI 吞并 TAI（最后一步，之后 TAI 不再存在）
+	# v3.18 antarctica
+	# v3.19 record：台湾在各国的影响力
+	TAI = { TAI_roc_v319_record_influence = yes }
+	TAI = { TAI_antarctica_prepare = yes }
+	# v3.21 stockpile：台湾的装备库存整批转给新 CHI
+	TAI = { send_equipment_fraction = { target = CHI value = 1 } }
+	CHI = {
+		annex_country = { target = TAI transfer_troops = yes }
+		set_capital = { state = 536 }
+		# v3.14 palace
+		TAI_roc_palace_unveil = yes
+		# v3.15 five yuan
+		TAI_gov_init = yes
+		# v3.18 antarctica
+		TAI_antarctica_takeover = yes
+		# v3.19 takeover
+		TAI_roc_v319_takeover = yes
+		# v3.21 switch
+		TAI_roc_v321_takeover = yes
+		ingame_update_setup = yes
+		force_update_dynamic_modifier = yes
+		load_focus_tree = { tree = TAI_roc_mainland_focus keep_completed = no }
+		# v3.4 中共残余势力
+		TAI_insurgency_init = yes
+		# v3.5 国民大会
+		TAI_na_init = yes
+		# v3.9 NKO refresh / 港澳
+		TAI_transfer_sars = yes
+		# v3.12 chi power ranking
+		add_country_to_power_ranking = yes
+	}
+	if = { limit = { country_exists = NKO } NKO = { mark_focus_tree_layout_dirty = yes } }
+	CHI = {
+		# /v3.5
+			# /v3.4
+								country_event = { id = roc_return.40 days = 1 }
+		country_event = { id = roc_return.41 days = 20 }
+		country_event = { id = roc_return.42 days = 45 }
+		country_event = { id = roc_return.43 days = 75 }
+		country_event = { id = roc_return.44 days = 110 }
+	}
+}
+
+# Scope: the revived CHI (TAI still exists)
+ROC_setup_new_chi = {
+	### 清理旧中共内容
+	ROC_clear_ccp_dynamic_modifiers = yes
+	set_country_flag = CHI_local_debt_resolved
+	clr_country_flag = CHI_ic_initialized
+	ROC_clear_ccp_missions = yes
+	# v3.10 bop / 港澳决议
+	if = { limit = { has_power_balance = { id = CHI_factional_balance } } remove_power_balance = { id = CHI_factional_balance } }
+	set_power_balance = { id = TAI_roc_faction_balance left_side = TAI_roc_old_guard right_side = TAI_roc_newcomers set_value = -0.4 }
+	set_country_flag = TAI_hk_macau_unlocked
+	clear_variable = CHI_korea_peninsula_tension
+	set_country_flag = ROC_new_chi
+	set_cosmetic_tag = CHI_ROC
+
+	### 精神与法律
+	ROC_sync_ideas_from_TAI = yes
+	TAI_end_ccp_nko_aid = yes
+
+	### 三军精神与 debuff（v3.3）
+	ROC_copy_military_from_TAI = yes
+
+	### 科技
+	inherit_technology = TAI
+
+	### 经济变量
+	set_variable = { treasury = TAI.treasury }
+	set_variable = { debt = TAI.debt }
+	set_variable = { int_investments = TAI.int_investments }
+	set_variable = { corporate_tax_rate = TAI.corporate_tax_rate }
+	set_variable = { population_tax_rate = TAI.population_tax_rate }
+	set_variable = { gdp_per_capita = TAI.gdp_per_capita }
+	set_variable = { gdpc_converging_var = TAI.gdpc_converging_var }
+	set_variable = { currency_strength = TAI.currency_strength }
+	set_variable = { inflation_rate_var = TAI.inflation_rate_var }
+	set_variable = { cb_policy_rate = TAI.cb_policy_rate }
+	set_variable = { EA_hidden_labor_var = TAI.EA_hidden_labor_var }
+	set_variable = { EA_rural_labor_var = TAI.EA_rural_labor_var }
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = EA_labor_market_modifier } } }
+		add_dynamic_modifier = { modifier = EA_labor_market_modifier }
+	}
+
+	### 影响力
+	set_variable = { domestic_influence_amount = TAI.domestic_influence_amount }
+	clear_array = influence_array
+	clear_array = influence_array_val
+	for_loop_effect = {
+		end = TAI.influence_array^num
+		value = v
+		add_to_array = { influence_array = TAI.influence_array^v }
+		add_to_array = { influence_array_val = TAI.influence_array_val^v }
+	}
+	recalculate_influence = yes
+
+	### 内部派系
+	set_temp_variable = { nation_to_copy_from = TAI.id }
+	copy_internal_factions = yes
+	set_temp_variable = { nation_to_copy_from = TAI.id }
+	copy_subideolgy_leader_throughput = yes
+
+	### 政治
+	if = { limit = { TAI = { has_government = democratic } } set_politics = { ruling_party = democratic elections_allowed = yes } }
+	else_if = { limit = { TAI = { has_government = neutrality } } set_politics = { ruling_party = neutrality elections_allowed = yes } }
+	else_if = { limit = { TAI = { has_government = nationalist } } set_politics = { ruling_party = nationalist elections_allowed = no } }
+	else_if = { limit = { TAI = { has_government = fascism } } set_politics = { ruling_party = fascism elections_allowed = no } }
+	else = { set_politics = { ruling_party = communism elections_allowed = no } }
+	for_loop_effect = {
+		end = TAI.party_pop_array^num
+		value = v
+		set_variable = { party_pop_array^v = TAI.party_pop_array^v }
+	}
+	# v3.16 popularities：千禧每月按引擎的意识形态支持度缩放各党，所以引擎支持度也要照台湾复制，
+	#   否则中共时期的共产主义支持度会全部落到农工党（槽位 5）头上（照千禧 replicate_configure_politics 的写法）
+	set_temp_variable = { roc_pop_dem = TAI.party_popularity@democratic }
+	multiply_temp_variable = { roc_pop_dem = 100 }
+	set_temp_variable = { roc_pop_com = TAI.party_popularity@communism }
+	multiply_temp_variable = { roc_pop_com = 100 }
+	set_temp_variable = { roc_pop_neu = TAI.party_popularity@neutrality }
+	multiply_temp_variable = { roc_pop_neu = 100 }
+	set_temp_variable = { roc_pop_fas = TAI.party_popularity@fascism }
+	multiply_temp_variable = { roc_pop_fas = 100 }
+	set_temp_variable = { roc_pop_nat = TAI.party_popularity@nationalist }
+	multiply_temp_variable = { roc_pop_nat = 100 }
+	set_popularities = { democratic = roc_pop_dem communism = roc_pop_com neutrality = roc_pop_neu fascism = roc_pop_fas nationalist = roc_pop_nat }
+	add_popularity = { ideology = communism popularity = 0.03 }
+	# v3.11 kmt left：民革（国民党左派）与劳动党在大陆工农中的基本盘
+	add_to_variable = { party_pop_array^3 = 0.12 }
+	add_to_variable = { party_pop_array^5 = 0.03 }
+	# v3.19 parties：政党合法化、共产党 35%
+	TAI_roc_legalize_parties = yes
+	TAI_roc_ccp_35 = yes
+	add_up_party_totals = yes
+	set_party_positions = yes
+	# 领导人轮替计数沿用台湾时期（set_leader_ROC 据此选出同一位国民党/亲民党领导人）
+	set_variable = { conservatism_leader = TAI.conservatism_leader }
+	set_variable = { Conservative_leader = TAI.Conservative_leader }
+	set_variable = { Neutral_conservatism_leader = TAI.Neutral_conservatism_leader }
+	set_variable = { Nat_Autocracy_leader = TAI.Nat_Autocracy_leader }
+	set_temp_variable = { rul_party_temp = TAI.ruling_party }
+	set_temp_variable = { change_leader_temp = 1 }
+	change_ruling_party_effect = yes
+
+	### 政治点数 / 稳定 / 战争支持
+	set_temp_variable = { roc_diff = TAI.political_power }
+	subtract_from_temp_variable = { roc_diff = political_power }
+	add_political_power = roc_diff
+	set_temp_variable = { roc_diff = TAI.has_stability }
+	subtract_from_temp_variable = { roc_diff = has_stability }
+	add_stability = roc_diff
+	set_temp_variable = { roc_diff = TAI.has_war_support }
+	subtract_from_temp_variable = { roc_diff = has_war_support }
+	add_war_support = roc_diff
+
+	### 剧情旗标
+	set_country_flag = TAI_mainland_restored
+	if = { limit = { TAI = { has_country_flag = TAI_pan_blue_path } } set_country_flag = TAI_pan_blue_path }
+	if = { limit = { TAI = { has_country_flag = TAI_us_backing_flag } } set_country_flag = TAI_us_backing_flag }
+}
+
+
+# v3.8 missions
+# 中共的全国代表大会倒计时等任务挂在 CHI 标签上，光复后必须移除，否则仍在顶栏倒计时并弹出“选择委员会成员”事件
+ROC_clear_ccp_missions = {
+	remove_mission = CHI_current_congress_mission
+	remove_mission = CHI_16_national_congress_mission
+	remove_mission = CHI_17_national_congress_mission
+	remove_mission = CHI_18_national_congress_mission
+	remove_mission = CHI_19_national_congress_mission
+	remove_mission = CHI_20_national_congress_mission
+	remove_mission = CHI_21_national_congress_mission
+	remove_mission = CHI_yangtze_delta_integration_mission
+	remove_mission = CHI_eleventh_five_year_plan_mission
+	clr_country_flag = CHI_national_congress_started
+	clr_country_flag = CHI_16_nc_needs_to_be_started
+	clr_country_flag = CHI_17_nc_needs_to_be_started
+	clr_country_flag = CHI_18_nc_needs_to_be_started
+	clr_country_flag = CHI_19_nc_needs_to_be_started
+	clr_country_flag = CHI_20_nc_needs_to_be_started
+	clr_country_flag = CHI_21_nc_needs_to_be_started
+	set_country_flag = ROC_ccp_missions_cleared
+}
+# /v3.8 missions

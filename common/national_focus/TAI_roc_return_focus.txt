@@ -808,6 +808,13 @@ focus_tree = {
 			set_temp_variable = { party_popularity_increase = 0.08 }
 			set_temp_variable = { temp_outlook_increase = 0.08 }
 			change_relative_party_popularity = yes
+			# v3.33.1 亲西方的其他政党（0、2 民进党、3）全部并入国民党（1）
+			custom_effect_tooltip = TAI_kmt_absorbs_western_tt
+			hidden_effect = {
+				set_temp_variable = { party_index = 0 } set_temp_variable = { target_party_index = 1 } set_temp_variable = { party_popularity_fraction = 1 } move_party_popularity = yes
+				set_temp_variable = { party_index = 2 } set_temp_variable = { target_party_index = 1 } set_temp_variable = { party_popularity_fraction = 1 } move_party_popularity = yes
+				set_temp_variable = { party_index = 3 } set_temp_variable = { target_party_index = 1 } set_temp_variable = { party_popularity_fraction = 1 } move_party_popularity = yes
+			}
 			if = { limit = { NOT = { check_variable = { ruling_party = 1 } } }
 				country_event = { id = roc_return.1 days = 3 }
 			}

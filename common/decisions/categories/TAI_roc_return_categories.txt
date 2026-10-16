@@ -1,0 +1,51 @@
+TAI_mainland_work_category = {
+	icon = GFX_decision_category_taiwan
+	priority = 650
+	allowed = { original_tag = TAI }
+	visible = {
+		has_country_flag = TAI_mainland_decisions_unlocked
+		NOT = { has_country_flag = TAI_mainland_restored }
+	}
+}
+
+# v3.3
+TAI_military_readiness_category = {
+	icon = GFX_decision_category_military_operation
+	priority = 640
+	allowed = { original_tag = TAI }
+	visible = { NOT = { has_country_flag = TAI_mainland_restored } }
+}
+
+TAI_reconstruction_category = {
+	icon = GFX_decision_category_taiwan
+	priority = 640
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi }
+}
+
+# v3.4
+TAI_insurgency_category = {
+	icon = GFX_decision_category_generic_communism
+	priority = 660
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi }
+	scripted_gui = TAI_insurgency_map_GUI
+}
+# /v3.4
+# v3.10 categories
+TAI_national_assembly_category = {
+	icon = GFX_decision_TAI_roc_flag
+	priority = 2000
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi }
+	visible_when_empty = yes
+	scripted_gui = TAI_na_GUI
+}
+TAI_roc_bop_category = {
+	icon = GFX_decision_category_TAI_national_assembly
+	priority = 1900
+	allowed = { OR = { original_tag = CHI original_tag = TAI } }
+	visible = { has_country_flag = ROC_new_chi }
+	visible_when_empty = yes
+}
+# /v3.10 categories

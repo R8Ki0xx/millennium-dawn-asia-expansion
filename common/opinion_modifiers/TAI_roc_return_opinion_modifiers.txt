@@ -1,0 +1,89 @@
+opinion_modifiers = {
+	TAI_cross_strait_thaw = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_southbound_partner = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_shared_values = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_arms_customer = {
+		value = 10
+		decay = 0.05
+	}
+	TAI_allied_aid = {
+		value = 20
+		decay = 0.05
+	}
+	TAI_overseas_chinese_ties = {
+		value = 10
+		decay = 0.05
+	}
+	TAI_new_china_respect = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_nuclear_concern = {
+		value = -15
+		decay = 0.05
+	}
+	TAI_nuclear_free_respect = {
+		value = 25
+		decay = 0.05
+	}
+	TAI_us_alliance = {
+		value = 30
+		decay = 0.05
+	}
+	TAI_russia_partner = {
+		value = 20
+		decay = 0.05
+	}
+	TAI_japan_reconciliation = {
+		value = 25
+		decay = 0.05
+	}
+	TAI_asean_partner = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_korea_support = {
+		value = 20
+		decay = 0.05
+	}
+	TAI_eu_partner = {
+		value = 15
+		decay = 0.05
+	}
+	TAI_africa_aid = {
+		value = 20
+		decay = 0.05
+	}
+	TAI_nko_detente = {
+		value = 25
+		decay = 0.05
+	}
+	TAI_nko_hostile = {
+		value = -50
+		decay = 0.02
+	}
+	TAI_rok_ally = {
+		value = 40
+		decay = 0.02
+	}
+	TAI_sar_crackdown = {
+		value = -25
+		decay = 1
+	}
+	TAI_diplo_partner = {
+		value = 20
+	}
+	TAI_diplo_rival = {
+		value = -25
+		decay = 1
+	}
+}

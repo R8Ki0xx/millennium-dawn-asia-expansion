@@ -1,0 +1,786 @@
+# 中华民国（TAI）国策树所用国家精神 —— MD ROC Return
+
+ideas = {
+	country = {
+		### ---------------- 经济 ----------------
+		TAI_silicon_island_idea = {
+			picture = digitalize_idea
+			modifier = {
+				research_speed_factor = 0.03
+				local_resources_microchips_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_silicon_shield_idea = {
+			picture = roc21_microchip_spirit_063b4ed4
+			modifier = {
+				research_speed_factor = 0.05
+				local_resources_microchips_factor = 0.10
+				stability_factor = 0.03
+				trade_opinion_factor = 0.10
+			}
+		}
+		TAI_ten_new_constructions_idea = {
+			picture = construction
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		TAI_financial_reform_idea = {
+			picture = roc21_generic_banking_reform_b85c3a71
+			modifier = {
+				tax_gain_multiplier_modifier = 0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_three_links_idea = {
+			picture = roc21_prc_trade_exploitation_d49fbb18
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_go_south_idea = {
+			picture = production_bonus
+			modifier = {
+				trade_opinion_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}
+
+		### ---------------- 政治 ----------------
+		TAI_roc_orthodoxy = {
+			picture = roc21_chi_republic_of_china_navy_6c1bafa8
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.10
+				war_support_factor = 0.05
+				communism_drift = -0.03
+			}
+		}
+		TAI_roc_orthodoxy_2 = {
+			picture = roc21_chi_chinese_unity_8c9fbd45
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.15
+				war_support_factor = 0.10
+				communism_drift = -0.05
+				conscription_factor = 0.05
+			}
+		}
+		TAI_taiwan_identity = {
+			picture = CHI_taiwanese_collaboration
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.05
+				war_support_factor = 0.05
+				democratic_drift = 0.03
+			}
+		}
+		TAI_porcupine_idea = {
+			picture = roc21_jap_defense_of_taiwan_93baaac4
+			modifier = {
+				army_defence_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		TAI_formosa_resilience_idea = {
+			picture = Father_land_def
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.08
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_pragmatic_diplomacy_idea = {
+			picture = roc21_chi_usa_treaty_a66c648c
+			modifier = {
+				opinion_gain_monthly_factor = 0.15
+				trade_opinion_factor = 0.05
+			}
+		}
+		TAI_international_space_idea = {
+			picture = roc21_united_nations_blue_c556a2aa
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				trade_opinion_factor = 0.10
+				political_power_gain = 0.05
+			}
+		}
+
+		### ---------------- 国军 ----------------
+		TAI_han_kuang_idea = {
+			picture = roc21_training_law_military_academ_128620b3
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army = 0.10
+			}
+		}
+		TAI_reserve_mobilization_idea = {
+			picture = roc21_reserve_divisions_02501730
+			modifier = {
+				conscription_factor = 0.15
+				training_time_factor = -0.10
+			}
+		}
+		TAI_whampoa_spirit_idea = {
+			picture = army_war_college
+			modifier = {
+				army_morale_factor = 0.05
+				army_leader_start_level = 1
+			}
+		}
+		TAI_joint_operations_idea = {
+			picture = roc21_eng_joint_air_training_schem_5d0aa6e9
+			modifier = {
+				army_attack_factor = 0.05
+				navy_org_factor = 0.05
+				naval_invasion_capacity = 4
+			}
+		}
+
+		### ---------------- 反攻大陆 ----------------
+		TAI_counteroffensive_preparation = {
+			picture = CHI_decisive_battle
+			modifier = {
+				army_org_factor = 0.05
+				naval_invasion_prep_speed = 0.25
+				war_support_factor = 0.05
+			}
+		}
+		TAI_counteroffensive = {
+			picture = CHI_decisive_battle
+			modifier = {
+				war_support_factor = 0.15
+				army_morale_factor = 0.10
+				amphibious_invasion = 0.25
+				naval_invasion_prep_speed = 0.25
+				experience_gain_army = 0.10
+			}
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.10
+			}
+		}
+		TAI_landing_operations = {
+			picture = CHI_republic_of_china_navy
+			modifier = {
+				naval_invasion_capacity = 10
+				amphibious_invasion = 0.50
+				naval_invasion_prep_speed = 0.50
+			}
+		}
+		TAI_us_backing = {
+			picture = CHI_lend_lease_american
+			modifier = {
+				research_speed_factor = 0.03
+				war_support_factor = 0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		### ---------------- 光复之后 ----------------
+		TAI_mainland_integration_1 = {
+			picture = roc21_prc_50s_economic_ruin_caused_95c815a9
+			modifier = {
+				stability_factor = -0.20
+				political_power_gain = -0.30
+				required_garrison_factor = 0.30
+				resistance_growth = 0.25
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+		TAI_mainland_integration_2 = {
+			picture = roc21_usa_american_reconstruction_f5d6a70e
+			modifier = {
+				stability_factor = -0.12
+				political_power_gain = -0.15
+				required_garrison_factor = 0.15
+				resistance_growth = 0.10
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		TAI_mainland_integration_3 = {
+			picture = roc21_sov_economic_integration_526cf66d
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+				resistance_growth = 0.05
+			}
+		}
+		TAI_military_government = {
+			picture = CHI_military_affairs_commission
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				compliance_growth = 0.15
+				resistance_growth = -0.20
+				political_power_gain = -0.10
+			}
+		}
+		TAI_political_tutelage = {
+			picture = CHI_the_political_tutelage_dm
+			modifier = {
+				stability_factor = 0.08
+				compliance_growth = 0.10
+				political_power_gain = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		TAI_constitutional_government = {
+			picture = roc21_usa_constitutional_protectio_60f43321
+			modifier = {
+				stability_factor = 0.12
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+				democratic_drift = 0.05
+			}
+		}
+		TAI_army_reorganization = {
+			picture = roc21_pla_army_remnants_idea_eed90954
+			modifier = {
+				conscription_factor = 0.10
+				army_org_factor = -0.05
+				experience_gain_army = 0.10
+				training_time_factor = -0.10
+			}
+		}
+		TAI_national_reconciliation_idea = {
+			picture = CHI_new_life_movement
+			modifier = {
+				stability_factor = 0.10
+				resistance_growth = -0.25
+				compliance_growth = 0.10
+			}
+		}
+		TAI_mainland_justice_idea = {
+			picture = CHI_blue_shirt_society
+			modifier = {
+				communism_drift = -0.10
+				stability_factor = -0.05
+				political_power_gain = 0.10
+				resistance_growth = -0.10
+			}
+		}
+		TAI_whampoa_reborn = {
+			picture = army_war_college
+			modifier = {
+				army_leader_start_level = 1
+				experience_gain_army = 0.10
+				army_org_factor = 0.05
+			}
+		}
+		TAI_economic_integration_idea = {
+			picture = roc21_prc_economic_stabilization_5f25609b
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				productivity_growth_modifier = 0.02
+				consumer_goods_factor = -0.03
+			}
+		}
+		TAI_land_reform_idea = {
+			picture = roc21_hun_land_reform_in_progress_a5bfdcad
+			modifier = {
+				agriculture_workers_modifier = 0.15
+				agricolture_productivity_modifier = 0.10
+				stability_factor = 0.05
+			}
+		}
+		TAI_privatization_idea = {
+			picture = roc21_chi_nationalize_industry_2_f_9f0649aa
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				corporate_tax_income_multiplier_modifier = 0.05
+				stability_factor = -0.03
+			}
+		}
+		TAI_regulated_capital_idea = {
+			picture = roc21_state_capitalism_fc68f45b
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.05
+			}
+		}
+		TAI_national_reconstruction_idea = {
+			picture = CHI_cradle_of_civilization
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		TAI_begonia_restored = {
+			picture = CHI_a_new_middle_kingdom
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+		TAI_world_for_all_idea = {
+			picture = roc21_chi_chinese_unity_8c9fbd45
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.20
+				research_speed_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+
+		### ---------------- v2 新增 ----------------
+		TAI_economic_miracle_idea = {
+			picture = roc21_prc_economic_stabilization_5f25609b
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+		TAI_mature_democracy_idea = {
+			picture = roc21_chi_democracy_time_32a245bf
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				democratic_drift = 0.02
+			}
+		}
+		TAI_pan_blue_unity_idea = {
+			picture = roc21_chi_support_kmt_315047c9
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TAI_culture_renaissance_idea = {
+			picture = CHI_new_culture_movement
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		TAI_war_economy_idea = {
+			picture = roc21_generic_war_economy_9c7fc957
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		TAI_mobilization_idea = {
+			picture = roc21_prc_volunteer_mobilization_ff57e80f
+			modifier = {
+				conscription_factor = 0.25
+				war_support_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.03
+			}
+		}
+		TAI_northern_expedition_idea = {
+			picture = roc21_kmt_expedition_f3d1655b
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		TAI_mobile_defense_idea = {
+			picture = roc21_mobile_warfare_7b66980f
+			modifier = {
+				army_defence_factor = 0.08
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		TAI_air_power_idea = {
+			picture = air_bonus
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_mission_efficiency = 0.05
+				experience_gain_air = 0.1
+			}
+		}
+		TAI_defense_autonomy_idea = {
+			picture = roc21_arms_industry_e5b1f39a
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		TAI_wto_member_idea = {
+			picture = roc21_prc_trade_union_law_fe7329b0
+			modifier = {
+				trade_opinion_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_de_facto_alliance_idea = {
+			picture = roc21_usa_taiwan_coop_39f6dfb3
+			modifier = {
+				research_speed_factor = 0.03
+				army_org_factor = 0.03
+				war_support_factor = 0.05
+			}
+		}
+		TAI_balanced_powers_idea = {
+			picture = roc21_lao_balance_vin_prc_icon_48b4b261
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_five_yuan_idea = {
+			picture = roc21_jap_transparent_government_ea1bc787
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+			}
+		}
+		TAI_open_society_idea = {
+			picture = roc21_prc_liberty_and_equality_ide_f493f682
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = -0.02
+				democratic_drift = 0.03
+			}
+		}
+		TAI_cultural_renaissance_idea = {
+			picture = CHI_cradle_of_civilization
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TAI_free_movement_idea = {
+			picture = CHI_neglected_countryside
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+		TAI_national_identity_idea = {
+			picture = roc21_generic_nationalists_unity_i_6c86b6d6
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.08
+				resistance_growth = -0.15
+			}
+		}
+		TAI_five_races_idea = {
+			picture = roc21_five_races_d0069e64
+			modifier = {
+				stability_factor = 0.05
+				resistance_growth = -0.2
+				compliance_growth = 0.1
+			}
+		}
+		TAI_world_factory_idea = {
+			picture = roc21_prc_world_factory_law_b031e1f2
+			modifier = {
+				industrial_capacity_factory = 0.08
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}
+		TAI_tax_reform_idea = {
+			picture = roc21_szc_pan_whc_tax_reform_25f941d3
+			modifier = {
+				tax_gain_multiplier_modifier = 0.05
+			}
+		}
+		TAI_strong_currency_idea = {
+			picture = roc21_inc_china_money_e084b21f
+			modifier = {
+				tax_gain_multiplier_modifier = 0.05
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.1
+			}
+		}
+		TAI_infrastructure_boom_idea = {
+			picture = construction
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		TAI_social_security_idea = {
+			picture = generic_healthcare
+			modifier = {
+				stability_factor = 0.08
+				monthly_population = 0.05
+			}
+		}
+		TAI_theater_command_idea = {
+			picture = roc21_high_command_headquarter_59484e02
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.1
+			}
+		}
+		TAI_professional_army_idea = {
+			picture = roc21_chi_roc_army_d9fec7b3
+			modifier = {
+				training_time_factor = -0.15
+				experience_gain_army = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		TAI_combined_arms_idea = {
+			picture = roc21_cor_combined_arms_74dd37dc
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+			}
+		}
+		TAI_nuclear_deterrent_idea = {
+			picture = Radioactive
+			modifier = {
+				war_support_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		TAI_nuclear_free_idea = {
+			picture = roc21_peace_talk_with_china_77d34118
+			modifier = {
+				stability_factor = 0.05
+				opinion_gain_monthly_factor = 0.2
+				political_power_gain = 0.05
+			}
+		}
+		TAI_blue_water_idea = {
+			picture = CHI_republic_of_china_navy
+			modifier = {
+				navy_org_factor = 0.05
+				experience_gain_navy = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		TAI_air_dominance_idea = {
+			picture = air_bonus
+			modifier = {
+				air_superiority_efficiency = 0.08
+				experience_gain_air = 0.1
+			}
+		}
+		TAI_world_class_military_idea = {
+			picture = CHI_military_affairs_commission
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				navy_org_factor = 0.05
+			}
+		}
+		TAI_trade_superpower_idea = {
+			picture = roc21_trade_policy_export_focus_75face9c
+			modifier = {
+				trade_opinion_factor = 0.2
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_sino_american_alliance_idea = {
+			picture = roc21_usa_china_coop_c336f9a3
+			modifier = {
+				research_speed_factor = 0.05
+				war_support_factor = 0.05
+				army_org_factor = 0.03
+			}
+		}
+		TAI_independent_diplomacy_idea = {
+			picture = roc21_pol_independence_judiciary_2b6f1159
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+				war_support_factor = 0.05
+			}
+		}
+		TAI_asia_leader_idea = {
+			picture = roc21_szc_kmt_lead_the_liberation__f94ab630
+			modifier = {
+				opinion_gain_monthly_factor = 0.2
+				trade_opinion_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		TAI_world_power_idea = {
+			picture = roc21_great_power_0f58d165
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.05
+				opinion_gain_monthly_factor = 0.25
+				stability_factor = 0.05
+			}
+		}
+		TAI_kmt_government_idea = {
+			picture = roc21_chi_neo_kmt_4585e310
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				war_support_factor = 0.03
+			}
+		}
+		TAI_kmt_era_idea = {
+			picture = roc21_chi_reimplementing_the_three_b7360766
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.15
+				war_support_factor = 0.05
+				industrial_capacity_factory = 0.03
+			}
+		}
+		TAI_dp_government_idea = {
+			picture = CHI_new_culture_movement
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_gain = 0.05
+				democratic_drift = 0.03
+			}
+		}
+		TAI_dp_free_market_idea = {
+			picture = roc21_generic_free_market_economy__db4e9dba
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_dp_antitrust_idea = {
+			picture = roc21_monopoly_fdcbebe3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.03
+				stability_factor = 0.02
+			}
+		}
+		TAI_liberal_china_idea = {
+			picture = roc21_rus_for_freedom_and_democrac_fb46b07f
+			modifier = {
+				research_speed_factor = 0.07
+				stability_factor = 0.05
+				opinion_gain_monthly_factor = 0.15
+				democratic_drift = 0.05
+			}
+		}
+		TAI_sd_government_idea = {
+			picture = roc21_social_democracy_542066a0
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TAI_sd_welfare_idea = {
+			picture = generic_healthcare
+			modifier = {
+				stability_factor = 0.08
+				monthly_population = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		TAI_social_china_idea = {
+			picture = roc21_arg_social_welfare_fund_ns_43750564
+			modifier = {
+				stability_factor = 0.12
+				political_power_gain = 0.05
+				monthly_population = 0.05
+			}
+		}
+		TAI_coalition_government_idea = {
+			picture = roc21_chi_idea_beiyang_government_4e929307
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		TAI_grand_compromise_idea = {
+			picture = roc21_peace_talk_with_china_77d34118
+			modifier = {
+				stability_factor = 0.12
+				political_power_gain = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		TAI_nko_reform_idea = {
+			picture = nko_china_invest_idea
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_korea_peace_idea = {
+			picture = CHI_three_principles_of_the_people
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+				trade_opinion_factor = 0.1
+			}
+		}
+		TAI_nko_transition_idea = {
+			picture = roc21_provisional_government_fcb12245
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+		TAI_nko_rebuild_idea = {
+			picture = roc21_ptf_economic_reconstruction_ff9049aa
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				monthly_population = 0.05
+			}
+		}
+		TAI_roc_forces_korea_idea = {
+			picture = roc21_chi_army_1_9032ab71
+			modifier = {
+				experience_gain_army = 0.05
+				army_org_factor = 0.02
+			}
+		}
+		TAI_amend_direct_election_idea = {
+			picture = roc21_usa_rightful_president_idea_8bca03e9
+			modifier = {
+				stability_factor = 0.05
+				democratic_drift = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TAI_amend_five_yuan_idea = {
+			picture = roc21_reformed_constitution_ffe4be94
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		PRC_peoples_war_idea = {
+			picture = roc21_chinese_war_effort_roc_aac229ba
+			modifier = {
+				army_defence_factor = 0.15
+				army_core_defence_factor = 0.1
+				conscription_factor = 0.2
+				war_support_factor = 0.1
+			}
+		}
+		PRC_northeast_base_idea = {
+			picture = roc21_manchuria_aviation_company_3a218169
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		TAI_roc_forces_in_korea_idea = {
+			picture = roc21_chi_army_1_9032ab71
+			modifier = {
+				army_defence_factor = 0.1
+				army_core_defence_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+	}
+}

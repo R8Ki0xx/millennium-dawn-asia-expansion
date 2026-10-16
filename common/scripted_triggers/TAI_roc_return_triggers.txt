@@ -1,0 +1,52 @@
+# MD ROC Return —— scripted triggers
+
+# State scope: a state on the Chinese mainland (CHI core), excluding Taiwan / Penghu / Kinmen / Matsu / Pratas / Taiping
+TAI_is_mainland_state = {
+	is_core_of = CHI
+	NOT = {
+		state = 598
+		state = 599
+		state = 600
+		state = 1155
+		state = 1156
+		state = 1157
+		state = 1158
+		state = 430
+		state = 1109
+		state = 1015
+		state = 491
+	}
+}
+
+# Country scope (TAI): is the window for a military return to the mainland open?
+TAI_return_window_open = {
+	custom_trigger_tooltip = {
+		tooltip = TAI_return_window_tt
+		OR = {
+			check_variable = { TAI_mainland_unrest > 49 }
+			CHI = { has_stability < 0.35 }
+			CHI = { has_civil_war = yes }
+			any_country = {
+				is_major = yes
+				NOT = { tag = TAI }
+				has_war_with = CHI
+			}
+		}
+	}
+}
+
+# Country scope: countries covered by the East Asian labour-market correction（v3.19：只剩中国大陆、台湾与中共残余）
+EA_labor_country = {
+	any_owned_state = { always = yes }
+	OR = {
+		original_tag = CHI
+		original_tag = TAI
+		original_tag = PRC
+	}
+}
+
+# v3.4
+TAI_has_insurgent_states = {
+	any_owned_state = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } }
+}
+# /v3.4

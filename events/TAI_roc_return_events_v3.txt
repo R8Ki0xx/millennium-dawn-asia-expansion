@@ -1,0 +1,418 @@
+###########################################
+#  MD ROC Return events v3                #
+#  反攻 / 大陆内战 / 光复之后 / 民主线      #
+###########################################
+
+add_namespace = roc_return
+
+### ============ 民主线 ============
+
+# 首届全国大选结果
+country_event = {
+	id = roc_return.30
+	title = roc_return.30.t
+	desc = roc_return.30.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.30.a
+		log = "[GetDateText]: [This.GetName]: roc_return.30.a executed"
+		set_country_flag = TAI_gov_kmt
+		set_temp_variable = { rul_party_temp = 1 }
+		set_temp_variable = { change_leader_temp = 1 }
+		change_ruling_party_effect = yes
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = roc_return.30.b
+		log = "[GetDateText]: [This.GetName]: roc_return.30.b executed"
+		set_country_flag = TAI_gov_dp
+		set_temp_variable = { rul_party_temp = 2 }
+		set_temp_variable = { change_leader_temp = 1 }
+		change_ruling_party_effect = yes
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = roc_return.30.c
+		log = "[GetDateText]: [This.GetName]: roc_return.30.c executed"
+		set_country_flag = TAI_gov_sd
+		set_temp_variable = { rul_party_temp = 3 }
+		set_temp_variable = { change_leader_temp = 1 }
+		change_ruling_party_effect = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = roc_return.30.e
+		log = "[GetDateText]: [This.GetName]: roc_return.30.e executed"
+		set_country_flag = TAI_gov_coalition
+		add_stability = 0.03
+		ai_chance = { base = 15 }
+	}
+}
+
+# 政权和平交接
+country_event = {
+	id = roc_return.31
+	title = roc_return.31.t
+	desc = roc_return.31.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.31.a
+		log = "[GetDateText]: [This.GetName]: roc_return.31.a executed"
+		add_stability = 0.03
+		add_political_power = 50
+	}
+}
+
+### ============ 光复之后：接管事件链（CHI，标签切换后） ============
+
+# 青天白日满地红
+country_event = {
+	id = roc_return.40
+	title = roc_return.40.t
+	desc = roc_return.40.d
+	picture = GFX_TAI_roc
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.40.a
+		log = "[GetDateText]: [This.GetName]: roc_return.40.a executed"
+		add_political_power = 50
+		add_war_support = 0.03
+	}
+	option = {
+		name = roc_return.40.b
+		log = "[GetDateText]: [This.GetName]: roc_return.40.b executed"
+		add_stability = 0.03
+	}
+}
+
+# 解放军残部拒绝投降
+country_event = {
+	id = roc_return.41
+	title = roc_return.41.t
+	desc = roc_return.41.d
+	picture = GFX_TAI_ev_41_Chinese_soldiers
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.41.a
+		log = "[GetDateText]: [This.GetName]: roc_return.41.a executed"
+		army_experience = 25
+		add_stability = -0.03
+		add_war_support = 0.03
+	}
+	option = {
+		name = roc_return.41.b
+		log = "[GetDateText]: [This.GetName]: roc_return.41.b executed"
+		add_political_power = -50
+		add_manpower = 30000
+	}
+}
+
+# 抢购潮与通货膨胀
+country_event = {
+	id = roc_return.42
+	title = roc_return.42.t
+	desc = roc_return.42.d
+	picture = GFX_TAI_ev_42_PRC_money
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.42.a
+		log = "[GetDateText]: [This.GetName]: roc_return.42.a executed"
+		set_temp_variable = { treasury_change = -15 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+	}
+	option = {
+		name = roc_return.42.b
+		log = "[GetDateText]: [This.GetName]: roc_return.42.b executed"
+		add_stability = -0.05
+		add_political_power = 25
+	}
+}
+
+# 中南海的交接
+country_event = {
+	id = roc_return.43
+	title = roc_return.43.t
+	desc = roc_return.43.d
+	picture = GFX_TAI_ev_43_CHI_detente
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.43.a
+		log = "[GetDateText]: [This.GetName]: roc_return.43.a executed"
+		add_political_power = 75
+	}
+	option = {
+		name = roc_return.43.b
+		log = "[GetDateText]: [This.GetName]: roc_return.43.b executed"
+		add_stability = 0.04
+	}
+}
+
+# 十三亿人的期待
+country_event = {
+	id = roc_return.44
+	title = roc_return.44.t
+	desc = roc_return.44.d
+	picture = GFX_TAI_ev_44_PRC_lib_victory_news
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.44.a
+		log = "[GetDateText]: [This.GetName]: roc_return.44.a executed"
+		add_stability = 0.05
+		set_temp_variable = { treasury_change = -10 }
+		modify_treasury_effect = yes
+	}
+	option = {
+		name = roc_return.44.b
+		log = "[GetDateText]: [This.GetName]: roc_return.44.b executed"
+		add_political_power = 50
+		add_stability = -0.02
+	}
+}
+
+# 戒严令（军政时期）
+country_event = {
+	id = roc_return.46
+	title = roc_return.46.t
+	desc = roc_return.46.d
+	picture = GFX_TAI_ev_46_militarists_taiwan
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.46.a
+		log = "[GetDateText]: [This.GetName]: roc_return.46.a executed"
+		add_stability = 0.03
+		add_political_power = -25
+	}
+}
+
+# 训政开始
+country_event = {
+	id = roc_return.47
+	title = roc_return.47.t
+	desc = roc_return.47.d
+	picture = GFX_TAI_ev_47_PRC_sun_yat_sen
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.47.a
+		log = "[GetDateText]: [This.GetName]: roc_return.47.a executed"
+		add_political_power = 50
+	}
+}
+
+# 宪法颁行
+country_event = {
+	id = roc_return.48
+	title = roc_return.48.t
+	desc = roc_return.48.d
+	picture = GFX_TAI_ev_48_PRC_rc_kmt_win
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.48.a
+		log = "[GetDateText]: [This.GetName]: roc_return.48.a executed"
+		add_stability = 0.03
+		add_war_support = 0.02
+	}
+}
+
+# PRC：残余政权
+country_event = {
+	id = roc_return.49
+	title = roc_return.49.t
+	desc = roc_return.49.d
+	picture = GFX_CHI_event_taiwan_flag_down
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.49.a
+		log = "[GetDateText]: [This.GetName]: roc_return.49.a executed"
+		add_war_support = 0.05
+	}
+}
+
+### ============ 反攻大陆 ============
+
+# 反攻令下达（TAI）
+country_event = {
+	id = roc_return.50
+	title = roc_return.50.t
+	desc = roc_return.50.d
+	picture = GFX_TAI_roc
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.50.a
+		log = "[GetDateText]: [This.GetName]: roc_return.50.a executed"
+		add_war_support = 0.05
+	}
+}
+
+# 台海战争爆发（新闻）
+news_event = {
+	id = roc_return.51
+	title = roc_return.51.t
+	desc = roc_return.51.d
+	picture = GFX_TAI_ev_51_CHI_PRC_taiwan_strait_drill
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.51.a
+		log = "[GetDateText]: [This.GetName]: roc_return.51.a executed"
+	}
+}
+
+# 北京：国民党军来犯（CHI）
+country_event = {
+	id = roc_return.52
+	title = roc_return.52.t
+	desc = roc_return.52.d
+	picture = GFX_CHI_event_china_taiwan_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.52.a
+		log = "[GetDateText]: [This.GetName]: roc_return.52.a executed"
+		add_war_support = 0.10
+		add_stability = -0.03
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = roc_return.52.b
+		log = "[GetDateText]: [This.GetName]: roc_return.52.b executed"
+		add_stability = 0.03
+		add_war_support = -0.05
+		ai_chance = { base = 20 }
+	}
+}
+
+# 滩头阵地
+country_event = {
+	id = roc_return.53
+	title = roc_return.53.t
+	desc = roc_return.53.d
+	picture = GFX_TAI_ev_53_invasion_taiwan
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.53.a
+		log = "[GetDateText]: [This.GetName]: roc_return.53.a executed"
+		army_experience = 15
+		add_war_support = 0.03
+	}
+}
+
+# 北伐誓师
+country_event = {
+	id = roc_return.55
+	title = roc_return.55.t
+	desc = roc_return.55.d
+	picture = GFX_TAI_ev_55_CHI_event_taiwan_32
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.55.a
+		log = "[GetDateText]: [This.GetName]: roc_return.55.a executed"
+		add_war_support = 0.05
+	}
+}
+
+# 光复北平（新闻）
+news_event = {
+	id = roc_return.56
+	title = roc_return.56.t
+	desc = roc_return.56.d
+	picture = GFX_TAI_roc_flag
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.56.a
+		log = "[GetDateText]: [This.GetName]: roc_return.56.a executed"
+	}
+}
+
+### ============ 大陆内战 ============
+
+# 北京：东南各省爆发起义（CHI）
+country_event = {
+	id = roc_return.60
+	title = roc_return.60.t
+	desc = roc_return.60.d
+	picture = GFX_TAI_ev_60_Chinese_Farmer_Protest
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.60.a
+		log = "[GetDateText]: [This.GetName]: roc_return.60.a executed"
+		add_war_support = 0.05
+		add_stability = -0.05
+	}
+	option = {
+		name = roc_return.60.b
+		log = "[GetDateText]: [This.GetName]: roc_return.60.b executed"
+		add_political_power = -50
+		add_stability = 0.02
+	}
+}
+
+# 中国内战爆发（新闻）
+news_event = {
+	id = roc_return.61
+	title = roc_return.61.t
+	desc = roc_return.61.d
+	picture = GFX_TAI_ev_61_battle_of_beijing
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.61.a
+		log = "[GetDateText]: [This.GetName]: roc_return.61.a executed"
+	}
+}
+
+# 大陆陷入内战（TAI，由其他原因引起的中国内战）
+country_event = {
+	id = roc_return.62
+	title = roc_return.62.t
+	desc = roc_return.62.d
+	picture = GFX_TAI_ev_62_china_civil_war_1
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = TAI
+		country_exists = CHI
+		CHI = { has_civil_war = yes }
+		NOT = { has_war_with = CHI }
+	}
+
+	option = {
+		name = roc_return.62.a
+		log = "[GetDateText]: [This.GetName]: roc_return.62.a executed"
+		add_war_support = 0.10
+		create_wargoal = { type = annex_everything target = CHI }
+		add_to_variable = { TAI_mainland_unrest = 20 tooltip = TAI_mainland_unrest_tt }
+		clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+		ai_chance = {
+			base = 30
+			modifier = { factor = 0 NOT = { has_country_flag = TAI_pan_blue_path } }
+		}
+	}
+	option = {
+		name = roc_return.62.b
+		log = "[GetDateText]: [This.GetName]: roc_return.62.b executed"
+		add_stability = 0.02
+		ai_chance = { base = 70 }
+	}
+}

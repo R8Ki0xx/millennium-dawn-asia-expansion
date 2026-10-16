@@ -1,0 +1,108 @@
+# MD ROC Return —— on_actions
+
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { EA_labor_country = yes }
+				EA_labor_init = yes
+			}
+			if = {
+				limit = { country_exists = TAI }
+				TAI = {
+					set_variable = { TAI_mainland_unrest = 0 }
+					TAI_military_init = yes
+				}
+			}
+			# v3.8 台湾 AI 行为（游戏规则 / AI 使用史实国策）
+			if = {
+				limit = { country_exists = TAI }
+				if = { limit = { has_game_rule = { rule = TAI_ai_behavior option = HISTORICAL } } set_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+				else_if = { limit = { has_game_rule = { rule = TAI_ai_behavior option = RETURN } } set_global_flag = TAI_RETURN_FOCUS_PATH }
+				else_if = { limit = { has_game_rule = { rule = TAI_ai_behavior option = PEACEFUL } } set_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+				else_if = {
+					limit = { has_game_rule = { rule = TAI_ai_behavior option = RANDOM_PATH } }
+					random_list = {
+						50 = { set_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+						25 = { set_global_flag = TAI_RETURN_FOCUS_PATH }
+						25 = { set_global_flag = TAI_PEACEFUL_FOCUS_PATH }
+					}
+				}
+				else_if = { limit = { is_historical_focus_on = yes } set_global_flag = TAI_HISTORICAL_FOCUS_PATH }
+			}
+			# /v3.8
+			# 朝鲜：主体思想（仅外观，深深红配色）
+			if = { limit = { country_exists = NKO } NKO = { TAI_nko_juche_look = yes } }
+		}
+	}
+
+	# Weekly, per country: keep the East Asian labour-market correction calibrated
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { EA_labor_country = yes }
+				EA_labor_adjust = yes
+			}
+			# v3.19
+			else_if = {
+				limit = { has_dynamic_modifier = { modifier = EA_labor_market_modifier } }
+				EA_labor_clear = yes
+			}
+		}
+	}
+
+	on_monthly_TAI = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = TAI_mainland_work_active
+					NOT = { has_country_flag = TAI_mainland_restored }
+					country_exists = CHI
+				}
+				TAI_monthly_unrest_tick = yes
+			}
+			# 中国大陆因其他原因陷入内战：询问是否出兵干预
+			if = {
+				limit = {
+					country_exists = CHI
+					CHI = { has_civil_war = yes }
+					NOT = { has_war_with = CHI }
+					NOT = { has_country_flag = TAI_saw_chi_civil_war }
+					NOT = { has_country_flag = TAI_uprising_started }
+					NOT = { has_global_flag = ROC_tag_switch_done }
+				}
+				set_country_flag = TAI_saw_chi_civil_war
+				country_event = { id = roc_return.62 days = 1 }
+			}
+		}
+	}
+
+	on_monthly_NKO = {
+		effect = { TAI_nko_juche_look = yes }
+	}
+
+	# v3.4
+	on_monthly_CHI = {
+		effect = {
+			if = { limit = { has_country_flag = ROC_new_chi } TAI_insurgency_monthly = yes TAI_na_monthly = yes clr_country_flag = CHI_ic_initialized }
+			if = { limit = { has_country_flag = ROC_new_chi NOT = { has_country_flag = ROC_ccp_missions_cleared } } ROC_clear_ccp_missions = yes }
+		}
+	}
+	on_monthly_PRC = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ROC_tag_switch_done
+					NOT = { has_global_flag = CCP_restored }
+					controls_state = 547
+					OR = {
+						NOT = { country_exists = CHI }
+						CHI = { has_country_flag = ROC_new_chi has_capitulated = yes }
+					}
+				}
+				country_event = { id = roc_return.85 days = 1 }
+			}
+		}
+	}
+	# /v3.4
+}

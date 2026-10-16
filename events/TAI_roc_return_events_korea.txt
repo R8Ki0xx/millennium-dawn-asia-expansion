@@ -1,0 +1,119 @@
+###########################################
+#  MD ROC Return events —— 朝鲜半岛路线     #
+###########################################
+
+add_namespace = roc_return
+
+# 平壤政变（ROC）
+country_event = {
+	id = roc_return.70
+	title = roc_return.70.t
+	desc = roc_return.70.d
+	picture = GFX_TAI_ev_70_GFX_anti_kim_coup
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.70.a
+		log = "[GetDateText]: [This.GetName]: roc_return.70.a executed"
+		add_political_power = 25
+	}
+}
+
+# 平壤政变（新闻）
+news_event = {
+	id = roc_return.71
+	title = roc_return.71.t
+	desc = roc_return.71.d
+	picture = GFX_anti_kim_coup
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.71.a
+		log = "[GetDateText]: [This.GetName]: roc_return.71.a executed"
+	}
+}
+
+# 新中朝条约（NKO 收到）
+country_event = {
+	id = roc_return.72
+	title = roc_return.72.t
+	desc = roc_return.72.d
+	picture = GFX_CHI_event_chinese_north_korean_flag
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.72.a
+		log = "[GetDateText]: [This.GetName]: roc_return.72.a executed"
+		diplomatic_relation = { country = FROM relation = non_aggression_pact active = yes }
+		add_opinion_modifier = { target = FROM modifier = TAI_nko_detente }
+		FROM = { country_event = { id = roc_return.73 days = 1 } }
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = roc_return.72.b
+		log = "[GetDateText]: [This.GetName]: roc_return.72.b executed"
+		add_political_power = 25
+		ai_chance = { base = 20 }
+	}
+}
+
+# 平壤签约（ROC 收到）
+country_event = {
+	id = roc_return.73
+	title = roc_return.73.t
+	desc = roc_return.73.d
+	picture = GFX_TAI_ev_73_North_Korean_Congress
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.73.a
+		log = "[GetDateText]: [This.GetName]: roc_return.73.a executed"
+		add_stability = 0.02
+	}
+}
+
+# 联军北进（新闻）
+news_event = {
+	id = roc_return.74
+	title = roc_return.74.t
+	desc = roc_return.74.d
+	picture = GFX_TAI_ev_74_South_Korea_Intervention
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.74.a
+		log = "[GetDateText]: [This.GetName]: roc_return.74.a executed"
+	}
+}
+
+# 半岛统一（新闻）
+news_event = {
+	id = roc_return.75
+	title = roc_return.75.t
+	desc = roc_return.75.d
+	picture = GFX_TAI_ev_75_south_korea
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = roc_return.75.a
+		log = "[GetDateText]: [This.GetName]: roc_return.75.a executed"
+	}
+}
+
+# 国军进驻（KOR 收到）
+country_event = {
+	id = roc_return.76
+	title = roc_return.76.t
+	desc = roc_return.76.d
+	picture = GFX_TAI_ev_76_South_Korean_Army
+	is_triggered_only = yes
+
+	option = {
+		name = roc_return.76.a
+		log = "[GetDateText]: [This.GetName]: roc_return.76.a executed"
+		add_stability = 0.02
+	}
+}

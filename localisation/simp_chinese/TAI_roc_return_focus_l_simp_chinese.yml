@@ -276,7 +276,7 @@
  TAI_new_republic_era: "民国新纪元"
  TAI_new_republic_era_desc: "中华民国的旗帜重新飘扬在全中国。百废待举，一切从头开始。"
  TAI_return_capital_nanjing: "定都南京"
- TAI_return_capital_nanjing_desc: "国民政府定都南京！中山陵前，总统宣誓就职。首都默认设在南京；若曾迁都北平，也可以借此迁回。"
+ TAI_return_capital_nanjing_desc: "国民政府定都南京！中山陵前，总统宣誓就职。首都默认设在南京。与「迁都北平」二选一。"
  TAI_military_government_period: "军政时期"
  TAI_military_government_period_desc: "依国父《建国大纲》，建国程序分为军政、训政、宪政三个时期。光复之初，一切以恢复秩序、肃清残余为先。"
  TAI_social_stabilization: "安定民生"

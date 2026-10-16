@@ -1,0 +1,684 @@
+# 光复大陆工作 —— MD ROC Return
+
+TAI_mainland_work_category = {
+
+	### ---------------- 和平时期：敌后工作 ----------------
+	TAI_dec_voice_of_free_china = {
+		icon = GFX_decision_generic_speech
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 30
+		available = { country_exists = CHI }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_voice_of_free_china"
+			add_to_variable = { TAI_mainland_unrest = 4 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_popularity = { ideology = democratic popularity = 0.01 } }
+		}
+		ai_will_do = { base = 3 }
+	}
+
+	TAI_dec_infiltrate_cadres = {
+		icon = GFX_decision_generic_intelligence_operation
+		cost = 60
+		fire_only_once = no
+		days_re_enable = 45
+		available = { country_exists = CHI }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_infiltrate_cadres"
+			add_to_variable = { TAI_mainland_unrest = 6 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_stability = -0.02 }
+		}
+		ai_will_do = { base = 2 }
+	}
+
+	TAI_dec_fund_dissidents = {
+		icon = GFX_decision_generic_fundraising
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 45
+		available = { country_exists = CHI }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_fund_dissidents"
+			set_temp_variable = { treasury_change = -2 }
+			modify_treasury_effect = yes
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_popularity = { ideology = democratic popularity = 0.02 } }
+		}
+		ai_will_do = { base = 2 }
+	}
+
+	TAI_dec_cyber_psyops = {
+		icon = GFX_decision_generic_brainwash
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+		available = { country_exists = CHI }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_cyber_psyops"
+			add_to_variable = { TAI_mainland_unrest = 5 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_war_support = -0.02 }
+		}
+		ai_will_do = { base = 2 }
+	}
+
+	# v3.16 后期敌后工作：动荡度过半之后才能进行，帮助突破 70 与 80 的门槛
+	TAI_dec_underground_network = {
+		icon = GFX_decision_generic_intelligence_operation
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 60
+		visible = { country_exists = CHI }
+		available = {
+			country_exists = CHI
+			custom_trigger_tooltip = { tooltip = TAI_unrest_50_tt check_variable = { TAI_mainland_unrest > 49 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_underground_network"
+			add_to_variable = { TAI_mainland_unrest = 8 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_stability = -0.01 }
+		}
+		ai_will_do = { base = 3 }
+	}
+
+	TAI_dec_subvert_garrisons = {
+		icon = GFX_decision_generic_army_support
+		cost = 100
+		fire_only_once = no
+		days_re_enable = 90
+		visible = { country_exists = CHI }
+		available = {
+			country_exists = CHI
+			custom_trigger_tooltip = { tooltip = TAI_unrest_60_tt check_variable = { TAI_mainland_unrest > 59 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_subvert_garrisons"
+			add_to_variable = { TAI_mainland_unrest = 10 tooltip = TAI_mainland_unrest_tt }
+			clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+			CHI = { add_stability = -0.03 }
+		}
+		ai_will_do = { base = 3 }
+	}
+
+	### ---------------- 战争时期 ----------------
+	TAI_dec_letter_to_compatriots = {
+		icon = GFX_decision_generic_political_address
+		cost = 50
+		days_re_enable = 60
+		visible = { has_war_with = CHI }
+		available = { has_war_with = CHI }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_letter_to_compatriots"
+			CHI = {
+				add_stability = -0.03
+				add_war_support = -0.03
+			}
+		}
+		ai_will_do = { base = 10 }
+	}
+
+	TAI_dec_pla_defection = {
+		icon = GFX_decision_generic_army_support
+		cost = 75
+		days_re_enable = 45
+		visible = {
+			has_war_with = CHI
+			has_country_flag = TAI_defection_decision_unlocked
+		}
+		available = {
+			has_war_with = CHI
+			any_controlled_state = { TAI_is_mainland_state = yes }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_pla_defection"
+			custom_effect_tooltip = TAI_defectors_small_tt
+			TAI_spawn_defectors = yes
+			TAI_spawn_defectors = yes
+			CHI = { add_war_support = -0.02 }
+		}
+		ai_will_do = { base = 15 }
+	}
+
+	TAI_dec_request_us_intervention = {
+		icon = GFX_decision_generic_USA_flag
+		cost = 100
+		fire_only_once = yes
+		visible = {
+			has_war_with = CHI
+			has_country_flag = TAI_us_backing_flag
+		}
+		available = {
+			has_war_with = CHI
+			country_exists = USA
+			USA = {
+				NOT = { has_war_with = CHI }
+				NOT = { has_war_with = TAI }
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_request_us_intervention"
+			USA = { country_event = { id = roc_return.17 days = 2 } }
+		}
+		ai_will_do = { base = 20 }
+	}
+}
+
+### ================= v3.3 国军整备 / 光复区治理 =================
+
+TAI_military_readiness_category = {
+	TAI_dec_han_kuang_drill = {
+		icon = GFX_decision_generic_military
+		cost = 50
+		days_re_enable = 180
+		available = { has_war = no }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_han_kuang_drill"
+			army_experience = 10
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_army_modifier }
+			add_to_variable = { TAI_army_xp = 0.01 tooltip = experience_gain_army_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_imbalance_reduce = yes
+			TAI_dbf_conscription_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_us_arms_package = {
+		icon = GFX_decision_generic_army_support
+		cost = 25
+		days_re_enable = 240
+		available = { country_exists = USA NOT = { has_war_with = USA } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_us_arms_package"
+			set_temp_variable = { treasury_change = -8 }
+			modify_treasury_effect = yes
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_airforce_modifier }
+			add_to_variable = { TAI_air_atk = 0.02 tooltip = air_attack_factor_tt }
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_navy_modifier }
+			add_to_variable = { TAI_navy_dmg = 0.02 tooltip = naval_damage_factor_tt }
+			force_update_dynamic_modifier = yes
+			TAI_dbf_imbalance_reduce = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dec_call_reservists = {
+		icon = GFX_decision_generic_military
+		cost = 40
+		days_re_enable = 120
+		available = { always = yes }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_call_reservists"
+			add_manpower = 20000
+			add_war_support = 0.02
+			add_stability = -0.01
+		}
+		ai_will_do = { base = 2 }
+	}
+	TAI_dec_anti_vote_buying = {
+		icon = GFX_decision_generic_police_action
+		cost = 60
+		days_re_enable = 150
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_black_gold } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_anti_vote_buying"
+			TAI_dbf_black_gold_reduce = yes
+			add_stability = -0.01
+		}
+		ai_will_do = { base = 2 }
+	}
+}
+
+TAI_reconstruction_category = {
+	TAI_dec_mop_up_remnants = {
+		icon = GFX_decision_generic_military
+		cost = 50
+		days_re_enable = 90
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_pla_remnants } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_mop_up_remnants"
+			army_experience = 15
+			add_war_support = -0.01
+			TAI_dbf_pla_remnants_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_relief_program = {
+		icon = GFX_decision_generic_fundraising
+		cost = 25
+		days_re_enable = 90
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_hearts } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_relief_program"
+			set_temp_variable = { treasury_change = -10 }
+			modify_treasury_effect = yes
+			TAI_dbf_hearts_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_purge_carpetbaggers = {
+		icon = GFX_decision_generic_police_action
+		cost = 75
+		days_re_enable = 120
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_carpetbag } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_purge_carpetbaggers"
+			add_stability = 0.01
+			TAI_dbf_carpetbag_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_local_autonomy_pilot = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		days_re_enable = 120
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_warlordism } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_local_autonomy_pilot"
+			add_stability = -0.02
+			TAI_dbf_warlordism_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_price_stabilization = {
+		icon = GFX_decision_generic_fundraising
+		cost = 25
+		days_re_enable = 120
+		available = { has_dynamic_modifier = { modifier = TAI_dbf_transition } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_price_stabilization"
+			set_temp_variable = { treasury_change = -12 }
+			modify_treasury_effect = yes
+			TAI_dbf_transition_reduce = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_joint_exercise = {
+		icon = GFX_decision_generic_military
+		cost = 75
+		days_re_enable = 180
+		available = { has_war = no }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_joint_exercise"
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = TAI_roc_general_staff_modifier }
+			add_to_variable = { TAI_gs_plan = 0.02 tooltip = planning_speed_tt }
+			force_update_dynamic_modifier = yes
+		}
+		ai_will_do = { base = 2 }
+	}
+}
+
+# v3.4
+TAI_insurgency_category = {
+	TAI_dec_ccp_uprising_mission = {
+		icon = GFX_decision_generic_nationalism
+		priority = 100
+		days_mission_timeout = 180
+		fire_only_once = no
+		activation = {
+			hidden_trigger = {
+				has_country_flag = ROC_new_chi
+				NOT = { has_country_flag = TAI_uprising_cooldown }
+				NOT = { has_war_with = PRC }
+				check_variable = { TAI_ccp_insurgency > 74 }
+				check_variable = { TAI_ins_severe > 1 }
+			}
+		}
+		available = { always = no }
+		selectable_mission = no
+		is_good = no
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_uprising_cancel_tt
+				check_variable = { TAI_ccp_insurgency < 60 }
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_ccp_uprising_mission cancelled"
+			add_stability = 0.03
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_ccp_uprising_mission"
+			TAI_ccp_uprising = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+
+	TAI_dec_suppression = {
+		icon = { key = GFX_decision_com_rebel_highest trigger = { FROM = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } } } }
+		icon = { key = GFX_decision_com_rebel_medium trigger = { FROM = { has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } } } }
+		icon = { key = GFX_decision_com_rebel_weak trigger = { FROM = { has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } }
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		targets = { 552 554 555 1095 1096 1097 547 548 549 434 558 556 559 560 1072 588 592 }
+		target_trigger = { FROM = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } is_controlled_by = ROOT } }
+		target_root_trigger = { TAI_has_insurgent_states = yes }
+		cost = 60
+		fire_only_once = no
+		days_remove = 15
+		available = { NOT = { has_country_flag = TAI_suppression_active } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_suppression"
+			set_country_flag = TAI_suppression_active
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_suppression done"
+			clr_country_flag = TAI_suppression_active
+			random_list = {
+				75 = {
+					FROM = { TAI_insurgency_downgrade = yes }
+					army_experience = 5
+					set_temp_variable = { ins_change = -3 }
+			TAI_insurgency_change = yes
+				}
+				25 = {
+					custom_effect_tooltip = TAI_suppression_failed_tt
+					set_temp_variable = { ins_change = 2 }
+			TAI_insurgency_change = yes
+					add_stability = -0.01
+				}
+			}
+			TAI_insurgency_count = yes
+		}
+		ai_will_do = { base = 25 }
+	}
+
+	TAI_dec_pacification = {
+		icon = GFX_decision_generic_construction
+		cost = 50
+		fire_only_once = no
+		days_remove = 45
+		days_re_enable = 30
+		visible = { TAI_has_insurgent_states = yes }
+		available = { TAI_has_insurgent_states = yes }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_pacification"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_pacification done"
+			random_owned_controlled_state = { limit = { OR = { has_dynamic_modifier = { modifier = TAI_red_insurgency_3 } has_dynamic_modifier = { modifier = TAI_red_insurgency_2 } has_dynamic_modifier = { modifier = TAI_red_insurgency_1 } } } TAI_insurgency_downgrade = yes }
+			set_temp_variable = { ins_change = -2 }
+			TAI_insurgency_change = yes
+			add_stability = 0.01
+			TAI_insurgency_count = yes
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	TAI_dec_counterintelligence = {
+		icon = GFX_decision_generic_intelligence_operation
+		cost = 40
+		days_re_enable = 90
+		fire_only_once = no
+		available = { check_variable = { TAI_ccp_insurgency > 0 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_counterintelligence"
+			set_temp_variable = { ins_change = -5 }
+			TAI_insurgency_change = yes
+		}
+		ai_will_do = { base = 15 }
+	}
+}
+# /v3.4
+
+# v3.10 assembly
+TAI_national_assembly_category = {
+	TAI_na_session_mission = {
+		icon = GFX_decision_TAI_roc_flag
+		is_good = yes
+		fire_only_once = no
+		activation = { has_country_flag = ROC_new_chi }
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 365
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_na_session_mission"
+			TAI_na_hold_session = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+	TAI_dec_na_extraordinary = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		days_re_enable = 180
+		fire_only_once = no
+		available = { has_active_mission = TAI_na_session_mission }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_extraordinary"
+			custom_effect_tooltip = TAI_na_extraordinary_tt
+			hidden_effect = {
+				remove_mission = TAI_na_session_mission
+				TAI_na_hold_session = yes
+			}
+		}
+		ai_will_do = { base = 0 }
+	}
+	TAI_dec_na_lobby = {
+		icon = GFX_decision_generic_fundraising
+		cost = 50
+		days_re_enable = 60
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_lobby"
+			add_to_variable = { TAI_na_bonus = 120 tooltip = TAI_na_bonus_tt }
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 5 }
+	}
+	TAI_dec_na_campaign = {
+		icon = GFX_decision_generic_political_rally
+		cost = 50
+		days_re_enable = 60
+		fire_only_once = no
+		visible = { check_variable = { TAI_na_session > 4 } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_campaign"
+			set_temp_variable = { party_index = ruling_party }
+			set_temp_variable = { party_popularity_increase = 0.03 }
+			set_temp_variable = { temp_outlook_increase = 0.03 }
+			change_relative_party_popularity = yes
+		}
+		ai_will_do = { base = 5 }
+	}
+	TAI_dec_na_ally_kmt = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		visible = {
+			NOT = { has_country_flag = TAI_na_ally_kmt }
+			NOT = { check_variable = { ruling_party = 1 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_ally_kmt"
+			set_country_flag = TAI_na_ally_kmt
+			set_temp_variable = { party_index = 1 }
+			set_temp_variable = { party_popularity_increase = 0.02 }
+			set_temp_variable = { temp_outlook_increase = 0.02 }
+			change_relative_party_popularity = yes
+			add_stability = 0.02
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 2 modifier = { factor = 5 check_variable = { TAI_na_support < 0.5 } } }
+	}
+	TAI_dec_na_ally_dp = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		visible = {
+			NOT = { has_country_flag = TAI_na_ally_dp }
+			NOT = { check_variable = { ruling_party = 2 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_ally_dp"
+			set_country_flag = TAI_na_ally_dp
+			set_temp_variable = { party_index = 2 }
+			set_temp_variable = { party_popularity_increase = 0.02 }
+			set_temp_variable = { temp_outlook_increase = 0.02 }
+			change_relative_party_popularity = yes
+			add_political_power = 25
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 2 modifier = { factor = 5 check_variable = { TAI_na_support < 0.5 } } }
+	}
+	TAI_dec_na_ally_sd = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		visible = {
+			NOT = { has_country_flag = TAI_na_ally_sd }
+			NOT = { check_variable = { ruling_party = 3 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_ally_sd"
+			set_country_flag = TAI_na_ally_sd
+			set_temp_variable = { party_index = 3 }
+			set_temp_variable = { party_popularity_increase = 0.02 }
+			set_temp_variable = { temp_outlook_increase = 0.02 }
+			change_relative_party_popularity = yes
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_stability = 0.03
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 2 modifier = { factor = 5 check_variable = { TAI_na_support < 0.5 } } }
+	}
+	TAI_dec_na_ally_pfp = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		visible = {
+			NOT = { has_country_flag = TAI_na_ally_pfp }
+			NOT = { check_variable = { ruling_party = 14 } }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_ally_pfp"
+			set_country_flag = TAI_na_ally_pfp
+			set_temp_variable = { party_index = 14 }
+			set_temp_variable = { party_popularity_increase = 0.02 }
+			set_temp_variable = { temp_outlook_increase = 0.02 }
+			change_relative_party_popularity = yes
+			add_political_power = 50
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 2 modifier = { factor = 5 check_variable = { TAI_na_support < 0.5 } } }
+	}
+	TAI_dec_na_break_alliances = {
+		icon = GFX_decision_generic_protection
+		cost = 0
+		fire_only_once = no
+		visible = { OR = { has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_na_ally_dp has_country_flag = TAI_na_ally_sd has_country_flag = TAI_na_ally_pfp has_country_flag = TAI_gov_coalition } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_na_break_alliances"
+			TAI_na_clear_alliances = yes
+			add_stability = -0.03
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 0 }
+	}
+	TAI_dec_amend_direct_election = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		fire_only_once = yes
+		available = { custom_trigger_tooltip = { tooltip = TAI_na_support_66_tt check_variable = { TAI_na_support > 0.666 } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_amend_direct_election"
+			add_ideas = TAI_amend_direct_election_idea
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_amend_local_autonomy = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		fire_only_once = yes
+		available = { custom_trigger_tooltip = { tooltip = TAI_na_support_66_tt check_variable = { TAI_na_support > 0.666 } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_amend_local_autonomy"
+			TAI_dbf_warlordism_reduce = yes
+			set_temp_variable = { ins_change = -5 }
+			TAI_insurgency_change = yes
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_amend_five_yuan = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		fire_only_once = yes
+		available = { custom_trigger_tooltip = { tooltip = TAI_na_support_66_tt check_variable = { TAI_na_support > 0.666 } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_amend_five_yuan"
+			add_ideas = TAI_amend_five_yuan_idea
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_amend_virtualize = {
+		icon = GFX_decision_generic_political_address
+		cost = 100
+		fire_only_once = yes
+		available = { custom_trigger_tooltip = { tooltip = TAI_na_support_66_tt check_variable = { TAI_na_support > 0.666 } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_amend_virtualize"
+			set_country_flag = TAI_na_virtualized
+			custom_effect_tooltip = TAI_na_virtualize_tt
+			add_stability = 0.05
+			TAI_na_recalc = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+}
+# /v3.10 assembly
+
+# v3.10 bop
+TAI_roc_bop_category = {
+	TAI_dec_bop_promote_old_guard = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 50
+		days_re_enable = 60
+		visible = { has_power_balance = { id = TAI_roc_faction_balance } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_bop_promote_old_guard"
+			add_power_balance_value = { id = TAI_roc_faction_balance value = -0.10 tooltip_side = TAI_roc_old_guard }
+			add_war_support = 0.02
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_bop_recruit_mainlanders = {
+		icon = GFX_decision_generic_nationalism
+		cost = 50
+		days_re_enable = 60
+		visible = { has_power_balance = { id = TAI_roc_faction_balance } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_bop_recruit_mainlanders"
+			add_power_balance_value = { id = TAI_roc_faction_balance value = 0.10 tooltip_side = TAI_roc_newcomers }
+			set_temp_variable = { ins_change = -2 }
+			TAI_insurgency_change = yes
+		}
+		ai_will_do = { base = 3 }
+	}
+	TAI_dec_bop_mediation = {
+		icon = GFX_decision_generic_speech
+		cost = 35
+		days_re_enable = 60
+		visible = { has_power_balance = { id = TAI_roc_faction_balance } }
+		available = { NOT = { is_power_balance_in_range = { id = TAI_roc_faction_balance range = TAI_roc_bop_shared_rule } } }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TAI_dec_bop_mediation"
+			if = {
+				limit = { OR = { is_power_balance_in_range = { id = TAI_roc_faction_balance range = TAI_roc_bop_mainland_rise } is_power_balance_in_range = { id = TAI_roc_faction_balance range = TAI_roc_bop_local_strongmen } } }
+				add_power_balance_value = { id = TAI_roc_faction_balance value = -0.07 tooltip_side = TAI_roc_old_guard }
+			}
+			else = {
+				add_power_balance_value = { id = TAI_roc_faction_balance value = 0.07 tooltip_side = TAI_roc_newcomers }
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 5 }
+	}
+}
+# /v3.10 bop

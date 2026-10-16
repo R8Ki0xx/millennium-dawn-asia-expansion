@@ -1,0 +1,198 @@
+# MD ROC Return —— scripted effects
+
+###########################################################################
+# 东亚劳动力市场修正 (East Asian labour-market correction)
+#
+# MD counts 60% of the whole population as workforce. For East Asia in 2000
+# that puts hundreds of millions of rural / informal / hukou-bound people on
+# the unemployment rolls (China starts with 30-40%+ unemployment).
+#
+# Instead of deleting population (which would also cut manpower, GDP and
+# taxes), every week we move part of that surplus labour out of the labour
+# market statistics (total_workforce_modifier < 0) until unemployment sits
+# around 6%. At the same time agriculture_workers_modifier is raised by
+# 1/(1+x)-1 so that the number of farm workers - and agricultural GDP -
+# stays the same. When the economy creates enough jobs (< 4% unemployment)
+# the correction is slowly handed back.
+###########################################################################
+
+EA_labor_init = {
+	if = {
+		limit = { NOT = { has_variable = EA_hidden_labor_var } }
+		set_variable = { EA_hidden_labor_var = 0 }
+		# head start for China (simulated from MD 2.0.2 start values); the weekly controller fine tunes it
+		if = {
+			limit = { original_tag = CHI }
+			set_variable = { EA_hidden_labor_var = -0.10 }	# v3.19：目标失业率约 28%
+		}
+	}
+	EA_labor_update_rural = yes
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = EA_labor_market_modifier } } }
+		add_dynamic_modifier = { modifier = EA_labor_market_modifier }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+EA_labor_update_rural = {
+	set_temp_variable = { ea_div = 1 }
+	add_to_temp_variable = { ea_div = EA_hidden_labor_var }
+	clamp_temp_variable = { var = ea_div min = 0.40 max = 1 }
+	set_variable = { EA_rural_labor_var = 1 }
+	divide_variable = { EA_rural_labor_var = ea_div }
+	subtract_from_variable = { EA_rural_labor_var = 1 }
+}
+
+EA_labor_adjust = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_variable = EA_hidden_labor_var }
+				NOT = { has_dynamic_modifier = { modifier = EA_labor_market_modifier } }
+			}
+		}
+		EA_labor_init = yes
+	}
+	if = {
+		limit = { has_variable = total_unemployed_percentage_display }
+		# Too much unemployment: move surplus labour out of the statistics
+		if = {
+			limit = {
+				check_variable = { total_unemployed_percentage_display > 0.30 }
+				check_variable = { EA_hidden_labor_var > -0.55 }
+			}
+			set_temp_variable = { ea_step = total_unemployed_percentage_display }
+			subtract_from_temp_variable = { ea_step = 0.28 }
+			multiply_temp_variable = { ea_step = 0.70 }
+			clamp_temp_variable = { var = ea_step min = 0.005 max = 0.10 }
+			subtract_from_variable = { EA_hidden_labor_var = ea_step }
+		}
+		# Labour shortage: slowly give the people back to the labour market
+		else_if = {
+			limit = {
+				check_variable = { total_unemployed_percentage_display < 0.22 }
+				check_variable = { EA_hidden_labor_var < 0 }
+			}
+			set_temp_variable = { ea_step = 0.24 }
+			subtract_from_temp_variable = { ea_step = total_unemployed_percentage_display }
+			multiply_temp_variable = { ea_step = 0.50 }
+			clamp_temp_variable = { var = ea_step min = 0.003 max = 0.02 }
+			add_to_variable = { EA_hidden_labor_var = ea_step }
+		}
+		clamp_variable = { var = EA_hidden_labor_var min = -0.55 max = 0 }
+		EA_labor_update_rural = yes
+		force_update_dynamic_modifier = yes
+	}
+}
+
+###########################################################################
+# 中华民国 (TAI)
+###########################################################################
+
+# Monthly drift of the "mainland unrest" meter (0-100) once the 国光计划 is active
+TAI_monthly_unrest_tick = {
+	if = { limit = { CHI = { has_stability < 0.50 } } add_to_variable = { TAI_mainland_unrest = 1 } }
+	if = { limit = { CHI = { has_stability < 0.30 } } add_to_variable = { TAI_mainland_unrest = 2 } }
+	if = { limit = { CHI = { has_civil_war = yes } } add_to_variable = { TAI_mainland_unrest = 3 } }
+	if = {
+		limit = {
+			any_country = {
+				is_major = yes
+				NOT = { tag = ROOT }
+				has_war_with = CHI
+			}
+		}
+		add_to_variable = { TAI_mainland_unrest = 3 }
+	}
+	if = { limit = { CHI = { has_stability > 0.70 } } subtract_from_variable = { TAI_mainland_unrest = 1 } }
+	clamp_variable = { var = TAI_mainland_unrest min = 0 max = 100 }
+}
+
+# Spawns one division of defected PLA troops on the mainland front
+TAI_spawn_defectors = {
+	if = {
+		limit = { NOT = { has_country_flag = TAI_defector_template_created } }
+		division_template = {
+			name = "Defected PLA Division"
+			regiments = {
+				L_Inf_Bat = { x = 0 y = 0 }
+				L_Inf_Bat = { x = 0 y = 1 }
+				L_Inf_Bat = { x = 0 y = 2 }
+				L_Inf_Bat = { x = 1 y = 0 }
+				L_Inf_Bat = { x = 1 y = 1 }
+				L_Inf_Bat = { x = 1 y = 2 }
+			}
+			support = {
+				H_Engi_Comp = { x = 0 y = 0 }
+			}
+		}
+		set_country_flag = TAI_defector_template_created
+	}
+	if = {
+		limit = { controls_state = 536 }
+		536 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 11913 } }
+	}
+	else_if = {
+		limit = { controls_state = 540 }
+		540 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 7014 } }
+	}
+	else_if = {
+		limit = { controls_state = 538 }
+		538 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 7191 } }
+	}
+	else_if = {
+		limit = { controls_state = 537 }
+		537 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 7071 } }
+	}
+	else_if = {
+		limit = { controls_state = 532 }
+		532 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 1047 } }
+	}
+	else_if = {
+		limit = { controls_state = 541 }
+		541 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 11973 } }
+	}
+	else_if = {
+		limit = { controls_state = 544 }
+		544 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 1069 } }
+	}
+	else_if = {
+		limit = { controls_state = 570 }
+		570 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 4619 } }
+	}
+	else_if = {
+		limit = { controls_state = 547 }
+		547 = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT prioritize_location = 11761 } }
+	}
+	else = {
+		capital_scope = { create_unit = { division = "name = \"Defected PLA Division\" division_template = \"Defected PLA Division\" start_experience_factor = 0.3" owner = ROOT } }
+	}
+}
+
+# Fired by the focus 光复神州
+TAI_on_mainland_restored = {
+	set_country_flag = TAI_mainland_restored
+	set_global_flag = TAI_mainland_restored_global
+	clr_country_flag = TAI_mainland_work_active
+	if = { limit = { has_idea = TAI_counteroffensive } remove_ideas = TAI_counteroffensive }
+	if = { limit = { has_idea = TAI_counteroffensive_preparation } remove_ideas = TAI_counteroffensive_preparation }
+	if = { limit = { has_idea = TAI_landing_operations } remove_ideas = TAI_landing_operations }
+	add_ideas = TAI_mainland_integration_1
+	every_owned_state = {
+		limit = {
+			TAI_is_mainland_state = yes
+			NOT = { is_core_of = ROOT }
+		}
+		add_core_of = ROOT
+	}
+	add_political_power = 200
+	add_stability = 0.05
+}
+
+# v3.19：不再适用的国家，移除修正并清零
+EA_labor_clear = {
+	if = { limit = { has_dynamic_modifier = { modifier = EA_labor_market_modifier } } remove_dynamic_modifier = { modifier = EA_labor_market_modifier } }
+	clear_variable = EA_hidden_labor_var
+	clear_variable = EA_rural_labor_var
+	force_update_dynamic_modifier = yes
+}

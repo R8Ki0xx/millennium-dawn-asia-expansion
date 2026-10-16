@@ -1,0 +1,100 @@
+# MD ROC Return —— 朝鲜半岛路线
+
+# Scope: the ROC (CHI after the tag switch). Ends the CCP's aid to Pyongyang and the old CHI-NKO cooperation ideas.
+TAI_end_ccp_nko_aid = {
+	if = { limit = { has_idea = CHI_china_economic_assistant } remove_ideas = CHI_china_economic_assistant }
+	if = { limit = { has_idea = CHI_NKO_base } remove_ideas = CHI_NKO_base }
+	if = { limit = { has_idea = CHI_NKO_border_trade_idea } remove_ideas = CHI_NKO_border_trade_idea }
+	if = { limit = { has_idea = CHI_NKO_chinese_investments_idea } remove_ideas = CHI_NKO_chinese_investments_idea }
+	if = { limit = { has_idea = CHI_NKO_energy_supply_idea } remove_ideas = CHI_NKO_energy_supply_idea }
+	if = { limit = { has_idea = CHI_NKO_telecom_idea } remove_ideas = CHI_NKO_telecom_idea }
+	if = {
+		limit = { country_exists = NKO }
+		NKO = {
+			if = { limit = { has_idea = NKO_china_economic_assistant } remove_ideas = NKO_china_economic_assistant }
+			if = { limit = { has_idea = CHI_NKO_base } remove_ideas = CHI_NKO_base }
+			if = { limit = { has_idea = CHI_NKO_border_trade_idea } remove_ideas = CHI_NKO_border_trade_idea }
+			if = { limit = { has_idea = CHI_NKO_chinese_investments_idea } remove_ideas = CHI_NKO_chinese_investments_idea }
+			if = { limit = { has_idea = CHI_NKO_energy_supply_idea } remove_ideas = CHI_NKO_energy_supply_idea }
+			if = { limit = { has_idea = CHI_NKO_telecom_idea } remove_ideas = CHI_NKO_telecom_idea }
+			if = { limit = { has_dynamic_modifier = { modifier = CHI_NKO_shared_modifier } } remove_dynamic_modifier = { modifier = CHI_NKO_shared_modifier } }
+			remove_opinion_modifier = { target = ROOT modifier = mutual_trade_agreement }
+		}
+	}
+	set_country_flag = TAI_nko_aid_ended
+}
+
+# Scope: the ROC. Pro-China coup in Pyongyang: Kim Jong-nam (or a KPA junta) takes power and NKO becomes a puppet.
+TAI_pyongyang_coup_effect = {
+	NKO = {
+		if = { limit = { has_idea = NKO_china_economic_assistant } remove_ideas = NKO_china_economic_assistant }
+		kill_country_leader = yes
+		if = {
+			limit = { date < 2017.2.13 }
+			create_country_leader = {
+				name = "Kim Jong-nam"
+				picture = "Kim Jong-nam.dds"
+				desc = KIM_JONG_NAM_LEADER_DESC
+				ideology = communist_state
+				traits = {
+					emerging_communist_state
+					Reformer
+					pro_china
+				}
+			}
+		}
+		else = {
+			create_country_leader = {
+				name = TAI_nko_junta_leader
+				picture = "gen_Ri_Yong_Gil.dds"
+				ideology = communist_state
+				traits = {
+					emerging_communist_state
+					pro_china
+				}
+			}
+		}
+		add_ideas = TAI_nko_transition_idea
+		add_opinion_modifier = { target = ROOT modifier = TAI_nko_detente }
+	}
+	puppet = NKO
+}
+
+# Scope: the ROC. KOR grants access; ROC divisions are deployed around Seoul.
+TAI_station_troops_korea_effect = {
+	KOR = {
+		give_military_access = ROOT
+		add_ideas = TAI_roc_forces_in_korea_idea
+	}
+	add_ideas = TAI_roc_forces_korea_idea
+	if = {
+		limit = { NOT = { has_country_flag = TAI_korea_template_created } }
+		division_template = {
+			name = "ROC Forces Korea"
+			regiments = {
+				L_Inf_Bat = { x = 0 y = 0 }
+				L_Inf_Bat = { x = 0 y = 1 }
+				L_Inf_Bat = { x = 0 y = 2 }
+				L_Inf_Bat = { x = 1 y = 0 }
+				L_Inf_Bat = { x = 1 y = 1 }
+				L_Inf_Bat = { x = 1 y = 2 }
+			}
+			support = {
+				H_Engi_Comp = { x = 0 y = 0 }
+			}
+		}
+		set_country_flag = TAI_korea_template_created
+	}
+	604 = {
+		create_unit = {
+			division = "name = \"ROC Forces Korea\" division_template = \"ROC Forces Korea\" start_experience_factor = 0.5"
+			owner = ROOT
+			prioritize_location = 7221
+			count = 4
+			country_score = {
+				base = 0
+				modifier = { tag = KOR add = 100 }
+			}
+		}
+	}
+}
