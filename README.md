@@ -13,13 +13,14 @@ An alternative-history expansion for Millennium Dawn (Hearts of Iron IV): what i
 - **中朝联合国策**：与平壤妥协、与平壤决裂、中韩同盟，三选一。 / China–North Korea joint focuses (pick one).
 - **越南、菲律宾、叙利亚、巴基斯坦**：越南完整国策树，菲律宾政治线，叙利亚内战扩展（史实线与左翼线），巴基斯坦完整国策树（五个分支）。 / Full Vietnam and Pakistan focus trees, a Philippines political line, and an expanded Syrian civil war.
 - **国家精神、观感修正与事件**：包括光复南京、光复北平、半岛统一等事件。 / National spirits, opinion modifiers and events.
+- **中英双语**：完整的简体中文与英文本地化，英文客户端显示英文。 / Full Simplified Chinese and English localisation; the English client shows English text.
 
 ## 使用须知 / Requirements
 
 - **需要新开局，不兼容旧存档。** Start a new game; not compatible with older saves.
 - **依赖千禧黎明 2.0.2**，在启动器中排在千禧黎明之后。 Requires Millennium Dawn 2.0.2, loaded after it.
 - **会覆盖千禧的部分文件**：共 18 个文件（包括 `05_south_korea.txt`、`05_syria.txt`、`05_china.txt`、`05_hong_kong.txt`、`03_china_*_joint.txt` 等国策文件，以及决议、意识形态和脚本）。千禧黎明更新后，本模组可能需要等待兼容更新。 / Overrides 18 Millennium Dawn files; a future Millennium Dawn update may need a compatibility update.
-- **测试状态**：当前版本 3.33.1 尚未经过充分的游戏测试，平衡数值与 AI 行为可能有偏差。遇到报错请附上 `error.log` 反馈。 / Version 3.33.1 has not been fully tested in game; please report errors with your `error.log`.
+- **测试状态**：当前版本 3.34.0 尚未经过充分的游戏测试，平衡数值与 AI 行为可能有偏差。遇到报错请附上 `error.log` 反馈。 / Version 3.34.0 has not been fully tested in game; please report errors with your `error.log`.
 
 ## 致谢 / Credits
 
