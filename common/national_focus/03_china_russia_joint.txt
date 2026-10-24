@@ -2058,6 +2058,7 @@ joint_focus = {
 	}
 
 	completion_reward = {
+		country_event = { id = roc_v335.45 days = 20 }  # v3.35
 		log = "[GetDateText]: [Root.GetName]: Focus TAI_sov_border_demarcation"
 		if = {
 			limit = { has_country_flag = ROC_new_chi }
@@ -2105,6 +2106,7 @@ joint_focus = {
 	}
 
 	completion_reward = {
+		country_event = { id = roc_v335.46 days = 20 }  # v3.35
 		log = "[GetDateText]: [Root.GetName]: Focus TAI_sov_siberian_pipeline"
 		if = {
 			limit = { has_country_flag = ROC_new_chi }
@@ -2297,6 +2299,7 @@ joint_focus = {
 	}
 
 	completion_reward = {
+		country_event = { id = roc_v335.47 days = 20 }  # v3.35
 		log = "[GetDateText]: [Root.GetName]: Focus TAI_sov_northern_sea_route"
 		if = {
 			limit = { has_country_flag = ROC_new_chi }

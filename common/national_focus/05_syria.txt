@@ -11658,7 +11658,7 @@ focus_tree = {
 			original_tag = SYR
 		}
 		prerequisite = { focus = SYR_loyal_marriage }
-		mutually_exclusive = { focus = SYRB_SYRL_return_roots }
+		mutually_exclusive = { focus = SYRL_return_roots }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			has_country_leader = { name = "Bashar al-Assad" }
@@ -11961,7 +11961,7 @@ focus_tree = {
 			original_tag = SYR
 		}
 		prerequisite = { focus = SYR_bashar_al_assad }
-		mutually_exclusive = { focus = SYR_constitutional_amendment focus = SYRL_SYRB_consolidate }
+		mutually_exclusive = { focus = SYR_constitutional_amendment focus = SYRB_consolidate }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			has_country_leader = { name = "Bashar al-Assad" }

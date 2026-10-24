@@ -109,6 +109,8 @@ ROC_tag_switch = {
 		add_country_to_power_ranking = yes
 	}
 	if = { limit = { country_exists = NKO } NKO = { mark_focus_tree_layout_dirty = yes } }
+	# v3.35 俄罗斯的中俄联合国策同样要按光复后的 allow_branch 重新排布
+	if = { limit = { country_exists = SOV } SOV = { mark_focus_tree_layout_dirty = yes } }
 	CHI = {
 		# /v3.5
 			# /v3.4

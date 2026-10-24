@@ -69,6 +69,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_silicon_island }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			country_event = { id = roc_v335.1 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_hsinchu_expansion"
 			random_owned_controlled_state = {
 				limit = { is_core_of = ROOT }
@@ -369,6 +370,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_ten_new_constructions }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			country_event = { id = roc_v335.6 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_high_speed_rail"
 			random_owned_controlled_state = {
 				limit = { is_core_of = ROOT }
@@ -404,6 +406,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_ten_new_constructions }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			country_event = { id = roc_v335.3 days = 25 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_fourth_nuclear_plant"
 			random_owned_controlled_state = {
 				limit = { is_core_of = ROOT }
@@ -477,6 +480,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_fourth_nuclear_plant }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			country_event = { id = roc_v335.4 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_petrochemical"
 			random_owned_controlled_state = {
 				limit = { is_core_of = ROOT }
@@ -521,6 +525,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_port_expansion focus = TAI_petrochemical }
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		completion_reward = {
+			country_event = { id = roc_v335.5 days = 25 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_second_financial_reform"
 			add_ideas = TAI_financial_reform_idea
 			set_temp_variable = { treasury_change = 10 }
@@ -625,6 +630,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_three_links }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
 		completion_reward = {
+			country_event = { id = roc_v335.2 days = 30 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_cross_strait_ecfa"
 			set_temp_variable = { treasury_change = 10 }
 			modify_treasury_effect = yes
@@ -2243,6 +2249,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_army_reform }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
+			country_event = { id = roc_v335.8 days = 15 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_han_kuang_exercise"
 			add_ideas = TAI_han_kuang_idea
 			army_experience = 30
@@ -2268,6 +2275,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_army_reform }
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
+			country_event = { id = roc_v335.7 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_conscription_reform"
 			add_ideas = TAI_reserve_mobilization_idea
 			# v3.3
@@ -2288,6 +2296,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_han_kuang_exercise }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
+			country_event = { id = roc_v335.12 days = 15 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_marine_corps_expansion"
 			add_tech_bonus = { name = TAI_marine_corps_expansion bonus = 0.5 uses = 1 category = CAT_special_forces_equipment }
 			army_experience = 20
@@ -2483,6 +2492,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_hsiung_feng_missiles }
 		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			country_event = { id = roc_v335.9 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_indigenous_submarine"
 			add_tech_bonus = { name = TAI_indigenous_submarine bonus = 0.6 uses = 2 category = CAT_submarines }
 			navy_experience = 25
@@ -2609,6 +2619,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_air_force_modernization }
 		search_filters = { FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
+			country_event = { id = roc_v335.10 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_f16_upgrade"
 			add_tech_bonus = { name = TAI_f16_upgrade bonus = 0.5 uses = 1 category = CAT_medium_aircraft }
 			set_temp_variable = { treasury_change = -6 }
@@ -2686,6 +2697,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_f16_upgrade }
 		search_filters = { FOCUS_FILTER_AIRCRAFT FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			country_event = { id = roc_v335.11 days = 15 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_drone_program"
 			add_tech_bonus = { name = TAI_drone_program bonus = 0.6 uses = 2 category = CAT_air_drones }
 			# v3.3
@@ -2903,6 +2915,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_pragmatic_diplomacy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EQUIPMENT }
 		completion_reward = {
+			country_event = { id = roc_v335.15 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_us_arms_sales"
 			if = { limit = { country_exists = USA }
 				USA = { add_opinion_modifier = { target = ROOT modifier = TAI_arms_customer } }
@@ -2932,6 +2945,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_pragmatic_diplomacy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
+			country_event = { id = roc_v335.16 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_japan_partnership"
 			every_country = { limit = { OR = { tag = JAP } } add_opinion_modifier = { target = ROOT modifier = TAI_shared_values } }
 			add_tech_bonus = { name = TAI_japan_partnership bonus = 0.3 uses = 1 category = CAT_industry }
@@ -3025,6 +3039,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_secure_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
+			country_event = { id = roc_v335.13 days = 20 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_central_america_aid"
 			every_country = { limit = { OR = { tag = GUA tag = HON tag = NIC tag = ELS tag = PAN tag = BLZ tag = DOM tag = HAI tag = PAR } } add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } }
 			set_temp_variable = { treasury_change = -2 }
@@ -3184,6 +3199,7 @@ focus_tree = {
 		prerequisite = { focus = TAI_europe_relations focus = TAI_africa_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
+			country_event = { id = roc_v335.14 days = 15 }  # v3.35
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_who_bid"
 			add_stability = 0.02
 			add_political_power = 50

@@ -4,7 +4,7 @@ TAI_dbf_category = {
 	priority = 1980
 	allowed = { OR = { original_tag = CHI original_tag = TAI } }
 	visible = {
-		OR = { has_country_flag = ROC_new_chi tag = TAI }
+		has_country_flag = ROC_new_chi	# v3.35 光复前不显示
 		OR = {
 			has_dynamic_modifier = { modifier = TAI_dbf_black_gold }
 			has_dynamic_modifier = { modifier = TAI_dbf_isolation }

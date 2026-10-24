@@ -1,0 +1,96 @@
+﻿# MD ROC Return v3.35 —— 新事件给出的限时理念（由 _tools/v335/gen_events.py 生成）
+ideas = {
+	country = {
+		TAI_v335_fab_water_plan = {
+			picture = digitalize_idea
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		TAI_v335_ecfa_dividend = {
+			picture = chi_chinese_unity
+			modifier = {
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.02
+			}
+		}
+		TAI_v335_energy_transition = {
+			picture = digitalize_idea
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_v335_volunteer_force = {
+			picture = chi_chinese_unity
+			modifier = {
+				training_time_factor = -0.10
+				experience_gain_army_factor = 0.10
+			}
+		}
+		TAI_v335_drone_swarm = {
+			picture = digitalize_idea
+			modifier = {
+				army_attack_factor = 0.04
+				army_speed_factor = 0.05
+			}
+		}
+		TAI_v335_homegrown_arms = {
+			picture = digitalize_idea
+			modifier = {
+				industrial_capacity_factory = 0.03
+				research_speed_factor = 0.03
+			}
+		}
+		TAI_v335_soe_dividend = {
+			picture = chi_chinese_unity
+			modifier = {
+				industrial_capacity_factory = 0.06
+				stability_factor = -0.02
+			}
+		}
+		TAI_v335_northeast_revival = {
+			picture = chi_chinese_unity
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				stability_factor = 0.02
+			}
+		}
+		TAI_v335_taishang_dividend = {
+			picture = digitalize_idea
+			modifier = {
+				research_speed_factor = 0.04
+				industrial_capacity_factory = 0.03
+			}
+		}
+		TAI_v335_veteran_integration = {
+			picture = chi_chinese_unity
+			modifier = {
+				training_time_factor = -0.08
+				stability_factor = 0.02
+			}
+		}
+		TAI_v335_pipeline_dividend = {
+			picture = digitalize_idea
+			modifier = {
+				industrial_capacity_factory = 0.04
+				consumer_goods_factor = -0.02
+			}
+		}
+		TAI_v335_labor_pact = {
+			picture = chi_chinese_unity
+			modifier = {
+				stability_factor = 0.04
+				industrial_capacity_factory = -0.02
+			}
+		}
+		TAI_v335_coalition_honeymoon = {
+			picture = chi_chinese_unity
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.03
+			}
+		}
+	}
+}

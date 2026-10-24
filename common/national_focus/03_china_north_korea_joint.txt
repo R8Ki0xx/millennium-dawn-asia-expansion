@@ -1,14 +1,5 @@
 # v3.32 joint shifted (dx=-1, dy=7)
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
-# v3.15 stretched（民国树里的 offset 与 TAI_* 相对坐标已拉伸）
+# v3.35 民国树里的 offset 已手工重设（朝鲜联合分支放在俄罗斯联合分支右侧）。不要再跑 stretch_focus.py，它会把这个 offset 越推越大
 # Original Author(s): TheGeneral
 joint_focus = {
 	id = CHI_NKO_bilateral_cooperation
@@ -24,7 +15,7 @@ joint_focus = {
 	}
 
 	offset = {
-		x = 353
+		x = 78
 		y = -6
 		trigger = { has_focus_tree = TAI_roc_mainland_focus }
 	}
@@ -4353,6 +4344,7 @@ joint_focus = {
 		country_exists = NKO
 	}
 	completion_reward = {
+		country_event = { id = roc_v335.48 days = 15 }  # v3.35
 		if = {
 			limit = { has_country_flag = ROC_new_chi }
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_nko_defector_network"
@@ -4451,6 +4443,7 @@ joint_focus = {
 		country_exists = KOR
 	}
 	completion_reward = {
+		country_event = { id = roc_v335.49 days = 15 }  # v3.35
 		if = {
 			limit = { has_country_flag = ROC_new_chi }
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_rok_joint_command"
@@ -4489,6 +4482,7 @@ joint_focus = {
 		NOT = { has_war_with = NKO }
 	}
 	completion_reward = {
+		country_event = { id = roc_v335.50 days = 15 }  # v3.35
 		if = {
 			limit = { has_country_flag = ROC_new_chi }
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_yalu_economic_belt"

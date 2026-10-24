@@ -1,0 +1,1249 @@
+﻿# MD ROC Return v3.35 —— 给原先没有事件的国策分支补事件（由 _tools/v335/gen_events.py 生成）
+add_namespace = roc_v335
+
+country_event = {
+	id = roc_v335.1
+	title = roc_v335.1.t
+	desc = roc_v335.1.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.1.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.1.a"
+		add_timed_idea = { idea = TAI_v335_fab_water_plan days = 365 }
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = roc_v335.1.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.1.b"
+		add_stability = 0.03
+		add_political_power = -30
+		add_war_support = 0.01
+		ai_chance = { base = 40 }
+	}
+}
+
+country_event = {
+	id = roc_v335.2
+	title = roc_v335.2.t
+	desc = roc_v335.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.2.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.2.a"
+		add_timed_idea = { idea = TAI_v335_ecfa_dividend days = 365 }
+		add_stability = -0.03
+		set_temp_variable = { party_index = 2 } set_temp_variable = { party_popularity_increase = 0.02 } set_temp_variable = { temp_outlook_increase = 0.02 } change_relative_party_popularity = yes
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.2.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.2.b"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = -0.01 } set_temp_variable = { temp_outlook_increase = -0.01 } change_relative_party_popularity = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.3
+	title = roc_v335.3.t
+	desc = roc_v335.3.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.3.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.3.a"
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_stability = -0.03
+		add_political_power = 30
+		ai_chance = { base = 45 }
+	}
+	option = {
+		name = roc_v335.3.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.3.b"
+		add_stability = 0.03
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_energy_transition days = 365 }
+		ai_chance = { base = 55 }
+	}
+}
+
+country_event = {
+	id = roc_v335.4
+	title = roc_v335.4.t
+	desc = roc_v335.4.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.4.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.4.a"
+		add_stability = 0.03
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.4.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.4.b"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		add_political_power = 20
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.5
+	title = roc_v335.5.t
+	desc = roc_v335.5.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.5.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.5.a"
+		set_temp_variable = { treasury_change = 4 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		add_political_power = 25
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.5.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.5.b"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		set_temp_variable = { party_index = 2 } set_temp_variable = { party_popularity_increase = 0.01 } set_temp_variable = { temp_outlook_increase = 0.01 } change_relative_party_popularity = yes
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.6
+	title = roc_v335.6.t
+	desc = roc_v335.6.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.6.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.6.a"
+		set_temp_variable = { treasury_change = -5 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		add_political_power = 30
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.6.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.6.b"
+		add_stability = -0.01
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_political_power = -20
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.7
+	title = roc_v335.7.t
+	desc = roc_v335.7.d
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.7.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.7.a"
+		add_timed_idea = { idea = TAI_v335_volunteer_force days = 365 }
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.7.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.7.b"
+		add_war_support = 0.03
+		add_stability = -0.02
+		add_political_power = 20
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.8
+	title = roc_v335.8.t
+	desc = roc_v335.8.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.8.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.8.a"
+		add_war_support = 0.02
+		add_political_power = -25
+		add_stability = 0.02
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.8.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.8.b"
+		add_political_power = 15
+		add_stability = -0.02
+		add_war_support = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.9
+	title = roc_v335.9.t
+	desc = roc_v335.9.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.9.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.9.a"
+		set_temp_variable = { treasury_change = -5 }
+		modify_treasury_effect = yes
+		add_war_support = 0.03
+		add_political_power = 20
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.9.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.9.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_stability = 0.01
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.10
+	title = roc_v335.10.t
+	desc = roc_v335.10.d
+	picture = GFX_report_event_airplane_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.10.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.10.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_political_power = -20
+		add_war_support = 0.03
+		ai_chance = { base = 45 }
+	}
+	option = {
+		name = roc_v335.10.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.10.b"
+		add_stability = 0.02
+		add_political_power = -10
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 55 }
+	}
+}
+
+country_event = {
+	id = roc_v335.11
+	title = roc_v335.11.t
+	desc = roc_v335.11.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.11.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.11.a"
+		add_timed_idea = { idea = TAI_v335_drone_swarm days = 365 }
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.11.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.11.b"
+		add_war_support = 0.02
+		add_political_power = 15
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.12
+	title = roc_v335.12.t
+	desc = roc_v335.12.d
+	picture = GFX_report_event_chinese_soldiers
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.12.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.12.a"
+		add_stability = 0.02
+		add_war_support = -0.01
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.12.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.12.b"
+		add_war_support = 0.02
+		add_stability = -0.02
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.13
+	title = roc_v335.13.t
+	desc = roc_v335.13.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.13.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.13.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_political_power = 25
+		add_war_support = 0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.13.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.13.b"
+		set_temp_variable = { treasury_change = 1 }
+		modify_treasury_effect = yes
+		add_political_power = -15
+		add_stability = 0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.14
+	title = roc_v335.14.t
+	desc = roc_v335.14.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.14.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.14.a"
+		add_political_power = 20
+		add_stability = 0.01
+		add_war_support = 0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.14.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.14.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_political_power = 10
+		add_stability = 0.02
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.15
+	title = roc_v335.15.t
+	desc = roc_v335.15.d
+	picture = GFX_report_event_generic_lend_lease
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.15.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.15.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_war_support = 0.03
+		add_political_power = 15
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.15.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.15.b"
+		add_timed_idea = { idea = TAI_v335_homegrown_arms days = 365 }
+		add_stability = 0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.16
+	title = roc_v335.16.t
+	desc = roc_v335.16.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.16.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.16.a"
+		add_political_power = 25
+		add_war_support = 0.01
+		add_stability = -0.02
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.16.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.16.b"
+		add_stability = 0.03
+		add_political_power = -20
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.17
+	title = roc_v335.17.t
+	desc = roc_v335.17.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.17.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.17.a"
+		add_timed_idea = { idea = TAI_v335_soe_dividend days = 365 }
+		add_stability = -0.03
+		set_temp_variable = { treasury_change = 4 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.17.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.17.b"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_political_power = 20
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.18
+	title = roc_v335.18.t
+	desc = roc_v335.18.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.18.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.18.a"
+		add_stability = 0.03
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_political_power = -20
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.18.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.18.b"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		add_political_power = 15
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.19
+	title = roc_v335.19.t
+	desc = roc_v335.19.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.19.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.19.a"
+		set_temp_variable = { treasury_change = -5 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_northeast_revival days = 365 }
+		add_stability = 0.02
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.19.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.19.b"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		add_political_power = 25
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.20
+	title = roc_v335.20.t
+	desc = roc_v335.20.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.20.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.20.a"
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		add_political_power = 15
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.20.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.20.b"
+		set_temp_variable = { treasury_change = -6 }
+		modify_treasury_effect = yes
+		add_political_power = 30
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.21
+	title = roc_v335.21.t
+	desc = roc_v335.21.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.21.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.21.a"
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+		add_political_power = 15
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.21.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.21.b"
+		add_stability = 0.01
+		add_political_power = -10
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.22
+	title = roc_v335.22.t
+	desc = roc_v335.22.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.22.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.22.a"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_taishang_dividend days = 365 }
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.22.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.22.b"
+		add_stability = 0.02
+		add_political_power = 15
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.23
+	title = roc_v335.23.t
+	desc = roc_v335.23.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.23.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.23.a"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		add_political_power = -20
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.23.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.23.b"
+		add_political_power = 25
+		add_stability = -0.02
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.24
+	title = roc_v335.24.t
+	desc = roc_v335.24.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.24.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.24.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+		add_political_power = 15
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.24.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.24.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_stability = 0.01
+		add_political_power = 20
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.25
+	title = roc_v335.25.t
+	desc = roc_v335.25.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.25.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.25.a"
+		add_timed_idea = { idea = TAI_v335_pipeline_dividend days = 365 }
+		set_temp_variable = { treasury_change = 1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.25.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.25.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.26
+	title = roc_v335.26.t
+	desc = roc_v335.26.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.26.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.26.a"
+		set_temp_variable = { treasury_change = -6 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+		add_political_power = 25
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.26.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.26.b"
+		add_stability = -0.03
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.27
+	title = roc_v335.27.t
+	desc = roc_v335.27.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.27.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.27.a"
+		add_war_support = 0.02
+		add_stability = -0.02
+		add_political_power = 20
+		ai_chance = { base = 45 }
+	}
+	option = {
+		name = roc_v335.27.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.27.b"
+		add_timed_idea = { idea = TAI_v335_veteran_integration days = 365 }
+		add_political_power = -15
+		ai_chance = { base = 55 }
+	}
+}
+
+country_event = {
+	id = roc_v335.28
+	title = roc_v335.28.t
+	desc = roc_v335.28.d
+	picture = GFX_report_event_chinese_army_training
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.28.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.28.a"
+		add_stability = 0.02
+		add_war_support = 0.02
+		add_political_power = 10
+		ai_chance = { base = 45 }
+	}
+	option = {
+		name = roc_v335.28.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.28.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_veteran_integration days = 365 }
+		ai_chance = { base = 55 }
+	}
+}
+
+country_event = {
+	id = roc_v335.29
+	title = roc_v335.29.t
+	desc = roc_v335.29.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.29.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.29.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_stability = 0.03
+		add_political_power = 10
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.29.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.29.b"
+		add_timed_idea = { idea = TAI_v335_veteran_integration days = 365 }
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.30
+	title = roc_v335.30.t
+	desc = roc_v335.30.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.30.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.30.a"
+		add_war_support = 0.02
+		add_stability = -0.02
+		add_political_power = 20
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.30.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.30.b"
+		add_stability = 0.02
+		add_political_power = -10
+		add_war_support = 0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.31
+	title = roc_v335.31.t
+	desc = roc_v335.31.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.31.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.31.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_war_support = 0.02
+		add_political_power = 15
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.31.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.31.b"
+		add_stability = 0.01
+		add_political_power = 10
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.32
+	title = roc_v335.32.t
+	desc = roc_v335.32.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.32.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.32.a"
+		add_war_support = 0.03
+		add_stability = -0.02
+		add_political_power = 20
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = roc_v335.32.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.32.b"
+		add_stability = 0.03
+		add_political_power = 15
+		add_war_support = -0.01
+		ai_chance = { base = 60 }
+	}
+}
+
+country_event = {
+	id = roc_v335.33
+	title = roc_v335.33.t
+	desc = roc_v335.33.d
+	picture = GFX_report_event_airplane_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.33.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.33.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_war_support = 0.02
+		add_stability = -0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.33.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.33.b"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.34
+	title = roc_v335.34.t
+	desc = roc_v335.34.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.34.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.34.a"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_war_support = 0.02
+		add_political_power = 15
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.34.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.34.b"
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_stability = -0.01
+		add_timed_idea = { idea = TAI_v335_homegrown_arms days = 365 }
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.35
+	title = roc_v335.35.t
+	desc = roc_v335.35.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.35.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.35.a"
+		add_stability = 0.02
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = 0.01 } set_temp_variable = { temp_outlook_increase = 0.01 } change_relative_party_popularity = yes
+		add_political_power = -15
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.35.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.35.b"
+		add_political_power = 20
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = -0.01 } set_temp_variable = { temp_outlook_increase = -0.01 } change_relative_party_popularity = yes
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.36
+	title = roc_v335.36.t
+	desc = roc_v335.36.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.36.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.36.a"
+		add_stability = 0.03
+		set_temp_variable = { party_index = 1 } set_temp_variable = { party_popularity_increase = -0.01 } set_temp_variable = { temp_outlook_increase = -0.01 } change_relative_party_popularity = yes
+		add_war_support = -0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.36.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.36.b"
+		add_war_support = 0.02
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.37
+	title = roc_v335.37.t
+	desc = roc_v335.37.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.37.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.37.a"
+		add_stability = 0.02
+		set_temp_variable = { party_index = 2 } set_temp_variable = { party_popularity_increase = 0.02 } set_temp_variable = { temp_outlook_increase = 0.02 } change_relative_party_popularity = yes
+		add_political_power = -20
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.37.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.37.b"
+		add_political_power = 20
+		set_temp_variable = { party_index = 2 } set_temp_variable = { party_popularity_increase = -0.01 } set_temp_variable = { temp_outlook_increase = -0.01 } change_relative_party_popularity = yes
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.38
+	title = roc_v335.38.t
+	desc = roc_v335.38.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.38.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.38.a"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		set_temp_variable = { party_index = 2 } set_temp_variable = { party_popularity_increase = 0.01 } set_temp_variable = { temp_outlook_increase = 0.01 } change_relative_party_popularity = yes
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.38.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.38.b"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_political_power = 15
+		add_stability = -0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.39
+	title = roc_v335.39.t
+	desc = roc_v335.39.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.39.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.39.a"
+		add_stability = 0.03
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_labor_pact days = 365 }
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.39.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.39.b"
+		add_stability = 0.01
+		set_temp_variable = { treasury_change = 1 }
+		modify_treasury_effect = yes
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.40
+	title = roc_v335.40.t
+	desc = roc_v335.40.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.40.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.40.a"
+		add_stability = 0.02
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_political_power = -15
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.40.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.40.b"
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		add_stability = 0.01
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.41
+	title = roc_v335.41.t
+	desc = roc_v335.41.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.41.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.41.a"
+		add_timed_idea = { idea = TAI_v335_coalition_honeymoon days = 365 }
+		add_stability = 0.02
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.41.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.41.b"
+		add_political_power = 25
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.42
+	title = roc_v335.42.t
+	desc = roc_v335.42.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.42.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.42.a"
+		add_stability = -0.02
+		add_political_power = 20
+		add_war_support = 0.01
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = roc_v335.42.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.42.b"
+		add_stability = 0.03
+		add_political_power = -15
+		ai_chance = { base = 60 }
+	}
+}
+
+country_event = {
+	id = roc_v335.43
+	title = roc_v335.43.t
+	desc = roc_v335.43.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.43.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.43.a"
+		add_stability = 0.02
+		add_political_power = 15
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.43.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.43.b"
+		add_stability = -0.01
+		add_political_power = -10
+		add_war_support = 0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.44
+	title = roc_v335.44.t
+	desc = roc_v335.44.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.44.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.44.a"
+		set_temp_variable = { treasury_change = 3 }
+		modify_treasury_effect = yes
+		add_stability = -0.02
+		add_political_power = 15
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.44.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.44.b"
+		set_temp_variable = { treasury_change = 1 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.45
+	title = roc_v335.45.t
+	desc = roc_v335.45.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.45.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.45.a"
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_political_power = 15
+		add_stability = -0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.45.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.45.b"
+		add_war_support = 0.02
+		add_political_power = -10
+		add_stability = 0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.46
+	title = roc_v335.46.t
+	desc = roc_v335.46.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.46.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.46.a"
+		set_temp_variable = { treasury_change = -3 }
+		modify_treasury_effect = yes
+		add_timed_idea = { idea = TAI_v335_pipeline_dividend days = 365 }
+		add_political_power = 10
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.46.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.46.b"
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_political_power = 15
+		add_stability = -0.01
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.47
+	title = roc_v335.47.t
+	desc = roc_v335.47.d
+	picture = GFX_report_event_generic_naval_treaty
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.47.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.47.a"
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_political_power = 15
+		add_stability = 0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.47.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.47.b"
+		set_temp_variable = { treasury_change = -4 }
+		modify_treasury_effect = yes
+		add_political_power = 20
+		add_timed_idea = { idea = TAI_v335_pipeline_dividend days = 365 }
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.48
+	title = roc_v335.48.t
+	desc = roc_v335.48.d
+	picture = GFX_report_event_china_infiltration
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.48.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.48.a"
+		add_political_power = 20
+		add_war_support = 0.01
+		add_stability = -0.01
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = roc_v335.48.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.48.b"
+		add_stability = 0.02
+		add_political_power = -10
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	id = roc_v335.49
+	title = roc_v335.49.t
+	desc = roc_v335.49.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.49.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.49.a"
+		add_war_support = 0.02
+		set_temp_variable = { treasury_change = -2 }
+		modify_treasury_effect = yes
+		add_political_power = 10
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.49.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.49.b"
+		add_war_support = 0.01
+		add_political_power = 20
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
+
+country_event = {
+	id = roc_v335.50
+	title = roc_v335.50.t
+	desc = roc_v335.50.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+	option = {
+		name = roc_v335.50.a
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.50.a"
+		set_temp_variable = { treasury_change = 2 }
+		modify_treasury_effect = yes
+		add_stability = 0.01
+		add_political_power = 10
+		ai_chance = { base = 55 }
+	}
+	option = {
+		name = roc_v335.50.b
+		log = "[GetDateText]: [Root.GetName]: event roc_v335.50.b"
+		set_temp_variable = { treasury_change = -1 }
+		modify_treasury_effect = yes
+		add_political_power = 15
+		add_stability = -0.01
+		ai_chance = { base = 45 }
+	}
+}
