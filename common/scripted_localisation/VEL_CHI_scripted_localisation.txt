@@ -1,0 +1,59 @@
+﻿# MD ROC Return v3.36 —— CHI 选举界面的动态文字（由 _tools/v336/gen_vel_gui.py 生成）
+defined_text = {
+	name = VEL_CHI_sel_name
+	text = { trigger = { check_variable = { VEL_CHI_sel = 1 } } localization_key = VEL_CHI_name_1 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 2 } } localization_key = VEL_CHI_name_2 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 3 } } localization_key = VEL_CHI_name_3 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 4 } } localization_key = VEL_CHI_name_4 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 5 } } localization_key = VEL_CHI_name_5 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 6 } } localization_key = VEL_CHI_name_6 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 7 } } localization_key = VEL_CHI_name_7 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 8 } } localization_key = VEL_CHI_name_8 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 9 } } localization_key = VEL_CHI_name_9 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 10 } } localization_key = VEL_CHI_name_10 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 11 } } localization_key = VEL_CHI_name_11 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 12 } } localization_key = VEL_CHI_name_12 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 13 } } localization_key = VEL_CHI_name_13 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 14 } } localization_key = VEL_CHI_name_14 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 15 } } localization_key = VEL_CHI_name_15 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 16 } } localization_key = VEL_CHI_name_16 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 17 } } localization_key = VEL_CHI_name_17 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 18 } } localization_key = VEL_CHI_name_18 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 19 } } localization_key = VEL_CHI_name_19 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 20 } } localization_key = VEL_CHI_name_20 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 21 } } localization_key = VEL_CHI_name_21 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 22 } } localization_key = VEL_CHI_name_22 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 23 } } localization_key = VEL_CHI_name_23 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 24 } } localization_key = VEL_CHI_name_24 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 25 } } localization_key = VEL_CHI_name_25 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 26 } } localization_key = VEL_CHI_name_26 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 27 } } localization_key = VEL_CHI_name_27 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 28 } } localization_key = VEL_CHI_name_28 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 29 } } localization_key = VEL_CHI_name_29 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 30 } } localization_key = VEL_CHI_name_30 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 31 } } localization_key = VEL_CHI_name_31 }
+	text = { trigger = { check_variable = { VEL_CHI_sel = 32 } } localization_key = VEL_CHI_name_32 }
+	text = { localization_key = VEL_CHI_name_none }
+}
+defined_text = {
+	name = VEL_CHI_phase_text
+	text = { trigger = { check_variable = { VEL_CHI_phase = 0 } } localization_key = VEL_CHI_phase_0 }
+	text = { trigger = { check_variable = { VEL_CHI_phase = 1 } } localization_key = VEL_CHI_phase_1 }
+	text = { trigger = { check_variable = { VEL_CHI_phase = 2 } } localization_key = VEL_CHI_phase_2 }
+	text = { trigger = { check_variable = { VEL_CHI_phase = 3 } } localization_key = VEL_CHI_phase_3 }
+}
+defined_text = {
+	name = VEL_CHI_view_text
+	text = { trigger = { check_variable = { VEL_CHI_view = 2 } } localization_key = VEL_CHI_view_2 }
+	text = { localization_key = VEL_CHI_view_1 }
+}
+defined_text = {
+	name = VEL_CHI_main_name
+	text = { trigger = { check_variable = { VEL_CHI_main = 1 } } localization_key = VEL_CHI_issue_1 }
+	text = { trigger = { check_variable = { VEL_CHI_main = 2 } } localization_key = VEL_CHI_issue_2 }
+	text = { trigger = { check_variable = { VEL_CHI_main = 3 } } localization_key = VEL_CHI_issue_3 }
+	text = { trigger = { check_variable = { VEL_CHI_main = 4 } } localization_key = VEL_CHI_issue_4 }
+	text = { trigger = { check_variable = { VEL_CHI_main = 5 } } localization_key = VEL_CHI_issue_5 }
+	text = { trigger = { check_variable = { VEL_CHI_main = 6 } } localization_key = VEL_CHI_issue_6 }
+	text = { localization_key = VEL_CHI_issue_none }
+}

@@ -1,0 +1,117 @@
+﻿# MD ROC Return v3.36 —— 选举界面精灵图（CHI）。由 _tools/v336/gen_vel_gui.py 生成。
+spriteTypes = {
+	spriteType = { name = "GFX_VEL_CHI_bg" texturefile = "gfx/interface/scripted_gui/VEL/CHI_bg.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_base" texturefile = "gfx/interface/scripted_gui/VEL/CHI_base.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_CHI.dds" noOfFrames = 5 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_btn_l" texturefile = "gfx/interface/scripted_gui/VEL/btn_l.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_btn_m" texturefile = "gfx/interface/scripted_gui/VEL/btn_m.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_1" texturefile = "gfx/interface/scripted_gui/VEL/CHI_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_1_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_1_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_2" texturefile = "gfx/interface/scripted_gui/VEL/CHI_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_2_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_2_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_3" texturefile = "gfx/interface/scripted_gui/VEL/CHI_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_3_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_3_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_4" texturefile = "gfx/interface/scripted_gui/VEL/CHI_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_4_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_4_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_5" texturefile = "gfx/interface/scripted_gui/VEL/CHI_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_5_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_5_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_6" texturefile = "gfx/interface/scripted_gui/VEL/CHI_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_6_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_6_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_7" texturefile = "gfx/interface/scripted_gui/VEL/CHI_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_7_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_7_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_8" texturefile = "gfx/interface/scripted_gui/VEL/CHI_8.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_8_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_8_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_9" texturefile = "gfx/interface/scripted_gui/VEL/CHI_9.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_9_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_9_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_10" texturefile = "gfx/interface/scripted_gui/VEL/CHI_10.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_10_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_10_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_11" texturefile = "gfx/interface/scripted_gui/VEL/CHI_11.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_11_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_11_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_12" texturefile = "gfx/interface/scripted_gui/VEL/CHI_12.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_12_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_12_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_13" texturefile = "gfx/interface/scripted_gui/VEL/CHI_13.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_13_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_13_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_14" texturefile = "gfx/interface/scripted_gui/VEL/CHI_14.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_14_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_14_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_15" texturefile = "gfx/interface/scripted_gui/VEL/CHI_15.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_15_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_15_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_16" texturefile = "gfx/interface/scripted_gui/VEL/CHI_16.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_16_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_16_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_17" texturefile = "gfx/interface/scripted_gui/VEL/CHI_17.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_17_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_17_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_18" texturefile = "gfx/interface/scripted_gui/VEL/CHI_18.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_18_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_18_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_19" texturefile = "gfx/interface/scripted_gui/VEL/CHI_19.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_19_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_19_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_20" texturefile = "gfx/interface/scripted_gui/VEL/CHI_20.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_20_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_20_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_21" texturefile = "gfx/interface/scripted_gui/VEL/CHI_21.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_21_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_21_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_22" texturefile = "gfx/interface/scripted_gui/VEL/CHI_22.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_22_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_22_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_23" texturefile = "gfx/interface/scripted_gui/VEL/CHI_23.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_23_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_23_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_24" texturefile = "gfx/interface/scripted_gui/VEL/CHI_24.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_24_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_24_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_25" texturefile = "gfx/interface/scripted_gui/VEL/CHI_25.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_25_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_25_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_26" texturefile = "gfx/interface/scripted_gui/VEL/CHI_26.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_26_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_26_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_27" texturefile = "gfx/interface/scripted_gui/VEL/CHI_27.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_27_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_27_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_28" texturefile = "gfx/interface/scripted_gui/VEL/CHI_28.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_28_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_28_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_29" texturefile = "gfx/interface/scripted_gui/VEL/CHI_29.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_29_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_29_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_30" texturefile = "gfx/interface/scripted_gui/VEL/CHI_30.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_30_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_30_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_31" texturefile = "gfx/interface/scripted_gui/VEL/CHI_31.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_31_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_31_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_32" texturefile = "gfx/interface/scripted_gui/VEL/CHI_32.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_32_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHI_32_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	progressBarType = {
+		name = "GFX_VEL_CHI_tbar_1"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_CHI_1.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
+		size = { x = 180 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_VEL_CHI_tbar_2"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_CHI_2.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
+		size = { x = 180 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_VEL_CHI_tbar_3"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_CHI_3.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
+		size = { x = 180 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_VEL_CHI_tbar_4"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_CHI_4.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
+		size = { x = 180 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressBarType = {
+		name = "GFX_VEL_CHI_tbar_5"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_CHI_5.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
+		size = { x = 180 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

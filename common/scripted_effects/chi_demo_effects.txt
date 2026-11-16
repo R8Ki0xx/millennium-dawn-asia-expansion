@@ -1,0 +1,18 @@
+﻿# MD ROC Return v3.36 —— 中国民主化路线的效果（由 _tools/v336/vel_demo.py 生成）
+# Scope: CHI。和平统一线走到最后：向台湾发出联邦提案（台湾已被并入或不存在则跳过）
+CHI_demo_unify_taiwan = {
+	if = {
+		limit = { country_exists = TAI NOT = { has_country_flag = CHI_demo_taiwan_joined } }
+		TAI = { country_event = { id = chi_demo.8 days = 2 } }
+	}
+}
+
+# Scope: CHI。民主化路线的三条线任一条走完后调用：打开选举，并启动第一次可视化选举
+CHI_demo_finish = {
+	set_country_flag = CHI_demo_done
+	set_country_flag = CHI_demo_path_done
+	set_politics = { elections_allowed = yes }
+	add_political_power = 100
+	add_timed_idea = { idea = CHI_demo_transition_idea days = 730 }
+	country_event = { id = chi_demo.1 days = 1 }
+}

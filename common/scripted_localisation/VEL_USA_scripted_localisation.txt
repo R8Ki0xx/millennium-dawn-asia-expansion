@@ -1,0 +1,78 @@
+﻿# MD ROC Return v3.36 —— USA 选举界面的动态文字（由 _tools/v336/gen_vel_gui.py 生成）
+defined_text = {
+	name = VEL_USA_sel_name
+	text = { trigger = { check_variable = { VEL_USA_sel = 1 } } localization_key = VEL_USA_name_1 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 2 } } localization_key = VEL_USA_name_2 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 3 } } localization_key = VEL_USA_name_3 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 4 } } localization_key = VEL_USA_name_4 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 5 } } localization_key = VEL_USA_name_5 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 6 } } localization_key = VEL_USA_name_6 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 7 } } localization_key = VEL_USA_name_7 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 8 } } localization_key = VEL_USA_name_8 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 9 } } localization_key = VEL_USA_name_9 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 10 } } localization_key = VEL_USA_name_10 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 11 } } localization_key = VEL_USA_name_11 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 12 } } localization_key = VEL_USA_name_12 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 13 } } localization_key = VEL_USA_name_13 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 14 } } localization_key = VEL_USA_name_14 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 15 } } localization_key = VEL_USA_name_15 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 16 } } localization_key = VEL_USA_name_16 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 17 } } localization_key = VEL_USA_name_17 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 18 } } localization_key = VEL_USA_name_18 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 19 } } localization_key = VEL_USA_name_19 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 20 } } localization_key = VEL_USA_name_20 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 21 } } localization_key = VEL_USA_name_21 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 22 } } localization_key = VEL_USA_name_22 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 23 } } localization_key = VEL_USA_name_23 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 24 } } localization_key = VEL_USA_name_24 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 25 } } localization_key = VEL_USA_name_25 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 26 } } localization_key = VEL_USA_name_26 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 27 } } localization_key = VEL_USA_name_27 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 28 } } localization_key = VEL_USA_name_28 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 29 } } localization_key = VEL_USA_name_29 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 30 } } localization_key = VEL_USA_name_30 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 31 } } localization_key = VEL_USA_name_31 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 32 } } localization_key = VEL_USA_name_32 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 33 } } localization_key = VEL_USA_name_33 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 34 } } localization_key = VEL_USA_name_34 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 35 } } localization_key = VEL_USA_name_35 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 36 } } localization_key = VEL_USA_name_36 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 37 } } localization_key = VEL_USA_name_37 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 38 } } localization_key = VEL_USA_name_38 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 39 } } localization_key = VEL_USA_name_39 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 40 } } localization_key = VEL_USA_name_40 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 41 } } localization_key = VEL_USA_name_41 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 42 } } localization_key = VEL_USA_name_42 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 43 } } localization_key = VEL_USA_name_43 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 44 } } localization_key = VEL_USA_name_44 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 45 } } localization_key = VEL_USA_name_45 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 46 } } localization_key = VEL_USA_name_46 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 47 } } localization_key = VEL_USA_name_47 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 48 } } localization_key = VEL_USA_name_48 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 49 } } localization_key = VEL_USA_name_49 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 50 } } localization_key = VEL_USA_name_50 }
+	text = { trigger = { check_variable = { VEL_USA_sel = 51 } } localization_key = VEL_USA_name_51 }
+	text = { localization_key = VEL_USA_name_none }
+}
+defined_text = {
+	name = VEL_USA_phase_text
+	text = { trigger = { check_variable = { VEL_USA_phase = 0 } } localization_key = VEL_USA_phase_0 }
+	text = { trigger = { check_variable = { VEL_USA_phase = 1 } } localization_key = VEL_USA_phase_1 }
+	text = { trigger = { check_variable = { VEL_USA_phase = 2 } } localization_key = VEL_USA_phase_2 }
+	text = { trigger = { check_variable = { VEL_USA_phase = 3 } } localization_key = VEL_USA_phase_3 }
+}
+defined_text = {
+	name = VEL_USA_view_text
+	text = { trigger = { check_variable = { VEL_USA_view = 2 } } localization_key = VEL_USA_view_2 }
+	text = { localization_key = VEL_USA_view_1 }
+}
+defined_text = {
+	name = VEL_USA_main_name
+	text = { trigger = { check_variable = { VEL_USA_main = 1 } } localization_key = VEL_USA_issue_1 }
+	text = { trigger = { check_variable = { VEL_USA_main = 2 } } localization_key = VEL_USA_issue_2 }
+	text = { trigger = { check_variable = { VEL_USA_main = 3 } } localization_key = VEL_USA_issue_3 }
+	text = { trigger = { check_variable = { VEL_USA_main = 4 } } localization_key = VEL_USA_issue_4 }
+	text = { trigger = { check_variable = { VEL_USA_main = 5 } } localization_key = VEL_USA_issue_5 }
+	text = { trigger = { check_variable = { VEL_USA_main = 6 } } localization_key = VEL_USA_issue_6 }
+	text = { localization_key = VEL_USA_issue_none }
+}

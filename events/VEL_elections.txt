@@ -1,0 +1,290 @@
+﻿# MD ROC Return v3.36 —— 可视化选举的流程事件（由 _tools/v336/vel_events.py 生成）
+add_namespace = VEL_CHI
+add_namespace = VEL_USA
+
+country_event = {
+	id = VEL_CHI.1
+	title = VEL_CHI.1.t
+	desc = VEL_CHI.1.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	immediate = {
+		VEL_CHI_init = yes
+		VEL_CHI_reset = yes
+		set_country_flag = VEL_CHI_campaign
+		country_event = { id = VEL_CHI.2 days = 30 }
+		country_event = { id = VEL_CHI.3 days = 60 }
+	}
+	option = {
+		name = VEL_CHI.1.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_CHI.2
+	title = VEL_CHI.2.t
+	desc = VEL_CHI.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = VEL_CHI.2.a
+		set_temp_variable = { vel_issue = 2 }
+		VEL_CHI_set_main_issue = yes
+		ai_chance = { base = 34 }
+	}
+	option = {
+		name = VEL_CHI.2.b
+		set_temp_variable = { vel_issue = 3 }
+		VEL_CHI_set_main_issue = yes
+		ai_chance = { base = 33 }
+	}
+	option = {
+		name = VEL_CHI.2.c
+		set_temp_variable = { vel_issue = 1 }
+		VEL_CHI_set_main_issue = yes
+		add_war_support = 0.02
+		ai_chance = { base = 33 }
+	}
+}
+
+country_event = {
+	id = VEL_CHI.3
+	title = VEL_CHI.3.t
+	desc = VEL_CHI.3.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = VEL_CHI_campaign
+		VEL_CHI_run_result = yes
+		country_event = { id = VEL_CHI.4 hours = 6 }
+	}
+	option = {
+		name = VEL_CHI.3.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_CHI.4
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		VEL_CHI_reveal_step = yes
+		if = { limit = { check_variable = { VEL_CHI_done = 1 } } country_event = { id = VEL_CHI.5 days = 1 } }
+		else = { country_event = { id = VEL_CHI.4 hours = 6 } }
+	}
+	option = { name = VEL_hidden_option }
+}
+
+country_event = {
+	id = VEL_CHI.5
+	title = VEL_CHI.5.t
+	desc = VEL_CHI.5.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = VEL_CHI.5.a
+		VEL_CHI_apply_result = yes
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.1
+	title = VEL_USA.1.t
+	desc = VEL_USA.1.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	immediate = {
+		VEL_USA_init = yes
+		VEL_USA_reset = yes
+		set_country_flag = VEL_USA_campaign
+		country_event = { id = VEL_USA.2 days = 25 }
+		country_event = { id = VEL_USA.3 days = 40 }
+		country_event = { id = VEL_USA.4 days = 80 }
+		country_event = { id = VEL_USA.5 days = 125 }
+	}
+	option = {
+		name = VEL_USA.1.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.2
+	title = VEL_USA.2.t
+	desc = VEL_USA.2.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = VEL_USA.2.a
+		add_to_variable = { VEL_USA_pos^0 = 1 }
+		add_to_variable = { VEL_USA_pos^3 = 1 }
+		add_to_variable = { VEL_USA_pos^2 = -1 }
+		add_to_variable = { VEL_USA_aff^3 = 1.0 }
+		add_to_variable = { VEL_USA_cand^0 = 0.02 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+	option = {
+		name = VEL_USA.2.b
+		add_to_variable = { VEL_USA_pos^2 = 2 }
+		add_to_variable = { VEL_USA_pos^0 = -1 }
+		add_to_variable = { VEL_USA_pos^3 = -2 }
+		add_to_variable = { VEL_USA_pos^4 = 1 }
+		add_to_variable = { VEL_USA_aff^0 = 1.5 }
+		add_to_variable = { VEL_USA_aff^6 = 1.0 }
+		add_to_variable = { VEL_USA_aff^3 = -1.0 }
+		add_to_variable = { VEL_USA_cand^0 = 0.03 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+	option = {
+		name = VEL_USA.2.c
+		add_to_variable = { VEL_USA_pos^4 = -2 }
+		add_to_variable = { VEL_USA_pos^2 = -2 }
+		add_to_variable = { VEL_USA_pos^5 = 1 }
+		add_to_variable = { VEL_USA_pos^0 = -1 }
+		add_to_variable = { VEL_USA_aff^3 = 1.5 }
+		add_to_variable = { VEL_USA_aff^21 = 0.5 }
+		add_to_variable = { VEL_USA_aff^6 = -1.0 }
+		add_to_variable = { VEL_USA_cand^0 = 0.0 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.3
+	title = VEL_USA.3.t
+	desc = VEL_USA.3.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = VEL_USA.3.a
+		add_to_variable = { VEL_USA_pos^7 = 1 }
+		add_to_variable = { VEL_USA_pos^11 = 1 }
+		add_to_variable = { VEL_USA_pos^10 = 1 }
+		add_to_variable = { VEL_USA_pos^8 = -1 }
+		add_to_variable = { VEL_USA_pos^6 = -1 }
+		add_to_variable = { VEL_USA_aff^19 = 2.0 }
+		add_to_variable = { VEL_USA_aff^10 = 0.5 }
+		add_to_variable = { VEL_USA_aff^22 = -1.0 }
+		add_to_variable = { VEL_USA_cand^1 = 0.0 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+	option = {
+		name = VEL_USA.3.b
+		add_to_variable = { VEL_USA_pos^7 = -1 }
+		add_to_variable = { VEL_USA_pos^10 = -1 }
+		add_to_variable = { VEL_USA_aff^22 = 1.0 }
+		add_to_variable = { VEL_USA_aff^4 = 0.5 }
+		add_to_variable = { VEL_USA_cand^1 = 0.02 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+	option = {
+		name = VEL_USA.3.c
+		add_to_variable = { VEL_USA_pos^10 = -2 }
+		add_to_variable = { VEL_USA_pos^6 = 1 }
+		add_to_variable = { VEL_USA_pos^8 = 1 }
+		add_to_variable = { VEL_USA_aff^10 = 1.0 }
+		add_to_variable = { VEL_USA_aff^7 = 1.0 }
+		add_to_variable = { VEL_USA_aff^1 = 1.0 }
+		add_to_variable = { VEL_USA_aff^19 = -1.0 }
+		add_to_variable = { VEL_USA_cand^1 = 0.01 }
+		VEL_USA_run_poll = yes
+		ai_chance = { base = 33 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.4
+	title = VEL_USA.4.t
+	desc = VEL_USA.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = VEL_USA.4.a
+		set_temp_variable = { vel_issue = 1 }
+		VEL_USA_set_main_issue = yes
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = VEL_USA.4.b
+		set_temp_variable = { vel_issue = 2 }
+		VEL_USA_set_main_issue = yes
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = VEL_USA.4.c
+		set_temp_variable = { vel_issue = 3 }
+		VEL_USA_set_main_issue = yes
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = VEL_USA.4.d
+		set_temp_variable = { vel_issue = 4 }
+		VEL_USA_set_main_issue = yes
+		ai_chance = { base = 25 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.5
+	title = VEL_USA.5.t
+	desc = VEL_USA.5.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = VEL_USA_campaign
+		VEL_USA_run_result = yes
+		country_event = { id = VEL_USA.6 hours = 6 }
+	}
+	option = {
+		name = VEL_USA.5.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.6
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		VEL_USA_reveal_step = yes
+		if = { limit = { check_variable = { VEL_USA_done = 1 } } country_event = { id = VEL_USA.7 days = 1 } }
+		else = { country_event = { id = VEL_USA.6 hours = 6 } }
+	}
+	option = { name = VEL_hidden_option }
+}
+
+country_event = {
+	id = VEL_USA.7
+	title = VEL_USA.7.t
+	desc = VEL_USA.7.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	option = {
+		name = VEL_USA.7.a
+		VEL_USA_apply_result = yes
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_USA.8
+	title = VEL_USA.8.t
+	desc = VEL_USA.8.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+	option = {
+		name = VEL_USA.8.a
+		VEL_USA_midterm = yes
+		add_stability = -0.01
+		ai_chance = { base = 100 }
+	}
+}
+

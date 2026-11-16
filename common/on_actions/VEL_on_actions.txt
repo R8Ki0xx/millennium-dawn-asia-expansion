@@ -1,0 +1,39 @@
+﻿# MD ROC Return v3.36 —— 选举系统的启动（由 _tools/v336/vel_events.py 生成）
+on_actions = {
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = { original_tag = USA }
+				country_event = { id = VEL_USA.1 }
+			}
+			if = {
+				limit = { has_country_flag = CHI_demo_done NOT = { has_country_flag = ROC_new_chi } }
+				country_event = { id = VEL_CHI.1 }
+			}
+		}
+	}
+	on_daily_USA = {
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = VEL_USA_on } }
+				set_country_flag = VEL_USA_on
+				set_country_flag = generic_election_killswitch
+				VEL_USA_init = yes
+			}
+		}
+	}
+	on_daily_CHI = {
+		effect = {
+			# 光复或民主化之后，换上可视化选举，并停掉千禧的通用选举
+			if = {
+				limit = { OR = { has_country_flag = ROC_new_chi has_country_flag = CHI_demo_done } NOT = { has_country_flag = VEL_CHI_on } }
+				set_country_flag = VEL_CHI_on
+				set_country_flag = generic_election_killswitch
+			}
+			if = {
+				limit = { has_country_flag = VEL_CHI_on NOT = { has_country_flag = VEL_CHI_inited } }
+				VEL_CHI_init = yes
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-version="3.35.1"
+version="3.36.0"
 name="千禧黎明：亚洲扩展"
 dependencies={
 	"Millennium Dawn: A Modern Day Mod"

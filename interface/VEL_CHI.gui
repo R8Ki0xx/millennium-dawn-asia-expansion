@@ -1,0 +1,116 @@
+﻿# MD ROC Return v3.36 —— 选举界面（CHI）。由 _tools/v336/gen_vel_gui.py 生成。
+guiTypes = {
+	containerWindowType = {
+		name = "VEL_CHI_window"
+		size = { width = 640 height = 850 }
+		iconType = { name = "vel_chi_bg" spriteType = "GFX_VEL_CHI_bg" position = { x = 0 y = 0 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vel_chi_title" position = { x = 14 y = 2 } font = "hoi_18mbs" text = "VEL_CHI_gui_title" maxWidth = 310 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_phase" position = { x = 14 y = 19 } font = "hoi_16mbs" text = "VEL_CHI_gui_phase" maxWidth = 310 maxHeight = 18 fixedsize = yes }
+		buttonType = { name = "vel_chi_view1" spriteType = "GFX_VEL_btn_m" position = { x = 332 y = 6 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_poll" pdx_tooltip = "VEL_CHI_tt_poll" }
+		buttonType = { name = "vel_chi_view2" spriteType = "GFX_VEL_btn_m" position = { x = 486 y = 6 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_result" pdx_tooltip = "VEL_CHI_tt_result" }
+		iconType = { name = "vel_chi_base" spriteType = "GFX_VEL_CHI_base" position = { x = 10 y = 44 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_0" spriteType = "GFX_VEL_CHI_1" position = { x = 425 y = 245 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_1" spriteType = "GFX_VEL_CHI_2" position = { x = 440 y = 252 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_2" spriteType = "GFX_VEL_CHI_3" position = { x = 409 y = 216 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_3" spriteType = "GFX_VEL_CHI_4" position = { x = 376 y = 247 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_4" spriteType = "GFX_VEL_CHI_5" position = { x = 246 y = 46 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_5" spriteType = "GFX_VEL_CHI_6" position = { x = 457 y = 202 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_6" spriteType = "GFX_VEL_CHI_7" position = { x = 495 y = 161 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_7" spriteType = "GFX_VEL_CHI_8" position = { x = 493 y = 44 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_8" spriteType = "GFX_VEL_CHI_9" position = { x = 480 y = 368 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_9" spriteType = "GFX_VEL_CHI_10" position = { x = 435 y = 325 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_10" spriteType = "GFX_VEL_CHI_11" position = { x = 453 y = 377 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_11" spriteType = "GFX_VEL_CHI_12" position = { x = 421 y = 329 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_12" spriteType = "GFX_VEL_CHI_13" position = { x = 433 y = 418 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_13" spriteType = "GFX_VEL_CHI_14" position = { x = 407 y = 394 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_14" spriteType = "GFX_VEL_CHI_15" position = { x = 421 y = 280 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_15" spriteType = "GFX_VEL_CHI_16" position = { x = 375 y = 303 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_16" spriteType = "GFX_VEL_CHI_17" position = { x = 359 y = 349 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_17" spriteType = "GFX_VEL_CHI_18" position = { x = 362 y = 394 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_18" spriteType = "GFX_VEL_CHI_19" position = { x = 370 y = 458 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_19" spriteType = "GFX_VEL_CHI_20" position = { x = 321 y = 444 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_20" spriteType = "GFX_VEL_CHI_21" position = { x = 360 y = 525 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_21" spriteType = "GFX_VEL_CHI_22" position = { x = 327 y = 364 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_22" spriteType = "GFX_VEL_CHI_23" position = { x = 247 y = 336 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_23" spriteType = "GFX_VEL_CHI_24" position = { x = 311 y = 404 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_24" spriteType = "GFX_VEL_CHI_25" position = { x = 249 y = 410 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_25" spriteType = "GFX_VEL_CHI_26" position = { x = 59 y = 301 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_26" spriteType = "GFX_VEL_CHI_27" position = { x = 327 y = 257 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_27" spriteType = "GFX_VEL_CHI_28" position = { x = 206 y = 212 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_28" spriteType = "GFX_VEL_CHI_29" position = { x = 170 y = 261 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_29" spriteType = "GFX_VEL_CHI_30" position = { x = 318 y = 261 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_30" spriteType = "GFX_VEL_CHI_31" position = { x = 10 y = 117 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_i_31" spriteType = "GFX_VEL_CHI_32" position = { x = 465 y = 457 } alwaystransparent = yes }
+		buttonType = { name = "vel_chi_r_4" spriteType = "GFX_VEL_CHI_5_hit" position = { x = 246 y = 46 } pdx_tooltip = "VEL_CHI_tt_r5" }
+		buttonType = { name = "vel_chi_r_30" spriteType = "GFX_VEL_CHI_31_hit" position = { x = 10 y = 117 } pdx_tooltip = "VEL_CHI_tt_r31" }
+		buttonType = { name = "vel_chi_r_25" spriteType = "GFX_VEL_CHI_26_hit" position = { x = 59 y = 301 } pdx_tooltip = "VEL_CHI_tt_r26" }
+		buttonType = { name = "vel_chi_r_27" spriteType = "GFX_VEL_CHI_28_hit" position = { x = 206 y = 212 } pdx_tooltip = "VEL_CHI_tt_r28" }
+		buttonType = { name = "vel_chi_r_7" spriteType = "GFX_VEL_CHI_8_hit" position = { x = 493 y = 44 } pdx_tooltip = "VEL_CHI_tt_r8" }
+		buttonType = { name = "vel_chi_r_28" spriteType = "GFX_VEL_CHI_29_hit" position = { x = 170 y = 261 } pdx_tooltip = "VEL_CHI_tt_r29" }
+		buttonType = { name = "vel_chi_r_22" spriteType = "GFX_VEL_CHI_23_hit" position = { x = 247 y = 336 } pdx_tooltip = "VEL_CHI_tt_r23" }
+		buttonType = { name = "vel_chi_r_24" spriteType = "GFX_VEL_CHI_25_hit" position = { x = 249 y = 410 } pdx_tooltip = "VEL_CHI_tt_r25" }
+		buttonType = { name = "vel_chi_r_6" spriteType = "GFX_VEL_CHI_7_hit" position = { x = 495 y = 161 } pdx_tooltip = "VEL_CHI_tt_r7" }
+		buttonType = { name = "vel_chi_r_26" spriteType = "GFX_VEL_CHI_27_hit" position = { x = 327 y = 257 } pdx_tooltip = "VEL_CHI_tt_r27" }
+		buttonType = { name = "vel_chi_r_2" spriteType = "GFX_VEL_CHI_3_hit" position = { x = 409 y = 216 } pdx_tooltip = "VEL_CHI_tt_r3" }
+		buttonType = { name = "vel_chi_r_5" spriteType = "GFX_VEL_CHI_6_hit" position = { x = 457 y = 202 } pdx_tooltip = "VEL_CHI_tt_r6" }
+		buttonType = { name = "vel_chi_r_18" spriteType = "GFX_VEL_CHI_19_hit" position = { x = 370 y = 458 } pdx_tooltip = "VEL_CHI_tt_r19" }
+		buttonType = { name = "vel_chi_r_19" spriteType = "GFX_VEL_CHI_20_hit" position = { x = 321 y = 444 } pdx_tooltip = "VEL_CHI_tt_r20" }
+		buttonType = { name = "vel_chi_r_15" spriteType = "GFX_VEL_CHI_16_hit" position = { x = 375 y = 303 } pdx_tooltip = "VEL_CHI_tt_r16" }
+		buttonType = { name = "vel_chi_r_16" spriteType = "GFX_VEL_CHI_17_hit" position = { x = 359 y = 349 } pdx_tooltip = "VEL_CHI_tt_r17" }
+		buttonType = { name = "vel_chi_r_14" spriteType = "GFX_VEL_CHI_15_hit" position = { x = 421 y = 280 } pdx_tooltip = "VEL_CHI_tt_r15" }
+		buttonType = { name = "vel_chi_r_17" spriteType = "GFX_VEL_CHI_18_hit" position = { x = 362 y = 394 } pdx_tooltip = "VEL_CHI_tt_r18" }
+		buttonType = { name = "vel_chi_r_13" spriteType = "GFX_VEL_CHI_14_hit" position = { x = 407 y = 394 } pdx_tooltip = "VEL_CHI_tt_r14" }
+		buttonType = { name = "vel_chi_r_23" spriteType = "GFX_VEL_CHI_24_hit" position = { x = 311 y = 404 } pdx_tooltip = "VEL_CHI_tt_r24" }
+		buttonType = { name = "vel_chi_r_11" spriteType = "GFX_VEL_CHI_12_hit" position = { x = 421 y = 329 } pdx_tooltip = "VEL_CHI_tt_r12" }
+		buttonType = { name = "vel_chi_r_3" spriteType = "GFX_VEL_CHI_4_hit" position = { x = 376 y = 247 } pdx_tooltip = "VEL_CHI_tt_r4" }
+		buttonType = { name = "vel_chi_r_9" spriteType = "GFX_VEL_CHI_10_hit" position = { x = 435 y = 325 } pdx_tooltip = "VEL_CHI_tt_r10" }
+		buttonType = { name = "vel_chi_r_21" spriteType = "GFX_VEL_CHI_22_hit" position = { x = 327 y = 364 } pdx_tooltip = "VEL_CHI_tt_r22" }
+		buttonType = { name = "vel_chi_r_12" spriteType = "GFX_VEL_CHI_13_hit" position = { x = 433 y = 418 } pdx_tooltip = "VEL_CHI_tt_r13" }
+		buttonType = { name = "vel_chi_r_10" spriteType = "GFX_VEL_CHI_11_hit" position = { x = 453 y = 377 } pdx_tooltip = "VEL_CHI_tt_r11" }
+		buttonType = { name = "vel_chi_r_29" spriteType = "GFX_VEL_CHI_30_hit" position = { x = 318 y = 261 } pdx_tooltip = "VEL_CHI_tt_r30" }
+		buttonType = { name = "vel_chi_r_31" spriteType = "GFX_VEL_CHI_32_hit" position = { x = 465 y = 457 } pdx_tooltip = "VEL_CHI_tt_r32" }
+		buttonType = { name = "vel_chi_r_20" spriteType = "GFX_VEL_CHI_21_hit" position = { x = 360 y = 525 } pdx_tooltip = "VEL_CHI_tt_r21" }
+		buttonType = { name = "vel_chi_r_0" spriteType = "GFX_VEL_CHI_1_hit" position = { x = 425 y = 245 } pdx_tooltip = "VEL_CHI_tt_r1" }
+		buttonType = { name = "vel_chi_r_1" spriteType = "GFX_VEL_CHI_2_hit" position = { x = 440 y = 252 } pdx_tooltip = "VEL_CHI_tt_r2" }
+		buttonType = { name = "vel_chi_r_8" spriteType = "GFX_VEL_CHI_9_hit" position = { x = 480 y = 368 } pdx_tooltip = "VEL_CHI_tt_r9" }
+		instantTextBoxType = { name = "vel_chi_hdr_l" position = { x = 14 y = 558 } font = "hoi_18mbs" text = "VEL_CHI_gui_totals" maxWidth = 400 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vel_chi_sw_1" spriteType = "GFX_VEL_CHI_swatch" position = { x = 14 y = 584 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vel_chi_row_1" position = { x = 36 y = 582 } font = "hoi_16mbs" text = "VEL_CHI_row_1" maxWidth = 280 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_chi_bar_1" quadTextureSprite = "GFX_VEL_CHI_tbar_1" position = { x = 150 y = 585 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_sw_2" spriteType = "GFX_VEL_CHI_swatch" position = { x = 14 y = 608 } alwaystransparent = yes frame = 2 }
+		instantTextBoxType = { name = "vel_chi_row_2" position = { x = 36 y = 606 } font = "hoi_16mbs" text = "VEL_CHI_row_2" maxWidth = 280 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_chi_bar_2" quadTextureSprite = "GFX_VEL_CHI_tbar_2" position = { x = 150 y = 609 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_sw_3" spriteType = "GFX_VEL_CHI_swatch" position = { x = 14 y = 632 } alwaystransparent = yes frame = 3 }
+		instantTextBoxType = { name = "vel_chi_row_3" position = { x = 36 y = 630 } font = "hoi_16mbs" text = "VEL_CHI_row_3" maxWidth = 280 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_chi_bar_3" quadTextureSprite = "GFX_VEL_CHI_tbar_3" position = { x = 150 y = 633 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_sw_4" spriteType = "GFX_VEL_CHI_swatch" position = { x = 14 y = 656 } alwaystransparent = yes frame = 4 }
+		instantTextBoxType = { name = "vel_chi_row_4" position = { x = 36 y = 654 } font = "hoi_16mbs" text = "VEL_CHI_row_4" maxWidth = 280 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_chi_bar_4" quadTextureSprite = "GFX_VEL_CHI_tbar_4" position = { x = 150 y = 657 } alwaystransparent = yes }
+		iconType = { name = "vel_chi_sw_5" spriteType = "GFX_VEL_CHI_swatch" position = { x = 14 y = 680 } alwaystransparent = yes frame = 5 }
+		instantTextBoxType = { name = "vel_chi_row_5" position = { x = 36 y = 678 } font = "hoi_16mbs" text = "VEL_CHI_row_5" maxWidth = 280 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_chi_bar_5" quadTextureSprite = "GFX_VEL_CHI_tbar_5" position = { x = 150 y = 681 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vel_chi_sel_name" position = { x = 330 y = 558 } font = "hoi_18mbs" text = "VEL_CHI_gui_sel_name" maxWidth = 300 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sel_info" position = { x = 330 y = 582 } font = "hoi_16mbs" text = "VEL_CHI_gui_sel_info" maxWidth = 300 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sp_1" position = { x = 330 y = 606 } font = "hoi_16mbs" text = "VEL_CHI_sp_1" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sp_2" position = { x = 330 y = 622 } font = "hoi_16mbs" text = "VEL_CHI_sp_2" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sp_3" position = { x = 330 y = 638 } font = "hoi_16mbs" text = "VEL_CHI_sp_3" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sp_4" position = { x = 330 y = 654 } font = "hoi_16mbs" text = "VEL_CHI_sp_4" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sp_5" position = { x = 330 y = 670 } font = "hoi_16mbs" text = "VEL_CHI_sp_5" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_1" position = { x = 458 y = 606 } font = "hoi_16mbs" text = "VEL_CHI_sg_1" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_2" position = { x = 458 y = 622 } font = "hoi_16mbs" text = "VEL_CHI_sg_2" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_3" position = { x = 458 y = 638 } font = "hoi_16mbs" text = "VEL_CHI_sg_3" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_4" position = { x = 458 y = 654 } font = "hoi_16mbs" text = "VEL_CHI_sg_4" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_5" position = { x = 458 y = 670 } font = "hoi_16mbs" text = "VEL_CHI_sg_5" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_6" position = { x = 458 y = 686 } font = "hoi_16mbs" text = "VEL_CHI_sg_6" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_7" position = { x = 458 y = 702 } font = "hoi_16mbs" text = "VEL_CHI_sg_7" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_sg_8" position = { x = 458 y = 718 } font = "hoi_16mbs" text = "VEL_CHI_sg_8" maxWidth = 200 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vel_chi_main" position = { x = 14 y = 746 } font = "hoi_16mbs" text = "VEL_CHI_gui_main" maxWidth = 612 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vel_chi_rally" spriteType = "GFX_VEL_btn_l" position = { x = 14 y = 770 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_rally" pdx_tooltip = "VEL_CHI_tt_rally" }
+		buttonType = { name = "vel_chi_issue_1" spriteType = "GFX_VEL_btn_m" position = { x = 174 y = 770 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_1" pdx_tooltip = "VEL_CHI_tt_issue" }
+		buttonType = { name = "vel_chi_issue_2" spriteType = "GFX_VEL_btn_m" position = { x = 324 y = 770 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_2" pdx_tooltip = "VEL_CHI_tt_issue" }
+		buttonType = { name = "vel_chi_issue_3" spriteType = "GFX_VEL_btn_m" position = { x = 474 y = 770 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_3" pdx_tooltip = "VEL_CHI_tt_issue" }
+		buttonType = { name = "vel_chi_issue_4" spriteType = "GFX_VEL_btn_m" position = { x = 174 y = 798 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_4" pdx_tooltip = "VEL_CHI_tt_issue" }
+		buttonType = { name = "vel_chi_issue_5" spriteType = "GFX_VEL_btn_m" position = { x = 324 y = 798 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_5" pdx_tooltip = "VEL_CHI_tt_issue" }
+		buttonType = { name = "vel_chi_issue_6" spriteType = "GFX_VEL_btn_m" position = { x = 474 y = 798 } buttonFont = "hoi_16mbs" buttonText = "VEL_CHI_btn_issue_6" pdx_tooltip = "VEL_CHI_tt_issue" }
+	}
+}

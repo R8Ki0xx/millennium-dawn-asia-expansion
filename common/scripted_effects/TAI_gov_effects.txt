@@ -208,10 +208,17 @@ TAI_gov_daily = {
 # Scope: ROC-CHI，每月：立委改选、执政党更替后提名新阁揆、少数政府的倒阁风险
 TAI_gov_monthly = {
 	TAI_gov_president_check = yes
+	# v3.36：光复后立委改选改由可视化选举（VEL_CHI.1 开始竞选，结果由 VEL_CHI.5 写回）
 	if = {
-		limit = { check_variable = { global.num_days > TAI_ly_next_election } }
-		TAI_ly_election = yes
-		country_event = { id = TAI_gov.3 days = 1 }
+		limit = { check_variable = { global.num_days > TAI_ly_next_election } NOT = { has_country_flag = VEL_CHI_campaign } }
+		if = {
+			limit = { has_country_flag = VEL_CHI_on }
+			country_event = { id = VEL_CHI.1 days = 1 }
+		}
+		else = {
+			TAI_ly_election = yes
+			country_event = { id = TAI_gov.3 days = 1 }
+		}
 	}
 	if = {
 		limit = { NOT = { check_variable = { TAI_gov_last_party = ruling_party } } }

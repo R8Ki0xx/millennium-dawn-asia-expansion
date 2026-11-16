@@ -1,0 +1,119 @@
+﻿# MD ROC Return v3.36 —— 选举结果写回千禧与本模组（由 _tools/v336/vel_events.py 生成）
+
+# Scope: CHI（ROC 或民主化后的 PRC）。把开票结果写进政党支持率、执政党；ROC 另外写进立法院席次
+VEL_CHI_apply_result = {
+	# 全国支持率向得票率靠拢 35%
+	for_loop_effect = {
+		start = 0 end = 5 value = vp
+		set_temp_variable = { vel_pi = VEL_CHI_pidx^vp }
+		set_temp_variable = { party_popularity_increase = VEL_CHI_nat^vp }
+		subtract_from_temp_variable = { party_popularity_increase = party_pop_array^vel_pi }
+		multiply_temp_variable = { party_popularity_increase = 0.35 }
+		set_temp_variable = { temp_outlook_increase = party_popularity_increase }
+		set_temp_variable = { party_index = vel_pi }
+		change_relative_party_popularity = yes
+	}
+	# 一党独占过半席次，由它组阁
+	set_temp_variable = { vel_best = 0 }
+	set_temp_variable = { vel_bi = 0 }
+	for_loop_effect = {
+		start = 0 end = 5 value = vp
+		set_temp_variable = { vel_cur = VEL_CHI_seat^vp }
+		if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
+	}
+	if = {
+		limit = { check_variable = { vel_best > 112 } }
+		set_temp_variable = { vel_rp = VEL_CHI_pidx^vel_bi }
+		if = {
+			limit = { NOT = { check_variable = { ruling_party = vel_rp } } }
+			clr_country_flag = TAI_gov_coalition
+			set_temp_variable = { rul_party_temp = vel_rp }
+			set_temp_variable = { change_leader_temp = 1 }
+			change_ruling_party_effect = yes
+		}
+	}
+	set_variable = { VEL_CHI_phase = 3 }
+	if = {
+		limit = { has_country_flag = ROC_new_chi }
+		VEL_CHI_apply_roc_ly = yes
+	}
+}
+
+# Scope: ROC-CHI。立法院席次写回：与 TAI_ly_election 用同一组变量，并同步国民大会与内阁
+VEL_CHI_apply_roc_ly = {
+	set_variable = { TAI_ly_kmt = VEL_CHI_seat^0 }
+	set_variable = { TAI_ly_dp = VEL_CHI_seat^1 }
+	set_variable = { TAI_ly_sd = VEL_CHI_seat^2 }
+	set_variable = { TAI_ly_cpc = VEL_CHI_seat^3 }
+	set_variable = { TAI_ly_pfp = VEL_CHI_seat^4 }
+	set_variable = { TAI_ly_next_election = global.num_days }
+	add_to_variable = { TAI_ly_next_election = 1095 }
+	add_to_variable = { TAI_ly_term = 1 }
+	TAI_na_reseat = yes
+	TAI_gov_recalc = yes
+	country_event = { id = TAI_gov.3 days = 1 }
+	country_event = { id = TAI_gov.1 days = 5 }
+}
+
+
+# Scope: USA。把总统选举结果写进政党支持率、执政党
+VEL_USA_apply_result = {
+	for_loop_effect = {
+		start = 0 end = 3 value = vp
+		set_temp_variable = { vel_pi = VEL_USA_pidx^vp }
+		set_temp_variable = { party_popularity_increase = VEL_USA_nat^vp }
+		subtract_from_temp_variable = { party_popularity_increase = party_pop_array^vel_pi }
+		multiply_temp_variable = { party_popularity_increase = 0.4 }
+		set_temp_variable = { temp_outlook_increase = party_popularity_increase }
+		set_temp_variable = { party_index = vel_pi }
+		change_relative_party_popularity = yes
+	}
+	set_temp_variable = { vel_wp = 1 }
+	if = { limit = { check_variable = { VEL_USA_seat^1 > VEL_USA_seat^0 } } set_temp_variable = { vel_wp = 2 } }
+	if = {
+		limit = { NOT = { check_variable = { ruling_party = vel_wp } } }
+		set_temp_variable = { rul_party_temp = vel_wp }
+		set_temp_variable = { change_leader_temp = 1 }
+		change_ruling_party_effect = yes
+	}
+	set_variable = { VEL_USA_phase = 3 }
+	# 国会：执政党的议会支持度随选举人票比例变化（千禧的 senators_support / representatives_support）
+	if = {
+		limit = { has_variable = senators_total has_variable = representatives_total }
+		set_temp_variable = { vel_evw = VEL_USA_seat^0 }
+		if = { limit = { check_variable = { VEL_USA_seat^1 > VEL_USA_seat^0 } } set_temp_variable = { vel_evw = VEL_USA_seat^1 } }
+		divide_temp_variable = { vel_evw = 538 }
+		subtract_from_temp_variable = { vel_evw = 0.5 }
+		multiply_temp_variable = { vel_evw = 0.6 }
+		add_to_temp_variable = { vel_evw = 0.5 }
+		set_variable = { senators_support = senators_total }
+		multiply_variable = { senators_support = vel_evw }
+		round_variable = senators_support
+		set_variable = { representatives_support = representatives_total }
+		multiply_variable = { representatives_support = vel_evw }
+		round_variable = representatives_support
+		USA_recalc_congress_icon_frames = yes
+	}
+	country_event = { id = VEL_USA.8 days = 730 }
+}
+
+# Scope: USA。期中选举：总统所在党在国会失去 3%~10% 的席位
+VEL_USA_midterm = {
+	if = {
+		limit = { has_variable = senators_total has_variable = representatives_total }
+		set_temp_variable_to_random = { var = vel_sw min = 0 max = 1 }
+		multiply_temp_variable = { vel_sw = 0.07 }
+		add_to_temp_variable = { vel_sw = 0.03 }
+		set_temp_variable = { vel_dsen = senators_total }
+		multiply_temp_variable = { vel_dsen = vel_sw }
+		round_temp_variable = vel_dsen
+		subtract_from_variable = { senators_support = vel_dsen }
+		clamp_variable = { var = senators_support min = 0 max = senators_total }
+		set_temp_variable = { vel_dhou = representatives_total }
+		multiply_temp_variable = { vel_dhou = vel_sw }
+		round_temp_variable = vel_dhou
+		subtract_from_variable = { representatives_support = vel_dhou }
+		clamp_variable = { var = representatives_support min = 0 max = representatives_total }
+		USA_recalc_congress_icon_frames = yes
+	}
+}

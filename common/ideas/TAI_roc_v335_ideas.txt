@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.35 —— 新事件给出的限时理念（由 _tools/v335/gen_events.py 生成）
+# MD ROC Return v3.35 —— 新事件给出的限时理念（由 _tools/v335/gen_events.py 生成）
 ideas = {
 	country = {
 		TAI_v335_fab_water_plan = {

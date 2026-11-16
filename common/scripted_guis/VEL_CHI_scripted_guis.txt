@@ -1,0 +1,102 @@
+﻿# MD ROC Return v3.36 —— CHI 选举界面的逻辑（由 _tools/v336/gen_vel_gui.py 生成）
+scripted_gui = {
+	VEL_CHI_GUI = {
+		context_type = decision_category
+		window_name = "VEL_CHI_window"
+		visible = { has_country_flag = VEL_CHI_on }
+		ai_enabled = { always = no }
+		triggers = {
+			vel_chi_rally_click_enabled = { check_variable = { VEL_CHI_sel > 0 } check_variable = { VEL_CHI_phase = 1 } political_power > 24 }
+			vel_chi_issue_1_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_issue_2_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_issue_3_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_issue_4_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_issue_5_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_issue_6_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
+			vel_chi_view1_click_enabled = { check_variable = { VEL_CHI_poll_ready = 1 } }
+			vel_chi_view2_click_enabled = { check_variable = { VEL_CHI_phase > 1 } }
+		}
+		properties = {
+			vel_chi_i_0 = { frame = VEL_CHI_frame^0 }
+			vel_chi_i_1 = { frame = VEL_CHI_frame^1 }
+			vel_chi_i_2 = { frame = VEL_CHI_frame^2 }
+			vel_chi_i_3 = { frame = VEL_CHI_frame^3 }
+			vel_chi_i_4 = { frame = VEL_CHI_frame^4 }
+			vel_chi_i_5 = { frame = VEL_CHI_frame^5 }
+			vel_chi_i_6 = { frame = VEL_CHI_frame^6 }
+			vel_chi_i_7 = { frame = VEL_CHI_frame^7 }
+			vel_chi_i_8 = { frame = VEL_CHI_frame^8 }
+			vel_chi_i_9 = { frame = VEL_CHI_frame^9 }
+			vel_chi_i_10 = { frame = VEL_CHI_frame^10 }
+			vel_chi_i_11 = { frame = VEL_CHI_frame^11 }
+			vel_chi_i_12 = { frame = VEL_CHI_frame^12 }
+			vel_chi_i_13 = { frame = VEL_CHI_frame^13 }
+			vel_chi_i_14 = { frame = VEL_CHI_frame^14 }
+			vel_chi_i_15 = { frame = VEL_CHI_frame^15 }
+			vel_chi_i_16 = { frame = VEL_CHI_frame^16 }
+			vel_chi_i_17 = { frame = VEL_CHI_frame^17 }
+			vel_chi_i_18 = { frame = VEL_CHI_frame^18 }
+			vel_chi_i_19 = { frame = VEL_CHI_frame^19 }
+			vel_chi_i_20 = { frame = VEL_CHI_frame^20 }
+			vel_chi_i_21 = { frame = VEL_CHI_frame^21 }
+			vel_chi_i_22 = { frame = VEL_CHI_frame^22 }
+			vel_chi_i_23 = { frame = VEL_CHI_frame^23 }
+			vel_chi_i_24 = { frame = VEL_CHI_frame^24 }
+			vel_chi_i_25 = { frame = VEL_CHI_frame^25 }
+			vel_chi_i_26 = { frame = VEL_CHI_frame^26 }
+			vel_chi_i_27 = { frame = VEL_CHI_frame^27 }
+			vel_chi_i_28 = { frame = VEL_CHI_frame^28 }
+			vel_chi_i_29 = { frame = VEL_CHI_frame^29 }
+			vel_chi_i_30 = { frame = VEL_CHI_frame^30 }
+			vel_chi_i_31 = { frame = VEL_CHI_frame^31 }
+			vel_chi_bar_1 = { frame = VEL_CHI_bar_1 }
+			vel_chi_bar_2 = { frame = VEL_CHI_bar_2 }
+			vel_chi_bar_3 = { frame = VEL_CHI_bar_3 }
+			vel_chi_bar_4 = { frame = VEL_CHI_bar_4 }
+			vel_chi_bar_5 = { frame = VEL_CHI_bar_5 }
+		}
+		effects = {
+			vel_chi_r_0_click = { set_variable = { VEL_CHI_sel = 1 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_1_click = { set_variable = { VEL_CHI_sel = 2 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_2_click = { set_variable = { VEL_CHI_sel = 3 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_3_click = { set_variable = { VEL_CHI_sel = 4 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_4_click = { set_variable = { VEL_CHI_sel = 5 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_5_click = { set_variable = { VEL_CHI_sel = 6 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_6_click = { set_variable = { VEL_CHI_sel = 7 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_7_click = { set_variable = { VEL_CHI_sel = 8 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_8_click = { set_variable = { VEL_CHI_sel = 9 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_9_click = { set_variable = { VEL_CHI_sel = 10 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_10_click = { set_variable = { VEL_CHI_sel = 11 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_11_click = { set_variable = { VEL_CHI_sel = 12 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_12_click = { set_variable = { VEL_CHI_sel = 13 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_13_click = { set_variable = { VEL_CHI_sel = 14 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_14_click = { set_variable = { VEL_CHI_sel = 15 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_15_click = { set_variable = { VEL_CHI_sel = 16 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_16_click = { set_variable = { VEL_CHI_sel = 17 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_17_click = { set_variable = { VEL_CHI_sel = 18 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_18_click = { set_variable = { VEL_CHI_sel = 19 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_19_click = { set_variable = { VEL_CHI_sel = 20 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_20_click = { set_variable = { VEL_CHI_sel = 21 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_21_click = { set_variable = { VEL_CHI_sel = 22 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_22_click = { set_variable = { VEL_CHI_sel = 23 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_23_click = { set_variable = { VEL_CHI_sel = 24 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_24_click = { set_variable = { VEL_CHI_sel = 25 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_25_click = { set_variable = { VEL_CHI_sel = 26 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_26_click = { set_variable = { VEL_CHI_sel = 27 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_27_click = { set_variable = { VEL_CHI_sel = 28 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_28_click = { set_variable = { VEL_CHI_sel = 29 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_29_click = { set_variable = { VEL_CHI_sel = 30 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_30_click = { set_variable = { VEL_CHI_sel = 31 } VEL_CHI_refresh_sel = yes }
+			vel_chi_r_31_click = { set_variable = { VEL_CHI_sel = 32 } VEL_CHI_refresh_sel = yes }
+			vel_chi_rally_click = { add_political_power = -25 VEL_CHI_rally = yes }
+			vel_chi_issue_1_click = { set_temp_variable = { vel_issue = 1 } VEL_CHI_set_main_issue = yes }
+			vel_chi_issue_2_click = { set_temp_variable = { vel_issue = 2 } VEL_CHI_set_main_issue = yes }
+			vel_chi_issue_3_click = { set_temp_variable = { vel_issue = 3 } VEL_CHI_set_main_issue = yes }
+			vel_chi_issue_4_click = { set_temp_variable = { vel_issue = 4 } VEL_CHI_set_main_issue = yes }
+			vel_chi_issue_5_click = { set_temp_variable = { vel_issue = 5 } VEL_CHI_set_main_issue = yes }
+			vel_chi_issue_6_click = { set_temp_variable = { vel_issue = 6 } VEL_CHI_set_main_issue = yes }
+			vel_chi_view1_click = { set_variable = { VEL_CHI_view = 1 } VEL_CHI_refresh_all = yes }
+			vel_chi_view2_click = { set_variable = { VEL_CHI_view = 2 } VEL_CHI_refresh_all = yes }
+		}
+	}
+}
