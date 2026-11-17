@@ -9,6 +9,108 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = CSW_cross_strait_war
+	# >>> v3.40 ext shared
+	shared_focus = TAI_n_k0
+	shared_focus = TAI_n_k1a
+	shared_focus = TAI_n_k1b
+	shared_focus = TAI_n_k1c
+	shared_focus = TAI_n_k2a
+	shared_focus = TAI_n_k2b
+	shared_focus = TAI_n_k2c
+	shared_focus = TAI_n_k3
+	shared_focus = TAI_n_k4l
+	shared_focus = TAI_n_k4r
+	shared_focus = TAI_n_k5
+	shared_focus = TAI_n_k6
+	shared_focus = TAI_n_f0
+	shared_focus = TAI_n_f1a
+	shared_focus = TAI_n_f1b
+	shared_focus = TAI_n_f1c
+	shared_focus = TAI_n_f2a
+	shared_focus = TAI_n_f2b
+	shared_focus = TAI_n_f2c
+	shared_focus = TAI_n_f3
+	shared_focus = TAI_n_f4l
+	shared_focus = TAI_n_f4r
+	shared_focus = TAI_n_f5
+	shared_focus = TAI_n_f6
+	shared_focus = TAI_n_m0
+	shared_focus = TAI_n_m1a
+	shared_focus = TAI_n_m1b
+	shared_focus = TAI_n_m1c
+	shared_focus = TAI_n_m2a
+	shared_focus = TAI_n_m2b
+	shared_focus = TAI_n_m2c
+	shared_focus = TAI_n_m3
+	shared_focus = TAI_n_m4l
+	shared_focus = TAI_n_m4r
+	shared_focus = TAI_n_m5
+	shared_focus = TAI_n_m6
+	shared_focus = TAI_n_e0
+	shared_focus = TAI_n_e1a
+	shared_focus = TAI_n_e1b
+	shared_focus = TAI_n_e1c
+	shared_focus = TAI_n_e2a
+	shared_focus = TAI_n_e2b
+	shared_focus = TAI_n_e2c
+	shared_focus = TAI_n_e3
+	shared_focus = TAI_n_e4l
+	shared_focus = TAI_n_e4r
+	shared_focus = TAI_n_e5
+	shared_focus = TAI_n_e6
+	shared_focus = TAI_n_i0
+	shared_focus = TAI_n_i1a
+	shared_focus = TAI_n_i1b
+	shared_focus = TAI_n_i1c
+	shared_focus = TAI_n_i2a
+	shared_focus = TAI_n_i2b
+	shared_focus = TAI_n_i2c
+	shared_focus = TAI_n_i3
+	shared_focus = TAI_n_i4l
+	shared_focus = TAI_n_i4r
+	shared_focus = TAI_n_i5
+	shared_focus = TAI_n_i6
+	shared_focus = TAI_n_b0
+	shared_focus = TAI_n_b1a
+	shared_focus = TAI_n_b1b
+	shared_focus = TAI_n_b1c
+	shared_focus = TAI_n_b2a
+	shared_focus = TAI_n_b2b
+	shared_focus = TAI_n_b2c
+	shared_focus = TAI_n_b3
+	shared_focus = TAI_n_b4l
+	shared_focus = TAI_n_b4r
+	shared_focus = TAI_n_b5
+	shared_focus = TAI_n_b6
+	shared_focus = TAI_n_g0
+	shared_focus = TAI_n_g1a
+	shared_focus = TAI_n_g1b
+	shared_focus = TAI_n_g1c
+	shared_focus = TAI_n_g2a
+	shared_focus = TAI_n_g2b
+	shared_focus = TAI_n_g2c
+	shared_focus = TAI_n_g3
+	shared_focus = TAI_n_g4l
+	shared_focus = TAI_n_g4r
+	shared_focus = TAI_n_g5
+	shared_focus = TAI_n_g6
+	shared_focus = TAI_n_p0
+	shared_focus = TAI_n_p1a
+	shared_focus = TAI_n_p1b
+	shared_focus = TAI_n_p1c
+	shared_focus = TAI_n_p2a
+	shared_focus = TAI_n_p2b
+	shared_focus = TAI_n_p2c
+	shared_focus = TAI_n_p3
+	shared_focus = TAI_n_p4l
+	shared_focus = TAI_n_p4r
+	shared_focus = TAI_n_p5
+	shared_focus = TAI_n_p6
+	shared_focus = TAI_n_z0
+	shared_focus = TAI_n_z1a
+	shared_focus = TAI_n_z1b
+	shared_focus = TAI_n_z1c
+	# <<< v3.40 ext shared
 	reset_on_civilwar = no
 
 	continuous_focus_position = { x = 50 y = 1400 }
@@ -42,6 +144,44 @@ focus_tree = {
 		target = TAI_pragmatic_diplomacy
 		scroll_wheel_factor = 0.75
 	}
+
+	# >>> v3.40 ext shortcuts
+	shortcut = {
+		name = TAI_n_k0
+		target = TAI_n_k0
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_n_f0
+		target = TAI_n_f0
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_n_m0
+		target = TAI_n_m0
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_n_e0
+		target = TAI_n_e0
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_n_i0
+		target = TAI_n_i0
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_n_b0
+		target = TAI_n_b0
+		scroll_wheel_factor = 0.75
+	}
+	# <<< v3.40 ext shortcuts
 
 	focus = {
 		id = TAI_silicon_island

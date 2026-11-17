@@ -1,0 +1,164 @@
+# MD ROC Return v3.39 —— 光复后的中华民国：国策树扩展的理念 （由 _tools/v339/gen_ext.py 生成，不要手改）
+ideas = {
+	country = {
+		TAI_x_elec_commission = {
+			picture = democratic_party
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		TAI_x_integrity_agency = {
+			picture = sov_agency_anti_corrupt_idea
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TAI_x_clean_elections = {
+			picture = roc21_jap_transparent_government_ea1bc787
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+			}
+		}
+		TAI_x_dissolution = {
+			picture = generic_political_reform
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = -0.02
+			}
+		}
+		TAI_x_fixed_terms = {
+			picture = roc21_reformed_constitution_ffe4be94
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		TAI_x_consultative = {
+			picture = roc21_peace_talk_with_china_77d34118
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		TAI_x_pop_policy_shift = {
+			picture = family_supports
+			modifier = {
+				stability_factor = 0.02
+				monthly_population = 0.02
+			}
+		}
+		TAI_x_long_term_care = {
+			picture = roc30_health_care_03d77781
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+		}
+		TAI_x_family_friendly = {
+			picture = family_supports
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		TAI_x_disaster_ready = {
+			picture = generic_healthcare
+			modifier = {
+				stability_factor = 0.03
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_x_lifelong = {
+			picture = Labor_Reform
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = 0.03
+			}
+		}
+		TAI_x_civ_control = {
+			picture = generic_military_reform
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		TAI_x_volunteer_army = {
+			picture = roc21_chi_army_1_9032ab71
+			modifier = {
+				training_time_factor = -0.10
+				army_morale_factor = 0.05
+			}
+		}
+		TAI_x_def_budget = {
+			picture = army_war_college
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.01
+			}
+		}
+		TAI_x_intel_center = {
+			picture = roc30_arab_intelligence_agency_cde932ba
+			modifier = {
+				decryption_factor = 0.10
+				encryption_factor = 0.10
+			}
+		}
+		TAI_x_total_defense = {
+			picture = roc21_reserve_divisions_02501730
+			modifier = {
+				mobilization_speed = 0.20
+				war_support_factor = 0.05
+			}
+		}
+		TAI_x_joint_command = {
+			picture = roc21_high_command_headquarter_59484e02
+			modifier = {
+				army_core_attack_factor = 0.05
+				command_power_gain = 0.10
+			}
+		}
+		TAI_x_academia = {
+			picture = roc21_ger_research_investment_idea_efe698ea
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		TAI_x_biotech = {
+			picture = generic_healthcare
+			modifier = {
+				research_speed_factor = 0.02
+				stability_factor = 0.02
+			}
+		}
+		TAI_x_innovation_nation = {
+			picture = digitalize_idea
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_x_film = {
+			picture = internet_icon
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.03
+			}
+		}
+		TAI_x_soft_power = {
+			picture = chinese_gateway
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				stability_factor = 0.02
+			}
+		}
+		TAI_x_ne_asia_peace = {
+			picture = roc21_united_nations_blue_c556a2aa
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				stability_factor = 0.02
+			}
+		}
+	}
+}

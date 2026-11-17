@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.36 —— 可视化选举引擎（CHI）。由 _tools/v336/gen_vel_engine.py 生成，不要手改。
+# MD ROC Return v3.36 —— 可视化选举引擎（CHI）。由 _tools/v336/gen_vel_engine.py 生成，不要手改。
 # R=32 区域 P=5 政党 G=8 群体 I=6 议题。数组均为国家变量，下标从 0 开始。
 VEL_CHI_init = {
 	if = {
@@ -164,6 +164,22 @@ VEL_CHI_init = {
 		resize_array = { array = VEL_CHI_poll_win value = 0 size = 32 }
 		clear_array = VEL_CHI_poll_best
 		resize_array = { array = VEL_CHI_poll_best value = 0 size = 32 }
+		clear_array = VEL_CHI_mar
+		resize_array = { array = VEL_CHI_mar value = 0 size = 32 }
+		clear_array = VEL_CHI_mar2
+		resize_array = { array = VEL_CHI_mar2 value = 0 size = 32 }
+		clear_array = VEL_CHI_swing
+		resize_array = { array = VEL_CHI_swing value = 0 size = 6 }
+		clear_array = VEL_CHI_selfr
+		resize_array = { array = VEL_CHI_selfr value = 1 size = 32 }
+		clear_array = VEL_CHI_lead
+		resize_array = { array = VEL_CHI_lead value = 1 size = 32 }
+		set_variable = { VEL_CHI_sw_1_l = 1 } set_variable = { VEL_CHI_sw_1_r = 0 }
+		set_variable = { VEL_CHI_sw_2_l = 1 } set_variable = { VEL_CHI_sw_2_r = 0 }
+		set_variable = { VEL_CHI_sw_3_l = 1 } set_variable = { VEL_CHI_sw_3_r = 0 }
+		set_variable = { VEL_CHI_sw_4_l = 1 } set_variable = { VEL_CHI_sw_4_r = 0 }
+		set_variable = { VEL_CHI_sw_5_l = 1 } set_variable = { VEL_CHI_sw_5_r = 0 }
+		set_variable = { VEL_CHI_sw_6_l = 1 } set_variable = { VEL_CHI_sw_6_r = 0 }
 		set_variable = { VEL_CHI_view = 1 }
 		set_variable = { VEL_CHI_sel = 0 }
 		set_variable = { VEL_CHI_phase = 0 }
@@ -172,7 +188,8 @@ VEL_CHI_init = {
 		set_variable = { VEL_CHI_anim_n = 0 }
 		set_variable = { VEL_CHI_done = 0 }
 		set_variable = { VEL_CHI_gov = 0 }
-		VEL_CHI_refresh_all = yes
+		set_variable = { VEL_CHI_poll_due = global.num_days }
+		VEL_CHI_run_poll = yes
 	}
 }
 
@@ -311,8 +328,11 @@ VEL_CHI_calc_frames = {
 	for_loop_effect = {
 		start = 0 end = 32 value = vr
 		set_variable = { VEL_CHI_fr_res^vr = VEL_CHI_win^vr }
-		multiply_variable = { VEL_CHI_fr_res^vr = 2 }
-		if = { limit = { check_variable = { VEL_CHI_best^vr > 0.4 } } add_to_variable = { VEL_CHI_fr_res^vr = 1 } }
+		subtract_from_variable = { VEL_CHI_fr_res^vr = 1 }
+		multiply_variable = { VEL_CHI_fr_res^vr = 3 }
+		add_to_variable = { VEL_CHI_fr_res^vr = 2 }
+		if = { limit = { check_variable = { VEL_CHI_best^vr > 0.34 } } add_to_variable = { VEL_CHI_fr_res^vr = 1 } }
+		if = { limit = { check_variable = { VEL_CHI_best^vr > 0.46 } } add_to_variable = { VEL_CHI_fr_res^vr = 1 } }
 	}
 }
 
@@ -326,10 +346,18 @@ VEL_CHI_save_poll = {
 VEL_CHI_run_poll = {
 	set_temp_variable = { vel_noise = 0 }
 	VEL_CHI_set_gov = yes
+	log = "[GetDateText] VEL_CHI_run_poll: gov=[?VEL_CHI_gov] view=[?VEL_CHI_view] phase=[?VEL_CHI_phase]"
 	VEL_CHI_compute = yes
+	set_variable = { VEL_CHI_dbg_nat0 = VEL_CHI_nat^0 }
+	set_variable = { VEL_CHI_dbg_win0 = VEL_CHI_win^0 }
+	set_variable = { VEL_CHI_dbg_res0 = VEL_CHI_res^0 }
+	set_variable = { VEL_CHI_dbg_n0 = VEL_CHI_N^0 }
+	set_variable = { VEL_CHI_dbg_f0 = VEL_CHI_f^0 }
+	log = "[GetDateText] VEL_CHI_compute done: nat0=[?VEL_CHI_dbg_nat0] win0=[?VEL_CHI_dbg_win0] res0=[?VEL_CHI_dbg_res0] N0=[?VEL_CHI_dbg_n0] f0=[?VEL_CHI_dbg_f0]"
 	VEL_CHI_calc_frames = yes
 	VEL_CHI_save_poll = yes
 	VEL_CHI_refresh_all = yes
+	log = "[GetDateText] VEL_CHI_refresh done: dn1=[?VEL_CHI_dn_1] pct1=[?VEL_CHI_pct_1] ready=[?VEL_CHI_poll_ready]"
 }
 
 VEL_CHI_set_gov = {
@@ -383,6 +411,131 @@ VEL_CHI_refresh_all = {
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_fr = VEL_CHI_fr_res^vr } }
 		set_variable = { VEL_CHI_frame^vr = vel_fr }
 	}
+	for_loop_effect = {
+		start = 0 end = 32 value = vr
+		set_temp_variable = { vel_b = -1 } set_temp_variable = { vel_s2 = -1 } set_temp_variable = { vel_bi = 1 } set_temp_variable = { vel_has = 0 }
+		set_temp_variable = { vel_ik = vr } multiply_temp_variable = { vel_ik = 5 } add_to_temp_variable = { vel_ik = 0 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 1 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 2 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 3 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 4 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 5 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_m = vel_b }
+		subtract_from_temp_variable = { vel_m = vel_s2 }
+		multiply_temp_variable = { vel_m = 100 }
+		set_variable = { VEL_CHI_mar^vr = vel_m }
+		if = { limit = { check_variable = { vel_has = 0 } } set_variable = { VEL_CHI_mar^vr = 999 } }
+		set_variable = { VEL_CHI_lead^vr = vel_bi }
+	}
+	for_loop_effect = { start = 0 end = 32 value = vr set_variable = { VEL_CHI_mar2^vr = VEL_CHI_mar^vr } }
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_1_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_1_r = 1 }
+		set_variable = { VEL_CHI_sw_1_m = vel_bm }
+		set_variable = { VEL_CHI_sw_1_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_1_r = 0 } set_variable = { VEL_CHI_sw_1_m = 0 } set_variable = { VEL_CHI_sw_1_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_2_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_2_r = 1 }
+		set_variable = { VEL_CHI_sw_2_m = vel_bm }
+		set_variable = { VEL_CHI_sw_2_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_2_r = 0 } set_variable = { VEL_CHI_sw_2_m = 0 } set_variable = { VEL_CHI_sw_2_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_3_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_3_r = 1 }
+		set_variable = { VEL_CHI_sw_3_m = vel_bm }
+		set_variable = { VEL_CHI_sw_3_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_3_r = 0 } set_variable = { VEL_CHI_sw_3_m = 0 } set_variable = { VEL_CHI_sw_3_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_4_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_4_r = 1 }
+		set_variable = { VEL_CHI_sw_4_m = vel_bm }
+		set_variable = { VEL_CHI_sw_4_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_4_r = 0 } set_variable = { VEL_CHI_sw_4_m = 0 } set_variable = { VEL_CHI_sw_4_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_5_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_5_r = 1 }
+		set_variable = { VEL_CHI_sw_5_m = vel_bm }
+		set_variable = { VEL_CHI_sw_5_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_5_r = 0 } set_variable = { VEL_CHI_sw_5_m = 0 } set_variable = { VEL_CHI_sw_5_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_CHI_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_CHI_sw_6_r = vel_bj }
+		add_to_variable = { VEL_CHI_sw_6_r = 1 }
+		set_variable = { VEL_CHI_sw_6_m = vel_bm }
+		set_variable = { VEL_CHI_sw_6_l = VEL_CHI_lead^vel_bj }
+		set_variable = { VEL_CHI_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_CHI_sw_6_r = 0 } set_variable = { VEL_CHI_sw_6_m = 0 } set_variable = { VEL_CHI_sw_6_l = 1 }
+	}
+	set_variable = { VEL_CHI_prog = VEL_CHI_anim_n }
+	multiply_variable = { VEL_CHI_prog = 100 }
+	divide_variable = { VEL_CHI_prog = 32 }
+	clamp_variable = { var = VEL_CHI_prog min = 0 max = 100 }
+	round_variable = VEL_CHI_prog
 	if = {
 		limit = { check_variable = { VEL_CHI_view = 1 } }
 		set_variable = { VEL_CHI_dn_1 = VEL_CHI_poll_nat^0 }
@@ -530,6 +683,76 @@ VEL_CHI_refresh_sel = {
 		set_temp_variable = { vel_ig = vel_r } multiply_temp_variable = { vel_ig = 8 } add_to_temp_variable = { vel_ig = 7 }
 		set_variable = { VEL_CHI_sg_8 = VEL_CHI_sh^vel_ig }
 		multiply_variable = { VEL_CHI_sg_8 = 100 }
+		clear_array = VEL_CHI_selfr
+		for_loop_effect = { start = 0 end = 32 value = vc add_to_array = { VEL_CHI_selfr = 1 } }
+		set_variable = { VEL_CHI_selfr^vel_r = 2 }
+		set_temp_variable = { vel_b = -1 } set_temp_variable = { vel_s2 = -1 } set_temp_variable = { vel_bi = 1 }
+		set_variable = { VEL_CHI_sb_1 = VEL_CHI_sp_1 }
+		round_variable = VEL_CHI_sb_1
+		clamp_variable = { var = VEL_CHI_sb_1 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_1 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 1 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_2 = VEL_CHI_sp_2 }
+		round_variable = VEL_CHI_sb_2
+		clamp_variable = { var = VEL_CHI_sb_2 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_2 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 2 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_3 = VEL_CHI_sp_3 }
+		round_variable = VEL_CHI_sb_3
+		clamp_variable = { var = VEL_CHI_sb_3 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_3 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 3 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_4 = VEL_CHI_sp_4 }
+		round_variable = VEL_CHI_sb_4
+		clamp_variable = { var = VEL_CHI_sb_4 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_4 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 4 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_5 = VEL_CHI_sp_5 }
+		round_variable = VEL_CHI_sb_5
+		clamp_variable = { var = VEL_CHI_sb_5 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_5 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 5 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_s_lead = vel_bi }
+		set_variable = { VEL_CHI_s_margin = vel_b }
+		subtract_from_variable = { VEL_CHI_s_margin = vel_s2 }
+		if = { limit = { check_variable = { vel_b < 0.1 } } set_variable = { VEL_CHI_s_lead = 0 } set_variable = { VEL_CHI_s_margin = 0 } }
+		set_variable = { VEL_CHI_gb_1 = VEL_CHI_sg_1 }
+		multiply_variable = { VEL_CHI_gb_1 = 2 }
+		round_variable = VEL_CHI_gb_1
+		clamp_variable = { var = VEL_CHI_gb_1 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_2 = VEL_CHI_sg_2 }
+		multiply_variable = { VEL_CHI_gb_2 = 2 }
+		round_variable = VEL_CHI_gb_2
+		clamp_variable = { var = VEL_CHI_gb_2 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_3 = VEL_CHI_sg_3 }
+		multiply_variable = { VEL_CHI_gb_3 = 2 }
+		round_variable = VEL_CHI_gb_3
+		clamp_variable = { var = VEL_CHI_gb_3 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_4 = VEL_CHI_sg_4 }
+		multiply_variable = { VEL_CHI_gb_4 = 2 }
+		round_variable = VEL_CHI_gb_4
+		clamp_variable = { var = VEL_CHI_gb_4 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_5 = VEL_CHI_sg_5 }
+		multiply_variable = { VEL_CHI_gb_5 = 2 }
+		round_variable = VEL_CHI_gb_5
+		clamp_variable = { var = VEL_CHI_gb_5 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_6 = VEL_CHI_sg_6 }
+		multiply_variable = { VEL_CHI_gb_6 = 2 }
+		round_variable = VEL_CHI_gb_6
+		clamp_variable = { var = VEL_CHI_gb_6 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_7 = VEL_CHI_sg_7 }
+		multiply_variable = { VEL_CHI_gb_7 = 2 }
+		round_variable = VEL_CHI_gb_7
+		clamp_variable = { var = VEL_CHI_gb_7 min = 0 max = 100 }
+		set_variable = { VEL_CHI_gb_8 = VEL_CHI_sg_8 }
+		multiply_variable = { VEL_CHI_gb_8 = 2 }
+		round_variable = VEL_CHI_gb_8
+		clamp_variable = { var = VEL_CHI_gb_8 min = 0 max = 100 }
 		set_variable = { VEL_CHI_s_seats = VEL_CHI_seatsr^vel_r }
 		set_variable = { VEL_CHI_s_camp = VEL_CHI_camp^vel_r }
 	}
@@ -565,4 +788,14 @@ VEL_CHI_reset = {
 	set_variable = { VEL_CHI_view = 1 }
 	set_variable = { VEL_CHI_phase = 1 }
 	VEL_CHI_run_poll = yes
+}
+
+# 每天由 on_action 调用；每 30 天重算一次民调（开票进行中不刷新）
+VEL_CHI_poll_tick = {
+	if = {
+		limit = { has_country_flag = VEL_CHI_inited check_variable = { global.num_days > VEL_CHI_poll_due } NOT = { check_variable = { VEL_CHI_phase = 2 } } }
+		set_variable = { VEL_CHI_poll_due = global.num_days }
+		add_to_variable = { VEL_CHI_poll_due = 30 }
+		VEL_CHI_run_poll = yes
+	}
 }

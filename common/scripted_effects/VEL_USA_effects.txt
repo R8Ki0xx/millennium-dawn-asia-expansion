@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.36 —— 可视化选举引擎（USA）。由 _tools/v336/gen_vel_engine.py 生成，不要手改。
+# MD ROC Return v3.36 —— 可视化选举引擎（USA）。由 _tools/v336/gen_vel_engine.py 生成，不要手改。
 # R=51 区域 P=3 政党 G=8 群体 I=6 议题。数组均为国家变量，下标从 0 开始。
 VEL_USA_init = {
 	if = {
@@ -149,11 +149,11 @@ VEL_USA_init = {
 		add_to_array = { VEL_USA_order = 6 } add_to_array = { VEL_USA_order = 48 } add_to_array = { VEL_USA_order = 5 } add_to_array = { VEL_USA_order = 50 } add_to_array = { VEL_USA_order = 8 } add_to_array = { VEL_USA_order = 7 }
 		add_to_array = { VEL_USA_order = 9 } add_to_array = { VEL_USA_order = 26 } add_to_array = { VEL_USA_order = 10 } add_to_array = { VEL_USA_order = 27 } add_to_array = { VEL_USA_order = 11 } add_to_array = { VEL_USA_order = 28 }
 		add_to_array = { VEL_USA_order = 31 } add_to_array = { VEL_USA_order = 18 } add_to_array = { VEL_USA_order = 13 } add_to_array = { VEL_USA_order = 29 } add_to_array = { VEL_USA_order = 12 } add_to_array = { VEL_USA_order = 30 }
-		add_to_array = { VEL_USA_order = 14 } add_to_array = { VEL_USA_order = 32 } add_to_array = { VEL_USA_order = 15 } add_to_array = { VEL_USA_order = 33 } add_to_array = { VEL_USA_order = 34 } add_to_array = { VEL_USA_order = 19 }
+		add_to_array = { VEL_USA_order = 14 } add_to_array = { VEL_USA_order = 15 } add_to_array = { VEL_USA_order = 32 } add_to_array = { VEL_USA_order = 33 } add_to_array = { VEL_USA_order = 34 } add_to_array = { VEL_USA_order = 19 }
 		add_to_array = { VEL_USA_order = 16 } add_to_array = { VEL_USA_order = 17 } add_to_array = { VEL_USA_order = 20 } add_to_array = { VEL_USA_order = 35 } add_to_array = { VEL_USA_order = 21 } add_to_array = { VEL_USA_order = 36 }
 		add_to_array = { VEL_USA_order = 22 } add_to_array = { VEL_USA_order = 23 } add_to_array = { VEL_USA_order = 38 } add_to_array = { VEL_USA_order = 37 } add_to_array = { VEL_USA_order = 25 } add_to_array = { VEL_USA_order = 47 }
-		add_to_array = { VEL_USA_order = 24 } add_to_array = { VEL_USA_order = 39 } add_to_array = { VEL_USA_order = 40 } add_to_array = { VEL_USA_order = 42 } add_to_array = { VEL_USA_order = 41 } add_to_array = { VEL_USA_order = 46 }
-		add_to_array = { VEL_USA_order = 45 } add_to_array = { VEL_USA_order = 44 } add_to_array = { VEL_USA_order = 43 }
+		add_to_array = { VEL_USA_order = 24 } add_to_array = { VEL_USA_order = 39 } add_to_array = { VEL_USA_order = 40 } add_to_array = { VEL_USA_order = 42 } add_to_array = { VEL_USA_order = 41 } add_to_array = { VEL_USA_order = 45 }
+		add_to_array = { VEL_USA_order = 46 } add_to_array = { VEL_USA_order = 44 } add_to_array = { VEL_USA_order = 43 }
 		clear_array = VEL_USA_camp
 		resize_array = { array = VEL_USA_camp value = 0 size = 51 }
 		clear_array = VEL_USA_frame
@@ -192,6 +192,22 @@ VEL_USA_init = {
 		resize_array = { array = VEL_USA_poll_win value = 0 size = 51 }
 		clear_array = VEL_USA_poll_best
 		resize_array = { array = VEL_USA_poll_best value = 0 size = 51 }
+		clear_array = VEL_USA_mar
+		resize_array = { array = VEL_USA_mar value = 0 size = 51 }
+		clear_array = VEL_USA_mar2
+		resize_array = { array = VEL_USA_mar2 value = 0 size = 51 }
+		clear_array = VEL_USA_swing
+		resize_array = { array = VEL_USA_swing value = 0 size = 6 }
+		clear_array = VEL_USA_selfr
+		resize_array = { array = VEL_USA_selfr value = 1 size = 51 }
+		clear_array = VEL_USA_lead
+		resize_array = { array = VEL_USA_lead value = 1 size = 51 }
+		set_variable = { VEL_USA_sw_1_l = 1 } set_variable = { VEL_USA_sw_1_r = 0 }
+		set_variable = { VEL_USA_sw_2_l = 1 } set_variable = { VEL_USA_sw_2_r = 0 }
+		set_variable = { VEL_USA_sw_3_l = 1 } set_variable = { VEL_USA_sw_3_r = 0 }
+		set_variable = { VEL_USA_sw_4_l = 1 } set_variable = { VEL_USA_sw_4_r = 0 }
+		set_variable = { VEL_USA_sw_5_l = 1 } set_variable = { VEL_USA_sw_5_r = 0 }
+		set_variable = { VEL_USA_sw_6_l = 1 } set_variable = { VEL_USA_sw_6_r = 0 }
 		set_variable = { VEL_USA_view = 1 }
 		set_variable = { VEL_USA_sel = 0 }
 		set_variable = { VEL_USA_phase = 0 }
@@ -200,7 +216,8 @@ VEL_USA_init = {
 		set_variable = { VEL_USA_anim_n = 0 }
 		set_variable = { VEL_USA_done = 0 }
 		set_variable = { VEL_USA_gov = 0 }
-		VEL_USA_refresh_all = yes
+		set_variable = { VEL_USA_poll_due = global.num_days }
+		VEL_USA_run_poll = yes
 	}
 }
 
@@ -327,8 +344,11 @@ VEL_USA_calc_frames = {
 	for_loop_effect = {
 		start = 0 end = 51 value = vr
 		set_variable = { VEL_USA_fr_res^vr = VEL_USA_win^vr }
-		multiply_variable = { VEL_USA_fr_res^vr = 2 }
-		if = { limit = { check_variable = { VEL_USA_best^vr > 0.54 } } add_to_variable = { VEL_USA_fr_res^vr = 1 } }
+		subtract_from_variable = { VEL_USA_fr_res^vr = 1 }
+		multiply_variable = { VEL_USA_fr_res^vr = 3 }
+		add_to_variable = { VEL_USA_fr_res^vr = 2 }
+		if = { limit = { check_variable = { VEL_USA_best^vr > 0.51 } } add_to_variable = { VEL_USA_fr_res^vr = 1 } }
+		if = { limit = { check_variable = { VEL_USA_best^vr > 0.58 } } add_to_variable = { VEL_USA_fr_res^vr = 1 } }
 	}
 }
 
@@ -342,10 +362,18 @@ VEL_USA_save_poll = {
 VEL_USA_run_poll = {
 	set_temp_variable = { vel_noise = 0 }
 	VEL_USA_set_gov = yes
+	log = "[GetDateText] VEL_USA_run_poll: gov=[?VEL_USA_gov] view=[?VEL_USA_view] phase=[?VEL_USA_phase]"
 	VEL_USA_compute = yes
+	set_variable = { VEL_USA_dbg_nat0 = VEL_USA_nat^0 }
+	set_variable = { VEL_USA_dbg_win0 = VEL_USA_win^0 }
+	set_variable = { VEL_USA_dbg_res0 = VEL_USA_res^0 }
+	set_variable = { VEL_USA_dbg_n0 = VEL_USA_N^0 }
+	set_variable = { VEL_USA_dbg_f0 = VEL_USA_f^0 }
+	log = "[GetDateText] VEL_USA_compute done: nat0=[?VEL_USA_dbg_nat0] win0=[?VEL_USA_dbg_win0] res0=[?VEL_USA_dbg_res0] N0=[?VEL_USA_dbg_n0] f0=[?VEL_USA_dbg_f0]"
 	VEL_USA_calc_frames = yes
 	VEL_USA_save_poll = yes
 	VEL_USA_refresh_all = yes
+	log = "[GetDateText] VEL_USA_refresh done: dn1=[?VEL_USA_dn_1] pct1=[?VEL_USA_pct_1] ready=[?VEL_USA_poll_ready]"
 }
 
 VEL_USA_set_gov = {
@@ -399,6 +427,119 @@ VEL_USA_refresh_all = {
 		else_if = { limit = { check_variable = { VEL_USA_view = 2 } check_variable = { VEL_USA_rev^vr = 1 } } set_temp_variable = { vel_fr = VEL_USA_fr_res^vr } }
 		set_variable = { VEL_USA_frame^vr = vel_fr }
 	}
+	for_loop_effect = {
+		start = 0 end = 51 value = vr
+		set_temp_variable = { vel_b = -1 } set_temp_variable = { vel_s2 = -1 } set_temp_variable = { vel_bi = 1 } set_temp_variable = { vel_has = 0 }
+		set_temp_variable = { vel_ik = vr } multiply_temp_variable = { vel_ik = 3 } add_to_temp_variable = { vel_ik = 0 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_USA_view = 1 } check_variable = { VEL_USA_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_USA_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_USA_view = 2 } check_variable = { VEL_USA_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_USA_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 1 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_USA_view = 1 } check_variable = { VEL_USA_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_USA_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_USA_view = 2 } check_variable = { VEL_USA_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_USA_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 2 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_USA_view = 1 } check_variable = { VEL_USA_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_USA_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_USA_view = 2 } check_variable = { VEL_USA_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_USA_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 3 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_m = vel_b }
+		subtract_from_temp_variable = { vel_m = vel_s2 }
+		multiply_temp_variable = { vel_m = 100 }
+		set_variable = { VEL_USA_mar^vr = vel_m }
+		if = { limit = { check_variable = { vel_has = 0 } } set_variable = { VEL_USA_mar^vr = 999 } }
+		set_variable = { VEL_USA_lead^vr = vel_bi }
+	}
+	for_loop_effect = { start = 0 end = 51 value = vr set_variable = { VEL_USA_mar2^vr = VEL_USA_mar^vr } }
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_1_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_1_r = 1 }
+		set_variable = { VEL_USA_sw_1_m = vel_bm }
+		set_variable = { VEL_USA_sw_1_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_1_r = 0 } set_variable = { VEL_USA_sw_1_m = 0 } set_variable = { VEL_USA_sw_1_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_2_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_2_r = 1 }
+		set_variable = { VEL_USA_sw_2_m = vel_bm }
+		set_variable = { VEL_USA_sw_2_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_2_r = 0 } set_variable = { VEL_USA_sw_2_m = 0 } set_variable = { VEL_USA_sw_2_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_3_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_3_r = 1 }
+		set_variable = { VEL_USA_sw_3_m = vel_bm }
+		set_variable = { VEL_USA_sw_3_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_3_r = 0 } set_variable = { VEL_USA_sw_3_m = 0 } set_variable = { VEL_USA_sw_3_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_4_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_4_r = 1 }
+		set_variable = { VEL_USA_sw_4_m = vel_bm }
+		set_variable = { VEL_USA_sw_4_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_4_r = 0 } set_variable = { VEL_USA_sw_4_m = 0 } set_variable = { VEL_USA_sw_4_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_5_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_5_r = 1 }
+		set_variable = { VEL_USA_sw_5_m = vel_bm }
+		set_variable = { VEL_USA_sw_5_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_5_r = 0 } set_variable = { VEL_USA_sw_5_m = 0 } set_variable = { VEL_USA_sw_5_l = 1 }
+	}
+	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_mar2^vr < vel_bm } } set_temp_variable = { vel_bm = VEL_USA_mar2^vr } set_temp_variable = { vel_bj = vr } } }
+	if = {
+		limit = { check_variable = { vel_bj > -1 } }
+		set_variable = { VEL_USA_sw_6_r = vel_bj }
+		add_to_variable = { VEL_USA_sw_6_r = 1 }
+		set_variable = { VEL_USA_sw_6_m = vel_bm }
+		set_variable = { VEL_USA_sw_6_l = VEL_USA_lead^vel_bj }
+		set_variable = { VEL_USA_mar2^vel_bj = 1000 }
+	}
+	else = {
+		set_variable = { VEL_USA_sw_6_r = 0 } set_variable = { VEL_USA_sw_6_m = 0 } set_variable = { VEL_USA_sw_6_l = 1 }
+	}
+	set_variable = { VEL_USA_prog = VEL_USA_anim_n }
+	multiply_variable = { VEL_USA_prog = 100 }
+	divide_variable = { VEL_USA_prog = 51 }
+	clamp_variable = { var = VEL_USA_prog min = 0 max = 100 }
+	round_variable = VEL_USA_prog
 	if = {
 		limit = { check_variable = { VEL_USA_view = 1 } }
 		set_variable = { VEL_USA_dn_1 = VEL_USA_poll_nat^0 }
@@ -444,6 +585,11 @@ VEL_USA_refresh_all = {
 	round_variable = VEL_USA_bar_3
 	set_variable = { VEL_USA_pct_3 = VEL_USA_dn_3 }
 	multiply_variable = { VEL_USA_pct_3 = 100 }
+	set_temp_variable = { vel_tt = VEL_USA_ds_1 }
+	add_to_temp_variable = { vel_tt = VEL_USA_ds_2 }
+	if = { limit = { check_variable = { vel_tt > 0 } } set_variable = { VEL_USA_tug = VEL_USA_ds_1 } multiply_variable = { VEL_USA_tug = 100 } divide_variable = { VEL_USA_tug = vel_tt } }
+	else = { set_variable = { VEL_USA_tug = 50 } }
+	round_variable = VEL_USA_tug
 	VEL_USA_refresh_sel = yes
 }
 
@@ -500,6 +646,64 @@ VEL_USA_refresh_sel = {
 		set_temp_variable = { vel_ig = vel_r } multiply_temp_variable = { vel_ig = 8 } add_to_temp_variable = { vel_ig = 7 }
 		set_variable = { VEL_USA_sg_8 = VEL_USA_sh^vel_ig }
 		multiply_variable = { VEL_USA_sg_8 = 100 }
+		clear_array = VEL_USA_selfr
+		for_loop_effect = { start = 0 end = 51 value = vc add_to_array = { VEL_USA_selfr = 1 } }
+		set_variable = { VEL_USA_selfr^vel_r = 2 }
+		set_temp_variable = { vel_b = -1 } set_temp_variable = { vel_s2 = -1 } set_temp_variable = { vel_bi = 1 }
+		set_variable = { VEL_USA_sb_1 = VEL_USA_sp_1 }
+		round_variable = VEL_USA_sb_1
+		clamp_variable = { var = VEL_USA_sb_1 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_USA_sp_1 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 1 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_USA_sb_2 = VEL_USA_sp_2 }
+		round_variable = VEL_USA_sb_2
+		clamp_variable = { var = VEL_USA_sb_2 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_USA_sp_2 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 2 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_USA_sb_3 = VEL_USA_sp_3 }
+		round_variable = VEL_USA_sb_3
+		clamp_variable = { var = VEL_USA_sb_3 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_USA_sp_3 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 3 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_USA_s_lead = vel_bi }
+		set_variable = { VEL_USA_s_margin = vel_b }
+		subtract_from_variable = { VEL_USA_s_margin = vel_s2 }
+		if = { limit = { check_variable = { vel_b < 0.1 } } set_variable = { VEL_USA_s_lead = 0 } set_variable = { VEL_USA_s_margin = 0 } }
+		set_variable = { VEL_USA_gb_1 = VEL_USA_sg_1 }
+		multiply_variable = { VEL_USA_gb_1 = 2 }
+		round_variable = VEL_USA_gb_1
+		clamp_variable = { var = VEL_USA_gb_1 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_2 = VEL_USA_sg_2 }
+		multiply_variable = { VEL_USA_gb_2 = 2 }
+		round_variable = VEL_USA_gb_2
+		clamp_variable = { var = VEL_USA_gb_2 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_3 = VEL_USA_sg_3 }
+		multiply_variable = { VEL_USA_gb_3 = 2 }
+		round_variable = VEL_USA_gb_3
+		clamp_variable = { var = VEL_USA_gb_3 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_4 = VEL_USA_sg_4 }
+		multiply_variable = { VEL_USA_gb_4 = 2 }
+		round_variable = VEL_USA_gb_4
+		clamp_variable = { var = VEL_USA_gb_4 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_5 = VEL_USA_sg_5 }
+		multiply_variable = { VEL_USA_gb_5 = 2 }
+		round_variable = VEL_USA_gb_5
+		clamp_variable = { var = VEL_USA_gb_5 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_6 = VEL_USA_sg_6 }
+		multiply_variable = { VEL_USA_gb_6 = 2 }
+		round_variable = VEL_USA_gb_6
+		clamp_variable = { var = VEL_USA_gb_6 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_7 = VEL_USA_sg_7 }
+		multiply_variable = { VEL_USA_gb_7 = 2 }
+		round_variable = VEL_USA_gb_7
+		clamp_variable = { var = VEL_USA_gb_7 min = 0 max = 100 }
+		set_variable = { VEL_USA_gb_8 = VEL_USA_sg_8 }
+		multiply_variable = { VEL_USA_gb_8 = 2 }
+		round_variable = VEL_USA_gb_8
+		clamp_variable = { var = VEL_USA_gb_8 min = 0 max = 100 }
 		set_variable = { VEL_USA_s_seats = VEL_USA_seatsr^vel_r }
 		set_variable = { VEL_USA_s_camp = VEL_USA_camp^vel_r }
 	}
@@ -535,4 +739,14 @@ VEL_USA_reset = {
 	set_variable = { VEL_USA_view = 1 }
 	set_variable = { VEL_USA_phase = 1 }
 	VEL_USA_run_poll = yes
+}
+
+# 每天由 on_action 调用；每 30 天重算一次民调（开票进行中不刷新）
+VEL_USA_poll_tick = {
+	if = {
+		limit = { has_country_flag = VEL_USA_inited check_variable = { global.num_days > VEL_USA_poll_due } NOT = { check_variable = { VEL_USA_phase = 2 } } }
+		set_variable = { VEL_USA_poll_due = global.num_days }
+		add_to_variable = { VEL_USA_poll_due = 30 }
+		VEL_USA_run_poll = yes
+	}
 }

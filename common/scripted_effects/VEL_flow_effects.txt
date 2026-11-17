@@ -1,6 +1,6 @@
-﻿# MD ROC Return v3.36 —— 选举结果写回千禧与本模组（由 _tools/v336/vel_events.py 生成）
+# MD ROC Return v3.36 —— 选举结果写回千禧与本模组（由 _tools/v336/vel_events.py 生成）
 
-# Scope: CHI（ROC 或民主化后的 PRC）。把开票结果写进政党支持率、执政党；ROC 另外写进立法院席次
+# Scope: ROC-CHI（光复后的中华民国）。把开票结果写进政党支持率、执政党；ROC 另外写进立法院席次
 VEL_CHI_apply_result = {
 	# 全国支持率向得票率靠拢 35%
 	for_loop_effect = {

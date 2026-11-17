@@ -1,0 +1,22 @@
+# MD ROC Return v3.41 —— 台湾（光复前）选举系统的启动：与美国一样，开局第一天就启用，并停掉千禧的通用选举
+on_actions = {
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = { original_tag = TAI has_country_flag = VEL_TAI_on NOT = { has_country_flag = ROC_new_chi } }
+				country_event = { id = VEL_TAI.1 }
+			}
+		}
+	}
+	on_daily_TAI = {
+		effect = {
+			if = {
+				limit = { NOT = { has_country_flag = VEL_TAI_on } }
+				set_country_flag = VEL_TAI_on
+				set_country_flag = generic_election_killswitch
+				VEL_TAI_init = yes
+			}
+			VEL_TAI_poll_tick = yes
+		}
+	}
+}

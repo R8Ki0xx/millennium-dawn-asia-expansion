@@ -1,138 +1,352 @@
-﻿# MD ROC Return v3.36 —— USA 选举界面的逻辑（由 _tools/v336/gen_vel_gui.py 生成）
+# MD ROC Return v3.36 —— USA 选举界面的逻辑（由 _tools/v336/gen_vel_gui3.py 生成）
 scripted_gui = {
 	VEL_USA_GUI = {
 		context_type = decision_category
 		window_name = "VEL_USA_window"
 		visible = { has_country_flag = VEL_USA_on }
 		ai_enabled = { always = no }
-		triggers = {
-			vel_usa_rally_click_enabled = { check_variable = { VEL_USA_sel > 0 } check_variable = { VEL_USA_phase = 1 } political_power > 24 }
-			vel_usa_issue_1_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_issue_2_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_issue_3_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_issue_4_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_issue_5_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_issue_6_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
-			vel_usa_view1_click_enabled = { check_variable = { VEL_USA_poll_ready = 1 } }
-			vel_usa_view2_click_enabled = { check_variable = { VEL_USA_phase > 1 } }
-		}
 		properties = {
-			vel_usa_i_0 = { frame = VEL_USA_frame^0 }
-			vel_usa_i_1 = { frame = VEL_USA_frame^1 }
-			vel_usa_i_2 = { frame = VEL_USA_frame^2 }
-			vel_usa_i_3 = { frame = VEL_USA_frame^3 }
-			vel_usa_i_4 = { frame = VEL_USA_frame^4 }
-			vel_usa_i_5 = { frame = VEL_USA_frame^5 }
-			vel_usa_i_6 = { frame = VEL_USA_frame^6 }
-			vel_usa_i_7 = { frame = VEL_USA_frame^7 }
-			vel_usa_i_8 = { frame = VEL_USA_frame^8 }
-			vel_usa_i_9 = { frame = VEL_USA_frame^9 }
-			vel_usa_i_10 = { frame = VEL_USA_frame^10 }
-			vel_usa_i_11 = { frame = VEL_USA_frame^11 }
-			vel_usa_i_12 = { frame = VEL_USA_frame^12 }
-			vel_usa_i_13 = { frame = VEL_USA_frame^13 }
-			vel_usa_i_14 = { frame = VEL_USA_frame^14 }
-			vel_usa_i_15 = { frame = VEL_USA_frame^15 }
-			vel_usa_i_16 = { frame = VEL_USA_frame^16 }
-			vel_usa_i_17 = { frame = VEL_USA_frame^17 }
-			vel_usa_i_18 = { frame = VEL_USA_frame^18 }
-			vel_usa_i_19 = { frame = VEL_USA_frame^19 }
-			vel_usa_i_20 = { frame = VEL_USA_frame^20 }
-			vel_usa_i_21 = { frame = VEL_USA_frame^21 }
-			vel_usa_i_22 = { frame = VEL_USA_frame^22 }
-			vel_usa_i_23 = { frame = VEL_USA_frame^23 }
-			vel_usa_i_24 = { frame = VEL_USA_frame^24 }
-			vel_usa_i_25 = { frame = VEL_USA_frame^25 }
-			vel_usa_i_26 = { frame = VEL_USA_frame^26 }
-			vel_usa_i_27 = { frame = VEL_USA_frame^27 }
-			vel_usa_i_28 = { frame = VEL_USA_frame^28 }
-			vel_usa_i_29 = { frame = VEL_USA_frame^29 }
-			vel_usa_i_30 = { frame = VEL_USA_frame^30 }
-			vel_usa_i_31 = { frame = VEL_USA_frame^31 }
-			vel_usa_i_32 = { frame = VEL_USA_frame^32 }
-			vel_usa_i_33 = { frame = VEL_USA_frame^33 }
-			vel_usa_i_34 = { frame = VEL_USA_frame^34 }
-			vel_usa_i_35 = { frame = VEL_USA_frame^35 }
-			vel_usa_i_36 = { frame = VEL_USA_frame^36 }
-			vel_usa_i_37 = { frame = VEL_USA_frame^37 }
-			vel_usa_i_38 = { frame = VEL_USA_frame^38 }
-			vel_usa_i_39 = { frame = VEL_USA_frame^39 }
-			vel_usa_i_40 = { frame = VEL_USA_frame^40 }
-			vel_usa_i_41 = { frame = VEL_USA_frame^41 }
-			vel_usa_i_42 = { frame = VEL_USA_frame^42 }
-			vel_usa_i_43 = { frame = VEL_USA_frame^43 }
-			vel_usa_i_44 = { frame = VEL_USA_frame^44 }
-			vel_usa_i_45 = { frame = VEL_USA_frame^45 }
-			vel_usa_i_46 = { frame = VEL_USA_frame^46 }
-			vel_usa_i_47 = { frame = VEL_USA_frame^47 }
-			vel_usa_i_48 = { frame = VEL_USA_frame^48 }
-			vel_usa_i_49 = { frame = VEL_USA_frame^49 }
-			vel_usa_i_50 = { frame = VEL_USA_frame^50 }
 			vel_usa_bar_1 = { frame = VEL_USA_bar_1 }
 			vel_usa_bar_2 = { frame = VEL_USA_bar_2 }
 			vel_usa_bar_3 = { frame = VEL_USA_bar_3 }
 		}
 		effects = {
-			vel_usa_r_0_click = { set_variable = { VEL_USA_sel = 1 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_1_click = { set_variable = { VEL_USA_sel = 2 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_2_click = { set_variable = { VEL_USA_sel = 3 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_3_click = { set_variable = { VEL_USA_sel = 4 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_4_click = { set_variable = { VEL_USA_sel = 5 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_5_click = { set_variable = { VEL_USA_sel = 6 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_6_click = { set_variable = { VEL_USA_sel = 7 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_7_click = { set_variable = { VEL_USA_sel = 8 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_8_click = { set_variable = { VEL_USA_sel = 9 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_9_click = { set_variable = { VEL_USA_sel = 10 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_10_click = { set_variable = { VEL_USA_sel = 11 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_11_click = { set_variable = { VEL_USA_sel = 12 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_12_click = { set_variable = { VEL_USA_sel = 13 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_13_click = { set_variable = { VEL_USA_sel = 14 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_14_click = { set_variable = { VEL_USA_sel = 15 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_15_click = { set_variable = { VEL_USA_sel = 16 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_16_click = { set_variable = { VEL_USA_sel = 17 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_17_click = { set_variable = { VEL_USA_sel = 18 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_18_click = { set_variable = { VEL_USA_sel = 19 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_19_click = { set_variable = { VEL_USA_sel = 20 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_20_click = { set_variable = { VEL_USA_sel = 21 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_21_click = { set_variable = { VEL_USA_sel = 22 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_22_click = { set_variable = { VEL_USA_sel = 23 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_23_click = { set_variable = { VEL_USA_sel = 24 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_24_click = { set_variable = { VEL_USA_sel = 25 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_25_click = { set_variable = { VEL_USA_sel = 26 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_26_click = { set_variable = { VEL_USA_sel = 27 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_27_click = { set_variable = { VEL_USA_sel = 28 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_28_click = { set_variable = { VEL_USA_sel = 29 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_29_click = { set_variable = { VEL_USA_sel = 30 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_30_click = { set_variable = { VEL_USA_sel = 31 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_31_click = { set_variable = { VEL_USA_sel = 32 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_32_click = { set_variable = { VEL_USA_sel = 33 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_33_click = { set_variable = { VEL_USA_sel = 34 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_34_click = { set_variable = { VEL_USA_sel = 35 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_35_click = { set_variable = { VEL_USA_sel = 36 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_36_click = { set_variable = { VEL_USA_sel = 37 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_37_click = { set_variable = { VEL_USA_sel = 38 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_38_click = { set_variable = { VEL_USA_sel = 39 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_39_click = { set_variable = { VEL_USA_sel = 40 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_40_click = { set_variable = { VEL_USA_sel = 41 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_41_click = { set_variable = { VEL_USA_sel = 42 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_42_click = { set_variable = { VEL_USA_sel = 43 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_43_click = { set_variable = { VEL_USA_sel = 44 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_44_click = { set_variable = { VEL_USA_sel = 45 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_45_click = { set_variable = { VEL_USA_sel = 46 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_46_click = { set_variable = { VEL_USA_sel = 47 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_47_click = { set_variable = { VEL_USA_sel = 48 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_48_click = { set_variable = { VEL_USA_sel = 49 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_49_click = { set_variable = { VEL_USA_sel = 50 } VEL_USA_refresh_sel = yes }
-			vel_usa_r_50_click = { set_variable = { VEL_USA_sel = 51 } VEL_USA_refresh_sel = yes }
-			vel_usa_rally_click = { add_political_power = -25 VEL_USA_rally = yes }
-			vel_usa_issue_1_click = { set_temp_variable = { vel_issue = 1 } VEL_USA_set_main_issue = yes }
-			vel_usa_issue_2_click = { set_temp_variable = { vel_issue = 2 } VEL_USA_set_main_issue = yes }
-			vel_usa_issue_3_click = { set_temp_variable = { vel_issue = 3 } VEL_USA_set_main_issue = yes }
-			vel_usa_issue_4_click = { set_temp_variable = { vel_issue = 4 } VEL_USA_set_main_issue = yes }
-			vel_usa_issue_5_click = { set_temp_variable = { vel_issue = 5 } VEL_USA_set_main_issue = yes }
-			vel_usa_issue_6_click = { set_temp_variable = { vel_issue = 6 } VEL_USA_set_main_issue = yes }
-			vel_usa_view1_click = { set_variable = { VEL_USA_view = 1 } VEL_USA_refresh_all = yes }
-			vel_usa_view2_click = { set_variable = { VEL_USA_view = 2 } VEL_USA_refresh_all = yes }
+			vel_usa_open_click = { if = { limit = { has_country_flag = VEL_USA_open } clr_country_flag = VEL_USA_open } else = { set_country_flag = VEL_USA_open } }
+		}
+	}
+	VEL_USA_BIG_GUI = {
+		context_type = player_context
+		window_name = "VEL_USA_big_window"
+		visible = { has_country_flag = VEL_USA_open }
+		ai_enabled = { always = no }
+		triggers = {
+			vb_usa_rally_click_enabled = { check_variable = { VEL_USA_sel > 0 } check_variable = { VEL_USA_phase = 1 } has_political_power > 24 }
+			vb_usa_issue_1_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_issue_2_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_issue_3_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_issue_4_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_issue_5_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_issue_6_click_enabled = { check_variable = { VEL_USA_phase = 1 } }
+			vb_usa_view1_click_enabled = { check_variable = { VEL_USA_poll_ready = 1 } }
+			vb_usa_view2_click_enabled = { check_variable = { VEL_USA_phase > 1 } }
+			vb_usa_swb_1_click_enabled = { check_variable = { VEL_USA_sw_1_r > 0 } }
+			vb_usa_swb_2_click_enabled = { check_variable = { VEL_USA_sw_2_r > 0 } }
+			vb_usa_swb_3_click_enabled = { check_variable = { VEL_USA_sw_3_r > 0 } }
+			vb_usa_swb_4_click_enabled = { check_variable = { VEL_USA_sw_4_r > 0 } }
+			vb_usa_swb_5_click_enabled = { check_variable = { VEL_USA_sw_5_r > 0 } }
+			vb_usa_swb_6_click_enabled = { check_variable = { VEL_USA_sw_6_r > 0 } }
+		}
+		properties = {
+			vb_usa_i_0 = { frame = VEL_USA_frame^0 }
+			vb_usa_o_0 = { frame = VEL_USA_selfr^0 }
+			vb_usa_i_1 = { frame = VEL_USA_frame^1 }
+			vb_usa_o_1 = { frame = VEL_USA_selfr^1 }
+			vb_usa_b_1 = { frame = VEL_USA_frame^1 }
+			vb_usa_i_2 = { frame = VEL_USA_frame^2 }
+			vb_usa_o_2 = { frame = VEL_USA_selfr^2 }
+			vb_usa_b_2 = { frame = VEL_USA_frame^2 }
+			vb_usa_i_3 = { frame = VEL_USA_frame^3 }
+			vb_usa_o_3 = { frame = VEL_USA_selfr^3 }
+			vb_usa_b_3 = { frame = VEL_USA_frame^3 }
+			vb_usa_i_4 = { frame = VEL_USA_frame^4 }
+			vb_usa_o_4 = { frame = VEL_USA_selfr^4 }
+			vb_usa_b_4 = { frame = VEL_USA_frame^4 }
+			vb_usa_i_5 = { frame = VEL_USA_frame^5 }
+			vb_usa_o_5 = { frame = VEL_USA_selfr^5 }
+			vb_usa_i_6 = { frame = VEL_USA_frame^6 }
+			vb_usa_o_6 = { frame = VEL_USA_selfr^6 }
+			vb_usa_b_6 = { frame = VEL_USA_frame^6 }
+			vb_usa_i_7 = { frame = VEL_USA_frame^7 }
+			vb_usa_o_7 = { frame = VEL_USA_selfr^7 }
+			vb_usa_i_8 = { frame = VEL_USA_frame^8 }
+			vb_usa_o_8 = { frame = VEL_USA_selfr^8 }
+			vb_usa_b_8 = { frame = VEL_USA_frame^8 }
+			vb_usa_i_9 = { frame = VEL_USA_frame^9 }
+			vb_usa_o_9 = { frame = VEL_USA_selfr^9 }
+			vb_usa_i_10 = { frame = VEL_USA_frame^10 }
+			vb_usa_o_10 = { frame = VEL_USA_selfr^10 }
+			vb_usa_i_11 = { frame = VEL_USA_frame^11 }
+			vb_usa_o_11 = { frame = VEL_USA_selfr^11 }
+			vb_usa_i_12 = { frame = VEL_USA_frame^12 }
+			vb_usa_o_12 = { frame = VEL_USA_selfr^12 }
+			vb_usa_i_13 = { frame = VEL_USA_frame^13 }
+			vb_usa_o_13 = { frame = VEL_USA_selfr^13 }
+			vb_usa_i_14 = { frame = VEL_USA_frame^14 }
+			vb_usa_o_14 = { frame = VEL_USA_selfr^14 }
+			vb_usa_i_15 = { frame = VEL_USA_frame^15 }
+			vb_usa_o_15 = { frame = VEL_USA_selfr^15 }
+			vb_usa_i_16 = { frame = VEL_USA_frame^16 }
+			vb_usa_o_16 = { frame = VEL_USA_selfr^16 }
+			vb_usa_i_17 = { frame = VEL_USA_frame^17 }
+			vb_usa_o_17 = { frame = VEL_USA_selfr^17 }
+			vb_usa_i_18 = { frame = VEL_USA_frame^18 }
+			vb_usa_o_18 = { frame = VEL_USA_selfr^18 }
+			vb_usa_i_19 = { frame = VEL_USA_frame^19 }
+			vb_usa_o_19 = { frame = VEL_USA_selfr^19 }
+			vb_usa_i_20 = { frame = VEL_USA_frame^20 }
+			vb_usa_o_20 = { frame = VEL_USA_selfr^20 }
+			vb_usa_i_21 = { frame = VEL_USA_frame^21 }
+			vb_usa_o_21 = { frame = VEL_USA_selfr^21 }
+			vb_usa_i_22 = { frame = VEL_USA_frame^22 }
+			vb_usa_o_22 = { frame = VEL_USA_selfr^22 }
+			vb_usa_i_23 = { frame = VEL_USA_frame^23 }
+			vb_usa_o_23 = { frame = VEL_USA_selfr^23 }
+			vb_usa_i_24 = { frame = VEL_USA_frame^24 }
+			vb_usa_o_24 = { frame = VEL_USA_selfr^24 }
+			vb_usa_i_25 = { frame = VEL_USA_frame^25 }
+			vb_usa_o_25 = { frame = VEL_USA_selfr^25 }
+			vb_usa_i_26 = { frame = VEL_USA_frame^26 }
+			vb_usa_o_26 = { frame = VEL_USA_selfr^26 }
+			vb_usa_i_27 = { frame = VEL_USA_frame^27 }
+			vb_usa_o_27 = { frame = VEL_USA_selfr^27 }
+			vb_usa_i_28 = { frame = VEL_USA_frame^28 }
+			vb_usa_o_28 = { frame = VEL_USA_selfr^28 }
+			vb_usa_i_29 = { frame = VEL_USA_frame^29 }
+			vb_usa_o_29 = { frame = VEL_USA_selfr^29 }
+			vb_usa_i_30 = { frame = VEL_USA_frame^30 }
+			vb_usa_o_30 = { frame = VEL_USA_selfr^30 }
+			vb_usa_i_31 = { frame = VEL_USA_frame^31 }
+			vb_usa_o_31 = { frame = VEL_USA_selfr^31 }
+			vb_usa_i_32 = { frame = VEL_USA_frame^32 }
+			vb_usa_o_32 = { frame = VEL_USA_selfr^32 }
+			vb_usa_i_33 = { frame = VEL_USA_frame^33 }
+			vb_usa_o_33 = { frame = VEL_USA_selfr^33 }
+			vb_usa_i_34 = { frame = VEL_USA_frame^34 }
+			vb_usa_o_34 = { frame = VEL_USA_selfr^34 }
+			vb_usa_i_35 = { frame = VEL_USA_frame^35 }
+			vb_usa_o_35 = { frame = VEL_USA_selfr^35 }
+			vb_usa_i_36 = { frame = VEL_USA_frame^36 }
+			vb_usa_o_36 = { frame = VEL_USA_selfr^36 }
+			vb_usa_i_37 = { frame = VEL_USA_frame^37 }
+			vb_usa_o_37 = { frame = VEL_USA_selfr^37 }
+			vb_usa_i_38 = { frame = VEL_USA_frame^38 }
+			vb_usa_o_38 = { frame = VEL_USA_selfr^38 }
+			vb_usa_i_39 = { frame = VEL_USA_frame^39 }
+			vb_usa_o_39 = { frame = VEL_USA_selfr^39 }
+			vb_usa_i_40 = { frame = VEL_USA_frame^40 }
+			vb_usa_o_40 = { frame = VEL_USA_selfr^40 }
+			vb_usa_i_41 = { frame = VEL_USA_frame^41 }
+			vb_usa_o_41 = { frame = VEL_USA_selfr^41 }
+			vb_usa_i_42 = { frame = VEL_USA_frame^42 }
+			vb_usa_o_42 = { frame = VEL_USA_selfr^42 }
+			vb_usa_i_43 = { frame = VEL_USA_frame^43 }
+			vb_usa_o_43 = { frame = VEL_USA_selfr^43 }
+			vb_usa_i_44 = { frame = VEL_USA_frame^44 }
+			vb_usa_o_44 = { frame = VEL_USA_selfr^44 }
+			vb_usa_i_45 = { frame = VEL_USA_frame^45 }
+			vb_usa_o_45 = { frame = VEL_USA_selfr^45 }
+			vb_usa_i_46 = { frame = VEL_USA_frame^46 }
+			vb_usa_o_46 = { frame = VEL_USA_selfr^46 }
+			vb_usa_i_47 = { frame = VEL_USA_frame^47 }
+			vb_usa_o_47 = { frame = VEL_USA_selfr^47 }
+			vb_usa_i_48 = { frame = VEL_USA_frame^48 }
+			vb_usa_o_48 = { frame = VEL_USA_selfr^48 }
+			vb_usa_b_48 = { frame = VEL_USA_frame^48 }
+			vb_usa_i_49 = { frame = VEL_USA_frame^49 }
+			vb_usa_o_49 = { frame = VEL_USA_selfr^49 }
+			vb_usa_b_49 = { frame = VEL_USA_frame^49 }
+			vb_usa_i_50 = { frame = VEL_USA_frame^50 }
+			vb_usa_o_50 = { frame = VEL_USA_selfr^50 }
+			vb_usa_b_50 = { frame = VEL_USA_frame^50 }
+			vb_usa_sbar_1 = { frame = VEL_USA_sb_1 }
+			vb_usa_sbar_2 = { frame = VEL_USA_sb_2 }
+			vb_usa_sbar_3 = { frame = VEL_USA_sb_3 }
+			vb_usa_ls_0 = { frame = VEL_USA_lead^0 }
+			vb_usa_ls_1 = { frame = VEL_USA_lead^1 }
+			vb_usa_ls_2 = { frame = VEL_USA_lead^2 }
+			vb_usa_ls_3 = { frame = VEL_USA_lead^3 }
+			vb_usa_ls_4 = { frame = VEL_USA_lead^4 }
+			vb_usa_ls_5 = { frame = VEL_USA_lead^5 }
+			vb_usa_ls_6 = { frame = VEL_USA_lead^6 }
+			vb_usa_ls_7 = { frame = VEL_USA_lead^7 }
+			vb_usa_ls_8 = { frame = VEL_USA_lead^8 }
+			vb_usa_ls_9 = { frame = VEL_USA_lead^9 }
+			vb_usa_ls_10 = { frame = VEL_USA_lead^10 }
+			vb_usa_ls_11 = { frame = VEL_USA_lead^11 }
+			vb_usa_ls_12 = { frame = VEL_USA_lead^12 }
+			vb_usa_ls_13 = { frame = VEL_USA_lead^13 }
+			vb_usa_ls_14 = { frame = VEL_USA_lead^14 }
+			vb_usa_ls_15 = { frame = VEL_USA_lead^15 }
+			vb_usa_ls_16 = { frame = VEL_USA_lead^16 }
+			vb_usa_ls_17 = { frame = VEL_USA_lead^17 }
+			vb_usa_ls_18 = { frame = VEL_USA_lead^18 }
+			vb_usa_ls_19 = { frame = VEL_USA_lead^19 }
+			vb_usa_ls_20 = { frame = VEL_USA_lead^20 }
+			vb_usa_ls_21 = { frame = VEL_USA_lead^21 }
+			vb_usa_ls_22 = { frame = VEL_USA_lead^22 }
+			vb_usa_ls_23 = { frame = VEL_USA_lead^23 }
+			vb_usa_ls_24 = { frame = VEL_USA_lead^24 }
+			vb_usa_ls_25 = { frame = VEL_USA_lead^25 }
+			vb_usa_ls_26 = { frame = VEL_USA_lead^26 }
+			vb_usa_ls_27 = { frame = VEL_USA_lead^27 }
+			vb_usa_ls_28 = { frame = VEL_USA_lead^28 }
+			vb_usa_ls_29 = { frame = VEL_USA_lead^29 }
+			vb_usa_ls_30 = { frame = VEL_USA_lead^30 }
+			vb_usa_ls_31 = { frame = VEL_USA_lead^31 }
+			vb_usa_ls_32 = { frame = VEL_USA_lead^32 }
+			vb_usa_ls_33 = { frame = VEL_USA_lead^33 }
+			vb_usa_ls_34 = { frame = VEL_USA_lead^34 }
+			vb_usa_ls_35 = { frame = VEL_USA_lead^35 }
+			vb_usa_ls_36 = { frame = VEL_USA_lead^36 }
+			vb_usa_ls_37 = { frame = VEL_USA_lead^37 }
+			vb_usa_ls_38 = { frame = VEL_USA_lead^38 }
+			vb_usa_ls_39 = { frame = VEL_USA_lead^39 }
+			vb_usa_ls_40 = { frame = VEL_USA_lead^40 }
+			vb_usa_ls_41 = { frame = VEL_USA_lead^41 }
+			vb_usa_ls_42 = { frame = VEL_USA_lead^42 }
+			vb_usa_ls_43 = { frame = VEL_USA_lead^43 }
+			vb_usa_ls_44 = { frame = VEL_USA_lead^44 }
+			vb_usa_ls_45 = { frame = VEL_USA_lead^45 }
+			vb_usa_ls_46 = { frame = VEL_USA_lead^46 }
+			vb_usa_ls_47 = { frame = VEL_USA_lead^47 }
+			vb_usa_ls_48 = { frame = VEL_USA_lead^48 }
+			vb_usa_ls_49 = { frame = VEL_USA_lead^49 }
+			vb_usa_ls_50 = { frame = VEL_USA_lead^50 }
+			vb_usa_gbar_1 = { frame = VEL_USA_gb_1 }
+			vb_usa_gbar_2 = { frame = VEL_USA_gb_2 }
+			vb_usa_gbar_3 = { frame = VEL_USA_gb_3 }
+			vb_usa_gbar_4 = { frame = VEL_USA_gb_4 }
+			vb_usa_gbar_5 = { frame = VEL_USA_gb_5 }
+			vb_usa_gbar_6 = { frame = VEL_USA_gb_6 }
+			vb_usa_gbar_7 = { frame = VEL_USA_gb_7 }
+			vb_usa_gbar_8 = { frame = VEL_USA_gb_8 }
+			vb_usa_sws_1 = { frame = VEL_USA_sw_1_l }
+			vb_usa_sws_2 = { frame = VEL_USA_sw_2_l }
+			vb_usa_sws_3 = { frame = VEL_USA_sw_3_l }
+			vb_usa_sws_4 = { frame = VEL_USA_sw_4_l }
+			vb_usa_sws_5 = { frame = VEL_USA_sw_5_l }
+			vb_usa_sws_6 = { frame = VEL_USA_sw_6_l }
+			vb_usa_prog = { frame = VEL_USA_prog }
+			vb_usa_tug = { frame = VEL_USA_tug }
+		}
+		effects = {
+			vb_usa_close_click = { clr_country_flag = VEL_USA_open }
+			vb_usa_r_0_click = { set_variable = { VEL_USA_sel = 1 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_1_click = { set_variable = { VEL_USA_sel = 2 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_1_click = { set_variable = { VEL_USA_sel = 2 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_2_click = { set_variable = { VEL_USA_sel = 3 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_2_click = { set_variable = { VEL_USA_sel = 3 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_3_click = { set_variable = { VEL_USA_sel = 4 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_3_click = { set_variable = { VEL_USA_sel = 4 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_4_click = { set_variable = { VEL_USA_sel = 5 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_4_click = { set_variable = { VEL_USA_sel = 5 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_5_click = { set_variable = { VEL_USA_sel = 6 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_6_click = { set_variable = { VEL_USA_sel = 7 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_6_click = { set_variable = { VEL_USA_sel = 7 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_7_click = { set_variable = { VEL_USA_sel = 8 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_8_click = { set_variable = { VEL_USA_sel = 9 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_8_click = { set_variable = { VEL_USA_sel = 9 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_9_click = { set_variable = { VEL_USA_sel = 10 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_10_click = { set_variable = { VEL_USA_sel = 11 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_11_click = { set_variable = { VEL_USA_sel = 12 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_12_click = { set_variable = { VEL_USA_sel = 13 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_13_click = { set_variable = { VEL_USA_sel = 14 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_14_click = { set_variable = { VEL_USA_sel = 15 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_15_click = { set_variable = { VEL_USA_sel = 16 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_16_click = { set_variable = { VEL_USA_sel = 17 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_17_click = { set_variable = { VEL_USA_sel = 18 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_18_click = { set_variable = { VEL_USA_sel = 19 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_19_click = { set_variable = { VEL_USA_sel = 20 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_20_click = { set_variable = { VEL_USA_sel = 21 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_21_click = { set_variable = { VEL_USA_sel = 22 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_22_click = { set_variable = { VEL_USA_sel = 23 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_23_click = { set_variable = { VEL_USA_sel = 24 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_24_click = { set_variable = { VEL_USA_sel = 25 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_25_click = { set_variable = { VEL_USA_sel = 26 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_26_click = { set_variable = { VEL_USA_sel = 27 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_27_click = { set_variable = { VEL_USA_sel = 28 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_28_click = { set_variable = { VEL_USA_sel = 29 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_29_click = { set_variable = { VEL_USA_sel = 30 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_30_click = { set_variable = { VEL_USA_sel = 31 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_31_click = { set_variable = { VEL_USA_sel = 32 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_32_click = { set_variable = { VEL_USA_sel = 33 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_33_click = { set_variable = { VEL_USA_sel = 34 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_34_click = { set_variable = { VEL_USA_sel = 35 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_35_click = { set_variable = { VEL_USA_sel = 36 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_36_click = { set_variable = { VEL_USA_sel = 37 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_37_click = { set_variable = { VEL_USA_sel = 38 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_38_click = { set_variable = { VEL_USA_sel = 39 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_39_click = { set_variable = { VEL_USA_sel = 40 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_40_click = { set_variable = { VEL_USA_sel = 41 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_41_click = { set_variable = { VEL_USA_sel = 42 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_42_click = { set_variable = { VEL_USA_sel = 43 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_43_click = { set_variable = { VEL_USA_sel = 44 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_44_click = { set_variable = { VEL_USA_sel = 45 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_45_click = { set_variable = { VEL_USA_sel = 46 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_46_click = { set_variable = { VEL_USA_sel = 47 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_47_click = { set_variable = { VEL_USA_sel = 48 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_48_click = { set_variable = { VEL_USA_sel = 49 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_48_click = { set_variable = { VEL_USA_sel = 49 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_49_click = { set_variable = { VEL_USA_sel = 50 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_49_click = { set_variable = { VEL_USA_sel = 50 } VEL_USA_refresh_sel = yes }
+			vb_usa_r_50_click = { set_variable = { VEL_USA_sel = 51 } VEL_USA_refresh_sel = yes }
+			vb_usa_bh_50_click = { set_variable = { VEL_USA_sel = 51 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_0_click = { set_variable = { VEL_USA_sel = 1 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_1_click = { set_variable = { VEL_USA_sel = 2 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_2_click = { set_variable = { VEL_USA_sel = 3 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_3_click = { set_variable = { VEL_USA_sel = 4 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_4_click = { set_variable = { VEL_USA_sel = 5 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_5_click = { set_variable = { VEL_USA_sel = 6 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_6_click = { set_variable = { VEL_USA_sel = 7 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_7_click = { set_variable = { VEL_USA_sel = 8 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_8_click = { set_variable = { VEL_USA_sel = 9 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_9_click = { set_variable = { VEL_USA_sel = 10 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_10_click = { set_variable = { VEL_USA_sel = 11 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_11_click = { set_variable = { VEL_USA_sel = 12 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_12_click = { set_variable = { VEL_USA_sel = 13 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_13_click = { set_variable = { VEL_USA_sel = 14 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_14_click = { set_variable = { VEL_USA_sel = 15 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_15_click = { set_variable = { VEL_USA_sel = 16 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_16_click = { set_variable = { VEL_USA_sel = 17 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_17_click = { set_variable = { VEL_USA_sel = 18 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_18_click = { set_variable = { VEL_USA_sel = 19 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_19_click = { set_variable = { VEL_USA_sel = 20 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_20_click = { set_variable = { VEL_USA_sel = 21 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_21_click = { set_variable = { VEL_USA_sel = 22 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_22_click = { set_variable = { VEL_USA_sel = 23 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_23_click = { set_variable = { VEL_USA_sel = 24 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_24_click = { set_variable = { VEL_USA_sel = 25 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_25_click = { set_variable = { VEL_USA_sel = 26 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_26_click = { set_variable = { VEL_USA_sel = 27 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_27_click = { set_variable = { VEL_USA_sel = 28 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_28_click = { set_variable = { VEL_USA_sel = 29 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_29_click = { set_variable = { VEL_USA_sel = 30 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_30_click = { set_variable = { VEL_USA_sel = 31 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_31_click = { set_variable = { VEL_USA_sel = 32 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_32_click = { set_variable = { VEL_USA_sel = 33 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_33_click = { set_variable = { VEL_USA_sel = 34 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_34_click = { set_variable = { VEL_USA_sel = 35 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_35_click = { set_variable = { VEL_USA_sel = 36 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_36_click = { set_variable = { VEL_USA_sel = 37 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_37_click = { set_variable = { VEL_USA_sel = 38 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_38_click = { set_variable = { VEL_USA_sel = 39 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_39_click = { set_variable = { VEL_USA_sel = 40 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_40_click = { set_variable = { VEL_USA_sel = 41 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_41_click = { set_variable = { VEL_USA_sel = 42 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_42_click = { set_variable = { VEL_USA_sel = 43 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_43_click = { set_variable = { VEL_USA_sel = 44 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_44_click = { set_variable = { VEL_USA_sel = 45 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_45_click = { set_variable = { VEL_USA_sel = 46 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_46_click = { set_variable = { VEL_USA_sel = 47 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_47_click = { set_variable = { VEL_USA_sel = 48 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_48_click = { set_variable = { VEL_USA_sel = 49 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_49_click = { set_variable = { VEL_USA_sel = 50 } VEL_USA_refresh_sel = yes }
+			vb_usa_lb_50_click = { set_variable = { VEL_USA_sel = 51 } VEL_USA_refresh_sel = yes }
+			vb_usa_rally_click = { add_political_power = -25 VEL_USA_rally = yes }
+			vb_usa_issue_1_click = { set_temp_variable = { vel_issue = 1 } VEL_USA_set_main_issue = yes }
+			vb_usa_issue_2_click = { set_temp_variable = { vel_issue = 2 } VEL_USA_set_main_issue = yes }
+			vb_usa_issue_3_click = { set_temp_variable = { vel_issue = 3 } VEL_USA_set_main_issue = yes }
+			vb_usa_issue_4_click = { set_temp_variable = { vel_issue = 4 } VEL_USA_set_main_issue = yes }
+			vb_usa_issue_5_click = { set_temp_variable = { vel_issue = 5 } VEL_USA_set_main_issue = yes }
+			vb_usa_issue_6_click = { set_temp_variable = { vel_issue = 6 } VEL_USA_set_main_issue = yes }
+			vb_usa_view1_click = { set_variable = { VEL_USA_view = 1 } VEL_USA_refresh_all = yes }
+			vb_usa_view2_click = { set_variable = { VEL_USA_view = 2 } VEL_USA_refresh_all = yes }
+			vb_usa_swb_1_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_1_r } VEL_USA_refresh_sel = yes }
+			vb_usa_swb_2_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_2_r } VEL_USA_refresh_sel = yes }
+			vb_usa_swb_3_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_3_r } VEL_USA_refresh_sel = yes }
+			vb_usa_swb_4_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_4_r } VEL_USA_refresh_sel = yes }
+			vb_usa_swb_5_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_5_r } VEL_USA_refresh_sel = yes }
+			vb_usa_swb_6_click = { set_variable = { VEL_USA_sel = VEL_USA_sw_6_r } VEL_USA_refresh_sel = yes }
 		}
 	}
 }

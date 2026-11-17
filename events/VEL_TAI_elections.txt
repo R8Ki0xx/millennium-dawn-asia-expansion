@@ -1,0 +1,103 @@
+# MD ROC Return v3.41 —— 台湾（光复前）可视化选举的流程事件（由 _tools/v341/vel_events_tai.py 生成）
+add_namespace = VEL_TAI
+
+country_event = {
+	id = VEL_TAI.1
+	title = VEL_TAI.1.t
+	desc = VEL_TAI.1.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = VEL_TAI_campaign } }
+	immediate = {
+		VEL_TAI_init = yes
+		VEL_TAI_reset = yes
+		set_country_flag = VEL_TAI_campaign
+		country_event = { id = VEL_TAI.2 days = 30 }
+		country_event = { id = VEL_TAI.3 days = 60 }
+	}
+	option = {
+		name = VEL_TAI.1.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_TAI.2
+	title = VEL_TAI.2.t
+	desc = VEL_TAI.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = VEL_TAI.2.a
+		set_temp_variable = { vel_issue = 2 }
+		VEL_TAI_set_main_issue = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = VEL_TAI.2.b
+		set_temp_variable = { vel_issue = 3 }
+		VEL_TAI_set_main_issue = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = VEL_TAI.2.c
+		set_temp_variable = { vel_issue = 1 }
+		VEL_TAI_set_main_issue = yes
+		add_war_support = 0.02
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = VEL_TAI.2.d
+		set_temp_variable = { vel_issue = 5 }
+		VEL_TAI_set_main_issue = yes
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = VEL_TAI.2.e
+		set_temp_variable = { vel_issue = 6 }
+		VEL_TAI_set_main_issue = yes
+		ai_chance = { base = 20 }
+	}
+}
+
+country_event = {
+	id = VEL_TAI.3
+	title = VEL_TAI.3.t
+	desc = VEL_TAI.3.d
+	picture = GFX_TAI_ev_31_CHI_KMT_win_elections
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = VEL_TAI_campaign
+		VEL_TAI_run_result = yes
+		country_event = { id = VEL_TAI.4 hours = 6 }
+	}
+	option = {
+		name = VEL_TAI.3.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = VEL_TAI.4
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		VEL_TAI_reveal_step = yes
+		if = { limit = { check_variable = { VEL_TAI_done = 1 } } country_event = { id = VEL_TAI.5 days = 1 } }
+		else = { country_event = { id = VEL_TAI.4 hours = 6 } }
+	}
+	option = { name = VEL_hidden_option }
+}
+
+country_event = {
+	id = VEL_TAI.5
+	title = VEL_TAI.5.t
+	desc = VEL_TAI.5.d
+	picture = GFX_TAI_ev_30_Taiwan_Election
+	is_triggered_only = yes
+	option = {
+		name = VEL_TAI.5.a
+		VEL_TAI_apply_result = yes
+		ai_chance = { base = 100 }
+	}
+}

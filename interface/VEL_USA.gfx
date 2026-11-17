@@ -1,120 +1,194 @@
-﻿# MD ROC Return v3.36 —— 选举界面精灵图（USA）。由 _tools/v336/gen_vel_gui.py 生成。
+# MD ROC Return v3.36 —— 选举界面精灵图（USA）。由 _tools/v336/gen_vel_gui3.py 生成。
 spriteTypes = {
-	spriteType = { name = "GFX_VEL_USA_bg" texturefile = "gfx/interface/scripted_gui/VEL/USA_bg.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_base" texturefile = "gfx/interface/scripted_gui/VEL/USA_base.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USA_bbg" texturefile = "gfx/interface/scripted_gui/VEL/USA_bbg.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USA_card" texturefile = "gfx/interface/scripted_gui/VEL/USA_card.dds" noOfFrames = 3 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_USA_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_USA.dds" noOfFrames = 3 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_btn_l" texturefile = "gfx/interface/scripted_gui/VEL/btn_l.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_btn_m" texturefile = "gfx/interface/scripted_gui/VEL/btn_m.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_1" texturefile = "gfx/interface/scripted_gui/VEL/USA_1.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_1_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_1_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_2" texturefile = "gfx/interface/scripted_gui/VEL/USA_2.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_2_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_2_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_3" texturefile = "gfx/interface/scripted_gui/VEL/USA_3.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_3_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_3_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_4" texturefile = "gfx/interface/scripted_gui/VEL/USA_4.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_4_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_4_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_5" texturefile = "gfx/interface/scripted_gui/VEL/USA_5.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_5_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_5_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_6" texturefile = "gfx/interface/scripted_gui/VEL/USA_6.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_6_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_6_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_7" texturefile = "gfx/interface/scripted_gui/VEL/USA_7.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_7_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_7_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_8" texturefile = "gfx/interface/scripted_gui/VEL/USA_8.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_8_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_8_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_9" texturefile = "gfx/interface/scripted_gui/VEL/USA_9.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_9_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_9_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_10" texturefile = "gfx/interface/scripted_gui/VEL/USA_10.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_10_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_10_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_11" texturefile = "gfx/interface/scripted_gui/VEL/USA_11.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_11_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_11_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_12" texturefile = "gfx/interface/scripted_gui/VEL/USA_12.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_12_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_12_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_13" texturefile = "gfx/interface/scripted_gui/VEL/USA_13.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_13_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_13_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_14" texturefile = "gfx/interface/scripted_gui/VEL/USA_14.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_14_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_14_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_15" texturefile = "gfx/interface/scripted_gui/VEL/USA_15.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_15_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_15_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_16" texturefile = "gfx/interface/scripted_gui/VEL/USA_16.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_16_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_16_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_17" texturefile = "gfx/interface/scripted_gui/VEL/USA_17.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_17_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_17_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_18" texturefile = "gfx/interface/scripted_gui/VEL/USA_18.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_18_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_18_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_19" texturefile = "gfx/interface/scripted_gui/VEL/USA_19.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_19_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_19_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_20" texturefile = "gfx/interface/scripted_gui/VEL/USA_20.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_20_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_20_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_21" texturefile = "gfx/interface/scripted_gui/VEL/USA_21.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_21_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_21_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_22" texturefile = "gfx/interface/scripted_gui/VEL/USA_22.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_22_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_22_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_23" texturefile = "gfx/interface/scripted_gui/VEL/USA_23.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_23_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_23_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_24" texturefile = "gfx/interface/scripted_gui/VEL/USA_24.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_24_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_24_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_25" texturefile = "gfx/interface/scripted_gui/VEL/USA_25.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_25_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_25_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_26" texturefile = "gfx/interface/scripted_gui/VEL/USA_26.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_26_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_26_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_27" texturefile = "gfx/interface/scripted_gui/VEL/USA_27.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_27_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_27_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_28" texturefile = "gfx/interface/scripted_gui/VEL/USA_28.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_28_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_28_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_29" texturefile = "gfx/interface/scripted_gui/VEL/USA_29.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_29_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_29_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_30" texturefile = "gfx/interface/scripted_gui/VEL/USA_30.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_30_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_30_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_31" texturefile = "gfx/interface/scripted_gui/VEL/USA_31.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_31_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_31_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_32" texturefile = "gfx/interface/scripted_gui/VEL/USA_32.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_32_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_32_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_33" texturefile = "gfx/interface/scripted_gui/VEL/USA_33.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_33_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_33_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_34" texturefile = "gfx/interface/scripted_gui/VEL/USA_34.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_34_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_34_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_35" texturefile = "gfx/interface/scripted_gui/VEL/USA_35.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_35_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_35_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_36" texturefile = "gfx/interface/scripted_gui/VEL/USA_36.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_36_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_36_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_37" texturefile = "gfx/interface/scripted_gui/VEL/USA_37.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_37_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_37_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_38" texturefile = "gfx/interface/scripted_gui/VEL/USA_38.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_38_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_38_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_39" texturefile = "gfx/interface/scripted_gui/VEL/USA_39.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_39_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_39_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_40" texturefile = "gfx/interface/scripted_gui/VEL/USA_40.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_40_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_40_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_41" texturefile = "gfx/interface/scripted_gui/VEL/USA_41.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_41_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_41_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_42" texturefile = "gfx/interface/scripted_gui/VEL/USA_42.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_42_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_42_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_43" texturefile = "gfx/interface/scripted_gui/VEL/USA_43.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_43_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_43_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_44" texturefile = "gfx/interface/scripted_gui/VEL/USA_44.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_44_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_44_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_45" texturefile = "gfx/interface/scripted_gui/VEL/USA_45.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_45_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_45_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_46" texturefile = "gfx/interface/scripted_gui/VEL/USA_46.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_46_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_46_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_47" texturefile = "gfx/interface/scripted_gui/VEL/USA_47.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_47_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_47_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_48" texturefile = "gfx/interface/scripted_gui/VEL/USA_48.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_48_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_48_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_49" texturefile = "gfx/interface/scripted_gui/VEL/USA_49.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_49_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_49_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_50" texturefile = "gfx/interface/scripted_gui/VEL/USA_50.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_50_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_50_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_51" texturefile = "gfx/interface/scripted_gui/VEL/USA_51.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_51_hit" texturefile = "gfx/interface/scripted_gui/VEL/USA_51_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_pi_USA_1" texturefile = "gfx/interface/goals/united_states/USA_republican_party.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_pi_USA_2" texturefile = "gfx/interface/goals/united_states/USA_democratic_party.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_pi_USA_3" texturefile = "gfx/interface/goals/united_states/USA_reform_party.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_base" texturefile = "gfx/interface/scripted_gui/VEL/USAX_base.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_labels" texturefile = "gfx/interface/scripted_gui/VEL/USAX_labels.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_1" texturefile = "gfx/interface/scripted_gui/VEL/USAX_1.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_1" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_1.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_1_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_1_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_2" texturefile = "gfx/interface/scripted_gui/VEL/USAX_2.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_2" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_2.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_2_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_2_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_2" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_2.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_3" texturefile = "gfx/interface/scripted_gui/VEL/USAX_3.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_3" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_3.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_3_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_3_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_3" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_3.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_4" texturefile = "gfx/interface/scripted_gui/VEL/USAX_4.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_4" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_4.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_4_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_4_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_4" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_4.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_5" texturefile = "gfx/interface/scripted_gui/VEL/USAX_5.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_5" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_5.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_5_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_5_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_5" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_5.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_6" texturefile = "gfx/interface/scripted_gui/VEL/USAX_6.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_6" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_6.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_6_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_6_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_7" texturefile = "gfx/interface/scripted_gui/VEL/USAX_7.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_7" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_7.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_7_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_7_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_7" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_7.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_8" texturefile = "gfx/interface/scripted_gui/VEL/USAX_8.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_8" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_8.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_8_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_8_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_9" texturefile = "gfx/interface/scripted_gui/VEL/USAX_9.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_9" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_9.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_9_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_9_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_9" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_9.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_10" texturefile = "gfx/interface/scripted_gui/VEL/USAX_10.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_10" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_10.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_10_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_10_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_11" texturefile = "gfx/interface/scripted_gui/VEL/USAX_11.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_11" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_11.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_11_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_11_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_12" texturefile = "gfx/interface/scripted_gui/VEL/USAX_12.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_12" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_12.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_12_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_12_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_13" texturefile = "gfx/interface/scripted_gui/VEL/USAX_13.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_13" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_13.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_13_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_13_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_14" texturefile = "gfx/interface/scripted_gui/VEL/USAX_14.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_14" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_14.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_14_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_14_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_15" texturefile = "gfx/interface/scripted_gui/VEL/USAX_15.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_15" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_15.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_15_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_15_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_16" texturefile = "gfx/interface/scripted_gui/VEL/USAX_16.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_16" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_16.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_16_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_16_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_17" texturefile = "gfx/interface/scripted_gui/VEL/USAX_17.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_17" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_17.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_17_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_17_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_18" texturefile = "gfx/interface/scripted_gui/VEL/USAX_18.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_18" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_18.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_18_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_18_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_19" texturefile = "gfx/interface/scripted_gui/VEL/USAX_19.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_19" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_19.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_19_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_19_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_20" texturefile = "gfx/interface/scripted_gui/VEL/USAX_20.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_20" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_20.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_20_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_20_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_21" texturefile = "gfx/interface/scripted_gui/VEL/USAX_21.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_21" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_21.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_21_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_21_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_22" texturefile = "gfx/interface/scripted_gui/VEL/USAX_22.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_22" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_22.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_22_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_22_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_23" texturefile = "gfx/interface/scripted_gui/VEL/USAX_23.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_23" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_23.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_23_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_23_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_24" texturefile = "gfx/interface/scripted_gui/VEL/USAX_24.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_24" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_24.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_24_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_24_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_25" texturefile = "gfx/interface/scripted_gui/VEL/USAX_25.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_25" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_25.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_25_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_25_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_26" texturefile = "gfx/interface/scripted_gui/VEL/USAX_26.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_26" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_26.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_26_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_26_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_27" texturefile = "gfx/interface/scripted_gui/VEL/USAX_27.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_27" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_27.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_27_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_27_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_28" texturefile = "gfx/interface/scripted_gui/VEL/USAX_28.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_28" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_28.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_28_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_28_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_29" texturefile = "gfx/interface/scripted_gui/VEL/USAX_29.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_29" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_29.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_29_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_29_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_30" texturefile = "gfx/interface/scripted_gui/VEL/USAX_30.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_30" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_30.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_30_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_30_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_31" texturefile = "gfx/interface/scripted_gui/VEL/USAX_31.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_31" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_31.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_31_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_31_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_32" texturefile = "gfx/interface/scripted_gui/VEL/USAX_32.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_32" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_32.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_32_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_32_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_33" texturefile = "gfx/interface/scripted_gui/VEL/USAX_33.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_33" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_33.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_33_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_33_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_34" texturefile = "gfx/interface/scripted_gui/VEL/USAX_34.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_34" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_34.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_34_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_34_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_35" texturefile = "gfx/interface/scripted_gui/VEL/USAX_35.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_35" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_35.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_35_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_35_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_36" texturefile = "gfx/interface/scripted_gui/VEL/USAX_36.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_36" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_36.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_36_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_36_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_37" texturefile = "gfx/interface/scripted_gui/VEL/USAX_37.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_37" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_37.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_37_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_37_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_38" texturefile = "gfx/interface/scripted_gui/VEL/USAX_38.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_38" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_38.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_38_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_38_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_39" texturefile = "gfx/interface/scripted_gui/VEL/USAX_39.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_39" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_39.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_39_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_39_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_40" texturefile = "gfx/interface/scripted_gui/VEL/USAX_40.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_40" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_40.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_40_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_40_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_41" texturefile = "gfx/interface/scripted_gui/VEL/USAX_41.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_41" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_41.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_41_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_41_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_42" texturefile = "gfx/interface/scripted_gui/VEL/USAX_42.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_42" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_42.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_42_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_42_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_43" texturefile = "gfx/interface/scripted_gui/VEL/USAX_43.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_43" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_43.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_43_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_43_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_44" texturefile = "gfx/interface/scripted_gui/VEL/USAX_44.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_44" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_44.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_44_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_44_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_45" texturefile = "gfx/interface/scripted_gui/VEL/USAX_45.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_45" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_45.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_45_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_45_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_46" texturefile = "gfx/interface/scripted_gui/VEL/USAX_46.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_46" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_46.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_46_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_46_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_47" texturefile = "gfx/interface/scripted_gui/VEL/USAX_47.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_47" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_47.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_47_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_47_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_48" texturefile = "gfx/interface/scripted_gui/VEL/USAX_48.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_48" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_48.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_48_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_48_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_49" texturefile = "gfx/interface/scripted_gui/VEL/USAX_49.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_49" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_49.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_49_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_49_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_49" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_49.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_50" texturefile = "gfx/interface/scripted_gui/VEL/USAX_50.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_50" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_50.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_50_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_50_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_50" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_50.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_51" texturefile = "gfx/interface/scripted_gui/VEL/USAX_51.dds" noOfFrames = 10 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_o_51" texturefile = "gfx/interface/scripted_gui/VEL/USAX_o_51.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_51_hit" texturefile = "gfx/interface/scripted_gui/VEL/USAX_51_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USAX_box_51" texturefile = "gfx/interface/scripted_gui/VEL/USAX_box_51.dds" noOfFrames = 10 legacy_lazy_load = no }
 	progressBarType = {
 		name = "GFX_VEL_USA_tbar_1"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_USA_1.dds"
 		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 180 y = 14 }
+		size = { x = 150 y = 14 }
 		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_USA_sb_1"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/sb_USA_1.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/sb_empty.dds"
+		size = { x = 200 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
 	}
 	progressBarType = {
 		name = "GFX_VEL_USA_tbar_2"
@@ -122,8 +196,19 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_USA_2.dds"
 		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 180 y = 14 }
+		size = { x = 150 y = 14 }
 		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_USA_sb_2"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/sb_USA_2.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/sb_empty.dds"
+		size = { x = 200 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
 	}
 	progressBarType = {
 		name = "GFX_VEL_USA_tbar_3"
@@ -131,7 +216,28 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_USA_3.dds"
 		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 180 y = 14 }
+		size = { x = 150 y = 14 }
 		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_USA_sb_3"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/sb_USA_3.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/sb_empty.dds"
+		size = { x = 200 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_USA_tug"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tug_r.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/tug_b.dds"
+		size = { x = 475 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
 	}
 }

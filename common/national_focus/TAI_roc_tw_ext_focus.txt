@@ -1,0 +1,1675 @@
+# MD ROC Return v3.40 —— 台湾本岛（不反攻路线）：国策树扩展（两岸关系 / 不对称防卫 / 民主与社会 / 经济韧性 / 国际空间），挂在 TAI_roc_return_focus 下 （由 _tools/v340/gen_tw.py 生成，不要手改）
+
+# ===== 两岸关系与国家安全 =====
+
+shared_focus = {
+	id = TAI_n_k0
+	icon = one_china_policy
+	x = 6
+	y = 18
+	cost = 5
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	available = { has_completed_focus = TAI_status_quo }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k0"
+		add_ideas = TAI_n_strait_framework
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k1a
+	icon = diplomacy
+	x = 3
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_k0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k1a"
+		add_stability = 0.02
+		add_political_power = 25
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k1b
+	icon = economic_banks
+	x = 6
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_k0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k1b"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k1c
+	icon = Generic_Intelligence_Gathering
+	x = 9
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_k0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k1c"
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k2a
+	icon = trade_with_china
+	x = 3
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_k1a }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k2a"
+		add_stability = 0.02
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k2b
+	icon = factory_planning
+	x = 6
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_k1b }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k2b"
+		add_ideas = TAI_n_derisk
+		add_stability = 0.01
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k2c
+	icon = national_sec_tai
+	x = 9
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_k1c }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k2c"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k3
+	icon = legislative_yuan
+	x = 6
+	y = 21
+	cost = 7
+	prerequisite = { focus = TAI_n_k2a }
+	prerequisite = { focus = TAI_n_k2b }
+	prerequisite = { focus = TAI_n_k2c }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k3"
+		add_stability = 0.02
+		add_political_power = 50
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k4l
+	icon = peace
+	x = 4
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_k3 }
+	mutually_exclusive = { focus = TAI_n_k4r }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k4l"
+		add_ideas = TAI_n_dialogue_first
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k4r
+	icon = taiwan_garrison_command
+	x = 8
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_k3 }
+	mutually_exclusive = { focus = TAI_n_k4l }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k4r"
+		add_ideas = TAI_n_deterrence_first
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_strait_tension } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k5
+	icon = border_patrol_increase
+	x = 6
+	y = 23
+	cost = 7
+	prerequisite = { focus = TAI_n_k4l focus = TAI_n_k4r }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k5"
+		add_ideas = TAI_n_greyzone
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_k6
+	icon = constitution
+	x = 6
+	y = 24
+	cost = 10
+	prerequisite = { focus = TAI_n_k5 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_k6"
+		add_ideas = TAI_n_strait_consensus
+		add_stability = 0.03
+		add_popularity = { ideology = democratic popularity = 0.01 }
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 不对称防卫 =====
+
+shared_focus = {
+	id = TAI_n_f0
+	icon = home_defense
+	x = 16
+	y = 18
+	cost = 5
+	search_filters = { FOCUS_FILTER_ARMY }
+	available = { has_completed_focus = TAI_porcupine_strategy }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f0"
+		add_ideas = TAI_n_asym_doctrine
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f1a
+	icon = guided_missile2
+	x = 13
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_f0 }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f1a"
+		add_ideas = TAI_n_coastal_missiles
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f1b
+	icon = drone2
+	x = 16
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_f0 }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f1b"
+		add_ideas = TAI_n_drone_team
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f1c
+	icon = army_mobilisation
+	x = 19
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_f0 }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f1c"
+		add_war_support = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f2a
+	icon = SAM
+	x = 13
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_f1a }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f2a"
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f2b
+	icon = army_military_industryy
+	x = 16
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_f1b }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f2b"
+		add_political_power = 25
+		add_stability = 0.01
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f2c
+	icon = army_recruting
+	x = 19
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_f1c }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f2c"
+		add_ideas = TAI_n_reserve_reform
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f3
+	icon = military_fort2
+	x = 16
+	y = 21
+	cost = 7
+	prerequisite = { focus = TAI_n_f2a }
+	prerequisite = { focus = TAI_n_f2b }
+	prerequisite = { focus = TAI_n_f2c }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f3"
+		add_ideas = TAI_n_hardened_infra
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f4l
+	icon = taiwan_army_glory
+	x = 14
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_f3 }
+	mutually_exclusive = { focus = TAI_n_f4r }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f4l"
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f4r
+	icon = TAI_forces
+	x = 18
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_f3 }
+	mutually_exclusive = { focus = TAI_n_f4l }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f4r"
+		add_stability = 0.02
+		army_experience = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f5
+	icon = balance_buget
+	x = 16
+	y = 23
+	cost = 7
+	prerequisite = { focus = TAI_n_f4l focus = TAI_n_f4r }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f5"
+		add_political_power = 25
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_f6
+	icon = roc_landarmy
+	x = 16
+	y = 24
+	cost = 10
+	prerequisite = { focus = TAI_n_f5 }
+	search_filters = { FOCUS_FILTER_ARMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_f6"
+		add_ideas = TAI_n_joint_defense
+		add_command_power = 50
+		army_experience = 25
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 民主深化与社会 =====
+
+shared_focus = {
+	id = TAI_n_m0
+	icon = Focus_Parliament_Constitution
+	x = 26
+	y = 18
+	cost = 5
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	available = { has_completed_focus = TAI_civil_society }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m0"
+		add_political_power = 25
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m1a
+	icon = democracy_genericus
+	x = 23
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_m0 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m1a"
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m1b
+	icon = pensions_increase
+	x = 26
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_m0 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m1b"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m1c
+	icon = judiciary
+	x = 29
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_m0 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m1c"
+		add_ideas = TAI_n_lay_judges
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m2a
+	icon = family
+	x = 23
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_m1a }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m2a"
+		add_ideas = TAI_n_childcare
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m2b
+	icon = generic_healthcare
+	x = 26
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_m1b }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m2b"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m2c
+	icon = generic_housing
+	x = 29
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_m1c }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m2c"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m3
+	icon = Generic_Religious_Unity
+	x = 26
+	y = 21
+	cost = 7
+	prerequisite = { focus = TAI_n_m2a }
+	prerequisite = { focus = TAI_n_m2b }
+	prerequisite = { focus = TAI_n_m2c }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m3"
+		add_ideas = TAI_n_plural_society
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m4l
+	icon = focus_generic_education
+	x = 24
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_m3 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m4l"
+		add_ideas = TAI_n_bilingual
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m4r
+	icon = economic_it
+	x = 28
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_m3 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m4r"
+		add_ideas = TAI_n_digital_gov
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m5
+	icon = local_management
+	x = 26
+	y = 23
+	cost = 7
+	prerequisite = { focus = TAI_n_m4l }
+	prerequisite = { focus = TAI_n_m4r }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m5"
+		add_stability = 0.02
+		add_political_power = 50
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_m6
+	icon = democracy3
+	x = 26
+	y = 24
+	cost = 10
+	prerequisite = { focus = TAI_n_m5 }
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_m6"
+		add_ideas = TAI_n_mature_democracy
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 经济韧性 =====
+
+shared_focus = {
+	id = TAI_n_e0
+	icon = economic_prosperity
+	x = 36
+	y = 18
+	cost = 5
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	available = { has_completed_focus = TAI_status_quo }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e0"
+		add_ideas = TAI_n_econ_security
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e1a
+	icon = trade
+	x = 33
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_e0 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e1a"
+		add_ideas = TAI_n_friend_shoring
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e1b
+	icon = generic_solar
+	x = 36
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_e0 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e1b"
+		add_ideas = TAI_n_energy_mix
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e1c
+	icon = economic_water_supply
+	x = 39
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_e0 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e1c"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e2a
+	icon = trade_with_america
+	x = 33
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_e1a }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e2a"
+		add_political_power = 25
+		add_stability = 0.01
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e2b
+	icon = wto
+	x = 36
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_e1b }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e2b"
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e2c
+	icon = align_to_japan
+	x = 39
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_e1c }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e2c"
+		add_stability = 0.01
+		add_political_power = 25
+		if = { limit = { country_exists = JAP } JAP = { add_opinion_modifier = { target = ROOT modifier = TAI_japan_reconciliation } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e3
+	icon = TAI_tsmc
+	x = 36
+	y = 21
+	cost = 7
+	prerequisite = { focus = TAI_n_e2a }
+	prerequisite = { focus = TAI_n_e2b }
+	prerequisite = { focus = TAI_n_e2c }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e3"
+		add_ideas = TAI_n_chip_guard
+		add_stability = 0.02
+		add_tech_bonus = { name = TAI_n_e3 bonus = 0.4 uses = 1 category = CAT_microchips }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e4l
+	icon = industrialization
+	x = 34
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_e3 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e4l"
+		add_ideas = TAI_n_five_plus_two
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e4r
+	icon = business_man
+	x = 38
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_e3 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e4r"
+		add_ideas = TAI_n_startup_fund
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e5
+	icon = merge_plants
+	x = 36
+	y = 23
+	cost = 7
+	prerequisite = { focus = TAI_n_e4l }
+	prerequisite = { focus = TAI_n_e4r }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e5"
+		add_stability = 0.02
+		add_political_power = 25
+		add_research_slot = 1
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_e6
+	icon = sustainable_development
+	x = 36
+	y = 24
+	cost = 10
+	prerequisite = { focus = TAI_n_e5 }
+	search_filters = { FOCUS_FILTER_ECONOMY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_e6"
+		add_ideas = TAI_n_resilient_economy
+		add_stability = 0.03
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 国际空间 =====
+
+shared_focus = {
+	id = TAI_n_i0
+	icon = diplomacy
+	x = 46
+	y = 18
+	cost = 5
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	available = { has_completed_focus = TAI_values_diplomacy }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i0"
+		add_ideas = TAI_n_intl_framework
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i1a
+	icon = align_to_europe
+	x = 43
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_i0 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i1a"
+		add_political_power = 25
+		add_stability = 0.01
+		if = { limit = { country_exists = GER } GER = { add_opinion_modifier = { target = ROOT modifier = TAI_eu_partner } } }
+		if = { limit = { country_exists = FRA } FRA = { add_opinion_modifier = { target = ROOT modifier = TAI_eu_partner } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i1b
+	icon = align_to_japan2
+	x = 46
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_i0 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i1b"
+		add_political_power = 25
+		if = { limit = { country_exists = JAP } JAP = { add_opinion_modifier = { target = ROOT modifier = TAI_japan_reconciliation } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i1c
+	icon = usa_taiwan_recognize
+	x = 49
+	y = 19
+	cost = 5
+	prerequisite = { focus = TAI_n_i0 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i1c"
+		add_political_power = 25
+		add_stability = 0.01
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i2a
+	icon = befriend_central_america
+	x = 43
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_i1a }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i2a"
+		add_political_power = 25
+		add_stability = 0.01
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i2b
+	icon = pacific_islands_focus
+	x = 46
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_i1b }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i2b"
+		add_political_power = 25
+		if = { limit = { country_exists = AST } AST = { add_opinion_modifier = { target = ROOT modifier = TAI_asean_partner } } }
+		add_stability = 0.01
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i2c
+	icon = united_nations
+	x = 49
+	y = 20
+	cost = 7
+	prerequisite = { focus = TAI_n_i1c }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i2c"
+		add_ideas = TAI_n_intl_orgs
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i3
+	icon = Japan_Helping_Hand
+	x = 46
+	y = 21
+	cost = 7
+	prerequisite = { focus = TAI_n_i2a }
+	prerequisite = { focus = TAI_n_i2b }
+	prerequisite = { focus = TAI_n_i2c }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i3"
+		add_ideas = TAI_n_can_help
+		add_stability = 0.02
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAI_allied_aid } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i4l
+	icon = economic_internet
+	x = 44
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_i3 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i4l"
+		add_political_power = 25
+		add_stability = 0.01
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i4r
+	icon = china_lighthouse_of_democracy
+	x = 48
+	y = 22
+	cost = 7
+	prerequisite = { focus = TAI_n_i3 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i4r"
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i5
+	icon = USA_millennium_media
+	x = 46
+	y = 23
+	cost = 7
+	prerequisite = { focus = TAI_n_i4l }
+	prerequisite = { focus = TAI_n_i4r }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i5"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_i6
+	icon = global_community
+	x = 46
+	y = 24
+	cost = 10
+	prerequisite = { focus = TAI_n_i5 }
+	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_i6"
+		add_ideas = TAI_n_substantive_network
+		add_stability = 0.03
+		add_political_power = 50
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 蓝营执政：稳健与交流 =====
+
+shared_focus = {
+	id = TAI_n_b0
+	icon = roc_kmt_china
+	x = 8
+	y = 27
+	cost = 5
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 1 } }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b0"
+		add_ideas = TAI_n_blue_mandate
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b1a
+	icon = export_economy
+	x = 5
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_b0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b1a"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b1b
+	icon = trade_with_china
+	x = 8
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_b0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b1b"
+		add_political_power = 25
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b1c
+	icon = balance_buget
+	x = 11
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_b0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b1c"
+		add_ideas = TAI_n_fiscal_discipline
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b2a
+	icon = business_man
+	x = 5
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_b1a }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b2a"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b2b
+	icon = china_crh
+	x = 8
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_b1b }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b2b"
+		add_stability = 0.01
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b2c
+	icon = pensions_increase
+	x = 11
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_b1c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b2c"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b3
+	icon = democracy_genericus
+	x = 8
+	y = 30
+	cost = 7
+	prerequisite = { focus = TAI_n_b2a }
+	prerequisite = { focus = TAI_n_b2b }
+	prerequisite = { focus = TAI_n_b2c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b3"
+		add_popularity = { ideology = nationalist popularity = 0.02 }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b4l
+	icon = diplomacy
+	x = 6
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_b3 }
+	mutually_exclusive = { focus = TAI_n_b4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b4l"
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAI_cross_strait_thaw } } }
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b4r
+	icon = military_fort2
+	x = 10
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_b3 }
+	mutually_exclusive = { focus = TAI_n_b4l }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b4r"
+		add_ideas = TAI_n_limited_exchange
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b5
+	icon = asean_mutual_trade
+	x = 8
+	y = 32
+	cost = 7
+	prerequisite = { focus = TAI_n_b4l focus = TAI_n_b4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b5"
+		add_ideas = TAI_n_regional_integration
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_b6
+	icon = economic_prosperity
+	x = 8
+	y = 33
+	cost = 10
+	prerequisite = { focus = TAI_n_b5 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_b6"
+		add_ideas = TAI_n_blue_prosperity
+		add_stability = 0.03
+		add_popularity = { ideology = nationalist popularity = 0.01 }
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 绿营执政：转型与自主 =====
+
+shared_focus = {
+	id = TAI_n_g0
+	icon = TAI_dpp
+	x = 26
+	y = 27
+	cost = 5
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 2 } }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g0"
+		add_ideas = TAI_n_green_mandate
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g1a
+	icon = Generic_Ripping_Papers
+	x = 23
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_g0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g1a"
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g1b
+	icon = generic_solar
+	x = 26
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_g0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g1b"
+		add_ideas = TAI_n_green_energy
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g1c
+	icon = construction
+	x = 29
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_g0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g1c"
+		add_ideas = TAI_n_forward_infra
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g2a
+	icon = Generic_Submarine1
+	x = 23
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_g1a }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g2a"
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g2b
+	icon = trade_with_asean
+	x = 26
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_g1b }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g2b"
+		add_stability = 0.01
+		if = { limit = { country_exists = AST } AST = { add_opinion_modifier = { target = ROOT modifier = TAI_asean_partner } } }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g2c
+	icon = Generic_Working_Class_Family
+	x = 29
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_g1c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g2c"
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g3
+	icon = focus_generic_freedom_council
+	x = 26
+	y = 30
+	cost = 7
+	prerequisite = { focus = TAI_n_g2a }
+	prerequisite = { focus = TAI_n_g2b }
+	prerequisite = { focus = TAI_n_g2c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g3"
+		add_ideas = TAI_n_civic_participation
+		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g4l
+	icon = diplomatic_treaty
+	x = 24
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_g3 }
+	mutually_exclusive = { focus = TAI_n_g4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g4l"
+		add_stability = 0.02
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_strait_tension } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g4r
+	icon = constitution
+	x = 28
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_g3 }
+	mutually_exclusive = { focus = TAI_n_g4l }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g4r"
+		add_ideas = TAI_n_roc_taiwan_framework
+		add_stability = 0.02
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g5
+	icon = china_lighthouse_of_democracy
+	x = 26
+	y = 32
+	cost = 7
+	prerequisite = { focus = TAI_n_g4l focus = TAI_n_g4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g5"
+		add_stability = 0.02
+		add_political_power = 25
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_us_support } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_g6
+	icon = democracy3
+	x = 26
+	y = 33
+	cost = 10
+	prerequisite = { focus = TAI_n_g5 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_g6"
+		add_ideas = TAI_n_green_consensus
+		add_stability = 0.03
+		add_popularity = { ideology = democratic popularity = 0.01 }
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 第三势力执政：中间路线 =====
+
+shared_focus = {
+	id = TAI_n_p0
+	icon = TAI_pfp
+	x = 44
+	y = 27
+	cost = 5
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 14 } }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p0"
+		add_ideas = TAI_n_third_mandate
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p1a
+	icon = union_negotiations
+	x = 41
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_p0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p1a"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p1b
+	icon = legislative_yuan
+	x = 44
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_p0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p1b"
+		add_ideas = TAI_n_parliamentary_reform
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p1c
+	icon = economic_it
+	x = 47
+	y = 28
+	cost = 5
+	prerequisite = { focus = TAI_n_p0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p1c"
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p2a
+	icon = focus_generic_court
+	x = 41
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_p1a }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p2a"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p2b
+	icon = peace
+	x = 44
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_p1b }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p2b"
+		add_stability = 0.02
+		if = { limit = { country_exists = CHI } CHI = { add_opinion_modifier = { target = ROOT modifier = TAIP_ext_pfp_middle } } }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p2c
+	icon = nuclear_rector
+	x = 47
+	y = 29
+	cost = 7
+	prerequisite = { focus = TAI_n_p1c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p2c"
+		add_ideas = TAI_n_energy_compromise
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p3
+	icon = social_democracy
+	x = 44
+	y = 30
+	cost = 7
+	prerequisite = { focus = TAI_n_p2a }
+	prerequisite = { focus = TAI_n_p2b }
+	prerequisite = { focus = TAI_n_p2c }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p3"
+		add_popularity = { ideology = neutrality popularity = 0.02 }
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p4l
+	icon = local_management
+	x = 42
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_p3 }
+	mutually_exclusive = { focus = TAI_n_p4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p4l"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p4r
+	icon = focus_generic_improve_the_administration
+	x = 46
+	y = 31
+	cost = 7
+	prerequisite = { focus = TAI_n_p3 }
+	mutually_exclusive = { focus = TAI_n_p4l }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p4r"
+		add_ideas = TAI_n_electoral_reform
+		add_popularity = { ideology = neutrality popularity = 0.01 }
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p5
+	icon = treaty
+	x = 44
+	y = 32
+	cost = 7
+	prerequisite = { focus = TAI_n_p4l focus = TAI_n_p4r }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p5"
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_p6
+	icon = roc21_szc_pan_the_non_party_cabine_c97b9992
+	x = 44
+	y = 33
+	cost = 10
+	prerequisite = { focus = TAI_n_p5 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_p6"
+		add_ideas = TAI_n_third_force_result
+		add_stability = 0.03
+		add_political_power = 50
+	}
+	ai_will_do = { base = 30 }
+}
+
+# ===== 民主的第二个二十年 =====
+
+shared_focus = {
+	id = TAI_n_z0
+	icon = democratic_stability
+	x = 26
+	y = 35
+	cost = 7
+	prerequisite = { focus = TAI_n_b6 focus = TAI_n_g6 focus = TAI_n_p6 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_z0"
+		add_ideas = TAI_n_second_twenty
+		add_political_power = 50
+		add_stability = 0.02
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_z1a
+	icon = Election_graphics
+	x = 23
+	y = 36
+	cost = 7
+	prerequisite = { focus = TAI_n_z0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_z1a"
+		add_popularity = { ideology = democratic popularity = 0.02 }
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_z1b
+	icon = democracy_genericus
+	x = 26
+	y = 36
+	cost = 7
+	prerequisite = { focus = TAI_n_z0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_z1b"
+		add_stability = 0.03
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}
+
+shared_focus = {
+	id = TAI_n_z1c
+	icon = welfare
+	x = 29
+	y = 36
+	cost = 7
+	prerequisite = { focus = TAI_n_z0 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus TAI_n_z1c"
+		add_stability = 0.03
+		add_political_power = 25
+	}
+	ai_will_do = { base = 20 }
+}

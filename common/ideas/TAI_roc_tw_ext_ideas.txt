@@ -1,0 +1,326 @@
+# MD ROC Return v3.40 —— 台湾本岛（不反攻路线）扩展的理念 （由 _tools/v340/gen_tw.py 生成，不要手改）
+ideas = {
+	country = {
+		TAI_n_strait_framework = {
+			picture = roc21_peace_talk_with_china_77d34118
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_derisk = {
+			picture = economic_prosperity
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = 0.02
+			}
+		}
+		TAI_n_dialogue_first = {
+			picture = international_treaty2
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = -0.02
+			}
+		}
+		TAI_n_deterrence_first = {
+			picture = roc21_jap_defense_of_taiwan_93baaac4
+			modifier = {
+				war_support_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		TAI_n_greyzone = {
+			picture = generic_military_support
+			modifier = {
+				intelligence_agency_defense = 0.10
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_strait_consensus = {
+			picture = roc21_reformed_constitution_ffe4be94
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_asym_doctrine = {
+			picture = roc21_jap_defense_of_taiwan_93baaac4
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed_factor = 0.10
+			}
+		}
+		TAI_n_coastal_missiles = {
+			picture = generic_military_support
+			modifier = {
+				army_defence_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		TAI_n_drone_team = {
+			picture = digitalize_idea
+			modifier = {
+				army_core_attack_factor = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		TAI_n_reserve_reform = {
+			picture = roc21_reserve_divisions_02501730
+			modifier = {
+				mobilization_speed = 0.20
+				weekly_manpower = 50
+			}
+		}
+		TAI_n_hardened_infra = {
+			picture = Father_land_def
+			modifier = {
+				stability_factor = 0.03
+				land_reinforce_rate = 0.05
+			}
+		}
+		TAI_n_joint_defense = {
+			picture = roc21_high_command_headquarter_59484e02
+			modifier = {
+				army_core_attack_factor = 0.05
+				command_power_gain = 0.10
+			}
+		}
+		TAI_n_lay_judges = {
+			picture = roc21_pol_independence_judiciary_2b6f1159
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.03
+			}
+		}
+		TAI_n_childcare = {
+			picture = family_supports
+			modifier = {
+				stability_factor = 0.03
+				monthly_population = 0.02
+			}
+		}
+		TAI_n_plural_society = {
+			picture = roc21_five_races_d0069e64
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		TAI_n_bilingual = {
+			picture = generic_political_reform
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_digital_gov = {
+			picture = digitalize_idea
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_mature_democracy = {
+			picture = democratic_party
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.10
+			}
+		}
+		TAI_n_econ_security = {
+			picture = economic_prosperity
+			modifier = {
+				stability_factor = 0.02
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		TAI_n_friend_shoring = {
+			picture = export_economy
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_n_energy_mix = {
+			picture = nuclear_energy
+			modifier = {
+				stability_factor = 0.02
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		TAI_n_chip_guard = {
+			picture = microchip_spirit
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_five_plus_two = {
+			picture = production_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		TAI_n_startup_fund = {
+			picture = roc21_generic_free_market_economy__db4e9dba
+			modifier = {
+				research_speed_factor = 0.03
+				consumer_goods_factor = -0.01
+			}
+		}
+		TAI_n_resilient_economy = {
+			picture = roc21_ptf_economic_reconstruction_ff9049aa
+			modifier = {
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		TAI_n_intl_framework = {
+			picture = roc21_great_power_0f58d165
+			modifier = {
+				political_power_gain = 0.05
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		TAI_n_intl_orgs = {
+			picture = roc21_united_nations_blue_c556a2aa
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				stability_factor = 0.01
+			}
+		}
+		TAI_n_can_help = {
+			picture = ASEAN_partner
+			modifier = {
+				opinion_gain_monthly_factor = 0.10
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_substantive_network = {
+			picture = chinese_gateway
+			modifier = {
+				opinion_gain_monthly_factor = 0.15
+				stability_factor = 0.03
+			}
+		}
+		TAI_n_blue_mandate = {
+			picture = roc21_chi_neo_kmt_4585e310
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.01
+			}
+		}
+		TAI_n_fiscal_discipline = {
+			picture = roc21_szc_pan_whc_tax_reform_25f941d3
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_limited_exchange = {
+			picture = roc21_peace_talk_with_china_77d34118
+			modifier = {
+				stability_factor = 0.03
+				intelligence_agency_defense = 0.05
+			}
+		}
+		TAI_n_regional_integration = {
+			picture = ASEAN_partner
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				opinion_gain_monthly_factor = 0.05
+			}
+		}
+		TAI_n_blue_prosperity = {
+			picture = economic_prosperity
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_green_mandate = {
+			picture = roc21_chi_democracy_time_32a245bf
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_green_energy = {
+			picture = nuclear_energy
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				stability_factor = 0.01
+			}
+		}
+		TAI_n_forward_infra = {
+			picture = construction
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+		TAI_n_civic_participation = {
+			picture = ALG_Peaceful_Protest
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+			}
+		}
+		TAI_n_roc_taiwan_framework = {
+			picture = roc21_reformed_constitution_ffe4be94
+			modifier = {
+				stability_factor = 0.04
+				war_support_factor = 0.02
+			}
+		}
+		TAI_n_green_consensus = {
+			picture = democratic_party
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_third_mandate = {
+			picture = roc21_united_nations_blue_c556a2aa
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_parliamentary_reform = {
+			picture = generic_political_reform
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TAI_n_energy_compromise = {
+			picture = roc21_energy_security_aa829ea2
+			modifier = {
+				stability_factor = 0.02
+				production_speed_buildings_factor = 0.02
+			}
+		}
+		TAI_n_electoral_reform = {
+			picture = democratic_party
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		TAI_n_third_force_result = {
+			picture = roc21_provisional_government_fcb12245
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.08
+			}
+		}
+		TAI_n_second_twenty = {
+			picture = EST_democratic_opposition
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.08
+			}
+		}
+	}
+}

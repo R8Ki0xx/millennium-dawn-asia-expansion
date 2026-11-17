@@ -10,6 +10,69 @@ focus_tree = {
 	default = no
 	shared_focus = CHI_NKO_bilateral_cooperation
 	shared_focus = CHI_SOV_treaty_good_neighbourliness
+	# >>> v3.39 ext shared
+	shared_focus = TAI_x_g1
+	shared_focus = TAI_x_g2a
+	shared_focus = TAI_x_g2b
+	shared_focus = TAI_x_g2c
+	shared_focus = TAI_x_g3a
+	shared_focus = TAI_x_g3b
+	shared_focus = TAI_x_g3c
+	shared_focus = TAI_x_g4
+	shared_focus = TAI_x_g5a
+	shared_focus = TAI_x_g5b
+	shared_focus = TAI_x_g6
+	shared_focus = TAI_x_g7
+	shared_focus = TAI_x_s1
+	shared_focus = TAI_x_s2a
+	shared_focus = TAI_x_s2b
+	shared_focus = TAI_x_s2c
+	shared_focus = TAI_x_s3a
+	shared_focus = TAI_x_s3b
+	shared_focus = TAI_x_s3c
+	shared_focus = TAI_x_s4
+	shared_focus = TAI_x_s5a
+	shared_focus = TAI_x_s5b
+	shared_focus = TAI_x_s6
+	shared_focus = TAI_x_s7
+	shared_focus = TAI_x_m1
+	shared_focus = TAI_x_m2a
+	shared_focus = TAI_x_m2b
+	shared_focus = TAI_x_m2c
+	shared_focus = TAI_x_m3a
+	shared_focus = TAI_x_m3b
+	shared_focus = TAI_x_m3c
+	shared_focus = TAI_x_m4
+	shared_focus = TAI_x_m5a
+	shared_focus = TAI_x_m5b
+	shared_focus = TAI_x_m6
+	shared_focus = TAI_x_m7
+	shared_focus = TAI_x_c1
+	shared_focus = TAI_x_c2a
+	shared_focus = TAI_x_c2b
+	shared_focus = TAI_x_c2c
+	shared_focus = TAI_x_c3a
+	shared_focus = TAI_x_c3b
+	shared_focus = TAI_x_c3c
+	shared_focus = TAI_x_c4
+	shared_focus = TAI_x_c5
+	shared_focus = TAI_x_u1
+	shared_focus = TAI_x_u2a
+	shared_focus = TAI_x_u2b
+	shared_focus = TAI_x_u3a
+	shared_focus = TAI_x_u3b
+	shared_focus = TAI_x_u4
+	shared_focus = TAI_x_d1
+	shared_focus = TAI_x_d2a
+	shared_focus = TAI_x_d2b
+	shared_focus = TAI_x_d3a
+	shared_focus = TAI_x_d3b
+	shared_focus = TAI_x_d4
+	shared_focus = TAI_x_o1
+	shared_focus = TAI_x_o2a
+	shared_focus = TAI_x_o2b
+	shared_focus = TAI_x_o3
+	# <<< v3.39 ext shared
 	reset_on_civilwar = no
 
 	continuous_focus_position = { x = 50 y = 1150 }
@@ -37,6 +100,44 @@ focus_tree = {
 		target = TAI_new_china_diplomacy
 		scroll_wheel_factor = 0.75
 	}
+
+	# >>> v3.39 ext shortcuts
+	shortcut = {
+		name = TAI_x_g1
+		target = TAI_x_g1
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_x_s1
+		target = TAI_x_s1
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_x_m1
+		target = TAI_x_m1
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_x_c1
+		target = TAI_x_c1
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_x_u1
+		target = TAI_x_u1
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = TAI_x_d1
+		target = TAI_x_d1
+		scroll_wheel_factor = 0.75
+	}
+	# <<< v3.39 ext shortcuts
 
 	focus = {
 		id = TAI_new_republic_era

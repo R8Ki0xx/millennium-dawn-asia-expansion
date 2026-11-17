@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.36 —— 选举中心（挂着可视化选举界面）
+# MD ROC Return v3.36 —— 选举中心（挂着可视化选举界面）
 VEL_CHI_category = {
 	icon = GFX_decision_category_generic_political_actions
 	priority = 2100

@@ -13,7 +13,6 @@ focus_tree = {
 	shared_focus = CHI_SOV_treaty_good_neighbourliness
 	# v3.21 两岸内战：共产党侧的国策
 	shared_focus = CSW_cross_strait_war
-	shared_focus = CHI_demo_reform_root  # v3.36 中国民主化路线
 	reset_on_civilwar = no
 
 	continuous_focus_position = { x = 1800 y = 1250 }

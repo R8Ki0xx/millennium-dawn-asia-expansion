@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.35 —— 给原先没有事件的国策分支补事件（由 _tools/v335/gen_events.py 生成）
+# MD ROC Return v3.35 —— 给原先没有事件的国策分支补事件（由 _tools/v335/gen_events.py 生成）
 add_namespace = roc_v335
 
 country_event = {

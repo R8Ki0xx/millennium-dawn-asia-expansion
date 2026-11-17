@@ -9,6 +9,9 @@ An alternative-history expansion for Millennium Dawn (Hearts of Iron IV): what i
 - **中华民国（台湾）两棵国策树**：光复前是以台湾为基地的「反攻大陆」路线（国光计划、三条统一路径、战时行动、光复南京与北平等）。光复神州后，国策树切换为建国路线：政治、经济、军事、外交四条主线，并包括光复后的行政重建与宪政时期。 / Two ROC (Taiwan) focus trees: a "Counterattack on the Mainland" path before the reconquest, then a nation-building path after it.
 - **台湾时代政治线**（光复前）：2000 年至 2024 年的政党轮替。每个时代提供民进党、国民党与架空的亲民党三个版本，三选一。 / Taiwan's era political line: party turnovers from 2000 to 2024, each era with DPP, KMT and a fictional PFP version (pick one).
 - **光复后的政党与人物**：中国国民党、中国民主党、中国社会民主党等阵营；国民大会与五院界面重做。 / Post-reconquest parties and leaders, with reworked National Assembly and Five Yuan interfaces.
+- **可视化选举（选举中心）**：台湾（光复前）、光复后的中华民国与美国各有一张按行政区着色的选举地图（台湾 22 个县市、中国 32 个省区、美国 51 州）。可查看民调与开票结果、选民构成，竞选期举办集会、选主打议题；结果写回执政党与政党支持率。 / Visual election centers with colored maps for Taiwan (22 counties), the restored ROC (32 provinces) and the USA (51 states): polls, counting, electorates, rallies and main issues, with results feeding back into the ruling party.
+- **光复后的中华民国国策树扩展**：新增 61 个国策与 23 个理念——选举与治理、人口与社会、国防治理、科学与创新、文化与媒体、外交（朝鲜半岛与大洋洲）。 / 61 new focuses for the restored ROC.
+- **台湾本岛「不反攻」路线扩展**：新增 100 个国策与 46 个理念——两岸关系、不对称防卫、民主深化与社会、经济韧性、国际空间五条分支，蓝 / 绿 / 第三势力三条各党执政线，以及「民主的第二个二十年」。 / 100 new focuses for Taiwan's non-counterattack route.
 - **韩国扩展**：核武与安保、人口与民生、宪政改革、K 产业、与中华民国的关系。与千禧原有的朝韩统一国策并存。 / South Korea expansion, alongside Millennium Dawn's existing reunification focuses.
 - **中朝联合国策**：与平壤妥协、与平壤决裂、中韩同盟，三选一。 / China–North Korea joint focuses (pick one).
 - **越南、菲律宾、叙利亚、巴基斯坦**：越南完整国策树，菲律宾政治线，叙利亚内战扩展（史实线与左翼线），巴基斯坦完整国策树（五个分支）。 / Full Vietnam and Pakistan focus trees, a Philippines political line, and an expanded Syrian civil war.
@@ -19,8 +22,8 @@ An alternative-history expansion for Millennium Dawn (Hearts of Iron IV): what i
 
 - **需要新开局，不兼容旧存档。** Start a new game; not compatible with older saves.
 - **依赖千禧黎明 2.0.2**，在启动器中排在千禧黎明之后。 Requires Millennium Dawn 2.0.2, loaded after it.
-- **会覆盖千禧的部分文件**：共 18 个文件（包括 `05_south_korea.txt`、`05_syria.txt`、`05_china.txt`、`05_hong_kong.txt`、`03_china_*_joint.txt` 等国策文件，以及决议、意识形态和脚本）。千禧黎明更新后，本模组可能需要等待兼容更新。 / Overrides 18 Millennium Dawn files; a future Millennium Dawn update may need a compatibility update.
-- **测试状态**：当前版本 3.36.0 尚未经过充分的游戏测试，平衡数值与 AI 行为可能有偏差。遇到报错请附上 `error.log` 反馈。 / Version 3.36.0 has not been fully tested in game; please report errors with your `error.log`.
+- **会覆盖千禧的部分文件**：共 20 个文件（包括 `events/Taiwan.txt`（只在 `taiwan.3` 的触发条件里加了一句）、`05_south_korea.txt`、`05_syria.txt`、`05_china.txt`、`05_hong_kong.txt`、`03_china_*_joint.txt` 等国策文件，以及决议、意识形态和脚本）。千禧黎明更新后，本模组可能需要等待兼容更新。 / Overrides 18 Millennium Dawn files; a future Millennium Dawn update may need a compatibility update.
+- **测试状态**：当前版本 3.36.0 已做过基本的游戏测试，但平衡数值与 AI 行为仍可能有偏差，遇到报错请附上 `error.log` 反馈。 / Version 3.36.0 has been play-tested at a basic level, but balance and AI behavior may still be off; please report errors with your `error.log`.
 
 ## 致谢 / Credits
 

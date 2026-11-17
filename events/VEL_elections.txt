@@ -1,4 +1,4 @@
-﻿# MD ROC Return v3.36 —— 可视化选举的流程事件（由 _tools/v336/vel_events.py 生成）
+# MD ROC Return v3.36 —— 可视化选举的流程事件（由 _tools/v336/vel_events.py 生成）
 add_namespace = VEL_CHI
 add_namespace = VEL_USA
 
@@ -8,6 +8,7 @@ country_event = {
 	desc = VEL_CHI.1.d
 	picture = GFX_TAI_ev_30_Taiwan_Election
 	is_triggered_only = yes
+	trigger = { NOT = { has_country_flag = VEL_CHI_campaign } }
 	immediate = {
 		VEL_CHI_init = yes
 		VEL_CHI_reset = yes

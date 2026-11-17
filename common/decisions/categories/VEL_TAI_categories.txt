@@ -1,0 +1,9 @@
+# MD ROC Return v3.41 —— 台湾（光复前）的选举中心（挂着可视化选举界面）
+VEL_TAI_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2100
+	allowed = { original_tag = TAI }
+	visible = { original_tag = TAI }
+	visible_when_empty = yes
+	scripted_gui = VEL_TAI_GUI
+}
