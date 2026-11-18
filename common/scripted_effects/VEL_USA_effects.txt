@@ -4,6 +4,7 @@ VEL_USA_init = {
 	if = {
 		limit = { NOT = { has_country_flag = VEL_USA_inited } }
 		set_country_flag = VEL_USA_inited
+		set_country_flag = VEL_USA_data_v343
 		clear_array = VEL_USA_sal
 		add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 }
 		clear_array = VEL_USA_pidx
@@ -108,117 +109,117 @@ VEL_USA_init = {
 		clear_array = VEL_USA_cand
 		add_to_array = { VEL_USA_cand = 0 } add_to_array = { VEL_USA_cand = 0 } add_to_array = { VEL_USA_cand = 0 } add_to_array = { VEL_USA_cand = 0 } add_to_array = { VEL_USA_cand = 0 }
 		clear_array = VEL_USA_sh
-		add_to_array = { VEL_USA_sh = 0.3545 } add_to_array = { VEL_USA_sh = 0.2545 } add_to_array = { VEL_USA_sh = 0.079 } add_to_array = { VEL_USA_sh = 0.0159 } add_to_array = { VEL_USA_sh = 0.0128 } add_to_array = { VEL_USA_sh = 0.0192 }
-		add_to_array = { VEL_USA_sh = 0.072 } add_to_array = { VEL_USA_sh = 0.1921 } add_to_array = { VEL_USA_sh = 0.3067 } add_to_array = { VEL_USA_sh = 0.2961 } add_to_array = { VEL_USA_sh = 0.0772 } add_to_array = { VEL_USA_sh = 0.0159 }
-		add_to_array = { VEL_USA_sh = 0.0257 } add_to_array = { VEL_USA_sh = 0.0321 } add_to_array = { VEL_USA_sh = 0.0856 } add_to_array = { VEL_USA_sh = 0.1606 } add_to_array = { VEL_USA_sh = 0.3154 } add_to_array = { VEL_USA_sh = 0.3441 }
-		add_to_array = { VEL_USA_sh = 0.0397 } add_to_array = { VEL_USA_sh = 0.0078 } add_to_array = { VEL_USA_sh = 0.0126 } add_to_array = { VEL_USA_sh = 0.0189 } add_to_array = { VEL_USA_sh = 0.0872 } add_to_array = { VEL_USA_sh = 0.1743 }
-		add_to_array = { VEL_USA_sh = 0.235 } add_to_array = { VEL_USA_sh = 0.3133 } add_to_array = { VEL_USA_sh = 0.0331 } add_to_array = { VEL_USA_sh = 0.0581 } add_to_array = { VEL_USA_sh = 0.0871 } add_to_array = { VEL_USA_sh = 0.0536 }
-		add_to_array = { VEL_USA_sh = 0.1048 } add_to_array = { VEL_USA_sh = 0.1151 } add_to_array = { VEL_USA_sh = 0.2321 } add_to_array = { VEL_USA_sh = 0.2532 } add_to_array = { VEL_USA_sh = 0.0622 } add_to_array = { VEL_USA_sh = 0.0848 }
-		add_to_array = { VEL_USA_sh = 0.1162 } add_to_array = { VEL_USA_sh = 0.041 } add_to_array = { VEL_USA_sh = 0.0883 } add_to_array = { VEL_USA_sh = 0.1222 } add_to_array = { VEL_USA_sh = 0.1935 } add_to_array = { VEL_USA_sh = 0.2111 }
-		add_to_array = { VEL_USA_sh = 0.0407 } add_to_array = { VEL_USA_sh = 0.1602 } add_to_array = { VEL_USA_sh = 0.1435 } add_to_array = { VEL_USA_sh = 0.0718 } add_to_array = { VEL_USA_sh = 0.0849 } add_to_array = { VEL_USA_sh = 0.0943 }
-		add_to_array = { VEL_USA_sh = 0.1992 } add_to_array = { VEL_USA_sh = 0.2173 } add_to_array = { VEL_USA_sh = 0.0417 } add_to_array = { VEL_USA_sh = 0.1342 } add_to_array = { VEL_USA_sh = 0.1515 } add_to_array = { VEL_USA_sh = 0.0793 }
-		add_to_array = { VEL_USA_sh = 0.0802 } add_to_array = { VEL_USA_sh = 0.0966 } add_to_array = { VEL_USA_sh = 0.2536 } add_to_array = { VEL_USA_sh = 0.1986 } add_to_array = { VEL_USA_sh = 0.1329 } add_to_array = { VEL_USA_sh = 0.0982 }
-		add_to_array = { VEL_USA_sh = 0.0528 } add_to_array = { VEL_USA_sh = 0.033 } add_to_array = { VEL_USA_sh = 0.0849 } add_to_array = { VEL_USA_sh = 0.146 } add_to_array = { VEL_USA_sh = 0.1662 } add_to_array = { VEL_USA_sh = 0.2216 }
-		add_to_array = { VEL_USA_sh = 0.0489 } add_to_array = { VEL_USA_sh = 0.2727 } add_to_array = { VEL_USA_sh = 0.078 } add_to_array = { VEL_USA_sh = 0.0567 } add_to_array = { VEL_USA_sh = 0.0761 } add_to_array = { VEL_USA_sh = 0.0797 }
-		add_to_array = { VEL_USA_sh = 0.2 } add_to_array = { VEL_USA_sh = 0.2095 } add_to_array = { VEL_USA_sh = 0.1183 } add_to_array = { VEL_USA_sh = 0.1612 } add_to_array = { VEL_USA_sh = 0.0684 } add_to_array = { VEL_USA_sh = 0.0547 }
-		add_to_array = { VEL_USA_sh = 0.0848 } add_to_array = { VEL_USA_sh = 0.1029 } add_to_array = { VEL_USA_sh = 0.3228 } add_to_array = { VEL_USA_sh = 0.1214 } add_to_array = { VEL_USA_sh = 0.2322 } add_to_array = { VEL_USA_sh = 0.0314 }
-		add_to_array = { VEL_USA_sh = 0.0127 } add_to_array = { VEL_USA_sh = 0.0127 } add_to_array = { VEL_USA_sh = 0.0786 } add_to_array = { VEL_USA_sh = 0.1883 } add_to_array = { VEL_USA_sh = 0.2728 } add_to_array = { VEL_USA_sh = 0.1634 }
-		add_to_array = { VEL_USA_sh = 0.1748 } add_to_array = { VEL_USA_sh = 0.1051 } add_to_array = { VEL_USA_sh = 0.0261 } add_to_array = { VEL_USA_sh = 0.0261 } add_to_array = { VEL_USA_sh = 0.0943 } add_to_array = { VEL_USA_sh = 0.1374 }
-		add_to_array = { VEL_USA_sh = 0.2691 } add_to_array = { VEL_USA_sh = 0.1395 } add_to_array = { VEL_USA_sh = 0.2123 } add_to_array = { VEL_USA_sh = 0.082 } add_to_array = { VEL_USA_sh = 0.0529 } add_to_array = { VEL_USA_sh = 0.0264 }
-		add_to_array = { VEL_USA_sh = 0.0947 } add_to_array = { VEL_USA_sh = 0.1231 } add_to_array = { VEL_USA_sh = 0.2639 } add_to_array = { VEL_USA_sh = 0.1895 } add_to_array = { VEL_USA_sh = 0.1346 } add_to_array = { VEL_USA_sh = 0.1148 }
-		add_to_array = { VEL_USA_sh = 0.0397 } add_to_array = { VEL_USA_sh = 0.0331 } add_to_array = { VEL_USA_sh = 0.0922 } add_to_array = { VEL_USA_sh = 0.1323 } add_to_array = { VEL_USA_sh = 0.2297 } add_to_array = { VEL_USA_sh = 0.2218 }
-		add_to_array = { VEL_USA_sh = 0.0586 } add_to_array = { VEL_USA_sh = 0.1215 } add_to_array = { VEL_USA_sh = 0.126 } add_to_array = { VEL_USA_sh = 0.049 } add_to_array = { VEL_USA_sh = 0.0915 } add_to_array = { VEL_USA_sh = 0.1019 }
-		add_to_array = { VEL_USA_sh = 0.2984 } add_to_array = { VEL_USA_sh = 0.2142 } add_to_array = { VEL_USA_sh = 0.1074 } add_to_array = { VEL_USA_sh = 0.0572 } add_to_array = { VEL_USA_sh = 0.0528 } add_to_array = { VEL_USA_sh = 0.033 }
-		add_to_array = { VEL_USA_sh = 0.0962 } add_to_array = { VEL_USA_sh = 0.1407 } add_to_array = { VEL_USA_sh = 0.2515 } add_to_array = { VEL_USA_sh = 0.2428 } add_to_array = { VEL_USA_sh = 0.1436 } add_to_array = { VEL_USA_sh = 0.0568 }
-		add_to_array = { VEL_USA_sh = 0.0392 } add_to_array = { VEL_USA_sh = 0.0458 } add_to_array = { VEL_USA_sh = 0.0954 } add_to_array = { VEL_USA_sh = 0.1249 } add_to_array = { VEL_USA_sh = 0.313 } add_to_array = { VEL_USA_sh = 0.1964 }
-		add_to_array = { VEL_USA_sh = 0.1519 } add_to_array = { VEL_USA_sh = 0.0323 } add_to_array = { VEL_USA_sh = 0.039 } add_to_array = { VEL_USA_sh = 0.026 } add_to_array = { VEL_USA_sh = 0.0922 } add_to_array = { VEL_USA_sh = 0.1492 }
-		add_to_array = { VEL_USA_sh = 0.2536 } add_to_array = { VEL_USA_sh = 0.1127 } add_to_array = { VEL_USA_sh = 0.2975 } add_to_array = { VEL_USA_sh = 0.0636 } add_to_array = { VEL_USA_sh = 0.0256 } add_to_array = { VEL_USA_sh = 0.0192 }
-		add_to_array = { VEL_USA_sh = 0.0901 } add_to_array = { VEL_USA_sh = 0.1377 } add_to_array = { VEL_USA_sh = 0.2521 } add_to_array = { VEL_USA_sh = 0.1582 } add_to_array = { VEL_USA_sh = 0.2097 } add_to_array = { VEL_USA_sh = 0.097 }
-		add_to_array = { VEL_USA_sh = 0.0326 } add_to_array = { VEL_USA_sh = 0.0261 } add_to_array = { VEL_USA_sh = 0.087 } add_to_array = { VEL_USA_sh = 0.1374 } add_to_array = { VEL_USA_sh = 0.2341 } add_to_array = { VEL_USA_sh = 0.1755 }
-		add_to_array = { VEL_USA_sh = 0.2077 } add_to_array = { VEL_USA_sh = 0.0494 } add_to_array = { VEL_USA_sh = 0.0863 } add_to_array = { VEL_USA_sh = 0.0332 } add_to_array = { VEL_USA_sh = 0.0934 } add_to_array = { VEL_USA_sh = 0.1204 }
-		add_to_array = { VEL_USA_sh = 0.2853 } add_to_array = { VEL_USA_sh = 0.196 } add_to_array = { VEL_USA_sh = 0.1432 } add_to_array = { VEL_USA_sh = 0.0415 } add_to_array = { VEL_USA_sh = 0.0803 } add_to_array = { VEL_USA_sh = 0.0334 }
-		add_to_array = { VEL_USA_sh = 0.0958 } add_to_array = { VEL_USA_sh = 0.1245 } add_to_array = { VEL_USA_sh = 0.3064 } add_to_array = { VEL_USA_sh = 0.1923 } add_to_array = { VEL_USA_sh = 0.1487 } add_to_array = { VEL_USA_sh = 0.0164 }
-		add_to_array = { VEL_USA_sh = 0.0264 } add_to_array = { VEL_USA_sh = 0.0726 } add_to_array = { VEL_USA_sh = 0.0912 } add_to_array = { VEL_USA_sh = 0.1461 } add_to_array = { VEL_USA_sh = 0.3137 } add_to_array = { VEL_USA_sh = 0.206 }
-		add_to_array = { VEL_USA_sh = 0.1558 } add_to_array = { VEL_USA_sh = 0.016 } add_to_array = { VEL_USA_sh = 0.0258 } add_to_array = { VEL_USA_sh = 0.0387 } add_to_array = { VEL_USA_sh = 0.1085 } add_to_array = { VEL_USA_sh = 0.1355 }
-		add_to_array = { VEL_USA_sh = 0.2857 } add_to_array = { VEL_USA_sh = 0.2334 } add_to_array = { VEL_USA_sh = 0.1521 } add_to_array = { VEL_USA_sh = 0.0079 } add_to_array = { VEL_USA_sh = 0.0256 } add_to_array = { VEL_USA_sh = 0.0448 }
-		add_to_array = { VEL_USA_sh = 0.0923 } add_to_array = { VEL_USA_sh = 0.1582 } add_to_array = { VEL_USA_sh = 0.3078 } add_to_array = { VEL_USA_sh = 0.2114 } add_to_array = { VEL_USA_sh = 0.1538 } add_to_array = { VEL_USA_sh = 0.0082 }
-		add_to_array = { VEL_USA_sh = 0.0659 } add_to_array = { VEL_USA_sh = 0.0264 } add_to_array = { VEL_USA_sh = 0.0927 } add_to_array = { VEL_USA_sh = 0.1338 } add_to_array = { VEL_USA_sh = 0.1941 } add_to_array = { VEL_USA_sh = 0.1394 }
-		add_to_array = { VEL_USA_sh = 0.1698 } add_to_array = { VEL_USA_sh = 0.1864 } add_to_array = { VEL_USA_sh = 0.0752 } add_to_array = { VEL_USA_sh = 0.041 } add_to_array = { VEL_USA_sh = 0.083 } add_to_array = { VEL_USA_sh = 0.1112 }
-		add_to_array = { VEL_USA_sh = 0.1961 } add_to_array = { VEL_USA_sh = 0.123 } add_to_array = { VEL_USA_sh = 0.2059 } add_to_array = { VEL_USA_sh = 0.215 } add_to_array = { VEL_USA_sh = 0.04 } add_to_array = { VEL_USA_sh = 0.02 }
-		add_to_array = { VEL_USA_sh = 0.0844 } add_to_array = { VEL_USA_sh = 0.1156 } add_to_array = { VEL_USA_sh = 0.1804 } add_to_array = { VEL_USA_sh = 0.1185 } add_to_array = { VEL_USA_sh = 0.1529 } add_to_array = { VEL_USA_sh = 0.2803 }
-		add_to_array = { VEL_USA_sh = 0.0706 } add_to_array = { VEL_USA_sh = 0.0424 } add_to_array = { VEL_USA_sh = 0.0776 } add_to_array = { VEL_USA_sh = 0.0773 } add_to_array = { VEL_USA_sh = 0.1629 } add_to_array = { VEL_USA_sh = 0.0803 }
-		add_to_array = { VEL_USA_sh = 0.36 } add_to_array = { VEL_USA_sh = 0.1276 } add_to_array = { VEL_USA_sh = 0.0386 } add_to_array = { VEL_USA_sh = 0.0193 } add_to_array = { VEL_USA_sh = 0.0827 } add_to_array = { VEL_USA_sh = 0.1286 }
-		add_to_array = { VEL_USA_sh = 0.156 } add_to_array = { VEL_USA_sh = 0.0809 } add_to_array = { VEL_USA_sh = 0.2861 } add_to_array = { VEL_USA_sh = 0.2217 } add_to_array = { VEL_USA_sh = 0.0331 } add_to_array = { VEL_USA_sh = 0.0265 }
-		add_to_array = { VEL_USA_sh = 0.0766 } add_to_array = { VEL_USA_sh = 0.119 } add_to_array = { VEL_USA_sh = 0.1992 } add_to_array = { VEL_USA_sh = 0.125 } add_to_array = { VEL_USA_sh = 0.0964 } add_to_array = { VEL_USA_sh = 0.1506 }
-		add_to_array = { VEL_USA_sh = 0.1929 } add_to_array = { VEL_USA_sh = 0.0286 } add_to_array = { VEL_USA_sh = 0.0664 } add_to_array = { VEL_USA_sh = 0.1409 } add_to_array = { VEL_USA_sh = 0.1336 } add_to_array = { VEL_USA_sh = 0.0594 }
-		add_to_array = { VEL_USA_sh = 0.2885 } add_to_array = { VEL_USA_sh = 0.3159 } add_to_array = { VEL_USA_sh = 0.0201 } add_to_array = { VEL_USA_sh = 0.0134 } add_to_array = { VEL_USA_sh = 0.0779 } add_to_array = { VEL_USA_sh = 0.0912 }
-		add_to_array = { VEL_USA_sh = 0.1867 } add_to_array = { VEL_USA_sh = 0.083 } add_to_array = { VEL_USA_sh = 0.2189 } add_to_array = { VEL_USA_sh = 0.2728 } add_to_array = { VEL_USA_sh = 0.0413 } add_to_array = { VEL_USA_sh = 0.0275 }
-		add_to_array = { VEL_USA_sh = 0.0746 } add_to_array = { VEL_USA_sh = 0.0952 } add_to_array = { VEL_USA_sh = 0.1876 } add_to_array = { VEL_USA_sh = 0.0747 } add_to_array = { VEL_USA_sh = 0.3217 } add_to_array = { VEL_USA_sh = 0.1214 }
-		add_to_array = { VEL_USA_sh = 0.0522 } add_to_array = { VEL_USA_sh = 0.0261 } add_to_array = { VEL_USA_sh = 0.0825 } add_to_array = { VEL_USA_sh = 0.1338 } add_to_array = { VEL_USA_sh = 0.1734 } add_to_array = { VEL_USA_sh = 0.0855 }
-		add_to_array = { VEL_USA_sh = 0.3148 } add_to_array = { VEL_USA_sh = 0.0669 } add_to_array = { VEL_USA_sh = 0.081 } add_to_array = { VEL_USA_sh = 0.081 } add_to_array = { VEL_USA_sh = 0.088 } add_to_array = { VEL_USA_sh = 0.1095 }
-		add_to_array = { VEL_USA_sh = 0.1732 } add_to_array = { VEL_USA_sh = 0.1086 } add_to_array = { VEL_USA_sh = 0.1129 } add_to_array = { VEL_USA_sh = 0.114 } add_to_array = { VEL_USA_sh = 0.3066 } add_to_array = { VEL_USA_sh = 0.046 }
-		add_to_array = { VEL_USA_sh = 0.08 } add_to_array = { VEL_USA_sh = 0.0587 } add_to_array = { VEL_USA_sh = 0.1973 } add_to_array = { VEL_USA_sh = 0.1238 } add_to_array = { VEL_USA_sh = 0.0679 } add_to_array = { VEL_USA_sh = 0.0192 }
-		add_to_array = { VEL_USA_sh = 0.38 } add_to_array = { VEL_USA_sh = 0.0465 } add_to_array = { VEL_USA_sh = 0.0762 } add_to_array = { VEL_USA_sh = 0.089 } add_to_array = { VEL_USA_sh = 0.2051 } add_to_array = { VEL_USA_sh = 0.2734 }
-		add_to_array = { VEL_USA_sh = 0.0972 } add_to_array = { VEL_USA_sh = 0.0336 } add_to_array = { VEL_USA_sh = 0.1489 } add_to_array = { VEL_USA_sh = 0.0338 } add_to_array = { VEL_USA_sh = 0.1097 } add_to_array = { VEL_USA_sh = 0.0983 }
-		add_to_array = { VEL_USA_sh = 0.3302 } add_to_array = { VEL_USA_sh = 0.2699 } add_to_array = { VEL_USA_sh = 0.0378 } add_to_array = { VEL_USA_sh = 0.0085 } add_to_array = { VEL_USA_sh = 0.1025 } add_to_array = { VEL_USA_sh = 0.041 }
-		add_to_array = { VEL_USA_sh = 0.128 } add_to_array = { VEL_USA_sh = 0.0823 } add_to_array = { VEL_USA_sh = 0.2055 } add_to_array = { VEL_USA_sh = 0.1349 } add_to_array = { VEL_USA_sh = 0.1357 } add_to_array = { VEL_USA_sh = 0.0442 }
-		add_to_array = { VEL_USA_sh = 0.2212 } add_to_array = { VEL_USA_sh = 0.0499 } add_to_array = { VEL_USA_sh = 0.0829 } add_to_array = { VEL_USA_sh = 0.1256 } add_to_array = { VEL_USA_sh = 0.2338 } add_to_array = { VEL_USA_sh = 0.1212 }
-		add_to_array = { VEL_USA_sh = 0.0756 } add_to_array = { VEL_USA_sh = 0.0934 } add_to_array = { VEL_USA_sh = 0.2185 } add_to_array = { VEL_USA_sh = 0.0904 } add_to_array = { VEL_USA_sh = 0.0737 } add_to_array = { VEL_USA_sh = 0.0933 }
-		add_to_array = { VEL_USA_sh = 0.3231 } add_to_array = { VEL_USA_sh = 0.1847 } add_to_array = { VEL_USA_sh = 0.1523 } add_to_array = { VEL_USA_sh = 0.0083 } add_to_array = { VEL_USA_sh = 0.0869 } add_to_array = { VEL_USA_sh = 0.02 }
-		add_to_array = { VEL_USA_sh = 0.0924 } add_to_array = { VEL_USA_sh = 0.1324 } add_to_array = { VEL_USA_sh = 0.2638 } add_to_array = { VEL_USA_sh = 0.2547 } add_to_array = { VEL_USA_sh = 0.067 } add_to_array = { VEL_USA_sh = 0.0341 }
-		add_to_array = { VEL_USA_sh = 0.0893 } add_to_array = { VEL_USA_sh = 0.0825 } add_to_array = { VEL_USA_sh = 0.0923 } add_to_array = { VEL_USA_sh = 0.1165 } add_to_array = { VEL_USA_sh = 0.2829 } add_to_array = { VEL_USA_sh = 0.2515 }
-		add_to_array = { VEL_USA_sh = 0.0692 } add_to_array = { VEL_USA_sh = 0.0167 } add_to_array = { VEL_USA_sh = 0.0944 } add_to_array = { VEL_USA_sh = 0.0539 } add_to_array = { VEL_USA_sh = 0.0876 } add_to_array = { VEL_USA_sh = 0.1439 }
-		add_to_array = { VEL_USA_sh = 0.1456 } add_to_array = { VEL_USA_sh = 0.1588 } add_to_array = { VEL_USA_sh = 0.0482 } add_to_array = { VEL_USA_sh = 0.0583 } add_to_array = { VEL_USA_sh = 0.3132 } add_to_array = { VEL_USA_sh = 0.1331 }
-		add_to_array = { VEL_USA_sh = 0.0818 } add_to_array = { VEL_USA_sh = 0.061 } add_to_array = { VEL_USA_sh = 0.234 } add_to_array = { VEL_USA_sh = 0.168 } add_to_array = { VEL_USA_sh = 0.2034 } add_to_array = { VEL_USA_sh = 0.0341 }
-		add_to_array = { VEL_USA_sh = 0.0482 } add_to_array = { VEL_USA_sh = 0.1239 } add_to_array = { VEL_USA_sh = 0.0853 } add_to_array = { VEL_USA_sh = 0.1029 } add_to_array = { VEL_USA_sh = 0.1333 } add_to_array = { VEL_USA_sh = 0.1185 }
-		add_to_array = { VEL_USA_sh = 0.0156 } add_to_array = { VEL_USA_sh = 0.0205 } add_to_array = { VEL_USA_sh = 0.0825 } add_to_array = { VEL_USA_sh = 0.4948 } add_to_array = { VEL_USA_sh = 0.0701 } add_to_array = { VEL_USA_sh = 0.0648 }
-		add_to_array = { VEL_USA_sh = 0.243 } add_to_array = { VEL_USA_sh = 0.1986 } add_to_array = { VEL_USA_sh = 0.0578 } add_to_array = { VEL_USA_sh = 0.1864 } add_to_array = { VEL_USA_sh = 0.0683 } add_to_array = { VEL_USA_sh = 0.0342 }
-		add_to_array = { VEL_USA_sh = 0.0847 } add_to_array = { VEL_USA_sh = 0.1269 } add_to_array = { VEL_USA_sh = 0.2679 } add_to_array = { VEL_USA_sh = 0.2382 } add_to_array = { VEL_USA_sh = 0.0661 } add_to_array = { VEL_USA_sh = 0.0503 }
-		add_to_array = { VEL_USA_sh = 0.115 } add_to_array = { VEL_USA_sh = 0.0338 } add_to_array = { VEL_USA_sh = 0.0987 } add_to_array = { VEL_USA_sh = 0.1299 } add_to_array = { VEL_USA_sh = 0.0518 } add_to_array = { VEL_USA_sh = 0.2765 }
-		add_to_array = { VEL_USA_sh = 0.0112 } add_to_array = { VEL_USA_sh = 0.3847 } add_to_array = { VEL_USA_sh = 0.0758 } add_to_array = { VEL_USA_sh = 0.0414 } add_to_array = { VEL_USA_sh = 0.1217 } add_to_array = { VEL_USA_sh = 0.0368 }
+		add_to_array = { VEL_USA_sh = 0.4503 } add_to_array = { VEL_USA_sh = 0.1873 } add_to_array = { VEL_USA_sh = 0.0913 } add_to_array = { VEL_USA_sh = 0.0147 } add_to_array = { VEL_USA_sh = 0.0119 } add_to_array = { VEL_USA_sh = 0.0178 }
+		add_to_array = { VEL_USA_sh = 0.0488 } add_to_array = { VEL_USA_sh = 0.178 } add_to_array = { VEL_USA_sh = 0.3443 } add_to_array = { VEL_USA_sh = 0.2673 } add_to_array = { VEL_USA_sh = 0.0831 } add_to_array = { VEL_USA_sh = 0.0156 }
+		add_to_array = { VEL_USA_sh = 0.0252 } add_to_array = { VEL_USA_sh = 0.0315 } add_to_array = { VEL_USA_sh = 0.0753 } add_to_array = { VEL_USA_sh = 0.1576 } add_to_array = { VEL_USA_sh = 0.3889 } add_to_array = { VEL_USA_sh = 0.2876 }
+		add_to_array = { VEL_USA_sh = 0.0455 } add_to_array = { VEL_USA_sh = 0.0076 } add_to_array = { VEL_USA_sh = 0.0123 } add_to_array = { VEL_USA_sh = 0.0184 } add_to_array = { VEL_USA_sh = 0.0692 } add_to_array = { VEL_USA_sh = 0.1704 }
+		add_to_array = { VEL_USA_sh = 0.1845 } add_to_array = { VEL_USA_sh = 0.3515 } add_to_array = { VEL_USA_sh = 0.0284 } add_to_array = { VEL_USA_sh = 0.0582 } add_to_array = { VEL_USA_sh = 0.0872 } add_to_array = { VEL_USA_sh = 0.0537 }
+		add_to_array = { VEL_USA_sh = 0.1213 } add_to_array = { VEL_USA_sh = 0.1153 } add_to_array = { VEL_USA_sh = 0.1975 } add_to_array = { VEL_USA_sh = 0.2785 } add_to_array = { VEL_USA_sh = 0.0562 } add_to_array = { VEL_USA_sh = 0.0857 }
+		add_to_array = { VEL_USA_sh = 0.1175 } add_to_array = { VEL_USA_sh = 0.0415 } add_to_array = { VEL_USA_sh = 0.0995 } add_to_array = { VEL_USA_sh = 0.1236 } add_to_array = { VEL_USA_sh = 0.1623 } add_to_array = { VEL_USA_sh = 0.2323 }
+		add_to_array = { VEL_USA_sh = 0.0365 } add_to_array = { VEL_USA_sh = 0.1613 } add_to_array = { VEL_USA_sh = 0.1445 } add_to_array = { VEL_USA_sh = 0.0723 } add_to_array = { VEL_USA_sh = 0.0958 } add_to_array = { VEL_USA_sh = 0.095 }
+		add_to_array = { VEL_USA_sh = 0.1536 } add_to_array = { VEL_USA_sh = 0.2488 } add_to_array = { VEL_USA_sh = 0.0355 } add_to_array = { VEL_USA_sh = 0.1357 } add_to_array = { VEL_USA_sh = 0.1532 } add_to_array = { VEL_USA_sh = 0.0803 }
+		add_to_array = { VEL_USA_sh = 0.095 } add_to_array = { VEL_USA_sh = 0.0977 } add_to_array = { VEL_USA_sh = 0.2566 } add_to_array = { VEL_USA_sh = 0.1965 } add_to_array = { VEL_USA_sh = 0.1339 } add_to_array = { VEL_USA_sh = 0.098 }
+		add_to_array = { VEL_USA_sh = 0.0527 } add_to_array = { VEL_USA_sh = 0.0329 } add_to_array = { VEL_USA_sh = 0.0839 } add_to_array = { VEL_USA_sh = 0.1456 } add_to_array = { VEL_USA_sh = 0.1421 } add_to_array = { VEL_USA_sh = 0.2406 }
+		add_to_array = { VEL_USA_sh = 0.0443 } add_to_array = { VEL_USA_sh = 0.2735 } add_to_array = { VEL_USA_sh = 0.0783 } add_to_array = { VEL_USA_sh = 0.0569 } add_to_array = { VEL_USA_sh = 0.0844 } add_to_array = { VEL_USA_sh = 0.0799 }
+		add_to_array = { VEL_USA_sh = 0.2129 } add_to_array = { VEL_USA_sh = 0.1997 } add_to_array = { VEL_USA_sh = 0.1231 } add_to_array = { VEL_USA_sh = 0.1601 } add_to_array = { VEL_USA_sh = 0.0679 } add_to_array = { VEL_USA_sh = 0.0543 }
+		add_to_array = { VEL_USA_sh = 0.0798 } add_to_array = { VEL_USA_sh = 0.1022 } add_to_array = { VEL_USA_sh = 0.4303 } add_to_array = { VEL_USA_sh = 0.0645 } add_to_array = { VEL_USA_sh = 0.2697 } add_to_array = { VEL_USA_sh = 0.0257 }
+		add_to_array = { VEL_USA_sh = 0.0104 } add_to_array = { VEL_USA_sh = 0.0104 } add_to_array = { VEL_USA_sh = 0.0351 } add_to_array = { VEL_USA_sh = 0.154 } add_to_array = { VEL_USA_sh = 0.287 } add_to_array = { VEL_USA_sh = 0.1548 }
+		add_to_array = { VEL_USA_sh = 0.1799 } add_to_array = { VEL_USA_sh = 0.1035 } add_to_array = { VEL_USA_sh = 0.0257 } add_to_array = { VEL_USA_sh = 0.0257 } add_to_array = { VEL_USA_sh = 0.0882 } add_to_array = { VEL_USA_sh = 0.1353 }
+		add_to_array = { VEL_USA_sh = 0.3095 } add_to_array = { VEL_USA_sh = 0.1162 } add_to_array = { VEL_USA_sh = 0.2297 } add_to_array = { VEL_USA_sh = 0.0775 } add_to_array = { VEL_USA_sh = 0.05 } add_to_array = { VEL_USA_sh = 0.025 }
+		add_to_array = { VEL_USA_sh = 0.0756 } add_to_array = { VEL_USA_sh = 0.1164 } add_to_array = { VEL_USA_sh = 0.2793 } add_to_array = { VEL_USA_sh = 0.1796 } add_to_array = { VEL_USA_sh = 0.1393 } add_to_array = { VEL_USA_sh = 0.1133 }
+		add_to_array = { VEL_USA_sh = 0.0392 } add_to_array = { VEL_USA_sh = 0.0326 } add_to_array = { VEL_USA_sh = 0.0863 } add_to_array = { VEL_USA_sh = 0.1306 } add_to_array = { VEL_USA_sh = 0.1958 } add_to_array = { VEL_USA_sh = 0.2444 }
+		add_to_array = { VEL_USA_sh = 0.0531 } add_to_array = { VEL_USA_sh = 0.123 } add_to_array = { VEL_USA_sh = 0.1276 } add_to_array = { VEL_USA_sh = 0.0496 } add_to_array = { VEL_USA_sh = 0.1033 } add_to_array = { VEL_USA_sh = 0.1032 }
+		add_to_array = { VEL_USA_sh = 0.32 } add_to_array = { VEL_USA_sh = 0.2002 } add_to_array = { VEL_USA_sh = 0.1121 } add_to_array = { VEL_USA_sh = 0.0563 } add_to_array = { VEL_USA_sh = 0.0519 } add_to_array = { VEL_USA_sh = 0.0324 }
+		add_to_array = { VEL_USA_sh = 0.0885 } add_to_array = { VEL_USA_sh = 0.1385 } add_to_array = { VEL_USA_sh = 0.2729 } add_to_array = { VEL_USA_sh = 0.2259 } add_to_array = { VEL_USA_sh = 0.1511 } add_to_array = { VEL_USA_sh = 0.056 }
+		add_to_array = { VEL_USA_sh = 0.0387 } add_to_array = { VEL_USA_sh = 0.0451 } add_to_array = { VEL_USA_sh = 0.0872 } add_to_array = { VEL_USA_sh = 0.1231 } add_to_array = { VEL_USA_sh = 0.365 } add_to_array = { VEL_USA_sh = 0.1623 }
+		add_to_array = { VEL_USA_sh = 0.1661 } add_to_array = { VEL_USA_sh = 0.0306 } add_to_array = { VEL_USA_sh = 0.037 } add_to_array = { VEL_USA_sh = 0.0247 } add_to_array = { VEL_USA_sh = 0.0729 } add_to_array = { VEL_USA_sh = 0.1415 }
+		add_to_array = { VEL_USA_sh = 0.342 } add_to_array = { VEL_USA_sh = 0.0616 } add_to_array = { VEL_USA_sh = 0.35 } add_to_array = { VEL_USA_sh = 0.053 } add_to_array = { VEL_USA_sh = 0.0214 } add_to_array = { VEL_USA_sh = 0.016 }
+		add_to_array = { VEL_USA_sh = 0.0415 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.2975 } add_to_array = { VEL_USA_sh = 0.1282 } add_to_array = { VEL_USA_sh = 0.2309 } add_to_array = { VEL_USA_sh = 0.0914 }
+		add_to_array = { VEL_USA_sh = 0.0307 } add_to_array = { VEL_USA_sh = 0.0246 } add_to_array = { VEL_USA_sh = 0.0671 } add_to_array = { VEL_USA_sh = 0.1295 } add_to_array = { VEL_USA_sh = 0.2662 } add_to_array = { VEL_USA_sh = 0.1523 }
+		add_to_array = { VEL_USA_sh = 0.2243 } add_to_array = { VEL_USA_sh = 0.0476 } add_to_array = { VEL_USA_sh = 0.0832 } add_to_array = { VEL_USA_sh = 0.032 } add_to_array = { VEL_USA_sh = 0.0783 } add_to_array = { VEL_USA_sh = 0.1161 }
+		add_to_array = { VEL_USA_sh = 0.3078 } add_to_array = { VEL_USA_sh = 0.1813 } add_to_array = { VEL_USA_sh = 0.1498 } add_to_array = { VEL_USA_sh = 0.0406 } add_to_array = { VEL_USA_sh = 0.0787 } add_to_array = { VEL_USA_sh = 0.0328 }
+		add_to_array = { VEL_USA_sh = 0.0871 } add_to_array = { VEL_USA_sh = 0.122 } add_to_array = { VEL_USA_sh = 0.3816 } add_to_array = { VEL_USA_sh = 0.1438 } add_to_array = { VEL_USA_sh = 0.1693 } add_to_array = { VEL_USA_sh = 0.0151 }
+		add_to_array = { VEL_USA_sh = 0.0244 } add_to_array = { VEL_USA_sh = 0.0672 } add_to_array = { VEL_USA_sh = 0.0633 } add_to_array = { VEL_USA_sh = 0.1352 } add_to_array = { VEL_USA_sh = 0.3794 } add_to_array = { VEL_USA_sh = 0.1625 }
+		add_to_array = { VEL_USA_sh = 0.1745 } add_to_array = { VEL_USA_sh = 0.015 } add_to_array = { VEL_USA_sh = 0.0242 } add_to_array = { VEL_USA_sh = 0.0364 } add_to_array = { VEL_USA_sh = 0.0807 } add_to_array = { VEL_USA_sh = 0.1273 }
+		add_to_array = { VEL_USA_sh = 0.3606 } add_to_array = { VEL_USA_sh = 0.177 } add_to_array = { VEL_USA_sh = 0.1756 } add_to_array = { VEL_USA_sh = 0.0074 } add_to_array = { VEL_USA_sh = 0.024 } add_to_array = { VEL_USA_sh = 0.042 }
+		add_to_array = { VEL_USA_sh = 0.065 } add_to_array = { VEL_USA_sh = 0.1484 } add_to_array = { VEL_USA_sh = 0.36 } add_to_array = { VEL_USA_sh = 0.1753 } add_to_array = { VEL_USA_sh = 0.1687 } add_to_array = { VEL_USA_sh = 0.0078 }
+		add_to_array = { VEL_USA_sh = 0.0627 } add_to_array = { VEL_USA_sh = 0.0251 } add_to_array = { VEL_USA_sh = 0.0734 } add_to_array = { VEL_USA_sh = 0.1271 } add_to_array = { VEL_USA_sh = 0.2436 } add_to_array = { VEL_USA_sh = 0.1083 }
+		add_to_array = { VEL_USA_sh = 0.1956 } add_to_array = { VEL_USA_sh = 0.1767 } add_to_array = { VEL_USA_sh = 0.0712 } add_to_array = { VEL_USA_sh = 0.0389 } add_to_array = { VEL_USA_sh = 0.0602 } add_to_array = { VEL_USA_sh = 0.1054 }
+		add_to_array = { VEL_USA_sh = 0.2518 } add_to_array = { VEL_USA_sh = 0.0897 } add_to_array = { VEL_USA_sh = 0.2399 } add_to_array = { VEL_USA_sh = 0.1993 } add_to_array = { VEL_USA_sh = 0.0371 } add_to_array = { VEL_USA_sh = 0.0185 }
+		add_to_array = { VEL_USA_sh = 0.0565 } add_to_array = { VEL_USA_sh = 0.1072 } add_to_array = { VEL_USA_sh = 0.2044 } add_to_array = { VEL_USA_sh = 0.1051 } add_to_array = { VEL_USA_sh = 0.1651 } add_to_array = { VEL_USA_sh = 0.2732 }
+		add_to_array = { VEL_USA_sh = 0.0688 } add_to_array = { VEL_USA_sh = 0.0413 } add_to_array = { VEL_USA_sh = 0.0668 } add_to_array = { VEL_USA_sh = 0.0754 } add_to_array = { VEL_USA_sh = 0.2213 } add_to_array = { VEL_USA_sh = 0.0453 }
+		add_to_array = { VEL_USA_sh = 0.4277 } add_to_array = { VEL_USA_sh = 0.1081 } add_to_array = { VEL_USA_sh = 0.0327 } add_to_array = { VEL_USA_sh = 0.0163 } add_to_array = { VEL_USA_sh = 0.0396 } add_to_array = { VEL_USA_sh = 0.109 }
+		add_to_array = { VEL_USA_sh = 0.23 } add_to_array = { VEL_USA_sh = 0.04 } add_to_array = { VEL_USA_sh = 0.3618 } add_to_array = { VEL_USA_sh = 0.1873 } add_to_array = { VEL_USA_sh = 0.028 } add_to_array = { VEL_USA_sh = 0.0224 }
+		add_to_array = { VEL_USA_sh = 0.0299 } add_to_array = { VEL_USA_sh = 0.1006 } add_to_array = { VEL_USA_sh = 0.1716 } add_to_array = { VEL_USA_sh = 0.1392 } add_to_array = { VEL_USA_sh = 0.0883 } add_to_array = { VEL_USA_sh = 0.1542 }
+		add_to_array = { VEL_USA_sh = 0.1975 } add_to_array = { VEL_USA_sh = 0.0293 } add_to_array = { VEL_USA_sh = 0.0758 } add_to_array = { VEL_USA_sh = 0.1442 } add_to_array = { VEL_USA_sh = 0.2219 } add_to_array = { VEL_USA_sh = 0.0186 }
+		add_to_array = { VEL_USA_sh = 0.3959 } add_to_array = { VEL_USA_sh = 0.2512 } add_to_array = { VEL_USA_sh = 0.016 } add_to_array = { VEL_USA_sh = 0.0107 } add_to_array = { VEL_USA_sh = 0.0132 } add_to_array = { VEL_USA_sh = 0.0725 }
+		add_to_array = { VEL_USA_sh = 0.2263 } add_to_array = { VEL_USA_sh = 0.0649 } add_to_array = { VEL_USA_sh = 0.2452 } add_to_array = { VEL_USA_sh = 0.2553 } add_to_array = { VEL_USA_sh = 0.0386 } add_to_array = { VEL_USA_sh = 0.0257 }
+		add_to_array = { VEL_USA_sh = 0.0549 } add_to_array = { VEL_USA_sh = 0.0891 } add_to_array = { VEL_USA_sh = 0.2739 } add_to_array = { VEL_USA_sh = 0.0326 } add_to_array = { VEL_USA_sh = 0.3991 } add_to_array = { VEL_USA_sh = 0.0974 }
+		add_to_array = { VEL_USA_sh = 0.0419 } add_to_array = { VEL_USA_sh = 0.0209 } add_to_array = { VEL_USA_sh = 0.0269 } add_to_array = { VEL_USA_sh = 0.1073 } add_to_array = { VEL_USA_sh = 0.2356 } add_to_array = { VEL_USA_sh = 0.0506 }
+		add_to_array = { VEL_USA_sh = 0.376 } add_to_array = { VEL_USA_sh = 0.0579 } add_to_array = { VEL_USA_sh = 0.0701 } add_to_array = { VEL_USA_sh = 0.0701 } add_to_array = { VEL_USA_sh = 0.0449 } add_to_array = { VEL_USA_sh = 0.0948 }
+		add_to_array = { VEL_USA_sh = 0.1663 } add_to_array = { VEL_USA_sh = 0.112 } add_to_array = { VEL_USA_sh = 0.1101 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.3084 } add_to_array = { VEL_USA_sh = 0.0463 }
+		add_to_array = { VEL_USA_sh = 0.0831 } add_to_array = { VEL_USA_sh = 0.0591 } add_to_array = { VEL_USA_sh = 0.1976 } add_to_array = { VEL_USA_sh = 0.1237 } add_to_array = { VEL_USA_sh = 0.068 } add_to_array = { VEL_USA_sh = 0.0192 }
+		add_to_array = { VEL_USA_sh = 0.38 } add_to_array = { VEL_USA_sh = 0.0465 } add_to_array = { VEL_USA_sh = 0.0761 } add_to_array = { VEL_USA_sh = 0.0889 } add_to_array = { VEL_USA_sh = 0.183 } add_to_array = { VEL_USA_sh = 0.2916 }
+		add_to_array = { VEL_USA_sh = 0.0903 } add_to_array = { VEL_USA_sh = 0.0337 } add_to_array = { VEL_USA_sh = 0.1495 } add_to_array = { VEL_USA_sh = 0.034 } add_to_array = { VEL_USA_sh = 0.1191 } add_to_array = { VEL_USA_sh = 0.0988 }
+		add_to_array = { VEL_USA_sh = 0.2709 } add_to_array = { VEL_USA_sh = 0.3064 } add_to_array = { VEL_USA_sh = 0.0335 } add_to_array = { VEL_USA_sh = 0.0087 } add_to_array = { VEL_USA_sh = 0.1048 } add_to_array = { VEL_USA_sh = 0.0419 }
+		add_to_array = { VEL_USA_sh = 0.1496 } add_to_array = { VEL_USA_sh = 0.0842 } add_to_array = { VEL_USA_sh = 0.1833 } add_to_array = { VEL_USA_sh = 0.1474 } add_to_array = { VEL_USA_sh = 0.1269 } add_to_array = { VEL_USA_sh = 0.0451 }
+		add_to_array = { VEL_USA_sh = 0.2257 } add_to_array = { VEL_USA_sh = 0.051 } add_to_array = { VEL_USA_sh = 0.0924 } add_to_array = { VEL_USA_sh = 0.1282 } add_to_array = { VEL_USA_sh = 0.1907 } add_to_array = { VEL_USA_sh = 0.1404 }
+		add_to_array = { VEL_USA_sh = 0.0672 } add_to_array = { VEL_USA_sh = 0.0968 } add_to_array = { VEL_USA_sh = 0.2264 } add_to_array = { VEL_USA_sh = 0.0937 } add_to_array = { VEL_USA_sh = 0.0881 } add_to_array = { VEL_USA_sh = 0.0967 }
+		add_to_array = { VEL_USA_sh = 0.3533 } add_to_array = { VEL_USA_sh = 0.1659 } add_to_array = { VEL_USA_sh = 0.1601 } add_to_array = { VEL_USA_sh = 0.008 } add_to_array = { VEL_USA_sh = 0.0841 } add_to_array = { VEL_USA_sh = 0.0194 }
+		add_to_array = { VEL_USA_sh = 0.081 } add_to_array = { VEL_USA_sh = 0.1281 } add_to_array = { VEL_USA_sh = 0.2361 } add_to_array = { VEL_USA_sh = 0.2741 } add_to_array = { VEL_USA_sh = 0.0625 } add_to_array = { VEL_USA_sh = 0.0345 }
+		add_to_array = { VEL_USA_sh = 0.0904 } add_to_array = { VEL_USA_sh = 0.0834 } add_to_array = { VEL_USA_sh = 0.1011 } add_to_array = { VEL_USA_sh = 0.1178 } add_to_array = { VEL_USA_sh = 0.2622 } add_to_array = { VEL_USA_sh = 0.2658 }
+		add_to_array = { VEL_USA_sh = 0.066 } add_to_array = { VEL_USA_sh = 0.0169 } add_to_array = { VEL_USA_sh = 0.0954 } add_to_array = { VEL_USA_sh = 0.0545 } add_to_array = { VEL_USA_sh = 0.0938 } add_to_array = { VEL_USA_sh = 0.1454 }
+		add_to_array = { VEL_USA_sh = 0.1128 } add_to_array = { VEL_USA_sh = 0.1804 } add_to_array = { VEL_USA_sh = 0.0411 } add_to_array = { VEL_USA_sh = 0.0587 } add_to_array = { VEL_USA_sh = 0.3154 } add_to_array = { VEL_USA_sh = 0.1341 }
+		add_to_array = { VEL_USA_sh = 0.0961 } add_to_array = { VEL_USA_sh = 0.0614 } add_to_array = { VEL_USA_sh = 0.2897 } add_to_array = { VEL_USA_sh = 0.1288 } add_to_array = { VEL_USA_sh = 0.2313 } add_to_array = { VEL_USA_sh = 0.0319 }
+		add_to_array = { VEL_USA_sh = 0.0451 } add_to_array = { VEL_USA_sh = 0.1159 } add_to_array = { VEL_USA_sh = 0.0611 } add_to_array = { VEL_USA_sh = 0.0962 } add_to_array = { VEL_USA_sh = 0.1051 } add_to_array = { VEL_USA_sh = 0.1335 }
+		add_to_array = { VEL_USA_sh = 0.0134 } add_to_array = { VEL_USA_sh = 0.0206 } add_to_array = { VEL_USA_sh = 0.083 } add_to_array = { VEL_USA_sh = 0.4977 } add_to_array = { VEL_USA_sh = 0.0815 } add_to_array = { VEL_USA_sh = 0.0652 }
+		add_to_array = { VEL_USA_sh = 0.2202 } add_to_array = { VEL_USA_sh = 0.2126 } add_to_array = { VEL_USA_sh = 0.0544 } add_to_array = { VEL_USA_sh = 0.1886 } add_to_array = { VEL_USA_sh = 0.0691 } add_to_array = { VEL_USA_sh = 0.0346 }
+		add_to_array = { VEL_USA_sh = 0.0922 } add_to_array = { VEL_USA_sh = 0.1284 } add_to_array = { VEL_USA_sh = 0.2214 } add_to_array = { VEL_USA_sh = 0.269 } add_to_array = { VEL_USA_sh = 0.0589 } add_to_array = { VEL_USA_sh = 0.0514 }
+		add_to_array = { VEL_USA_sh = 0.1174 } add_to_array = { VEL_USA_sh = 0.0345 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.1327 } add_to_array = { VEL_USA_sh = 0.0351 } add_to_array = { VEL_USA_sh = 0.3048 }
+		add_to_array = { VEL_USA_sh = 0.0086 } add_to_array = { VEL_USA_sh = 0.3655 } add_to_array = { VEL_USA_sh = 0.0721 } add_to_array = { VEL_USA_sh = 0.0393 } add_to_array = { VEL_USA_sh = 0.1397 } add_to_array = { VEL_USA_sh = 0.035 }
 		clear_array = VEL_USA_lean
-		add_to_array = { VEL_USA_lean = -0.01 } add_to_array = { VEL_USA_lean = 0.01 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.005 }
-		add_to_array = { VEL_USA_lean = -0.005 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.16 } add_to_array = { VEL_USA_lean = 0.16 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.11 } add_to_array = { VEL_USA_lean = 0.11 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.035 } add_to_array = { VEL_USA_lean = 0.035 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.075 } add_to_array = { VEL_USA_lean = 0.075 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = -0.06 } add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.015 }
-		add_to_array = { VEL_USA_lean = -0.015 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.11 } add_to_array = { VEL_USA_lean = 0.11 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.01 } add_to_array = { VEL_USA_lean = 0.01 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.19 } add_to_array = { VEL_USA_lean = -0.19 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.055 } add_to_array = { VEL_USA_lean = -0.055 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.09 } add_to_array = { VEL_USA_lean = -0.09 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.015 }
-		add_to_array = { VEL_USA_lean = -0.015 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.045 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.015 } add_to_array = { VEL_USA_lean = -0.015 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.01 } add_to_array = { VEL_USA_lean = 0.01 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.065 } add_to_array = { VEL_USA_lean = -0.065 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.14 } add_to_array = { VEL_USA_lean = -0.14 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.09 }
-		add_to_array = { VEL_USA_lean = -0.09 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.09 } add_to_array = { VEL_USA_lean = -0.09 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.115 } add_to_array = { VEL_USA_lean = -0.115 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.115 } add_to_array = { VEL_USA_lean = -0.115 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.14 } add_to_array = { VEL_USA_lean = -0.14 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.09 } add_to_array = { VEL_USA_lean = -0.09 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.215 }
-		add_to_array = { VEL_USA_lean = -0.215 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.025 } add_to_array = { VEL_USA_lean = -0.025 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 } add_to_array = { VEL_USA_lean = -0.075 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.02 } add_to_array = { VEL_USA_lean = -0.02 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.115 } add_to_array = { VEL_USA_lean = -0.115 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.14 } add_to_array = { VEL_USA_lean = -0.14 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.025 }
-		add_to_array = { VEL_USA_lean = -0.025 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.105 } add_to_array = { VEL_USA_lean = -0.105 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.105 } add_to_array = { VEL_USA_lean = -0.105 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.15 } add_to_array = { VEL_USA_lean = -0.15 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = -0.15 } add_to_array = { VEL_USA_lean = 0.15 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.015 }
+		add_to_array = { VEL_USA_lean = -0.015 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.48 } add_to_array = { VEL_USA_lean = 0.48 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.33 } add_to_array = { VEL_USA_lean = 0.33 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.105 } add_to_array = { VEL_USA_lean = 0.105 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = -0.18 } add_to_array = { VEL_USA_lean = 0.18 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 }
+		add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.33 } add_to_array = { VEL_USA_lean = 0.33 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.57 } add_to_array = { VEL_USA_lean = -0.57 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
 		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.165 } add_to_array = { VEL_USA_lean = -0.165 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.05 } add_to_array = { VEL_USA_lean = -0.05 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.01 }
-		add_to_array = { VEL_USA_lean = 0.01 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.01 } add_to_array = { VEL_USA_lean = 0.01 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.115 } add_to_array = { VEL_USA_lean = -0.115 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.02 } add_to_array = { VEL_USA_lean = -0.02 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0.165 } add_to_array = { VEL_USA_lean = -0.165 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.045 }
-		add_to_array = { VEL_USA_lean = 0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.035 } add_to_array = { VEL_USA_lean = 0.035 }
-		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.085 } add_to_array = { VEL_USA_lean = 0.085 } add_to_array = { VEL_USA_lean = 0.0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 } add_to_array = { VEL_USA_lean = -0.075 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.085 } add_to_array = { VEL_USA_lean = 0.085 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
-		add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.06 }
-		add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.285 } add_to_array = { VEL_USA_lean = 0.285 }
+		add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 }
+		add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.135 } add_to_array = { VEL_USA_lean = 0.135 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 } add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.195 } add_to_array = { VEL_USA_lean = -0.195 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.27 }
+		add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.645 }
+		add_to_array = { VEL_USA_lean = -0.645 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 } add_to_array = { VEL_USA_lean = -0.075 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = -0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 }
+		add_to_array = { VEL_USA_lean = -0.075 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.315 } add_to_array = { VEL_USA_lean = -0.315 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.315 } add_to_array = { VEL_USA_lean = -0.315 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.45 } add_to_array = { VEL_USA_lean = -0.45 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.495 } add_to_array = { VEL_USA_lean = -0.495 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0.15 } add_to_array = { VEL_USA_lean = -0.15 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 }
+		add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.09 } add_to_array = { VEL_USA_lean = -0.09 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = -0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0.495 } add_to_array = { VEL_USA_lean = -0.495 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.135 }
+		add_to_array = { VEL_USA_lean = 0.135 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.105 } add_to_array = { VEL_USA_lean = 0.105 }
+		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.255 } add_to_array = { VEL_USA_lean = 0.255 } add_to_array = { VEL_USA_lean = 0.0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.255 } add_to_array = { VEL_USA_lean = 0.255 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+		add_to_array = { VEL_USA_lean = -0.135 } add_to_array = { VEL_USA_lean = 0.135 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.18 }
+		add_to_array = { VEL_USA_lean = 0.18 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.855 } add_to_array = { VEL_USA_lean = 0.855 }
 		add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
 		clear_array = VEL_USA_seatsr
 		add_to_array = { VEL_USA_seatsr = 4 } add_to_array = { VEL_USA_seatsr = 4 } add_to_array = { VEL_USA_seatsr = 3 } add_to_array = { VEL_USA_seatsr = 11 } add_to_array = { VEL_USA_seatsr = 7 } add_to_array = { VEL_USA_seatsr = 28 }
@@ -240,6 +241,16 @@ VEL_USA_init = {
 		add_to_array = { VEL_USA_w = 0.07525 } add_to_array = { VEL_USA_w = 0.00641 } add_to_array = { VEL_USA_w = 0.02009 } add_to_array = { VEL_USA_w = 0.00786 } add_to_array = { VEL_USA_w = 0.01807 } add_to_array = { VEL_USA_w = 0.00704 }
 		add_to_array = { VEL_USA_w = 0.00456 } add_to_array = { VEL_USA_w = 0.02075 } add_to_array = { VEL_USA_w = 0.01205 } add_to_array = { VEL_USA_w = 0.11948 } add_to_array = { VEL_USA_w = 0.00221 } add_to_array = { VEL_USA_w = 0.00427 }
 		add_to_array = { VEL_USA_w = 0.00276 } add_to_array = { VEL_USA_w = 0.00369 } add_to_array = { VEL_USA_w = 0.00243 }
+		clear_array = VEL_USA_wp
+		add_to_array = { VEL_USA_wp = 0.449 } add_to_array = { VEL_USA_wp = 0.435 } add_to_array = { VEL_USA_wp = 0.214 } add_to_array = { VEL_USA_wp = 2.236 } add_to_array = { VEL_USA_wp = 1.216 } add_to_array = { VEL_USA_wp = 6.682 }
+		add_to_array = { VEL_USA_wp = 2.963 } add_to_array = { VEL_USA_wp = 4.324 } add_to_array = { VEL_USA_wp = 2.022 } add_to_array = { VEL_USA_wp = 2.493 } add_to_array = { VEL_USA_wp = 0.637 } add_to_array = { VEL_USA_wp = 3.998 }
+		add_to_array = { VEL_USA_wp = 2.141 } add_to_array = { VEL_USA_wp = 3.5 } add_to_array = { VEL_USA_wp = 4.373 } add_to_array = { VEL_USA_wp = 1.889 } add_to_array = { VEL_USA_wp = 1.732 } add_to_array = { VEL_USA_wp = 1.03 }
+		add_to_array = { VEL_USA_wp = 1.423 } add_to_array = { VEL_USA_wp = 1.97 } add_to_array = { VEL_USA_wp = 0.947 } add_to_array = { VEL_USA_wp = 0.603 } add_to_array = { VEL_USA_wp = 0.266 } add_to_array = { VEL_USA_wp = 0.226 }
+		add_to_array = { VEL_USA_wp = 0.318 } add_to_array = { VEL_USA_wp = 0.174 } add_to_array = { VEL_USA_wp = 2.834 } add_to_array = { VEL_USA_wp = 1.413 } add_to_array = { VEL_USA_wp = 2.883 } add_to_array = { VEL_USA_wp = 2.003 }
+		add_to_array = { VEL_USA_wp = 1.566 } add_to_array = { VEL_USA_wp = 5.628 } add_to_array = { VEL_USA_wp = 1.002 } add_to_array = { VEL_USA_wp = 1.566 } add_to_array = { VEL_USA_wp = 0.941 } add_to_array = { VEL_USA_wp = 1.215 }
+		add_to_array = { VEL_USA_wp = 7.525 } add_to_array = { VEL_USA_wp = 0.641 } add_to_array = { VEL_USA_wp = 2.009 } add_to_array = { VEL_USA_wp = 0.786 } add_to_array = { VEL_USA_wp = 1.807 } add_to_array = { VEL_USA_wp = 0.704 }
+		add_to_array = { VEL_USA_wp = 0.456 } add_to_array = { VEL_USA_wp = 2.075 } add_to_array = { VEL_USA_wp = 1.205 } add_to_array = { VEL_USA_wp = 11.948 } add_to_array = { VEL_USA_wp = 0.221 } add_to_array = { VEL_USA_wp = 0.427 }
+		add_to_array = { VEL_USA_wp = 0.276 } add_to_array = { VEL_USA_wp = 0.369 } add_to_array = { VEL_USA_wp = 0.243 }
 		clear_array = VEL_USA_order
 		add_to_array = { VEL_USA_order = 0 } add_to_array = { VEL_USA_order = 49 } add_to_array = { VEL_USA_order = 1 } add_to_array = { VEL_USA_order = 3 } add_to_array = { VEL_USA_order = 2 } add_to_array = { VEL_USA_order = 4 }
 		add_to_array = { VEL_USA_order = 6 } add_to_array = { VEL_USA_order = 48 } add_to_array = { VEL_USA_order = 5 } add_to_array = { VEL_USA_order = 50 } add_to_array = { VEL_USA_order = 8 } add_to_array = { VEL_USA_order = 7 }
@@ -304,6 +315,10 @@ VEL_USA_init = {
 		resize_array = { array = VEL_USA_key value = 0 size = 5 }
 		clear_array = VEL_USA_run_nat
 		resize_array = { array = VEL_USA_run_nat value = 0 size = 5 }
+		clear_array = VEL_USA_bsw
+		resize_array = { array = VEL_USA_bsw value = 0 size = 5 }
+		clear_array = VEL_USA_tsw
+		resize_array = { array = VEL_USA_tsw value = 0 size = 5 }
 		clear_array = VEL_USA_selfr
 		resize_array = { array = VEL_USA_selfr value = 1 size = 51 }
 		clear_array = VEL_USA_lead
@@ -330,8 +345,141 @@ VEL_USA_init = {
 	}
 }
 
+# 旧存档里的 sh / lean 是旧数据：第一次计票前重写，并补上新数组。新开局在 init 里已经写好并设了旗标。
+VEL_USA_migrate = {
+	set_country_flag = VEL_USA_data_v343
+	clear_array = VEL_USA_sh
+	add_to_array = { VEL_USA_sh = 0.4503 } add_to_array = { VEL_USA_sh = 0.1873 } add_to_array = { VEL_USA_sh = 0.0913 } add_to_array = { VEL_USA_sh = 0.0147 } add_to_array = { VEL_USA_sh = 0.0119 } add_to_array = { VEL_USA_sh = 0.0178 }
+	add_to_array = { VEL_USA_sh = 0.0488 } add_to_array = { VEL_USA_sh = 0.178 } add_to_array = { VEL_USA_sh = 0.3443 } add_to_array = { VEL_USA_sh = 0.2673 } add_to_array = { VEL_USA_sh = 0.0831 } add_to_array = { VEL_USA_sh = 0.0156 }
+	add_to_array = { VEL_USA_sh = 0.0252 } add_to_array = { VEL_USA_sh = 0.0315 } add_to_array = { VEL_USA_sh = 0.0753 } add_to_array = { VEL_USA_sh = 0.1576 } add_to_array = { VEL_USA_sh = 0.3889 } add_to_array = { VEL_USA_sh = 0.2876 }
+	add_to_array = { VEL_USA_sh = 0.0455 } add_to_array = { VEL_USA_sh = 0.0076 } add_to_array = { VEL_USA_sh = 0.0123 } add_to_array = { VEL_USA_sh = 0.0184 } add_to_array = { VEL_USA_sh = 0.0692 } add_to_array = { VEL_USA_sh = 0.1704 }
+	add_to_array = { VEL_USA_sh = 0.1845 } add_to_array = { VEL_USA_sh = 0.3515 } add_to_array = { VEL_USA_sh = 0.0284 } add_to_array = { VEL_USA_sh = 0.0582 } add_to_array = { VEL_USA_sh = 0.0872 } add_to_array = { VEL_USA_sh = 0.0537 }
+	add_to_array = { VEL_USA_sh = 0.1213 } add_to_array = { VEL_USA_sh = 0.1153 } add_to_array = { VEL_USA_sh = 0.1975 } add_to_array = { VEL_USA_sh = 0.2785 } add_to_array = { VEL_USA_sh = 0.0562 } add_to_array = { VEL_USA_sh = 0.0857 }
+	add_to_array = { VEL_USA_sh = 0.1175 } add_to_array = { VEL_USA_sh = 0.0415 } add_to_array = { VEL_USA_sh = 0.0995 } add_to_array = { VEL_USA_sh = 0.1236 } add_to_array = { VEL_USA_sh = 0.1623 } add_to_array = { VEL_USA_sh = 0.2323 }
+	add_to_array = { VEL_USA_sh = 0.0365 } add_to_array = { VEL_USA_sh = 0.1613 } add_to_array = { VEL_USA_sh = 0.1445 } add_to_array = { VEL_USA_sh = 0.0723 } add_to_array = { VEL_USA_sh = 0.0958 } add_to_array = { VEL_USA_sh = 0.095 }
+	add_to_array = { VEL_USA_sh = 0.1536 } add_to_array = { VEL_USA_sh = 0.2488 } add_to_array = { VEL_USA_sh = 0.0355 } add_to_array = { VEL_USA_sh = 0.1357 } add_to_array = { VEL_USA_sh = 0.1532 } add_to_array = { VEL_USA_sh = 0.0803 }
+	add_to_array = { VEL_USA_sh = 0.095 } add_to_array = { VEL_USA_sh = 0.0977 } add_to_array = { VEL_USA_sh = 0.2566 } add_to_array = { VEL_USA_sh = 0.1965 } add_to_array = { VEL_USA_sh = 0.1339 } add_to_array = { VEL_USA_sh = 0.098 }
+	add_to_array = { VEL_USA_sh = 0.0527 } add_to_array = { VEL_USA_sh = 0.0329 } add_to_array = { VEL_USA_sh = 0.0839 } add_to_array = { VEL_USA_sh = 0.1456 } add_to_array = { VEL_USA_sh = 0.1421 } add_to_array = { VEL_USA_sh = 0.2406 }
+	add_to_array = { VEL_USA_sh = 0.0443 } add_to_array = { VEL_USA_sh = 0.2735 } add_to_array = { VEL_USA_sh = 0.0783 } add_to_array = { VEL_USA_sh = 0.0569 } add_to_array = { VEL_USA_sh = 0.0844 } add_to_array = { VEL_USA_sh = 0.0799 }
+	add_to_array = { VEL_USA_sh = 0.2129 } add_to_array = { VEL_USA_sh = 0.1997 } add_to_array = { VEL_USA_sh = 0.1231 } add_to_array = { VEL_USA_sh = 0.1601 } add_to_array = { VEL_USA_sh = 0.0679 } add_to_array = { VEL_USA_sh = 0.0543 }
+	add_to_array = { VEL_USA_sh = 0.0798 } add_to_array = { VEL_USA_sh = 0.1022 } add_to_array = { VEL_USA_sh = 0.4303 } add_to_array = { VEL_USA_sh = 0.0645 } add_to_array = { VEL_USA_sh = 0.2697 } add_to_array = { VEL_USA_sh = 0.0257 }
+	add_to_array = { VEL_USA_sh = 0.0104 } add_to_array = { VEL_USA_sh = 0.0104 } add_to_array = { VEL_USA_sh = 0.0351 } add_to_array = { VEL_USA_sh = 0.154 } add_to_array = { VEL_USA_sh = 0.287 } add_to_array = { VEL_USA_sh = 0.1548 }
+	add_to_array = { VEL_USA_sh = 0.1799 } add_to_array = { VEL_USA_sh = 0.1035 } add_to_array = { VEL_USA_sh = 0.0257 } add_to_array = { VEL_USA_sh = 0.0257 } add_to_array = { VEL_USA_sh = 0.0882 } add_to_array = { VEL_USA_sh = 0.1353 }
+	add_to_array = { VEL_USA_sh = 0.3095 } add_to_array = { VEL_USA_sh = 0.1162 } add_to_array = { VEL_USA_sh = 0.2297 } add_to_array = { VEL_USA_sh = 0.0775 } add_to_array = { VEL_USA_sh = 0.05 } add_to_array = { VEL_USA_sh = 0.025 }
+	add_to_array = { VEL_USA_sh = 0.0756 } add_to_array = { VEL_USA_sh = 0.1164 } add_to_array = { VEL_USA_sh = 0.2793 } add_to_array = { VEL_USA_sh = 0.1796 } add_to_array = { VEL_USA_sh = 0.1393 } add_to_array = { VEL_USA_sh = 0.1133 }
+	add_to_array = { VEL_USA_sh = 0.0392 } add_to_array = { VEL_USA_sh = 0.0326 } add_to_array = { VEL_USA_sh = 0.0863 } add_to_array = { VEL_USA_sh = 0.1306 } add_to_array = { VEL_USA_sh = 0.1958 } add_to_array = { VEL_USA_sh = 0.2444 }
+	add_to_array = { VEL_USA_sh = 0.0531 } add_to_array = { VEL_USA_sh = 0.123 } add_to_array = { VEL_USA_sh = 0.1276 } add_to_array = { VEL_USA_sh = 0.0496 } add_to_array = { VEL_USA_sh = 0.1033 } add_to_array = { VEL_USA_sh = 0.1032 }
+	add_to_array = { VEL_USA_sh = 0.32 } add_to_array = { VEL_USA_sh = 0.2002 } add_to_array = { VEL_USA_sh = 0.1121 } add_to_array = { VEL_USA_sh = 0.0563 } add_to_array = { VEL_USA_sh = 0.0519 } add_to_array = { VEL_USA_sh = 0.0324 }
+	add_to_array = { VEL_USA_sh = 0.0885 } add_to_array = { VEL_USA_sh = 0.1385 } add_to_array = { VEL_USA_sh = 0.2729 } add_to_array = { VEL_USA_sh = 0.2259 } add_to_array = { VEL_USA_sh = 0.1511 } add_to_array = { VEL_USA_sh = 0.056 }
+	add_to_array = { VEL_USA_sh = 0.0387 } add_to_array = { VEL_USA_sh = 0.0451 } add_to_array = { VEL_USA_sh = 0.0872 } add_to_array = { VEL_USA_sh = 0.1231 } add_to_array = { VEL_USA_sh = 0.365 } add_to_array = { VEL_USA_sh = 0.1623 }
+	add_to_array = { VEL_USA_sh = 0.1661 } add_to_array = { VEL_USA_sh = 0.0306 } add_to_array = { VEL_USA_sh = 0.037 } add_to_array = { VEL_USA_sh = 0.0247 } add_to_array = { VEL_USA_sh = 0.0729 } add_to_array = { VEL_USA_sh = 0.1415 }
+	add_to_array = { VEL_USA_sh = 0.342 } add_to_array = { VEL_USA_sh = 0.0616 } add_to_array = { VEL_USA_sh = 0.35 } add_to_array = { VEL_USA_sh = 0.053 } add_to_array = { VEL_USA_sh = 0.0214 } add_to_array = { VEL_USA_sh = 0.016 }
+	add_to_array = { VEL_USA_sh = 0.0415 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.2975 } add_to_array = { VEL_USA_sh = 0.1282 } add_to_array = { VEL_USA_sh = 0.2309 } add_to_array = { VEL_USA_sh = 0.0914 }
+	add_to_array = { VEL_USA_sh = 0.0307 } add_to_array = { VEL_USA_sh = 0.0246 } add_to_array = { VEL_USA_sh = 0.0671 } add_to_array = { VEL_USA_sh = 0.1295 } add_to_array = { VEL_USA_sh = 0.2662 } add_to_array = { VEL_USA_sh = 0.1523 }
+	add_to_array = { VEL_USA_sh = 0.2243 } add_to_array = { VEL_USA_sh = 0.0476 } add_to_array = { VEL_USA_sh = 0.0832 } add_to_array = { VEL_USA_sh = 0.032 } add_to_array = { VEL_USA_sh = 0.0783 } add_to_array = { VEL_USA_sh = 0.1161 }
+	add_to_array = { VEL_USA_sh = 0.3078 } add_to_array = { VEL_USA_sh = 0.1813 } add_to_array = { VEL_USA_sh = 0.1498 } add_to_array = { VEL_USA_sh = 0.0406 } add_to_array = { VEL_USA_sh = 0.0787 } add_to_array = { VEL_USA_sh = 0.0328 }
+	add_to_array = { VEL_USA_sh = 0.0871 } add_to_array = { VEL_USA_sh = 0.122 } add_to_array = { VEL_USA_sh = 0.3816 } add_to_array = { VEL_USA_sh = 0.1438 } add_to_array = { VEL_USA_sh = 0.1693 } add_to_array = { VEL_USA_sh = 0.0151 }
+	add_to_array = { VEL_USA_sh = 0.0244 } add_to_array = { VEL_USA_sh = 0.0672 } add_to_array = { VEL_USA_sh = 0.0633 } add_to_array = { VEL_USA_sh = 0.1352 } add_to_array = { VEL_USA_sh = 0.3794 } add_to_array = { VEL_USA_sh = 0.1625 }
+	add_to_array = { VEL_USA_sh = 0.1745 } add_to_array = { VEL_USA_sh = 0.015 } add_to_array = { VEL_USA_sh = 0.0242 } add_to_array = { VEL_USA_sh = 0.0364 } add_to_array = { VEL_USA_sh = 0.0807 } add_to_array = { VEL_USA_sh = 0.1273 }
+	add_to_array = { VEL_USA_sh = 0.3606 } add_to_array = { VEL_USA_sh = 0.177 } add_to_array = { VEL_USA_sh = 0.1756 } add_to_array = { VEL_USA_sh = 0.0074 } add_to_array = { VEL_USA_sh = 0.024 } add_to_array = { VEL_USA_sh = 0.042 }
+	add_to_array = { VEL_USA_sh = 0.065 } add_to_array = { VEL_USA_sh = 0.1484 } add_to_array = { VEL_USA_sh = 0.36 } add_to_array = { VEL_USA_sh = 0.1753 } add_to_array = { VEL_USA_sh = 0.1687 } add_to_array = { VEL_USA_sh = 0.0078 }
+	add_to_array = { VEL_USA_sh = 0.0627 } add_to_array = { VEL_USA_sh = 0.0251 } add_to_array = { VEL_USA_sh = 0.0734 } add_to_array = { VEL_USA_sh = 0.1271 } add_to_array = { VEL_USA_sh = 0.2436 } add_to_array = { VEL_USA_sh = 0.1083 }
+	add_to_array = { VEL_USA_sh = 0.1956 } add_to_array = { VEL_USA_sh = 0.1767 } add_to_array = { VEL_USA_sh = 0.0712 } add_to_array = { VEL_USA_sh = 0.0389 } add_to_array = { VEL_USA_sh = 0.0602 } add_to_array = { VEL_USA_sh = 0.1054 }
+	add_to_array = { VEL_USA_sh = 0.2518 } add_to_array = { VEL_USA_sh = 0.0897 } add_to_array = { VEL_USA_sh = 0.2399 } add_to_array = { VEL_USA_sh = 0.1993 } add_to_array = { VEL_USA_sh = 0.0371 } add_to_array = { VEL_USA_sh = 0.0185 }
+	add_to_array = { VEL_USA_sh = 0.0565 } add_to_array = { VEL_USA_sh = 0.1072 } add_to_array = { VEL_USA_sh = 0.2044 } add_to_array = { VEL_USA_sh = 0.1051 } add_to_array = { VEL_USA_sh = 0.1651 } add_to_array = { VEL_USA_sh = 0.2732 }
+	add_to_array = { VEL_USA_sh = 0.0688 } add_to_array = { VEL_USA_sh = 0.0413 } add_to_array = { VEL_USA_sh = 0.0668 } add_to_array = { VEL_USA_sh = 0.0754 } add_to_array = { VEL_USA_sh = 0.2213 } add_to_array = { VEL_USA_sh = 0.0453 }
+	add_to_array = { VEL_USA_sh = 0.4277 } add_to_array = { VEL_USA_sh = 0.1081 } add_to_array = { VEL_USA_sh = 0.0327 } add_to_array = { VEL_USA_sh = 0.0163 } add_to_array = { VEL_USA_sh = 0.0396 } add_to_array = { VEL_USA_sh = 0.109 }
+	add_to_array = { VEL_USA_sh = 0.23 } add_to_array = { VEL_USA_sh = 0.04 } add_to_array = { VEL_USA_sh = 0.3618 } add_to_array = { VEL_USA_sh = 0.1873 } add_to_array = { VEL_USA_sh = 0.028 } add_to_array = { VEL_USA_sh = 0.0224 }
+	add_to_array = { VEL_USA_sh = 0.0299 } add_to_array = { VEL_USA_sh = 0.1006 } add_to_array = { VEL_USA_sh = 0.1716 } add_to_array = { VEL_USA_sh = 0.1392 } add_to_array = { VEL_USA_sh = 0.0883 } add_to_array = { VEL_USA_sh = 0.1542 }
+	add_to_array = { VEL_USA_sh = 0.1975 } add_to_array = { VEL_USA_sh = 0.0293 } add_to_array = { VEL_USA_sh = 0.0758 } add_to_array = { VEL_USA_sh = 0.1442 } add_to_array = { VEL_USA_sh = 0.2219 } add_to_array = { VEL_USA_sh = 0.0186 }
+	add_to_array = { VEL_USA_sh = 0.3959 } add_to_array = { VEL_USA_sh = 0.2512 } add_to_array = { VEL_USA_sh = 0.016 } add_to_array = { VEL_USA_sh = 0.0107 } add_to_array = { VEL_USA_sh = 0.0132 } add_to_array = { VEL_USA_sh = 0.0725 }
+	add_to_array = { VEL_USA_sh = 0.2263 } add_to_array = { VEL_USA_sh = 0.0649 } add_to_array = { VEL_USA_sh = 0.2452 } add_to_array = { VEL_USA_sh = 0.2553 } add_to_array = { VEL_USA_sh = 0.0386 } add_to_array = { VEL_USA_sh = 0.0257 }
+	add_to_array = { VEL_USA_sh = 0.0549 } add_to_array = { VEL_USA_sh = 0.0891 } add_to_array = { VEL_USA_sh = 0.2739 } add_to_array = { VEL_USA_sh = 0.0326 } add_to_array = { VEL_USA_sh = 0.3991 } add_to_array = { VEL_USA_sh = 0.0974 }
+	add_to_array = { VEL_USA_sh = 0.0419 } add_to_array = { VEL_USA_sh = 0.0209 } add_to_array = { VEL_USA_sh = 0.0269 } add_to_array = { VEL_USA_sh = 0.1073 } add_to_array = { VEL_USA_sh = 0.2356 } add_to_array = { VEL_USA_sh = 0.0506 }
+	add_to_array = { VEL_USA_sh = 0.376 } add_to_array = { VEL_USA_sh = 0.0579 } add_to_array = { VEL_USA_sh = 0.0701 } add_to_array = { VEL_USA_sh = 0.0701 } add_to_array = { VEL_USA_sh = 0.0449 } add_to_array = { VEL_USA_sh = 0.0948 }
+	add_to_array = { VEL_USA_sh = 0.1663 } add_to_array = { VEL_USA_sh = 0.112 } add_to_array = { VEL_USA_sh = 0.1101 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.3084 } add_to_array = { VEL_USA_sh = 0.0463 }
+	add_to_array = { VEL_USA_sh = 0.0831 } add_to_array = { VEL_USA_sh = 0.0591 } add_to_array = { VEL_USA_sh = 0.1976 } add_to_array = { VEL_USA_sh = 0.1237 } add_to_array = { VEL_USA_sh = 0.068 } add_to_array = { VEL_USA_sh = 0.0192 }
+	add_to_array = { VEL_USA_sh = 0.38 } add_to_array = { VEL_USA_sh = 0.0465 } add_to_array = { VEL_USA_sh = 0.0761 } add_to_array = { VEL_USA_sh = 0.0889 } add_to_array = { VEL_USA_sh = 0.183 } add_to_array = { VEL_USA_sh = 0.2916 }
+	add_to_array = { VEL_USA_sh = 0.0903 } add_to_array = { VEL_USA_sh = 0.0337 } add_to_array = { VEL_USA_sh = 0.1495 } add_to_array = { VEL_USA_sh = 0.034 } add_to_array = { VEL_USA_sh = 0.1191 } add_to_array = { VEL_USA_sh = 0.0988 }
+	add_to_array = { VEL_USA_sh = 0.2709 } add_to_array = { VEL_USA_sh = 0.3064 } add_to_array = { VEL_USA_sh = 0.0335 } add_to_array = { VEL_USA_sh = 0.0087 } add_to_array = { VEL_USA_sh = 0.1048 } add_to_array = { VEL_USA_sh = 0.0419 }
+	add_to_array = { VEL_USA_sh = 0.1496 } add_to_array = { VEL_USA_sh = 0.0842 } add_to_array = { VEL_USA_sh = 0.1833 } add_to_array = { VEL_USA_sh = 0.1474 } add_to_array = { VEL_USA_sh = 0.1269 } add_to_array = { VEL_USA_sh = 0.0451 }
+	add_to_array = { VEL_USA_sh = 0.2257 } add_to_array = { VEL_USA_sh = 0.051 } add_to_array = { VEL_USA_sh = 0.0924 } add_to_array = { VEL_USA_sh = 0.1282 } add_to_array = { VEL_USA_sh = 0.1907 } add_to_array = { VEL_USA_sh = 0.1404 }
+	add_to_array = { VEL_USA_sh = 0.0672 } add_to_array = { VEL_USA_sh = 0.0968 } add_to_array = { VEL_USA_sh = 0.2264 } add_to_array = { VEL_USA_sh = 0.0937 } add_to_array = { VEL_USA_sh = 0.0881 } add_to_array = { VEL_USA_sh = 0.0967 }
+	add_to_array = { VEL_USA_sh = 0.3533 } add_to_array = { VEL_USA_sh = 0.1659 } add_to_array = { VEL_USA_sh = 0.1601 } add_to_array = { VEL_USA_sh = 0.008 } add_to_array = { VEL_USA_sh = 0.0841 } add_to_array = { VEL_USA_sh = 0.0194 }
+	add_to_array = { VEL_USA_sh = 0.081 } add_to_array = { VEL_USA_sh = 0.1281 } add_to_array = { VEL_USA_sh = 0.2361 } add_to_array = { VEL_USA_sh = 0.2741 } add_to_array = { VEL_USA_sh = 0.0625 } add_to_array = { VEL_USA_sh = 0.0345 }
+	add_to_array = { VEL_USA_sh = 0.0904 } add_to_array = { VEL_USA_sh = 0.0834 } add_to_array = { VEL_USA_sh = 0.1011 } add_to_array = { VEL_USA_sh = 0.1178 } add_to_array = { VEL_USA_sh = 0.2622 } add_to_array = { VEL_USA_sh = 0.2658 }
+	add_to_array = { VEL_USA_sh = 0.066 } add_to_array = { VEL_USA_sh = 0.0169 } add_to_array = { VEL_USA_sh = 0.0954 } add_to_array = { VEL_USA_sh = 0.0545 } add_to_array = { VEL_USA_sh = 0.0938 } add_to_array = { VEL_USA_sh = 0.1454 }
+	add_to_array = { VEL_USA_sh = 0.1128 } add_to_array = { VEL_USA_sh = 0.1804 } add_to_array = { VEL_USA_sh = 0.0411 } add_to_array = { VEL_USA_sh = 0.0587 } add_to_array = { VEL_USA_sh = 0.3154 } add_to_array = { VEL_USA_sh = 0.1341 }
+	add_to_array = { VEL_USA_sh = 0.0961 } add_to_array = { VEL_USA_sh = 0.0614 } add_to_array = { VEL_USA_sh = 0.2897 } add_to_array = { VEL_USA_sh = 0.1288 } add_to_array = { VEL_USA_sh = 0.2313 } add_to_array = { VEL_USA_sh = 0.0319 }
+	add_to_array = { VEL_USA_sh = 0.0451 } add_to_array = { VEL_USA_sh = 0.1159 } add_to_array = { VEL_USA_sh = 0.0611 } add_to_array = { VEL_USA_sh = 0.0962 } add_to_array = { VEL_USA_sh = 0.1051 } add_to_array = { VEL_USA_sh = 0.1335 }
+	add_to_array = { VEL_USA_sh = 0.0134 } add_to_array = { VEL_USA_sh = 0.0206 } add_to_array = { VEL_USA_sh = 0.083 } add_to_array = { VEL_USA_sh = 0.4977 } add_to_array = { VEL_USA_sh = 0.0815 } add_to_array = { VEL_USA_sh = 0.0652 }
+	add_to_array = { VEL_USA_sh = 0.2202 } add_to_array = { VEL_USA_sh = 0.2126 } add_to_array = { VEL_USA_sh = 0.0544 } add_to_array = { VEL_USA_sh = 0.1886 } add_to_array = { VEL_USA_sh = 0.0691 } add_to_array = { VEL_USA_sh = 0.0346 }
+	add_to_array = { VEL_USA_sh = 0.0922 } add_to_array = { VEL_USA_sh = 0.1284 } add_to_array = { VEL_USA_sh = 0.2214 } add_to_array = { VEL_USA_sh = 0.269 } add_to_array = { VEL_USA_sh = 0.0589 } add_to_array = { VEL_USA_sh = 0.0514 }
+	add_to_array = { VEL_USA_sh = 0.1174 } add_to_array = { VEL_USA_sh = 0.0345 } add_to_array = { VEL_USA_sh = 0.1147 } add_to_array = { VEL_USA_sh = 0.1327 } add_to_array = { VEL_USA_sh = 0.0351 } add_to_array = { VEL_USA_sh = 0.3048 }
+	add_to_array = { VEL_USA_sh = 0.0086 } add_to_array = { VEL_USA_sh = 0.3655 } add_to_array = { VEL_USA_sh = 0.0721 } add_to_array = { VEL_USA_sh = 0.0393 } add_to_array = { VEL_USA_sh = 0.1397 } add_to_array = { VEL_USA_sh = 0.035 }
+	clear_array = VEL_USA_lean
+	add_to_array = { VEL_USA_lean = -0.15 } add_to_array = { VEL_USA_lean = 0.15 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.015 }
+	add_to_array = { VEL_USA_lean = -0.015 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.48 } add_to_array = { VEL_USA_lean = 0.48 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.33 } add_to_array = { VEL_USA_lean = 0.33 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.105 } add_to_array = { VEL_USA_lean = 0.105 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = -0.18 } add_to_array = { VEL_USA_lean = 0.18 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 }
+	add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.33 } add_to_array = { VEL_USA_lean = 0.33 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.57 } add_to_array = { VEL_USA_lean = -0.57 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.165 } add_to_array = { VEL_USA_lean = -0.165 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 }
+	add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.135 } add_to_array = { VEL_USA_lean = 0.135 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.045 } add_to_array = { VEL_USA_lean = -0.045 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.195 } add_to_array = { VEL_USA_lean = -0.195 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.27 }
+	add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.27 } add_to_array = { VEL_USA_lean = -0.27 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.645 }
+	add_to_array = { VEL_USA_lean = -0.645 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 } add_to_array = { VEL_USA_lean = -0.075 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = -0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.42 } add_to_array = { VEL_USA_lean = -0.42 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.075 }
+	add_to_array = { VEL_USA_lean = -0.075 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.315 } add_to_array = { VEL_USA_lean = -0.315 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.315 } add_to_array = { VEL_USA_lean = -0.315 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.45 } add_to_array = { VEL_USA_lean = -0.45 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.495 } add_to_array = { VEL_USA_lean = -0.495 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.15 } add_to_array = { VEL_USA_lean = -0.15 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 }
+	add_to_array = { VEL_USA_lean = 0.03 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.03 } add_to_array = { VEL_USA_lean = 0.03 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.345 } add_to_array = { VEL_USA_lean = -0.345 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.09 } add_to_array = { VEL_USA_lean = -0.09 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.06 } add_to_array = { VEL_USA_lean = -0.06 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0.495 } add_to_array = { VEL_USA_lean = -0.495 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.135 }
+	add_to_array = { VEL_USA_lean = 0.135 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.105 } add_to_array = { VEL_USA_lean = 0.105 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.255 } add_to_array = { VEL_USA_lean = 0.255 } add_to_array = { VEL_USA_lean = 0.0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0.225 } add_to_array = { VEL_USA_lean = -0.225 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.255 } add_to_array = { VEL_USA_lean = 0.255 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	add_to_array = { VEL_USA_lean = -0.135 } add_to_array = { VEL_USA_lean = 0.135 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.18 }
+	add_to_array = { VEL_USA_lean = 0.18 } add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = -0.855 } add_to_array = { VEL_USA_lean = 0.855 }
+	add_to_array = { VEL_USA_lean = 0.0 } add_to_array = { VEL_USA_lean = 0 } add_to_array = { VEL_USA_lean = 0 }
+	clear_array = VEL_USA_wp
+	add_to_array = { VEL_USA_wp = 0.449 } add_to_array = { VEL_USA_wp = 0.435 } add_to_array = { VEL_USA_wp = 0.214 } add_to_array = { VEL_USA_wp = 2.236 } add_to_array = { VEL_USA_wp = 1.216 } add_to_array = { VEL_USA_wp = 6.682 }
+	add_to_array = { VEL_USA_wp = 2.963 } add_to_array = { VEL_USA_wp = 4.324 } add_to_array = { VEL_USA_wp = 2.022 } add_to_array = { VEL_USA_wp = 2.493 } add_to_array = { VEL_USA_wp = 0.637 } add_to_array = { VEL_USA_wp = 3.998 }
+	add_to_array = { VEL_USA_wp = 2.141 } add_to_array = { VEL_USA_wp = 3.5 } add_to_array = { VEL_USA_wp = 4.373 } add_to_array = { VEL_USA_wp = 1.889 } add_to_array = { VEL_USA_wp = 1.732 } add_to_array = { VEL_USA_wp = 1.03 }
+	add_to_array = { VEL_USA_wp = 1.423 } add_to_array = { VEL_USA_wp = 1.97 } add_to_array = { VEL_USA_wp = 0.947 } add_to_array = { VEL_USA_wp = 0.603 } add_to_array = { VEL_USA_wp = 0.266 } add_to_array = { VEL_USA_wp = 0.226 }
+	add_to_array = { VEL_USA_wp = 0.318 } add_to_array = { VEL_USA_wp = 0.174 } add_to_array = { VEL_USA_wp = 2.834 } add_to_array = { VEL_USA_wp = 1.413 } add_to_array = { VEL_USA_wp = 2.883 } add_to_array = { VEL_USA_wp = 2.003 }
+	add_to_array = { VEL_USA_wp = 1.566 } add_to_array = { VEL_USA_wp = 5.628 } add_to_array = { VEL_USA_wp = 1.002 } add_to_array = { VEL_USA_wp = 1.566 } add_to_array = { VEL_USA_wp = 0.941 } add_to_array = { VEL_USA_wp = 1.215 }
+	add_to_array = { VEL_USA_wp = 7.525 } add_to_array = { VEL_USA_wp = 0.641 } add_to_array = { VEL_USA_wp = 2.009 } add_to_array = { VEL_USA_wp = 0.786 } add_to_array = { VEL_USA_wp = 1.807 } add_to_array = { VEL_USA_wp = 0.704 }
+	add_to_array = { VEL_USA_wp = 0.456 } add_to_array = { VEL_USA_wp = 2.075 } add_to_array = { VEL_USA_wp = 1.205 } add_to_array = { VEL_USA_wp = 11.948 } add_to_array = { VEL_USA_wp = 0.221 } add_to_array = { VEL_USA_wp = 0.427 }
+	add_to_array = { VEL_USA_wp = 0.276 } add_to_array = { VEL_USA_wp = 0.369 } add_to_array = { VEL_USA_wp = 0.243 }
+	clear_array = VEL_USA_bsw
+	resize_array = { array = VEL_USA_bsw value = 0 size = 5 }
+	clear_array = VEL_USA_tsw
+	resize_array = { array = VEL_USA_tsw value = 0 size = 5 }
+}
+
 # 输入：temp vel_noise（1 = 开票带随机，0 = 民调）；temp vel_gov = 执政党在本系统里的序号(0..P-1)。输出：res / win / best / sr / nat / seat 数组。
 VEL_USA_compute = {
+	if = { limit = { NOT = { has_country_flag = VEL_USA_data_v343 } } VEL_USA_migrate = yes }
 	set_temp_variable = { vel_gov = VEL_USA_gov }
 	set_temp_variable = { vel_salsum = 0 }
 	for_loop_effect = { start = 0 end = 6 value = vi add_to_temp_variable = { vel_salsum = VEL_USA_sal^vi } }
@@ -372,7 +520,8 @@ VEL_USA_compute = {
 			multiply_temp_variable = { vel_sc = 0.05 }
 			add_to_temp_variable = { vel_sc = VEL_USA_cand^vp }
 			if = { limit = { check_variable = { vel_sc < 0.02 } } set_temp_variable = { vel_sc = 0.02 } }
-			multiply_temp_variable = { vel_sc = VEL_USA_f^vp }
+			multiply_temp_variable = { vel_sc = vel_sc }
+			if = { limit = { NOT = { check_variable = { VEL_USA_f^vp > 0 } } } set_temp_variable = { vel_sc = 0 } }
 			add_to_temp_variable = { vel_sum = vel_sc }
 			set_variable = { VEL_USA_N^vel_ia = vel_sc }
 		}
@@ -383,6 +532,7 @@ VEL_USA_compute = {
 		}
 	}
 	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_USA_nat^vp = 0 } set_variable = { VEL_USA_seat^vp = 0 } }
+	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_USA_bsw^vp = 0 } }
 	for_loop_effect = {
 		start = 0 end = 51 value = vr
 		for_loop_effect = {
@@ -409,6 +559,39 @@ VEL_USA_compute = {
 			set_temp_variable = { vel_v = 1 }
 			add_to_temp_variable = { vel_v = VEL_USA_lean^vel_ir }
 			multiply_temp_variable = { vel_v = VEL_USA_res^vel_ir }
+			set_variable = { VEL_USA_res^vel_ir = vel_v }
+			add_to_temp_variable = { vel_tot = vel_v }
+		}
+		for_loop_effect = {
+			start = 0 end = 5 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			divide_variable = { VEL_USA_res^vel_ir = vel_tot }
+			set_temp_variable = { vel_x = VEL_USA_res^vel_ir }
+			multiply_temp_variable = { vel_x = VEL_USA_wp^vr }
+			add_to_variable = { VEL_USA_bsw^vp = vel_x }
+		}
+	}
+	for_loop_effect = { start = 0 end = 5 value = vp divide_variable = { VEL_USA_bsw^vp = 100 } }
+	set_temp_variable = { vel_fsum = 0 }
+	for_loop_effect = { start = 0 end = 5 value = vp add_to_temp_variable = { vel_fsum = VEL_USA_f^vp } }
+	for_loop_effect = {
+		start = 0 end = 5 value = vp
+		set_variable = { VEL_USA_tsw^vp = VEL_USA_f^vp }
+		divide_variable = { VEL_USA_tsw^vp = vel_fsum }
+	}
+	for_loop_effect = {
+		start = 0 end = 51 value = vr
+		set_temp_variable = { vel_tot = 0 }
+		for_loop_effect = {
+			start = 0 end = 5 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			set_temp_variable = { vel_v = VEL_USA_res^vel_ir }
+			subtract_from_temp_variable = { vel_v = VEL_USA_bsw^vp }
+			multiply_temp_variable = { vel_v = 1.0 }
+			add_to_temp_variable = { vel_v = VEL_USA_tsw^vp }
+			set_temp_variable = { vel_fl = VEL_USA_tsw^vp }
+			multiply_temp_variable = { vel_fl = 0.15 }
+			if = { limit = { check_variable = { vel_v < vel_fl } } set_temp_variable = { vel_v = vel_fl } }
 			if = {
 				limit = { check_variable = { vp = vel_gov } }
 				set_temp_variable = { vel_c = VEL_USA_camp^vr }

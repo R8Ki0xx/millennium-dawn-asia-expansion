@@ -4,6 +4,7 @@ VEL_TAI_init = {
 	if = {
 		limit = { NOT = { has_country_flag = VEL_TAI_inited } }
 		set_country_flag = VEL_TAI_inited
+		set_country_flag = VEL_TAI_data_v343
 		clear_array = VEL_TAI_sal
 		add_to_array = { VEL_TAI_sal = 1 } add_to_array = { VEL_TAI_sal = 1 } add_to_array = { VEL_TAI_sal = 1 } add_to_array = { VEL_TAI_sal = 1 } add_to_array = { VEL_TAI_sal = 1 } add_to_array = { VEL_TAI_sal = 1 }
 		clear_array = VEL_TAI_pidx
@@ -188,6 +189,11 @@ VEL_TAI_init = {
 		add_to_array = { VEL_TAI_w = 0.02496 } add_to_array = { VEL_TAI_w = 0.11141 } add_to_array = { VEL_TAI_w = 0.05793 } add_to_array = { VEL_TAI_w = 0.02406 } add_to_array = { VEL_TAI_w = 0.03209 } add_to_array = { VEL_TAI_w = 0.01203 }
 		add_to_array = { VEL_TAI_w = 0.02406 } add_to_array = { VEL_TAI_w = 0.08378 } add_to_array = { VEL_TAI_w = 0.12344 } add_to_array = { VEL_TAI_w = 0.03877 } add_to_array = { VEL_TAI_w = 0.0205 } add_to_array = { VEL_TAI_w = 0.01515 }
 		add_to_array = { VEL_TAI_w = 0.01025 } add_to_array = { VEL_TAI_w = 0.00401 } add_to_array = { VEL_TAI_w = 0.00267 } add_to_array = { VEL_TAI_w = 0.00045 }
+		clear_array = VEL_TAI_wp
+		add_to_array = { VEL_TAI_wp = 11.72 } add_to_array = { VEL_TAI_wp = 16.043 } add_to_array = { VEL_TAI_wp = 1.738 } add_to_array = { VEL_TAI_wp = 8.244 } add_to_array = { VEL_TAI_wp = 1.738 } add_to_array = { VEL_TAI_wp = 1.961 }
+		add_to_array = { VEL_TAI_wp = 2.496 } add_to_array = { VEL_TAI_wp = 11.141 } add_to_array = { VEL_TAI_wp = 5.793 } add_to_array = { VEL_TAI_wp = 2.406 } add_to_array = { VEL_TAI_wp = 3.209 } add_to_array = { VEL_TAI_wp = 1.203 }
+		add_to_array = { VEL_TAI_wp = 2.406 } add_to_array = { VEL_TAI_wp = 8.378 } add_to_array = { VEL_TAI_wp = 12.344 } add_to_array = { VEL_TAI_wp = 3.877 } add_to_array = { VEL_TAI_wp = 2.05 } add_to_array = { VEL_TAI_wp = 1.515 }
+		add_to_array = { VEL_TAI_wp = 1.025 } add_to_array = { VEL_TAI_wp = 0.401 } add_to_array = { VEL_TAI_wp = 0.267 } add_to_array = { VEL_TAI_wp = 0.045 }
 		clear_array = VEL_TAI_order
 		add_to_array = { VEL_TAI_order = 2 } add_to_array = { VEL_TAI_order = 1 } add_to_array = { VEL_TAI_order = 16 } add_to_array = { VEL_TAI_order = 0 } add_to_array = { VEL_TAI_order = 17 } add_to_array = { VEL_TAI_order = 3 }
 		add_to_array = { VEL_TAI_order = 5 } add_to_array = { VEL_TAI_order = 18 } add_to_array = { VEL_TAI_order = 4 } add_to_array = { VEL_TAI_order = 9 } add_to_array = { VEL_TAI_order = 6 } add_to_array = { VEL_TAI_order = 7 }
@@ -247,6 +253,10 @@ VEL_TAI_init = {
 		resize_array = { array = VEL_TAI_key value = 0 size = 7 }
 		clear_array = VEL_TAI_run_nat
 		resize_array = { array = VEL_TAI_run_nat value = 0 size = 7 }
+		clear_array = VEL_TAI_bsw
+		resize_array = { array = VEL_TAI_bsw value = 0 size = 7 }
+		clear_array = VEL_TAI_tsw
+		resize_array = { array = VEL_TAI_tsw value = 0 size = 7 }
 		clear_array = VEL_TAI_selfr
 		resize_array = { array = VEL_TAI_selfr value = 1 size = 22 }
 		clear_array = VEL_TAI_lead
@@ -273,8 +283,81 @@ VEL_TAI_init = {
 	}
 }
 
+# 旧存档里的 sh / lean 是旧数据：第一次计票前重写，并补上新数组。新开局在 init 里已经写好并设了旗标。
+VEL_TAI_migrate = {
+	set_country_flag = VEL_TAI_data_v343
+	clear_array = VEL_TAI_sh
+	add_to_array = { VEL_TAI_sh = 0.3694 } add_to_array = { VEL_TAI_sh = 0.1494 } add_to_array = { VEL_TAI_sh = 0.0006 } add_to_array = { VEL_TAI_sh = 0.1831 } add_to_array = { VEL_TAI_sh = 0.0998 } add_to_array = { VEL_TAI_sh = 0.0424 }
+	add_to_array = { VEL_TAI_sh = 0.0116 } add_to_array = { VEL_TAI_sh = 0.1437 } add_to_array = { VEL_TAI_sh = 0.3357 } add_to_array = { VEL_TAI_sh = 0.2222 } add_to_array = { VEL_TAI_sh = 0.01 } add_to_array = { VEL_TAI_sh = 0.132 }
+	add_to_array = { VEL_TAI_sh = 0.0821 } add_to_array = { VEL_TAI_sh = 0.0378 } add_to_array = { VEL_TAI_sh = 0.0121 } add_to_array = { VEL_TAI_sh = 0.168 } add_to_array = { VEL_TAI_sh = 0.3364 } add_to_array = { VEL_TAI_sh = 0.1961 }
+	add_to_array = { VEL_TAI_sh = 0.0119 } add_to_array = { VEL_TAI_sh = 0.1094 } add_to_array = { VEL_TAI_sh = 0.0711 } add_to_array = { VEL_TAI_sh = 0.0606 } add_to_array = { VEL_TAI_sh = 0.0144 } add_to_array = { VEL_TAI_sh = 0.2001 }
+	add_to_array = { VEL_TAI_sh = 0.3022 } add_to_array = { VEL_TAI_sh = 0.2491 } add_to_array = { VEL_TAI_sh = 0.0269 } add_to_array = { VEL_TAI_sh = 0.1087 } add_to_array = { VEL_TAI_sh = 0.0775 } add_to_array = { VEL_TAI_sh = 0.0449 }
+	add_to_array = { VEL_TAI_sh = 0.0265 } add_to_array = { VEL_TAI_sh = 0.1644 } add_to_array = { VEL_TAI_sh = 0.3206 } add_to_array = { VEL_TAI_sh = 0.2462 } add_to_array = { VEL_TAI_sh = 0.015 } add_to_array = { VEL_TAI_sh = 0.1601 }
+	add_to_array = { VEL_TAI_sh = 0.0818 } add_to_array = { VEL_TAI_sh = 0.0376 } add_to_array = { VEL_TAI_sh = 0.006 } add_to_array = { VEL_TAI_sh = 0.1325 } add_to_array = { VEL_TAI_sh = 0.2562 } add_to_array = { VEL_TAI_sh = 0.1879 }
+	add_to_array = { VEL_TAI_sh = 0.0987 } add_to_array = { VEL_TAI_sh = 0.0958 } add_to_array = { VEL_TAI_sh = 0.0809 } add_to_array = { VEL_TAI_sh = 0.0511 } add_to_array = { VEL_TAI_sh = 0.0493 } add_to_array = { VEL_TAI_sh = 0.18 }
+	add_to_array = { VEL_TAI_sh = 0.2097 } add_to_array = { VEL_TAI_sh = 0.1452 } add_to_array = { VEL_TAI_sh = 0.2024 } add_to_array = { VEL_TAI_sh = 0.0682 } add_to_array = { VEL_TAI_sh = 0.0589 } add_to_array = { VEL_TAI_sh = 0.0518 }
+	add_to_array = { VEL_TAI_sh = 0.0333 } add_to_array = { VEL_TAI_sh = 0.2304 } add_to_array = { VEL_TAI_sh = 0.2873 } add_to_array = { VEL_TAI_sh = 0.2212 } add_to_array = { VEL_TAI_sh = 0.0514 } add_to_array = { VEL_TAI_sh = 0.1192 }
+	add_to_array = { VEL_TAI_sh = 0.0737 } add_to_array = { VEL_TAI_sh = 0.0358 } add_to_array = { VEL_TAI_sh = 0.0189 } add_to_array = { VEL_TAI_sh = 0.1926 } add_to_array = { VEL_TAI_sh = 0.2182 } add_to_array = { VEL_TAI_sh = 0.1636 }
+	add_to_array = { VEL_TAI_sh = 0.1963 } add_to_array = { VEL_TAI_sh = 0.0728 } add_to_array = { VEL_TAI_sh = 0.0606 } add_to_array = { VEL_TAI_sh = 0.0349 } add_to_array = { VEL_TAI_sh = 0.0068 } add_to_array = { VEL_TAI_sh = 0.2468 }
+	add_to_array = { VEL_TAI_sh = 0.1734 } add_to_array = { VEL_TAI_sh = 0.1037 } add_to_array = { VEL_TAI_sh = 0.2727 } add_to_array = { VEL_TAI_sh = 0.0579 } add_to_array = { VEL_TAI_sh = 0.0466 } add_to_array = { VEL_TAI_sh = 0.0471 }
+	add_to_array = { VEL_TAI_sh = 0.0454 } add_to_array = { VEL_TAI_sh = 0.2532 } add_to_array = { VEL_TAI_sh = 0.1654 } add_to_array = { VEL_TAI_sh = 0.1089 } add_to_array = { VEL_TAI_sh = 0.3298 } add_to_array = { VEL_TAI_sh = 0.0512 }
+	add_to_array = { VEL_TAI_sh = 0.0444 } add_to_array = { VEL_TAI_sh = 0.0371 } add_to_array = { VEL_TAI_sh = 0.0007 } add_to_array = { VEL_TAI_sh = 0.2623 } add_to_array = { VEL_TAI_sh = 0.3111 } add_to_array = { VEL_TAI_sh = 0.1474 }
+	add_to_array = { VEL_TAI_sh = 0.0605 } add_to_array = { VEL_TAI_sh = 0.1194 } add_to_array = { VEL_TAI_sh = 0.0717 } add_to_array = { VEL_TAI_sh = 0.0454 } add_to_array = { VEL_TAI_sh = 0.0007 } add_to_array = { VEL_TAI_sh = 0.2437 }
+	add_to_array = { VEL_TAI_sh = 0.1511 } add_to_array = { VEL_TAI_sh = 0.085 } add_to_array = { VEL_TAI_sh = 0.3552 } add_to_array = { VEL_TAI_sh = 0.0481 } add_to_array = { VEL_TAI_sh = 0.038 } add_to_array = { VEL_TAI_sh = 0.0373 }
+	add_to_array = { VEL_TAI_sh = 0.0218 } add_to_array = { VEL_TAI_sh = 0.2637 } add_to_array = { VEL_TAI_sh = 0.2518 } add_to_array = { VEL_TAI_sh = 0.1796 } add_to_array = { VEL_TAI_sh = 0.1337 } add_to_array = { VEL_TAI_sh = 0.096 }
+	add_to_array = { VEL_TAI_sh = 0.0638 } add_to_array = { VEL_TAI_sh = 0.0333 } add_to_array = { VEL_TAI_sh = 0.0065 } add_to_array = { VEL_TAI_sh = 0.2354 } add_to_array = { VEL_TAI_sh = 0.2764 } add_to_array = { VEL_TAI_sh = 0.2353 }
+	add_to_array = { VEL_TAI_sh = 0.0511 } add_to_array = { VEL_TAI_sh = 0.1027 } add_to_array = { VEL_TAI_sh = 0.0674 } add_to_array = { VEL_TAI_sh = 0.039 } add_to_array = { VEL_TAI_sh = 0.0188 } add_to_array = { VEL_TAI_sh = 0.2094 }
+	add_to_array = { VEL_TAI_sh = 0.1653 } add_to_array = { VEL_TAI_sh = 0.0989 } add_to_array = { VEL_TAI_sh = 0.2817 } add_to_array = { VEL_TAI_sh = 0.0552 } add_to_array = { VEL_TAI_sh = 0.0444 } add_to_array = { VEL_TAI_sh = 0.041 }
+	add_to_array = { VEL_TAI_sh = 0.0721 } add_to_array = { VEL_TAI_sh = 0.2414 } add_to_array = { VEL_TAI_sh = 0.2167 } add_to_array = { VEL_TAI_sh = 0.1355 } add_to_array = { VEL_TAI_sh = 0.1975 } add_to_array = { VEL_TAI_sh = 0.0764 }
+	add_to_array = { VEL_TAI_sh = 0.0571 } add_to_array = { VEL_TAI_sh = 0.0459 } add_to_array = { VEL_TAI_sh = 0.0242 } add_to_array = { VEL_TAI_sh = 0.2468 } add_to_array = { VEL_TAI_sh = 0.1811 } add_to_array = { VEL_TAI_sh = 0.0941 }
+	add_to_array = { VEL_TAI_sh = 0.1141 } add_to_array = { VEL_TAI_sh = 0.0609 } add_to_array = { VEL_TAI_sh = 0.0428 } add_to_array = { VEL_TAI_sh = 0.0509 } add_to_array = { VEL_TAI_sh = 0.2434 } add_to_array = { VEL_TAI_sh = 0.2127 }
+	add_to_array = { VEL_TAI_sh = 0.1397 } add_to_array = { VEL_TAI_sh = 0.0701 } add_to_array = { VEL_TAI_sh = 0.1424 } add_to_array = { VEL_TAI_sh = 0.0444 } add_to_array = { VEL_TAI_sh = 0.0351 } add_to_array = { VEL_TAI_sh = 0.0418 }
+	add_to_array = { VEL_TAI_sh = 0.3019 } add_to_array = { VEL_TAI_sh = 0.2245 } add_to_array = { VEL_TAI_sh = 0.2189 } add_to_array = { VEL_TAI_sh = 0.0837 } add_to_array = { VEL_TAI_sh = 0.1052 } add_to_array = { VEL_TAI_sh = 0.0639 }
+	add_to_array = { VEL_TAI_sh = 0.0675 } add_to_array = { VEL_TAI_sh = 0.08 } add_to_array = { VEL_TAI_sh = 0.0008 } add_to_array = { VEL_TAI_sh = 0.38 } add_to_array = { VEL_TAI_sh = 0.2243 } add_to_array = { VEL_TAI_sh = 0.0876 }
+	add_to_array = { VEL_TAI_sh = 0.0792 } add_to_array = { VEL_TAI_sh = 0.0632 } add_to_array = { VEL_TAI_sh = 0.0939 } add_to_array = { VEL_TAI_sh = 0.1317 } add_to_array = { VEL_TAI_sh = 0.001 } add_to_array = { VEL_TAI_sh = 0.3191 }
+	add_to_array = { VEL_TAI_sh = 0.219 } add_to_array = { VEL_TAI_sh = 0.0858 } add_to_array = { VEL_TAI_sh = 0.048 } add_to_array = { VEL_TAI_sh = 0.0619 } add_to_array = { VEL_TAI_sh = 0.0924 } add_to_array = { VEL_TAI_sh = 0.172 }
+	add_to_array = { VEL_TAI_sh = 0.0012 } add_to_array = { VEL_TAI_sh = 0.3198 }
+	clear_array = VEL_TAI_lean
+	add_to_array = { VEL_TAI_lean = 0.08 } add_to_array = { VEL_TAI_lean = -0.03 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0.01 } add_to_array = { VEL_TAI_lean = 0.01 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.06 } add_to_array = { VEL_TAI_lean = 0.0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.04 } add_to_array = { VEL_TAI_lean = 0.0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.05 } add_to_array = { VEL_TAI_lean = 0.0 }
+	add_to_array = { VEL_TAI_lean = 0.03 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.08 }
+	add_to_array = { VEL_TAI_lean = -0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.04 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0.08 } add_to_array = { VEL_TAI_lean = -0.03 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0.0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.01 } add_to_array = { VEL_TAI_lean = 0.03 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.03 } add_to_array = { VEL_TAI_lean = 0.0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.03 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.04 } add_to_array = { VEL_TAI_lean = 0.07 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.01 }
+	add_to_array = { VEL_TAI_lean = 0.06 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = -0.05 } add_to_array = { VEL_TAI_lean = 0.09 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.06 } add_to_array = { VEL_TAI_lean = 0.1 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.03 } add_to_array = { VEL_TAI_lean = 0.08 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.01 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.03 } add_to_array = { VEL_TAI_lean = 0.07 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.03 } add_to_array = { VEL_TAI_lean = 0.07 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.08 }
+	add_to_array = { VEL_TAI_lean = -0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0.06 } add_to_array = { VEL_TAI_lean = -0.01 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = -0.01 } add_to_array = { VEL_TAI_lean = 0.04 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.1 } add_to_array = { VEL_TAI_lean = -0.06 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0.03 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.12 } add_to_array = { VEL_TAI_lean = -0.07 } add_to_array = { VEL_TAI_lean = 0 }
+	add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0.02 } add_to_array = { VEL_TAI_lean = 0 } add_to_array = { VEL_TAI_lean = 0 }
+	clear_array = VEL_TAI_wp
+	add_to_array = { VEL_TAI_wp = 11.72 } add_to_array = { VEL_TAI_wp = 16.043 } add_to_array = { VEL_TAI_wp = 1.738 } add_to_array = { VEL_TAI_wp = 8.244 } add_to_array = { VEL_TAI_wp = 1.738 } add_to_array = { VEL_TAI_wp = 1.961 }
+	add_to_array = { VEL_TAI_wp = 2.496 } add_to_array = { VEL_TAI_wp = 11.141 } add_to_array = { VEL_TAI_wp = 5.793 } add_to_array = { VEL_TAI_wp = 2.406 } add_to_array = { VEL_TAI_wp = 3.209 } add_to_array = { VEL_TAI_wp = 1.203 }
+	add_to_array = { VEL_TAI_wp = 2.406 } add_to_array = { VEL_TAI_wp = 8.378 } add_to_array = { VEL_TAI_wp = 12.344 } add_to_array = { VEL_TAI_wp = 3.877 } add_to_array = { VEL_TAI_wp = 2.05 } add_to_array = { VEL_TAI_wp = 1.515 }
+	add_to_array = { VEL_TAI_wp = 1.025 } add_to_array = { VEL_TAI_wp = 0.401 } add_to_array = { VEL_TAI_wp = 0.267 } add_to_array = { VEL_TAI_wp = 0.045 }
+	clear_array = VEL_TAI_bsw
+	resize_array = { array = VEL_TAI_bsw value = 0 size = 7 }
+	clear_array = VEL_TAI_tsw
+	resize_array = { array = VEL_TAI_tsw value = 0 size = 7 }
+}
+
 # 输入：temp vel_noise（1 = 开票带随机，0 = 民调）；temp vel_gov = 执政党在本系统里的序号(0..P-1)。输出：res / win / best / sr / nat / seat 数组。
 VEL_TAI_compute = {
+	if = { limit = { NOT = { has_country_flag = VEL_TAI_data_v343 } } VEL_TAI_migrate = yes }
 	set_temp_variable = { vel_gov = VEL_TAI_gov }
 	set_temp_variable = { vel_salsum = 0 }
 	for_loop_effect = { start = 0 end = 6 value = vi add_to_temp_variable = { vel_salsum = VEL_TAI_sal^vi } }
@@ -315,7 +398,8 @@ VEL_TAI_compute = {
 			multiply_temp_variable = { vel_sc = 0.05 }
 			add_to_temp_variable = { vel_sc = VEL_TAI_cand^vp }
 			if = { limit = { check_variable = { vel_sc < 0.02 } } set_temp_variable = { vel_sc = 0.02 } }
-			multiply_temp_variable = { vel_sc = VEL_TAI_f^vp }
+			multiply_temp_variable = { vel_sc = vel_sc }
+			if = { limit = { NOT = { check_variable = { VEL_TAI_f^vp > 0 } } } set_temp_variable = { vel_sc = 0 } }
 			add_to_temp_variable = { vel_sum = vel_sc }
 			set_variable = { VEL_TAI_N^vel_ia = vel_sc }
 		}
@@ -326,6 +410,7 @@ VEL_TAI_compute = {
 		}
 	}
 	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_TAI_nat^vp = 0 } set_variable = { VEL_TAI_seat^vp = 0 } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_TAI_bsw^vp = 0 } }
 	for_loop_effect = {
 		start = 0 end = 22 value = vr
 		for_loop_effect = {
@@ -352,6 +437,39 @@ VEL_TAI_compute = {
 			set_temp_variable = { vel_v = 1 }
 			add_to_temp_variable = { vel_v = VEL_TAI_lean^vel_ir }
 			multiply_temp_variable = { vel_v = VEL_TAI_res^vel_ir }
+			set_variable = { VEL_TAI_res^vel_ir = vel_v }
+			add_to_temp_variable = { vel_tot = vel_v }
+		}
+		for_loop_effect = {
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
+			divide_variable = { VEL_TAI_res^vel_ir = vel_tot }
+			set_temp_variable = { vel_x = VEL_TAI_res^vel_ir }
+			multiply_temp_variable = { vel_x = VEL_TAI_wp^vr }
+			add_to_variable = { VEL_TAI_bsw^vp = vel_x }
+		}
+	}
+	for_loop_effect = { start = 0 end = 7 value = vp divide_variable = { VEL_TAI_bsw^vp = 100 } }
+	set_temp_variable = { vel_fsum = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vp add_to_temp_variable = { vel_fsum = VEL_TAI_f^vp } }
+	for_loop_effect = {
+		start = 0 end = 7 value = vp
+		set_variable = { VEL_TAI_tsw^vp = VEL_TAI_f^vp }
+		divide_variable = { VEL_TAI_tsw^vp = vel_fsum }
+	}
+	for_loop_effect = {
+		start = 0 end = 22 value = vr
+		set_temp_variable = { vel_tot = 0 }
+		for_loop_effect = {
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
+			set_temp_variable = { vel_v = VEL_TAI_res^vel_ir }
+			subtract_from_temp_variable = { vel_v = VEL_TAI_bsw^vp }
+			multiply_temp_variable = { vel_v = 5.5 }
+			add_to_temp_variable = { vel_v = VEL_TAI_tsw^vp }
+			set_temp_variable = { vel_fl = VEL_TAI_tsw^vp }
+			multiply_temp_variable = { vel_fl = 0.15 }
+			if = { limit = { check_variable = { vel_v < vel_fl } } set_temp_variable = { vel_v = vel_fl } }
 			if = {
 				limit = { check_variable = { vp = vel_gov } }
 				set_temp_variable = { vel_c = VEL_TAI_camp^vr }
