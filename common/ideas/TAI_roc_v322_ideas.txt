@@ -22,7 +22,7 @@ ideas = {
 		SYRL_plan_idea = { picture = roc30_sov_five_year_plan_d7f62d4e modifier = { industrial_capacity_factory = 0.05 stability_factor = 0.02 } }
 		SYRL_coop_idea = { picture = roc30_arab_workers_union_1cbdc9ad modifier = { stability_factor = 0.04 consumer_goods_factor = -0.03 } }
 		SYRL_welfare_idea = { picture = roc30_syrian_health_care_reform_017c842a modifier = { stability_factor = 0.05 research_speed_factor = 0.03 } }
-		SYRL_npf_idea = { picture = roc30_sov_popular_front_of_democra_10a7bf97 modifier = { political_power_gain = 0.10 stability_factor = 0.02 } }
+		SYRL_npf_idea = { picture = roc30_sov_popular_front_of_democra_10a7bf97 modifier = { political_power_gain = 0.10 stability_factor = 0.02 communism_drift = 0.02 } }
 		SYRL_union_idea = { picture = roc30_mla_trade_union_council_d501480f modifier = { stability_factor = 0.03 consumer_goods_factor = -0.02 } }
 		SYRL_civil_idea = { picture = roc30_bbr_citizen_republic_idea_4f127e74 modifier = { stability_factor = 0.06 political_power_gain = 0.03 } }
 		SYRB_security_state_idea = { picture = roc30_arab_intelligence_agency_cde932ba modifier = { stability_factor = 0.05 political_power_gain = -0.05 } }

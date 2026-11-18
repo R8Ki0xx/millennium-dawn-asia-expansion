@@ -1,0 +1,100 @@
+# MD ROC Return v3.42 —— 叙利亚“内战与反恐”面板的动态文字（由 _tools/v342/gen_syr_gui.py 生成）
+defined_text = {
+	name = SYR_t_stage_name
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 0 } } localization_key = SYR_t_stage_0 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 1 } } localization_key = SYR_t_stage_1 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 2 } } localization_key = SYR_t_stage_2 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 3 } } localization_key = SYR_t_stage_3 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 4 } } localization_key = SYR_t_stage_4 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 5 } } localization_key = SYR_t_stage_5 }
+	text = { localization_key = SYR_t_stage_0 }
+}
+defined_text = {
+	name = SYR_t_stage_desc
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 0 } } localization_key = SYR_t_stagedesc_0 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 1 } } localization_key = SYR_t_stagedesc_1 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 2 } } localization_key = SYR_t_stagedesc_2 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 3 } } localization_key = SYR_t_stagedesc_3 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 4 } } localization_key = SYR_t_stagedesc_4 }
+	text = { trigger = { check_variable = { global.SYR_terror_stage = 5 } } localization_key = SYR_t_stagedesc_5 }
+	text = { localization_key = SYR_t_stagedesc_0 }
+}
+defined_text = {
+	name = SYR_t_deta
+	text = { trigger = { has_global_flag = SYR_isis_defeated } localization_key = SYR_t_eta_defeated }
+	text = { trigger = { has_global_flag = SYR_isis_synced } localization_key = SYR_t_eta_erupted }
+	text = { trigger = { check_variable = { global.SYR_terror_eta < 0 } } localization_key = SYR_t_eta_never }
+	text = { localization_key = SYR_t_eta_n }
+}
+defined_text = {
+	name = SYR_t_dfv_base
+	text = { trigger = { check_variable = { global.SYR_terror_f_base > 0.01 } } localization_key = SYR_t_fvp_base }
+	text = { trigger = { check_variable = { global.SYR_terror_f_base < -0.01 } } localization_key = SYR_t_fvn_base }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_split
+	text = { trigger = { check_variable = { global.SYR_terror_f_split > 0.01 } } localization_key = SYR_t_fvp_split }
+	text = { trigger = { check_variable = { global.SYR_terror_f_split < -0.01 } } localization_key = SYR_t_fvn_split }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_nus_land
+	text = { trigger = { check_variable = { global.SYR_terror_f_nus_land > 0.01 } } localization_key = SYR_t_fvp_nus_land }
+	text = { trigger = { check_variable = { global.SYR_terror_f_nus_land < -0.01 } } localization_key = SYR_t_fvn_nus_land }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_iraq
+	text = { trigger = { check_variable = { global.SYR_terror_f_iraq > 0.01 } } localization_key = SYR_t_fvp_iraq }
+	text = { trigger = { check_variable = { global.SYR_terror_f_iraq < -0.01 } } localization_key = SYR_t_fvn_iraq }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_infight
+	text = { trigger = { check_variable = { global.SYR_terror_f_infight > 0.01 } } localization_key = SYR_t_fvp_infight }
+	text = { trigger = { check_variable = { global.SYR_terror_f_infight < -0.01 } } localization_key = SYR_t_fvn_infight }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_gov
+	text = { trigger = { check_variable = { global.SYR_terror_f_gov > 0.01 } } localization_key = SYR_t_fvp_gov }
+	text = { trigger = { check_variable = { global.SYR_terror_f_gov < -0.01 } } localization_key = SYR_t_fvn_gov }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_world
+	text = { trigger = { check_variable = { global.SYR_terror_f_world > 0.01 } } localization_key = SYR_t_fvp_world }
+	text = { trigger = { check_variable = { global.SYR_terror_f_world < -0.01 } } localization_key = SYR_t_fvn_world }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dfv_player
+	text = { trigger = { check_variable = { global.SYR_terror_f_player > 0.01 } } localization_key = SYR_t_fvp_player }
+	text = { trigger = { check_variable = { global.SYR_terror_f_player < -0.01 } } localization_key = SYR_t_fvn_player }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_dsum
+	text = { trigger = { check_variable = { global.SYR_terror_delta > 0.01 } } localization_key = SYR_t_sump }
+	text = { trigger = { check_variable = { global.SYR_terror_delta < -0.01 } } localization_key = SYR_t_sumn }
+	text = { localization_key = SYR_t_fv0 }
+}
+defined_text = {
+	name = SYR_t_drow_fsa
+	text = { trigger = { country_exists = FSA check_variable = { global.SYR_cs_w_fsa = 1 } } localization_key = SYR_t_row_fsa_war }
+	text = { trigger = { country_exists = FSA } localization_key = SYR_t_row_fsa_peace }
+	text = { localization_key = SYR_t_row_fsa_none }
+}
+defined_text = {
+	name = SYR_t_drow_nus
+	text = { trigger = { country_exists = NUS check_variable = { global.SYR_cs_w_nus = 1 } } localization_key = SYR_t_row_nus_war }
+	text = { trigger = { country_exists = NUS } localization_key = SYR_t_row_nus_peace }
+	text = { localization_key = SYR_t_row_nus_none }
+}
+defined_text = {
+	name = SYR_t_drow_isi
+	text = { trigger = { country_exists = ISI check_variable = { global.SYR_cs_w_isi = 1 } } localization_key = SYR_t_row_isi_war }
+	text = { trigger = { country_exists = ISI } localization_key = SYR_t_row_isi_peace }
+	text = { localization_key = SYR_t_row_isi_none }
+}

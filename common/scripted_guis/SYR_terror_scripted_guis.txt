@@ -1,0 +1,18 @@
+# MD ROC Return v3.42 —— 叙利亚“内战与反恐”面板的逻辑（由 _tools/v342/gen_syr_gui.py 生成）
+scripted_gui = {
+	SYR_terror_GUI = {
+		context_type = decision_category
+		window_name = "SYR_terror_window"
+		visible = { has_variable = SYR_tp_idx }
+		ai_enabled = { always = no }
+		properties = {
+			syr_t_gauge = { frame = SYR_tp_idx }
+			syr_t_seg_1 = { frame = SYR_tp_c1 }
+			syr_t_seg_2 = { frame = SYR_tp_c2 }
+			syr_t_seg_3 = { frame = SYR_tp_c3 }
+			syr_t_seg_4 = { frame = SYR_tp_c4 }
+			syr_t_seg_5 = { frame = SYR_tp_c5 }
+			syr_t_seg_6 = { frame = SYR_tp_c6 }
+		}
+	}
+}

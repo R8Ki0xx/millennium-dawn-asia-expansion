@@ -6,11 +6,14 @@ scripted_gui = {
 		visible = { has_country_flag = VEL_TAI_on }
 		ai_enabled = { always = no }
 		properties = {
-			vel_tai_bar_1 = { frame = VEL_TAI_bar_1 }
-			vel_tai_bar_2 = { frame = VEL_TAI_bar_2 }
-			vel_tai_bar_3 = { frame = VEL_TAI_bar_3 }
-			vel_tai_bar_4 = { frame = VEL_TAI_bar_4 }
-			vel_tai_bar_5 = { frame = VEL_TAI_bar_5 }
+			vel_tai_bar_1 = { frame = VEL_TAI_fb_b_1 }
+			vel_tai_sw_1 = { frame = VEL_TAI_fb_e_1 }
+			vel_tai_bar_2 = { frame = VEL_TAI_fb_b_2 }
+			vel_tai_sw_2 = { frame = VEL_TAI_fb_e_2 }
+			vel_tai_bar_3 = { frame = VEL_TAI_fb_b_3 }
+			vel_tai_sw_3 = { frame = VEL_TAI_fb_e_3 }
+			vel_tai_bar_4 = { frame = VEL_TAI_fb_b_4 }
+			vel_tai_sw_4 = { frame = VEL_TAI_fb_e_4 }
 		}
 		effects = {
 			vel_tai_open_click = { if = { limit = { has_country_flag = VEL_TAI_open } clr_country_flag = VEL_TAI_open } else = { set_country_flag = VEL_TAI_open } }
@@ -96,16 +99,60 @@ scripted_gui = {
 			vb_tai_i_21 = { frame = VEL_TAI_frame^21 }
 			vb_tai_o_21 = { frame = VEL_TAI_selfr^21 }
 			vb_tai_b_21 = { frame = VEL_TAI_frame^21 }
-			vb_tai_sc_1 = { frame = VEL_TAI_bar_1 }
 			vb_tai_sbar_1 = { frame = VEL_TAI_sb_1 }
-			vb_tai_sc_2 = { frame = VEL_TAI_bar_2 }
+			vb_tai_sw_1 = { frame = VEL_TAI_ef_1 }
 			vb_tai_sbar_2 = { frame = VEL_TAI_sb_2 }
-			vb_tai_sc_3 = { frame = VEL_TAI_bar_3 }
+			vb_tai_sw_2 = { frame = VEL_TAI_ef_2 }
 			vb_tai_sbar_3 = { frame = VEL_TAI_sb_3 }
-			vb_tai_sc_4 = { frame = VEL_TAI_bar_4 }
+			vb_tai_sw_3 = { frame = VEL_TAI_ef_3 }
 			vb_tai_sbar_4 = { frame = VEL_TAI_sb_4 }
-			vb_tai_sc_5 = { frame = VEL_TAI_bar_5 }
+			vb_tai_sw_4 = { frame = VEL_TAI_ef_4 }
 			vb_tai_sbar_5 = { frame = VEL_TAI_sb_5 }
+			vb_tai_sw_5 = { frame = VEL_TAI_ef_5 }
+			vb_tai_sbar_6 = { frame = VEL_TAI_sb_6 }
+			vb_tai_sw_6 = { frame = VEL_TAI_ef_6 }
+			vb_tai_sbar_7 = { frame = VEL_TAI_sb_7 }
+			vb_tai_sw_7 = { frame = VEL_TAI_ef_7 }
+			vb_tai_card_1 = { frame = VEL_TAI_fb_cf_1 }
+			vb_tai_ldr_1 = { frame = VEL_TAI_fb_g_1 }
+			vb_tai_emb_1 = { frame = VEL_TAI_fb_e_1 }
+			vb_tai_fbl_1_1 = { frame = VEL_TAI_fbv_1_1 }
+			vb_tai_fbl_1_2 = { frame = VEL_TAI_fbv_1_2 }
+			vb_tai_fbl_1_3 = { frame = VEL_TAI_fbv_1_3 }
+			vb_tai_fbl_1_4 = { frame = VEL_TAI_fbv_1_4 }
+			vb_tai_fbl_1_5 = { frame = VEL_TAI_fbv_1_5 }
+			vb_tai_fbl_1_6 = { frame = VEL_TAI_fbv_1_6 }
+			vb_tai_fbl_1_7 = { frame = VEL_TAI_fbv_1_7 }
+			vb_tai_card_2 = { frame = VEL_TAI_fb_cf_2 }
+			vb_tai_ldr_2 = { frame = VEL_TAI_fb_g_2 }
+			vb_tai_emb_2 = { frame = VEL_TAI_fb_e_2 }
+			vb_tai_fbl_2_1 = { frame = VEL_TAI_fbv_2_1 }
+			vb_tai_fbl_2_2 = { frame = VEL_TAI_fbv_2_2 }
+			vb_tai_fbl_2_3 = { frame = VEL_TAI_fbv_2_3 }
+			vb_tai_fbl_2_4 = { frame = VEL_TAI_fbv_2_4 }
+			vb_tai_fbl_2_5 = { frame = VEL_TAI_fbv_2_5 }
+			vb_tai_fbl_2_6 = { frame = VEL_TAI_fbv_2_6 }
+			vb_tai_fbl_2_7 = { frame = VEL_TAI_fbv_2_7 }
+			vb_tai_card_3 = { frame = VEL_TAI_fb_cf_3 }
+			vb_tai_ldr_3 = { frame = VEL_TAI_fb_g_3 }
+			vb_tai_emb_3 = { frame = VEL_TAI_fb_e_3 }
+			vb_tai_fbl_3_1 = { frame = VEL_TAI_fbv_3_1 }
+			vb_tai_fbl_3_2 = { frame = VEL_TAI_fbv_3_2 }
+			vb_tai_fbl_3_3 = { frame = VEL_TAI_fbv_3_3 }
+			vb_tai_fbl_3_4 = { frame = VEL_TAI_fbv_3_4 }
+			vb_tai_fbl_3_5 = { frame = VEL_TAI_fbv_3_5 }
+			vb_tai_fbl_3_6 = { frame = VEL_TAI_fbv_3_6 }
+			vb_tai_fbl_3_7 = { frame = VEL_TAI_fbv_3_7 }
+			vb_tai_card_4 = { frame = VEL_TAI_fb_cf_4 }
+			vb_tai_ldr_4 = { frame = VEL_TAI_fb_g_4 }
+			vb_tai_emb_4 = { frame = VEL_TAI_fb_e_4 }
+			vb_tai_fbl_4_1 = { frame = VEL_TAI_fbv_4_1 }
+			vb_tai_fbl_4_2 = { frame = VEL_TAI_fbv_4_2 }
+			vb_tai_fbl_4_3 = { frame = VEL_TAI_fbv_4_3 }
+			vb_tai_fbl_4_4 = { frame = VEL_TAI_fbv_4_4 }
+			vb_tai_fbl_4_5 = { frame = VEL_TAI_fbv_4_5 }
+			vb_tai_fbl_4_6 = { frame = VEL_TAI_fbv_4_6 }
+			vb_tai_fbl_4_7 = { frame = VEL_TAI_fbv_4_7 }
 			vb_tai_ls_0 = { frame = VEL_TAI_lead^0 }
 			vb_tai_ls_1 = { frame = VEL_TAI_lead^1 }
 			vb_tai_ls_2 = { frame = VEL_TAI_lead^2 }

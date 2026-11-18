@@ -1,0 +1,148 @@
+# MD ROC Return v3.42 —— “回归复兴党初心”线的国家精神（由 _tools/v342/gen_syrl.py 生成）
+ideas = {
+	country = {
+		SYRL_baath_ideals_3 = {
+			picture = roc30_baath_party_e00b3004
+			modifier = {
+				stability_factor = 0.08
+				political_power_gain = 0.12
+				corruption_cost_factor = -0.2
+				research_speed_factor = 0.03
+			}
+		}
+		SYRL_collective_idea = {
+			picture = roc30_syr_mejd_council_b02dd938
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+			}
+		}
+		SYRL_army_prof_idea = {
+			picture = roc30_syr_alawite_army_05b11154
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.04
+				training_time_factor = -0.05
+			}
+		}
+		SYRL_arab_socialism_idea = {
+			picture = roc30_arab_workers_union_1cbdc9ad
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.03
+			}
+		}
+		SYRL_party_democracy_idea = {
+			picture = roc30_baath_party_e00b3004
+			modifier = {
+				political_power_gain = 0.06
+				stability_factor = 0.03
+			}
+		}
+		SYRL_press_idea = {
+			picture = roc30_syr_freedom_media_icon_d5f7587a
+			modifier = {
+				political_power_gain = 0.04
+				stability_factor = 0.01
+			}
+		}
+		SYRL_arab_unity_idea = {
+			picture = roc30_syr_rifat_egy_friendship_ded347e2
+			modifier = {
+				trade_opinion_factor = 0.1
+				stability_factor = 0.02
+				political_power_gain = 0.04
+			}
+		}
+		SYRL_nonaligned_idea = {
+			picture = roc30_services_syria_cb_idea_fce8e762
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+		SYRL_people_army_idea = {
+			picture = roc30_syr_army_of_lions_idea_aef8d666
+			modifier = {
+				army_morale_factor = 0.06
+				conscription_factor = 0.02
+				war_support_factor = 0.03
+			}
+		}
+		SYRL_women_idea = {
+			picture = roc30_syrian_health_care_reform_017c842a
+			modifier = {
+				industrial_capacity_factory = 0.03
+				conscription_factor = 0.02
+				stability_factor = -0.01
+			}
+		}
+		SYRL_secular_edu_idea = {
+			picture = roc30_services_syria_cb_idea_fce8e762
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.02
+			}
+		}
+		SYRL_banks_idea = {
+			picture = roc30_ger_socialist_market_economy_38852e22
+			modifier = {
+				tax_gain_multiplier_modifier = 0.06
+				stability_factor = 0.02
+			}
+		}
+		SYRL_price_idea = {
+			picture = roc30_syrian_health_care_reform_017c842a
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+		SYRL_housing_idea = {
+			picture = roc30_bbr_citizen_republic_idea_4f127e74
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = -0.03
+			}
+		}
+		SYRL_tax_idea = {
+			picture = roc30_services_syria_cb_idea_fce8e762
+			modifier = {
+				tax_gain_multiplier_modifier = 0.07
+				stability_factor = 0.01
+			}
+		}
+		SYRL_oil_idea = {
+			picture = roc30_arab_workers_union_1cbdc9ad
+			modifier = {
+				tax_gain_multiplier_modifier = 0.08
+				stability_factor = 0.02
+				trade_opinion_factor = -0.05
+			}
+		}
+		SYRL_charter_idea = {
+			picture = roc30_bbr_citizen_republic_idea_4f127e74
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.06
+			}
+		}
+		SYRL_total_defense_idea = {
+			picture = roc30_syr_army_of_lions_idea_aef8d666
+			modifier = {
+				army_defence_factor = 0.08
+				conscription_factor = 0.02
+				army_org_factor = 0.03
+			}
+		}
+		SYRL_south_idea = {
+			picture = roc30_arab_workers_union_1cbdc9ad
+			modifier = {
+				tax_gain_multiplier_modifier = 0.04
+				trade_opinion_factor = 0.08
+			}
+		}
+	}
+}

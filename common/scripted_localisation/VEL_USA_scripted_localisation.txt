@@ -79,10 +79,575 @@ defined_text = {
 
 # MD ROC Return v3.36 —— USA 选举界面的动态文字（由 gen_vel_gui3.py 生成）
 defined_text = {
+	name = VEL_USA_fn_1
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 2 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 3 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 4 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 5 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 6 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 7 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 8 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 9 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 10 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 11 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 12 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 13 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 14 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 15 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 16 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 17 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 18 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 19 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 20 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 21 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 22 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 23 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 24 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ldnm_1
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 2 } } localization_key = VEL_USA_ln_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 3 } } localization_key = VEL_USA_ln_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 4 } } localization_key = VEL_USA_ln_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 5 } } localization_key = VEL_USA_ln_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 6 } } localization_key = VEL_USA_ln_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 7 } } localization_key = VEL_USA_ln_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 8 } } localization_key = VEL_USA_ln_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 9 } } localization_key = VEL_USA_ln_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 10 } } localization_key = VEL_USA_ln_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 11 } } localization_key = VEL_USA_ln_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 12 } } localization_key = VEL_USA_ln_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 13 } } localization_key = VEL_USA_ln_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 14 } } localization_key = VEL_USA_ln_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 15 } } localization_key = VEL_USA_ln_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 16 } } localization_key = VEL_USA_ln_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 17 } } localization_key = VEL_USA_ln_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 18 } } localization_key = VEL_USA_ln_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 19 } } localization_key = VEL_USA_ln_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 20 } } localization_key = VEL_USA_ln_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 21 } } localization_key = VEL_USA_ln_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 22 } } localization_key = VEL_USA_ln_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 23 } } localization_key = VEL_USA_ln_23 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 24 } } localization_key = VEL_USA_ln_24 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 25 } } localization_key = VEL_USA_ln_25 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 26 } } localization_key = VEL_USA_ln_26 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 27 } } localization_key = VEL_USA_ln_27 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 28 } } localization_key = VEL_USA_ln_28 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 29 } } localization_key = VEL_USA_ln_29 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 30 } } localization_key = VEL_USA_ln_30 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 31 } } localization_key = VEL_USA_ln_31 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 32 } } localization_key = VEL_USA_ln_32 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 33 } } localization_key = VEL_USA_ln_33 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 34 } } localization_key = VEL_USA_ln_34 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 35 } } localization_key = VEL_USA_ln_35 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 36 } } localization_key = VEL_USA_ln_36 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 37 } } localization_key = VEL_USA_ln_37 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 38 } } localization_key = VEL_USA_ln_38 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 39 } } localization_key = VEL_USA_ln_39 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 40 } } localization_key = VEL_USA_ln_40 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 41 } } localization_key = VEL_USA_ln_41 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 42 } } localization_key = VEL_USA_ln_42 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 43 } } localization_key = VEL_USA_ln_43 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_1 = 44 } } localization_key = VEL_USA_ln_44 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ft_1
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 2 } } localization_key = VEL_USA_tg_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 3 } } localization_key = VEL_USA_tg_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 4 } } localization_key = VEL_USA_tg_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 5 } } localization_key = VEL_USA_tg_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 6 } } localization_key = VEL_USA_tg_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 7 } } localization_key = VEL_USA_tg_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 8 } } localization_key = VEL_USA_tg_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 9 } } localization_key = VEL_USA_tg_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 10 } } localization_key = VEL_USA_tg_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 11 } } localization_key = VEL_USA_tg_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 12 } } localization_key = VEL_USA_tg_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 13 } } localization_key = VEL_USA_tg_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 14 } } localization_key = VEL_USA_tg_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 15 } } localization_key = VEL_USA_tg_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 16 } } localization_key = VEL_USA_tg_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 17 } } localization_key = VEL_USA_tg_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 18 } } localization_key = VEL_USA_tg_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 19 } } localization_key = VEL_USA_tg_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 20 } } localization_key = VEL_USA_tg_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 21 } } localization_key = VEL_USA_tg_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 22 } } localization_key = VEL_USA_tg_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 23 } } localization_key = VEL_USA_tg_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_1 = 24 } } localization_key = VEL_USA_tg_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ftr_1
+	text = { trigger = { check_variable = { VEL_USA_fb_t_1 > 0.3 } } localization_key = VEL_USA_tr_up_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_t_1 < -0.3 } } localization_key = VEL_USA_tr_dn_1 }
+	text = { localization_key = VEL_USA_tr_eq }
+}
+defined_text = {
+	name = VEL_USA_fn_2
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 2 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 3 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 4 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 5 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 6 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 7 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 8 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 9 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 10 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 11 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 12 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 13 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 14 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 15 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 16 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 17 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 18 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 19 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 20 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 21 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 22 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 23 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 24 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ldnm_2
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 2 } } localization_key = VEL_USA_ln_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 3 } } localization_key = VEL_USA_ln_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 4 } } localization_key = VEL_USA_ln_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 5 } } localization_key = VEL_USA_ln_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 6 } } localization_key = VEL_USA_ln_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 7 } } localization_key = VEL_USA_ln_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 8 } } localization_key = VEL_USA_ln_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 9 } } localization_key = VEL_USA_ln_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 10 } } localization_key = VEL_USA_ln_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 11 } } localization_key = VEL_USA_ln_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 12 } } localization_key = VEL_USA_ln_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 13 } } localization_key = VEL_USA_ln_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 14 } } localization_key = VEL_USA_ln_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 15 } } localization_key = VEL_USA_ln_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 16 } } localization_key = VEL_USA_ln_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 17 } } localization_key = VEL_USA_ln_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 18 } } localization_key = VEL_USA_ln_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 19 } } localization_key = VEL_USA_ln_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 20 } } localization_key = VEL_USA_ln_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 21 } } localization_key = VEL_USA_ln_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 22 } } localization_key = VEL_USA_ln_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 23 } } localization_key = VEL_USA_ln_23 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 24 } } localization_key = VEL_USA_ln_24 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 25 } } localization_key = VEL_USA_ln_25 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 26 } } localization_key = VEL_USA_ln_26 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 27 } } localization_key = VEL_USA_ln_27 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 28 } } localization_key = VEL_USA_ln_28 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 29 } } localization_key = VEL_USA_ln_29 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 30 } } localization_key = VEL_USA_ln_30 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 31 } } localization_key = VEL_USA_ln_31 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 32 } } localization_key = VEL_USA_ln_32 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 33 } } localization_key = VEL_USA_ln_33 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 34 } } localization_key = VEL_USA_ln_34 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 35 } } localization_key = VEL_USA_ln_35 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 36 } } localization_key = VEL_USA_ln_36 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 37 } } localization_key = VEL_USA_ln_37 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 38 } } localization_key = VEL_USA_ln_38 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 39 } } localization_key = VEL_USA_ln_39 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 40 } } localization_key = VEL_USA_ln_40 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 41 } } localization_key = VEL_USA_ln_41 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 42 } } localization_key = VEL_USA_ln_42 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 43 } } localization_key = VEL_USA_ln_43 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_2 = 44 } } localization_key = VEL_USA_ln_44 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ft_2
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 2 } } localization_key = VEL_USA_tg_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 3 } } localization_key = VEL_USA_tg_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 4 } } localization_key = VEL_USA_tg_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 5 } } localization_key = VEL_USA_tg_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 6 } } localization_key = VEL_USA_tg_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 7 } } localization_key = VEL_USA_tg_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 8 } } localization_key = VEL_USA_tg_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 9 } } localization_key = VEL_USA_tg_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 10 } } localization_key = VEL_USA_tg_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 11 } } localization_key = VEL_USA_tg_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 12 } } localization_key = VEL_USA_tg_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 13 } } localization_key = VEL_USA_tg_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 14 } } localization_key = VEL_USA_tg_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 15 } } localization_key = VEL_USA_tg_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 16 } } localization_key = VEL_USA_tg_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 17 } } localization_key = VEL_USA_tg_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 18 } } localization_key = VEL_USA_tg_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 19 } } localization_key = VEL_USA_tg_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 20 } } localization_key = VEL_USA_tg_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 21 } } localization_key = VEL_USA_tg_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 22 } } localization_key = VEL_USA_tg_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 23 } } localization_key = VEL_USA_tg_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_2 = 24 } } localization_key = VEL_USA_tg_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ftr_2
+	text = { trigger = { check_variable = { VEL_USA_fb_t_2 > 0.3 } } localization_key = VEL_USA_tr_up_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_t_2 < -0.3 } } localization_key = VEL_USA_tr_dn_2 }
+	text = { localization_key = VEL_USA_tr_eq }
+}
+defined_text = {
+	name = VEL_USA_fn_3
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 2 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 3 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 4 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 5 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 6 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 7 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 8 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 9 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 10 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 11 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 12 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 13 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 14 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 15 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 16 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 17 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 18 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 19 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 20 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 21 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 22 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 23 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 24 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ldnm_3
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 2 } } localization_key = VEL_USA_ln_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 3 } } localization_key = VEL_USA_ln_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 4 } } localization_key = VEL_USA_ln_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 5 } } localization_key = VEL_USA_ln_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 6 } } localization_key = VEL_USA_ln_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 7 } } localization_key = VEL_USA_ln_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 8 } } localization_key = VEL_USA_ln_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 9 } } localization_key = VEL_USA_ln_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 10 } } localization_key = VEL_USA_ln_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 11 } } localization_key = VEL_USA_ln_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 12 } } localization_key = VEL_USA_ln_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 13 } } localization_key = VEL_USA_ln_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 14 } } localization_key = VEL_USA_ln_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 15 } } localization_key = VEL_USA_ln_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 16 } } localization_key = VEL_USA_ln_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 17 } } localization_key = VEL_USA_ln_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 18 } } localization_key = VEL_USA_ln_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 19 } } localization_key = VEL_USA_ln_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 20 } } localization_key = VEL_USA_ln_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 21 } } localization_key = VEL_USA_ln_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 22 } } localization_key = VEL_USA_ln_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 23 } } localization_key = VEL_USA_ln_23 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 24 } } localization_key = VEL_USA_ln_24 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 25 } } localization_key = VEL_USA_ln_25 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 26 } } localization_key = VEL_USA_ln_26 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 27 } } localization_key = VEL_USA_ln_27 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 28 } } localization_key = VEL_USA_ln_28 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 29 } } localization_key = VEL_USA_ln_29 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 30 } } localization_key = VEL_USA_ln_30 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 31 } } localization_key = VEL_USA_ln_31 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 32 } } localization_key = VEL_USA_ln_32 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 33 } } localization_key = VEL_USA_ln_33 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 34 } } localization_key = VEL_USA_ln_34 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 35 } } localization_key = VEL_USA_ln_35 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 36 } } localization_key = VEL_USA_ln_36 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 37 } } localization_key = VEL_USA_ln_37 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 38 } } localization_key = VEL_USA_ln_38 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 39 } } localization_key = VEL_USA_ln_39 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 40 } } localization_key = VEL_USA_ln_40 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 41 } } localization_key = VEL_USA_ln_41 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 42 } } localization_key = VEL_USA_ln_42 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 43 } } localization_key = VEL_USA_ln_43 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_3 = 44 } } localization_key = VEL_USA_ln_44 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ft_3
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 2 } } localization_key = VEL_USA_tg_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 3 } } localization_key = VEL_USA_tg_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 4 } } localization_key = VEL_USA_tg_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 5 } } localization_key = VEL_USA_tg_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 6 } } localization_key = VEL_USA_tg_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 7 } } localization_key = VEL_USA_tg_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 8 } } localization_key = VEL_USA_tg_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 9 } } localization_key = VEL_USA_tg_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 10 } } localization_key = VEL_USA_tg_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 11 } } localization_key = VEL_USA_tg_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 12 } } localization_key = VEL_USA_tg_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 13 } } localization_key = VEL_USA_tg_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 14 } } localization_key = VEL_USA_tg_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 15 } } localization_key = VEL_USA_tg_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 16 } } localization_key = VEL_USA_tg_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 17 } } localization_key = VEL_USA_tg_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 18 } } localization_key = VEL_USA_tg_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 19 } } localization_key = VEL_USA_tg_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 20 } } localization_key = VEL_USA_tg_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 21 } } localization_key = VEL_USA_tg_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 22 } } localization_key = VEL_USA_tg_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 23 } } localization_key = VEL_USA_tg_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_3 = 24 } } localization_key = VEL_USA_tg_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ftr_3
+	text = { trigger = { check_variable = { VEL_USA_fb_t_3 > 0.3 } } localization_key = VEL_USA_tr_up_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_t_3 < -0.3 } } localization_key = VEL_USA_tr_dn_3 }
+	text = { localization_key = VEL_USA_tr_eq }
+}
+defined_text = {
+	name = VEL_USA_fn_4
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 2 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 3 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 4 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 5 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 6 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 7 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 8 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 9 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 10 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 11 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 12 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 13 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 14 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 15 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 16 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 17 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 18 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 19 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 20 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 21 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 22 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 23 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 24 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ldnm_4
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 2 } } localization_key = VEL_USA_ln_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 3 } } localization_key = VEL_USA_ln_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 4 } } localization_key = VEL_USA_ln_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 5 } } localization_key = VEL_USA_ln_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 6 } } localization_key = VEL_USA_ln_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 7 } } localization_key = VEL_USA_ln_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 8 } } localization_key = VEL_USA_ln_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 9 } } localization_key = VEL_USA_ln_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 10 } } localization_key = VEL_USA_ln_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 11 } } localization_key = VEL_USA_ln_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 12 } } localization_key = VEL_USA_ln_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 13 } } localization_key = VEL_USA_ln_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 14 } } localization_key = VEL_USA_ln_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 15 } } localization_key = VEL_USA_ln_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 16 } } localization_key = VEL_USA_ln_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 17 } } localization_key = VEL_USA_ln_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 18 } } localization_key = VEL_USA_ln_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 19 } } localization_key = VEL_USA_ln_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 20 } } localization_key = VEL_USA_ln_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 21 } } localization_key = VEL_USA_ln_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 22 } } localization_key = VEL_USA_ln_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 23 } } localization_key = VEL_USA_ln_23 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 24 } } localization_key = VEL_USA_ln_24 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 25 } } localization_key = VEL_USA_ln_25 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 26 } } localization_key = VEL_USA_ln_26 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 27 } } localization_key = VEL_USA_ln_27 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 28 } } localization_key = VEL_USA_ln_28 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 29 } } localization_key = VEL_USA_ln_29 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 30 } } localization_key = VEL_USA_ln_30 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 31 } } localization_key = VEL_USA_ln_31 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 32 } } localization_key = VEL_USA_ln_32 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 33 } } localization_key = VEL_USA_ln_33 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 34 } } localization_key = VEL_USA_ln_34 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 35 } } localization_key = VEL_USA_ln_35 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 36 } } localization_key = VEL_USA_ln_36 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 37 } } localization_key = VEL_USA_ln_37 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 38 } } localization_key = VEL_USA_ln_38 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 39 } } localization_key = VEL_USA_ln_39 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 40 } } localization_key = VEL_USA_ln_40 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 41 } } localization_key = VEL_USA_ln_41 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 42 } } localization_key = VEL_USA_ln_42 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 43 } } localization_key = VEL_USA_ln_43 }
+	text = { trigger = { check_variable = { VEL_USA_fb_g_4 = 44 } } localization_key = VEL_USA_ln_44 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ft_4
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 2 } } localization_key = VEL_USA_tg_1 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 3 } } localization_key = VEL_USA_tg_2 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 4 } } localization_key = VEL_USA_tg_3 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 5 } } localization_key = VEL_USA_tg_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 6 } } localization_key = VEL_USA_tg_5 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 7 } } localization_key = VEL_USA_tg_6 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 8 } } localization_key = VEL_USA_tg_7 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 9 } } localization_key = VEL_USA_tg_8 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 10 } } localization_key = VEL_USA_tg_9 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 11 } } localization_key = VEL_USA_tg_10 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 12 } } localization_key = VEL_USA_tg_11 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 13 } } localization_key = VEL_USA_tg_12 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 14 } } localization_key = VEL_USA_tg_13 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 15 } } localization_key = VEL_USA_tg_14 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 16 } } localization_key = VEL_USA_tg_15 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 17 } } localization_key = VEL_USA_tg_16 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 18 } } localization_key = VEL_USA_tg_17 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 19 } } localization_key = VEL_USA_tg_18 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 20 } } localization_key = VEL_USA_tg_19 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 21 } } localization_key = VEL_USA_tg_20 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 22 } } localization_key = VEL_USA_tg_21 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 23 } } localization_key = VEL_USA_tg_22 }
+	text = { trigger = { check_variable = { VEL_USA_fb_e_4 = 24 } } localization_key = VEL_USA_tg_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ftr_4
+	text = { trigger = { check_variable = { VEL_USA_fb_t_4 > 0.3 } } localization_key = VEL_USA_tr_up_4 }
+	text = { trigger = { check_variable = { VEL_USA_fb_t_4 < -0.3 } } localization_key = VEL_USA_tr_dn_4 }
+	text = { localization_key = VEL_USA_tr_eq }
+}
+defined_text = {
+	name = VEL_USA_pnl_1
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 1 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 2 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 3 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 4 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 5 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 6 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 7 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 8 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 9 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 10 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 11 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 12 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 13 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 14 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 15 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 16 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 17 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 18 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 19 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 20 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 21 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 22 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^0 = 23 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_pnl_2
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 1 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 2 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 3 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 4 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 5 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 6 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 7 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 8 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 9 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 10 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 11 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 12 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 13 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 14 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 15 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 16 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 17 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 18 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 19 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 20 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 21 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 22 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^1 = 23 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_pnl_3
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 1 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 2 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 3 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 4 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 5 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 6 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 7 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 8 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 9 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 10 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 11 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 12 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 13 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 14 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 15 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 16 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 17 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 18 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 19 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 20 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 21 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 22 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^2 = 23 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_pnl_4
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 1 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 2 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 3 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 4 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 5 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 6 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 7 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 8 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 9 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 10 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 11 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 12 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 13 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 14 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 15 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 16 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 17 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 18 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 19 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 20 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 21 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 22 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^3 = 23 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_pnl_5
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 1 } } localization_key = VEL_USA_pn_1 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 2 } } localization_key = VEL_USA_pn_2 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 3 } } localization_key = VEL_USA_pn_3 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 4 } } localization_key = VEL_USA_pn_4 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 5 } } localization_key = VEL_USA_pn_5 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 6 } } localization_key = VEL_USA_pn_6 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 7 } } localization_key = VEL_USA_pn_7 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 8 } } localization_key = VEL_USA_pn_8 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 9 } } localization_key = VEL_USA_pn_9 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 10 } } localization_key = VEL_USA_pn_10 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 11 } } localization_key = VEL_USA_pn_11 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 12 } } localization_key = VEL_USA_pn_12 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 13 } } localization_key = VEL_USA_pn_13 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 14 } } localization_key = VEL_USA_pn_14 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 15 } } localization_key = VEL_USA_pn_15 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 16 } } localization_key = VEL_USA_pn_16 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 17 } } localization_key = VEL_USA_pn_17 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 18 } } localization_key = VEL_USA_pn_18 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 19 } } localization_key = VEL_USA_pn_19 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 20 } } localization_key = VEL_USA_pn_20 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 21 } } localization_key = VEL_USA_pn_21 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 22 } } localization_key = VEL_USA_pn_22 }
+	text = { trigger = { check_variable = { VEL_USA_pidx^4 = 23 } } localization_key = VEL_USA_pn_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
 	name = VEL_USA_lead_text
 	text = { trigger = { check_variable = { VEL_USA_s_lead = 1 } } localization_key = VEL_USA_leadtxt_1 }
 	text = { trigger = { check_variable = { VEL_USA_s_lead = 2 } } localization_key = VEL_USA_leadtxt_2 }
 	text = { trigger = { check_variable = { VEL_USA_s_lead = 3 } } localization_key = VEL_USA_leadtxt_3 }
+	text = { trigger = { check_variable = { VEL_USA_s_lead = 4 } } localization_key = VEL_USA_leadtxt_4 }
+	text = { trigger = { check_variable = { VEL_USA_s_lead = 5 } } localization_key = VEL_USA_leadtxt_5 }
 	text = { localization_key = VEL_USA_leadtxt_none }
 }
 defined_text = {
@@ -414,4 +979,272 @@ defined_text = {
 	text = { trigger = { check_variable = { VEL_USA_sw_6_r = 50 } } localization_key = VEL_USA_name_50 }
 	text = { trigger = { check_variable = { VEL_USA_sw_6_r = 51 } } localization_key = VEL_USA_name_51 }
 	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_1
+	text = { trigger = { check_variable = { VEL_USA_mar^0 < 900 } } localization_key = VEL_USA_lmv_1 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_2
+	text = { trigger = { check_variable = { VEL_USA_mar^1 < 900 } } localization_key = VEL_USA_lmv_2 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_3
+	text = { trigger = { check_variable = { VEL_USA_mar^2 < 900 } } localization_key = VEL_USA_lmv_3 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_4
+	text = { trigger = { check_variable = { VEL_USA_mar^3 < 900 } } localization_key = VEL_USA_lmv_4 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_5
+	text = { trigger = { check_variable = { VEL_USA_mar^4 < 900 } } localization_key = VEL_USA_lmv_5 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_6
+	text = { trigger = { check_variable = { VEL_USA_mar^5 < 900 } } localization_key = VEL_USA_lmv_6 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_7
+	text = { trigger = { check_variable = { VEL_USA_mar^6 < 900 } } localization_key = VEL_USA_lmv_7 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_8
+	text = { trigger = { check_variable = { VEL_USA_mar^7 < 900 } } localization_key = VEL_USA_lmv_8 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_9
+	text = { trigger = { check_variable = { VEL_USA_mar^8 < 900 } } localization_key = VEL_USA_lmv_9 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_10
+	text = { trigger = { check_variable = { VEL_USA_mar^9 < 900 } } localization_key = VEL_USA_lmv_10 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_11
+	text = { trigger = { check_variable = { VEL_USA_mar^10 < 900 } } localization_key = VEL_USA_lmv_11 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_12
+	text = { trigger = { check_variable = { VEL_USA_mar^11 < 900 } } localization_key = VEL_USA_lmv_12 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_13
+	text = { trigger = { check_variable = { VEL_USA_mar^12 < 900 } } localization_key = VEL_USA_lmv_13 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_14
+	text = { trigger = { check_variable = { VEL_USA_mar^13 < 900 } } localization_key = VEL_USA_lmv_14 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_15
+	text = { trigger = { check_variable = { VEL_USA_mar^14 < 900 } } localization_key = VEL_USA_lmv_15 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_16
+	text = { trigger = { check_variable = { VEL_USA_mar^15 < 900 } } localization_key = VEL_USA_lmv_16 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_17
+	text = { trigger = { check_variable = { VEL_USA_mar^16 < 900 } } localization_key = VEL_USA_lmv_17 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_18
+	text = { trigger = { check_variable = { VEL_USA_mar^17 < 900 } } localization_key = VEL_USA_lmv_18 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_19
+	text = { trigger = { check_variable = { VEL_USA_mar^18 < 900 } } localization_key = VEL_USA_lmv_19 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_20
+	text = { trigger = { check_variable = { VEL_USA_mar^19 < 900 } } localization_key = VEL_USA_lmv_20 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_21
+	text = { trigger = { check_variable = { VEL_USA_mar^20 < 900 } } localization_key = VEL_USA_lmv_21 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_22
+	text = { trigger = { check_variable = { VEL_USA_mar^21 < 900 } } localization_key = VEL_USA_lmv_22 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_23
+	text = { trigger = { check_variable = { VEL_USA_mar^22 < 900 } } localization_key = VEL_USA_lmv_23 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_24
+	text = { trigger = { check_variable = { VEL_USA_mar^23 < 900 } } localization_key = VEL_USA_lmv_24 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_25
+	text = { trigger = { check_variable = { VEL_USA_mar^24 < 900 } } localization_key = VEL_USA_lmv_25 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_26
+	text = { trigger = { check_variable = { VEL_USA_mar^25 < 900 } } localization_key = VEL_USA_lmv_26 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_27
+	text = { trigger = { check_variable = { VEL_USA_mar^26 < 900 } } localization_key = VEL_USA_lmv_27 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_28
+	text = { trigger = { check_variable = { VEL_USA_mar^27 < 900 } } localization_key = VEL_USA_lmv_28 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_29
+	text = { trigger = { check_variable = { VEL_USA_mar^28 < 900 } } localization_key = VEL_USA_lmv_29 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_30
+	text = { trigger = { check_variable = { VEL_USA_mar^29 < 900 } } localization_key = VEL_USA_lmv_30 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_31
+	text = { trigger = { check_variable = { VEL_USA_mar^30 < 900 } } localization_key = VEL_USA_lmv_31 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_32
+	text = { trigger = { check_variable = { VEL_USA_mar^31 < 900 } } localization_key = VEL_USA_lmv_32 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_33
+	text = { trigger = { check_variable = { VEL_USA_mar^32 < 900 } } localization_key = VEL_USA_lmv_33 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_34
+	text = { trigger = { check_variable = { VEL_USA_mar^33 < 900 } } localization_key = VEL_USA_lmv_34 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_35
+	text = { trigger = { check_variable = { VEL_USA_mar^34 < 900 } } localization_key = VEL_USA_lmv_35 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_36
+	text = { trigger = { check_variable = { VEL_USA_mar^35 < 900 } } localization_key = VEL_USA_lmv_36 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_37
+	text = { trigger = { check_variable = { VEL_USA_mar^36 < 900 } } localization_key = VEL_USA_lmv_37 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_38
+	text = { trigger = { check_variable = { VEL_USA_mar^37 < 900 } } localization_key = VEL_USA_lmv_38 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_39
+	text = { trigger = { check_variable = { VEL_USA_mar^38 < 900 } } localization_key = VEL_USA_lmv_39 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_40
+	text = { trigger = { check_variable = { VEL_USA_mar^39 < 900 } } localization_key = VEL_USA_lmv_40 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_41
+	text = { trigger = { check_variable = { VEL_USA_mar^40 < 900 } } localization_key = VEL_USA_lmv_41 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_42
+	text = { trigger = { check_variable = { VEL_USA_mar^41 < 900 } } localization_key = VEL_USA_lmv_42 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_43
+	text = { trigger = { check_variable = { VEL_USA_mar^42 < 900 } } localization_key = VEL_USA_lmv_43 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_44
+	text = { trigger = { check_variable = { VEL_USA_mar^43 < 900 } } localization_key = VEL_USA_lmv_44 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_45
+	text = { trigger = { check_variable = { VEL_USA_mar^44 < 900 } } localization_key = VEL_USA_lmv_45 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_46
+	text = { trigger = { check_variable = { VEL_USA_mar^45 < 900 } } localization_key = VEL_USA_lmv_46 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_47
+	text = { trigger = { check_variable = { VEL_USA_mar^46 < 900 } } localization_key = VEL_USA_lmv_47 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_48
+	text = { trigger = { check_variable = { VEL_USA_mar^47 < 900 } } localization_key = VEL_USA_lmv_48 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_49
+	text = { trigger = { check_variable = { VEL_USA_mar^48 < 900 } } localization_key = VEL_USA_lmv_49 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_50
+	text = { trigger = { check_variable = { VEL_USA_mar^49 < 900 } } localization_key = VEL_USA_lmv_50 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_lm_51
+	text = { trigger = { check_variable = { VEL_USA_mar^50 < 900 } } localization_key = VEL_USA_lmv_51 }
+	text = { localization_key = VEL_USA_name_blank }
+}
+defined_text = {
+	name = VEL_USA_ticker
+	text = { trigger = { check_variable = { VEL_USA_phase = 2 } check_variable = { VEL_USA_live_state = 2 } } localization_key = VEL_USA_tk_called }
+	text = { trigger = { check_variable = { VEL_USA_phase = 2 } check_variable = { VEL_USA_live_state = 1 } } localization_key = VEL_USA_tk_live }
+	text = { trigger = { check_variable = { VEL_USA_phase = 2 } } localization_key = VEL_USA_tk_live0 }
+	text = { trigger = { check_variable = { VEL_USA_phase = 3 } check_variable = { VEL_USA_news_i = 0 } } localization_key = VEL_USA_tk_done }
+	text = { trigger = { check_variable = { VEL_USA_news_i = 0 } } localization_key = VEL_USA_tk_n0 }
+	text = { trigger = { check_variable = { VEL_USA_news_i = 1 } check_variable = { VEL_USA_sw_1_r > 0 } } localization_key = VEL_USA_tk_n1 }
+	text = { trigger = { check_variable = { VEL_USA_news_i = 2 } check_variable = { VEL_USA_fb_ext = 1 } } localization_key = VEL_USA_tk_n2x }
+	text = { trigger = { check_variable = { VEL_USA_news_i = 2 } } localization_key = VEL_USA_tk_n2 }
+	text = { trigger = { check_variable = { VEL_USA_news_i = 3 } } localization_key = VEL_USA_tk_n3 }
+	text = { localization_key = VEL_USA_tk_n0 }
 }

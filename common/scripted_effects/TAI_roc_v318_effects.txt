@@ -1,6 +1,6 @@
 # MD ROC Return v3.18 —— 南极科考的继承
 
-# Scope: 即将被吞并的国家（旧 CHI 或 TAI）。记下它的科考站，并清掉「有科考站」旗标，千禧的 on_annex 就不会拆站
+# Scope: 即将被吞并的国家（旧 CHI 或 TAI）。记下它的科考站，并清掉“有科考站”旗标，千禧的 on_annex 就不会拆站
 TAI_antarctica_prepare = {
 	if = { limit = { has_idea = at_member } set_global_flag = TAI_roc_inherit_at_member }
 	if = { limit = { has_country_flag = is_antarctica_atcp_consultative_member } set_global_flag = TAI_roc_inherit_atcp }

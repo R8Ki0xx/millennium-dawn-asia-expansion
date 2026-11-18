@@ -1,0 +1,147 @@
+# MD ROC Return v3.42 —— 叙利亚“内战与反恐”面板的数据：控制权统计与面板变量发布（由 _tools/v342/gen_syr_gui.py 生成，不要手改）
+
+# 每周重算一次叙利亚核心州的所有者分布，写入全局变量 global.SYR_cs_*；cb1~cb6 是各势力的累计百分比（分层进度条的帧）
+SYR_terror_control_scan = {
+	set_variable = { global.SYR_cs_gov = 0 }
+	set_variable = { global.SYR_cs_fsa = 0 }
+	set_variable = { global.SYR_cs_nus = 0 }
+	set_variable = { global.SYR_cs_isi = 0 }
+	set_variable = { global.SYR_cs_roj = 0 }
+	set_variable = { global.SYR_cs_oth = 0 }
+	if = { limit = { 587 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 587 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 587 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 587 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 587 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 184 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 184 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 184 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 184 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 184 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 185 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 185 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 185 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 185 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 185 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 186 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 186 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 186 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 186 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 186 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 561 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 561 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 561 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 561 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 561 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 188 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 188 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 188 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 188 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 188 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 189 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 189 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 189 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 189 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 189 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 192 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 192 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 192 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 192 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 192 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 191 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 191 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 191 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 191 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 191 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 566 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 566 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 566 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 566 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 566 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 190 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 190 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 190 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 190 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 190 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 158 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 158 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 158 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 158 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 158 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 193 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 193 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 193 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 193 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 193 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 571 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 571 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 571 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 571 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 571 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	if = { limit = { 575 = { is_owned_by = SYR } } add_to_variable = { global.SYR_cs_gov = 1 } }
+	else_if = { limit = { 575 = { is_owned_by = FSA } } add_to_variable = { global.SYR_cs_fsa = 1 } }
+	else_if = { limit = { 575 = { is_owned_by = NUS } } add_to_variable = { global.SYR_cs_nus = 1 } }
+	else_if = { limit = { 575 = { is_owned_by = ISI } } add_to_variable = { global.SYR_cs_isi = 1 } }
+	else_if = { limit = { 575 = { is_owned_by = ROJ } } add_to_variable = { global.SYR_cs_roj = 1 } }
+	else = { add_to_variable = { global.SYR_cs_oth = 1 } }
+	set_temp_variable = { syr_cum = 0 }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_gov }
+	set_variable = { global.SYR_cs_cb1 = syr_cum } multiply_variable = { global.SYR_cs_cb1 = 100 } divide_variable = { global.SYR_cs_cb1 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb1 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb1 = syr_r }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_fsa }
+	set_variable = { global.SYR_cs_cb2 = syr_cum } multiply_variable = { global.SYR_cs_cb2 = 100 } divide_variable = { global.SYR_cs_cb2 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb2 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb2 = syr_r }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_nus }
+	set_variable = { global.SYR_cs_cb3 = syr_cum } multiply_variable = { global.SYR_cs_cb3 = 100 } divide_variable = { global.SYR_cs_cb3 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb3 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb3 = syr_r }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_isi }
+	set_variable = { global.SYR_cs_cb4 = syr_cum } multiply_variable = { global.SYR_cs_cb4 = 100 } divide_variable = { global.SYR_cs_cb4 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb4 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb4 = syr_r }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_roj }
+	set_variable = { global.SYR_cs_cb5 = syr_cum } multiply_variable = { global.SYR_cs_cb5 = 100 } divide_variable = { global.SYR_cs_cb5 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb5 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb5 = syr_r }
+	add_to_temp_variable = { syr_cum = global.SYR_cs_oth }
+	set_variable = { global.SYR_cs_cb6 = syr_cum } multiply_variable = { global.SYR_cs_cb6 = 100 } divide_variable = { global.SYR_cs_cb6 = 15 }
+	set_temp_variable = { syr_r = global.SYR_cs_cb6 } round_temp_variable = syr_r set_variable = { global.SYR_cs_cb6 = syr_r }
+	set_variable = { global.SYR_cs_cb6 = 100 }
+	set_variable = { global.SYR_cs_w_fsa = 0 }
+	if = { limit = { country_exists = FSA country_exists = SYR } if = { limit = { SYR = { has_war_with = FSA } } set_variable = { global.SYR_cs_w_fsa = 1 } } }
+	set_variable = { global.SYR_cs_w_nus = 0 }
+	if = { limit = { country_exists = NUS country_exists = SYR } if = { limit = { SYR = { has_war_with = NUS } } set_variable = { global.SYR_cs_w_nus = 1 } } }
+	set_variable = { global.SYR_cs_w_isi = 0 }
+	if = { limit = { country_exists = ISI country_exists = SYR } if = { limit = { SYR = { has_war_with = ISI } } set_variable = { global.SYR_cs_w_isi = 1 } } }
+	SYR_terror_publish_all = yes
+}
+
+# 把全局数据抄到查看面板的国家（滚动条的 frame 只能读国家变量）。作用域：国家
+SYR_terror_publish_c = {
+	set_variable = { SYR_tp_idx = global.SYR_terror_index }
+	set_temp_variable = { syr_i = SYR_tp_idx } round_temp_variable = syr_i set_variable = { SYR_tp_idx = syr_i }
+	set_variable = { SYR_tp_c1 = global.SYR_cs_cb1 }
+	set_variable = { SYR_tp_c2 = global.SYR_cs_cb2 }
+	set_variable = { SYR_tp_c3 = global.SYR_cs_cb3 }
+	set_variable = { SYR_tp_c4 = global.SYR_cs_cb4 }
+	set_variable = { SYR_tp_c5 = global.SYR_cs_cb5 }
+	set_variable = { SYR_tp_c6 = global.SYR_cs_cb6 }
+}
+
+SYR_terror_publish_all = {
+	if = { limit = { country_exists = SYR } SYR = { SYR_terror_publish_c = yes } }
+	if = { limit = { country_exists = FSA } FSA = { SYR_terror_publish_c = yes } }
+	if = { limit = { country_exists = NUS } NUS = { SYR_terror_publish_c = yes } }
+	if = { limit = { country_exists = IRQ } IRQ = { SYR_terror_publish_c = yes } }
+}

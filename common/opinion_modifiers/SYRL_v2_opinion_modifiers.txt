@@ -1,0 +1,7 @@
+# MD ROC Return v3.42 —— “回归复兴党初心”线的观感修正
+opinion_modifiers = {
+	SYRL_ext_nationalization = { value = -20 }
+	SYRL_ext_kurd_trust = { value = 25 }
+	SYRL_ext_turkey_kurd = { value = -25 }
+	SYRL_ext_pan_arab = { value = 20 }
+}

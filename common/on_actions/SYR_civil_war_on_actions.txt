@@ -1,0 +1,78 @@
+# MD ROC Return v3.36 —— 叙利亚内战：按叛军意识形态分流出 FSA / NUS；恐怖主义指数每月累积；控制权分布每周重算
+# on_actions 在多个文件里同名时会合并，不会覆盖千禧自己的 on_monthly_SYR / on_monthly_FSA / on_monthly_NUS。
+on_actions = {
+	on_daily_SYR = {
+		effect = {
+			# 老阿萨死后出现了叛军（任何路线的内战），且还没处理过
+			if = {
+				limit = {
+					has_country_flag = Syria_Hafez_dead
+					NOT = { has_global_flag = SYR_cw_handled }
+					NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+					any_country_with_original_tag = {
+						original_tag_to_check = SYR
+						NOT = { tag = SYR }
+					}
+				}
+				SYR_cw_dispatch = yes
+			}
+			# 阿拉伯之春路线（千禧自己生成了 FSA）也要启用恐怖主义指数
+			if = {
+				limit = {
+					NOT = { has_global_flag = SYR_cw_handled }
+					has_global_flag = GLOBAL_syrian_civil_war_started
+					country_exists = FSA
+				}
+				set_global_flag = SYR_cw_handled
+				SYR_terror_publish_all = yes
+			}
+			# 阿萨德战后线的大选：千禧的竞选流程设了 elections_in_progress，等它被清掉就是大选打完了
+			if = {
+				limit = {
+					has_country_flag = SYRA_campaign_on
+					has_country_flag = elections_in_progress
+					NOT = { has_country_flag = SYRA_campaign_seen }
+				}
+				set_country_flag = SYRA_campaign_seen
+			}
+			if = {
+				limit = {
+					has_country_flag = SYRA_campaign_seen
+					NOT = { has_country_flag = elections_in_progress }
+					NOT = { has_country_flag = SYRA_election_done }
+				}
+				SYRA_election_result = yes
+			}
+			# 与千禧同步 ISIS 状态
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = ISIL_declared
+						has_global_flag = SYR_isis_synced
+					}
+				}
+				SYR_terror_sync = yes
+			}
+		}
+	}
+	on_weekly_SYR = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = GLOBAL_syrian_civil_war_started
+					NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+				}
+				SYR_terror_control_scan = yes
+			}
+		}
+	}
+	on_monthly_SYR = {
+		effect = { SYR_terror_monthly = yes }
+	}
+	on_monthly_FSA = {
+		effect = { SYR_terror_monthly = yes }
+	}
+	on_monthly_NUS = {
+		effect = { SYR_terror_monthly = yes }
+	}
+}

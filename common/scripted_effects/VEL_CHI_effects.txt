@@ -1,5 +1,5 @@
 # MD ROC Return v3.36 —— 可视化选举引擎（CHI）。由 _tools/v336/gen_vel_engine.py 生成，不要手改。
-# R=32 区域 P=5 政党 G=8 群体 I=6 议题。数组均为国家变量，下标从 0 开始。
+# R=32 区域 P=7 政党 G=8 群体 I=6 议题。数组均为国家变量，下标从 0 开始。
 VEL_CHI_init = {
 	if = {
 		limit = { NOT = { has_country_flag = VEL_CHI_inited } }
@@ -7,13 +7,16 @@ VEL_CHI_init = {
 		clear_array = VEL_CHI_sal
 		add_to_array = { VEL_CHI_sal = 1 } add_to_array = { VEL_CHI_sal = 1 } add_to_array = { VEL_CHI_sal = 1 } add_to_array = { VEL_CHI_sal = 1 } add_to_array = { VEL_CHI_sal = 1 } add_to_array = { VEL_CHI_sal = 1 }
 		clear_array = VEL_CHI_pidx
-		add_to_array = { VEL_CHI_pidx = 1 } add_to_array = { VEL_CHI_pidx = 2 } add_to_array = { VEL_CHI_pidx = 3 } add_to_array = { VEL_CHI_pidx = 4 } add_to_array = { VEL_CHI_pidx = 14 }
+		add_to_array = { VEL_CHI_pidx = 1 } add_to_array = { VEL_CHI_pidx = 2 } add_to_array = { VEL_CHI_pidx = 3 } add_to_array = { VEL_CHI_pidx = 4 } add_to_array = { VEL_CHI_pidx = 14 } add_to_array = { VEL_CHI_pidx = -1 }
+		add_to_array = { VEL_CHI_pidx = -1 }
 		clear_array = VEL_CHI_pos
 		add_to_array = { VEL_CHI_pos = 8 } add_to_array = { VEL_CHI_pos = 7 } add_to_array = { VEL_CHI_pos = 4 } add_to_array = { VEL_CHI_pos = 3 } add_to_array = { VEL_CHI_pos = 3 } add_to_array = { VEL_CHI_pos = 8 }
 		add_to_array = { VEL_CHI_pos = 4 } add_to_array = { VEL_CHI_pos = 8 } add_to_array = { VEL_CHI_pos = 4 } add_to_array = { VEL_CHI_pos = 8 } add_to_array = { VEL_CHI_pos = 8 } add_to_array = { VEL_CHI_pos = 5 }
 		add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 3 } add_to_array = { VEL_CHI_pos = 9 } add_to_array = { VEL_CHI_pos = 6 } add_to_array = { VEL_CHI_pos = 6 } add_to_array = { VEL_CHI_pos = 3 }
 		add_to_array = { VEL_CHI_pos = 9 } add_to_array = { VEL_CHI_pos = 2 } add_to_array = { VEL_CHI_pos = 7 } add_to_array = { VEL_CHI_pos = 1 } add_to_array = { VEL_CHI_pos = 1 } add_to_array = { VEL_CHI_pos = 8 }
 		add_to_array = { VEL_CHI_pos = 7 } add_to_array = { VEL_CHI_pos = 6 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 4 } add_to_array = { VEL_CHI_pos = 4 } add_to_array = { VEL_CHI_pos = 7 }
+		add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 }
+		add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 } add_to_array = { VEL_CHI_pos = 5 }
 		clear_array = VEL_CHI_op
 		add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 7 } add_to_array = { VEL_CHI_op = 5 } add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 5 }
 		add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 3 } add_to_array = { VEL_CHI_op = 9 } add_to_array = { VEL_CHI_op = 4 } add_to_array = { VEL_CHI_op = 5 } add_to_array = { VEL_CHI_op = 5 }
@@ -24,15 +27,99 @@ VEL_CHI_init = {
 		add_to_array = { VEL_CHI_op = 4 } add_to_array = { VEL_CHI_op = 4 } add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 8 } add_to_array = { VEL_CHI_op = 7 } add_to_array = { VEL_CHI_op = 3 }
 		add_to_array = { VEL_CHI_op = 5 } add_to_array = { VEL_CHI_op = 5 } add_to_array = { VEL_CHI_op = 5 } add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 6 } add_to_array = { VEL_CHI_op = 4 }
 		clear_array = VEL_CHI_aff
-		add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 3 }
-		add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 5 } add_to_array = { VEL_CHI_aff = 3 }
-		add_to_array = { VEL_CHI_aff = 4 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 7 } add_to_array = { VEL_CHI_aff = 5 }
-		add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 8 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 1 } add_to_array = { VEL_CHI_aff = 1 }
-		add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 8 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 3 }
-		add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 4 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 5 }
-		add_to_array = { VEL_CHI_aff = 5 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 3 }
+		add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 0 }
+		add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 2 }
+		add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 5 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 4 } add_to_array = { VEL_CHI_aff = 6 }
+		add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 7 } add_to_array = { VEL_CHI_aff = 5 }
+		add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 8 } add_to_array = { VEL_CHI_aff = 6 }
+		add_to_array = { VEL_CHI_aff = 1 } add_to_array = { VEL_CHI_aff = 1 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 8 }
+		add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 }
+		add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 6 } add_to_array = { VEL_CHI_aff = 4 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 0 }
+		add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 5 } add_to_array = { VEL_CHI_aff = 5 } add_to_array = { VEL_CHI_aff = 3 } add_to_array = { VEL_CHI_aff = 2 } add_to_array = { VEL_CHI_aff = 3 }
+		add_to_array = { VEL_CHI_aff = 0 } add_to_array = { VEL_CHI_aff = 0 }
+		clear_array = VEL_CHI_orig
+		add_to_array = { VEL_CHI_orig = 1 } add_to_array = { VEL_CHI_orig = 2 } add_to_array = { VEL_CHI_orig = 3 } add_to_array = { VEL_CHI_orig = 4 } add_to_array = { VEL_CHI_orig = 14 } add_to_array = { VEL_CHI_orig = -1 }
+		add_to_array = { VEL_CHI_orig = -1 }
+		clear_array = VEL_CHI_pos0
+		add_to_array = { VEL_CHI_pos0 = 8 } add_to_array = { VEL_CHI_pos0 = 7 } add_to_array = { VEL_CHI_pos0 = 4 } add_to_array = { VEL_CHI_pos0 = 3 } add_to_array = { VEL_CHI_pos0 = 3 } add_to_array = { VEL_CHI_pos0 = 8 }
+		add_to_array = { VEL_CHI_pos0 = 4 } add_to_array = { VEL_CHI_pos0 = 8 } add_to_array = { VEL_CHI_pos0 = 4 } add_to_array = { VEL_CHI_pos0 = 8 } add_to_array = { VEL_CHI_pos0 = 8 } add_to_array = { VEL_CHI_pos0 = 5 }
+		add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 3 } add_to_array = { VEL_CHI_pos0 = 9 } add_to_array = { VEL_CHI_pos0 = 6 } add_to_array = { VEL_CHI_pos0 = 6 } add_to_array = { VEL_CHI_pos0 = 3 }
+		add_to_array = { VEL_CHI_pos0 = 9 } add_to_array = { VEL_CHI_pos0 = 2 } add_to_array = { VEL_CHI_pos0 = 7 } add_to_array = { VEL_CHI_pos0 = 1 } add_to_array = { VEL_CHI_pos0 = 1 } add_to_array = { VEL_CHI_pos0 = 8 }
+		add_to_array = { VEL_CHI_pos0 = 7 } add_to_array = { VEL_CHI_pos0 = 6 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 4 } add_to_array = { VEL_CHI_pos0 = 4 } add_to_array = { VEL_CHI_pos0 = 7 }
+		add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 }
+		add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 } add_to_array = { VEL_CHI_pos0 = 5 }
+		clear_array = VEL_CHI_aff0
+		add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 0 }
+		add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 2 }
+		add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 5 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 4 } add_to_array = { VEL_CHI_aff0 = 6 }
+		add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 7 } add_to_array = { VEL_CHI_aff0 = 5 }
+		add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 8 } add_to_array = { VEL_CHI_aff0 = 6 }
+		add_to_array = { VEL_CHI_aff0 = 1 } add_to_array = { VEL_CHI_aff0 = 1 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 8 }
+		add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 }
+		add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 6 } add_to_array = { VEL_CHI_aff0 = 4 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 0 }
+		add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 5 } add_to_array = { VEL_CHI_aff0 = 5 } add_to_array = { VEL_CHI_aff0 = 3 } add_to_array = { VEL_CHI_aff0 = 2 } add_to_array = { VEL_CHI_aff0 = 3 }
+		add_to_array = { VEL_CHI_aff0 = 0 } add_to_array = { VEL_CHI_aff0 = 0 }
+		clear_array = VEL_CHI_posall
+		add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 }
+		add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 4 }
+		add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 4 }
+		add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 7 }
+		add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 4 }
+		add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 7 }
+		add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 8 }
+		add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 0 } add_to_array = { VEL_CHI_posall = 8 }
+		add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 7 }
+		add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 0 } add_to_array = { VEL_CHI_posall = 8 }
+		add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 7 }
+		add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 3 }
+		add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 3 }
+		add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 7 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 5 }
+		add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 3 } add_to_array = { VEL_CHI_posall = 6 }
+		add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 9 }
+		add_to_array = { VEL_CHI_posall = 10 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 0 } add_to_array = { VEL_CHI_posall = 0 } add_to_array = { VEL_CHI_posall = 10 }
+		add_to_array = { VEL_CHI_posall = 9 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 5 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 9 }
+		add_to_array = { VEL_CHI_posall = 8 } add_to_array = { VEL_CHI_posall = 6 } add_to_array = { VEL_CHI_posall = 4 } add_to_array = { VEL_CHI_posall = 2 } add_to_array = { VEL_CHI_posall = 1 } add_to_array = { VEL_CHI_posall = 7 }
+		clear_array = VEL_CHI_affall
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 4 }
+		add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 5 }
+		add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 }
+		add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 3 }
+		add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 3 }
+		add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 3 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 2 }
+		add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 5 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 2 }
+		add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 3 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 5 }
+		add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 5 }
+		add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 0 }
+		add_to_array = { VEL_CHI_affall = 0 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 1 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 6 }
+		add_to_array = { VEL_CHI_affall = 6 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 1 }
+		add_to_array = { VEL_CHI_affall = 2 } add_to_array = { VEL_CHI_affall = 3 } add_to_array = { VEL_CHI_affall = 5 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 4 } add_to_array = { VEL_CHI_affall = 5 }
 		clear_array = VEL_CHI_cand
-		add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 }
+		add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 } add_to_array = { VEL_CHI_cand = 0 }
+		add_to_array = { VEL_CHI_cand = 0 }
 		clear_array = VEL_CHI_sh
 		add_to_array = { VEL_CHI_sh = 0.3495 } add_to_array = { VEL_CHI_sh = 0.21 } add_to_array = { VEL_CHI_sh = 0.0211 } add_to_array = { VEL_CHI_sh = 0.1939 } add_to_array = { VEL_CHI_sh = 0.0893 } add_to_array = { VEL_CHI_sh = 0.0531 }
 		add_to_array = { VEL_CHI_sh = 0.0268 } add_to_array = { VEL_CHI_sh = 0.0562 } add_to_array = { VEL_CHI_sh = 0.3243 } add_to_array = { VEL_CHI_sh = 0.3123 } add_to_array = { VEL_CHI_sh = 0.0439 } add_to_array = { VEL_CHI_sh = 0.1286 }
@@ -78,33 +165,44 @@ VEL_CHI_init = {
 		add_to_array = { VEL_CHI_sh = 0.3272 } add_to_array = { VEL_CHI_sh = 0.1997 } add_to_array = { VEL_CHI_sh = 0.3224 } add_to_array = { VEL_CHI_sh = 0.1872 } add_to_array = { VEL_CHI_sh = 0.064 } add_to_array = { VEL_CHI_sh = 0.1288 }
 		add_to_array = { VEL_CHI_sh = 0.0999 } add_to_array = { VEL_CHI_sh = 0.0318 } add_to_array = { VEL_CHI_sh = 0.016 } add_to_array = { VEL_CHI_sh = 0.1498 }
 		clear_array = VEL_CHI_lean
-		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 }
-		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 }
-		add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.03 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.1 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.07 }
-		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 }
+		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.03 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0.1 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.07 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = -0.05 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.06 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 }
+		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
 		add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 }
-		add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.02 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 }
-		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.05 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.04 }
-		add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = -0.05 }
-		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.1 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 }
-		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 }
-		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 }
-		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.05 }
-		add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0.1 }
-		add_to_array = { VEL_CHI_lean = 0.12 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.2 } add_to_array = { VEL_CHI_lean = 0.02 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 }
+		add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.03 }
+		add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.08 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0.04 }
+		add_to_array = { VEL_CHI_lean = 0.04 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 }
+		add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.03 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.1 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.03 }
+		add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.02 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = -0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.05 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.06 } add_to_array = { VEL_CHI_lean = 0 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0.1 } add_to_array = { VEL_CHI_lean = 0.12 } add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = -0.2 } add_to_array = { VEL_CHI_lean = 0.02 }
+		add_to_array = { VEL_CHI_lean = 0 } add_to_array = { VEL_CHI_lean = 0 }
 		clear_array = VEL_CHI_seatsr
 		add_to_array = { VEL_CHI_seatsr = 4 } add_to_array = { VEL_CHI_seatsr = 3 } add_to_array = { VEL_CHI_seatsr = 12 } add_to_array = { VEL_CHI_seatsr = 6 } add_to_array = { VEL_CHI_seatsr = 4 } add_to_array = { VEL_CHI_seatsr = 7 }
 		add_to_array = { VEL_CHI_seatsr = 4 } add_to_array = { VEL_CHI_seatsr = 6 } add_to_array = { VEL_CHI_seatsr = 4 } add_to_array = { VEL_CHI_seatsr = 12 } add_to_array = { VEL_CHI_seatsr = 9 } add_to_array = { VEL_CHI_seatsr = 10 }
@@ -133,25 +231,25 @@ VEL_CHI_init = {
 		clear_array = VEL_CHI_rev
 		resize_array = { array = VEL_CHI_rev value = 0 size = 32 }
 		clear_array = VEL_CHI_res
-		resize_array = { array = VEL_CHI_res value = 0 size = 160 }
+		resize_array = { array = VEL_CHI_res value = 0 size = 224 }
 		clear_array = VEL_CHI_poll_res
-		resize_array = { array = VEL_CHI_poll_res value = 0 size = 160 }
+		resize_array = { array = VEL_CHI_poll_res value = 0 size = 224 }
 		clear_array = VEL_CHI_sr
-		resize_array = { array = VEL_CHI_sr value = 0 size = 160 }
+		resize_array = { array = VEL_CHI_sr value = 0 size = 224 }
 		clear_array = VEL_CHI_N
-		resize_array = { array = VEL_CHI_N value = 0 size = 40 }
+		resize_array = { array = VEL_CHI_N value = 0 size = 56 }
 		clear_array = VEL_CHI_f
-		resize_array = { array = VEL_CHI_f value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_f value = 0 size = 7 }
 		clear_array = VEL_CHI_nat
-		resize_array = { array = VEL_CHI_nat value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_nat value = 0 size = 7 }
 		clear_array = VEL_CHI_seat
-		resize_array = { array = VEL_CHI_seat value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_seat value = 0 size = 7 }
 		clear_array = VEL_CHI_poll_nat
-		resize_array = { array = VEL_CHI_poll_nat value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_poll_nat value = 0 size = 7 }
 		clear_array = VEL_CHI_poll_seat
-		resize_array = { array = VEL_CHI_poll_seat value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_poll_seat value = 0 size = 7 }
 		clear_array = VEL_CHI_run_seat
-		resize_array = { array = VEL_CHI_run_seat value = 0 size = 5 }
+		resize_array = { array = VEL_CHI_run_seat value = 0 size = 7 }
 		clear_array = VEL_CHI_win
 		resize_array = { array = VEL_CHI_win value = 0 size = 32 }
 		clear_array = VEL_CHI_best
@@ -170,6 +268,16 @@ VEL_CHI_init = {
 		resize_array = { array = VEL_CHI_mar2 value = 0 size = 32 }
 		clear_array = VEL_CHI_swing
 		resize_array = { array = VEL_CHI_swing value = 0 size = 6 }
+		clear_array = VEL_CHI_prev_nat
+		resize_array = { array = VEL_CHI_prev_nat value = 0 size = 7 }
+		clear_array = VEL_CHI_dn
+		resize_array = { array = VEL_CHI_dn value = 0 size = 7 }
+		clear_array = VEL_CHI_ds
+		resize_array = { array = VEL_CHI_ds value = 0 size = 7 }
+		clear_array = VEL_CHI_key
+		resize_array = { array = VEL_CHI_key value = 0 size = 7 }
+		clear_array = VEL_CHI_run_nat
+		resize_array = { array = VEL_CHI_run_nat value = 0 size = 7 }
 		clear_array = VEL_CHI_selfr
 		resize_array = { array = VEL_CHI_selfr value = 1 size = 32 }
 		clear_array = VEL_CHI_lead
@@ -180,6 +288,9 @@ VEL_CHI_init = {
 		set_variable = { VEL_CHI_sw_4_l = 1 } set_variable = { VEL_CHI_sw_4_r = 0 }
 		set_variable = { VEL_CHI_sw_5_l = 1 } set_variable = { VEL_CHI_sw_5_r = 0 }
 		set_variable = { VEL_CHI_sw_6_l = 1 } set_variable = { VEL_CHI_sw_6_r = 0 }
+		set_variable = { VEL_CHI_news_i = 0 }
+		set_variable = { VEL_CHI_run_w = 0 }
+		set_variable = { VEL_CHI_news_t = 0 }
 		set_variable = { VEL_CHI_view = 1 }
 		set_variable = { VEL_CHI_sel = 0 }
 		set_variable = { VEL_CHI_phase = 0 }
@@ -199,18 +310,23 @@ VEL_CHI_compute = {
 	set_temp_variable = { vel_salsum = 0 }
 	for_loop_effect = { start = 0 end = 6 value = vi add_to_temp_variable = { vel_salsum = VEL_CHI_sal^vi } }
 	for_loop_effect = {
-		start = 0 end = 5 value = vp
+		start = 0 end = 7 value = vp
 		set_temp_variable = { vel_pi = VEL_CHI_pidx^vp }
-		set_temp_variable = { vel_f = party_pop_array^vel_pi }
-		multiply_temp_variable = { vel_f = 3 }
-		add_to_temp_variable = { vel_f = 0.05 }
+		set_temp_variable = { vel_f = 0 }
+		if = {
+			limit = { check_variable = { vel_pi > -0.5 } }
+			set_temp_variable = { vel_f = party_pop_array^vel_pi }
+			multiply_temp_variable = { vel_f = 3 }
+			add_to_temp_variable = { vel_f = 0.05 }
+			if = { limit = { check_variable = { party_banned_array^vel_pi = 1 } } set_temp_variable = { vel_f = 0 } }
+		}
 		set_variable = { VEL_CHI_f^vp = vel_f }
 	}
 	for_loop_effect = {
 		start = 0 end = 8 value = vg
 		set_temp_variable = { vel_sum = 0 }
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
+			start = 0 end = 7 value = vp
 			set_temp_variable = { vel_sc = 0 }
 			for_loop_effect = {
 				start = 0 end = 6 value = vi
@@ -225,7 +341,7 @@ VEL_CHI_compute = {
 				add_to_temp_variable = { vel_sc = vel_t }
 			}
 			divide_temp_variable = { vel_sc = vel_salsum }
-			set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 5 } add_to_temp_variable = { vel_ia = vp }
+			set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 7 } add_to_temp_variable = { vel_ia = vp }
 			add_to_temp_variable = { vel_sc = VEL_CHI_aff^vel_ia }
 			multiply_temp_variable = { vel_sc = 0.05 }
 			add_to_temp_variable = { vel_sc = VEL_CHI_cand^vp }
@@ -235,26 +351,26 @@ VEL_CHI_compute = {
 			set_variable = { VEL_CHI_N^vel_ia = vel_sc }
 		}
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 5 } add_to_temp_variable = { vel_ia = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 7 } add_to_temp_variable = { vel_ia = vp }
 			divide_variable = { VEL_CHI_N^vel_ia = vel_sum }
 		}
 	}
-	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_CHI_nat^vp = 0 } set_variable = { VEL_CHI_seat^vp = 0 } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_nat^vp = 0 } set_variable = { VEL_CHI_seat^vp = 0 } }
 	for_loop_effect = {
 		start = 0 end = 32 value = vr
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 			set_variable = { VEL_CHI_res^vel_ir = 0 }
 		}
 		for_loop_effect = {
 			start = 0 end = 8 value = vg
 			set_temp_variable = { vel_igs = vr } multiply_temp_variable = { vel_igs = 8 } add_to_temp_variable = { vel_igs = vg }
 			for_loop_effect = {
-				start = 0 end = 5 value = vp
-				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
-				set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 5 } add_to_temp_variable = { vel_ia = vp }
+				start = 0 end = 7 value = vp
+				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
+				set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 7 } add_to_temp_variable = { vel_ia = vp }
 				set_temp_variable = { vel_x = VEL_CHI_sh^vel_igs }
 				multiply_temp_variable = { vel_x = VEL_CHI_N^vel_ia }
 				add_to_variable = { VEL_CHI_res^vel_ir = vel_x }
@@ -262,8 +378,8 @@ VEL_CHI_compute = {
 		}
 		set_temp_variable = { vel_tot = 0 }
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 			set_temp_variable = { vel_v = 1 }
 			add_to_temp_variable = { vel_v = VEL_CHI_lean^vel_ir }
 			multiply_temp_variable = { vel_v = VEL_CHI_res^vel_ir }
@@ -286,8 +402,8 @@ VEL_CHI_compute = {
 		}
 		set_temp_variable = { vel_best = 0 } set_temp_variable = { vel_bi = 0 }
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 			divide_variable = { VEL_CHI_res^vel_ir = vel_tot }
 			set_temp_variable = { vel_cur = VEL_CHI_res^vel_ir }
 			if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
@@ -297,8 +413,8 @@ VEL_CHI_compute = {
 		set_variable = { VEL_CHI_best^vr = vel_best }
 		set_temp_variable = { vel_sumseat = 0 }
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 			set_temp_variable = { vel_x = VEL_CHI_w^vr }
 			multiply_temp_variable = { vel_x = VEL_CHI_res^vel_ir }
 			add_to_variable = { VEL_CHI_nat^vp = vel_x }
@@ -312,13 +428,13 @@ VEL_CHI_compute = {
 		subtract_from_temp_variable = { vel_diff = vel_sumseat }
 		set_temp_variable = { vel_wi = VEL_CHI_win^vr }
 		subtract_from_temp_variable = { vel_wi = 1 }
-		set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vel_wi }
+		set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vel_wi }
 		add_to_variable = { VEL_CHI_sr^vel_ir = vel_diff }
 		# 席次只有 1~2 席的小区域，误差可能让胜者席位变负：夹到 0
 		if = { limit = { check_variable = { VEL_CHI_sr^vel_ir < 0 } } set_variable = { VEL_CHI_sr^vel_ir = 0 } }
 		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+			start = 0 end = 7 value = vp
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 			add_to_variable = { VEL_CHI_seat^vp = VEL_CHI_sr^vel_ir }
 		}
 	}
@@ -336,15 +452,707 @@ VEL_CHI_calc_frames = {
 	}
 }
 
+VEL_CHI_pick = {
+	set_party_index_to_ruling_party = yes
+	set_temp_variable = { vel_rp = party_index }
+	for_loop_effect = {
+		start = 0 end = 7 value = vp
+		set_temp_variable = { vel_pi = VEL_CHI_pidx^vp }
+		if = { limit = { check_variable = { vel_pi > -0.5 } } if = { limit = { OR = { check_variable = { party_banned_array^vel_pi = 1 } check_variable = { party_pop_array^vel_pi < 0.01 } } } set_variable = { VEL_CHI_pidx^vp = -1 } } }
+	}
+	set_temp_variable = { vel_in = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq = vel_rp } } set_temp_variable = { vel_in = 1 } } }
+	if = {
+		limit = { check_variable = { vel_in = 0 } check_variable = { vel_rp > 0.5 } }
+		set_temp_variable = { vel_wp = 9 } set_temp_variable = { vel_ws = -1 }
+		for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq < -0.5 } } set_temp_variable = { vel_ws = vq } set_temp_variable = { vel_wp = -1 } } }
+		for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq > -0.5 } check_variable = { party_pop_array^vel_pq < vel_wp } } set_temp_variable = { vel_wp = party_pop_array^vel_pq } set_temp_variable = { vel_ws = vq } } }
+		if = { limit = { check_variable = { vel_ws > -0.5 } } set_variable = { VEL_CHI_pidx^vel_ws = vel_rp } }
+	}
+	for_loop_effect = {
+		start = 0 end = 9 value = vp
+		set_temp_variable = { vel_bp = 0.015 } set_temp_variable = { vel_bs = -1 }
+		for_loop_effect = {
+			start = 1 end = 24 value = vm
+			set_temp_variable = { vel_ok = 1 }
+			for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq = vm } } set_temp_variable = { vel_ok = 0 } } }
+			if = { limit = { check_variable = { party_banned_array^vm = 1 } } set_temp_variable = { vel_ok = 0 } }
+			if = { limit = { check_variable = { vel_ok = 1 } check_variable = { party_pop_array^vm > vel_bp } } set_temp_variable = { vel_bp = party_pop_array^vm } set_temp_variable = { vel_bs = vm } }
+		}
+		if = {
+			limit = { check_variable = { vel_bs > 0.5 } }
+			set_temp_variable = { vel_es = -1 }
+			for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq < -0.5 } } set_temp_variable = { vel_es = vq } } }
+			if = {
+				limit = { check_variable = { vel_es > -0.5 } }
+				set_variable = { VEL_CHI_pidx^vel_es = vel_bs }
+			}
+			else = {
+				set_temp_variable = { vel_wp = 9 } set_temp_variable = { vel_ws = -1 }
+				for_loop_effect = { start = 0 end = 7 value = vq set_temp_variable = { vel_pq = VEL_CHI_pidx^vq } if = { limit = { check_variable = { vel_pq > -0.5 } NOT = { check_variable = { vel_pq = vel_rp } } check_variable = { party_pop_array^vel_pq < vel_wp } } set_temp_variable = { vel_wp = party_pop_array^vel_pq } set_temp_variable = { vel_ws = vq } } }
+				set_temp_variable = { vel_gap = vel_bp } subtract_from_temp_variable = { vel_gap = vel_wp }
+				if = { limit = { check_variable = { vel_ws > -0.5 } check_variable = { vel_gap > 0.03 } } set_variable = { VEL_CHI_pidx^vel_ws = vel_bs } }
+			}
+		}
+	}
+	for_loop_effect = {
+		start = 0 end = 7 value = vsl
+		set_temp_variable = { vel_m = VEL_CHI_pidx^vsl }
+		if = {
+			limit = { check_variable = { vel_m > -0.5 } }
+			set_temp_variable = { vel_o = VEL_CHI_orig^vsl }
+			for_loop_effect = {
+				start = 0 end = 6 value = vi
+				set_temp_variable = { vel_ip = vsl } multiply_temp_variable = { vel_ip = 6 } add_to_temp_variable = { vel_ip = vi }
+				set_temp_variable = { vel_io = vel_m } multiply_temp_variable = { vel_io = 6 } add_to_temp_variable = { vel_io = vi }
+				set_variable = { VEL_CHI_pos^vel_ip = VEL_CHI_posall^vel_io }
+				if = { limit = { check_variable = { vel_m = vel_o } } set_variable = { VEL_CHI_pos^vel_ip = VEL_CHI_pos0^vel_ip } }
+			}
+			for_loop_effect = {
+				start = 0 end = 8 value = vg
+				set_temp_variable = { vel_ia = vg } multiply_temp_variable = { vel_ia = 7 } add_to_temp_variable = { vel_ia = vsl }
+				set_temp_variable = { vel_ib = vg } multiply_temp_variable = { vel_ib = 24 } add_to_temp_variable = { vel_ib = vel_m }
+				set_variable = { VEL_CHI_aff^vel_ia = VEL_CHI_affall^vel_ib }
+				if = { limit = { check_variable = { vel_m = vel_o } } set_variable = { VEL_CHI_aff^vel_ia = VEL_CHI_aff0^vel_ia } }
+			}
+		}
+	}
+}
+
+# 作用域：国家。输入：dn / ds 数组（当前视图下各席位的得票率与席位）。输出：fb_* 变量。
+VEL_CHI_calc_rank = {
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_key^vp = VEL_CHI_dn^vp } multiply_variable = { VEL_CHI_key^vp = 100000 } set_temp_variable = { vel_kp = VEL_CHI_ds^vp } add_to_variable = { VEL_CHI_key^vp = vel_kp } }
+	for_loop_effect = { start = 0 end = 7 value = vp if = { limit = { check_variable = { VEL_CHI_pidx^vp < -0.5 } } set_variable = { VEL_CHI_key^vp = -1 } } }
+	set_temp_variable = { vel_cum = 0 }
+	set_variable = { VEL_CHI_fb_ext = 0 }
+	set_temp_variable = { vel_bk = -0.5 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 7 value = vp if = { limit = { check_variable = { VEL_CHI_key^vp > vel_bk } } set_temp_variable = { vel_bk = VEL_CHI_key^vp } set_temp_variable = { vel_bj = vp } } }
+	if = {
+		limit = { check_variable = { vel_bj > -0.5 } }
+		set_variable = { VEL_CHI_key^vel_bj = -2 }
+		set_variable = { VEL_CHI_fb_s_1 = vel_bj } add_to_variable = { VEL_CHI_fb_s_1 = 1 }
+		set_variable = { VEL_CHI_fb_p_1 = VEL_CHI_dn^vel_bj } multiply_variable = { VEL_CHI_fb_p_1 = 100 }
+		set_variable = { VEL_CHI_fb_b_1 = VEL_CHI_fb_p_1 } round_variable = VEL_CHI_fb_b_1
+		set_variable = { VEL_CHI_fb_cf_1 = VEL_CHI_fb_s_1 }
+		set_variable = { VEL_CHI_fb_c_1 = VEL_CHI_ds^vel_bj }
+		set_temp_variable = { vel_pm = VEL_CHI_pidx^vel_bj } add_to_temp_variable = { vel_pm = 1 }
+		set_variable = { VEL_CHI_fb_e_1 = vel_pm }
+		set_variable = { VEL_CHI_fb_g_1 = 1 }
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 1 } }
+			set_temp_variable = { vel_ci = ROC_Western_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 0 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 2 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 2 } }
+			set_temp_variable = { vel_ci = ROC_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 1 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 3 } } set_temp_variable = { vel_ci = 3 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 3 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 3 } }
+			set_temp_variable = { vel_ci = ROC_liberalism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 2 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 4 } } set_temp_variable = { vel_ci = 4 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 7 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 4 } }
+			set_temp_variable = { vel_ci = ROC_socialism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 3 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 12 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 5 } }
+			set_temp_variable = { vel_ci = ROC_communist_state_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 4 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 15 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 6 } }
+			set_temp_variable = { vel_ci = ROC_anarchist_communism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 5 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 18 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 7 } }
+			set_temp_variable = { vel_ci = ROC_Conservative_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 6 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 19 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 15 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 14 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 21 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 17 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_Libertarian_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 16 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 22 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 19 } }
+			set_temp_variable = { vel_ci = ROC_neutral_Social_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 18 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 23 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 21 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Populism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 20 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 24 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 22 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Fascism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 21 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 26 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 23 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 22 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 28 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_1 = 24 } }
+			set_temp_variable = { vel_ci = ROC_Monarchist_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 23 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_1 = vel_ci } add_to_variable = { VEL_CHI_fb_g_1 = 30 }
+		}
+		if = { limit = { check_variable = { vel_bj > 4.5 } } set_variable = { VEL_CHI_fb_ext = 1 } }
+		set_variable = { VEL_CHI_fb_l_1 = 0 }
+		for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_lead^vr = VEL_CHI_fb_s_1 } } add_to_variable = { VEL_CHI_fb_l_1 = 1 } } }
+		set_variable = { VEL_CHI_fb_t_1 = VEL_CHI_poll_nat^vel_bj }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_done = 1 } }
+			set_variable = { VEL_CHI_fb_t_1 = VEL_CHI_nat^vel_bj } subtract_from_variable = { VEL_CHI_fb_t_1 = VEL_CHI_poll_nat^vel_bj }
+		}
+		else = {
+			subtract_from_variable = { VEL_CHI_fb_t_1 = VEL_CHI_prev_nat^vel_bj }
+		}
+		multiply_variable = { VEL_CHI_fb_t_1 = 100 }
+		add_to_temp_variable = { vel_cum = VEL_CHI_fb_p_1 }
+		set_variable = { VEL_CHI_fb_cum_1 = vel_cum }
+		multiply_variable = { VEL_CHI_fb_cum_1 = 2 }
+		clamp_variable = { var = VEL_CHI_fb_cum_1 min = 0 max = 200 } round_variable = VEL_CHI_fb_cum_1
+	}
+	else = {
+		set_variable = { VEL_CHI_fb_s_1 = 0 } set_variable = { VEL_CHI_fb_p_1 = 0 } set_variable = { VEL_CHI_fb_c_1 = 0 } set_variable = { VEL_CHI_fb_e_1 = 25 }
+		set_variable = { VEL_CHI_fb_b_1 = 0 } set_variable = { VEL_CHI_fb_cf_1 = 1 } set_variable = { VEL_CHI_fb_g_1 = 1 }
+		set_variable = { VEL_CHI_fb_l_1 = 0 } set_variable = { VEL_CHI_fb_t_1 = 0 } set_variable = { VEL_CHI_fb_cum_1 = VEL_CHI_fb_cum_1 }
+		set_variable = { VEL_CHI_fb_cum_1 = 0 }
+	}
+	set_variable = { VEL_CHI_fbv_1_1 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 1 } } set_variable = { VEL_CHI_fbv_1_1 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_2 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 2 } } set_variable = { VEL_CHI_fbv_1_2 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_3 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 3 } } set_variable = { VEL_CHI_fbv_1_3 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_4 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 4 } } set_variable = { VEL_CHI_fbv_1_4 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_5 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 5 } } set_variable = { VEL_CHI_fbv_1_5 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_6 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 6 } } set_variable = { VEL_CHI_fbv_1_6 = VEL_CHI_fb_cum_1 } }
+	set_variable = { VEL_CHI_fbv_1_7 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_1 = 7 } } set_variable = { VEL_CHI_fbv_1_7 = VEL_CHI_fb_cum_1 } }
+	set_temp_variable = { vel_bk = -0.5 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 7 value = vp if = { limit = { check_variable = { VEL_CHI_key^vp > vel_bk } } set_temp_variable = { vel_bk = VEL_CHI_key^vp } set_temp_variable = { vel_bj = vp } } }
+	if = {
+		limit = { check_variable = { vel_bj > -0.5 } }
+		set_variable = { VEL_CHI_key^vel_bj = -2 }
+		set_variable = { VEL_CHI_fb_s_2 = vel_bj } add_to_variable = { VEL_CHI_fb_s_2 = 1 }
+		set_variable = { VEL_CHI_fb_p_2 = VEL_CHI_dn^vel_bj } multiply_variable = { VEL_CHI_fb_p_2 = 100 }
+		set_variable = { VEL_CHI_fb_b_2 = VEL_CHI_fb_p_2 } round_variable = VEL_CHI_fb_b_2
+		set_variable = { VEL_CHI_fb_cf_2 = VEL_CHI_fb_s_2 }
+		set_variable = { VEL_CHI_fb_c_2 = VEL_CHI_ds^vel_bj }
+		set_temp_variable = { vel_pm = VEL_CHI_pidx^vel_bj } add_to_temp_variable = { vel_pm = 1 }
+		set_variable = { VEL_CHI_fb_e_2 = vel_pm }
+		set_variable = { VEL_CHI_fb_g_2 = 1 }
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 1 } }
+			set_temp_variable = { vel_ci = ROC_Western_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 0 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 2 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 2 } }
+			set_temp_variable = { vel_ci = ROC_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 1 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 3 } } set_temp_variable = { vel_ci = 3 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 3 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 3 } }
+			set_temp_variable = { vel_ci = ROC_liberalism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 2 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 4 } } set_temp_variable = { vel_ci = 4 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 7 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 4 } }
+			set_temp_variable = { vel_ci = ROC_socialism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 3 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 12 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 5 } }
+			set_temp_variable = { vel_ci = ROC_communist_state_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 4 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 15 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 6 } }
+			set_temp_variable = { vel_ci = ROC_anarchist_communism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 5 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 18 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 7 } }
+			set_temp_variable = { vel_ci = ROC_Conservative_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 6 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 19 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 15 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 14 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 21 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 17 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_Libertarian_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 16 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 22 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 19 } }
+			set_temp_variable = { vel_ci = ROC_neutral_Social_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 18 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 23 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 21 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Populism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 20 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 24 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 22 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Fascism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 21 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 26 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 23 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 22 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 28 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_2 = 24 } }
+			set_temp_variable = { vel_ci = ROC_Monarchist_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 23 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_2 = vel_ci } add_to_variable = { VEL_CHI_fb_g_2 = 30 }
+		}
+		if = { limit = { check_variable = { vel_bj > 4.5 } } set_variable = { VEL_CHI_fb_ext = 1 } }
+		set_variable = { VEL_CHI_fb_l_2 = 0 }
+		for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_lead^vr = VEL_CHI_fb_s_2 } } add_to_variable = { VEL_CHI_fb_l_2 = 1 } } }
+		set_variable = { VEL_CHI_fb_t_2 = VEL_CHI_poll_nat^vel_bj }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_done = 1 } }
+			set_variable = { VEL_CHI_fb_t_2 = VEL_CHI_nat^vel_bj } subtract_from_variable = { VEL_CHI_fb_t_2 = VEL_CHI_poll_nat^vel_bj }
+		}
+		else = {
+			subtract_from_variable = { VEL_CHI_fb_t_2 = VEL_CHI_prev_nat^vel_bj }
+		}
+		multiply_variable = { VEL_CHI_fb_t_2 = 100 }
+		add_to_temp_variable = { vel_cum = VEL_CHI_fb_p_2 }
+		set_variable = { VEL_CHI_fb_cum_2 = vel_cum }
+		multiply_variable = { VEL_CHI_fb_cum_2 = 2 }
+		clamp_variable = { var = VEL_CHI_fb_cum_2 min = 0 max = 200 } round_variable = VEL_CHI_fb_cum_2
+	}
+	else = {
+		set_variable = { VEL_CHI_fb_s_2 = 0 } set_variable = { VEL_CHI_fb_p_2 = 0 } set_variable = { VEL_CHI_fb_c_2 = 0 } set_variable = { VEL_CHI_fb_e_2 = 25 }
+		set_variable = { VEL_CHI_fb_b_2 = 0 } set_variable = { VEL_CHI_fb_cf_2 = 1 } set_variable = { VEL_CHI_fb_g_2 = 1 }
+		set_variable = { VEL_CHI_fb_l_2 = 0 } set_variable = { VEL_CHI_fb_t_2 = 0 } set_variable = { VEL_CHI_fb_cum_2 = VEL_CHI_fb_cum_1 }
+	}
+	set_variable = { VEL_CHI_fbv_2_1 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 1 } } set_variable = { VEL_CHI_fbv_2_1 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_2 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 2 } } set_variable = { VEL_CHI_fbv_2_2 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_3 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 3 } } set_variable = { VEL_CHI_fbv_2_3 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_4 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 4 } } set_variable = { VEL_CHI_fbv_2_4 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_5 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 5 } } set_variable = { VEL_CHI_fbv_2_5 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_6 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 6 } } set_variable = { VEL_CHI_fbv_2_6 = VEL_CHI_fb_cum_2 } }
+	set_variable = { VEL_CHI_fbv_2_7 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_2 = 7 } } set_variable = { VEL_CHI_fbv_2_7 = VEL_CHI_fb_cum_2 } }
+	set_temp_variable = { vel_bk = -0.5 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 7 value = vp if = { limit = { check_variable = { VEL_CHI_key^vp > vel_bk } } set_temp_variable = { vel_bk = VEL_CHI_key^vp } set_temp_variable = { vel_bj = vp } } }
+	if = {
+		limit = { check_variable = { vel_bj > -0.5 } }
+		set_variable = { VEL_CHI_key^vel_bj = -2 }
+		set_variable = { VEL_CHI_fb_s_3 = vel_bj } add_to_variable = { VEL_CHI_fb_s_3 = 1 }
+		set_variable = { VEL_CHI_fb_p_3 = VEL_CHI_dn^vel_bj } multiply_variable = { VEL_CHI_fb_p_3 = 100 }
+		set_variable = { VEL_CHI_fb_b_3 = VEL_CHI_fb_p_3 } round_variable = VEL_CHI_fb_b_3
+		set_variable = { VEL_CHI_fb_cf_3 = VEL_CHI_fb_s_3 }
+		set_variable = { VEL_CHI_fb_c_3 = VEL_CHI_ds^vel_bj }
+		set_temp_variable = { vel_pm = VEL_CHI_pidx^vel_bj } add_to_temp_variable = { vel_pm = 1 }
+		set_variable = { VEL_CHI_fb_e_3 = vel_pm }
+		set_variable = { VEL_CHI_fb_g_3 = 1 }
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 1 } }
+			set_temp_variable = { vel_ci = ROC_Western_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 0 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 2 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 2 } }
+			set_temp_variable = { vel_ci = ROC_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 1 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 3 } } set_temp_variable = { vel_ci = 3 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 3 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 3 } }
+			set_temp_variable = { vel_ci = ROC_liberalism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 2 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 4 } } set_temp_variable = { vel_ci = 4 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 7 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 4 } }
+			set_temp_variable = { vel_ci = ROC_socialism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 3 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 12 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 5 } }
+			set_temp_variable = { vel_ci = ROC_communist_state_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 4 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 15 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 6 } }
+			set_temp_variable = { vel_ci = ROC_anarchist_communism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 5 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 18 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 7 } }
+			set_temp_variable = { vel_ci = ROC_Conservative_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 6 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 19 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 15 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 14 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 21 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 17 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_Libertarian_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 16 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 22 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 19 } }
+			set_temp_variable = { vel_ci = ROC_neutral_Social_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 18 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 23 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 21 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Populism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 20 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 24 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 22 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Fascism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 21 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 26 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 23 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 22 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 28 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_3 = 24 } }
+			set_temp_variable = { vel_ci = ROC_Monarchist_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 23 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_3 = vel_ci } add_to_variable = { VEL_CHI_fb_g_3 = 30 }
+		}
+		if = { limit = { check_variable = { vel_bj > 4.5 } } set_variable = { VEL_CHI_fb_ext = 1 } }
+		set_variable = { VEL_CHI_fb_l_3 = 0 }
+		for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_lead^vr = VEL_CHI_fb_s_3 } } add_to_variable = { VEL_CHI_fb_l_3 = 1 } } }
+		set_variable = { VEL_CHI_fb_t_3 = VEL_CHI_poll_nat^vel_bj }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_done = 1 } }
+			set_variable = { VEL_CHI_fb_t_3 = VEL_CHI_nat^vel_bj } subtract_from_variable = { VEL_CHI_fb_t_3 = VEL_CHI_poll_nat^vel_bj }
+		}
+		else = {
+			subtract_from_variable = { VEL_CHI_fb_t_3 = VEL_CHI_prev_nat^vel_bj }
+		}
+		multiply_variable = { VEL_CHI_fb_t_3 = 100 }
+		add_to_temp_variable = { vel_cum = VEL_CHI_fb_p_3 }
+		set_variable = { VEL_CHI_fb_cum_3 = vel_cum }
+		multiply_variable = { VEL_CHI_fb_cum_3 = 2 }
+		clamp_variable = { var = VEL_CHI_fb_cum_3 min = 0 max = 200 } round_variable = VEL_CHI_fb_cum_3
+	}
+	else = {
+		set_variable = { VEL_CHI_fb_s_3 = 0 } set_variable = { VEL_CHI_fb_p_3 = 0 } set_variable = { VEL_CHI_fb_c_3 = 0 } set_variable = { VEL_CHI_fb_e_3 = 25 }
+		set_variable = { VEL_CHI_fb_b_3 = 0 } set_variable = { VEL_CHI_fb_cf_3 = 1 } set_variable = { VEL_CHI_fb_g_3 = 1 }
+		set_variable = { VEL_CHI_fb_l_3 = 0 } set_variable = { VEL_CHI_fb_t_3 = 0 } set_variable = { VEL_CHI_fb_cum_3 = VEL_CHI_fb_cum_2 }
+	}
+	set_variable = { VEL_CHI_fbv_3_1 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 1 } } set_variable = { VEL_CHI_fbv_3_1 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_2 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 2 } } set_variable = { VEL_CHI_fbv_3_2 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_3 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 3 } } set_variable = { VEL_CHI_fbv_3_3 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_4 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 4 } } set_variable = { VEL_CHI_fbv_3_4 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_5 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 5 } } set_variable = { VEL_CHI_fbv_3_5 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_6 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 6 } } set_variable = { VEL_CHI_fbv_3_6 = VEL_CHI_fb_cum_3 } }
+	set_variable = { VEL_CHI_fbv_3_7 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_3 = 7 } } set_variable = { VEL_CHI_fbv_3_7 = VEL_CHI_fb_cum_3 } }
+	set_temp_variable = { vel_bk = -0.5 } set_temp_variable = { vel_bj = -1 }
+	for_loop_effect = { start = 0 end = 7 value = vp if = { limit = { check_variable = { VEL_CHI_key^vp > vel_bk } } set_temp_variable = { vel_bk = VEL_CHI_key^vp } set_temp_variable = { vel_bj = vp } } }
+	if = {
+		limit = { check_variable = { vel_bj > -0.5 } }
+		set_variable = { VEL_CHI_key^vel_bj = -2 }
+		set_variable = { VEL_CHI_fb_s_4 = vel_bj } add_to_variable = { VEL_CHI_fb_s_4 = 1 }
+		set_variable = { VEL_CHI_fb_p_4 = VEL_CHI_dn^vel_bj } multiply_variable = { VEL_CHI_fb_p_4 = 100 }
+		set_variable = { VEL_CHI_fb_b_4 = VEL_CHI_fb_p_4 } round_variable = VEL_CHI_fb_b_4
+		set_variable = { VEL_CHI_fb_cf_4 = VEL_CHI_fb_s_4 }
+		set_variable = { VEL_CHI_fb_c_4 = VEL_CHI_ds^vel_bj }
+		set_temp_variable = { vel_pm = VEL_CHI_pidx^vel_bj } add_to_temp_variable = { vel_pm = 1 }
+		set_variable = { VEL_CHI_fb_e_4 = vel_pm }
+		set_variable = { VEL_CHI_fb_g_4 = 1 }
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 1 } }
+			set_temp_variable = { vel_ci = ROC_Western_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 0 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 2 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 2 } }
+			set_temp_variable = { vel_ci = ROC_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 1 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 3 } } set_temp_variable = { vel_ci = 3 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 3 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 3 } }
+			set_temp_variable = { vel_ci = ROC_liberalism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 2 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 4 } } set_temp_variable = { vel_ci = 4 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 7 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 4 } }
+			set_temp_variable = { vel_ci = ROC_socialism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 3 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 12 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 5 } }
+			set_temp_variable = { vel_ci = ROC_communist_state_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 4 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 2 } } set_temp_variable = { vel_ci = 2 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 15 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 6 } }
+			set_temp_variable = { vel_ci = ROC_anarchist_communism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 5 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 18 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 7 } }
+			set_temp_variable = { vel_ci = ROC_Conservative_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 6 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 19 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 15 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_conservatism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 14 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 21 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 17 } }
+			set_temp_variable = { vel_ci = ROC_Neutral_Libertarian_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 16 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 22 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 19 } }
+			set_temp_variable = { vel_ci = ROC_neutral_Social_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 18 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 0 } } set_temp_variable = { vel_ci = 0 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 23 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 21 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Populism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 20 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 24 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 22 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Fascism_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 21 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 26 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 23 } }
+			set_temp_variable = { vel_ci = ROC_Nat_Autocracy_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 22 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 28 }
+		}
+		if = {
+			limit = { check_variable = { VEL_CHI_fb_e_4 = 24 } }
+			set_temp_variable = { vel_ci = ROC_Monarchist_leader?0 }
+			if = { limit = { check_variable = { ruling_party = 23 } check_variable = { vel_ci > 0 } } subtract_from_temp_variable = { vel_ci = 1 } }
+			if = { limit = { check_variable = { vel_ci > 1 } } set_temp_variable = { vel_ci = 1 } }
+			set_variable = { VEL_CHI_fb_g_4 = vel_ci } add_to_variable = { VEL_CHI_fb_g_4 = 30 }
+		}
+		if = { limit = { check_variable = { vel_bj > 4.5 } } set_variable = { VEL_CHI_fb_ext = 1 } }
+		set_variable = { VEL_CHI_fb_l_4 = 0 }
+		for_loop_effect = { start = 0 end = 32 value = vr if = { limit = { check_variable = { VEL_CHI_lead^vr = VEL_CHI_fb_s_4 } } add_to_variable = { VEL_CHI_fb_l_4 = 1 } } }
+		set_variable = { VEL_CHI_fb_t_4 = VEL_CHI_poll_nat^vel_bj }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_done = 1 } }
+			set_variable = { VEL_CHI_fb_t_4 = VEL_CHI_nat^vel_bj } subtract_from_variable = { VEL_CHI_fb_t_4 = VEL_CHI_poll_nat^vel_bj }
+		}
+		else = {
+			subtract_from_variable = { VEL_CHI_fb_t_4 = VEL_CHI_prev_nat^vel_bj }
+		}
+		multiply_variable = { VEL_CHI_fb_t_4 = 100 }
+		add_to_temp_variable = { vel_cum = VEL_CHI_fb_p_4 }
+		set_variable = { VEL_CHI_fb_cum_4 = vel_cum }
+		multiply_variable = { VEL_CHI_fb_cum_4 = 2 }
+		clamp_variable = { var = VEL_CHI_fb_cum_4 min = 0 max = 200 } round_variable = VEL_CHI_fb_cum_4
+	}
+	else = {
+		set_variable = { VEL_CHI_fb_s_4 = 0 } set_variable = { VEL_CHI_fb_p_4 = 0 } set_variable = { VEL_CHI_fb_c_4 = 0 } set_variable = { VEL_CHI_fb_e_4 = 25 }
+		set_variable = { VEL_CHI_fb_b_4 = 0 } set_variable = { VEL_CHI_fb_cf_4 = 1 } set_variable = { VEL_CHI_fb_g_4 = 1 }
+		set_variable = { VEL_CHI_fb_l_4 = 0 } set_variable = { VEL_CHI_fb_t_4 = 0 } set_variable = { VEL_CHI_fb_cum_4 = VEL_CHI_fb_cum_3 }
+	}
+	set_variable = { VEL_CHI_fbv_4_1 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 1 } } set_variable = { VEL_CHI_fbv_4_1 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_2 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 2 } } set_variable = { VEL_CHI_fbv_4_2 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_3 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 3 } } set_variable = { VEL_CHI_fbv_4_3 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_4 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 4 } } set_variable = { VEL_CHI_fbv_4_4 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_5 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 5 } } set_variable = { VEL_CHI_fbv_4_5 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_6 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 6 } } set_variable = { VEL_CHI_fbv_4_6 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_fbv_4_7 = 0 }
+	if = { limit = { check_variable = { VEL_CHI_fb_s_4 = 7 } } set_variable = { VEL_CHI_fbv_4_7 = VEL_CHI_fb_cum_4 } }
+	set_variable = { VEL_CHI_ef_1 = VEL_CHI_pidx^0 } add_to_variable = { VEL_CHI_ef_1 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^0 < -0.5 } } set_variable = { VEL_CHI_ef_1 = 25 } }
+	set_variable = { VEL_CHI_ef_2 = VEL_CHI_pidx^1 } add_to_variable = { VEL_CHI_ef_2 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^1 < -0.5 } } set_variable = { VEL_CHI_ef_2 = 25 } }
+	set_variable = { VEL_CHI_ef_3 = VEL_CHI_pidx^2 } add_to_variable = { VEL_CHI_ef_3 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^2 < -0.5 } } set_variable = { VEL_CHI_ef_3 = 25 } }
+	set_variable = { VEL_CHI_ef_4 = VEL_CHI_pidx^3 } add_to_variable = { VEL_CHI_ef_4 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^3 < -0.5 } } set_variable = { VEL_CHI_ef_4 = 25 } }
+	set_variable = { VEL_CHI_ef_5 = VEL_CHI_pidx^4 } add_to_variable = { VEL_CHI_ef_5 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^4 < -0.5 } } set_variable = { VEL_CHI_ef_5 = 25 } }
+	set_variable = { VEL_CHI_ef_6 = VEL_CHI_pidx^5 } add_to_variable = { VEL_CHI_ef_6 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^5 < -0.5 } } set_variable = { VEL_CHI_ef_6 = 25 } }
+	set_variable = { VEL_CHI_ef_7 = VEL_CHI_pidx^6 } add_to_variable = { VEL_CHI_ef_7 = 1 }
+	if = { limit = { check_variable = { VEL_CHI_pidx^6 < -0.5 } } set_variable = { VEL_CHI_ef_7 = 25 } }
+	set_variable = { VEL_CHI_fb_o = 100 }
+	subtract_from_variable = { VEL_CHI_fb_o = VEL_CHI_fb_p_1 }
+	subtract_from_variable = { VEL_CHI_fb_o = VEL_CHI_fb_p_2 }
+	subtract_from_variable = { VEL_CHI_fb_o = VEL_CHI_fb_p_3 }
+	subtract_from_variable = { VEL_CHI_fb_o = VEL_CHI_fb_p_4 }
+	clamp_variable = { var = VEL_CHI_fb_o min = 0 max = 100 }
+	set_variable = { VEL_CHI_live_need = 113 }
+	subtract_from_variable = { VEL_CHI_live_need = VEL_CHI_fb_c_1 }
+	if = { limit = { check_variable = { VEL_CHI_live_need < 0 } } set_variable = { VEL_CHI_live_need = 0 } }
+	set_variable = { VEL_CHI_live_state = 1 }
+	if = { limit = { check_variable = { VEL_CHI_fb_c_1 < 1 } } set_variable = { VEL_CHI_live_state = 0 } }
+	if = { limit = { check_variable = { VEL_CHI_live_need = 0 } check_variable = { VEL_CHI_fb_c_1 > 0 } } set_variable = { VEL_CHI_live_state = 2 } }
+}
+
 VEL_CHI_save_poll = {
-	for_loop_effect = { start = 0 end = 160 value = vk set_variable = { VEL_CHI_poll_res^vk = VEL_CHI_res^vk } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_prev_nat^vp = VEL_CHI_poll_nat^vp } }
+	for_loop_effect = { start = 0 end = 224 value = vk set_variable = { VEL_CHI_poll_res^vk = VEL_CHI_res^vk } }
 	for_loop_effect = { start = 0 end = 32 value = vr set_variable = { VEL_CHI_poll_fr^vr = VEL_CHI_fr_res^vr } set_variable = { VEL_CHI_poll_win^vr = VEL_CHI_win^vr } set_variable = { VEL_CHI_poll_best^vr = VEL_CHI_best^vr } }
-	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_CHI_poll_nat^vp = VEL_CHI_nat^vp } set_variable = { VEL_CHI_poll_seat^vp = VEL_CHI_seat^vp } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_poll_nat^vp = VEL_CHI_nat^vp } set_variable = { VEL_CHI_poll_seat^vp = VEL_CHI_seat^vp } }
 	set_variable = { VEL_CHI_poll_ready = 1 }
 }
 
 VEL_CHI_run_poll = {
 	set_temp_variable = { vel_noise = 0 }
+	VEL_CHI_pick = yes
 	VEL_CHI_set_gov = yes
 	log = "[GetDateText] VEL_CHI_run_poll: gov=[?VEL_CHI_gov] view=[?VEL_CHI_view] phase=[?VEL_CHI_phase]"
 	VEL_CHI_compute = yes
@@ -363,18 +1171,21 @@ VEL_CHI_run_poll = {
 VEL_CHI_set_gov = {
 	set_party_index_to_ruling_party = yes
 	set_temp_variable = { vel_gov = 0 }
-	for_loop_effect = { start = 0 end = 5 value = vp set_temp_variable = { vel_pi = VEL_CHI_pidx^vp } if = { limit = { check_variable = { vel_pi = party_index } } set_temp_variable = { vel_gov = vp } } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_temp_variable = { vel_pi = VEL_CHI_pidx^vp } if = { limit = { check_variable = { vel_pi = party_index } } set_temp_variable = { vel_gov = vp } } }
 	set_variable = { VEL_CHI_gov = vel_gov }
 }
 
 VEL_CHI_run_result = {
+	set_country_flag = VEL_CHI_open
 	set_temp_variable = { vel_noise = 1 }
 	VEL_CHI_set_gov = yes
 	VEL_CHI_compute = yes
 	VEL_CHI_calc_frames = yes
 	for_loop_effect = { start = 0 end = 32 value = vr set_variable = { VEL_CHI_rev^vr = 0 } }
-	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_CHI_run_seat^vp = 0 } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_run_seat^vp = 0 } }
 	set_variable = { VEL_CHI_anim_n = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_run_nat^vp = 0 } }
+	set_variable = { VEL_CHI_run_w = 0 }
 	set_variable = { VEL_CHI_done = 0 }
 	set_variable = { VEL_CHI_view = 2 }
 	set_variable = { VEL_CHI_phase = 2 }
@@ -391,10 +1202,12 @@ VEL_CHI_reveal_step = {
 				set_temp_variable = { vel_r = VEL_CHI_order^VEL_CHI_anim_n }
 				set_variable = { VEL_CHI_rev^vel_r = 1 }
 				for_loop_effect = {
-					start = 0 end = 5 value = vp
-					set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+					start = 0 end = 7 value = vp
+					set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = vp }
 					add_to_variable = { VEL_CHI_run_seat^vp = VEL_CHI_sr^vel_ir }
+					set_temp_variable = { vel_rv = VEL_CHI_res^vel_ir } multiply_temp_variable = { vel_rv = VEL_CHI_w^vel_r } add_to_variable = { VEL_CHI_run_nat^vp = vel_rv }
 				}
+				set_temp_variable = { vel_rw = VEL_CHI_w^vel_r } add_to_variable = { VEL_CHI_run_w = vel_rw }
 				add_to_variable = { VEL_CHI_anim_n = 1 }
 			}
 		}
@@ -414,7 +1227,7 @@ VEL_CHI_refresh_all = {
 	for_loop_effect = {
 		start = 0 end = 32 value = vr
 		set_temp_variable = { vel_b = -1 } set_temp_variable = { vel_s2 = -1 } set_temp_variable = { vel_bi = 1 } set_temp_variable = { vel_has = 0 }
-		set_temp_variable = { vel_ik = vr } multiply_temp_variable = { vel_ik = 5 } add_to_temp_variable = { vel_ik = 0 }
+		set_temp_variable = { vel_ik = vr } multiply_temp_variable = { vel_ik = 7 } add_to_temp_variable = { vel_ik = 0 }
 		set_temp_variable = { vel_v = 0 }
 		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
@@ -443,6 +1256,18 @@ VEL_CHI_refresh_all = {
 		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
 		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 5 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 6 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		add_to_temp_variable = { vel_ik = 1 }
+		set_temp_variable = { vel_v = 0 }
+		if = { limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } } set_temp_variable = { vel_v = VEL_CHI_poll_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vr = 1 } } set_temp_variable = { vel_v = VEL_CHI_res^vel_ik } set_temp_variable = { vel_has = 1 } }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 7 } }
 		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
 		add_to_temp_variable = { vel_ik = 1 }
 		set_temp_variable = { vel_m = vel_b }
@@ -543,6 +1368,7 @@ VEL_CHI_refresh_all = {
 	}
 	else = {
 		set_variable = { VEL_CHI_dn_1 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_1 = VEL_CHI_run_nat^0 } divide_variable = { VEL_CHI_dn_1 = VEL_CHI_run_w } }
 		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_1 = VEL_CHI_nat^0 } }
 		set_variable = { VEL_CHI_ds_1 = VEL_CHI_run_seat^0 }
 	}
@@ -558,6 +1384,7 @@ VEL_CHI_refresh_all = {
 	}
 	else = {
 		set_variable = { VEL_CHI_dn_2 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_2 = VEL_CHI_run_nat^1 } divide_variable = { VEL_CHI_dn_2 = VEL_CHI_run_w } }
 		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_2 = VEL_CHI_nat^1 } }
 		set_variable = { VEL_CHI_ds_2 = VEL_CHI_run_seat^1 }
 	}
@@ -573,6 +1400,7 @@ VEL_CHI_refresh_all = {
 	}
 	else = {
 		set_variable = { VEL_CHI_dn_3 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_3 = VEL_CHI_run_nat^2 } divide_variable = { VEL_CHI_dn_3 = VEL_CHI_run_w } }
 		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_3 = VEL_CHI_nat^2 } }
 		set_variable = { VEL_CHI_ds_3 = VEL_CHI_run_seat^2 }
 	}
@@ -588,6 +1416,7 @@ VEL_CHI_refresh_all = {
 	}
 	else = {
 		set_variable = { VEL_CHI_dn_4 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_4 = VEL_CHI_run_nat^3 } divide_variable = { VEL_CHI_dn_4 = VEL_CHI_run_w } }
 		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_4 = VEL_CHI_nat^3 } }
 		set_variable = { VEL_CHI_ds_4 = VEL_CHI_run_seat^3 }
 	}
@@ -603,6 +1432,7 @@ VEL_CHI_refresh_all = {
 	}
 	else = {
 		set_variable = { VEL_CHI_dn_5 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_5 = VEL_CHI_run_nat^4 } divide_variable = { VEL_CHI_dn_5 = VEL_CHI_run_w } }
 		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_5 = VEL_CHI_nat^4 } }
 		set_variable = { VEL_CHI_ds_5 = VEL_CHI_run_seat^4 }
 	}
@@ -611,6 +1441,49 @@ VEL_CHI_refresh_all = {
 	round_variable = VEL_CHI_bar_5
 	set_variable = { VEL_CHI_pct_5 = VEL_CHI_dn_5 }
 	multiply_variable = { VEL_CHI_pct_5 = 100 }
+	if = {
+		limit = { check_variable = { VEL_CHI_view = 1 } }
+		set_variable = { VEL_CHI_dn_6 = VEL_CHI_poll_nat^5 }
+		set_variable = { VEL_CHI_ds_6 = VEL_CHI_poll_seat^5 }
+	}
+	else = {
+		set_variable = { VEL_CHI_dn_6 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_6 = VEL_CHI_run_nat^5 } divide_variable = { VEL_CHI_dn_6 = VEL_CHI_run_w } }
+		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_6 = VEL_CHI_nat^5 } }
+		set_variable = { VEL_CHI_ds_6 = VEL_CHI_run_seat^5 }
+	}
+	set_variable = { VEL_CHI_bar_6 = VEL_CHI_dn_6 }
+	multiply_variable = { VEL_CHI_bar_6 = 100 }
+	round_variable = VEL_CHI_bar_6
+	set_variable = { VEL_CHI_pct_6 = VEL_CHI_dn_6 }
+	multiply_variable = { VEL_CHI_pct_6 = 100 }
+	if = {
+		limit = { check_variable = { VEL_CHI_view = 1 } }
+		set_variable = { VEL_CHI_dn_7 = VEL_CHI_poll_nat^6 }
+		set_variable = { VEL_CHI_ds_7 = VEL_CHI_poll_seat^6 }
+	}
+	else = {
+		set_variable = { VEL_CHI_dn_7 = 0 }
+		if = { limit = { check_variable = { VEL_CHI_run_w > 0 } } set_variable = { VEL_CHI_dn_7 = VEL_CHI_run_nat^6 } divide_variable = { VEL_CHI_dn_7 = VEL_CHI_run_w } }
+		if = { limit = { check_variable = { VEL_CHI_done = 1 } } set_variable = { VEL_CHI_dn_7 = VEL_CHI_nat^6 } }
+		set_variable = { VEL_CHI_ds_7 = VEL_CHI_run_seat^6 }
+	}
+	set_variable = { VEL_CHI_bar_7 = VEL_CHI_dn_7 }
+	multiply_variable = { VEL_CHI_bar_7 = 100 }
+	round_variable = VEL_CHI_bar_7
+	set_variable = { VEL_CHI_pct_7 = VEL_CHI_dn_7 }
+	multiply_variable = { VEL_CHI_pct_7 = 100 }
+	set_variable = { VEL_CHI_dn^0 = VEL_CHI_dn_1 } set_variable = { VEL_CHI_ds^0 = VEL_CHI_ds_1 }
+	set_variable = { VEL_CHI_dn^1 = VEL_CHI_dn_2 } set_variable = { VEL_CHI_ds^1 = VEL_CHI_ds_2 }
+	set_variable = { VEL_CHI_dn^2 = VEL_CHI_dn_3 } set_variable = { VEL_CHI_ds^2 = VEL_CHI_ds_3 }
+	set_variable = { VEL_CHI_dn^3 = VEL_CHI_dn_4 } set_variable = { VEL_CHI_ds^3 = VEL_CHI_ds_4 }
+	set_variable = { VEL_CHI_dn^4 = VEL_CHI_dn_5 } set_variable = { VEL_CHI_ds^4 = VEL_CHI_ds_5 }
+	set_variable = { VEL_CHI_dn^5 = VEL_CHI_dn_6 } set_variable = { VEL_CHI_ds^5 = VEL_CHI_ds_6 }
+	set_variable = { VEL_CHI_dn^6 = VEL_CHI_dn_7 } set_variable = { VEL_CHI_ds^6 = VEL_CHI_ds_7 }
+	set_variable = { VEL_CHI_ds_x = 0 } set_variable = { VEL_CHI_pct_x = 0 }
+	add_to_variable = { VEL_CHI_ds_x = VEL_CHI_ds_6 } add_to_variable = { VEL_CHI_pct_x = VEL_CHI_pct_6 }
+	add_to_variable = { VEL_CHI_ds_x = VEL_CHI_ds_7 } add_to_variable = { VEL_CHI_pct_x = VEL_CHI_pct_7 }
+	VEL_CHI_calc_rank = yes
 	VEL_CHI_refresh_sel = yes
 }
 
@@ -619,7 +1492,7 @@ VEL_CHI_refresh_sel = {
 		limit = { check_variable = { VEL_CHI_sel > 0 } }
 		set_temp_variable = { vel_r = VEL_CHI_sel }
 		subtract_from_temp_variable = { vel_r = 1 }
-		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = 0 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 0 }
 		set_variable = { VEL_CHI_sp_1 = 0 }
 		if = {
 			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
@@ -627,7 +1500,7 @@ VEL_CHI_refresh_sel = {
 		}
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_1 = VEL_CHI_res^vel_ir } }
 		multiply_variable = { VEL_CHI_sp_1 = 100 }
-		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = 1 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 1 }
 		set_variable = { VEL_CHI_sp_2 = 0 }
 		if = {
 			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
@@ -635,7 +1508,7 @@ VEL_CHI_refresh_sel = {
 		}
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_2 = VEL_CHI_res^vel_ir } }
 		multiply_variable = { VEL_CHI_sp_2 = 100 }
-		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = 2 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 2 }
 		set_variable = { VEL_CHI_sp_3 = 0 }
 		if = {
 			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
@@ -643,7 +1516,7 @@ VEL_CHI_refresh_sel = {
 		}
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_3 = VEL_CHI_res^vel_ir } }
 		multiply_variable = { VEL_CHI_sp_3 = 100 }
-		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = 3 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 3 }
 		set_variable = { VEL_CHI_sp_4 = 0 }
 		if = {
 			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
@@ -651,7 +1524,7 @@ VEL_CHI_refresh_sel = {
 		}
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_4 = VEL_CHI_res^vel_ir } }
 		multiply_variable = { VEL_CHI_sp_4 = 100 }
-		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = 4 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 4 }
 		set_variable = { VEL_CHI_sp_5 = 0 }
 		if = {
 			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
@@ -659,6 +1532,22 @@ VEL_CHI_refresh_sel = {
 		}
 		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_5 = VEL_CHI_res^vel_ir } }
 		multiply_variable = { VEL_CHI_sp_5 = 100 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 5 }
+		set_variable = { VEL_CHI_sp_6 = 0 }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
+			set_variable = { VEL_CHI_sp_6 = VEL_CHI_poll_res^vel_ir }
+		}
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_6 = VEL_CHI_res^vel_ir } }
+		multiply_variable = { VEL_CHI_sp_6 = 100 }
+		set_temp_variable = { vel_ir = vel_r } multiply_temp_variable = { vel_ir = 7 } add_to_temp_variable = { vel_ir = 6 }
+		set_variable = { VEL_CHI_sp_7 = 0 }
+		if = {
+			limit = { check_variable = { VEL_CHI_view = 1 } check_variable = { VEL_CHI_poll_ready = 1 } }
+			set_variable = { VEL_CHI_sp_7 = VEL_CHI_poll_res^vel_ir }
+		}
+		else_if = { limit = { check_variable = { VEL_CHI_view = 2 } check_variable = { VEL_CHI_rev^vel_r = 1 } } set_variable = { VEL_CHI_sp_7 = VEL_CHI_res^vel_ir } }
+		multiply_variable = { VEL_CHI_sp_7 = 100 }
 		set_temp_variable = { vel_ig = vel_r } multiply_temp_variable = { vel_ig = 8 } add_to_temp_variable = { vel_ig = 0 }
 		set_variable = { VEL_CHI_sg_1 = VEL_CHI_sh^vel_ig }
 		multiply_variable = { VEL_CHI_sg_1 = 100 }
@@ -716,6 +1605,18 @@ VEL_CHI_refresh_sel = {
 		clamp_variable = { var = VEL_CHI_sb_5 min = 0 max = 100 }
 		set_temp_variable = { vel_v = VEL_CHI_sp_5 }
 		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 5 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_6 = VEL_CHI_sp_6 }
+		round_variable = VEL_CHI_sb_6
+		clamp_variable = { var = VEL_CHI_sb_6 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_6 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 6 } }
+		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
+		set_variable = { VEL_CHI_sb_7 = VEL_CHI_sp_7 }
+		round_variable = VEL_CHI_sb_7
+		clamp_variable = { var = VEL_CHI_sb_7 min = 0 max = 100 }
+		set_temp_variable = { vel_v = VEL_CHI_sp_7 }
+		if = { limit = { check_variable = { vel_v > vel_b } } set_temp_variable = { vel_s2 = vel_b } set_temp_variable = { vel_b = vel_v } set_temp_variable = { vel_bi = 7 } }
 		else_if = { limit = { check_variable = { vel_v > vel_s2 } } set_temp_variable = { vel_s2 = vel_v } }
 		set_variable = { VEL_CHI_s_lead = vel_bi }
 		set_variable = { VEL_CHI_s_margin = vel_b }
@@ -778,9 +1679,11 @@ VEL_CHI_set_main_issue = {
 }
 
 VEL_CHI_reset = {
+	set_country_flag = VEL_CHI_open
 	for_loop_effect = { start = 0 end = 32 value = vr set_variable = { VEL_CHI_rev^vr = 0 } set_variable = { VEL_CHI_camp^vr = 0 } }
 	for_loop_effect = { start = 0 end = 6 value = vi set_variable = { VEL_CHI_sal^vi = 1 } }
-	for_loop_effect = { start = 0 end = 5 value = vp set_variable = { VEL_CHI_cand^vp = 0 } set_variable = { VEL_CHI_run_seat^vp = 0 } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VEL_CHI_cand^vp = 0 } set_variable = { VEL_CHI_run_seat^vp = 0 } set_variable = { VEL_CHI_run_nat^vp = 0 } }
+	set_variable = { VEL_CHI_run_w = 0 }
 	set_variable = { VEL_CHI_main = 0 }
 	set_variable = { VEL_CHI_poll_ready = 0 }
 	set_variable = { VEL_CHI_done = 0 }
@@ -792,6 +1695,7 @@ VEL_CHI_reset = {
 
 # 每天由 on_action 调用；每 30 天重算一次民调（开票进行中不刷新）
 VEL_CHI_poll_tick = {
+	if = { limit = { has_country_flag = VEL_CHI_inited } add_to_variable = { VEL_CHI_news_t = 1 } if = { limit = { check_variable = { VEL_CHI_news_t > 3 } } set_variable = { VEL_CHI_news_t = 0 } add_to_variable = { VEL_CHI_news_i = 1 } if = { limit = { check_variable = { VEL_CHI_news_i > 3 } } set_variable = { VEL_CHI_news_i = 0 } } } }
 	if = {
 		limit = { has_country_flag = VEL_CHI_inited check_variable = { global.num_days > VEL_CHI_poll_due } NOT = { check_variable = { VEL_CHI_phase = 2 } } }
 		set_variable = { VEL_CHI_poll_due = global.num_days }

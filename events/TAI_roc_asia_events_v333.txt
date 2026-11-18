@@ -1,7 +1,7 @@
 # MD ROC Return v3.33 —— 台湾时代政治线与巴基斯坦的事件（由 _tools/patch_v333.py 生成）
 add_namespace = roc_asia
 
-# 「不统不独不武」
+# “不统不独不武”
 country_event = {
 	id = roc_asia.90
 	title = roc_asia.90.t

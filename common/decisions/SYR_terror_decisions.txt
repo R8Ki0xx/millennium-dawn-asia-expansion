@@ -1,0 +1,92 @@
+# MD ROC Return v3.36 —— 叙利亚内战期间的反恐与恐怖主义决议
+# 指数是全局变量 global.SYR_terror_index（0~100），到 100 时 ISIS 爆发；面板“内战与反恐”显示指数、本月变动明细、控制权分布。
+# 决议的改动记入面板“玩家行动”一项（global.SYR_terror_f_player_acc，月结时转入明细）。
+SYR_terror_category = {
+	SYR_dec_terror_crackdown = {
+		icon = GFX_decision_generic_political_address
+		cost = 50
+		days_re_enable = 60
+		visible = {
+			OR = { original_tag = SYR original_tag = FSA original_tag = IRQ }
+		}
+		available = {
+			check_variable = { global.SYR_terror_index > 9.99 }
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_terror_crackdown"
+			add_stability = -0.02
+			set_temp_variable = { syr_terror_delta = -12 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 0 check_variable = { global.SYR_terror_index < 25 } }
+			modifier = { factor = 3 check_variable = { global.SYR_terror_index > 60 } }
+		}
+	}
+
+	SYR_dec_terror_amnesty = {
+		icon = GFX_decision_generic_political_address
+		cost = 75
+		days_re_enable = 90
+		visible = {
+			OR = { original_tag = SYR original_tag = FSA original_tag = IRQ }
+		}
+		available = {
+			check_variable = { global.SYR_terror_index > 9.99 }
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_terror_amnesty"
+			add_stability = 0.02
+			set_temp_variable = { syr_terror_delta = -8 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = {
+			base = 6
+			modifier = { factor = 0 check_variable = { global.SYR_terror_index < 30 } }
+		}
+	}
+
+	SYR_dec_terror_border = {
+		icon = GFX_decision_generic_political_address
+		cost = 40
+		days_re_enable = 75
+		visible = {
+			OR = { original_tag = SYR original_tag = IRQ }
+		}
+		available = {
+			check_variable = { global.SYR_terror_index > 9.99 }
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_terror_border"
+			add_war_support = -0.02
+			set_temp_variable = { syr_terror_delta = -6 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = {
+			base = 8
+			modifier = { factor = 0 check_variable = { global.SYR_terror_index < 20 } }
+		}
+	}
+
+	SYR_dec_terror_recruit = {
+		icon = GFX_decision_generic_political_address
+		cost = 50
+		days_re_enable = 45
+		visible = { original_tag = NUS }
+		available = {
+			num_of_controlled_states > 0
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_terror_recruit"
+			add_manpower = 4000
+			set_temp_variable = { syr_terror_delta = 8 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 12 }
+	}
+}

@@ -2,11 +2,11 @@
 guiTypes = {
 	containerWindowType = {
 		name = "VEL_USA_window"
-		size = { width = 500 height = 228 }
+		size = { width = 500 height = 260 }
 		containerWindowType = {
 			name = "vel_usa_bgw"
 			position = { x = 0 y = 14 }
-			size = { width = 500 height = 214 }
+			size = { width = 500 height = 246 }
 			background = {
 				name = "Background"
 				quadTextureSprite = "GFX_MD_tiled_window_politics_2"
@@ -15,22 +15,25 @@ guiTypes = {
 		instantTextBoxType = { name = "vel_usa_title" position = { x = 18 y = 26 } font = "hoi_18mbs" text = "VEL_USA_gui_title" maxWidth = 464 maxHeight = 22 fixedsize = yes }
 		instantTextBoxType = { name = "vel_usa_phase" position = { x = 18 y = 58 } font = "hoi_16mbs" text = "VEL_USA_gui_phase" maxWidth = 464 maxHeight = 18 fixedsize = yes }
 		buttonType = { name = "vel_usa_open" spriteType = "GFX_button_221x34" position = { x = 18 y = 76 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_open" pdx_tooltip = "VEL_USA_tt_open" }
-		iconType = { name = "vel_usa_sw_1" spriteType = "GFX_VEL_pi_USA_1" position = { x = 18 y = 118 } alwaystransparent = yes scale = 0.301 }
+		iconType = { name = "vel_usa_sw_1" spriteType = "GFX_VEL_USA_emb" position = { x = 18 y = 118 } alwaystransparent = yes frame = 25 scale = 0.7 }
 		instantTextBoxType = { name = "vel_usa_row_1" position = { x = 54 y = 122 } font = "hoi_16mbs" text = "VEL_USA_row_1" maxWidth = 262 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vel_usa_bar_1" quadTextureSprite = "GFX_VEL_USA_tbar_1" position = { x = 330 y = 126 } alwaystransparent = yes }
-		iconType = { name = "vel_usa_sw_2" spriteType = "GFX_VEL_pi_USA_2" position = { x = 18 y = 150 } alwaystransparent = yes scale = 0.301 }
+		iconType = { name = "vel_usa_bar_1" quadTextureSprite = "GFX_VEL_USA_tbarn" position = { x = 330 y = 126 } alwaystransparent = yes }
+		iconType = { name = "vel_usa_sw_2" spriteType = "GFX_VEL_USA_emb" position = { x = 18 y = 150 } alwaystransparent = yes frame = 25 scale = 0.7 }
 		instantTextBoxType = { name = "vel_usa_row_2" position = { x = 54 y = 154 } font = "hoi_16mbs" text = "VEL_USA_row_2" maxWidth = 262 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vel_usa_bar_2" quadTextureSprite = "GFX_VEL_USA_tbar_2" position = { x = 330 y = 158 } alwaystransparent = yes }
-		iconType = { name = "vel_usa_sw_3" spriteType = "GFX_VEL_pi_USA_3" position = { x = 18 y = 182 } alwaystransparent = yes scale = 0.301 }
+		iconType = { name = "vel_usa_bar_2" quadTextureSprite = "GFX_VEL_USA_tbarn" position = { x = 330 y = 158 } alwaystransparent = yes }
+		iconType = { name = "vel_usa_sw_3" spriteType = "GFX_VEL_USA_emb" position = { x = 18 y = 182 } alwaystransparent = yes frame = 25 scale = 0.7 }
 		instantTextBoxType = { name = "vel_usa_row_3" position = { x = 54 y = 186 } font = "hoi_16mbs" text = "VEL_USA_row_3" maxWidth = 262 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vel_usa_bar_3" quadTextureSprite = "GFX_VEL_USA_tbar_3" position = { x = 330 y = 190 } alwaystransparent = yes }
+		iconType = { name = "vel_usa_bar_3" quadTextureSprite = "GFX_VEL_USA_tbarn" position = { x = 330 y = 190 } alwaystransparent = yes }
+		iconType = { name = "vel_usa_sw_4" spriteType = "GFX_VEL_USA_emb" position = { x = 18 y = 214 } alwaystransparent = yes frame = 25 scale = 0.7 }
+		instantTextBoxType = { name = "vel_usa_row_4" position = { x = 54 y = 218 } font = "hoi_16mbs" text = "VEL_USA_row_4" maxWidth = 262 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vel_usa_bar_4" quadTextureSprite = "GFX_VEL_USA_tbarn" position = { x = 330 y = 222 } alwaystransparent = yes }
 	}
 	containerWindowType = {
 		name = "VEL_USA_big_window"
 		Orientation = upper_left
 		Origo = upper_left
 		position = { x = 30 y = 50 }
-		size = { width = 1355 height = 800 }
+		size = { width = 1355 height = 836 }
 		moveable = yes
 		background = {
 			name = "Background"
@@ -44,19 +47,64 @@ guiTypes = {
 		iconType = { name = "vb_usa_prog" quadTextureSprite = "GFX_VEL_pg" position = { x = 1025 y = 42 } alwaystransparent = yes }
 		buttonType = { name = "vb_usa_view1" spriteType = "GFX_VEL_tab" position = { x = 400 y = 24 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_poll" pdx_tooltip = "VEL_USA_tt_poll" }
 		buttonType = { name = "vb_usa_view2" spriteType = "GFX_VEL_tab" position = { x = 710 y = 24 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_result" pdx_tooltip = "VEL_USA_tt_result" }
-		iconType = { name = "vb_usa_pi_1" spriteType = "GFX_VEL_pi_USA_1" position = { x = 24 y = 96 } alwaystransparent = yes scale = 0.82 }
-		instantTextBoxType = { name = "vb_usa_cn_1" position = { x = 112 y = 98 } font = "hoi_18mbs" text = "VEL_USA_card_1" maxWidth = 300 maxHeight = 22 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_cb_1" position = { x = 112 y = 120 } font = "hoi_36header" text = "VEL_USA_big_1" maxWidth = 150 maxHeight = 40 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_cp_1" position = { x = 262 y = 130 } font = "hoi_24header" text = "VEL_USA_pctt_1" maxWidth = 150 maxHeight = 30 fixedsize = yes }
-		iconType = { name = "vb_usa_pi_2" spriteType = "GFX_VEL_pi_USA_2" position = { x = 1255 y = 96 } alwaystransparent = yes scale = 0.82 }
-		instantTextBoxType = { name = "vb_usa_cn_2" position = { x = 925 y = 98 } font = "hoi_18mbs" text = "VEL_USA_card_2" maxWidth = 300 maxHeight = 22 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_cb_2" position = { x = 925 y = 120 } font = "hoi_36header" text = "VEL_USA_big_2" maxWidth = 150 maxHeight = 40 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_cp_2" position = { x = 1075 y = 130 } font = "hoi_24header" text = "VEL_USA_pctt_2" maxWidth = 150 maxHeight = 30 fixedsize = yes }
-		iconType = { name = "vb_usa_tug" quadTextureSprite = "GFX_VEL_USA_tug" position = { x = 440 y = 112 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_tugnote" position = { x = 440 y = 152 } font = "hoi_16mbs" text = "VEL_USA_tug_note" maxWidth = 475 maxHeight = 20 fixedsize = yes format = center }
+		instantTextBoxType = { name = "vb_usa_ticker" position = { x = 530 y = 60 } font = "hoi_16mbs" text = "VEL_USA_ticker_txt" maxWidth = 790 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_fbl_4_1" quadTextureSprite = "GFX_VEL_USA_fb_1" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_4_2" quadTextureSprite = "GFX_VEL_USA_fb_2" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_4_3" quadTextureSprite = "GFX_VEL_USA_fb_3" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_4_4" quadTextureSprite = "GFX_VEL_USA_fb_4" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_4_5" quadTextureSprite = "GFX_VEL_USA_fb_5" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_3_1" quadTextureSprite = "GFX_VEL_USA_fb_1" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_3_2" quadTextureSprite = "GFX_VEL_USA_fb_2" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_3_3" quadTextureSprite = "GFX_VEL_USA_fb_3" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_3_4" quadTextureSprite = "GFX_VEL_USA_fb_4" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_3_5" quadTextureSprite = "GFX_VEL_USA_fb_5" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_2_1" quadTextureSprite = "GFX_VEL_USA_fb_1" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_2_2" quadTextureSprite = "GFX_VEL_USA_fb_2" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_2_3" quadTextureSprite = "GFX_VEL_USA_fb_3" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_2_4" quadTextureSprite = "GFX_VEL_USA_fb_4" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_2_5" quadTextureSprite = "GFX_VEL_USA_fb_5" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_1_1" quadTextureSprite = "GFX_VEL_USA_fb_1" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_1_2" quadTextureSprite = "GFX_VEL_USA_fb_2" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_1_3" quadTextureSprite = "GFX_VEL_USA_fb_3" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_1_4" quadTextureSprite = "GFX_VEL_USA_fb_4" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbl_1_5" quadTextureSprite = "GFX_VEL_USA_fb_5" position = { x = 20 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_fbmark" spriteType = "GFX_VEL_USA_fbmark" position = { x = 20 y = 92 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_fbhalf" position = { x = 683 y = 93 } font = "hoi_16mbs" text = "VEL_USA_fb_half" maxWidth = 300 maxHeight = 16 fixedsize = yes }
+		iconType = { name = "vb_usa_card_1" spriteType = "GFX_VEL_USA_card" position = { x = 20 y = 114 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_ldr_1" spriteType = "GFX_VEL_USA_ldr" position = { x = 30 y = 120 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_emb_1" spriteType = "GFX_VEL_USA_emb" position = { x = 299 y = 118 } alwaystransparent = yes frame = 25 scale = 0.8 }
+		instantTextBoxType = { name = "vb_usa_cn_1" position = { x = 106 y = 118 } font = "hoi_18mbs" text = "VEL_USA_fn_1_txt" maxWidth = 185 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cl_1" position = { x = 106 y = 138 } font = "hoi_16mbs" text = "VEL_USA_ldn_1_txt" maxWidth = 219 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cb_1" position = { x = 106 y = 154 } font = "hoi_36header" text = "VEL_USA_fb_big_1" maxWidth = 100 maxHeight = 40 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cp_1" position = { x = 210 y = 162 } font = "hoi_18mbs" text = "VEL_USA_fb_pct_1" maxWidth = 119 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_ct_1" position = { x = 106 y = 190 } font = "hoi_16mbs" text = "VEL_USA_fb_tag_1" maxWidth = 223 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vb_usa_card_2" spriteType = "GFX_VEL_USA_card" position = { x = 351 y = 114 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_ldr_2" spriteType = "GFX_VEL_USA_ldr" position = { x = 361 y = 120 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_emb_2" spriteType = "GFX_VEL_USA_emb" position = { x = 630 y = 118 } alwaystransparent = yes frame = 25 scale = 0.8 }
+		instantTextBoxType = { name = "vb_usa_cn_2" position = { x = 437 y = 118 } font = "hoi_18mbs" text = "VEL_USA_fn_2_txt" maxWidth = 185 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cl_2" position = { x = 437 y = 138 } font = "hoi_16mbs" text = "VEL_USA_ldn_2_txt" maxWidth = 219 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cb_2" position = { x = 437 y = 154 } font = "hoi_36header" text = "VEL_USA_fb_big_2" maxWidth = 100 maxHeight = 40 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cp_2" position = { x = 541 y = 162 } font = "hoi_18mbs" text = "VEL_USA_fb_pct_2" maxWidth = 119 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_ct_2" position = { x = 437 y = 190 } font = "hoi_16mbs" text = "VEL_USA_fb_tag_2" maxWidth = 223 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vb_usa_card_3" spriteType = "GFX_VEL_USA_card" position = { x = 682 y = 114 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_ldr_3" spriteType = "GFX_VEL_USA_ldr" position = { x = 692 y = 120 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_emb_3" spriteType = "GFX_VEL_USA_emb" position = { x = 961 y = 118 } alwaystransparent = yes frame = 25 scale = 0.8 }
+		instantTextBoxType = { name = "vb_usa_cn_3" position = { x = 768 y = 118 } font = "hoi_18mbs" text = "VEL_USA_fn_3_txt" maxWidth = 185 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cl_3" position = { x = 768 y = 138 } font = "hoi_16mbs" text = "VEL_USA_ldn_3_txt" maxWidth = 219 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cb_3" position = { x = 768 y = 154 } font = "hoi_36header" text = "VEL_USA_fb_big_3" maxWidth = 100 maxHeight = 40 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cp_3" position = { x = 872 y = 162 } font = "hoi_18mbs" text = "VEL_USA_fb_pct_3" maxWidth = 119 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_ct_3" position = { x = 768 y = 190 } font = "hoi_16mbs" text = "VEL_USA_fb_tag_3" maxWidth = 223 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vb_usa_card_4" spriteType = "GFX_VEL_USA_card" position = { x = 1013 y = 114 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_ldr_4" spriteType = "GFX_VEL_USA_ldr" position = { x = 1023 y = 120 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_usa_emb_4" spriteType = "GFX_VEL_USA_emb" position = { x = 1292 y = 118 } alwaystransparent = yes frame = 25 scale = 0.8 }
+		instantTextBoxType = { name = "vb_usa_cn_4" position = { x = 1099 y = 118 } font = "hoi_18mbs" text = "VEL_USA_fn_4_txt" maxWidth = 185 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cl_4" position = { x = 1099 y = 138 } font = "hoi_16mbs" text = "VEL_USA_ldn_4_txt" maxWidth = 219 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cb_4" position = { x = 1099 y = 154 } font = "hoi_36header" text = "VEL_USA_fb_big_4" maxWidth = 100 maxHeight = 40 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_cp_4" position = { x = 1203 y = 162 } font = "hoi_18mbs" text = "VEL_USA_fb_pct_4" maxWidth = 119 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_ct_4" position = { x = 1099 y = 190 } font = "hoi_16mbs" text = "VEL_USA_fb_tag_4" maxWidth = 223 maxHeight = 18 fixedsize = yes }
 		containerWindowType = {
 			name = "vb_usa_map"
-			position = { x = 18 y = 188 }
+			position = { x = 18 y = 224 }
 			size = { width = 804 height = 400 }
 			margin = { top = 0 left = 0 bottom = 18 right = 18 }
 			drag_scroll = { left middle }
@@ -242,216 +290,222 @@ guiTypes = {
 		buttonType = { name = "vb_usa_bh_50" spriteType = "GFX_VEL_box_hit" position = { x = 629 y = 315 } pdx_tooltip = "VEL_USA_tt_r51" }
 			}
 		}
-		iconType = { name = "vb_usa_ls_0" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_0" position = { x = 44 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_1" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_0" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 602 } pdx_tooltip = "VEL_USA_tt_r1" }
-		iconType = { name = "vb_usa_ls_1" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_1" position = { x = 44 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_2" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_1" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 621 } pdx_tooltip = "VEL_USA_tt_r2" }
-		iconType = { name = "vb_usa_ls_2" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_2" position = { x = 44 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_3" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_2" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 640 } pdx_tooltip = "VEL_USA_tt_r3" }
-		iconType = { name = "vb_usa_ls_3" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_3" position = { x = 44 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_4" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_3" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 659 } pdx_tooltip = "VEL_USA_tt_r4" }
-		iconType = { name = "vb_usa_ls_4" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_4" position = { x = 44 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_5" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_4" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 678 } pdx_tooltip = "VEL_USA_tt_r5" }
-		iconType = { name = "vb_usa_ls_5" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_5" position = { x = 44 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_6" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_5" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 697 } pdx_tooltip = "VEL_USA_tt_r6" }
-		iconType = { name = "vb_usa_ls_6" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 717 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_6" position = { x = 44 y = 716 } font = "hoi_16mbs" text = "VEL_USA_li_7" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_6" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 716 } pdx_tooltip = "VEL_USA_tt_r7" }
-		iconType = { name = "vb_usa_ls_7" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 736 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_7" position = { x = 44 y = 735 } font = "hoi_16mbs" text = "VEL_USA_li_8" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_7" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 735 } pdx_tooltip = "VEL_USA_tt_r8" }
-		iconType = { name = "vb_usa_ls_8" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 755 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_8" position = { x = 44 y = 754 } font = "hoi_16mbs" text = "VEL_USA_li_9" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_8" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 754 } pdx_tooltip = "VEL_USA_tt_r9" }
-		iconType = { name = "vb_usa_ls_9" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_9" position = { x = 179 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_10" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_9" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 602 } pdx_tooltip = "VEL_USA_tt_r10" }
-		iconType = { name = "vb_usa_ls_10" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_10" position = { x = 179 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_11" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_10" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 621 } pdx_tooltip = "VEL_USA_tt_r11" }
-		iconType = { name = "vb_usa_ls_11" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_11" position = { x = 179 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_12" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_11" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 640 } pdx_tooltip = "VEL_USA_tt_r12" }
-		iconType = { name = "vb_usa_ls_12" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_12" position = { x = 179 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_13" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_12" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 659 } pdx_tooltip = "VEL_USA_tt_r13" }
-		iconType = { name = "vb_usa_ls_13" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_13" position = { x = 179 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_14" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_13" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 678 } pdx_tooltip = "VEL_USA_tt_r14" }
-		iconType = { name = "vb_usa_ls_14" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_14" position = { x = 179 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_15" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_14" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 697 } pdx_tooltip = "VEL_USA_tt_r15" }
-		iconType = { name = "vb_usa_ls_15" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 717 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_15" position = { x = 179 y = 716 } font = "hoi_16mbs" text = "VEL_USA_li_16" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_15" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 716 } pdx_tooltip = "VEL_USA_tt_r16" }
-		iconType = { name = "vb_usa_ls_16" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 736 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_16" position = { x = 179 y = 735 } font = "hoi_16mbs" text = "VEL_USA_li_17" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_16" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 735 } pdx_tooltip = "VEL_USA_tt_r17" }
-		iconType = { name = "vb_usa_ls_17" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 755 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_17" position = { x = 179 y = 754 } font = "hoi_16mbs" text = "VEL_USA_li_18" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_17" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 754 } pdx_tooltip = "VEL_USA_tt_r18" }
-		iconType = { name = "vb_usa_ls_18" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_18" position = { x = 314 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_19" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_18" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 602 } pdx_tooltip = "VEL_USA_tt_r19" }
-		iconType = { name = "vb_usa_ls_19" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_19" position = { x = 314 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_20" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_19" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 621 } pdx_tooltip = "VEL_USA_tt_r20" }
-		iconType = { name = "vb_usa_ls_20" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_20" position = { x = 314 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_21" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_20" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 640 } pdx_tooltip = "VEL_USA_tt_r21" }
-		iconType = { name = "vb_usa_ls_21" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_21" position = { x = 314 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_22" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_21" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 659 } pdx_tooltip = "VEL_USA_tt_r22" }
-		iconType = { name = "vb_usa_ls_22" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_22" position = { x = 314 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_23" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_22" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 678 } pdx_tooltip = "VEL_USA_tt_r23" }
-		iconType = { name = "vb_usa_ls_23" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_23" position = { x = 314 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_24" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_23" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 697 } pdx_tooltip = "VEL_USA_tt_r24" }
-		iconType = { name = "vb_usa_ls_24" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 717 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_24" position = { x = 314 y = 716 } font = "hoi_16mbs" text = "VEL_USA_li_25" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_24" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 716 } pdx_tooltip = "VEL_USA_tt_r25" }
-		iconType = { name = "vb_usa_ls_25" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 736 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_25" position = { x = 314 y = 735 } font = "hoi_16mbs" text = "VEL_USA_li_26" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_25" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 735 } pdx_tooltip = "VEL_USA_tt_r26" }
-		iconType = { name = "vb_usa_ls_26" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 755 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_26" position = { x = 314 y = 754 } font = "hoi_16mbs" text = "VEL_USA_li_27" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_26" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 754 } pdx_tooltip = "VEL_USA_tt_r27" }
-		iconType = { name = "vb_usa_ls_27" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_27" position = { x = 449 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_28" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_27" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 602 } pdx_tooltip = "VEL_USA_tt_r28" }
-		iconType = { name = "vb_usa_ls_28" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_28" position = { x = 449 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_29" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_28" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 621 } pdx_tooltip = "VEL_USA_tt_r29" }
-		iconType = { name = "vb_usa_ls_29" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_29" position = { x = 449 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_30" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_29" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 640 } pdx_tooltip = "VEL_USA_tt_r30" }
-		iconType = { name = "vb_usa_ls_30" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_30" position = { x = 449 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_31" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_30" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 659 } pdx_tooltip = "VEL_USA_tt_r31" }
-		iconType = { name = "vb_usa_ls_31" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_31" position = { x = 449 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_32" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_31" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 678 } pdx_tooltip = "VEL_USA_tt_r32" }
-		iconType = { name = "vb_usa_ls_32" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_32" position = { x = 449 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_33" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_32" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 697 } pdx_tooltip = "VEL_USA_tt_r33" }
-		iconType = { name = "vb_usa_ls_33" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 717 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_33" position = { x = 449 y = 716 } font = "hoi_16mbs" text = "VEL_USA_li_34" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_33" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 716 } pdx_tooltip = "VEL_USA_tt_r34" }
-		iconType = { name = "vb_usa_ls_34" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 736 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_34" position = { x = 449 y = 735 } font = "hoi_16mbs" text = "VEL_USA_li_35" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_34" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 735 } pdx_tooltip = "VEL_USA_tt_r35" }
-		iconType = { name = "vb_usa_ls_35" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 755 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_35" position = { x = 449 y = 754 } font = "hoi_16mbs" text = "VEL_USA_li_36" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_35" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 754 } pdx_tooltip = "VEL_USA_tt_r36" }
-		iconType = { name = "vb_usa_ls_36" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_36" position = { x = 584 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_37" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_36" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 602 } pdx_tooltip = "VEL_USA_tt_r37" }
-		iconType = { name = "vb_usa_ls_37" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_37" position = { x = 584 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_38" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_37" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 621 } pdx_tooltip = "VEL_USA_tt_r38" }
-		iconType = { name = "vb_usa_ls_38" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_38" position = { x = 584 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_39" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_38" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 640 } pdx_tooltip = "VEL_USA_tt_r39" }
-		iconType = { name = "vb_usa_ls_39" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_39" position = { x = 584 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_40" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_39" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 659 } pdx_tooltip = "VEL_USA_tt_r40" }
-		iconType = { name = "vb_usa_ls_40" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_40" position = { x = 584 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_41" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_40" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 678 } pdx_tooltip = "VEL_USA_tt_r41" }
-		iconType = { name = "vb_usa_ls_41" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_41" position = { x = 584 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_42" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_41" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 697 } pdx_tooltip = "VEL_USA_tt_r42" }
-		iconType = { name = "vb_usa_ls_42" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 717 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_42" position = { x = 584 y = 716 } font = "hoi_16mbs" text = "VEL_USA_li_43" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_42" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 716 } pdx_tooltip = "VEL_USA_tt_r43" }
-		iconType = { name = "vb_usa_ls_43" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 736 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_43" position = { x = 584 y = 735 } font = "hoi_16mbs" text = "VEL_USA_li_44" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_43" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 735 } pdx_tooltip = "VEL_USA_tt_r44" }
-		iconType = { name = "vb_usa_ls_44" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 755 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_44" position = { x = 584 y = 754 } font = "hoi_16mbs" text = "VEL_USA_li_45" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_44" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 754 } pdx_tooltip = "VEL_USA_tt_r45" }
-		iconType = { name = "vb_usa_ls_45" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 603 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_45" position = { x = 719 y = 602 } font = "hoi_16mbs" text = "VEL_USA_li_46" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_45" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 602 } pdx_tooltip = "VEL_USA_tt_r46" }
-		iconType = { name = "vb_usa_ls_46" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 622 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_46" position = { x = 719 y = 621 } font = "hoi_16mbs" text = "VEL_USA_li_47" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_46" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 621 } pdx_tooltip = "VEL_USA_tt_r47" }
-		iconType = { name = "vb_usa_ls_47" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 641 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_47" position = { x = 719 y = 640 } font = "hoi_16mbs" text = "VEL_USA_li_48" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_47" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 640 } pdx_tooltip = "VEL_USA_tt_r48" }
-		iconType = { name = "vb_usa_ls_48" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 660 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_48" position = { x = 719 y = 659 } font = "hoi_16mbs" text = "VEL_USA_li_49" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_48" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 659 } pdx_tooltip = "VEL_USA_tt_r49" }
-		iconType = { name = "vb_usa_ls_49" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_49" position = { x = 719 y = 678 } font = "hoi_16mbs" text = "VEL_USA_li_50" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_49" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 678 } pdx_tooltip = "VEL_USA_tt_r50" }
-		iconType = { name = "vb_usa_ls_50" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 698 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_lt_50" position = { x = 719 y = 697 } font = "hoi_16mbs" text = "VEL_USA_li_51" maxWidth = 105 maxHeight = 19 fixedsize = yes }
-		buttonType = { name = "vb_usa_lb_50" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 697 } pdx_tooltip = "VEL_USA_tt_r51" }
-		instantTextBoxType = { name = "vb_usa_hdr" position = { x = 844 y = 192 } font = "hoi_16mbs" text = "VEL_USA_gui_totals" maxWidth = 490 maxHeight = 20 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_sel_name" position = { x = 852 y = 214 } font = "hoi_24header" text = "VEL_USA_gui_sel_name" maxWidth = 480 maxHeight = 28 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_sel_info" position = { x = 844 y = 244 } font = "hoi_16mbs" text = "VEL_USA_gui_sel_info" maxWidth = 490 maxHeight = 20 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_lead" position = { x = 844 y = 264 } font = "hoi_16mbs" text = "VEL_USA_gui_lead" maxWidth = 490 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_sw_1" spriteType = "GFX_VEL_pi_USA_1" position = { x = 844 y = 290 } alwaystransparent = yes scale = 0.204 }
-		instantTextBoxType = { name = "vb_usa_sp_1" position = { x = 870 y = 290 } font = "hoi_16mbs" text = "VEL_USA_sp_1" maxWidth = 196 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_sbar_1" quadTextureSprite = "GFX_VEL_USA_sb_1" position = { x = 1112 y = 294 } alwaystransparent = yes }
-		iconType = { name = "vb_usa_sw_2" spriteType = "GFX_VEL_pi_USA_2" position = { x = 844 y = 310 } alwaystransparent = yes scale = 0.204 }
-		instantTextBoxType = { name = "vb_usa_sp_2" position = { x = 870 y = 310 } font = "hoi_16mbs" text = "VEL_USA_sp_2" maxWidth = 196 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_sbar_2" quadTextureSprite = "GFX_VEL_USA_sb_2" position = { x = 1112 y = 314 } alwaystransparent = yes }
-		iconType = { name = "vb_usa_sw_3" spriteType = "GFX_VEL_pi_USA_3" position = { x = 844 y = 330 } alwaystransparent = yes scale = 0.204 }
-		instantTextBoxType = { name = "vb_usa_sp_3" position = { x = 870 y = 330 } font = "hoi_16mbs" text = "VEL_USA_sp_3" maxWidth = 196 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_sbar_3" quadTextureSprite = "GFX_VEL_USA_sb_3" position = { x = 1112 y = 334 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_gh" position = { x = 852 y = 356 } font = "hoi_18mbs" text = "VEL_USA_h_groups" maxWidth = 480 maxHeight = 22 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_sg_1" position = { x = 844 y = 380 } font = "hoi_16mbs" text = "VEL_USA_sg_1" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_1" quadTextureSprite = "GFX_VEL_gb" position = { x = 1008 y = 386 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_2" position = { x = 844 y = 398 } font = "hoi_16mbs" text = "VEL_USA_sg_2" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_2" quadTextureSprite = "GFX_VEL_gb" position = { x = 1008 y = 404 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_3" position = { x = 844 y = 416 } font = "hoi_16mbs" text = "VEL_USA_sg_3" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_3" quadTextureSprite = "GFX_VEL_gb" position = { x = 1008 y = 422 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_4" position = { x = 844 y = 434 } font = "hoi_16mbs" text = "VEL_USA_sg_4" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_4" quadTextureSprite = "GFX_VEL_gb" position = { x = 1008 y = 440 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_5" position = { x = 1094 y = 380 } font = "hoi_16mbs" text = "VEL_USA_sg_5" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_5" quadTextureSprite = "GFX_VEL_gb" position = { x = 1258 y = 386 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_6" position = { x = 1094 y = 398 } font = "hoi_16mbs" text = "VEL_USA_sg_6" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_6" quadTextureSprite = "GFX_VEL_gb" position = { x = 1258 y = 404 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_7" position = { x = 1094 y = 416 } font = "hoi_16mbs" text = "VEL_USA_sg_7" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_7" quadTextureSprite = "GFX_VEL_gb" position = { x = 1258 y = 422 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_sg_8" position = { x = 1094 y = 434 } font = "hoi_16mbs" text = "VEL_USA_sg_8" maxWidth = 160 maxHeight = 20 fixedsize = yes }
-		iconType = { name = "vb_usa_gbar_8" quadTextureSprite = "GFX_VEL_gb" position = { x = 1258 y = 440 } alwaystransparent = yes }
-		instantTextBoxType = { name = "vb_usa_ch" position = { x = 852 y = 460 } font = "hoi_18mbs" text = "VEL_USA_h_campaign" maxWidth = 480 maxHeight = 22 fixedsize = yes }
-		instantTextBoxType = { name = "vb_usa_main" position = { x = 844 y = 484 } font = "hoi_16mbs" text = "VEL_USA_gui_main" maxWidth = 490 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_rally" spriteType = "GFX_button_148x34" position = { x = 844 y = 506 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_rally" pdx_tooltip = "VEL_USA_tt_rally" }
-		buttonType = { name = "vb_usa_issue_1" spriteType = "GFX_button_148x34" position = { x = 844 y = 544 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_1" pdx_tooltip = "VEL_USA_tt_issue" }
-		buttonType = { name = "vb_usa_issue_2" spriteType = "GFX_button_148x34" position = { x = 998 y = 544 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_2" pdx_tooltip = "VEL_USA_tt_issue" }
-		buttonType = { name = "vb_usa_issue_3" spriteType = "GFX_button_148x34" position = { x = 1152 y = 544 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_3" pdx_tooltip = "VEL_USA_tt_issue" }
-		buttonType = { name = "vb_usa_issue_4" spriteType = "GFX_button_148x34" position = { x = 844 y = 578 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_4" pdx_tooltip = "VEL_USA_tt_issue" }
-		buttonType = { name = "vb_usa_issue_5" spriteType = "GFX_button_148x34" position = { x = 998 y = 578 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_5" pdx_tooltip = "VEL_USA_tt_issue" }
-		buttonType = { name = "vb_usa_issue_6" spriteType = "GFX_button_148x34" position = { x = 1152 y = 578 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_6" pdx_tooltip = "VEL_USA_tt_issue" }
-		instantTextBoxType = { name = "vb_usa_sh" position = { x = 852 y = 616 } font = "hoi_18mbs" text = "VEL_USA_h_swing" maxWidth = 480 maxHeight = 22 fixedsize = yes }
-		iconType = { name = "vb_usa_sws_1" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 643 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_1" position = { x = 868 y = 641 } font = "hoi_16mbs" text = "VEL_USA_swrow_1" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_1" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 640 } pdx_tooltip = "VEL_USA_tt_swing" }
-		iconType = { name = "vb_usa_sws_2" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 661 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_2" position = { x = 868 y = 659 } font = "hoi_16mbs" text = "VEL_USA_swrow_2" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_2" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 658 } pdx_tooltip = "VEL_USA_tt_swing" }
-		iconType = { name = "vb_usa_sws_3" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 679 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_3" position = { x = 868 y = 677 } font = "hoi_16mbs" text = "VEL_USA_swrow_3" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_3" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 676 } pdx_tooltip = "VEL_USA_tt_swing" }
-		iconType = { name = "vb_usa_sws_4" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 697 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_4" position = { x = 868 y = 695 } font = "hoi_16mbs" text = "VEL_USA_swrow_4" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_4" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 694 } pdx_tooltip = "VEL_USA_tt_swing" }
-		iconType = { name = "vb_usa_sws_5" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 715 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_5" position = { x = 868 y = 713 } font = "hoi_16mbs" text = "VEL_USA_swrow_5" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_5" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 712 } pdx_tooltip = "VEL_USA_tt_swing" }
-		iconType = { name = "vb_usa_sws_6" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 733 } alwaystransparent = yes frame = 1 }
-		instantTextBoxType = { name = "vb_usa_swt_6" position = { x = 868 y = 731 } font = "hoi_16mbs" text = "VEL_USA_swrow_6" maxWidth = 410 maxHeight = 20 fixedsize = yes }
-		buttonType = { name = "vb_usa_swb_6" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 730 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_ls_0" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_0" position = { x = 44 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_1" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_0" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 638 } pdx_tooltip = "VEL_USA_tt_r1" }
+		iconType = { name = "vb_usa_ls_1" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_1" position = { x = 44 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_2" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_1" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 657 } pdx_tooltip = "VEL_USA_tt_r2" }
+		iconType = { name = "vb_usa_ls_2" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_2" position = { x = 44 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_3" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_2" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 676 } pdx_tooltip = "VEL_USA_tt_r3" }
+		iconType = { name = "vb_usa_ls_3" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_3" position = { x = 44 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_4" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_3" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 695 } pdx_tooltip = "VEL_USA_tt_r4" }
+		iconType = { name = "vb_usa_ls_4" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_4" position = { x = 44 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_5" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_4" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 714 } pdx_tooltip = "VEL_USA_tt_r5" }
+		iconType = { name = "vb_usa_ls_5" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_5" position = { x = 44 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_6" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_5" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 733 } pdx_tooltip = "VEL_USA_tt_r6" }
+		iconType = { name = "vb_usa_ls_6" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 753 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_6" position = { x = 44 y = 752 } font = "hoi_16mbs" text = "VEL_USA_li_7" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_6" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 752 } pdx_tooltip = "VEL_USA_tt_r7" }
+		iconType = { name = "vb_usa_ls_7" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 772 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_7" position = { x = 44 y = 771 } font = "hoi_16mbs" text = "VEL_USA_li_8" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_7" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 771 } pdx_tooltip = "VEL_USA_tt_r8" }
+		iconType = { name = "vb_usa_ls_8" spriteType = "GFX_VEL_USA_swatch" position = { x = 20 y = 791 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_8" position = { x = 44 y = 790 } font = "hoi_16mbs" text = "VEL_USA_li_9" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_8" spriteType = "GFX_VEL_rowl_hit" position = { x = 18 y = 790 } pdx_tooltip = "VEL_USA_tt_r9" }
+		iconType = { name = "vb_usa_ls_9" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_9" position = { x = 179 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_10" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_9" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 638 } pdx_tooltip = "VEL_USA_tt_r10" }
+		iconType = { name = "vb_usa_ls_10" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_10" position = { x = 179 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_11" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_10" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 657 } pdx_tooltip = "VEL_USA_tt_r11" }
+		iconType = { name = "vb_usa_ls_11" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_11" position = { x = 179 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_12" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_11" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 676 } pdx_tooltip = "VEL_USA_tt_r12" }
+		iconType = { name = "vb_usa_ls_12" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_12" position = { x = 179 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_13" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_12" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 695 } pdx_tooltip = "VEL_USA_tt_r13" }
+		iconType = { name = "vb_usa_ls_13" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_13" position = { x = 179 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_14" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_13" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 714 } pdx_tooltip = "VEL_USA_tt_r14" }
+		iconType = { name = "vb_usa_ls_14" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_14" position = { x = 179 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_15" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_14" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 733 } pdx_tooltip = "VEL_USA_tt_r15" }
+		iconType = { name = "vb_usa_ls_15" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 753 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_15" position = { x = 179 y = 752 } font = "hoi_16mbs" text = "VEL_USA_li_16" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_15" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 752 } pdx_tooltip = "VEL_USA_tt_r16" }
+		iconType = { name = "vb_usa_ls_16" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 772 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_16" position = { x = 179 y = 771 } font = "hoi_16mbs" text = "VEL_USA_li_17" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_16" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 771 } pdx_tooltip = "VEL_USA_tt_r17" }
+		iconType = { name = "vb_usa_ls_17" spriteType = "GFX_VEL_USA_swatch" position = { x = 155 y = 791 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_17" position = { x = 179 y = 790 } font = "hoi_16mbs" text = "VEL_USA_li_18" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_17" spriteType = "GFX_VEL_rowl_hit" position = { x = 153 y = 790 } pdx_tooltip = "VEL_USA_tt_r18" }
+		iconType = { name = "vb_usa_ls_18" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_18" position = { x = 314 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_19" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_18" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 638 } pdx_tooltip = "VEL_USA_tt_r19" }
+		iconType = { name = "vb_usa_ls_19" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_19" position = { x = 314 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_20" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_19" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 657 } pdx_tooltip = "VEL_USA_tt_r20" }
+		iconType = { name = "vb_usa_ls_20" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_20" position = { x = 314 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_21" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_20" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 676 } pdx_tooltip = "VEL_USA_tt_r21" }
+		iconType = { name = "vb_usa_ls_21" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_21" position = { x = 314 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_22" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_21" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 695 } pdx_tooltip = "VEL_USA_tt_r22" }
+		iconType = { name = "vb_usa_ls_22" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_22" position = { x = 314 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_23" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_22" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 714 } pdx_tooltip = "VEL_USA_tt_r23" }
+		iconType = { name = "vb_usa_ls_23" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_23" position = { x = 314 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_24" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_23" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 733 } pdx_tooltip = "VEL_USA_tt_r24" }
+		iconType = { name = "vb_usa_ls_24" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 753 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_24" position = { x = 314 y = 752 } font = "hoi_16mbs" text = "VEL_USA_li_25" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_24" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 752 } pdx_tooltip = "VEL_USA_tt_r25" }
+		iconType = { name = "vb_usa_ls_25" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 772 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_25" position = { x = 314 y = 771 } font = "hoi_16mbs" text = "VEL_USA_li_26" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_25" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 771 } pdx_tooltip = "VEL_USA_tt_r26" }
+		iconType = { name = "vb_usa_ls_26" spriteType = "GFX_VEL_USA_swatch" position = { x = 290 y = 791 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_26" position = { x = 314 y = 790 } font = "hoi_16mbs" text = "VEL_USA_li_27" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_26" spriteType = "GFX_VEL_rowl_hit" position = { x = 288 y = 790 } pdx_tooltip = "VEL_USA_tt_r27" }
+		iconType = { name = "vb_usa_ls_27" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_27" position = { x = 449 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_28" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_27" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 638 } pdx_tooltip = "VEL_USA_tt_r28" }
+		iconType = { name = "vb_usa_ls_28" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_28" position = { x = 449 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_29" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_28" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 657 } pdx_tooltip = "VEL_USA_tt_r29" }
+		iconType = { name = "vb_usa_ls_29" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_29" position = { x = 449 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_30" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_29" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 676 } pdx_tooltip = "VEL_USA_tt_r30" }
+		iconType = { name = "vb_usa_ls_30" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_30" position = { x = 449 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_31" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_30" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 695 } pdx_tooltip = "VEL_USA_tt_r31" }
+		iconType = { name = "vb_usa_ls_31" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_31" position = { x = 449 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_32" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_31" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 714 } pdx_tooltip = "VEL_USA_tt_r32" }
+		iconType = { name = "vb_usa_ls_32" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_32" position = { x = 449 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_33" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_32" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 733 } pdx_tooltip = "VEL_USA_tt_r33" }
+		iconType = { name = "vb_usa_ls_33" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 753 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_33" position = { x = 449 y = 752 } font = "hoi_16mbs" text = "VEL_USA_li_34" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_33" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 752 } pdx_tooltip = "VEL_USA_tt_r34" }
+		iconType = { name = "vb_usa_ls_34" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 772 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_34" position = { x = 449 y = 771 } font = "hoi_16mbs" text = "VEL_USA_li_35" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_34" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 771 } pdx_tooltip = "VEL_USA_tt_r35" }
+		iconType = { name = "vb_usa_ls_35" spriteType = "GFX_VEL_USA_swatch" position = { x = 425 y = 791 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_35" position = { x = 449 y = 790 } font = "hoi_16mbs" text = "VEL_USA_li_36" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_35" spriteType = "GFX_VEL_rowl_hit" position = { x = 423 y = 790 } pdx_tooltip = "VEL_USA_tt_r36" }
+		iconType = { name = "vb_usa_ls_36" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_36" position = { x = 584 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_37" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_36" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 638 } pdx_tooltip = "VEL_USA_tt_r37" }
+		iconType = { name = "vb_usa_ls_37" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_37" position = { x = 584 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_38" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_37" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 657 } pdx_tooltip = "VEL_USA_tt_r38" }
+		iconType = { name = "vb_usa_ls_38" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_38" position = { x = 584 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_39" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_38" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 676 } pdx_tooltip = "VEL_USA_tt_r39" }
+		iconType = { name = "vb_usa_ls_39" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_39" position = { x = 584 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_40" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_39" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 695 } pdx_tooltip = "VEL_USA_tt_r40" }
+		iconType = { name = "vb_usa_ls_40" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_40" position = { x = 584 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_41" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_40" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 714 } pdx_tooltip = "VEL_USA_tt_r41" }
+		iconType = { name = "vb_usa_ls_41" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_41" position = { x = 584 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_42" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_41" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 733 } pdx_tooltip = "VEL_USA_tt_r42" }
+		iconType = { name = "vb_usa_ls_42" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 753 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_42" position = { x = 584 y = 752 } font = "hoi_16mbs" text = "VEL_USA_li_43" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_42" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 752 } pdx_tooltip = "VEL_USA_tt_r43" }
+		iconType = { name = "vb_usa_ls_43" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 772 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_43" position = { x = 584 y = 771 } font = "hoi_16mbs" text = "VEL_USA_li_44" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_43" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 771 } pdx_tooltip = "VEL_USA_tt_r44" }
+		iconType = { name = "vb_usa_ls_44" spriteType = "GFX_VEL_USA_swatch" position = { x = 560 y = 791 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_44" position = { x = 584 y = 790 } font = "hoi_16mbs" text = "VEL_USA_li_45" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_44" spriteType = "GFX_VEL_rowl_hit" position = { x = 558 y = 790 } pdx_tooltip = "VEL_USA_tt_r45" }
+		iconType = { name = "vb_usa_ls_45" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 639 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_45" position = { x = 719 y = 638 } font = "hoi_16mbs" text = "VEL_USA_li_46" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_45" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 638 } pdx_tooltip = "VEL_USA_tt_r46" }
+		iconType = { name = "vb_usa_ls_46" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 658 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_46" position = { x = 719 y = 657 } font = "hoi_16mbs" text = "VEL_USA_li_47" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_46" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 657 } pdx_tooltip = "VEL_USA_tt_r47" }
+		iconType = { name = "vb_usa_ls_47" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 677 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_47" position = { x = 719 y = 676 } font = "hoi_16mbs" text = "VEL_USA_li_48" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_47" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 676 } pdx_tooltip = "VEL_USA_tt_r48" }
+		iconType = { name = "vb_usa_ls_48" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_48" position = { x = 719 y = 695 } font = "hoi_16mbs" text = "VEL_USA_li_49" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_48" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 695 } pdx_tooltip = "VEL_USA_tt_r49" }
+		iconType = { name = "vb_usa_ls_49" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 715 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_49" position = { x = 719 y = 714 } font = "hoi_16mbs" text = "VEL_USA_li_50" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_49" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 714 } pdx_tooltip = "VEL_USA_tt_r50" }
+		iconType = { name = "vb_usa_ls_50" spriteType = "GFX_VEL_USA_swatch" position = { x = 695 y = 734 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_lt_50" position = { x = 719 y = 733 } font = "hoi_16mbs" text = "VEL_USA_li_51" maxWidth = 105 maxHeight = 19 fixedsize = yes }
+		buttonType = { name = "vb_usa_lb_50" spriteType = "GFX_VEL_rowl_hit" position = { x = 693 y = 733 } pdx_tooltip = "VEL_USA_tt_r51" }
+		instantTextBoxType = { name = "vb_usa_hdr" position = { x = 844 y = 228 } font = "hoi_16mbs" text = "VEL_USA_gui_totals" maxWidth = 490 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_sel_name" position = { x = 852 y = 250 } font = "hoi_24header" text = "VEL_USA_gui_sel_name" maxWidth = 480 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_sel_info" position = { x = 844 y = 280 } font = "hoi_16mbs" text = "VEL_USA_gui_sel_info" maxWidth = 490 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_lead" position = { x = 844 y = 300 } font = "hoi_16mbs" text = "VEL_USA_gui_lead" maxWidth = 490 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sw_1" spriteType = "GFX_VEL_USA_emb" position = { x = 844 y = 326 } alwaystransparent = yes frame = 25 scale = 0.43 }
+		instantTextBoxType = { name = "vb_usa_sp_1" position = { x = 870 y = 326 } font = "hoi_16mbs" text = "VEL_USA_sp_1" maxWidth = 232 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sbar_1" quadTextureSprite = "GFX_VEL_USA_sb_1" position = { x = 1112 y = 330 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_sw_2" spriteType = "GFX_VEL_USA_emb" position = { x = 844 y = 343 } alwaystransparent = yes frame = 25 scale = 0.43 }
+		instantTextBoxType = { name = "vb_usa_sp_2" position = { x = 870 y = 343 } font = "hoi_16mbs" text = "VEL_USA_sp_2" maxWidth = 232 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sbar_2" quadTextureSprite = "GFX_VEL_USA_sb_2" position = { x = 1112 y = 347 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_sw_3" spriteType = "GFX_VEL_USA_emb" position = { x = 844 y = 360 } alwaystransparent = yes frame = 25 scale = 0.43 }
+		instantTextBoxType = { name = "vb_usa_sp_3" position = { x = 870 y = 360 } font = "hoi_16mbs" text = "VEL_USA_sp_3" maxWidth = 232 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sbar_3" quadTextureSprite = "GFX_VEL_USA_sb_3" position = { x = 1112 y = 364 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_sw_4" spriteType = "GFX_VEL_USA_emb" position = { x = 844 y = 377 } alwaystransparent = yes frame = 25 scale = 0.43 }
+		instantTextBoxType = { name = "vb_usa_sp_4" position = { x = 870 y = 377 } font = "hoi_16mbs" text = "VEL_USA_sp_4" maxWidth = 232 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sbar_4" quadTextureSprite = "GFX_VEL_USA_sb_4" position = { x = 1112 y = 381 } alwaystransparent = yes }
+		iconType = { name = "vb_usa_sw_5" spriteType = "GFX_VEL_USA_emb" position = { x = 844 y = 394 } alwaystransparent = yes frame = 25 scale = 0.43 }
+		instantTextBoxType = { name = "vb_usa_sp_5" position = { x = 870 y = 394 } font = "hoi_16mbs" text = "VEL_USA_sp_5" maxWidth = 232 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_sbar_5" quadTextureSprite = "GFX_VEL_USA_sb_5" position = { x = 1112 y = 398 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_gh" position = { x = 852 y = 417 } font = "hoi_18mbs" text = "VEL_USA_h_groups" maxWidth = 480 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_sg_1" position = { x = 844 y = 441 } font = "hoi_16mbs" text = "VEL_USA_sg_1" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_1" quadTextureSprite = "GFX_VEL_gb" position = { x = 1024 y = 447 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_2" position = { x = 844 y = 457 } font = "hoi_16mbs" text = "VEL_USA_sg_2" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_2" quadTextureSprite = "GFX_VEL_gb" position = { x = 1024 y = 463 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_3" position = { x = 844 y = 473 } font = "hoi_16mbs" text = "VEL_USA_sg_3" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_3" quadTextureSprite = "GFX_VEL_gb" position = { x = 1024 y = 479 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_4" position = { x = 844 y = 489 } font = "hoi_16mbs" text = "VEL_USA_sg_4" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_4" quadTextureSprite = "GFX_VEL_gb" position = { x = 1024 y = 495 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_5" position = { x = 1094 y = 441 } font = "hoi_16mbs" text = "VEL_USA_sg_5" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_5" quadTextureSprite = "GFX_VEL_gb" position = { x = 1274 y = 447 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_6" position = { x = 1094 y = 457 } font = "hoi_16mbs" text = "VEL_USA_sg_6" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_6" quadTextureSprite = "GFX_VEL_gb" position = { x = 1274 y = 463 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_7" position = { x = 1094 y = 473 } font = "hoi_16mbs" text = "VEL_USA_sg_7" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_7" quadTextureSprite = "GFX_VEL_gb" position = { x = 1274 y = 479 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_sg_8" position = { x = 1094 y = 489 } font = "hoi_16mbs" text = "VEL_USA_sg_8" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_usa_gbar_8" quadTextureSprite = "GFX_VEL_gb" position = { x = 1274 y = 495 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vb_usa_ch" position = { x = 852 y = 513 } font = "hoi_18mbs" text = "VEL_USA_h_campaign" maxWidth = 480 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vb_usa_main" position = { x = 844 y = 537 } font = "hoi_16mbs" text = "VEL_USA_gui_main" maxWidth = 490 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_rally" spriteType = "GFX_button_148x34" position = { x = 844 y = 559 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_rally" pdx_tooltip = "VEL_USA_tt_rally" }
+		buttonType = { name = "vb_usa_issue_1" spriteType = "GFX_button_148x34" position = { x = 844 y = 597 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_1" pdx_tooltip = "VEL_USA_tt_issue" }
+		buttonType = { name = "vb_usa_issue_2" spriteType = "GFX_button_148x34" position = { x = 998 y = 597 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_2" pdx_tooltip = "VEL_USA_tt_issue" }
+		buttonType = { name = "vb_usa_issue_3" spriteType = "GFX_button_148x34" position = { x = 1152 y = 597 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_3" pdx_tooltip = "VEL_USA_tt_issue" }
+		buttonType = { name = "vb_usa_issue_4" spriteType = "GFX_button_148x34" position = { x = 844 y = 631 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_4" pdx_tooltip = "VEL_USA_tt_issue" }
+		buttonType = { name = "vb_usa_issue_5" spriteType = "GFX_button_148x34" position = { x = 998 y = 631 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_5" pdx_tooltip = "VEL_USA_tt_issue" }
+		buttonType = { name = "vb_usa_issue_6" spriteType = "GFX_button_148x34" position = { x = 1152 y = 631 } buttonFont = "hoi_16mbs" buttonText = "VEL_USA_btn_issue_6" pdx_tooltip = "VEL_USA_tt_issue" }
+		instantTextBoxType = { name = "vb_usa_sh" position = { x = 852 y = 669 } font = "hoi_18mbs" text = "VEL_USA_h_swing" maxWidth = 480 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vb_usa_sws_1" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 696 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_1" position = { x = 868 y = 694 } font = "hoi_16mbs" text = "VEL_USA_swrow_1" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_1" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 693 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_sws_2" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 712 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_2" position = { x = 868 y = 710 } font = "hoi_16mbs" text = "VEL_USA_swrow_2" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_2" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 709 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_sws_3" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 728 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_3" position = { x = 868 y = 726 } font = "hoi_16mbs" text = "VEL_USA_swrow_3" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_3" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 725 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_sws_4" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 744 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_4" position = { x = 868 y = 742 } font = "hoi_16mbs" text = "VEL_USA_swrow_4" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_4" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 741 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_sws_5" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 760 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_5" position = { x = 868 y = 758 } font = "hoi_16mbs" text = "VEL_USA_swrow_5" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_5" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 757 } pdx_tooltip = "VEL_USA_tt_swing" }
+		iconType = { name = "vb_usa_sws_6" spriteType = "GFX_VEL_USA_swatch" position = { x = 844 y = 776 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_usa_swt_6" position = { x = 868 y = 774 } font = "hoi_16mbs" text = "VEL_USA_swrow_6" maxWidth = 410 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vb_usa_swb_6" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 773 } pdx_tooltip = "VEL_USA_tt_swing" }
 	}
 }

@@ -1,0 +1,403 @@
+# MD ROC Return v3.36 —— 叙利亚：老阿萨死后的内战按叛军意识形态分流出 FSA / NUS，以及内战期间的恐怖主义指数（临界点爆发 ISIS）
+# 千禧原版只有“阿拉伯之春”路线会生成 FSA 与 NUS；继位路线（Damascus Spring、巴沙尔被刺、SSNP 政变、萨拉菲）的内战只会生成一个匿名叛军。
+# 流程：on_daily_SYR 发现叛军 -> SYR_cw_dispatch（在 SYR 作用域）-> 按叛军的 has_government 分流 -> 吸收为 FSA / NUS，或稍后由事件释放出来。
+# 所有步骤都写 log（搜 "SYR_civil_war"），便于排查。生成顺序与作用域逐段对照千禧 events/00_arab_spring.txt 的 arab_spring.11.b。
+
+# ---------------------------------------------------------------- 分流入口
+# 作用域：SYR（ROOT = SYR）。每场内战只处理一次（全局旗标 SYR_cw_handled）。
+SYR_cw_dispatch = {
+	set_global_flag = SYR_cw_handled
+	set_global_flag = GLOBAL_syrian_civil_war_started        # 千禧的 civil_war_cleanup_syria 与叙利亚国策的内战分支依赖它
+	set_variable = { global.SYR_cw_start_day = global.num_days }
+	log = "[GetDateText]: SYR_civil_war: dispatch begins (scope [This.GetName])"
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_template = "Militia Brigade" } }
+			division_template = {
+				name = "Militia Brigade"
+				is_locked = yes
+				regiments = {
+					Mot_Militia_Bat = { x = 0 y = 0 }
+					Mot_Militia_Bat = { x = 0 y = 1 }
+					Mot_Militia_Bat = { x = 0 y = 2 }
+				}
+				support = {
+					L_Engi_Comp = { x = 0 y = 0 }
+				}
+			}
+		}
+	}
+	random_country_with_original_tag = {
+		original_tag_to_check = SYR
+		limit = { NOT = { tag = SYR } }
+		if = {
+			limit = { OR = { has_government = neutrality has_government = democratic } }
+			set_global_flag = SYR_cw_path_moderate
+			log = "[GetDateText]: SYR_civil_war: rebel [This.GetName] is neutrality/democratic -> FSA"
+			SYR_cw_absorb_fsa = yes
+		}
+		else_if = {
+			limit = { has_government = fascism }
+			set_global_flag = SYR_cw_path_salafi
+			log = "[GetDateText]: SYR_civil_war: rebel [This.GetName] is fascism/salafist -> NUS"
+			SYR_cw_absorb_nus = yes
+		}
+		else = {
+			set_global_flag = SYR_cw_path_other
+			log = "[GetDateText]: SYR_civil_war: rebel [This.GetName] keeps its own identity, FSA and NUS will appear later"
+		}
+	}
+	if = {
+		limit = { has_global_flag = SYR_cw_path_other }
+		country_event = { id = SYR_terror.5 days = 60 random_days = 30 }
+	}
+	else = {
+		SYR_cw_declare_wars = yes
+		country_event = { id = SYR_terror.6 days = 30 random_days = 30 }
+		hidden_effect = { news_event = { id = SYR_terror.4 hours = 6 } }
+	}
+	add_named_threat = {
+		threat = 10
+		name = Syrian_Civil_War.threat
+	}
+	SYR_terror_publish_all = yes
+}
+
+# ---------------------------------------------------------------- 叛军并入 FSA / NUS（作用域：叛军国家；PREV 在 FSA / NUS 作用域里就是叛军）
+SYR_cw_absorb_fsa = {
+	if = {
+		limit = { NOT = { country_exists = FSA } }
+		FSA = {
+			hidden_effect = { add_civil_war_debuff = yes }
+			ingame_startup_nations_effect = yes
+			annex_country = { target = PREV transfer_troops = yes }
+			every_state = {
+				limit = { is_core_of = ROOT }
+				add_core_of = FSA
+			}
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				load_oob = FSA_2000_nsb
+				else = { load_oob = FSA_2000_nonnsb }
+			}
+			add_timed_idea = {
+				idea = FSA_rebel_fighting_spirit_idea
+				days = 365
+			}
+		}
+	}
+}
+SYR_cw_absorb_nus = {
+	if = {
+		limit = { NOT = { country_exists = NUS } }
+		NUS = {
+			hidden_effect = { add_civil_war_debuff = yes }
+			set_cosmetic_tag = NUSRA
+			ingame_startup_nations_effect = yes
+			annex_country = { target = PREV transfer_troops = yes }
+			every_state = {
+				limit = { is_core_of = ROOT }
+				add_core_of = NUS
+			}
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				load_oob = NUS_2000_nsb
+				else = { load_oob = NUS_2000_nonnsb }
+			}
+		}
+	}
+}
+
+# ---------------------------------------------------------------- 从政府 / 叛军手里“释放”出 FSA / NUS（作用域：SYR）
+# 千禧里 NUS 就是这样出现的：190 add_core_of NUS -> release = NUS -> 把核心还给 SYR；这里改成在 190 当前所有者的作用域里做，所有者不一定还是 SYR。
+SYR_cw_release_nus = {
+	if = {
+		limit = { NOT = { country_exists = NUS } }
+		190 = { add_core_of = NUS }
+		190 = { owner = { release = NUS } }
+		every_state = {
+			limit = { is_core_of = SYR }
+			add_core_of = NUS
+		}
+		if = {
+			limit = { country_exists = NUS }
+			log = "[GetDateText]: SYR_civil_war: NUS released from state 190"
+			NUS = {
+				hidden_effect = { add_civil_war_debuff = yes }
+				set_cosmetic_tag = NUSRA
+				ingame_startup_nations_effect = yes
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					load_oob = NUS_2000_nsb
+					else = { load_oob = NUS_2000_nonnsb }
+				}
+			}
+		}
+		else = { log = "[GetDateText]: SYR_civil_war: WARNING release = NUS did not create the country" }
+	}
+}
+SYR_cw_release_fsa = {
+	if = {
+		limit = { NOT = { country_exists = FSA } }
+		184 = { add_core_of = FSA }
+		185 = { add_core_of = FSA }
+		184 = { owner = { release = FSA } }
+		every_state = {
+			limit = { is_core_of = SYR }
+			add_core_of = FSA
+		}
+		if = {
+			limit = { country_exists = FSA }
+			log = "[GetDateText]: SYR_civil_war: FSA released from states 184/185"
+			FSA = {
+				hidden_effect = { add_civil_war_debuff = yes }
+				ingame_startup_nations_effect = yes
+				if = {
+					limit = { has_dlc = "No Step Back" }
+					load_oob = FSA_2000_nsb
+					else = { load_oob = FSA_2000_nonnsb }
+				}
+				add_timed_idea = {
+					idea = FSA_rebel_fighting_spirit_idea
+					days = 365
+				}
+			}
+		}
+		else = { log = "[GetDateText]: SYR_civil_war: WARNING release = FSA did not create the country" }
+	}
+}
+
+# 作用域：SYR。仿千禧：由政府向 FSA / NUS 宣战
+SYR_cw_declare_wars = {
+	if = {
+		limit = { country_exists = FSA NOT = { has_war_with = FSA } }
+		declare_war_on = { target = FSA type = annex_everything }
+	}
+	if = {
+		limit = { country_exists = NUS NOT = { has_war_with = NUS } }
+		declare_war_on = { target = NUS type = annex_everything }
+	}
+}
+
+# ---------------------------------------------------------------- 恐怖主义指数
+# 每月累积一次（SYR / FSA / NUS 的 on_monthly 都会调用，用全局时间戳去重）。每一项贡献分别存成全局变量，供“内战与反恐”面板显示。
+# 指数 global.SYR_terror_index（0~100）；阶段 global.SYR_terror_stage（0 <25，1 25~50，2 50~75，3 75~100，4 ISIS 已爆发，5 ISIS 已平定）；
+# 本月合计 global.SYR_terror_delta；预估爆发月数 global.SYR_terror_eta（-1 = 不会爆发）。
+SYR_terror_factors = {
+	set_variable = { global.SYR_terror_f_player = global.SYR_terror_f_player_acc }
+	set_variable = { global.SYR_terror_f_player_acc = 0 }
+	set_variable = { global.SYR_terror_f_base = 3 }
+	set_variable = { global.SYR_terror_f_split = 0 }
+	set_variable = { global.SYR_terror_f_nus_land = 0 }
+	set_variable = { global.SYR_terror_f_iraq = 0 }
+	set_variable = { global.SYR_terror_f_infight = 0 }
+	set_variable = { global.SYR_terror_f_gov = 0 }
+	set_variable = { global.SYR_terror_f_world = 0 }
+	# 叛军分裂为多个派系，圣战者有空子可钻
+	if = {
+		limit = { country_exists = FSA country_exists = NUS }
+		set_variable = { global.SYR_terror_f_split = 2 }
+	}
+	# 努斯拉实际控制了相当多的州
+	if = {
+		limit = {
+			country_exists = NUS
+			NUS = { num_of_controlled_states > 2 }
+		}
+		set_variable = { global.SYR_terror_f_nus_land = 2 }
+	}
+	# 伊拉克局势不稳，边境形同虚设
+	if = {
+		limit = {
+			country_exists = IRQ
+			IRQ = { stability < 0.4 }
+		}
+		set_variable = { global.SYR_terror_f_iraq = 2 }
+	}
+	# FSA 与 NUS 互相开战，反而让极端派坐大
+	if = {
+		limit = {
+			country_exists = FSA
+			country_exists = NUS
+			FSA = { has_war_with = NUS }
+		}
+		set_variable = { global.SYR_terror_f_infight = 1 }
+	}
+	# 叙利亚政府稳定，能分出手来反恐
+	if = {
+		limit = {
+			country_exists = SYR
+			SYR = { stability > 0.6 }
+		}
+		set_variable = { global.SYR_terror_f_gov = -2 }
+	}
+	# 外部国家对努斯拉开战（国际反恐）
+	if = {
+		limit = {
+			country_exists = NUS
+			NUS = {
+				any_enemy_country = {
+					NOT = { tag = SYR }
+					NOT = { tag = FSA }
+				}
+			}
+		}
+		set_variable = { global.SYR_terror_f_world = -2 }
+	}
+	set_variable = { global.SYR_terror_delta = global.SYR_terror_f_base }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_split }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_nus_land }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_iraq }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_infight }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_gov }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_world }
+	add_to_variable = { global.SYR_terror_delta = global.SYR_terror_f_player }
+}
+
+# 阶段与预估爆发月数（读 global.SYR_terror_index / delta）
+SYR_terror_update_stage = {
+	set_variable = { global.SYR_terror_stage = 0 }
+	if = { limit = { check_variable = { global.SYR_terror_index > 24.99 } } set_variable = { global.SYR_terror_stage = 1 } }
+	if = { limit = { check_variable = { global.SYR_terror_index > 49.99 } } set_variable = { global.SYR_terror_stage = 2 } }
+	if = { limit = { check_variable = { global.SYR_terror_index > 74.99 } } set_variable = { global.SYR_terror_stage = 3 } }
+	if = { limit = { has_global_flag = SYR_isis_synced } set_variable = { global.SYR_terror_stage = 4 } }
+	if = { limit = { has_global_flag = SYR_isis_defeated } set_variable = { global.SYR_terror_stage = 5 } }
+	set_variable = { global.SYR_terror_eta = -1 }
+	if = {
+		limit = {
+			check_variable = { global.SYR_terror_delta > 0.5 }
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		set_temp_variable = { syr_eta_t = 100 }
+		subtract_from_temp_variable = { syr_eta_t = global.SYR_terror_index }
+		divide_temp_variable = { syr_eta_t = global.SYR_terror_delta }
+		add_to_temp_variable = { syr_eta_t = 0.5 }
+		round_temp_variable = syr_eta_t
+		set_variable = { global.SYR_terror_eta = syr_eta_t }
+	}
+}
+
+SYR_terror_monthly = {
+	if = {
+		limit = {
+			has_global_flag = GLOBAL_syrian_civil_war_started
+			NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+			NOT = { has_global_flag = ISIL_declared }
+			NOT = { country_exists = ISI }
+			check_variable = { global.num_days > global.SYR_terror_next }
+		}
+		set_variable = { global.SYR_terror_next = global.num_days }
+		add_to_variable = { global.SYR_terror_next = 27 }
+		SYR_terror_factors = yes
+		add_to_variable = { global.SYR_terror_index = global.SYR_terror_delta }
+		clamp_variable = { var = global.SYR_terror_index min = 0 max = 100 }
+		SYR_terror_update_stage = yes
+		log = "[GetDateText]: SYR_civil_war: terror index [?global.SYR_terror_index] (delta [?global.SYR_terror_delta], stage [?global.SYR_terror_stage], eta [?global.SYR_terror_eta])"
+		# 预警
+		if = {
+			limit = {
+				check_variable = { global.SYR_terror_index > 49.99 }
+				NOT = { has_global_flag = SYR_terror_w50 }
+			}
+			set_global_flag = SYR_terror_w50
+			if = { limit = { country_exists = SYR } SYR = { country_event = { id = SYR_terror.1 days = 1 } } }
+			if = { limit = { country_exists = IRQ } IRQ = { country_event = { id = SYR_terror.1 days = 1 } } }
+			if = { limit = { country_exists = FSA } FSA = { country_event = { id = SYR_terror.1 days = 1 } } }
+		}
+		if = {
+			limit = {
+				check_variable = { global.SYR_terror_index > 74.99 }
+				NOT = { has_global_flag = SYR_terror_w75 }
+			}
+			set_global_flag = SYR_terror_w75
+			if = { limit = { country_exists = SYR } SYR = { country_event = { id = SYR_terror.2 days = 1 } } }
+			if = { limit = { country_exists = IRQ } IRQ = { country_event = { id = SYR_terror.2 days = 1 } } }
+			if = { limit = { country_exists = FSA } FSA = { country_event = { id = SYR_terror.2 days = 1 } } }
+		}
+		# 临界点：ISIS 爆发
+		if = {
+			limit = { check_variable = { global.SYR_terror_index > 99.99 } }
+			SYR_isis_outbreak = yes
+		}
+		SYR_terror_publish_all = yes
+	}
+	else_if = {
+		# 内战结束后清零，不再累积
+		limit = {
+			has_global_flag = GLOBAL_syrian_civil_war_over
+			check_variable = { global.SYR_terror_index > 0 }
+			NOT = { has_global_flag = ISIL_declared }
+		}
+		set_variable = { global.SYR_terror_index = 0 }
+		set_variable = { global.SYR_terror_delta = 0 }
+		SYR_terror_update_stage = yes
+		SYR_terror_publish_all = yes
+	}
+}
+
+# 决议 / 事件对指数的一次性改动（作用域任意）。参数：temp 变量 syr_terror_delta。同时记入本月“玩家行动”一项。
+SYR_terror_apply_delta = {
+	add_to_variable = { global.SYR_terror_index = syr_terror_delta }
+	clamp_variable = { var = global.SYR_terror_index min = 0 max = 100 }
+	add_to_variable = { global.SYR_terror_f_player_acc = syr_terror_delta }
+	SYR_terror_update_stage = yes
+	SYR_terror_publish_all = yes
+}
+
+# ISIS 爆发：SYR 存在就在 SYR 作用域里运行千禧的生成效果，否则在 192 州当前所有者的作用域里；设 ISIL_declared 以免千禧的随机触发重复生成
+SYR_isis_outbreak = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = ISIL_declared }
+			NOT = { country_exists = ISI }
+		}
+		set_global_flag = ISIL_declared
+		set_global_flag = SYR_isis_synced
+		set_global_flag = SYR_terror_isis
+		set_variable = { global.SYR_terror_index = 100 }
+		set_variable = { global.SYR_isis_check = global.num_days }
+		add_to_variable = { global.SYR_isis_check = 20 }
+		log = "[GetDateText]: SYR_civil_war: ISIS outbreak"
+		hidden_effect = {
+			if = {
+				limit = { country_exists = SYR }
+				SYR = { AS_spawn_isis_into_game = yes }
+				else = {
+					192 = { owner = { AS_spawn_isis_into_game = yes } }
+				}
+			}
+			news_event = { id = SYR_terror.3 hours = 6 }
+		}
+		SYR_terror_update_stage = yes
+		SYR_terror_publish_all = yes
+	}
+}
+
+# 与千禧同步（on_daily_SYR 调用）：千禧自己的随机 ISIS 先触发了 -> 指数置 100；ISIS 之后被消灭 -> 指数回落到 30 并停止累积
+SYR_terror_sync = {
+	if = {
+		limit = {
+			has_global_flag = ISIL_declared
+			NOT = { has_global_flag = SYR_isis_synced }
+		}
+		set_global_flag = SYR_isis_synced
+		set_variable = { global.SYR_terror_index = 100 }
+		set_variable = { global.SYR_isis_check = global.num_days }
+		add_to_variable = { global.SYR_isis_check = 20 }
+		SYR_terror_update_stage = yes
+		SYR_terror_publish_all = yes
+	}
+	else_if = {
+		limit = {
+			has_global_flag = SYR_isis_synced
+			NOT = { has_global_flag = SYR_isis_defeated }
+			NOT = { country_exists = ISI }
+			check_variable = { global.num_days > global.SYR_isis_check }
+		}
+		set_global_flag = SYR_isis_defeated
+		set_variable = { global.SYR_terror_index = 30 }
+		log = "[GetDateText]: SYR_civil_war: ISIS no longer exists, index drops to 30"
+		SYR_terror_update_stage = yes
+		SYR_terror_publish_all = yes
+	}
+}

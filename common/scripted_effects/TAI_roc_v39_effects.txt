@@ -44,7 +44,7 @@ TAI_transfer_sars = {
 TAI_hkg_roc_sar_setup = {
 	set_country_flag = HKG_roc_sar
 	add_ideas = TAI_hkg_roc_sar_idea
-	# v3.19：「回归中华民国」已并入千禧的香港国策树
+	# v3.19：“回归中华民国”已并入千禧的香港国策树
 	if = { limit = { NOT = { has_focus_tree = hong_kong } } load_focus_tree = { tree = hong_kong keep_completed = yes } }
 	set_temp_variable = { party_index = 1 }
 	set_temp_variable = { party_popularity_increase = 0.15 }

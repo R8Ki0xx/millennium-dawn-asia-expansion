@@ -1,0 +1,73 @@
+# MD ROC Return v3.42 —— 叙利亚“内战与反恐”面板（由 _tools/v342/gen_syr_gui.py 生成）
+guiTypes = {
+	containerWindowType = {
+		name = "SYR_terror_window"
+		size = { width = 492 height = 594 }
+		containerWindowType = {
+			name = "syr_t_bgw"
+			position = { x = 0 y = 14 }
+			size = { width = 492 height = 580 }
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_MD_tiled_window_politics_2"
+			}
+		}
+		instantTextBoxType = { name = "syr_t_title" position = { x = 18 y = 24 } font = "hoi_18mbs" text = "SYR_t_title" maxWidth = 456 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_stage" position = { x = 18 y = 48 } font = "hoi_16mbs" text = "SYR_t_stage_line" maxWidth = 456 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_gauge" quadTextureSprite = "GFX_SYR_t_gauge" position = { x = 18 y = 76 } alwaystransparent = yes }
+		iconType = { name = "syr_t_ticks" spriteType = "GFX_SYR_t_ticks" position = { x = 18 y = 76 } alwaystransparent = yes }
+		instantTextBoxType = { name = "syr_t_t25" position = { x = 122 y = 94 } font = "hoi_16mbs" text = "SYR_t_tick25" maxWidth = 30 maxHeight = 16 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_t50" position = { x = 236 y = 94 } font = "hoi_16mbs" text = "SYR_t_tick50" maxWidth = 30 maxHeight = 16 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_t75" position = { x = 350 y = 94 } font = "hoi_16mbs" text = "SYR_t_tick75" maxWidth = 30 maxHeight = 16 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_eta" position = { x = 18 y = 114 } font = "hoi_16mbs" text = "SYR_t_eta_line" maxWidth = 456 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_s1" spriteType = "GFX_SYR_t_sect" position = { x = 18 y = 152 } alwaystransparent = yes }
+		instantTextBoxType = { name = "syr_t_s1t" position = { x = 28 y = 155 } font = "hoi_18mbs" text = "SYR_t_sec1" maxWidth = 436 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fl_base" position = { x = 24 y = 182 } font = "hoi_16mbs" text = "SYR_t_fl_base" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_base" position = { x = 358 y = 182 } font = "hoi_16mbs" text = "SYR_t_fv_base" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_split" position = { x = 24 y = 201 } font = "hoi_16mbs" text = "SYR_t_fl_split" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_split" position = { x = 358 y = 201 } font = "hoi_16mbs" text = "SYR_t_fv_split" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_nus_land" position = { x = 24 y = 220 } font = "hoi_16mbs" text = "SYR_t_fl_nus_land" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_nus_land" position = { x = 358 y = 220 } font = "hoi_16mbs" text = "SYR_t_fv_nus_land" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_iraq" position = { x = 24 y = 239 } font = "hoi_16mbs" text = "SYR_t_fl_iraq" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_iraq" position = { x = 358 y = 239 } font = "hoi_16mbs" text = "SYR_t_fv_iraq" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_infight" position = { x = 24 y = 258 } font = "hoi_16mbs" text = "SYR_t_fl_infight" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_infight" position = { x = 358 y = 258 } font = "hoi_16mbs" text = "SYR_t_fv_infight" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_gov" position = { x = 24 y = 277 } font = "hoi_16mbs" text = "SYR_t_fl_gov" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_gov" position = { x = 358 y = 277 } font = "hoi_16mbs" text = "SYR_t_fv_gov" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_world" position = { x = 24 y = 296 } font = "hoi_16mbs" text = "SYR_t_fl_world" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_world" position = { x = 358 y = 296 } font = "hoi_16mbs" text = "SYR_t_fv_world" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_fl_player" position = { x = 24 y = 315 } font = "hoi_16mbs" text = "SYR_t_fl_player" maxWidth = 330 maxHeight = 18 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_fv_player" position = { x = 358 y = 315 } font = "hoi_16mbs" text = "SYR_t_fv_player" maxWidth = 110 maxHeight = 18 fixedsize = yes format = right }
+		instantTextBoxType = { name = "syr_t_sum_l" position = { x = 24 y = 336 } font = "hoi_18mbs" text = "SYR_t_sum_l" maxWidth = 330 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "syr_t_sum_v" position = { x = 358 y = 336 } font = "hoi_18mbs" text = "SYR_t_sum_v" maxWidth = 110 maxHeight = 20 fixedsize = yes format = right }
+		iconType = { name = "syr_t_s2" spriteType = "GFX_SYR_t_sect" position = { x = 18 y = 372 } alwaystransparent = yes }
+		instantTextBoxType = { name = "syr_t_s2t" position = { x = 28 y = 375 } font = "hoi_18mbs" text = "SYR_t_sec2" maxWidth = 436 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_segbase" spriteType = "GFX_SYR_t_segbase" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_6" quadTextureSprite = "GFX_SYR_t_seg_6" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_5" quadTextureSprite = "GFX_SYR_t_seg_5" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_4" quadTextureSprite = "GFX_SYR_t_seg_4" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_3" quadTextureSprite = "GFX_SYR_t_seg_3" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_2" quadTextureSprite = "GFX_SYR_t_seg_2" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_seg_1" quadTextureSprite = "GFX_SYR_t_seg_1" position = { x = 18 y = 404 } alwaystransparent = yes }
+		iconType = { name = "syr_t_lg_gov" spriteType = "GFX_SYR_t_swatch" position = { x = 24 y = 430 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "syr_t_lt_gov" position = { x = 46 y = 428 } font = "hoi_16mbs" text = "SYR_t_lg_gov" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_lg_fsa" spriteType = "GFX_SYR_t_swatch" position = { x = 176 y = 430 } alwaystransparent = yes frame = 2 }
+		instantTextBoxType = { name = "syr_t_lt_fsa" position = { x = 198 y = 428 } font = "hoi_16mbs" text = "SYR_t_lg_fsa" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_lg_nus" spriteType = "GFX_SYR_t_swatch" position = { x = 328 y = 430 } alwaystransparent = yes frame = 3 }
+		instantTextBoxType = { name = "syr_t_lt_nus" position = { x = 350 y = 428 } font = "hoi_16mbs" text = "SYR_t_lg_nus" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_lg_isi" spriteType = "GFX_SYR_t_swatch" position = { x = 24 y = 450 } alwaystransparent = yes frame = 4 }
+		instantTextBoxType = { name = "syr_t_lt_isi" position = { x = 46 y = 448 } font = "hoi_16mbs" text = "SYR_t_lg_isi" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_lg_roj" spriteType = "GFX_SYR_t_swatch" position = { x = 176 y = 450 } alwaystransparent = yes frame = 5 }
+		instantTextBoxType = { name = "syr_t_lt_roj" position = { x = 198 y = 448 } font = "hoi_16mbs" text = "SYR_t_lg_roj" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_lg_oth" spriteType = "GFX_SYR_t_swatch" position = { x = 328 y = 450 } alwaystransparent = yes frame = 6 }
+		instantTextBoxType = { name = "syr_t_lt_oth" position = { x = 350 y = 448 } font = "hoi_16mbs" text = "SYR_t_lg_oth" maxWidth = 120 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "syr_t_s3" spriteType = "GFX_SYR_t_sect" position = { x = 18 y = 482 } alwaystransparent = yes }
+		instantTextBoxType = { name = "syr_t_s3t" position = { x = 28 y = 485 } font = "hoi_18mbs" text = "SYR_t_sec3" maxWidth = 436 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_fd_fsa" spriteType = "GFX_SYR_t_swatch" position = { x = 24 y = 516 } alwaystransparent = yes frame = 2 }
+		instantTextBoxType = { name = "syr_t_fr_fsa" position = { x = 46 y = 514 } font = "hoi_16mbs" text = "SYR_t_row_fsa" maxWidth = 426 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_fd_nus" spriteType = "GFX_SYR_t_swatch" position = { x = 24 y = 538 } alwaystransparent = yes frame = 3 }
+		instantTextBoxType = { name = "syr_t_fr_nus" position = { x = 46 y = 536 } font = "hoi_16mbs" text = "SYR_t_row_nus" maxWidth = 426 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "syr_t_fd_isi" spriteType = "GFX_SYR_t_swatch" position = { x = 24 y = 560 } alwaystransparent = yes frame = 4 }
+		instantTextBoxType = { name = "syr_t_fr_isi" position = { x = 46 y = 558 } font = "hoi_16mbs" text = "SYR_t_row_isi" maxWidth = 426 maxHeight = 20 fixedsize = yes }
+	}
+}

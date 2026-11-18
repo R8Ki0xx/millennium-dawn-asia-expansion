@@ -1,4 +1,4 @@
-# MD ROC Return v3.20：复制自千禧，末尾追加「韩国扩展国策」（KORX_，由 _tools/v320_kor.py 生成）
+# MD ROC Return v3.20：复制自千禧，末尾追加“韩国扩展国策”（KORX_，由 _tools/v320_kor.py 生成）
 # Author(s): Manchu Yu
 # Last Modified 14/02/2022 by Angriest Bird
 focus_tree = {

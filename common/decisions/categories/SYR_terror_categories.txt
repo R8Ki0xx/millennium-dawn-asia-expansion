@@ -1,0 +1,18 @@
+# MD ROC Return v3.36 —— 叙利亚内战期间的反恐决议分类（挂着“内战与反恐”图形面板）
+SYR_terror_category = {
+	icon = GFX_decision_syria
+	priority = 1900
+	allowed = { always = yes }
+	visible = {
+		has_global_flag = GLOBAL_syrian_civil_war_started
+		NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+		OR = {
+			original_tag = SYR
+			original_tag = FSA
+			original_tag = NUS
+			original_tag = IRQ
+		}
+	}
+	visible_when_empty = yes
+	scripted_gui = SYR_terror_GUI
+}

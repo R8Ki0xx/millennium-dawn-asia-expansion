@@ -1,0 +1,478 @@
+add_namespace = SYRL
+
+# “回归复兴党初心”线的剧情事件（取代原来的通用事件 roc_asia.70~76）。变量 SYRL_tension = 元老 / 既得利益者的积怨（0~100）；
+# 旗标 SYRL_f_pluralist / SYRL_f_partyreform、SYRL_f_peasant / SYRL_f_industry、SYRL_f_arab / SYRL_f_nonaligned 记录三处二选一。
+
+# 1. 回到初心：党的反应
+country_event = {
+	id = SYRL.1
+	title = SYRL.1.t
+	desc = SYRL.1.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.1.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.1.a executed"
+		ai_chance = { base = 55 }
+		add_stability = 0.02
+		army_experience = 10
+		set_temp_variable = { syrl_t = 10 }
+		SYRL_tension_add = yes
+	}
+	option = {
+		name = SYRL.1.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.1.b executed"
+		ai_chance = { base = 45 }
+		add_political_power = 75
+		set_temp_variable = { party_index = 4 }
+		set_temp_variable = { party_popularity_increase = 0.02 }
+		set_temp_variable = { temp_outlook_increase = 0.02 }
+		change_relative_party_popularity = yes
+		set_temp_variable = { syrl_t = 25 }
+		SYRL_tension_add = yes
+	}
+}
+
+# 2. 家族财阀的清算
+country_event = {
+	id = SYRL.2
+	title = SYRL.2.t
+	desc = SYRL.2.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.2.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.2.a executed"
+		ai_chance = { base = 40 }
+		set_temp_variable = { treasury_change = 40 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+		set_temp_variable = { syrl_t = 20 }
+		SYRL_tension_add = yes
+		random = {
+			chance = 40
+			country_event = { id = SYRL.3 days = 20 random_days = 20 }
+		}
+	}
+	option = {
+		name = SYRL.2.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.2.b executed"
+		ai_chance = { base = 60 }
+		set_temp_variable = { treasury_change = 20 }
+		modify_treasury_effect = yes
+		add_stability = 0.01
+		set_country_flag = SYRL_makhlouf_deal
+		set_temp_variable = { syrl_t = -5 }
+		SYRL_tension_add = yes
+	}
+}
+
+# 3. 政变企图：马赫与共和国卫队的最后通牒
+country_event = {
+	id = SYRL.3
+	title = SYRL.3.t
+	desc = SYRL.3.d
+	picture = GFX_syrian_arab_army
+	is_triggered_only = yes
+
+	trigger = { NOT = { has_country_flag = SYRL_coup_done } }
+
+	immediate = { set_country_flag = SYRL_coup_done }
+
+	# 逮捕：清洗
+	option = {
+		name = SYRL.3.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.3.a executed"
+		ai_chance = { base = 45 }
+		add_stability = -0.03
+		army_experience = 15
+		add_political_power = 25
+		set_variable = { SYRL_tension = 0 }
+		SYR_terror_publish_all = yes
+	}
+	# 谈判：流亡与补偿
+	option = {
+		name = SYRL.3.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.3.b executed"
+		ai_chance = { base = 40 }
+		add_political_power = -50
+		set_temp_variable = { syrl_t = -20 }
+		SYRL_tension_add = yes
+	}
+	# 让共和国卫队决定：内战
+	option = {
+		name = SYRL.3.c
+		log = "[GetDateText]: [Root.GetName]: SYRL.3.c executed"
+		ai_chance = { base = 15 }
+		set_country_flag = Second_Syrian_Civil_War
+		set_country_flag = SYRL_coup_war
+		start_civil_war = {
+			ideology = nationalist
+			size = 0.35
+		}
+		set_variable = { SYRL_tension = 0 }
+	}
+}
+
+# 4. 元老的沉默
+country_event = {
+	id = SYRL.4
+	title = SYRL.4.t
+	desc = SYRL.4.d
+	picture = GFX_Assad_parade
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.4.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.4.a executed"
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		add_stability = 0.01
+		set_temp_variable = { syrl_t = -10 }
+		SYRL_tension_add = yes
+	}
+	option = {
+		name = SYRL.4.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.4.b executed"
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		set_temp_variable = { syrl_t = 15 }
+		SYRL_tension_add = yes
+	}
+}
+
+# 5. 党代表大会：三派之争
+country_event = {
+	id = SYRL.5
+	title = SYRL.5.t
+	desc = SYRL.5.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+
+	# 技术官僚：技术治国
+	option = {
+		name = SYRL.5.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.5.a executed"
+		ai_chance = { base = 35 }
+		set_country_flag = SYRL_cong_tech
+		set_temp_variable = { party_index = 13 }
+		set_temp_variable = { party_popularity_increase = 0.03 }
+		set_temp_variable = { temp_outlook_increase = 0.03 }
+		change_relative_party_popularity = yes
+		add_stability = 0.02
+	}
+	# 左翼：回到社会主义
+	option = {
+		name = SYRL.5.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.5.b executed"
+		ai_chance = { base = 35 }
+		set_country_flag = SYRL_cong_left
+		set_temp_variable = { party_index = 4 }
+		set_temp_variable = { party_popularity_increase = 0.03 }
+		set_temp_variable = { temp_outlook_increase = 0.03 }
+		change_relative_party_popularity = yes
+		set_temp_variable = { party_index = 18 }
+		set_temp_variable = { party_popularity_increase = 0.02 }
+		set_temp_variable = { temp_outlook_increase = 0.02 }
+		change_relative_party_popularity = yes
+		add_political_power = 25
+	}
+	# 折中：各退一步
+	option = {
+		name = SYRL.5.c
+		log = "[GetDateText]: [Root.GetName]: SYRL.5.c executed"
+		ai_chance = { base = 30 }
+		set_country_flag = SYRL_cong_compromise
+		add_stability = 0.03
+		add_political_power = 50
+		set_temp_variable = { syrl_t = -5 }
+		SYRL_tension_add = yes
+	}
+}
+
+# 6. 任期限制公投
+country_event = {
+	id = SYRL.6
+	title = SYRL.6.t
+	desc = SYRL.6.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.6.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.6.a executed"
+		ai_chance = { base = 65 }
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	option = {
+		name = SYRL.6.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.6.b executed"
+		ai_chance = { base = 35 }
+		add_political_power = 75
+		add_stability = -0.02
+		clr_country_flag = SYRL_term_limited
+		set_temp_variable = { syrl_t = 10 }
+		SYRL_tension_add = yes
+	}
+}
+
+# 7. 共和国卫队的抗命
+country_event = {
+	id = SYRL.7
+	title = SYRL.7.t
+	desc = SYRL.7.d
+	picture = GFX_syrian_arab_army
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.7.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.7.a executed"
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		army_experience = 10
+		set_temp_variable = { syrl_t = -10 }
+		SYRL_tension_add = yes
+	}
+	option = {
+		name = SYRL.7.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.7.b executed"
+		ai_chance = { base = 50 }
+		add_stability = -0.02
+		add_manpower = 5000
+		set_temp_variable = { syrl_t = 10 }
+		SYRL_tension_add = yes
+		if = {
+			limit = { check_variable = { SYRL_tension > 60 } NOT = { has_country_flag = SYRL_coup_done } }
+			country_event = { id = SYRL.3 days = 10 random_days = 10 }
+		}
+	}
+}
+
+# 8. 阿拉伯团结的回响
+country_event = {
+	id = SYRL.8
+	title = SYRL.8.t
+	desc = SYRL.8.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.8.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.8.a executed"
+		ai_chance = { base = 55 }
+		add_political_power = 25
+		if = { limit = { country_exists = IRQ } IRQ = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_pan_arab } } add_opinion_modifier = { target = IRQ modifier = SYRL_ext_pan_arab } }
+		if = { limit = { country_exists = EGY } EGY = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_pan_arab } } add_opinion_modifier = { target = EGY modifier = SYRL_ext_pan_arab } }
+	}
+	option = {
+		name = SYRL.8.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.8.b executed"
+		ai_chance = { base = 45 }
+		set_temp_variable = { treasury_change = 30 }
+		modify_treasury_effect = yes
+		add_stability = 0.02
+	}
+}
+
+# 9. 库尔德人入籍
+country_event = {
+	id = SYRL.9
+	title = SYRL.9.t
+	desc = SYRL.9.d
+	picture = GFX_SYR_rojava
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.9.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.9.a executed"
+		ai_chance = { base = 60 }
+		add_stability = 0.02
+		if = { limit = { country_exists = ROJ } ROJ = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_kurd_trust } } add_opinion_modifier = { target = ROJ modifier = SYRL_ext_kurd_trust } }
+		if = { limit = { country_exists = TUR } TUR = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_turkey_kurd } } add_opinion_modifier = { target = TUR modifier = SYRL_ext_turkey_kurd } }
+	}
+	option = {
+		name = SYRL.9.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.9.b executed"
+		ai_chance = { base = 40 }
+		add_political_power = 25
+		add_stability = 0.01
+		if = { limit = { country_exists = ROJ } ROJ = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_kurd_trust } } add_opinion_modifier = { target = ROJ modifier = SYRL_ext_kurd_trust } }
+	}
+}
+
+# 10. 全国对话
+country_event = {
+	id = SYRL.10
+	title = SYRL.10.t
+	desc = SYRL.10.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	# 邀请所有人，包括温和的伊斯兰派
+	option = {
+		name = SYRL.10.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.10.a executed"
+		ai_chance = { base = 50 }
+		add_stability = 0.04
+		add_political_power = 25
+		set_country_flag = SYRL_dialogue_inclusive
+		set_temp_variable = { syrl_t = 5 }
+		SYRL_tension_add = yes
+	}
+	# 只邀请世俗反对派
+	option = {
+		name = SYRL.10.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.10.b executed"
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 50
+		set_country_flag = SYRL_dialogue_secular
+	}
+}
+
+# 11. 左翼停火（内战期间）
+country_event = {
+	id = SYRL.11
+	title = SYRL.11.t
+	desc = SYRL.11.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	# 对所有武装停火
+	option = {
+		name = SYRL.11.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.11.a executed"
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		if = { limit = { country_exists = FSA has_war_with = FSA } white_peace = FSA }
+		set_temp_variable = { syr_terror_delta = -6 }
+		SYR_terror_apply_delta = yes
+	}
+	# 只与温和派谈，继续打极端派
+	option = {
+		name = SYRL.11.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.11.b executed"
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		add_war_support = 0.02
+		if = { limit = { country_exists = FSA has_war_with = FSA } white_peace = FSA }
+		set_temp_variable = { syr_terror_delta = -3 }
+		SYR_terror_apply_delta = yes
+	}
+}
+
+# 12. 国家宪章
+country_event = {
+	id = SYRL.12
+	title = SYRL.12.t
+	desc = SYRL.12.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.12.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.12.a executed"
+		ai_chance = { base = 100 }
+		add_political_power = 50
+		add_stability = 0.03
+	}
+}
+
+# 13. 新复兴共和国
+country_event = {
+	id = SYRL.13
+	title = SYRL.13.t
+	desc = SYRL.13.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.13.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.13.a executed"
+		ai_chance = { base = 100 }
+		add_political_power = 100
+		add_stability = 0.04
+		set_temp_variable = { treasury_change = 50 }
+		modify_treasury_effect = yes
+	}
+}
+
+# 14. 石油与水资源国有：海湾与西方的反应
+country_event = {
+	id = SYRL.14
+	title = SYRL.14.t
+	desc = SYRL.14.d
+	picture = GFX_event_news_SYR_peace
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.14.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.14.a executed"
+		ai_chance = { base = 55 }
+		add_stability = 0.02
+		if = { limit = { country_exists = SAU } SAU = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_nationalization } } add_opinion_modifier = { target = SAU modifier = SYRL_ext_nationalization } }
+		if = { limit = { country_exists = USA } USA = { add_opinion_modifier = { target = ROOT modifier = SYRL_ext_nationalization } } add_opinion_modifier = { target = USA modifier = SYRL_ext_nationalization } }
+	}
+	option = {
+		name = SYRL.14.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.14.b executed"
+		ai_chance = { base = 45 }
+		set_temp_variable = { treasury_change = -20 }
+		modify_treasury_effect = yes
+		add_political_power = 25
+	}
+}
+
+# 15. 巴勒斯坦事业
+country_event = {
+	id = SYRL.15
+	title = SYRL.15.t
+	desc = SYRL.15.d
+	picture = GFX_palestinians_in_syria
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.15.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.15.a executed"
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		add_war_support = 0.03
+	}
+	option = {
+		name = SYRL.15.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.15.b executed"
+		ai_chance = { base = 50 }
+		add_stability = 0.03
+		set_temp_variable = { treasury_change = 20 }
+		modify_treasury_effect = yes
+	}
+}
+
+# 16. 世俗义务教育：教士的反应
+country_event = {
+	id = SYRL.16
+	title = SYRL.16.t
+	desc = SYRL.16.d
+	picture = GFX_islamists_secularists_syr
+	is_triggered_only = yes
+
+	option = {
+		name = SYRL.16.a
+		log = "[GetDateText]: [Root.GetName]: SYRL.16.a executed"
+		ai_chance = { base = 55 }
+		add_political_power = -25
+		add_stability = 0.03
+	}
+	option = {
+		name = SYRL.16.b
+		log = "[GetDateText]: [Root.GetName]: SYRL.16.b executed"
+		ai_chance = { base = 45 }
+		add_political_power = 50
+		add_stability = -0.03
+		set_temp_variable = { syrl_t = 5 }
+		SYRL_tension_add = yes
+	}
+}

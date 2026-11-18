@@ -30,7 +30,7 @@ TAI_ai_behavior = {
 	}
 }
 
-# v3.29 叙利亚「左翼复兴党」AI 规则（独立规则；千禧的 SYR_ai_behavior 在它自己的文件里，不能直接加选项）
+# v3.29 叙利亚“左翼复兴党”AI 规则（独立规则；千禧的 SYR_ai_behavior 在它自己的文件里，不能直接加选项）
 SYRL_ai_behavior = {
 	name = "SYRL_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"

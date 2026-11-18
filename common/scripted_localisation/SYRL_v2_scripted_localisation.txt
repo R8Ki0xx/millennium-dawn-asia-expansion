@@ -1,0 +1,19 @@
+# MD ROC Return v3.42 —— “回归复兴党初心”线：终局事件里按二选一路线显示的句子（由 _tools/v342/gen_syrl.py 生成）
+defined_text = {
+	name = SYRL_f_pol
+	text = { trigger = { has_country_flag = SYRL_f_pluralist } localization_key = SYRL_fork_pol_pl }
+	text = { trigger = { has_country_flag = SYRL_f_partyreform } localization_key = SYRL_fork_pol_pr }
+	text = { localization_key = SYRL_fork_none }
+}
+defined_text = {
+	name = SYRL_f_eco
+	text = { trigger = { has_country_flag = SYRL_f_peasant } localization_key = SYRL_fork_eco_pe }
+	text = { trigger = { has_country_flag = SYRL_f_industry } localization_key = SYRL_fork_eco_in }
+	text = { localization_key = SYRL_fork_none }
+}
+defined_text = {
+	name = SYRL_f_for
+	text = { trigger = { has_country_flag = SYRL_f_arab } localization_key = SYRL_fork_for_ar }
+	text = { trigger = { has_country_flag = SYRL_f_nonaligned } localization_key = SYRL_fork_for_na }
+	text = { localization_key = SYRL_fork_none }
+}

@@ -58,7 +58,7 @@ TAI_roc_v319_restore_influence = {
 	}
 }
 
-# Scope: 新 CHI。复制台湾影响力时带过来的「CHI/TAI 影响自己」，并入国内影响力
+# Scope: 新 CHI。复制台湾影响力时带过来的“CHI/TAI 影响自己”，并入国内影响力
 TAI_roc_v319_fix_self_influence = {
 	set_temp_variable = { roc_chi = THIS.id }
 	set_temp_variable = { roc_tai = TAI.id }
@@ -186,7 +186,7 @@ TAI_roc_join_un_assembly = {
 	if = { limit = { has_idea = p5_member } set_country_flag = permanent_un_member_flag }
 }
 
-# Scope: 新 CHI。情报机构：没有机构时建立「国家安全局」（引擎无法给已有的机构改名）
+# Scope: 新 CHI。情报机构：没有机构时建立“国家安全局”（引擎无法给已有的机构改名）
 TAI_roc_v319_agency = {
 	if = {
 		limit = { NOT = { has_intelligence_agency = yes } }
@@ -211,7 +211,7 @@ TAI_roc_v319_takeover = {
 	if = { limit = { has_idea = TAI_legacy_of_1949 } remove_ideas = TAI_legacy_of_1949 }
 	TAI_roc_v319_japan = yes
 	TAI_roc_v319_agency = yes
-	# 边疆一体化；千禧中共的新疆事件改由「边疆骚动」事件取代
+	# 边疆一体化；千禧中共的新疆事件改由“边疆骚动”事件取代
 	TAI_fr_init = yes
 	set_country_flag = CHI_uighur_event_cd
 }

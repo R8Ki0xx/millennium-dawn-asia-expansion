@@ -6,11 +6,14 @@ scripted_gui = {
 		visible = { has_country_flag = VEL_CHI_on }
 		ai_enabled = { always = no }
 		properties = {
-			vel_chi_bar_1 = { frame = VEL_CHI_bar_1 }
-			vel_chi_bar_2 = { frame = VEL_CHI_bar_2 }
-			vel_chi_bar_3 = { frame = VEL_CHI_bar_3 }
-			vel_chi_bar_4 = { frame = VEL_CHI_bar_4 }
-			vel_chi_bar_5 = { frame = VEL_CHI_bar_5 }
+			vel_chi_bar_1 = { frame = VEL_CHI_fb_b_1 }
+			vel_chi_sw_1 = { frame = VEL_CHI_fb_e_1 }
+			vel_chi_bar_2 = { frame = VEL_CHI_fb_b_2 }
+			vel_chi_sw_2 = { frame = VEL_CHI_fb_e_2 }
+			vel_chi_bar_3 = { frame = VEL_CHI_fb_b_3 }
+			vel_chi_sw_3 = { frame = VEL_CHI_fb_e_3 }
+			vel_chi_bar_4 = { frame = VEL_CHI_fb_b_4 }
+			vel_chi_sw_4 = { frame = VEL_CHI_fb_e_4 }
 		}
 		effects = {
 			vel_chi_open_click = { if = { limit = { has_country_flag = VEL_CHI_open } clr_country_flag = VEL_CHI_open } else = { set_country_flag = VEL_CHI_open } }
@@ -109,16 +112,60 @@ scripted_gui = {
 			vb_chi_i_31 = { frame = VEL_CHI_frame^31 }
 			vb_chi_o_31 = { frame = VEL_CHI_selfr^31 }
 			vb_chi_b_31 = { frame = VEL_CHI_frame^31 }
-			vb_chi_sc_1 = { frame = VEL_CHI_bar_1 }
 			vb_chi_sbar_1 = { frame = VEL_CHI_sb_1 }
-			vb_chi_sc_2 = { frame = VEL_CHI_bar_2 }
+			vb_chi_sw_1 = { frame = VEL_CHI_ef_1 }
 			vb_chi_sbar_2 = { frame = VEL_CHI_sb_2 }
-			vb_chi_sc_3 = { frame = VEL_CHI_bar_3 }
+			vb_chi_sw_2 = { frame = VEL_CHI_ef_2 }
 			vb_chi_sbar_3 = { frame = VEL_CHI_sb_3 }
-			vb_chi_sc_4 = { frame = VEL_CHI_bar_4 }
+			vb_chi_sw_3 = { frame = VEL_CHI_ef_3 }
 			vb_chi_sbar_4 = { frame = VEL_CHI_sb_4 }
-			vb_chi_sc_5 = { frame = VEL_CHI_bar_5 }
+			vb_chi_sw_4 = { frame = VEL_CHI_ef_4 }
 			vb_chi_sbar_5 = { frame = VEL_CHI_sb_5 }
+			vb_chi_sw_5 = { frame = VEL_CHI_ef_5 }
+			vb_chi_sbar_6 = { frame = VEL_CHI_sb_6 }
+			vb_chi_sw_6 = { frame = VEL_CHI_ef_6 }
+			vb_chi_sbar_7 = { frame = VEL_CHI_sb_7 }
+			vb_chi_sw_7 = { frame = VEL_CHI_ef_7 }
+			vb_chi_card_1 = { frame = VEL_CHI_fb_cf_1 }
+			vb_chi_ldr_1 = { frame = VEL_CHI_fb_g_1 }
+			vb_chi_emb_1 = { frame = VEL_CHI_fb_e_1 }
+			vb_chi_fbl_1_1 = { frame = VEL_CHI_fbv_1_1 }
+			vb_chi_fbl_1_2 = { frame = VEL_CHI_fbv_1_2 }
+			vb_chi_fbl_1_3 = { frame = VEL_CHI_fbv_1_3 }
+			vb_chi_fbl_1_4 = { frame = VEL_CHI_fbv_1_4 }
+			vb_chi_fbl_1_5 = { frame = VEL_CHI_fbv_1_5 }
+			vb_chi_fbl_1_6 = { frame = VEL_CHI_fbv_1_6 }
+			vb_chi_fbl_1_7 = { frame = VEL_CHI_fbv_1_7 }
+			vb_chi_card_2 = { frame = VEL_CHI_fb_cf_2 }
+			vb_chi_ldr_2 = { frame = VEL_CHI_fb_g_2 }
+			vb_chi_emb_2 = { frame = VEL_CHI_fb_e_2 }
+			vb_chi_fbl_2_1 = { frame = VEL_CHI_fbv_2_1 }
+			vb_chi_fbl_2_2 = { frame = VEL_CHI_fbv_2_2 }
+			vb_chi_fbl_2_3 = { frame = VEL_CHI_fbv_2_3 }
+			vb_chi_fbl_2_4 = { frame = VEL_CHI_fbv_2_4 }
+			vb_chi_fbl_2_5 = { frame = VEL_CHI_fbv_2_5 }
+			vb_chi_fbl_2_6 = { frame = VEL_CHI_fbv_2_6 }
+			vb_chi_fbl_2_7 = { frame = VEL_CHI_fbv_2_7 }
+			vb_chi_card_3 = { frame = VEL_CHI_fb_cf_3 }
+			vb_chi_ldr_3 = { frame = VEL_CHI_fb_g_3 }
+			vb_chi_emb_3 = { frame = VEL_CHI_fb_e_3 }
+			vb_chi_fbl_3_1 = { frame = VEL_CHI_fbv_3_1 }
+			vb_chi_fbl_3_2 = { frame = VEL_CHI_fbv_3_2 }
+			vb_chi_fbl_3_3 = { frame = VEL_CHI_fbv_3_3 }
+			vb_chi_fbl_3_4 = { frame = VEL_CHI_fbv_3_4 }
+			vb_chi_fbl_3_5 = { frame = VEL_CHI_fbv_3_5 }
+			vb_chi_fbl_3_6 = { frame = VEL_CHI_fbv_3_6 }
+			vb_chi_fbl_3_7 = { frame = VEL_CHI_fbv_3_7 }
+			vb_chi_card_4 = { frame = VEL_CHI_fb_cf_4 }
+			vb_chi_ldr_4 = { frame = VEL_CHI_fb_g_4 }
+			vb_chi_emb_4 = { frame = VEL_CHI_fb_e_4 }
+			vb_chi_fbl_4_1 = { frame = VEL_CHI_fbv_4_1 }
+			vb_chi_fbl_4_2 = { frame = VEL_CHI_fbv_4_2 }
+			vb_chi_fbl_4_3 = { frame = VEL_CHI_fbv_4_3 }
+			vb_chi_fbl_4_4 = { frame = VEL_CHI_fbv_4_4 }
+			vb_chi_fbl_4_5 = { frame = VEL_CHI_fbv_4_5 }
+			vb_chi_fbl_4_6 = { frame = VEL_CHI_fbv_4_6 }
+			vb_chi_fbl_4_7 = { frame = VEL_CHI_fbv_4_7 }
 			vb_chi_ls_0 = { frame = VEL_CHI_lead^0 }
 			vb_chi_ls_1 = { frame = VEL_CHI_lead^1 }
 			vb_chi_ls_2 = { frame = VEL_CHI_lead^2 }

@@ -1,111 +1,99 @@
 # MD ROC Return v3.36 —— 选举界面精灵图（TAI）。由 _tools/v336/gen_vel_gui3.py 生成。
 spriteTypes = {
 	spriteType = { name = "GFX_VEL_TAI_bbg" texturefile = "gfx/interface/scripted_gui/VEL/TAI_bbg.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAI_card" texturefile = "gfx/interface/scripted_gui/VEL/TAI_card.dds" noOfFrames = 5 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_TAI.dds" noOfFrames = 5 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_pi_TAI_1" texturefile = "gfx/interface/goals/taiwan/TAI_kmt.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_pi_TAI_2" texturefile = "gfx/interface/goals/taiwan/TAI_dpp.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_pi_TAI_3" texturefile = "gfx/interface/goals/00_ideology/social_democracy.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_pi_TAI_4" texturefile = "gfx/interface/goals/00_economy/union_negotiations.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_pi_TAI_5" texturefile = "gfx/interface/goals/taiwan/TAI_pfp.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_card" texturefile = "gfx/interface/scripted_gui/VEL/TAI_card.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_TAI.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_emb" texturefile = "gfx/interface/scripted_gui/VEL/TAI_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_fbmark" texturefile = "gfx/interface/scripted_gui/VEL/TAI_fbmark.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_ldr" texturefile = "gfx/interface/scripted_gui/VEL/TAI_ldr.dds" noOfFrames = 17 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_base" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_base.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_labels" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_labels.dds" legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_1" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_1.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_1" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_1.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_1" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_1.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_1_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_1_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_1" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_1.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_2" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_2.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_1" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_1.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_2" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_2.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_2" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_2.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_2_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_2_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_3" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_3.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_3" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_3.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_3" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_3.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_3_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_3_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_3" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_3.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_4" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_4.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_3" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_3.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_4" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_4.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_4" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_4.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_4_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_4_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_4" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_4.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_5" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_5.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_4" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_4.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_5" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_5.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_5" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_5.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_5_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_5_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_5" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_5.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_6" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_6.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_5" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_5.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_6" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_6.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_6" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_6.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_6_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_6_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_6" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_6.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_7" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_7.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_6" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_6.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_7" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_7.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_7" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_7.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_7_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_7_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_8" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_8.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_8" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_8.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_8" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_8.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_8_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_8_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_9" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_9.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_9" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_9.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_9" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_9.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_9_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_9_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_9" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_9.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_10" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_10.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_9" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_9.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_10" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_10.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_10" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_10.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_10_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_10_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_10" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_10.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_11.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_10" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_10.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_11.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_11.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_11_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_11_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_11.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_12.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_11.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_12.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_12.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_12_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_12_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_12.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_13" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_13.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_12.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_13" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_13.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_13" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_13.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_13_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_13_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_14" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_14.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_14" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_14.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_14" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_14.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_14_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_14_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_15" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_15.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_15" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_15.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_15" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_15.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_15_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_15_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_15" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_15.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_16" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_16.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_15" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_15.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_16" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_16.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_16" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_16.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_16_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_16_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_17" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_17.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_17" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_17.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_17" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_17.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_17_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_17_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_18" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_18.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_18" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_18.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_18" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_18.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_18_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_18_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_19" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_19.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_19" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_19.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_19" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_19.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_19_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_19_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_20" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_20.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_20" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_20.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_20" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_20.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_20_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_20_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_20" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_20.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_21" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_21.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_20" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_20.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_21" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_21.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_21" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_21.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_21_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_21_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_21" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_21.dds" noOfFrames = 16 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_22" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_22.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_21" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_21.dds" noOfFrames = 22 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_22" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_22.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_22" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_22.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_22_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_22_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_22" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_22.dds" noOfFrames = 16 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAIX_box_22" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_22.dds" noOfFrames = 22 legacy_lazy_load = no }
 	progressBarType = {
-		name = "GFX_VEL_TAI_tbar_1"
+		name = "GFX_VEL_TAI_tbarn"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_TAI_1.dds"
+		textureFile1 = "gfx/interface/scripted_gui/VEL/tn_TAI.dds"
 		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
 		size = { x = 150 y = 14 }
-		effectFile = "gfx/FX/progress.lua"
-		steps = 100
-	}
-	progressBarType = {
-		name = "GFX_VEL_TAI_sc_1"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/sc_TAI_1.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/sc_empty_TAI.dds"
-		size = { x = 217 y = 10 }
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100
 	}
@@ -120,24 +108,14 @@ spriteTypes = {
 		steps = 100
 	}
 	progressBarType = {
-		name = "GFX_VEL_TAI_tbar_2"
+		name = "GFX_VEL_TAI_fb_1"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_TAI_2.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 150 y = 14 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_1.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
 		effectFile = "gfx/FX/progress.lua"
-		steps = 100
-	}
-	progressBarType = {
-		name = "GFX_VEL_TAI_sc_2"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/sc_TAI_2.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/sc_empty_TAI.dds"
-		size = { x = 217 y = 10 }
-		effectFile = "gfx/FX/progress.lua"
-		steps = 100
+		steps = 200
 	}
 	progressBarType = {
 		name = "GFX_VEL_TAI_sb_2"
@@ -150,24 +128,14 @@ spriteTypes = {
 		steps = 100
 	}
 	progressBarType = {
-		name = "GFX_VEL_TAI_tbar_3"
+		name = "GFX_VEL_TAI_fb_2"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_TAI_3.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 150 y = 14 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_2.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
 		effectFile = "gfx/FX/progress.lua"
-		steps = 100
-	}
-	progressBarType = {
-		name = "GFX_VEL_TAI_sc_3"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/sc_TAI_3.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/sc_empty_TAI.dds"
-		size = { x = 217 y = 10 }
-		effectFile = "gfx/FX/progress.lua"
-		steps = 100
+		steps = 200
 	}
 	progressBarType = {
 		name = "GFX_VEL_TAI_sb_3"
@@ -180,24 +148,14 @@ spriteTypes = {
 		steps = 100
 	}
 	progressBarType = {
-		name = "GFX_VEL_TAI_tbar_4"
+		name = "GFX_VEL_TAI_fb_3"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_TAI_4.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 150 y = 14 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_3.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
 		effectFile = "gfx/FX/progress.lua"
-		steps = 100
-	}
-	progressBarType = {
-		name = "GFX_VEL_TAI_sc_4"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/sc_TAI_4.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/sc_empty_TAI.dds"
-		size = { x = 217 y = 10 }
-		effectFile = "gfx/FX/progress.lua"
-		steps = 100
+		steps = 200
 	}
 	progressBarType = {
 		name = "GFX_VEL_TAI_sb_4"
@@ -210,24 +168,14 @@ spriteTypes = {
 		steps = 100
 	}
 	progressBarType = {
-		name = "GFX_VEL_TAI_tbar_5"
+		name = "GFX_VEL_TAI_fb_4"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/tbar_TAI_5.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/tbar_empty.dds"
-		size = { x = 150 y = 14 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_4.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
 		effectFile = "gfx/FX/progress.lua"
-		steps = 100
-	}
-	progressBarType = {
-		name = "GFX_VEL_TAI_sc_5"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/scripted_gui/VEL/sc_TAI_5.dds"
-		textureFile2 = "gfx/interface/scripted_gui/VEL/sc_empty_TAI.dds"
-		size = { x = 217 y = 10 }
-		effectFile = "gfx/FX/progress.lua"
-		steps = 100
+		steps = 200
 	}
 	progressBarType = {
 		name = "GFX_VEL_TAI_sb_5"
@@ -238,5 +186,55 @@ spriteTypes = {
 		size = { x = 200 y = 10 }
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_TAI_fb_5"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_5.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 200
+	}
+	progressBarType = {
+		name = "GFX_VEL_TAI_sb_6"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/sb_TAI_6.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/sb_empty.dds"
+		size = { x = 200 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_TAI_fb_6"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_6.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 200
+	}
+	progressBarType = {
+		name = "GFX_VEL_TAI_sb_7"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/sb_TAI_7.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/sb_empty.dds"
+		size = { x = 200 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_VEL_TAI_fb_7"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/VEL/fb_TAI_7.dds"
+		textureFile2 = "gfx/interface/scripted_gui/VEL/fbclear_TAI.dds"
+		size = { x = 1315 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 200
 	}
 }

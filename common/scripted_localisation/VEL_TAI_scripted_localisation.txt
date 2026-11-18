@@ -50,12 +50,523 @@ defined_text = {
 
 # MD ROC Return v3.36 —— TAI 选举界面的动态文字（由 gen_vel_gui3.py 生成）
 defined_text = {
+	name = VEL_TAI_fn_1
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 2 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 3 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 4 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 5 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 6 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 7 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 8 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 9 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 10 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 11 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 12 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 13 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 14 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 15 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 16 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 17 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 18 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 19 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 20 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 21 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 22 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 23 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 24 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ldnm_1
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 2 } } localization_key = VEL_TAI_ln_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 3 } } localization_key = VEL_TAI_ln_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 4 } } localization_key = VEL_TAI_ln_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 5 } } localization_key = VEL_TAI_ln_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 6 } } localization_key = VEL_TAI_ln_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 7 } } localization_key = VEL_TAI_ln_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 8 } } localization_key = VEL_TAI_ln_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 9 } } localization_key = VEL_TAI_ln_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 10 } } localization_key = VEL_TAI_ln_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 11 } } localization_key = VEL_TAI_ln_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 12 } } localization_key = VEL_TAI_ln_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 13 } } localization_key = VEL_TAI_ln_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 14 } } localization_key = VEL_TAI_ln_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 15 } } localization_key = VEL_TAI_ln_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 16 } } localization_key = VEL_TAI_ln_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_1 = 17 } } localization_key = VEL_TAI_ln_17 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ft_1
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 2 } } localization_key = VEL_TAI_tg_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 3 } } localization_key = VEL_TAI_tg_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 4 } } localization_key = VEL_TAI_tg_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 5 } } localization_key = VEL_TAI_tg_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 6 } } localization_key = VEL_TAI_tg_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 7 } } localization_key = VEL_TAI_tg_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 8 } } localization_key = VEL_TAI_tg_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 9 } } localization_key = VEL_TAI_tg_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 10 } } localization_key = VEL_TAI_tg_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 11 } } localization_key = VEL_TAI_tg_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 12 } } localization_key = VEL_TAI_tg_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 13 } } localization_key = VEL_TAI_tg_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 14 } } localization_key = VEL_TAI_tg_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 15 } } localization_key = VEL_TAI_tg_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 16 } } localization_key = VEL_TAI_tg_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 17 } } localization_key = VEL_TAI_tg_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 18 } } localization_key = VEL_TAI_tg_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 19 } } localization_key = VEL_TAI_tg_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 20 } } localization_key = VEL_TAI_tg_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 21 } } localization_key = VEL_TAI_tg_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 22 } } localization_key = VEL_TAI_tg_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 23 } } localization_key = VEL_TAI_tg_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_1 = 24 } } localization_key = VEL_TAI_tg_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ftr_1
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_1 > 0.3 } } localization_key = VEL_TAI_tr_up_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_1 < -0.3 } } localization_key = VEL_TAI_tr_dn_1 }
+	text = { localization_key = VEL_TAI_tr_eq }
+}
+defined_text = {
+	name = VEL_TAI_fn_2
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 2 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 3 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 4 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 5 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 6 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 7 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 8 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 9 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 10 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 11 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 12 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 13 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 14 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 15 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 16 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 17 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 18 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 19 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 20 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 21 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 22 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 23 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 24 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ldnm_2
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 2 } } localization_key = VEL_TAI_ln_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 3 } } localization_key = VEL_TAI_ln_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 4 } } localization_key = VEL_TAI_ln_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 5 } } localization_key = VEL_TAI_ln_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 6 } } localization_key = VEL_TAI_ln_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 7 } } localization_key = VEL_TAI_ln_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 8 } } localization_key = VEL_TAI_ln_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 9 } } localization_key = VEL_TAI_ln_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 10 } } localization_key = VEL_TAI_ln_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 11 } } localization_key = VEL_TAI_ln_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 12 } } localization_key = VEL_TAI_ln_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 13 } } localization_key = VEL_TAI_ln_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 14 } } localization_key = VEL_TAI_ln_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 15 } } localization_key = VEL_TAI_ln_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 16 } } localization_key = VEL_TAI_ln_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_2 = 17 } } localization_key = VEL_TAI_ln_17 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ft_2
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 2 } } localization_key = VEL_TAI_tg_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 3 } } localization_key = VEL_TAI_tg_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 4 } } localization_key = VEL_TAI_tg_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 5 } } localization_key = VEL_TAI_tg_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 6 } } localization_key = VEL_TAI_tg_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 7 } } localization_key = VEL_TAI_tg_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 8 } } localization_key = VEL_TAI_tg_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 9 } } localization_key = VEL_TAI_tg_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 10 } } localization_key = VEL_TAI_tg_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 11 } } localization_key = VEL_TAI_tg_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 12 } } localization_key = VEL_TAI_tg_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 13 } } localization_key = VEL_TAI_tg_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 14 } } localization_key = VEL_TAI_tg_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 15 } } localization_key = VEL_TAI_tg_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 16 } } localization_key = VEL_TAI_tg_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 17 } } localization_key = VEL_TAI_tg_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 18 } } localization_key = VEL_TAI_tg_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 19 } } localization_key = VEL_TAI_tg_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 20 } } localization_key = VEL_TAI_tg_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 21 } } localization_key = VEL_TAI_tg_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 22 } } localization_key = VEL_TAI_tg_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 23 } } localization_key = VEL_TAI_tg_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_2 = 24 } } localization_key = VEL_TAI_tg_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ftr_2
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_2 > 0.3 } } localization_key = VEL_TAI_tr_up_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_2 < -0.3 } } localization_key = VEL_TAI_tr_dn_2 }
+	text = { localization_key = VEL_TAI_tr_eq }
+}
+defined_text = {
+	name = VEL_TAI_fn_3
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 2 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 3 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 4 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 5 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 6 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 7 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 8 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 9 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 10 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 11 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 12 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 13 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 14 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 15 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 16 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 17 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 18 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 19 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 20 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 21 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 22 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 23 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 24 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ldnm_3
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 2 } } localization_key = VEL_TAI_ln_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 3 } } localization_key = VEL_TAI_ln_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 4 } } localization_key = VEL_TAI_ln_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 5 } } localization_key = VEL_TAI_ln_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 6 } } localization_key = VEL_TAI_ln_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 7 } } localization_key = VEL_TAI_ln_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 8 } } localization_key = VEL_TAI_ln_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 9 } } localization_key = VEL_TAI_ln_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 10 } } localization_key = VEL_TAI_ln_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 11 } } localization_key = VEL_TAI_ln_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 12 } } localization_key = VEL_TAI_ln_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 13 } } localization_key = VEL_TAI_ln_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 14 } } localization_key = VEL_TAI_ln_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 15 } } localization_key = VEL_TAI_ln_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 16 } } localization_key = VEL_TAI_ln_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_3 = 17 } } localization_key = VEL_TAI_ln_17 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ft_3
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 2 } } localization_key = VEL_TAI_tg_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 3 } } localization_key = VEL_TAI_tg_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 4 } } localization_key = VEL_TAI_tg_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 5 } } localization_key = VEL_TAI_tg_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 6 } } localization_key = VEL_TAI_tg_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 7 } } localization_key = VEL_TAI_tg_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 8 } } localization_key = VEL_TAI_tg_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 9 } } localization_key = VEL_TAI_tg_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 10 } } localization_key = VEL_TAI_tg_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 11 } } localization_key = VEL_TAI_tg_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 12 } } localization_key = VEL_TAI_tg_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 13 } } localization_key = VEL_TAI_tg_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 14 } } localization_key = VEL_TAI_tg_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 15 } } localization_key = VEL_TAI_tg_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 16 } } localization_key = VEL_TAI_tg_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 17 } } localization_key = VEL_TAI_tg_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 18 } } localization_key = VEL_TAI_tg_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 19 } } localization_key = VEL_TAI_tg_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 20 } } localization_key = VEL_TAI_tg_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 21 } } localization_key = VEL_TAI_tg_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 22 } } localization_key = VEL_TAI_tg_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 23 } } localization_key = VEL_TAI_tg_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_3 = 24 } } localization_key = VEL_TAI_tg_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ftr_3
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_3 > 0.3 } } localization_key = VEL_TAI_tr_up_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_3 < -0.3 } } localization_key = VEL_TAI_tr_dn_3 }
+	text = { localization_key = VEL_TAI_tr_eq }
+}
+defined_text = {
+	name = VEL_TAI_fn_4
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 2 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 3 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 4 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 5 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 6 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 7 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 8 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 9 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 10 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 11 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 12 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 13 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 14 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 15 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 16 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 17 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 18 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 19 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 20 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 21 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 22 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 23 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 24 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ldnm_4
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 2 } } localization_key = VEL_TAI_ln_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 3 } } localization_key = VEL_TAI_ln_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 4 } } localization_key = VEL_TAI_ln_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 5 } } localization_key = VEL_TAI_ln_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 6 } } localization_key = VEL_TAI_ln_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 7 } } localization_key = VEL_TAI_ln_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 8 } } localization_key = VEL_TAI_ln_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 9 } } localization_key = VEL_TAI_ln_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 10 } } localization_key = VEL_TAI_ln_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 11 } } localization_key = VEL_TAI_ln_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 12 } } localization_key = VEL_TAI_ln_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 13 } } localization_key = VEL_TAI_ln_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 14 } } localization_key = VEL_TAI_ln_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 15 } } localization_key = VEL_TAI_ln_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 16 } } localization_key = VEL_TAI_ln_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_g_4 = 17 } } localization_key = VEL_TAI_ln_17 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ft_4
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 2 } } localization_key = VEL_TAI_tg_1 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 3 } } localization_key = VEL_TAI_tg_2 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 4 } } localization_key = VEL_TAI_tg_3 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 5 } } localization_key = VEL_TAI_tg_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 6 } } localization_key = VEL_TAI_tg_5 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 7 } } localization_key = VEL_TAI_tg_6 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 8 } } localization_key = VEL_TAI_tg_7 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 9 } } localization_key = VEL_TAI_tg_8 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 10 } } localization_key = VEL_TAI_tg_9 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 11 } } localization_key = VEL_TAI_tg_10 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 12 } } localization_key = VEL_TAI_tg_11 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 13 } } localization_key = VEL_TAI_tg_12 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 14 } } localization_key = VEL_TAI_tg_13 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 15 } } localization_key = VEL_TAI_tg_14 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 16 } } localization_key = VEL_TAI_tg_15 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 17 } } localization_key = VEL_TAI_tg_16 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 18 } } localization_key = VEL_TAI_tg_17 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 19 } } localization_key = VEL_TAI_tg_18 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 20 } } localization_key = VEL_TAI_tg_19 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 21 } } localization_key = VEL_TAI_tg_20 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 22 } } localization_key = VEL_TAI_tg_21 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 23 } } localization_key = VEL_TAI_tg_22 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_e_4 = 24 } } localization_key = VEL_TAI_tg_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ftr_4
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_4 > 0.3 } } localization_key = VEL_TAI_tr_up_4 }
+	text = { trigger = { check_variable = { VEL_TAI_fb_t_4 < -0.3 } } localization_key = VEL_TAI_tr_dn_4 }
+	text = { localization_key = VEL_TAI_tr_eq }
+}
+defined_text = {
+	name = VEL_TAI_pnl_1
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^0 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_2
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^1 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_3
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^2 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_4
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^3 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_5
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^4 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_6
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^5 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_pnl_7
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 1 } } localization_key = VEL_TAI_pn_1 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 2 } } localization_key = VEL_TAI_pn_2 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 3 } } localization_key = VEL_TAI_pn_3 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 4 } } localization_key = VEL_TAI_pn_4 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 5 } } localization_key = VEL_TAI_pn_5 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 6 } } localization_key = VEL_TAI_pn_6 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 7 } } localization_key = VEL_TAI_pn_7 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 8 } } localization_key = VEL_TAI_pn_8 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 9 } } localization_key = VEL_TAI_pn_9 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 10 } } localization_key = VEL_TAI_pn_10 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 11 } } localization_key = VEL_TAI_pn_11 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 12 } } localization_key = VEL_TAI_pn_12 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 13 } } localization_key = VEL_TAI_pn_13 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 14 } } localization_key = VEL_TAI_pn_14 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 15 } } localization_key = VEL_TAI_pn_15 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 16 } } localization_key = VEL_TAI_pn_16 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 17 } } localization_key = VEL_TAI_pn_17 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 18 } } localization_key = VEL_TAI_pn_18 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 19 } } localization_key = VEL_TAI_pn_19 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 20 } } localization_key = VEL_TAI_pn_20 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 21 } } localization_key = VEL_TAI_pn_21 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 22 } } localization_key = VEL_TAI_pn_22 }
+	text = { trigger = { check_variable = { VEL_TAI_pidx^6 = 23 } } localization_key = VEL_TAI_pn_23 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
 	name = VEL_TAI_lead_text
 	text = { trigger = { check_variable = { VEL_TAI_s_lead = 1 } } localization_key = VEL_TAI_leadtxt_1 }
 	text = { trigger = { check_variable = { VEL_TAI_s_lead = 2 } } localization_key = VEL_TAI_leadtxt_2 }
 	text = { trigger = { check_variable = { VEL_TAI_s_lead = 3 } } localization_key = VEL_TAI_leadtxt_3 }
 	text = { trigger = { check_variable = { VEL_TAI_s_lead = 4 } } localization_key = VEL_TAI_leadtxt_4 }
 	text = { trigger = { check_variable = { VEL_TAI_s_lead = 5 } } localization_key = VEL_TAI_leadtxt_5 }
+	text = { trigger = { check_variable = { VEL_TAI_s_lead = 6 } } localization_key = VEL_TAI_leadtxt_6 }
+	text = { trigger = { check_variable = { VEL_TAI_s_lead = 7 } } localization_key = VEL_TAI_leadtxt_7 }
 	text = { localization_key = VEL_TAI_leadtxt_none }
 }
 defined_text = {
@@ -213,4 +724,127 @@ defined_text = {
 	text = { trigger = { check_variable = { VEL_TAI_sw_6_r = 21 } } localization_key = VEL_TAI_name_21 }
 	text = { trigger = { check_variable = { VEL_TAI_sw_6_r = 22 } } localization_key = VEL_TAI_name_22 }
 	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_1
+	text = { trigger = { check_variable = { VEL_TAI_mar^0 < 900 } } localization_key = VEL_TAI_lmv_1 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_2
+	text = { trigger = { check_variable = { VEL_TAI_mar^1 < 900 } } localization_key = VEL_TAI_lmv_2 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_3
+	text = { trigger = { check_variable = { VEL_TAI_mar^2 < 900 } } localization_key = VEL_TAI_lmv_3 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_4
+	text = { trigger = { check_variable = { VEL_TAI_mar^3 < 900 } } localization_key = VEL_TAI_lmv_4 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_5
+	text = { trigger = { check_variable = { VEL_TAI_mar^4 < 900 } } localization_key = VEL_TAI_lmv_5 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_6
+	text = { trigger = { check_variable = { VEL_TAI_mar^5 < 900 } } localization_key = VEL_TAI_lmv_6 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_7
+	text = { trigger = { check_variable = { VEL_TAI_mar^6 < 900 } } localization_key = VEL_TAI_lmv_7 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_8
+	text = { trigger = { check_variable = { VEL_TAI_mar^7 < 900 } } localization_key = VEL_TAI_lmv_8 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_9
+	text = { trigger = { check_variable = { VEL_TAI_mar^8 < 900 } } localization_key = VEL_TAI_lmv_9 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_10
+	text = { trigger = { check_variable = { VEL_TAI_mar^9 < 900 } } localization_key = VEL_TAI_lmv_10 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_11
+	text = { trigger = { check_variable = { VEL_TAI_mar^10 < 900 } } localization_key = VEL_TAI_lmv_11 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_12
+	text = { trigger = { check_variable = { VEL_TAI_mar^11 < 900 } } localization_key = VEL_TAI_lmv_12 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_13
+	text = { trigger = { check_variable = { VEL_TAI_mar^12 < 900 } } localization_key = VEL_TAI_lmv_13 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_14
+	text = { trigger = { check_variable = { VEL_TAI_mar^13 < 900 } } localization_key = VEL_TAI_lmv_14 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_15
+	text = { trigger = { check_variable = { VEL_TAI_mar^14 < 900 } } localization_key = VEL_TAI_lmv_15 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_16
+	text = { trigger = { check_variable = { VEL_TAI_mar^15 < 900 } } localization_key = VEL_TAI_lmv_16 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_17
+	text = { trigger = { check_variable = { VEL_TAI_mar^16 < 900 } } localization_key = VEL_TAI_lmv_17 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_18
+	text = { trigger = { check_variable = { VEL_TAI_mar^17 < 900 } } localization_key = VEL_TAI_lmv_18 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_19
+	text = { trigger = { check_variable = { VEL_TAI_mar^18 < 900 } } localization_key = VEL_TAI_lmv_19 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_20
+	text = { trigger = { check_variable = { VEL_TAI_mar^19 < 900 } } localization_key = VEL_TAI_lmv_20 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_21
+	text = { trigger = { check_variable = { VEL_TAI_mar^20 < 900 } } localization_key = VEL_TAI_lmv_21 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_lm_22
+	text = { trigger = { check_variable = { VEL_TAI_mar^21 < 900 } } localization_key = VEL_TAI_lmv_22 }
+	text = { localization_key = VEL_TAI_name_blank }
+}
+defined_text = {
+	name = VEL_TAI_ticker
+	text = { trigger = { check_variable = { VEL_TAI_phase = 2 } check_variable = { VEL_TAI_live_state = 2 } } localization_key = VEL_TAI_tk_called }
+	text = { trigger = { check_variable = { VEL_TAI_phase = 2 } check_variable = { VEL_TAI_live_state = 1 } } localization_key = VEL_TAI_tk_live }
+	text = { trigger = { check_variable = { VEL_TAI_phase = 2 } } localization_key = VEL_TAI_tk_live0 }
+	text = { trigger = { check_variable = { VEL_TAI_phase = 3 } check_variable = { VEL_TAI_news_i = 0 } } localization_key = VEL_TAI_tk_done }
+	text = { trigger = { check_variable = { VEL_TAI_news_i = 0 } } localization_key = VEL_TAI_tk_n0 }
+	text = { trigger = { check_variable = { VEL_TAI_news_i = 1 } check_variable = { VEL_TAI_sw_1_r > 0 } } localization_key = VEL_TAI_tk_n1 }
+	text = { trigger = { check_variable = { VEL_TAI_news_i = 2 } check_variable = { VEL_TAI_fb_ext = 1 } } localization_key = VEL_TAI_tk_n2x }
+	text = { trigger = { check_variable = { VEL_TAI_news_i = 2 } } localization_key = VEL_TAI_tk_n2 }
+	text = { trigger = { check_variable = { VEL_TAI_news_i = 3 } } localization_key = VEL_TAI_tk_n3 }
+	text = { localization_key = VEL_TAI_tk_n0 }
 }

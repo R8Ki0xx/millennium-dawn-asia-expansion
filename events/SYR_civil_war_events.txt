@@ -1,0 +1,202 @@
+add_namespace = SYR_terror
+
+# 极端组织坐大（恐怖主义指数 50）
+country_event = {
+	id = SYR_terror.1
+	title = SYR_terror.1.t
+	desc = SYR_terror.1.d
+	picture = GFX_SYR_tahrir_al_sham
+	is_triggered_only = yes
+
+	# 强硬清剿
+	option = {
+		name = SYR_terror.1.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.1.a executed"
+		ai_chance = { base = 50 }
+		add_stability = -0.02
+		custom_effect_tooltip = SYR_terror_tt_m8
+		hidden_effect = {
+			set_temp_variable = { syr_terror_delta = -8 }
+			SYR_terror_apply_delta = yes
+		}
+	}
+	# 谈判招安
+	option = {
+		name = SYR_terror.1.b
+		log = "[GetDateText]: [This.GetName]: SYR_terror.1.b executed"
+		ai_chance = { base = 30 }
+		add_political_power = -30
+		custom_effect_tooltip = SYR_terror_tt_m5
+		hidden_effect = {
+			set_temp_variable = { syr_terror_delta = -5 }
+			SYR_terror_apply_delta = yes
+		}
+	}
+	# 暂不理会
+	option = {
+		name = SYR_terror.1.c
+		log = "[GetDateText]: [This.GetName]: SYR_terror.1.c executed"
+		ai_chance = { base = 20 }
+	}
+}
+
+# 圣战者越境（恐怖主义指数 75）
+country_event = {
+	id = SYR_terror.2
+	title = SYR_terror.2.t
+	desc = SYR_terror.2.d
+	picture = GFX_SYR_tahrir_al_sham
+	is_triggered_only = yes
+
+	option = {
+		name = SYR_terror.2.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.2.a executed"
+		ai_chance = { base = 55 }
+		add_stability = -0.03
+		custom_effect_tooltip = SYR_terror_tt_m10
+		hidden_effect = {
+			set_temp_variable = { syr_terror_delta = -10 }
+			SYR_terror_apply_delta = yes
+		}
+	}
+	option = {
+		name = SYR_terror.2.b
+		log = "[GetDateText]: [This.GetName]: SYR_terror.2.b executed"
+		ai_chance = { base = 30 }
+		add_political_power = -40
+		custom_effect_tooltip = SYR_terror_tt_m6
+		hidden_effect = {
+			set_temp_variable = { syr_terror_delta = -6 }
+			SYR_terror_apply_delta = yes
+		}
+	}
+	option = {
+		name = SYR_terror.2.c
+		log = "[GetDateText]: [This.GetName]: SYR_terror.2.c executed"
+		ai_chance = { base = 15 }
+		custom_effect_tooltip = SYR_terror_tt_p4
+		hidden_effect = {
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+	}
+}
+
+# 伊斯兰国宣布成立（恐怖主义指数 100）
+news_event = {
+	id = SYR_terror.3
+	title = SYR_terror.3.t
+	desc = SYR_terror.3.d
+	picture = GFX_isis
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = SYR_terror.3.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.3.a executed"
+	}
+}
+
+# 叛军以 FSA 或 NUS 的名义出现（内战开始时，按叛军意识形态三选一文案）
+news_event = {
+	id = SYR_terror.4
+	title = {
+		text = SYR_terror.4.t_fsa
+		trigger = { has_global_flag = SYR_cw_path_moderate }
+	}
+	title = {
+		text = SYR_terror.4.t_nus
+		trigger = { has_global_flag = SYR_cw_path_salafi }
+	}
+	desc = {
+		text = SYR_terror.4.d_fsa
+		trigger = { has_global_flag = SYR_cw_path_moderate }
+	}
+	desc = {
+		text = SYR_terror.4.d_nus
+		trigger = { has_global_flag = SYR_cw_path_salafi }
+	}
+	picture = GFX_syria_damascus_spring
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = SYR_terror.4.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.4.a executed"
+	}
+}
+
+# 多方混战：叛军保留了自己的身份，60~90 天后 FSA 与 NUS 在地方上冒出来（作用域：SYR）
+country_event = {
+	id = SYR_terror.5
+	title = SYR_terror.5.t
+	desc = SYR_terror.5.d
+	picture = GFX_SYR_ssnp
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = GLOBAL_syrian_civil_war_started
+		NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+	}
+
+	option = {
+		name = SYR_terror.5.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.5.a executed"
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			log = "[GetDateText]: SYR_civil_war: SYR_terror.5 releases FSA and NUS"
+			SYR_cw_release_fsa = yes
+			SYR_cw_release_nus = yes
+			SYR_cw_declare_wars = yes
+			SYR_terror_publish_all = yes
+		}
+		custom_effect_tooltip = SYR_terror_tt_factions
+	}
+}
+
+# 分裂：叛军里另一派势力脱出（moderate 路线释放 NUS，salafi 路线释放 FSA）（作用域：SYR）
+country_event = {
+	id = SYR_terror.6
+	title = {
+		text = SYR_terror.6.t_nus
+		trigger = { has_global_flag = SYR_cw_path_moderate }
+	}
+	title = {
+		text = SYR_terror.6.t_fsa
+		trigger = { has_global_flag = SYR_cw_path_salafi }
+	}
+	desc = {
+		text = SYR_terror.6.d_nus
+		trigger = { has_global_flag = SYR_cw_path_moderate }
+	}
+	desc = {
+		text = SYR_terror.6.d_fsa
+		trigger = { has_global_flag = SYR_cw_path_salafi }
+	}
+	picture = GFX_SYR_tahrir_al_sham
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = GLOBAL_syrian_civil_war_started
+		NOT = { has_global_flag = GLOBAL_syrian_civil_war_over }
+	}
+
+	option = {
+		name = SYR_terror.6.a
+		log = "[GetDateText]: [This.GetName]: SYR_terror.6.a executed"
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = SYR_cw_path_moderate }
+				SYR_cw_release_nus = yes
+			}
+			if = {
+				limit = { has_global_flag = SYR_cw_path_salafi }
+				SYR_cw_release_fsa = yes
+			}
+			SYR_cw_declare_wars = yes
+			SYR_terror_publish_all = yes
+		}
+		custom_effect_tooltip = SYR_terror_tt_factions
+	}
+}

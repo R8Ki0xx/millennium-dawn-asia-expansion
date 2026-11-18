@@ -1,0 +1,69 @@
+# MD ROC Return v3.42 —— 叙利亚大选相关的公共效果
+# 1) SYRL_enable_elections：“真正的民族进步阵线”完成时开放民主选举（一年后举行第一次，之后每 4 年一次）。
+# 2) SYRA_start_elections：阿萨德战后线“开放大选”开启选举（立即举行，由 SYRA.1 触发千禧的竞选流程 MD4_election_campaign.0）。
+# 3) SYRA_election_result：大选打完（千禧清掉 elections_in_progress）后，按“执政党有没有换”“新执政意识形态”设置旗标，并发出后续事件。
+# 用到千禧自带的 set_elections_with_frequency（需要 temp 变量 election_year_param / election_month_param / election_freq）。
+
+SYRL_enable_elections = {
+	if = {
+		limit = { NOT = { has_country_flag = SYRL_elections_allowed } }
+		set_country_flag = SYRL_elections_allowed
+		custom_effect_tooltip = SYRL_TT_elections_allowed
+		# 已经因为别的原因开过选举（例如战后线）就不再重设日期
+		if = {
+			limit = { NOT = { has_country_flag = SYRA_elections_open } }
+			hidden_effect = {
+				set_temp_variable = { election_year_param = global.year }
+				subtract_from_temp_variable = { election_year_param = 3 }
+				set_temp_variable = { election_month_param = global.month }
+				set_temp_variable = { election_freq = 48 }
+				set_elections_with_frequency = yes
+			}
+		}
+	}
+}
+
+SYRA_start_elections = {
+	custom_effect_tooltip = SYRA_TT_elections
+	hidden_effect = {
+		set_country_flag = SYRL_elections_allowed
+		set_temp_variable = { election_year_param = global.year }
+		set_temp_variable = { election_month_param = global.month }
+		set_temp_variable = { election_freq = 48 }
+		set_elections_with_frequency = yes
+	}
+}
+
+# 大选结果分流（SYR 作用域）。SYRA_party_before = 开选举时的执政党编号
+SYRA_election_result = {
+	set_country_flag = SYRA_election_done
+	clr_country_flag = SYRA_campaign_on
+	clr_country_flag = SYRA_campaign_seen
+	if = {
+		limit = { check_variable = { ruling_party = SYRA_party_before } }
+		set_country_flag = SYRA_res_baath
+		country_event = { id = SYRA.3 days = 1 }
+	}
+	else = {
+		if = {
+			limit = { has_government = democratic }
+			set_country_flag = SYRA_res_dem
+		}
+		else_if = {
+			limit = { has_government = neutrality }
+			set_country_flag = SYRA_res_neu
+		}
+		else_if = {
+			limit = { has_government = nationalist }
+			set_country_flag = SYRA_res_nat
+		}
+		else_if = {
+			limit = { has_government = fascism }
+			set_country_flag = SYRA_res_fas
+		}
+		else = {
+			set_country_flag = SYRA_res_left
+		}
+		country_event = { id = SYRA.4 days = 1 }
+	}
+}

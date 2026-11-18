@@ -1,0 +1,53 @@
+# MD ROC Return v3.42 —— 阿萨德战后线（大选后的国家精神；由 _tools/v342/gen_syra.py 生成）
+ideas = {
+	country = {
+		SYRA_baath_renewal_idea = {
+			picture = roc30_baath_party_e00b3004
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.08
+				corruption_cost_factor = -0.1
+			}
+		}
+		SYRA_democratic_idea = {
+			picture = roc30_bbr_citizen_republic_idea_4f127e74
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				research_speed_factor = 0.04
+			}
+		}
+		SYRA_coalition_idea = {
+			picture = roc30_syr_mejd_council_b02dd938
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.06
+			}
+		}
+		SYRA_nationalist_idea = {
+			picture = roc30_syr_army_of_lions_idea_aef8d666
+			modifier = {
+				war_support_factor = 0.08
+				army_org_factor = 0.04
+				stability_factor = 0.02
+			}
+		}
+		SYRA_islamist_idea = {
+			picture = roc30_arab_workers_union_1cbdc9ad
+			modifier = {
+				stability_factor = 0.03
+				conscription_factor = 0.03
+				army_morale_factor = 0.05
+				trade_opinion_factor = -0.1
+			}
+		}
+		SYRA_old_guard_veto_idea = {
+			picture = roc30_syr_alawite_army_05b11154
+			modifier = {
+				army_org_factor = 0.03
+				stability_factor = 0.02
+				political_power_gain = -0.1
+			}
+		}
+	}
+}

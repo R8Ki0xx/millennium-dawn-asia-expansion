@@ -1,0 +1,36 @@
+# MD ROC Return v3.42 —— “回归复兴党初心”线（SYRL）的辅助效果
+# 元老 / 既得利益者的积怨 SYRL_tension（0~100）：用 temp 变量 syrl_t 传入增减量。积怨高时，军队改革事件可能引发政变（SYRL.3）。
+SYRL_tension_add = {
+	add_to_variable = { SYRL_tension = syrl_t }
+	clamp_variable = { var = SYRL_tension min = 0 max = 100 }
+}
+
+# 在随机一个叙利亚核心州里加建筑与共享建筑栏位（沿用原来的写法，抽成函数）
+SYRL_build_ind = {
+	random_owned_controlled_state = {
+		limit = { is_core_of = SYR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+	}
+}
+SYRL_build_arms = {
+	random_owned_controlled_state = {
+		limit = { is_core_of = SYR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+	}
+}
+SYRL_build_infra = {
+	random_owned_controlled_state = {
+		limit = { is_core_of = SYR }
+		add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+	}
+}
+SYRL_build_civ = {
+	random_owned_controlled_state = {
+		limit = { is_core_of = SYR }
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+	}
+}

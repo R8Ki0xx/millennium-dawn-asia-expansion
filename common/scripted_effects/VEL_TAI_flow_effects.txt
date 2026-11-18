@@ -4,20 +4,22 @@
 VEL_TAI_apply_result = {
 	# 全国支持率向得票率靠拢 35%
 	for_loop_effect = {
-		start = 0 end = 5 value = vp
+		start = 0 end = 7 value = vp
 		set_temp_variable = { vel_pi = VEL_TAI_pidx^vp }
+		if = { limit = { check_variable = { vel_pi > -0.5 } }
 		set_temp_variable = { party_popularity_increase = VEL_TAI_nat^vp }
 		subtract_from_temp_variable = { party_popularity_increase = party_pop_array^vel_pi }
 		multiply_temp_variable = { party_popularity_increase = 0.35 }
 		set_temp_variable = { temp_outlook_increase = party_popularity_increase }
 		set_temp_variable = { party_index = vel_pi }
-		change_relative_party_popularity = yes
+			change_relative_party_popularity = yes
+		}
 	}
 	# 席次最多的政党组阁
 	set_temp_variable = { vel_best = 0 }
 	set_temp_variable = { vel_bi = 0 }
 	for_loop_effect = {
-		start = 0 end = 5 value = vp
+		start = 0 end = 7 value = vp
 		set_temp_variable = { vel_cur = VEL_TAI_seat^vp }
 		if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
 	}

@@ -24,7 +24,7 @@ TAI_volunteer_support = {
 	send_equipment = { type = artillery_equipment amount = 120 target = event_target:TAI_rebel_now }
 }
 
-# Scope: TAI。在起义军的州里生成一个「中华民国志愿军」师（沿用 TAI_spawn_defectors 的写法）
+# Scope: TAI。在起义军的州里生成一个“中华民国志愿军”师（沿用 TAI_spawn_defectors 的写法）
 TAI_spawn_volunteers = {
 	random_country = {
 		limit = { has_country_flag = TAI_mainland_rebels }
@@ -184,14 +184,14 @@ TAI_liberation_autocomplete = {
 	}
 }
 
-# Scope: CHI。首都设在南京（默认），并去掉「建都北平」的精神
+# Scope: CHI。首都设在南京（默认），并去掉“建都北平”的精神
 TAI_capital_to_nanjing = {
 	set_capital = { state = 536 }
 	clr_country_flag = ROC_capital_beijing
 	if = { limit = { has_idea = TAI_beijing_capital_idea } remove_ideas = TAI_beijing_capital_idea }
 }
 
-# Scope: 任意国家。清除千禧的「内战军队」国家精神（旗标会让千禧的到期事件不再往下一级转）
+# Scope: 任意国家。清除千禧的“内战军队”国家精神（旗标会让千禧的到期事件不再往下一级转）
 CSW_clear_civil_war_debuff = {
 	set_country_flag = manual_civil_war_debuff_removal
 	remove_ideas = civil_war_disorganised_military_1

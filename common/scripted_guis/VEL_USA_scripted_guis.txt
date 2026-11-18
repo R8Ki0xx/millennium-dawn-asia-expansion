@@ -6,9 +6,14 @@ scripted_gui = {
 		visible = { has_country_flag = VEL_USA_on }
 		ai_enabled = { always = no }
 		properties = {
-			vel_usa_bar_1 = { frame = VEL_USA_bar_1 }
-			vel_usa_bar_2 = { frame = VEL_USA_bar_2 }
-			vel_usa_bar_3 = { frame = VEL_USA_bar_3 }
+			vel_usa_bar_1 = { frame = VEL_USA_fb_b_1 }
+			vel_usa_sw_1 = { frame = VEL_USA_fb_e_1 }
+			vel_usa_bar_2 = { frame = VEL_USA_fb_b_2 }
+			vel_usa_sw_2 = { frame = VEL_USA_fb_e_2 }
+			vel_usa_bar_3 = { frame = VEL_USA_fb_b_3 }
+			vel_usa_sw_3 = { frame = VEL_USA_fb_e_3 }
+			vel_usa_bar_4 = { frame = VEL_USA_fb_b_4 }
+			vel_usa_sw_4 = { frame = VEL_USA_fb_e_4 }
 		}
 		effects = {
 			vel_usa_open_click = { if = { limit = { has_country_flag = VEL_USA_open } clr_country_flag = VEL_USA_open } else = { set_country_flag = VEL_USA_open } }
@@ -149,8 +154,47 @@ scripted_gui = {
 			vb_usa_o_50 = { frame = VEL_USA_selfr^50 }
 			vb_usa_b_50 = { frame = VEL_USA_frame^50 }
 			vb_usa_sbar_1 = { frame = VEL_USA_sb_1 }
+			vb_usa_sw_1 = { frame = VEL_USA_ef_1 }
 			vb_usa_sbar_2 = { frame = VEL_USA_sb_2 }
+			vb_usa_sw_2 = { frame = VEL_USA_ef_2 }
 			vb_usa_sbar_3 = { frame = VEL_USA_sb_3 }
+			vb_usa_sw_3 = { frame = VEL_USA_ef_3 }
+			vb_usa_sbar_4 = { frame = VEL_USA_sb_4 }
+			vb_usa_sw_4 = { frame = VEL_USA_ef_4 }
+			vb_usa_sbar_5 = { frame = VEL_USA_sb_5 }
+			vb_usa_sw_5 = { frame = VEL_USA_ef_5 }
+			vb_usa_card_1 = { frame = VEL_USA_fb_cf_1 }
+			vb_usa_ldr_1 = { frame = VEL_USA_fb_g_1 }
+			vb_usa_emb_1 = { frame = VEL_USA_fb_e_1 }
+			vb_usa_fbl_1_1 = { frame = VEL_USA_fbv_1_1 }
+			vb_usa_fbl_1_2 = { frame = VEL_USA_fbv_1_2 }
+			vb_usa_fbl_1_3 = { frame = VEL_USA_fbv_1_3 }
+			vb_usa_fbl_1_4 = { frame = VEL_USA_fbv_1_4 }
+			vb_usa_fbl_1_5 = { frame = VEL_USA_fbv_1_5 }
+			vb_usa_card_2 = { frame = VEL_USA_fb_cf_2 }
+			vb_usa_ldr_2 = { frame = VEL_USA_fb_g_2 }
+			vb_usa_emb_2 = { frame = VEL_USA_fb_e_2 }
+			vb_usa_fbl_2_1 = { frame = VEL_USA_fbv_2_1 }
+			vb_usa_fbl_2_2 = { frame = VEL_USA_fbv_2_2 }
+			vb_usa_fbl_2_3 = { frame = VEL_USA_fbv_2_3 }
+			vb_usa_fbl_2_4 = { frame = VEL_USA_fbv_2_4 }
+			vb_usa_fbl_2_5 = { frame = VEL_USA_fbv_2_5 }
+			vb_usa_card_3 = { frame = VEL_USA_fb_cf_3 }
+			vb_usa_ldr_3 = { frame = VEL_USA_fb_g_3 }
+			vb_usa_emb_3 = { frame = VEL_USA_fb_e_3 }
+			vb_usa_fbl_3_1 = { frame = VEL_USA_fbv_3_1 }
+			vb_usa_fbl_3_2 = { frame = VEL_USA_fbv_3_2 }
+			vb_usa_fbl_3_3 = { frame = VEL_USA_fbv_3_3 }
+			vb_usa_fbl_3_4 = { frame = VEL_USA_fbv_3_4 }
+			vb_usa_fbl_3_5 = { frame = VEL_USA_fbv_3_5 }
+			vb_usa_card_4 = { frame = VEL_USA_fb_cf_4 }
+			vb_usa_ldr_4 = { frame = VEL_USA_fb_g_4 }
+			vb_usa_emb_4 = { frame = VEL_USA_fb_e_4 }
+			vb_usa_fbl_4_1 = { frame = VEL_USA_fbv_4_1 }
+			vb_usa_fbl_4_2 = { frame = VEL_USA_fbv_4_2 }
+			vb_usa_fbl_4_3 = { frame = VEL_USA_fbv_4_3 }
+			vb_usa_fbl_4_4 = { frame = VEL_USA_fbv_4_4 }
+			vb_usa_fbl_4_5 = { frame = VEL_USA_fbv_4_5 }
 			vb_usa_ls_0 = { frame = VEL_USA_lead^0 }
 			vb_usa_ls_1 = { frame = VEL_USA_lead^1 }
 			vb_usa_ls_2 = { frame = VEL_USA_lead^2 }
@@ -217,7 +261,6 @@ scripted_gui = {
 			vb_usa_sws_5 = { frame = VEL_USA_sw_5_l }
 			vb_usa_sws_6 = { frame = VEL_USA_sw_6_l }
 			vb_usa_prog = { frame = VEL_USA_prog }
-			vb_usa_tug = { frame = VEL_USA_tug }
 		}
 		effects = {
 			vb_usa_close_click = { clr_country_flag = VEL_USA_open }

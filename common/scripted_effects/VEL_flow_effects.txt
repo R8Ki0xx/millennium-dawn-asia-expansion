@@ -4,20 +4,23 @@
 VEL_CHI_apply_result = {
 	# 全国支持率向得票率靠拢 35%
 	for_loop_effect = {
-		start = 0 end = 5 value = vp
+		start = 0 end = 7 value = vp
 		set_temp_variable = { vel_pi = VEL_CHI_pidx^vp }
+		if = { limit = { check_variable = { vel_pi > -0.5 } }
 		set_temp_variable = { party_popularity_increase = VEL_CHI_nat^vp }
 		subtract_from_temp_variable = { party_popularity_increase = party_pop_array^vel_pi }
 		multiply_temp_variable = { party_popularity_increase = 0.35 }
 		set_temp_variable = { temp_outlook_increase = party_popularity_increase }
 		set_temp_variable = { party_index = vel_pi }
-		change_relative_party_popularity = yes
+				change_relative_party_popularity = yes
+		}
+		}
 	}
 	# 一党独占过半席次，由它组阁
 	set_temp_variable = { vel_best = 0 }
 	set_temp_variable = { vel_bi = 0 }
 	for_loop_effect = {
-		start = 0 end = 5 value = vp
+		start = 0 end = 7 value = vp
 		set_temp_variable = { vel_cur = VEL_CHI_seat^vp }
 		if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
 	}
@@ -46,6 +49,9 @@ VEL_CHI_apply_roc_ly = {
 	set_variable = { TAI_ly_sd = VEL_CHI_seat^2 }
 	set_variable = { TAI_ly_cpc = VEL_CHI_seat^3 }
 	set_variable = { TAI_ly_pfp = VEL_CHI_seat^4 }
+	# 新兴政党的席位并入“其他”（立法院沿用固定的五个席次变量）
+	add_to_variable = { TAI_ly_pfp = VEL_CHI_seat^5 }
+	add_to_variable = { TAI_ly_pfp = VEL_CHI_seat^6 }
 	set_variable = { TAI_ly_next_election = global.num_days }
 	add_to_variable = { TAI_ly_next_election = 1095 }
 	add_to_variable = { TAI_ly_term = 1 }
@@ -59,8 +65,9 @@ VEL_CHI_apply_roc_ly = {
 # Scope: USA。把总统选举结果写进政党支持率、执政党
 VEL_USA_apply_result = {
 	for_loop_effect = {
-		start = 0 end = 3 value = vp
+		start = 0 end = 5 value = vp
 		set_temp_variable = { vel_pi = VEL_USA_pidx^vp }
+		if = { limit = { check_variable = { vel_pi > -0.5 } }
 		set_temp_variable = { party_popularity_increase = VEL_USA_nat^vp }
 		subtract_from_temp_variable = { party_popularity_increase = party_pop_array^vel_pi }
 		multiply_temp_variable = { party_popularity_increase = 0.4 }
@@ -68,8 +75,15 @@ VEL_USA_apply_result = {
 		set_temp_variable = { party_index = vel_pi }
 		change_relative_party_popularity = yes
 	}
-	set_temp_variable = { vel_wp = 1 }
-	if = { limit = { check_variable = { VEL_USA_seat^1 > VEL_USA_seat^0 } } set_temp_variable = { vel_wp = 2 } }
+	# 选举人票最多的席位所对应的政党当选（可能是新兴政党）
+	set_temp_variable = { vel_best = 0 }
+	set_temp_variable = { vel_bi = 0 }
+	for_loop_effect = {
+		start = 0 end = 5 value = vp
+		set_temp_variable = { vel_cur = VEL_USA_seat^vp }
+		if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
+	}
+	set_temp_variable = { vel_wp = VEL_USA_pidx^vel_bi }
 	if = {
 		limit = { NOT = { check_variable = { ruling_party = vel_wp } } }
 		set_temp_variable = { rul_party_temp = vel_wp }
@@ -80,8 +94,7 @@ VEL_USA_apply_result = {
 	# 国会：执政党的议会支持度随选举人票比例变化（千禧的 senators_support / representatives_support）
 	if = {
 		limit = { has_variable = senators_total has_variable = representatives_total }
-		set_temp_variable = { vel_evw = VEL_USA_seat^0 }
-		if = { limit = { check_variable = { VEL_USA_seat^1 > VEL_USA_seat^0 } } set_temp_variable = { vel_evw = VEL_USA_seat^1 } }
+		set_temp_variable = { vel_evw = vel_best }
 		divide_temp_variable = { vel_evw = 538 }
 		subtract_from_temp_variable = { vel_evw = 0.5 }
 		multiply_temp_variable = { vel_evw = 0.6 }

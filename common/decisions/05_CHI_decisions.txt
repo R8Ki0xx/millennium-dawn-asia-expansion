@@ -1,4 +1,4 @@
-# MD ROC Return v3.13：千禧黎明原文件；仅为全国委员会类别里的党代会等任务加上「中华民国执政时不激活」
+# MD ROC Return v3.13：千禧黎明原文件；仅为全国委员会类别里的党代会等任务加上“中华民国执政时不激活”
 #Rework Author(s): TheGeneral
 
 CHI_sco_category = {

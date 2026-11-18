@@ -1,4 +1,4 @@
-# MD ROC Return v3.21 —— 两岸共用国策树「两岸内战」（由 _tools/v321_csw.py 生成）
+# MD ROC Return v3.21 —— 两岸共用国策树“两岸内战”（由 _tools/v321_csw.py 生成）
 # 共产党树（china_focus，复制自千禧的 05_china.txt）与台湾反攻树（TAI_roc_return_focus）共用；共产党侧、台湾侧用 allow_branch 区分
 
 shared_focus = {

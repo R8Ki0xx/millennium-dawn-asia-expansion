@@ -1,0 +1,77 @@
+# MD ROC Return v3.42 —— 叙利亚“内战与反恐”面板精灵图（由 _tools/v342/gen_syr_gui.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_SYR_t_ticks" texturefile = "gfx/interface/scripted_gui/SYR_terror/ticks.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_t_sect" texturefile = "gfx/interface/scripted_gui/SYR_terror/sect.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_t_segbase" texturefile = "gfx/interface/scripted_gui/SYR_terror/seg_base.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_SYR_t_swatch" texturefile = "gfx/interface/scripted_gui/SYR_terror/swatch.dds" noOfFrames = 6 legacy_lazy_load = no }
+	progressBarType = {
+		name = "GFX_SYR_t_gauge"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/gauge_fill.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/gauge_empty.dds"
+		size = { x = 456 y = 18 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_1"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_1.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_2"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_2.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_3"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_3.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_4"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_4.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_5"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_5.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+	progressBarType = {
+		name = "GFX_SYR_t_seg_6"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/scripted_gui/SYR_terror/seg_6.dds"
+		textureFile2 = "gfx/interface/scripted_gui/SYR_terror/seg_clear.dds"
+		size = { x = 456 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+	}
+}
