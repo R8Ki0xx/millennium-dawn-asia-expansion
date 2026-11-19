@@ -1,0 +1,189 @@
+# MD ROC Return v3.44 —— 叙利亚国策树重构新增的国家精神（由 _tools/v344/gen_syr2.py 生成）
+ideas = {
+	country = {
+		SYR2_energy_ministry_idea = {
+			picture = research_minstry
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+				energy_gain_multiplier = 0.05
+			}
+		}
+		SYR2_gas_company_idea = {
+			picture = generic_oil
+			modifier = {
+				oil_export_multiplier_modifier = 0.08
+				country_productivity_growth_modifier = 0.01
+			}
+		}
+		SYR2_securities_exchange_idea = {
+			picture = economic_boom
+			modifier = {
+				tax_gain_multiplier_modifier = 0.03
+				political_power_gain = 0.02
+			}
+		}
+		SYR2_islamic_bank_idea = {
+			picture = generic_trade
+			modifier = {
+				tax_gain_multiplier_modifier = 0.02
+				stability_factor = 0.02
+			}
+		}
+		SYR2_commercial_bank_idea = {
+			picture = economic_prosperity
+			modifier = {
+				tax_gain_multiplier_modifier = 0.03
+				political_power_gain = -0.02
+			}
+		}
+		SYR2_cement_industry_idea = {
+			picture = construction
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				civilian_factories_productivity = 0.02
+			}
+		}
+		SYR2_construction_reform_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.06
+				infrastructure_cost_multiplier_modifier = -0.1
+			}
+		}
+		SYR2_green_syria_idea = {
+			picture = solar_energy
+			modifier = {
+				renewable_energy_gain_multiplier = 0.1
+				stability_factor = 0.02
+				research_speed_factor = 0.03
+			}
+		}
+		SYR2_nuclear_deterrent_idea = {
+			picture = nuclear_power_def
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		SYR2_special_forces_idea = {
+			picture = army_officer
+			modifier = {
+				special_forces_attack_factor = 0.1
+				army_org_factor = 0.03
+				experience_gain_army_factor = 0.1
+			}
+		}
+		SYR2_air_defence_reform_idea = {
+			picture = radar
+			modifier = {
+				army_defence_factor = 0.05
+				army_org_factor = 0.03
+				army_morale_factor = 0.03
+			}
+		}
+		SYR2_capital_defence_idea = {
+			picture = army_strengthened
+			modifier = {
+				army_defence_factor = 0.08
+				stability_factor = 0.02
+			}
+		}
+		SYR2_defence_ministry_idea = {
+			picture = research_minstry
+			modifier = {
+				command_power_gain = 0.1
+				training_time_factor = -0.05
+				army_org_factor = 0.03
+				political_power_gain = -0.03
+			}
+		}
+		SYR2_pal_camps_idea = {
+			picture = army_officer
+			modifier = {
+				experience_gain_army_factor = 0.1
+				stability_factor = -0.02
+			}
+		}
+		SYR2_golan_fortress_idea = {
+			picture = army_strengthened
+			modifier = {
+				army_defence_factor = 0.06
+				army_org_factor = 0.02
+			}
+		}
+		SYR2_quds_brigade_idea = {
+			picture = army_officer
+			modifier = {
+				special_forces_attack_factor = 0.08
+				army_morale_factor = 0.03
+			}
+		}
+		SYR2_israeli_intel_idea = {
+			picture = research_minstry
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = -0.03
+			}
+		}
+		SYR2_shia_militias_idea = {
+			picture = syrian_shiite
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+		SYR2_arab_union_idea = {
+			picture = syrian_social_nationalists
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		SYR2_gulf_capital_idea = {
+			picture = generic_trade
+			modifier = {
+				tax_gain_multiplier_modifier = 0.03
+				political_power_gain = 0.02
+			}
+		}
+		SYR2_uae_specialists_idea = {
+			picture = research_bonus
+			modifier = {
+				research_speed_factor = 0.03
+				army_org_factor = 0.02
+			}
+		}
+		SYR2_uae_specialists1_idea = {
+			picture = research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+				army_org_factor = 0.03
+				experience_gain_army_factor = 0.05
+			}
+		}
+		SYR2_pipeline_idea = {
+			picture = generic_oil
+			modifier = {
+				oil_export_multiplier_modifier = 0.06
+				country_productivity_growth_modifier = 0.01
+			}
+		}
+		SYR2_riot_police_idea = {
+			picture = army_cons
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = -0.02
+			}
+		}
+		SYR2_minorities_legion_idea = {
+			picture = syrian_social_nationalists
+			modifier = {
+				army_org_factor = 0.02
+				stability_factor = 0.02
+			}
+		}
+	}
+}
