@@ -14,7 +14,6 @@ VEL_CHI_apply_result = {
 		set_temp_variable = { party_index = vel_pi }
 				change_relative_party_popularity = yes
 		}
-		}
 	}
 	# 一党独占过半席次，由它组阁
 	set_temp_variable = { vel_best = 0 }
@@ -74,6 +73,7 @@ VEL_USA_apply_result = {
 		set_temp_variable = { temp_outlook_increase = party_popularity_increase }
 		set_temp_variable = { party_index = vel_pi }
 		change_relative_party_popularity = yes
+		}
 	}
 	# 选举人票最多的席位所对应的政党当选（可能是新兴政党）
 	set_temp_variable = { vel_best = 0 }

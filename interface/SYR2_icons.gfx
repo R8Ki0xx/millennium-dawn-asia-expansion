@@ -1,20 +1,48 @@
-﻿# MD ROC Return v3.44 —— 叙利亚国策树重构用到的图标（取自创意工坊 The Digital Frontier，感谢原作者）
+# MD ROC Return v3.44 —— 叙利亚国策树重构用到的图标（取自创意工坊 The Digital Frontier，感谢原作者）
 spriteTypes = {
+	spriteType = {
+		name = "BLR_destroy_admin"
+		texturefile = "gfx/interface/goals/belarus_alt/BLR_destroy_admin.dds"
+	}
+	spriteType = {
+		name = "GENERIC_autarky"
+		texturefile = "gfx/interface/goals/economic/GENERIC_autarky.dds"
+	}
 	spriteType = {
 		name = "GENERIC_autarky_3"
 		texturefile = "gfx/interface/goals/economic/GENERIC_autarky_3.dds"
+	}
+	spriteType = {
+		name = "GENERIC_cont_puppet_spy"
+		texturefile = "gfx/interface/goals/cont/GENERIC_cont_puppet_spy.dds"
 	}
 	spriteType = {
 		name = "GENERIC_east_love"
 		texturefile = "gfx/interface/goals/politic/GENERIC_east_love.dds"
 	}
 	spriteType = {
+		name = "GENERIC_econ_start"
+		texturefile = "gfx/interface/goals/economic/GENERIC_econ_start.png"
+	}
+	spriteType = {
 		name = "GENERIC_economic_measures"
 		texturefile = "gfx/interface/goals/economic/GENERIC_economic_measures.dds"
 	}
 	spriteType = {
+		name = "GENERIC_fraud_democracy"
+		texturefile = "gfx/interface/goals/politic/GENERIC_fraud_democracy.dds"
+	}
+	spriteType = {
 		name = "GENERIC_green_politics"
 		texturefile = "gfx/interface/goals/politic/GENERIC_green_politics.dds"
+	}
+	spriteType = {
+		name = "GENERIC_independence"
+		texturefile = "gfx/interface/goals/politic/GENERIC_independence.dds"
+	}
+	spriteType = {
+		name = "GENERIC_islamic_socialism"
+		texturefile = "gfx/interface/goals/politic/GENERIC_islamic_socialism.dds"
 	}
 	spriteType = {
 		name = "GENERIC_police_state"
@@ -25,8 +53,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/politic/GENERIC_reactionary_democracy.dds"
 	}
 	spriteType = {
+		name = "GENERIC_representation"
+		texturefile = "gfx/interface/goals/politic/GENERIC_representation.dds"
+	}
+	spriteType = {
 		name = "GENERIC_revolution_guard"
 		texturefile = "gfx/interface/goals/politic/GENERIC_revolution_guard.dds"
+	}
+	spriteType = {
+		name = "GENERIC_trade2"
+		texturefile = "gfx/interface/goals/economic/GENERIC_trade2.dds"
 	}
 	spriteType = {
 		name = "GENERIC_trade4"
@@ -41,12 +77,32 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/Golan_affirm.dds"
 	}
 	spriteType = {
+		name = "Invite_badman"
+		texturefile = "gfx/interface/goals/syria_alt/Invite_badman.dds"
+	}
+	spriteType = {
+		name = "NOR_aap"
+		texturefile = "gfx/interface/goals/norway_alt/NOR_aap.dds"
+	}
+	spriteType = {
+		name = "POL_anti_corruption"
+		texturefile = "gfx/interface/goals/poland_alt/POL_anti_corruption.dds"
+	}
+	spriteType = {
+		name = "POL_collective_ownership_agree"
+		texturefile = "gfx/interface/goals/poland_alt/POL_collective_ownership_agree.dds"
+	}
+	spriteType = {
 		name = "POL_destroy_jewish_reservations"
 		texturefile = "gfx/interface/goals/poland_alt/POL_destroy_jewish_reservations.dds"
 	}
 	spriteType = {
 		name = "POL_economic_education"
 		texturefile = "gfx/interface/goals/poland_alt/POL_economic_education.dds"
+	}
+	spriteType = {
+		name = "POL_fight_corruption"
+		texturefile = "gfx/interface/goals/poland_alt/POL_fight_corruption.dds"
 	}
 	spriteType = {
 		name = "POL_nuclear_energy_braun"
@@ -125,6 +181,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/SYR_uae_base.dds"
 	}
 	spriteType = {
+		name = "USA_syria_terrorist_military"
+		texturefile = "gfx/interface/goals/united_states/USA_syria_terrorist_military.dds"
+	}
+	spriteType = {
+		name = "USA_syrian_base"
+		texturefile = "gfx/interface/goals/united_states/USA_syrian_base.dds"
+	}
+	spriteType = {
+		name = "USA_syrian_reconstruction"
+		texturefile = "gfx/interface/goals/united_states/USA_syrian_reconstruction.dds"
+	}
+	spriteType = {
 		name = "assas_raffic"
 		texturefile = "gfx/interface/goals/syria_alt/assas_raffic.dds"
 	}
@@ -137,6 +205,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/bawabet_dimashq.dds"
 	}
 	spriteType = {
+		name = "big_pharma_syr"
+		texturefile = "gfx/interface/goals/syria_alt/big_pharma_syr.dds"
+	}
+	spriteType = {
 		name = "blr_anti_iran_policy"
 		texturefile = "gfx/interface/goals/belarus_alt/blr_anti_iran_policy.dds"
 	}
@@ -145,16 +217,40 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/build_when_needed.dds"
 	}
 	spriteType = {
+		name = "bushr_plur_secul"
+		texturefile = "gfx/interface/goals/syria_alt/bushr_plur_secul.dds"
+	}
+	spriteType = {
+		name = "call_mufti"
+		texturefile = "gfx/interface/goals/gigil/call_mufti.dds"
+	}
+	spriteType = {
 		name = "condemn_aggression_of_states"
 		texturefile = "gfx/interface/goals/poland_alt/condemn_aggression_of_states.dds"
+	}
+	spriteType = {
+		name = "const_ammendment"
+		texturefile = "gfx/interface/goals/syria_alt/const_ammendment.dds"
 	}
 	spriteType = {
 		name = "declare_caliphate"
 		texturefile = "gfx/interface/goals/gigil/declare_caliphate.dds"
 	}
 	spriteType = {
+		name = "effective_jizya"
+		texturefile = "gfx/interface/goals/gigil/effective_jizya.dds"
+	}
+	spriteType = {
 		name = "electronics_syria"
 		texturefile = "gfx/interface/goals/syria_alt/electronics_syria.dds"
+	}
+	spriteType = {
+		name = "free_democr_syria"
+		texturefile = "gfx/interface/goals/syria_alt/free_democr_syria.dds"
+	}
+	spriteType = {
+		name = "free_syr_army_us"
+		texturefile = "gfx/interface/goals/syria_alt/free_syr_army_us.dds"
 	}
 	spriteType = {
 		name = "freedom_closed"
@@ -163,6 +259,10 @@ spriteTypes = {
 	spriteType = {
 		name = "generic_army_antiaircraft"
 		texturefile = "gfx/interface/goals/military/generic_army_antiaircraft.dds"
+	}
+	spriteType = {
+		name = "generic_commie_liberty"
+		texturefile = "gfx/interface/goals/politic/generic_commie_liberty.dds"
 	}
 	spriteType = {
 		name = "generic_economic_agro_infra"
@@ -189,16 +289,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/military/generic_equipment.dds"
 	}
 	spriteType = {
+		name = "generic_inner_intel"
+		texturefile = "gfx/interface/goals/special_services/generic_inner_intel.dds"
+	}
+	spriteType = {
 		name = "generic_muslim_hamas"
 		texturefile = "gfx/interface/goals/politic/generic_muslim_hamas.dds"
+	}
+	spriteType = {
+		name = "generic_muslim_moderate_emirate"
+		texturefile = "gfx/interface/goals/politic/generic_muslim_moderate_emirate.dds"
 	}
 	spriteType = {
 		name = "generic_muslim_quatar"
 		texturefile = "gfx/interface/goals/politic/generic_muslim_quatar.dds"
 	}
 	spriteType = {
+		name = "generic_nationalists_fairness"
+		texturefile = "gfx/interface/goals/politic/generic_nationalists_fairness.dds"
+	}
+	spriteType = {
+		name = "generic_nationalists_militarization"
+		texturefile = "gfx/interface/goals/politic/generic_nationalists_militarization.dds"
+	}
+	spriteType = {
 		name = "generic_resistance_jid"
 		texturefile = "gfx/interface/goals/politic/generic_resistance_jid.dds"
+	}
+	spriteType = {
+		name = "greater_syr_ssnp"
+		texturefile = "gfx/interface/goals/syria_alt/greater_syr_ssnp.dds"
+	}
+	spriteType = {
+		name = "guardians_of_syrdem_rev"
+		texturefile = "gfx/interface/goals/syria_alt/guardians_of_syrdem_rev.dds"
+	}
+	spriteType = {
+		name = "hafez_ded"
+		texturefile = "gfx/interface/goals/syria_alt/hafez_ded.dds"
 	}
 	spriteType = {
 		name = "hez_friend_lebanon"
@@ -217,8 +345,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/homs_heavy_industry.dds"
 	}
 	spriteType = {
+		name = "jack_daniels_cigs_syr"
+		texturefile = "gfx/interface/goals/syria_alt/jack_daniels_cigs_syr.dds"
+	}
+	spriteType = {
 		name = "jihad_fanaticism"
 		texturefile = "gfx/interface/goals/gigil/jihad_fanaticism.dds"
+	}
+	spriteType = {
+		name = "jihadist_kalash"
+		texturefile = "gfx/interface/goals/gigil/jihadist_kalash.dds"
 	}
 	spriteType = {
 		name = "khatay_agree"
@@ -229,8 +365,28 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/khatay_nozhik.dds"
 	}
 	spriteType = {
+		name = "lion_of_asshur"
+		texturefile = "gfx/interface/goals/syria_alt/lion_of_asshur.dds"
+	}
+	spriteType = {
+		name = "loyal_marriage"
+		texturefile = "gfx/interface/goals/syria_alt/loyal_marriage.dds"
+	}
+	spriteType = {
 		name = "maher_alawi"
 		texturefile = "gfx/interface/goals/syria_alt/maher_alawi.dds"
+	}
+	spriteType = {
+		name = "maher_deals"
+		texturefile = "gfx/interface/goals/syria_alt/maher_deals.dds"
+	}
+	spriteType = {
+		name = "maher_guards"
+		texturefile = "gfx/interface/goals/syria_alt/maher_guards.dds"
+	}
+	spriteType = {
+		name = "mushriqs_must_fear"
+		texturefile = "gfx/interface/goals/gigil/mushriqs_must_fear.dds"
 	}
 	spriteType = {
 		name = "northern_kurdistan"
@@ -253,6 +409,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/pres_in_lebanon.dds"
 	}
 	spriteType = {
+		name = "purge_opposit_bash"
+		texturefile = "gfx/interface/goals/syria_alt/purge_opposit_bash.dds"
+	}
+	spriteType = {
+		name = "qatari_business"
+		texturefile = "gfx/interface/goals/syria_alt/qatari_business.dds"
+	}
+	spriteType = {
+		name = "question_of_islamic_migrants"
+		texturefile = "gfx/interface/goals/poland_alt/question_of_islamic_migrants.dds"
+	}
+	spriteType = {
 		name = "reduce_presence"
 		texturefile = "gfx/interface/goals/syria_alt/reduce_presence.dds"
 	}
@@ -269,6 +437,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/shadow_over_hezbollah.dds"
 	}
 	spriteType = {
+		name = "sharia_install"
+		texturefile = "gfx/interface/goals/gigil/sharia_install.dds"
+	}
+	spriteType = {
 		name = "snabzhenets_krisa_tylovaya"
 		texturefile = "gfx/interface/goals/military/snabzhenets_krisa_tylovaya.dds"
 	}
@@ -277,8 +449,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/hungary/solving_energy_problems.dds"
 	}
 	spriteType = {
+		name = "ssnp_news"
+		texturefile = "gfx/interface/goals/syria_alt/ssnp_news.dds"
+	}
+	spriteType = {
 		name = "state_windmill"
 		texturefile = "gfx/interface/goals/syria_alt/state_windmill.dds"
+	}
+	spriteType = {
+		name = "stop_neon_moon"
+		texturefile = "gfx/interface/goals/syria_alt/stop_neon_moon.dds"
+	}
+	spriteType = {
+		name = "support_iraq_revolut"
+		texturefile = "gfx/interface/goals/syria_alt/support_iraq_revolut.dds"
 	}
 	spriteType = {
 		name = "syr_attack_lebanon"
@@ -297,6 +481,30 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/syr_ban_hezbolla.dds"
 	}
 	spriteType = {
+		name = "syr_bursha"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_feminism"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_feminism.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_judicial"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_judicial.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_links"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_links.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_old_feminism"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_old_feminism.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_social_care"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_social_care.dds"
+	}
+	spriteType = {
 		name = "syr_cbs"
 		texturefile = "gfx/interface/goals/syria_alt/syr_cbs.dds"
 	}
@@ -311,6 +519,10 @@ spriteTypes = {
 	spriteType = {
 		name = "syr_cyprus"
 		texturefile = "gfx/interface/goals/syria_alt/syr_cyprus.dds"
+	}
+	spriteType = {
+		name = "syr_defense_companies"
+		texturefile = "gfx/interface/goals/syria_alt/syr_defense_companies.dds"
 	}
 	spriteType = {
 		name = "syr_dse"
@@ -397,6 +609,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/syr_friend_taliban.dds"
 	}
 	spriteType = {
+		name = "syr_friend_turkey"
+		texturefile = "gfx/interface/goals/syria_alt/syr_friend_turkey.dds"
+	}
+	spriteType = {
 		name = "syr_friend_uae"
 		texturefile = "gfx/interface/goals/syria_alt/syr_friend_uae.dds"
 	}
@@ -421,6 +637,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/syr_historical_sites.dds"
 	}
 	spriteType = {
+		name = "syr_islamic_democracy"
+		texturefile = "gfx/interface/goals/syria_alt/syr_islamic_democracy.dds"
+	}
+	spriteType = {
 		name = "syr_kings_highway"
 		texturefile = "gfx/interface/goals/syria_alt/syr_kings_highway.dds"
 	}
@@ -429,12 +649,28 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/syr_lebanon_kalash.dds"
 	}
 	spriteType = {
+		name = "syr_medical_bushr"
+		texturefile = "gfx/interface/goals/syria_alt/syr_medical_bushr.dds"
+	}
+	spriteType = {
 		name = "syr_national_banking"
 		texturefile = "gfx/interface/goals/syria_alt/syr_national_banking.dds"
 	}
 	spriteType = {
+		name = "syr_oil_flow"
+		texturefile = "gfx/interface/goals/syria_alt/syr_oil_flow.dds"
+	}
+	spriteType = {
 		name = "syr_oil_main"
 		texturefile = "gfx/interface/goals/syria_alt/syr_oil_main.dds"
+	}
+	spriteType = {
+		name = "syr_oil_new"
+		texturefile = "gfx/interface/goals/syria_alt/syr_oil_new.dds"
+	}
+	spriteType = {
+		name = "syr_pharma"
+		texturefile = "gfx/interface/goals/syria_alt/syr_pharma.dds"
 	}
 	spriteType = {
 		name = "syr_phosphate_export"
@@ -461,8 +697,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/syr_tech_main.dds"
 	}
 	spriteType = {
+		name = "syr_unleash_cap"
+		texturefile = "gfx/interface/goals/syria_alt/syr_unleash_cap.dds"
+	}
+	spriteType = {
+		name = "syria_junta_mah"
+		texturefile = "gfx/interface/goals/syria_alt/syria_junta_mah.dds"
+	}
+	spriteType = {
 		name = "syria_telecom"
 		texturefile = "gfx/interface/goals/syria_alt/syria_telecom.dds"
+	}
+	spriteType = {
+		name = "syrian_baath_officer"
+		texturefile = "gfx/interface/goals/syria_alt/syrian_baath_officer.dds"
+	}
+	spriteType = {
+		name = "syrian_dilemma"
+		texturefile = "gfx/interface/goals/poland_alt/syrian_dilemma.dds"
 	}
 	spriteType = {
 		name = "syrian_rail"
@@ -495,6 +747,10 @@ spriteTypes = {
 	spriteType = {
 		name = "usa_egypt_war"
 		texturefile = "gfx/interface/goals/usa_alt/usa_egypt_war.dds"
+	}
+	spriteType = {
+		name = "usa_nigeria_islam_karimov"
+		texturefile = "gfx/interface/goals/usa_alt/usa_nigeria_islam_karimov.dds"
 	}
 	spriteType = {
 		name = "vg_energy_invest"

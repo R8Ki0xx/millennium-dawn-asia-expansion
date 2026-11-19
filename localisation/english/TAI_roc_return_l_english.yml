@@ -3242,11 +3242,8 @@
  roc_asia.86.t: "The 2014 Presidential Election"
  roc_asia.86.d: "The first presidential election under the new constitution has three candidates, the first time in half a century anyone has stood against an Assad, and the official result gives him 88.7 percent. No voting takes place in opposition-held areas or the refugee camps; Western countries call it a farce, while the regime declares that the people have chosen again."
  ### v3.29 叙利亚左翼规则
- SYRL_AI_BEHAVIOR: "Syria AI Path (Left Ba'ath)"
  RULE_OPTION_SYRL_LEFT_BAATH: "Left Ba'ath"
- RULE_OPTION_SYRL_LEFT_BAATH_DESC: "The Syrian AI takes Bashar's ‘Founding Ideals of the Ba'ath’ path: it rejects family rule and returns to the Ba'ath's original ideals (unity, freedom, socialism). Pair it with ‘Historical’ or ‘No Path’ in ‘Syria AI Behavior’, and do not select another path at the same time."
- RULE_OPTION_SYRL_NO_PATH: "Not Specified"
- RULE_OPTION_SYRL_NO_PATH_DESC: "No extra left-wing path is set; the Syrian AI follows the ‘Syria AI Behavior’ setting."
+ RULE_OPTION_SYRL_LEFT_BAATH_DESC: "The Syrian AI takes Bashar's ‘Founding Ideals of the Ba'ath’ path: it rejects family rule and returns to the Ba'ath's original ideals (unity, freedom, socialism). With this option the AI first takes the Millennium Dawn Bashar succession focus and then this line, and skips the ‘Constitutional Amendment’."
  ### v3.33 台湾时代政治线与巴基斯坦国策
  TAIP_ext_mainland_ties: "Cross-Strait Trade Ties"
  TAIP_ext_us_support: "Support for the Strait Status Quo"

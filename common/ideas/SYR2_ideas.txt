@@ -185,5 +185,176 @@ ideas = {
 				stability_factor = 0.02
 			}
 		}
+		SYR2_pan_islamism_idea = {
+			picture = islamic_world
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.02
+			}
+		}
+		SYR2_qutb_idea = {
+			picture = jihad_of_education
+			modifier = {
+				war_support_factor = 0.08
+				stability_factor = -0.04
+				fascism_drift = 0.02
+			}
+		}
+		SYR2_al_qaeda_idea = {
+			picture = terror_ire
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		SYR2_al_qaeda1_idea = {
+			picture = terror_ire
+			modifier = {
+				army_attack_factor = 0.08
+				army_morale_factor = 0.05
+				stability_factor = -0.08
+			}
+		}
+		SYR2_islamic_democracy_idea = {
+			picture = muslim_brotherhood
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+			}
+		}
+		SYR2_trader_support_idea = {
+			picture = trade
+			modifier = {
+				tax_gain_multiplier_modifier = 0.05
+				stability_factor = 0.02
+			}
+		}
+		SYR2_charity_idea = {
+			picture = mosque_funding
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.02
+			}
+		}
+		SYR2_righteous_jihad_idea = {
+			picture = volunteer_defenders
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.03
+				stability_factor = -0.02
+			}
+		}
+		SYR2_int_jihadists_idea = {
+			picture = volunteer_expedition_bonus
+			modifier = {
+				army_attack_factor = 0.06
+				stability_factor = -0.05
+			}
+		}
+		SYR2_purge_traitors_idea = {
+			picture = secret_police
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = -0.03
+			}
+		}
+		SYR2_mushriq_idea = {
+			picture = religion_sectarianism
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = -0.06
+			}
+		}
+		SYR2_syrian_democracy_idea = {
+			picture = democracy
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.05
+				democratic_drift = 0.02
+			}
+		}
+		SYR2_european_education_idea = {
+			picture = research_bonus
+			modifier = {
+				research_speed_factor = 0.04
+				education_cost_multiplier_modifier = -0.05
+			}
+		}
+		SYR2_guardians_idea = {
+			picture = volunteer_defenders2
+			modifier = {
+				army_org_factor = 0.03
+				stability_factor = 0.02
+			}
+		}
+		SYR2_npf_police_idea = {
+			picture = secret_police
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.04
+			}
+		}
+		SYR2_saudi_friend_idea = {
+			picture = islamic_world
+			modifier = {
+				tax_gain_multiplier_modifier = 0.03
+				stability_factor = 0.02
+			}
+		}
+		SYR2_kurdish_appeasement_idea = {
+			picture = syrian_social_nationalists
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+		SYR2_ssnp_idea = {
+			picture = syrian_social_nationalists
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+		SYR2_ssnp_economy_idea = {
+			picture = oil_profits
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+		SYR2_maher_economy_idea = {
+			picture = oil_profits
+			modifier = {
+				tax_gain_multiplier_modifier = 0.05
+				stability_factor = -0.02
+			}
+		}
+		SYR2_ssnp_propaganda_idea = {
+			picture = propaganda
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+		SYR2_state_feminism_idea = {
+			picture = democratic_party
+			modifier = {
+				political_power_gain = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		SYR2_secular_syria_idea = {
+			picture = democracy
+			modifier = {
+				stability_factor = 0.02
+				research_speed_factor = 0.03
+			}
+		}
+		SYR2_particle_liberal_idea = {
+			picture = trade
+			modifier = {
+				tax_gain_multiplier_modifier = 0.04
+				political_power_gain = 0.02
+			}
+		}
 	}
 }

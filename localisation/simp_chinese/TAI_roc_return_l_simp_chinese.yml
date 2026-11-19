@@ -3242,11 +3242,8 @@
  roc_asia.86.t: "2014 年总统选举"
  roc_asia.86.d: "新宪法下的第一次总统选举有三名候选人，这是半个世纪以来第一次有人与 Assad 同台竞争，官方公布的得票率为 88.7%。在反对派控制区与难民营中，选举无法进行；西方国家称之为一场闹剧，政权则宣称人民再次作出了选择。"
  ### v3.29 叙利亚左翼规则
- SYRL_AI_BEHAVIOR: "叙利亚 AI 路线（左翼复兴党）"
  RULE_OPTION_SYRL_LEFT_BAATH: "左翼复兴党"
- RULE_OPTION_SYRL_LEFT_BAATH_DESC: "叙利亚 AI 走巴沙尔的“复兴党初心”路线：拒绝家族政治，回到复兴党最初的理想（统一、自由、社会主义）。需要与“叙利亚 AI 行为”选“史实”或“无路线”搭配，不要同时选其他路线。"
- RULE_OPTION_SYRL_NO_PATH: "不指定"
- RULE_OPTION_SYRL_NO_PATH_DESC: "不额外指定左翼路线，叙利亚 AI 按“叙利亚 AI 行为”的设置行动。"
+ RULE_OPTION_SYRL_LEFT_BAATH_DESC: "叙利亚 AI 走巴沙尔的“复兴党初心”路线：拒绝家族政治，回到复兴党最初的理想（统一、自由、社会主义）。选这一项后，AI 先走千禧的巴沙尔继位国策，再走“复兴党初心”线，不走“宪法修正”。"
  ### v3.33 台湾时代政治线与巴基斯坦国策
  TAIP_ext_mainland_ties: "两岸经贸往来"
  TAIP_ext_us_support: "台海现状的支持"

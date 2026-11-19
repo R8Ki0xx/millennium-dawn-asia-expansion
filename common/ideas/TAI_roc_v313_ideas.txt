@@ -11,7 +11,6 @@ ideas = {
 		TAI_south_south_idea = { picture = roc21_jap_economic_cooperation_sou_5dc545e0 modifier = { political_power_gain = 0.05 trade_opinion_factor = 0.10 } }
 		TAI_global_chinese_network_idea = { picture = roc21_chi_the_chinese_dream_71cff3c6 modifier = { tax_gain_multiplier_modifier = 0.05 trade_opinion_factor = 0.05 } }
 		TAI_maritime_china_idea = { picture = roc21_ocean_navy_2fb06b71 modifier = { naval_speed_factor = 0.05 industrial_capacity_dockyard = 0.10 trade_opinion_factor = 0.05 } }
-		TAI_blue_water_idea = { picture = CHI_republic_of_china_navy modifier = { navy_org_factor = 0.05 naval_damage_factor = 0.05 experience_gain_navy = 0.05 } }
 		TAI_south_asia_partner_idea = { picture = roc21_raj_south_asian_tiger_d50bcf49 modifier = { trade_opinion_factor = 0.10 consumer_goods_factor = -0.02 } }
 		TAI_study_abroad_idea = { picture = roc21_usa_harvard_university_0e94d675 modifier = { research_speed_factor = 0.03 political_power_gain = 0.03 } }
 		TAI_olympic_glory_idea = { picture = roc21_arm_sport_bf113e96 modifier = { stability_factor = 0.05 war_support_factor = 0.03 } }

@@ -23,7 +23,7 @@ focus_tree = {
 	#Main succession branch
 	focus = {
 		id = SYR_death_of_hafez_al_assad
-		icon = national_unity_red
+		icon = hafez_ded
 
 		x = -36
 		y = 0
@@ -219,7 +219,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_healthcare_reform
-		icon = generic_healthcare
+		icon = syr_medical_bushr
 
 		x = -23
 		y = 2
@@ -247,7 +247,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_invite_big_pharma
-		icon = pfizer
+		icon = big_pharma_syr
 
 		x = -24
 		y = 3
@@ -302,7 +302,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_syrian_pharmaceuticals
-		icon = focus_generic_field_hostpital
+		icon = syr_pharma
 
 		x = -22
 		y = 3
@@ -394,7 +394,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_iron_lady
-		icon = iron_lady_of_syria
+		icon = syr_bursha
 
 		x = -21
 		y = 5
@@ -520,7 +520,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_constitutional_amendment
-		icon = Basrah_protests
+		icon = const_ammendment
 
 		x = -44
 		y = 2
@@ -681,7 +681,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_purge_opposition
-		icon = dominant_party
+		icon = purge_opposit_bash
 
 		x = -48
 		y = 4
@@ -709,7 +709,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_friend_old_guard
-		icon = syr_party_baath
+		icon = syrian_baath_officer
 
 		x = -46
 		y = 4
@@ -738,7 +738,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_loyal_marriage
-		icon = gold_standard
+		icon = loyal_marriage
 
 		x = -47
 		y = 5
@@ -849,7 +849,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_empower_the_republican_guard
-		icon = focus_generic_military_dictatorship
+		icon = maher_guards
 
 		x = -41
 		y = 3
@@ -889,7 +889,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_resestablish_defence_companies
-		icon = Generic_Ultranationalist_Government
+		icon = syr_defense_companies
 
 		x = -42
 		y = 4
@@ -917,7 +917,7 @@ focus_tree = {
 
 	focus = {
 		id = SYR_oil_must_flow
-		icon = oil_companies
+		icon = syr_oil_flow
 
 		x = -40
 		y = 4
@@ -1469,11 +1469,10 @@ focus_tree = {
 
 	focus = {
 		id = SYR_secular_opposition_victory
-		icon = syria_central_path
+		icon = free_syr_army_us
 
-		x = 0
-		y = 6
-		relative_position_id = SYR_flowers_of_damascus_spring
+		x = -73
+		y = 19
 
 		cost = 5
 
@@ -1492,9 +1491,8 @@ focus_tree = {
 		id = SYR_islamist_opposition_victory
 		icon = muslim_brotherhood_egy
 
-		x = 4
-		y = 6
-		relative_position_id = SYR_flowers_of_damascus_spring
+		x = -63
+		y = 18
 
 		cost = 5
 
@@ -1513,13 +1511,13 @@ focus_tree = {
 		id = SYR_islamist_renaissance
 		icon = islamic_emirate_of_syria
 
-		x = 0
-		y = 2
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -32
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_islamist_opposition_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1552,13 +1550,14 @@ focus_tree = {
 		id = SYR_empower_sharia_courts
 		icon = sharia_law_syr
 
-		x = 2
-		y = 6
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -63
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_religious_values }
+		prerequisite = { focus = SYR_Syrian_Muslim_Brotherhood focus = SYR_Al_Nursa_Front }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1591,13 +1590,13 @@ focus_tree = {
 		id = SYR_turkish_inspired_islamism
 		icon = islamic_emirate_of_syria1
 
-		x = 1
-		y = 3
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -32
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_islamist_renaissance }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1627,14 +1626,14 @@ focus_tree = {
 		id = SYR_deregulate_economy
 		icon = BRA_deregulation_new
 
-		x = -1
-		y = 3
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -34
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_Get_rid_of_oligarchs }
 		prerequisite = { focus = SYR_islamist_renaissance }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1663,13 +1662,13 @@ focus_tree = {
 		id = SYR_syrian_gulen_movement
 		icon = hizmet
 
-		x = 0
-		y = 4
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -33
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_turkish_inspired_islamism }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1700,14 +1699,14 @@ focus_tree = {
 		id = SYR_moderate_conservatism
 		icon = muslim_reg
 
-		x = -1
-		y = 5
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -34
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_syrian_gulen_movement }
 		mutually_exclusive = { focus = SYR_religious_values }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1737,14 +1736,14 @@ focus_tree = {
 		id = SYR_religious_values
 		icon = muslim_reg_two
 
-		x = 1
-		y = 5
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -32
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_syrian_gulen_movement }
 		mutually_exclusive = { focus = SYR_moderate_conservatism }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1776,16 +1775,13 @@ focus_tree = {
 		id = SYR_religious_economic_charity
 		icon = syr_bazaar
 
-		x = 0
-		y = 6
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -34
+		y = 24
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_moderate_conservatism
-			focus = SYR_religious_values
-		}
+		prerequisite = { focus = SYR_moderate_conservatism focus = SYR_religious_values }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1813,13 +1809,13 @@ focus_tree = {
 		id = SYR_qatari_support
 		icon = quatar_allied
 
-		x = 1
-		y = 7
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -33
+		y = 25
 
 		cost = 5
 
 		prerequisite = { focus = SYR_religious_economic_charity }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -1868,14 +1864,14 @@ focus_tree = {
 		id = SYR_flourishment_of_central_economy
 		icon = "sharia_law"
 
-		x = -1
-		y = 7
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -35
+		y = 25
 
 		cost = 5
 
 		prerequisite = { focus = SYR_religious_economic_charity }
 		prerequisite = { focus = SYR_syrian_diaspora_investments }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
@@ -1936,13 +1932,13 @@ focus_tree = {
 		id = SYR_turkish_investments
 		icon = align_to_turkey
 
-		x = 2
-		y = 4
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -31
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_turkish_inspired_islamism }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -1996,15 +1992,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_reverse_secularization
-		icon = takhrir
+		icon = mod_qur_sun
 
-		x = 3
-		y = 7
-		relative_position_id = SYR_islamist_opposition_victory
+		x = -64
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_empower_sharia_courts }
+		prerequisite = { focus = SYR_Form_Hayat_Tashir_al_Sharm }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2039,9 +2036,8 @@ focus_tree = {
 		id = SYR_NPF_victory
 		icon = syria_npf
 
-		x = -6
-		y = 6
-		relative_position_id = SYR_flowers_of_damascus_spring
+		x = -53
+		y = 19
 
 		cost = 5
 
@@ -2058,15 +2054,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_statist_rise
-		icon = New_Government_1
+		icon = GENERIC_fraud_democracy
 
-		x = 2
-		y = 2
-		relative_position_id = SYR_NPF_victory
+		x = -51
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_NPF_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2094,15 +2090,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_maintain_military_role
-		icon = Syrian_National_Army_1
+		icon = generic_nationalists_militarization
 
-		x = -2
-		y = 2
-		relative_position_id = SYR_NPF_victory
+		x = -55
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_NPF_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -2140,13 +2136,13 @@ focus_tree = {
 		id = SYR_kick_out_iran
 		icon = "attack_iran"
 
-		x = -2
-		y = 4
-		relative_position_id = SYR_NPF_victory
+		x = -46
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_subsidise_police }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2181,15 +2177,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_nationalize_oligarchic_holdings
-		icon = economic_nationalisation
+		icon = POL_collective_ownership_agree
 
-		x = 0
-		y = 2
-		relative_position_id = SYR_NPF_victory
+		x = -53
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_NPF_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -2230,16 +2226,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_subsidise_police
-		icon = police_siren
+		icon = GENERIC_police_state
 
-		x = -1
-		y = 3
-		relative_position_id = SYR_NPF_victory
+		x = -54
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_nationalize_oligarchic_holdings }
 		prerequisite = { focus = SYR_maintain_military_role }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2264,16 +2260,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_maintain_socialistic_policies
-		icon = focus_generic_societal_corporatism
+		icon = generic_commie_liberty
 
-		x = 1
-		y = 3
-		relative_position_id = SYR_NPF_victory
+		x = -52
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_nationalize_oligarchic_holdings }
 		prerequisite = { focus = SYR_statist_rise }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2300,15 +2296,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_government_planned_economic_projects
-		icon = central_planned_economy2
+		icon = GENERIC_autarky
 
-		x = 2
-		y = 4
-		relative_position_id = SYR_NPF_victory
+		x = -51
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_maintain_socialistic_policies }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -2351,15 +2347,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_patriotic_propaganda
-		icon = focus_generic_fascist_propaganda
+		icon = federal_sydria
 
-		x = 3
-		y = 5
-		relative_position_id = SYR_NPF_victory
+		x = -50
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_government_planned_economic_projects }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2387,16 +2383,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_gather_support_from_peasantry
-		icon = focus_ITA_peasants_rise
+		icon = GENERIC_econ_start
 
-		x = 0
-		y = 4
-		relative_position_id = SYR_NPF_victory
+		x = -53
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_subsidise_police }
 		prerequisite = { focus = SYR_maintain_socialistic_policies }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2429,15 +2425,15 @@ focus_tree = {
 
 	focus = {
 		id = SYR_strong_government
-		icon = generic_nationalism
+		icon = GENERIC_independence
 
-		x = -1
-		y = 7
-		relative_position_id = SYR_NPF_victory
+		x = -52
+		y = 25
 
 		cost = 5
 
 		prerequisite = { focus = SYR_illiberal_democracy }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2466,15 +2462,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_expand_youth_organizations
-		icon = focus_BRA_anaue
+		icon = GENERIC_representation
 
-		x = -3
-		y = 5
-		relative_position_id = SYR_NPF_victory
+		x = -56
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_kick_out_iran }
+		prerequisite = { focus = SYR_repression }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2506,15 +2503,17 @@ focus_tree = {
 
 	focus = {
 		id = SYR_illiberal_democracy
-		icon = blue_democracy
+		icon = GENERIC_reactionary_democracy
 
-		x = -2
-		y = 6
-		relative_position_id = SYR_NPF_victory
+		x = -53
+		y = 24
 
 		cost = 5
 
 		prerequisite = { focus = SYR_expand_youth_organizations }
+		prerequisite = { focus = SYR_reestablish_intelligence_committee }
+		prerequisite = { focus = SYR_patriotic_propaganda }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2542,17 +2541,19 @@ focus_tree = {
 
 	focus = {
 		id = SYR_reestablish_intelligence_committee
-		icon = intelligence_exchange2
+		icon = generic_inner_intel
 
-		x = -1
-		y = 5
-		relative_position_id = SYR_NPF_victory
+		x = -53
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_kick_out_iran }
 		prerequisite = { focus = SYR_gather_support_from_peasantry }
+		prerequisite = { focus = SYR_repression }
+		prerequisite = { focus = SYR_government_planned_economic_projects }
 		mutually_exclusive = { focus = SYR_deal_with_the_trade_unions }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2575,13 +2576,13 @@ focus_tree = {
 		id = SYR_national_security_act
 		icon = "islamophobia2"
 
-		x = -3
-		y = 7
-		relative_position_id = SYR_NPF_victory
+		x = -54
+		y = 25
 
 		cost = 5
 
 		prerequisite = { focus = SYR_illiberal_democracy }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2606,15 +2607,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_pan_syrian_nationalism
-		icon = better_ssnp
+		icon = greater_syria1
 
-		x = -2
-		y = 10
-		relative_position_id = SYR_NPF_victory
+		x = -51
+		y = 27
 
 		cost = 5
 
 		prerequisite = { focus = SYR_cultural_rebirth }
+		prerequisite = { focus = SYR_nasserist_rise }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2637,15 +2639,15 @@ focus_tree = {
 		id = SYR_cultural_rebirth
 		icon = "ssnp_coup"
 
-		x = -2
-		y = 8
-		relative_position_id = SYR_NPF_victory
+		x = -55
+		y = 26
 
 		cost = 5
 
 		prerequisite = { focus = SYR_national_security_act }
 		prerequisite = { focus = SYR_strong_government }
 		mutually_exclusive = { focus = SYR_nasserist_rise }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2669,15 +2671,15 @@ focus_tree = {
 		id = SYR_deal_with_the_trade_unions
 		icon = focus_FIN_finnish_federation_of_trade_unions
 
-		x = 1
-		y = 5
-		relative_position_id = SYR_NPF_victory
+		x = -44
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_government_planned_economic_projects }
 		prerequisite = { focus = SYR_gather_support_from_peasantry }
 		mutually_exclusive = { focus = SYR_reestablish_intelligence_committee }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2701,13 +2703,13 @@ focus_tree = {
 		id = SYR_reassert_russian_ties
 		icon = rapprochement_with_russia
 
-		x = 2
-		y = 6
-		relative_position_id = SYR_NPF_victory
+		x = -42
+		y = 20
 
 		cost = 3
 
 		prerequisite = { focus = SYR_patriotic_propaganda }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2748,13 +2750,13 @@ focus_tree = {
 		id = SYR_russian_oil_excavation
 		icon = Rosneft
 
-		x = 1
-		y = 7
-		relative_position_id = SYR_NPF_victory
+		x = -43
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_reassert_russian_ties }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2822,13 +2824,13 @@ focus_tree = {
 		id = SYR_russian_tartus_base_expansion
 		icon = Generic_Russian_Partisan
 
-		x = 3
-		y = 7
-		relative_position_id = SYR_NPF_victory
+		x = -41
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_reassert_russian_ties }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -2878,15 +2880,17 @@ focus_tree = {
 		id = SYR_nasserist_rise
 		icon = nasser_tv
 
-		x = 2
-		y = 8
-		relative_position_id = SYR_NPF_victory
+		x = -51
+		y = 26
 
 		cost = 5
 
 		prerequisite = { focus = SYR_russian_oil_excavation }
 		prerequisite = { focus = SYR_russian_tartus_base_expansion }
+		prerequisite = { focus = SYR_national_security_act }
+		prerequisite = { focus = SYR_strong_government }
 		mutually_exclusive = { focus = SYR_cultural_rebirth }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2908,15 +2912,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_islamic_socialism
-		icon = social_democracy_2
+		icon = GENERIC_islamic_socialism
 
-		x = 2
-		y = 10
-		relative_position_id = SYR_NPF_victory
+		x = -55
+		y = 27
 
 		cost = 5
 
 		prerequisite = { focus = SYR_nasserist_rise }
+		prerequisite = { focus = SYR_cultural_rebirth }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2941,16 +2946,13 @@ focus_tree = {
 		id = SYR_Get_rid_of_oligarchs
 		icon = sov_anti_oligarch
 
-		x = 2
-		y = 2
-		relative_position_id = SYR_secular_opposition_victory
+		x = -34
+		y = 20
 
 		cost = 10
 
-		prerequisite = {
-			focus = SYR_secular_opposition_victory
-			focus = SYR_islamist_opposition_victory
-		}
+		prerequisite = { focus = SYR_secular_opposition_victory focus = SYR_islamist_opposition_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2974,13 +2976,13 @@ focus_tree = {
 		id = SYR_the_coalition
 		icon = KHM_democratic_coalition
 
-		x = -2
-		y = 2
-		relative_position_id = SYR_secular_opposition_victory
+		x = -40
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_secular_opposition_victory }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3018,13 +3020,13 @@ focus_tree = {
 		id = SYR_dismantle_the_military
 		icon = SNA
 
-		x = -1
-		y = 3
-		relative_position_id = SYR_secular_opposition_victory
+		x = -38
+		y = 20
 
 		cost = 5
 
 		prerequisite = { focus = SYR_empower_institutions }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3061,15 +3063,17 @@ focus_tree = {
 
 	focus = {
 		id = SYR_empower_institutions
-		icon = Syrian_Revolutionary_Command_Council_1
+		icon = unitary_syria
 
-		x = 0
-		y = 2
-		relative_position_id = SYR_secular_opposition_victory
+		x = -71
+		y = 24
 
 		cost = 5
 
 		prerequisite = { focus = SYR_secular_opposition_victory }
+		prerequisite = { focus = SYR_shiniest_democracy }
+		prerequisite = { focus = SYR_liberalize_society }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3105,16 +3109,17 @@ focus_tree = {
 
 	focus = {
 		id = SYR_western_supported_economic_relief
-		icon = western_alignment
+		icon = USA_syrian_reconstruction
 
-		x = 1
-		y = 3
-		relative_position_id = SYR_secular_opposition_victory
+		x = -76
+		y = 22
 
 		cost = 5
 
 		prerequisite = { focus = SYR_empower_institutions }
 		prerequisite = { focus = SYR_Get_rid_of_oligarchs }
+		prerequisite = { focus = SYR_direct_intervention }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3189,13 +3194,14 @@ focus_tree = {
 		id = SYR_liberalize_society
 		icon = nosharia_law_syr
 
-		x = 0
-		y = 4
-		relative_position_id = SYR_secular_opposition_victory
+		x = -70
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_empower_institutions }
+		prerequisite = { focus = SYR_suppress_islamists }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3232,13 +3238,13 @@ focus_tree = {
 		id = SYR_scientific_ventures
 		icon = goal_JAP_secret_science
 
-		x = -2
-		y = 4
-		relative_position_id = SYR_secular_opposition_victory
+		x = -38
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_dismantle_the_military }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3273,18 +3279,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_banish_authoritarian_influence
-		icon = focus_ARG_defense_and_democracy
+		icon = BLR_destroy_admin
 
-		x = 2
-		y = 4
-		relative_position_id = SYR_secular_opposition_victory
+		x = -70
+		y = 25
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_western_supported_economic_relief
-			focus = SYR_deregulate_economy
-		}
+		prerequisite = { focus = SYR_western_supported_economic_relief focus = SYR_deregulate_economy }
+		prerequisite = { focus = SYR_empower_institutions }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3325,17 +3329,15 @@ focus_tree = {
 		id = SYR_democratic_socialism
 		icon = syria_soc_dem
 
-		x = -1
-		y = 5
-		relative_position_id = SYR_secular_opposition_victory
+		x = -74
+		y = 22
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_scientific_ventures
-			focus = SYR_liberalize_society
-		}
+		prerequisite = { focus = SYR_scientific_ventures focus = SYR_liberalize_society }
+		prerequisite = { focus = SYR_direct_intervention }
 		mutually_exclusive = { focus = SYR_unleash_economic_potential }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3373,19 +3375,17 @@ focus_tree = {
 
 	focus = {
 		id = SYR_unleash_economic_potential
-		icon = revolution_money
+		icon = syr_unleash_cap
 
-		x = 1
-		y = 5
-		relative_position_id = SYR_secular_opposition_victory
+		x = -72
+		y = 22
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_scientific_ventures
-			focus = SYR_liberalize_society
-		}
+		prerequisite = { focus = SYR_scientific_ventures focus = SYR_liberalize_society }
+		prerequisite = { focus = SYR_federalization }
 		mutually_exclusive = { focus = SYR_democratic_socialism }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3418,15 +3418,16 @@ focus_tree = {
 
 	focus = {
 		id = SYR_domestic_investments
-		icon = align_to_syrian_rebels
+		icon = intervene_tur_in_syr
 
-		x = -2
-		y = 6
-		relative_position_id = SYR_secular_opposition_victory
+		x = -75
+		y = 23
 
 		cost = 5
 
 		prerequisite = { focus = SYR_democratic_socialism }
+		prerequisite = { focus = SYR_western_supported_economic_relief focus = SYR_democratic_socialism }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -3512,16 +3513,13 @@ focus_tree = {
 		id = SYR_subsidize_local_firms
 		icon = balance_buget
 
-		x = 0
-		y = 6
-		relative_position_id = SYR_secular_opposition_victory
+		x = -36
+		y = 20
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_democratic_socialism
-			focus = SYR_unleash_economic_potential
-		}
+		prerequisite = { focus = SYR_democratic_socialism focus = SYR_unleash_economic_potential }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -3571,16 +3569,20 @@ focus_tree = {
 
 	focus = {
 		id = SYR_economic_democracy
-		icon = unitary_syria
+		icon = free_democr_syria
 
-		x = -1
-		y = 7
-		relative_position_id = SYR_secular_opposition_victory
+		x = -73
+		y = 26
 
 		cost = 5
 
 		prerequisite = { focus = SYR_subsidize_local_firms }
 		prerequisite = { focus = SYR_domestic_investments }
+		prerequisite = { focus = SYR_guardians_of_revolution }
+		prerequisite = { focus = SYR_banish_authoritarian_influence }
+		prerequisite = { focus = SYR_european_education_support }
+		prerequisite = { focus = SYR_cooperation_with_israel }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3617,16 +3619,14 @@ focus_tree = {
 		id = SYR_syrian_diaspora_investments
 		icon = Generic_Arabia
 
-		x = 2
-		y = 6
-		relative_position_id = SYR_secular_opposition_victory
+		x = -75
+		y = 24
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_unleash_economic_potential
-			focus = SYR_moderate_conservatism
-		}
+		prerequisite = { focus = SYR_unleash_economic_potential focus = SYR_moderate_conservatism }
+		prerequisite = { focus = SYR_domestic_investments }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -3679,14 +3679,14 @@ focus_tree = {
 		id = SYR_invite_US_business_giants
 		icon = Talk_with_US
 
-		x = 1
-		y = 7
-		relative_position_id = SYR_secular_opposition_victory
+		x = -36
+		y = 21
 
 		cost = 5
 
 		prerequisite = { focus = SYR_syrian_diaspora_investments }
 		prerequisite = { focus = SYR_subsidize_local_firms }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -3748,17 +3748,13 @@ focus_tree = {
 		id = SYR_address_ethnic_divides
 		icon = intervene_tur_in_syr
 
-		x = 0
-		y = 8
-		relative_position_id = SYR_secular_opposition_victory
+		x = -36
+		y = 26
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_economic_democracy
-			focus = SYR_invite_US_business_giants
-			focus = SYR_flourishment_of_central_economy
-		}
+		prerequisite = { focus = SYR_economic_democracy focus = SYR_invite_US_business_giants focus = SYR_flourishment_of_central_economy }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3784,16 +3780,13 @@ focus_tree = {
 		id = SYR_EU_investments
 		icon = eu_investments
 
-		x = -2
-		y = 8
-		relative_position_id = SYR_secular_opposition_victory
+		x = -36
+		y = 22
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_economic_democracy
-			focus = SYR_invite_US_business_giants
-		}
+		prerequisite = { focus = SYR_economic_democracy focus = SYR_invite_US_business_giants }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -3851,17 +3844,13 @@ focus_tree = {
 		id = SYR_student_exchanges
 		icon = blr_encourage_exchange_students
 
-		x = 2
-		y = 8
-		relative_position_id = SYR_secular_opposition_victory
+		x = -34
+		y = 26
 
 		cost = 5
 
-		prerequisite = {
-			focus = SYR_invite_US_business_giants
-			focus = SYR_economic_democracy
-			focus = SYR_flourishment_of_central_economy
-		}
+		prerequisite = { focus = SYR_invite_US_business_giants focus = SYR_economic_democracy focus = SYR_flourishment_of_central_economy }
+
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -9698,7 +9687,7 @@ focus_tree = {
 		id = SYRX_crisis_cell
 		icon = Bashar_al_Assad
 		x = -12
-		y = 25
+		y = 31
 		cost = 5
 		allow_branch = {
 			original_tag = SYR
@@ -9722,7 +9711,7 @@ focus_tree = {
 		id = SYRX_defend_damascus
 		icon = border_conflict_bunker
 		x = -18
-		y = 26
+		y = 32
 		cost = 5
 		prerequisite = { focus = SYRX_crisis_cell }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9740,7 +9729,7 @@ focus_tree = {
 		id = SYRX_fourth_division
 		icon = Maher_al_Assad
 		x = -20
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_defend_damascus }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9758,7 +9747,7 @@ focus_tree = {
 		id = SYRX_checkpoints
 		icon = generic_counter_insurgency_icon
 		x = -18
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRX_defend_damascus }
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -9776,7 +9765,7 @@ focus_tree = {
 		id = SYRX_siege_tactic
 		icon = attack_syrian_rebels
 		x = -19
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRX_fourth_division focus = SYRX_checkpoints }
 		mutually_exclusive = { focus = SYRX_reconciliation }
@@ -9799,7 +9788,7 @@ focus_tree = {
 		id = SYRX_reconciliation
 		icon = diplomatic_treaty
 		x = -17
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRX_fourth_division focus = SYRX_checkpoints }
 		mutually_exclusive = { focus = SYRX_siege_tactic }
@@ -9818,7 +9807,7 @@ focus_tree = {
 		id = SYRX_reform_army
 		icon = Syrian_Army_1
 		x = -14
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRX_crisis_cell }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9836,7 +9825,7 @@ focus_tree = {
 		id = SYRX_ndf
 		icon = Communal_Militias
 		x = -16
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_reform_army }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9854,7 +9843,7 @@ focus_tree = {
 		id = SYRX_tiger_forces
 		icon = Syrian_National_Army_1
 		x = -14
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_reform_army }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9872,7 +9861,7 @@ focus_tree = {
 		id = SYRX_airpower
 		icon = Syrian_Air_Force_1
 		x = -12
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_reform_army }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9893,7 +9882,7 @@ focus_tree = {
 		id = SYRX_conscription
 		icon = army_recruting
 		x = -15
-		y = 28
+		y = 34
 		cost = 5
 		prerequisite = { focus = SYRX_ndf focus = SYRX_tiger_forces }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -9911,7 +9900,7 @@ focus_tree = {
 		id = SYRX_armor_rebuild
 		icon = tank_production
 		x = -13
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRX_tiger_forces focus = SYRX_airpower }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -9938,7 +9927,7 @@ focus_tree = {
 		id = SYRX_foreign_backers
 		icon = align_to_iran
 		x = -9
-		y = 26
+		y = 32
 		cost = 5
 		prerequisite = { focus = SYRX_crisis_cell }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -9955,7 +9944,7 @@ focus_tree = {
 		id = SYRX_iran_axis
 		icon = iran_militias
 		x = -10
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_foreign_backers }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -9977,7 +9966,7 @@ focus_tree = {
 		id = SYRX_russia_intervention
 		icon = sov_volunteer_corps
 		x = -8
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRX_foreign_backers }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10000,7 +9989,7 @@ focus_tree = {
 		id = SYRX_joint_command
 		icon = iran_and_its_allies
 		x = -9
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRX_iran_axis }
 		prerequisite = { focus = SYRX_russia_intervention }
@@ -10019,7 +10008,7 @@ focus_tree = {
 		id = SYRX_chemical_line
 		icon = chemical_warfare
 		x = -6
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRX_foreign_backers }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10037,7 +10026,7 @@ focus_tree = {
 		id = SYRX_chem_deal
 		icon = diplomatic_treaty
 		x = -7
-		y = 28
+		y = 34
 		cost = 5
 		prerequisite = { focus = SYRX_chemical_line }
 		mutually_exclusive = { focus = SYRX_chem_deny }
@@ -10057,7 +10046,7 @@ focus_tree = {
 		id = SYRX_chem_deny
 		icon = terrorism
 		x = -5
-		y = 28
+		y = 34
 		cost = 5
 		prerequisite = { focus = SYRX_chemical_line }
 		mutually_exclusive = { focus = SYRX_chem_deal }
@@ -10079,7 +10068,7 @@ focus_tree = {
 		id = SYRX_new_constitution
 		icon = Focus_Parliament_Constitution
 		x = -3
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRX_crisis_cell }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10097,7 +10086,7 @@ focus_tree = {
 		id = SYRX_reconciliation_ministry
 		icon = democratic_stability
 		x = -3
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRX_new_constitution }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10115,7 +10104,7 @@ focus_tree = {
 		id = SYRX_presidential_election
 		icon = Election_graphics
 		x = -1
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRX_new_constitution }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10137,7 +10126,7 @@ focus_tree = {
 		id = SYRX_astana_process
 		icon = treaty
 		x = -7
-		y = 30
+		y = 36
 		cost = 7
 		prerequisite = { focus = SYRX_joint_command }
 		prerequisite = { focus = SYRX_chem_deal focus = SYRX_chem_deny }
@@ -10164,7 +10153,7 @@ focus_tree = {
 		id = SYRX_aleppo_reconquest
 		icon = bombers
 		x = -18
-		y = 30
+		y = 36
 		cost = 10
 		prerequisite = { focus = SYRX_siege_tactic focus = SYRX_reconciliation }
 		prerequisite = { focus = SYRX_conscription focus = SYRX_armor_rebuild }
@@ -10190,7 +10179,7 @@ focus_tree = {
 		id = SYRX_palmyra_desert
 		icon = tank_production
 		x = -16
-		y = 30
+		y = 36
 		cost = 10
 		prerequisite = { focus = SYRX_conscription focus = SYRX_armor_rebuild }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10214,7 +10203,7 @@ focus_tree = {
 		id = SYRX_idlib_question
 		icon = attack_syria
 		x = -14
-		y = 30
+		y = 36
 		cost = 7
 		prerequisite = { focus = SYRX_aleppo_reconquest focus = SYRX_palmyra_desert focus = SYRX_astana_process }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10231,7 +10220,7 @@ focus_tree = {
 		id = SYRX_euphrates_front
 		icon = seize_oil
 		x = -12
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRX_palmyra_desert }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -10259,7 +10248,7 @@ focus_tree = {
 		id = SYRX_war_economy
 		icon = oil_production
 		x = -7
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRX_astana_process }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -10278,7 +10267,7 @@ focus_tree = {
 		id = SYRX_whole_syria
 		icon = federal_republic_of_syria
 		x = -14
-		y = 32
+		y = 38
 		cost = 10
 		prerequisite = { focus = SYRX_idlib_question }
 		prerequisite = { focus = SYRX_euphrates_front focus = SYRX_war_economy }
@@ -10305,7 +10294,7 @@ focus_tree = {
 		id = SYRF_council
 		icon = Syrian_Revolutionary_Command_Council_1
 		x = 10
-		y = 25
+		y = 31
 		cost = 5
 		allow_branch = {
 			original_tag = FSA
@@ -10325,7 +10314,7 @@ focus_tree = {
 		id = SYRF_national_coalition
 		icon = align_to_syrian_rebels
 		x = 5
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRF_council }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10350,7 +10339,7 @@ focus_tree = {
 		id = SYRF_geneva
 		icon = diplomatic_treaty
 		x = 3
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRF_national_coalition }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10368,7 +10357,7 @@ focus_tree = {
 		id = SYRF_interim_government
 		icon = federal_syria
 		x = 5
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRF_national_coalition }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10386,7 +10375,7 @@ focus_tree = {
 		id = SYRF_friends_of_syria
 		icon = align_to_america
 		x = 7
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRF_national_coalition }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10407,7 +10396,7 @@ focus_tree = {
 		id = SYRF_military_council
 		icon = Syrian_National_Army_1
 		x = 10
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRF_council }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10425,7 +10414,7 @@ focus_tree = {
 		id = SYRF_defections
 		icon = MiddleEasternRebel
 		x = 9
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRF_military_council }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10443,7 +10432,7 @@ focus_tree = {
 		id = SYRF_local_councils
 		icon = autonomy
 		x = 11
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRF_military_council }
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -10460,7 +10449,7 @@ focus_tree = {
 		id = SYRF_brigades
 		icon = volunteers
 		x = 10
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRF_defections focus = SYRF_local_councils }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10478,7 +10467,7 @@ focus_tree = {
 		id = SYRF_foreign_support
 		icon = align_to_turkey
 		x = 15
-		y = 26
+		y = 32
 		cost = 5
 		prerequisite = { focus = SYRF_council }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10495,7 +10484,7 @@ focus_tree = {
 		id = SYRF_turkey_haven
 		icon = intervene_tur_in_syr
 		x = 14
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRF_foreign_support }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -10516,7 +10505,7 @@ focus_tree = {
 		id = SYRF_gulf_money
 		icon = money
 		x = 16
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRF_foreign_support }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -10538,7 +10527,7 @@ focus_tree = {
 		id = SYRF_train_equip
 		icon = arm_ban_iran_product
 		x = 18
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRF_foreign_support }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10561,7 +10550,7 @@ focus_tree = {
 		id = SYRF_extremist_question
 		icon = jihadists
 		x = 15
-		y = 28
+		y = 34
 		cost = 5
 		prerequisite = { focus = SYRF_turkey_haven focus = SYRF_gulf_money }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10578,7 +10567,7 @@ focus_tree = {
 		id = SYRF_ally_nusra
 		icon = isis_tahrir_alliance
 		x = 14
-		y = 29
+		y = 35
 		cost = 7
 		prerequisite = { focus = SYRF_extremist_question }
 		mutually_exclusive = { focus = SYRF_isolate_extremists }
@@ -10601,7 +10590,7 @@ focus_tree = {
 		id = SYRF_isolate_extremists
 		icon = attack_isis
 		x = 16
-		y = 29
+		y = 35
 		cost = 7
 		prerequisite = { focus = SYRF_extremist_question }
 		mutually_exclusive = { focus = SYRF_ally_nusra }
@@ -10624,7 +10613,7 @@ focus_tree = {
 		id = SYRF_euphrates_shield
 		icon = turk_militia
 		x = 13
-		y = 30
+		y = 36
 		cost = 10
 		prerequisite = { focus = SYRF_turkey_haven }
 		prerequisite = { focus = SYRF_isolate_extremists focus = SYRF_ally_nusra }
@@ -10648,7 +10637,7 @@ focus_tree = {
 		id = SYRF_national_army
 		icon = Syrian_National_Army_1
 		x = 11
-		y = 31
+		y = 37
 		cost = 10
 		prerequisite = { focus = SYRF_euphrates_shield focus = SYRF_brigades }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10666,7 +10655,7 @@ focus_tree = {
 		id = SYRF_liberated_aleppo_damascus
 		icon = attack_syria
 		x = 9
-		y = 30
+		y = 36
 		cost = 10
 		prerequisite = { focus = SYRF_brigades }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10687,7 +10676,7 @@ focus_tree = {
 		id = SYRF_transition_plan
 		icon = Focus_Parliament_Constitution
 		x = 5
-		y = 29
+		y = 35
 		cost = 7
 		prerequisite = { focus = SYRF_interim_government focus = SYRF_friends_of_syria }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10705,7 +10694,7 @@ focus_tree = {
 		id = SYRF_free_syria_victory
 		icon = democratic_stability
 		x = 7
-		y = 32
+		y = 38
 		cost = 10
 		prerequisite = { focus = SYRF_transition_plan }
 		prerequisite = { focus = SYRF_liberated_aleppo_damascus focus = SYRF_national_army }
@@ -10728,7 +10717,7 @@ focus_tree = {
 		id = SYRN_emergence
 		icon = jihad
 		x = 28
-		y = 25
+		y = 31
 		cost = 5
 		allow_branch = {
 			original_tag = NUS
@@ -10748,7 +10737,7 @@ focus_tree = {
 		id = SYRN_build_ranks
 		icon = Jihadi_Fighters
 		x = 24
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRN_emergence }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10766,7 +10755,7 @@ focus_tree = {
 		id = SYRN_inghimasi
 		icon = terrorism
 		x = 22
-		y = 27
+		y = 33
 		cost = 7
 		prerequisite = { focus = SYRN_build_ranks }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10784,7 +10773,7 @@ focus_tree = {
 		id = SYRN_wage_war
 		icon = flames_of_rebellion
 		x = 24
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRN_build_ranks }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10802,7 +10791,7 @@ focus_tree = {
 		id = SYRN_sharia_courts
 		icon = sharia_law_syr
 		x = 28
-		y = 26
+		y = 32
 		cost = 5
 		prerequisite = { focus = SYRN_emergence }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10820,7 +10809,7 @@ focus_tree = {
 		id = SYRN_dawa_offices
 		icon = islamist_gov
 		x = 27
-		y = 27
+		y = 33
 		cost = 5
 		prerequisite = { focus = SYRN_sharia_courts }
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -10838,7 +10827,7 @@ focus_tree = {
 		id = SYRN_qaeda_oath
 		icon = alqaeda_thing
 		x = 31
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRN_emergence }
 		mutually_exclusive = { focus = SYRN_break_qaeda }
@@ -10861,7 +10850,7 @@ focus_tree = {
 		id = SYRN_break_qaeda
 		icon = islamist_gov2
 		x = 33
-		y = 26
+		y = 32
 		cost = 7
 		prerequisite = { focus = SYRN_emergence }
 		mutually_exclusive = { focus = SYRN_qaeda_oath }
@@ -10880,7 +10869,7 @@ focus_tree = {
 		id = SYRN_absorb_factions
 		icon = isis_tahrir_alliance
 		x = 26
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRN_wage_war focus = SYRN_dawa_offices }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10898,7 +10887,7 @@ focus_tree = {
 		id = SYRN_fight_isis
 		icon = attack_isis
 		x = 30
-		y = 28
+		y = 34
 		cost = 7
 		prerequisite = { focus = SYRN_qaeda_oath focus = SYRN_break_qaeda }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10919,7 +10908,7 @@ focus_tree = {
 		id = SYRN_hts_formation
 		icon = hizb_u_tahrir
 		x = 29
-		y = 29
+		y = 35
 		cost = 10
 		prerequisite = { focus = SYRN_absorb_factions }
 		prerequisite = { focus = SYRN_fight_isis }
@@ -10939,7 +10928,7 @@ focus_tree = {
 		id = SYRN_take_idlib
 		icon = seize_oil
 		x = 25
-		y = 30
+		y = 36
 		cost = 7
 		prerequisite = { focus = SYRN_hts_formation }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -10966,7 +10955,7 @@ focus_tree = {
 		id = SYRN_salvation_government
 		icon = federal_republic_of_syria
 		x = 29
-		y = 30
+		y = 36
 		cost = 10
 		prerequisite = { focus = SYRN_take_idlib }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10984,7 +10973,7 @@ focus_tree = {
 		id = SYRN_border_crossings
 		icon = money
 		x = 33
-		y = 30
+		y = 36
 		cost = 7
 		prerequisite = { focus = SYRN_hts_formation }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11003,7 +10992,7 @@ focus_tree = {
 		id = SYRN_turkey_pragmatism
 		icon = align_to_turkey
 		x = 31
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRN_salvation_government focus = SYRN_border_crossings }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -11024,7 +11013,7 @@ focus_tree = {
 		id = SYRN_moderate_image
 		icon = islamist_gov
 		x = 33
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRN_border_crossings }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -11046,7 +11035,7 @@ focus_tree = {
 		id = SYRN_battle_for_damascus
 		icon = attack_syria
 		x = 27
-		y = 32
+		y = 38
 		cost = 10
 		prerequisite = { focus = SYRN_salvation_government focus = SYRN_moderate_image }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -11064,7 +11053,7 @@ focus_tree = {
 		id = SYRN_syria_for_syrians
 		icon = federal_syria
 		x = 29
-		y = 32
+		y = 38
 		cost = 10
 		prerequisite = { focus = SYRN_battle_for_damascus }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -11086,7 +11075,7 @@ focus_tree = {
 		id = SYRX_sanctions
 		icon = economic_crisis
 		x = -9
-		y = 32
+		y = 38
 		cost = 7
 		prerequisite = { focus = SYRX_war_economy }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11108,7 +11097,7 @@ focus_tree = {
 		id = SYRX_captagon
 		icon = smuggle_truck
 		x = -7
-		y = 32
+		y = 38
 		cost = 7
 		prerequisite = { focus = SYRX_war_economy }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11131,7 +11120,7 @@ focus_tree = {
 		id = SYRX_arab_league_return
 		icon = muslim_arab_world
 		x = -5
-		y = 32
+		y = 38
 		cost = 7
 		prerequisite = { focus = SYRX_war_economy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -11149,7 +11138,7 @@ focus_tree = {
 		id = SYRX_israeli_strikes
 		icon = air_defense
 		x = -3
-		y = 32
+		y = 38
 		cost = 7
 		prerequisite = { focus = SYRX_iran_axis }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -11175,7 +11164,7 @@ focus_tree = {
 		id = SYRX_reconstruction_plan
 		icon = construction
 		x = -7
-		y = 33
+		y = 39
 		cost = 10
 		prerequisite = { focus = SYRX_sanctions focus = SYRX_captagon focus = SYRX_arab_league_return }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -11200,7 +11189,7 @@ focus_tree = {
 		id = SYRX_refugee_return
 		icon = refugees
 		x = -9
-		y = 33
+		y = 39
 		cost = 7
 		prerequisite = { focus = SYRX_reconstruction_plan }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -11218,7 +11207,7 @@ focus_tree = {
 		id = SYRF_southern_front
 		icon = MiddleEasternRebel
 		x = 3
-		y = 29
+		y = 35
 		cost = 7
 		prerequisite = { focus = SYRF_military_council }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -11239,7 +11228,7 @@ focus_tree = {
 		id = SYRF_sdf_talks
 		icon = diplomatic_treaty
 		x = 7
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRF_interim_government focus = SYRF_friends_of_syria }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -11257,7 +11246,7 @@ focus_tree = {
 		id = SYRN_sochi
 		icon = treaty
 		x = 25
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRN_take_idlib }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -11278,7 +11267,7 @@ focus_tree = {
 		id = SYRN_delisting
 		icon = diplomacy
 		x = 35
-		y = 31
+		y = 37
 		cost = 7
 		prerequisite = { focus = SYRN_moderate_image }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -14975,6 +14964,1622 @@ focus_tree = {
 			}
 			set_temp_variable = { treasury_change = 5 }
 			modify_treasury_effect = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Syrian_Muslim_Brotherhood
+		icon = SNA
+		x = -65
+		y = 19
+		cost = 8
+		prerequisite = { focus = SYR_islamist_opposition_victory }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Syrian_Muslim_Brotherhood"
+			add_political_power = 100
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Al_Nursa_Front
+		icon = julani
+		x = -61
+		y = 19
+		cost = 8
+		prerequisite = { focus = SYR_islamist_opposition_victory }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Al_Nursa_Front"
+			add_political_power = 100
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			army_experience = 10
+			set_temp_variable = { syr_terror_delta = 5 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Call_to_Qatar
+		icon = qatari_business
+		x = -67
+		y = 20
+		cost = 10
+		prerequisite = { focus = SYR_Syrian_Muslim_Brotherhood }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Call_to_Qatar"
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+			if = { limit = { country_exists = QAT }
+				add_opinion_modifier = { target = QAT modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = QAT modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = QAT }
+				QAT = {
+					set_temp_variable = { percent_change = 1 }
+					change_influence_percentage = yes
+				}
+			}
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Pan_Islamists_Efforts
+		icon = Syrian_Revolutionary_Command_Council_1
+		x = -65
+		y = 20
+		cost = 10
+		prerequisite = { focus = SYR_Syrian_Muslim_Brotherhood }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Pan_Islamists_Efforts"
+			if = { limit = { NOT = { has_idea = SYR2_pan_islamism_idea } } add_ideas = SYR2_pan_islamism_idea }
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Al_Qaeda_Network
+		icon = isis_tahrir_alliance
+		x = -61
+		y = 20
+		cost = 8
+		prerequisite = { focus = SYR_Al_Nursa_Front }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Al_Qaeda_Network"
+			if = { limit = { NOT = { has_idea = SYR2_al_qaeda_idea } } add_ideas = SYR2_al_qaeda_idea }
+			army_experience = 10
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Teachings_of_Qutb
+		icon = sharia_install
+		x = -59
+		y = 20
+		cost = 10
+		prerequisite = { focus = SYR_Al_Nursa_Front }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Teachings_of_Qutb"
+			add_political_power = 75
+			if = { limit = { NOT = { has_idea = SYR2_qutb_idea } } add_ideas = SYR2_qutb_idea }
+			add_popularity = { ideology = fascism popularity = 0.07 }
+			set_temp_variable = { syr_terror_delta = 3 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Remain_Independent
+		icon = syrian_free_army_sheep
+		x = -66
+		y = 21
+		cost = 8
+		prerequisite = { focus = SYR_Pan_Islamists_Efforts }
+		prerequisite = { focus = SYR_Call_to_Qatar }
+		mutually_exclusive = { focus = SYR_Form_Hayat_Tashir_al_Sharm focus = SYR_Listen_to_Sami_al_Oraydi }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Remain_Independent"
+			add_political_power = 75
+			add_popularity = { ideology = neutrality popularity = 0.07 }
+			add_stability = 0.02
+			if = { limit = { has_idea = SYR2_pan_islamism_idea } remove_ideas = SYR2_pan_islamism_idea }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Form_Hayat_Tashir_al_Sharm
+		icon = takhrir
+		x = -63
+		y = 21
+		cost = 8
+		prerequisite = { focus = SYR_Al_Qaeda_Network focus = SYR_Pan_Islamists_Efforts }
+		mutually_exclusive = { focus = SYR_Listen_to_Sami_al_Oraydi focus = SYR_Remain_Independent }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Form_Hayat_Tashir_al_Sharm"
+			add_political_power = 100
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Listen_to_Sami_al_Oraydi
+		icon = india_salafism
+		x = -60
+		y = 21
+		cost = 8
+		prerequisite = { focus = SYR_Al_Qaeda_Network }
+		prerequisite = { focus = SYR_Teachings_of_Qutb }
+		mutually_exclusive = { focus = SYR_Form_Hayat_Tashir_al_Sharm focus = SYR_Remain_Independent }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Listen_to_Sami_al_Oraydi"
+			add_political_power = 75
+			add_war_support = 0.05
+			add_popularity = { ideology = fascism popularity = 0.08 }
+			set_temp_variable = { syr_terror_delta = 5 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Islamic_Demorcracy
+		icon = syr_islamic_democracy
+		x = -68
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_Remain_Independent }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Islamic_Demorcracy"
+			if = { limit = { NOT = { has_idea = SYR2_islamic_democracy_idea } } add_ideas = SYR2_islamic_democracy_idea }
+			if = { limit = { country_exists = TUR }
+				TUR = {
+					set_temp_variable = { percent_change = 2 }
+					change_influence_percentage = yes
+				}
+			}
+			if = { limit = { country_exists = QAT }
+				QAT = {
+					set_temp_variable = { percent_change = 2 }
+					change_influence_percentage = yes
+				}
+			}
+			if = { limit = { country_exists = TUR }
+				add_opinion_modifier = { target = TUR modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = TUR modifier = declaration_of_friendship }
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Distance_from_Salafits
+		icon = usa_nigeria_islam_karimov
+		x = -66
+		y = 22
+		cost = 10
+		prerequisite = { focus = SYR_Remain_Independent }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Distance_from_Salafits"
+			add_political_power = 75
+			add_stability = 0.03
+			add_popularity = { ideology = neutrality popularity = 0.03 }
+			add_popularity = { ideology = fascism popularity = -0.04 }
+			set_temp_variable = { syr_terror_delta = -3 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Islamic_Umbrella
+		icon = islamic_emirate_of_syria1
+		x = -62
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_Form_Hayat_Tashir_al_Sharm }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Islamic_Umbrella"
+			add_political_power = 80
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = { ideology = fascism popularity = 0.03 }
+			set_temp_variable = { temp_modify_social_con_government = 3 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Radicalize_the_Ulema
+		icon = revolutionize_ulema
+		x = -60
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_Listen_to_Sami_al_Oraydi }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Radicalize_the_Ulema"
+			add_political_power = -75
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			set_temp_variable = { syr_terror_delta = 5 }
+			SYR_terror_apply_delta = yes
+			set_temp_variable = { temp_modify_social_con_government = 5 }
+			modify_social_conservatism_government = yes
+			set_temp_variable = { temp_opinion = 10 }
+			change_the_ulema_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Bring_more_International_Jihadists
+		icon = nusr_soldier
+		x = -58
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_Listen_to_Sami_al_Oraydi }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Bring_more_International_Jihadists"
+			add_stability = -0.05
+			set_temp_variable = { treasury_change = -15 }
+			modify_treasury_effect = yes
+			add_manpower = 5000
+			add_timed_idea = { idea = SYR2_int_jihadists_idea days = 180 }
+			set_temp_variable = { temp_opinion = 10 }
+			change_foreign_jihadis_opinion = yes
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Only_Path_in_Rabaniya
+		icon = islamic_emirate_of_syria
+		x = -67
+		y = 23
+		cost = 8
+		prerequisite = { focus = SYR_Distance_from_Salafits }
+		prerequisite = { focus = SYR_Islamic_Demorcracy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Only_Path_in_Rabaniya"
+			add_political_power = 100
+			add_popularity = { ideology = fascism popularity = 0.07 }
+			set_temp_variable = { temp_modify_social_con_government = 3 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Al_Qaeda_Dilemma
+		icon = alqaeda_thing
+		x = -63
+		y = 23
+		cost = 8
+		prerequisite = { focus = SYR_reverse_secularization }
+		prerequisite = { focus = SYR_Islamic_Umbrella }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Al_Qaeda_Dilemma"
+			add_political_power = 100
+			add_stability = -0.02
+			add_popularity = { ideology = fascism popularity = 0.04 }
+			set_temp_variable = { syr_terror_delta = 3 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Our_Path_to_Caliphate
+		icon = true_caliphate
+		x = -59
+		y = 23
+		cost = 8
+		prerequisite = { focus = SYR_Radicalize_the_Ulema }
+		prerequisite = { focus = SYR_Bring_more_International_Jihadists }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Our_Path_to_Caliphate"
+			add_political_power = -100
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			set_temp_variable = { syr_terror_delta = 8 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Support_the_Traders
+		icon = syr_bazaar
+		x = -68
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Only_Path_in_Rabaniya }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Support_the_Traders"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			add_timed_idea = { idea = SYR2_trader_support_idea days = 240 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Nationalwide_Charity
+		icon = question_of_islamic_migrants
+		x = -66
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Only_Path_in_Rabaniya }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Nationalwide_Charity"
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+			add_timed_idea = { idea = SYR2_charity_idea days = 240 }
+			set_temp_variable = { temp_modify_social_con_government = 3 }
+			modify_social_conservatism_government = yes
+			add_popularity = { ideology = neutrality popularity = 0.03 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Integrate_Jihadists
+		icon = egypt_salafi_jihadist
+		x = -64
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Al_Qaeda_Dilemma }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Integrate_Jihadists"
+			add_political_power = -75
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			if = { limit = { NOT = { has_idea = SYR2_righteous_jihad_idea } } add_ideas = SYR2_righteous_jihad_idea }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_A_New_Idealogical_Image
+		icon = generic_muslim_moderate_emirate
+		x = -62
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Al_Qaeda_Dilemma }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_A_New_Idealogical_Image"
+			add_political_power = 50
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			set_temp_variable = { temp_modify_social_con_government = -5 }
+			modify_social_conservatism_government = yes
+			set_temp_variable = { syr_terror_delta = -2 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Invite_Ayman_al_Zawahiri
+		icon = Invite_badman
+		x = -60
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Our_Path_to_Caliphate }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Invite_Ayman_al_Zawahiri"
+			add_political_power = -50
+			if = { limit = { has_idea = SYR2_al_qaeda_idea } swap_ideas = { remove_idea = SYR2_al_qaeda_idea add_idea = SYR2_al_qaeda1_idea } }
+			else_if = { limit = { NOT = { has_idea = SYR2_al_qaeda1_idea } } add_ideas = SYR2_al_qaeda1_idea }
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Implement_Hudud
+		icon = effective_jizya
+		x = -58
+		y = 24
+		cost = 8
+		prerequisite = { focus = SYR_Our_Path_to_Caliphate }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Implement_Hudud"
+			add_stability = -0.03
+			add_popularity = { ideology = fascism popularity = 0.06 }
+			set_temp_variable = { temp_modify_social_con_government = 8 }
+			modify_social_conservatism_government = yes
+			set_temp_variable = { syr_terror_delta = 2 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_turkish_backing
+		icon = turkish_authoritarianism
+		x = -68
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Support_the_Traders focus = SYR_Nationalwide_Charity focus = SYR_Integrate_Jihadists focus = SYR_A_New_Idealogical_Image }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_turkish_backing"
+			if = { limit = { country_exists = TUR }
+				add_opinion_modifier = { target = TUR modifier = military_cooperation }
+				reverse_add_opinion_modifier = { target = TUR modifier = military_cooperation }
+			}
+			if = { limit = { country_exists = TUR }
+				TUR = {
+					set_temp_variable = { percent_change = 8 }
+					change_influence_percentage = yes
+				}
+			}
+			army_experience = 15
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_negotiations_comission
+		icon = align_to_syrian_rebels
+		x = -66
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Support_the_Traders focus = SYR_Nationalwide_Charity focus = SYR_Integrate_Jihadists focus = SYR_A_New_Idealogical_Image }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_negotiations_comission"
+			add_political_power = 50
+			add_stability = 0.03
+			if = { limit = { country_exists = FSA }
+				add_opinion_modifier = { target = FSA modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = FSA modifier = declaration_of_friendship }
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_appease_the_west
+		icon = USA_syria_terrorist_military
+		x = -64
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Support_the_Traders focus = SYR_Nationalwide_Charity focus = SYR_Integrate_Jihadists focus = SYR_A_New_Idealogical_Image }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_appease_the_west"
+			if = { limit = { country_exists = USA }
+				add_opinion_modifier = { target = USA modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = USA modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = FRA modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = ENG modifier = declaration_of_friendship }
+			}
+			set_temp_variable = { syr_terror_delta = -2 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_suppress_traitors
+		icon = federal_syria
+		x = -62
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Support_the_Traders focus = SYR_Nationalwide_Charity focus = SYR_Integrate_Jihadists focus = SYR_A_New_Idealogical_Image }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_suppress_traitors"
+			add_timed_idea = { idea = SYR2_purge_traitors_idea days = 180 }
+			add_stability = 0.03
+			set_temp_variable = { syr_terror_delta = 2 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_ideological_purity
+		icon = jihadist_kalash
+		x = -60
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Invite_Ayman_al_Zawahiri }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_ideological_purity"
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_war_support = 0.03
+			add_stability = -0.03
+			set_temp_variable = { temp_modify_social_con_government = 5 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_mushriq_chase
+		icon = mushriqs_must_fear
+		x = -58
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_Implement_Hudud }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_mushriq_chase"
+			if = { limit = { NOT = { has_idea = SYR2_mushriq_idea } } add_ideas = SYR2_mushriq_idea }
+			set_temp_variable = { syr_terror_delta = 6 }
+			SYR_terror_apply_delta = yes
+			add_stability = -0.04
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_issuing_jihad_orders
+		icon = call_mufti
+		x = -60
+		y = 26
+		cost = 8
+		prerequisite = { focus = SYR_mushriq_chase }
+		prerequisite = { focus = SYR_ideological_purity }
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_issuing_jihad_orders"
+			add_political_power = -100
+			add_war_support = 0.05
+			army_experience = 15
+			set_temp_variable = { temp_opinion = 5 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_isis_negotiate
+		icon = declare_caliphate
+		x = -58
+		y = 26
+		cost = 8
+		prerequisite = { focus = SYR_mushriq_chase }
+		prerequisite = { focus = SYR_ideological_purity }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_isis_negotiate"
+			if = { limit = { country_exists = ISI }
+				add_opinion_modifier = { target = ISI modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = ISI modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = ISI }
+				ISI = {
+					add_stability = 0.02
+				}
+			}
+			add_war_support = 0.03
+			set_temp_variable = { syr_terror_delta = 4 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_to_sham_and_beyond
+		icon = syria_flags
+		x = -59
+		y = 27
+		cost = 8
+		prerequisite = { focus = SYR_issuing_jihad_orders focus = SYR_isis_negotiate }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_to_sham_and_beyond"
+			add_war_support = 0.1
+			add_political_power = -100
+			set_temp_variable = { syr_terror_delta = 10 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_us_support
+		icon = us_plane
+		x = -75
+		y = 20
+		cost = 8
+		prerequisite = { focus = SYR_secular_opposition_victory }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_us_support"
+			if = { limit = { country_exists = USA }
+				add_opinion_modifier = { target = USA modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = USA modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = USA }
+				USA = {
+					set_temp_variable = { percent_change = 3 }
+					change_influence_percentage = yes
+				}
+			}
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_support_of_druzes
+		icon = syrian_dilemma
+		x = -73
+		y = 20
+		cost = 8
+		prerequisite = { focus = SYR_secular_opposition_victory }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_support_of_druzes"
+			if = { limit = { country_exists = DRU }
+				add_opinion_modifier = { target = DRU modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = DRU modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = DRU }
+				DRU = {
+					set_temp_variable = { percent_change = 10 }
+					change_influence_percentage = yes
+				}
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_kurds_agreement
+		icon = pkk_bases
+		x = -71
+		y = 20
+		cost = 8
+		prerequisite = { focus = SYR_secular_opposition_victory }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_kurds_agreement"
+			if = { limit = { country_exists = ROJ }
+				add_opinion_modifier = { target = ROJ modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = ROJ modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = ROJ }
+				ROJ = {
+					set_temp_variable = { percent_change = 10 }
+					change_influence_percentage = yes
+				}
+			}
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_direct_intervention
+		icon = USA_syrian_base
+		x = -75
+		y = 21
+		cost = 8
+		prerequisite = { focus = SYR_us_support }
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_direct_intervention"
+			if = { limit = { country_exists = USA }
+				add_opinion_modifier = { target = USA modifier = military_cooperation }
+				reverse_add_opinion_modifier = { target = USA modifier = military_cooperation }
+			}
+			army_experience = 10
+			add_stability = 0.03
+			add_political_power = -25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_federalization
+		icon = federal_republic_of_syria
+		x = -72
+		y = 21
+		cost = 8
+		prerequisite = { focus = SYR_support_of_druzes focus = SYR_kurds_agreement }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_federalization"
+			add_stability = 0.04
+			add_popularity = { ideology = democratic popularity = 0.04 }
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_suppress_islamists
+		icon = stop_neon_moon
+		x = -70
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_federalization }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_suppress_islamists"
+			set_temp_variable = { temp_modify_social_con_government = -10 }
+			modify_social_conservatism_government = yes
+			add_popularity = { ideology = fascism popularity = -0.05 }
+			add_popularity = { ideology = neutrality popularity = -0.02 }
+			set_temp_variable = { syr_terror_delta = -3 }
+			SYR_terror_apply_delta = yes
+			add_political_power = -25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_shiniest_democracy
+		icon = revolution_money
+		x = -72
+		y = 23
+		cost = 8
+		prerequisite = { focus = SYR_unleash_economic_potential focus = SYR_democratic_socialism }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_shiniest_democracy"
+			add_political_power = 125
+			if = { limit = { NOT = { has_idea = SYR2_syrian_democracy_idea } } add_ideas = SYR2_syrian_democracy_idea }
+			add_popularity = { ideology = democratic popularity = 0.07 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_cooperation_with_israel
+		icon = isr_usa_soldiers
+		x = -76
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_syrian_diaspora_investments }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_cooperation_with_israel"
+			if = { limit = { country_exists = ISR }
+				add_opinion_modifier = { target = ISR modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = ISR modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = ISR }
+				ISR = {
+					set_temp_variable = { percent_change = 1 }
+					change_influence_percentage = yes
+				}
+			}
+			add_political_power = 25
+			set_temp_variable = { treasury_change = 3 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_european_education_support
+		icon = blr_european_university_connections
+		x = -74
+		y = 25
+		cost = 8
+		prerequisite = { focus = SYR_syrian_diaspora_investments }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_european_education_support"
+			if = { limit = { NOT = { has_idea = SYR2_european_education_idea } } add_ideas = SYR2_european_education_idea }
+			increase_education_budget = yes
+			if = { limit = { country_exists = FRA }
+				FRA = {
+					set_temp_variable = { percent_change = 1 }
+					change_influence_percentage = yes
+				}
+			}
+			if = { limit = { country_exists = ENG }
+				ENG = {
+					set_temp_variable = { percent_change = 1 }
+					change_influence_percentage = yes
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_guardians_of_revolution
+		icon = guardians_of_syrdem_rev
+		x = -72
+		y = 25
+		cost = 10
+		prerequisite = { focus = SYR_empower_institutions }
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_guardians_of_revolution"
+			add_political_power = 75
+			if = { limit = { NOT = { has_idea = SYR2_guardians_idea } } add_ideas = SYR2_guardians_idea }
+			army_experience = 10
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_repression
+		icon = coalition_army
+		x = -55
+		y = 22
+		cost = 8
+		prerequisite = { focus = SYR_subsidise_police }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_repression"
+			if = { limit = { NOT = { has_idea = SYR2_npf_police_idea } } add_ideas = SYR2_npf_police_idea }
+			add_stability = 0.03
+			set_temp_variable = { syr_terror_delta = -1 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Steps_to_Democratization
+		icon = syria_central_path
+		x = -28
+		y = 7
+		cost = 8
+		prerequisite = { focus = SYR_rifaat_al_assad }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Steps_to_Democratization"
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_stability = 0.02
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Pardon_All_Relatives
+		icon = POL_fight_corruption
+		x = -24
+		y = 7
+		cost = 5
+		prerequisite = { focus = SYR_rifaat_al_assad }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Pardon_All_Relatives"
+			set_temp_variable = { treasury_change = -18 }
+			modify_treasury_effect = yes
+			add_stability = 0.05
+			add_political_power = 150
+			set_temp_variable = { temp_opinion = 5 }
+			change_oligarchs_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Reestablish_Western_Ties
+		icon = GENERIC_west_love
+		x = -21
+		y = 7
+		cost = 8
+		prerequisite = { focus = SYR_rifaat_al_assad }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Reestablish_Western_Ties"
+			if = { limit = { country_exists = USA }
+				add_opinion_modifier = { target = USA modifier = improve_trade }
+				reverse_add_opinion_modifier = { target = USA modifier = improve_trade }
+			}
+			if = { limit = { country_exists = FRA }
+				add_opinion_modifier = { target = FRA modifier = improve_trade }
+				reverse_add_opinion_modifier = { target = FRA modifier = improve_trade }
+			}
+			if = { limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = improve_trade }
+				reverse_add_opinion_modifier = { target = ENG modifier = improve_trade }
+			}
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Cover_Up_the_Hama_Incident
+		icon = POL_anti_corruption
+		x = -24
+		y = 8
+		cost = 8
+		prerequisite = { focus = SYR_Pardon_All_Relatives }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Cover_Up_the_Hama_Incident"
+			add_stability = -0.02
+			increase_corruption = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_intelligence_community_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Ensure_Saudi_Ties
+		icon = saudi_ties
+		x = -21
+		y = 8
+		cost = 8
+		prerequisite = { focus = SYR_Reestablish_Western_Ties }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Ensure_Saudi_Ties"
+			if = { limit = { country_exists = SAU }
+				add_opinion_modifier = { target = SAU modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = SAU modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = SAU }
+				SAU = {
+					set_temp_variable = { percent_change = 5 }
+					change_influence_percentage = yes
+				}
+			}
+			add_timed_idea = { idea = SYR2_saudi_friend_idea days = 800 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Support_Opposition_in_Iraq
+		icon = support_iraq_revolut
+		x = -26
+		y = 7
+		cost = 8
+		prerequisite = { focus = SYR_arab_news_network }
+		prerequisite = { focus = SYR_the_arab_democratic_party }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Support_Opposition_in_Iraq"
+			if = { limit = { country_exists = IRQ }
+				IRQ = {
+					set_temp_variable = { percent_change = 6 }
+					change_influence_percentage = yes
+				}
+			}
+			if = { limit = { country_exists = IRQ }
+				IRQ = {
+					add_popularity = { ideology = democratic popularity = 0.05 }
+				}
+			}
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Egyptian_Experience
+		icon = syr_friend_egypt
+		x = -24
+		y = 9
+		cost = 8
+		prerequisite = { focus = SYR_Cover_Up_the_Hama_Incident }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Egyptian_Experience"
+			add_political_power = 100
+			if = { limit = { country_exists = EGY }
+				add_opinion_modifier = { target = EGY modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = EGY modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = EGY }
+				EGY = {
+					set_temp_variable = { percent_change = 4 }
+					change_influence_percentage = yes
+				}
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Appease_the_Kurds
+		icon = syr_friend_kurdistan
+		x = -22
+		y = 9
+		cost = 8
+		prerequisite = { focus = SYR_Ensure_Saudi_Ties }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Appease_the_Kurds"
+			if = { limit = { NOT = { has_idea = SYR2_kurdish_appeasement_idea } } add_ideas = SYR2_kurdish_appeasement_idea }
+			if = { limit = { country_exists = ROJ }
+				ROJ = {
+					add_stability = 0.02
+				}
+			}
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Exclusive_British_Partnership_with_Syria
+		icon = syr_friend_britain
+		x = -20
+		y = 9
+		cost = 5
+		prerequisite = { focus = SYR_Ensure_Saudi_Ties }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Exclusive_British_Partnership_with_Syria"
+			if = { limit = { country_exists = ENG }
+				add_opinion_modifier = { target = ENG modifier = military_cooperation }
+				reverse_add_opinion_modifier = { target = ENG modifier = military_cooperation }
+			}
+			if = { limit = { country_exists = ENG }
+				ENG = {
+					set_temp_variable = { percent_change = 3 }
+					change_influence_percentage = yes
+				}
+			}
+			set_temp_variable = { treasury_change = 5 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Establish_Militiry_Political_Autonomy
+		icon = syrian_soldier
+		x = -25
+		y = 10
+		cost = 8
+		prerequisite = { focus = SYR_Support_Opposition_in_Iraq focus = SYR_Egyptian_Experience }
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Establish_Militiry_Political_Autonomy"
+			set_temp_variable = { temp_opinion = 7 }
+			change_the_military_opinion = yes
+			two_random_arms_factory = yes
+			army_experience = 10
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Syrian_Seculirization
+		icon = focus_PER_forced_secularization
+		x = -26
+		y = 8
+		cost = 8
+		prerequisite = { focus = SYR_Support_Opposition_in_Iraq }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Syrian_Seculirization"
+			set_temp_variable = { temp_modify_social_con_government = -8 }
+			modify_social_conservatism_government = yes
+			add_popularity = { ideology = democratic popularity = 0.02 }
+			increase_education_budget = yes
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Restore_Latakia_Network
+		icon = GENERIC_cont_puppet_spy
+		x = -23
+		y = 10
+		cost = 8
+		prerequisite = { focus = SYR_Egyptian_Experience }
+		prerequisite = { focus = SYR_Appease_the_Kurds }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Restore_Latakia_Network"
+			189 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			set_temp_variable = { treasury_change = -3 }
+			modify_treasury_effect = yes
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Turkish_Normalization_Negotation
+		icon = syr_friend_turkey
+		x = -20
+		y = 10
+		cost = 5
+		prerequisite = { focus = SYR_Exclusive_British_Partnership_with_Syria }
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Turkish_Normalization_Negotation"
+			if = { limit = { country_exists = TUR }
+				add_opinion_modifier = { target = TUR modifier = declaration_of_friendship }
+				reverse_add_opinion_modifier = { target = TUR modifier = declaration_of_friendship }
+			}
+			if = { limit = { country_exists = TUR }
+				TUR = {
+					set_temp_variable = { percent_change = 3 }
+					change_influence_percentage = yes
+				}
+			}
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Establish_Local_Electoral_Councils
+		icon = NOR_aap
+		x = -25
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_Syrian_Seculirization }
+		prerequisite = { focus = SYR_Establish_Militiry_Political_Autonomy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Establish_Local_Electoral_Councils"
+			add_political_power = -50
+			add_stability = 0.02
+			add_popularity = { ideology = democratic popularity = 0.02 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Syrian_Trade_Hub_Project
+		icon = GENERIC_trade2
+		x = -23
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_Restore_Latakia_Network }
+		prerequisite = { focus = SYR_Turkish_Normalization_Negotation }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Syrian_Trade_Hub_Project"
+			set_temp_variable = { treasury_change = -5 }
+			modify_treasury_effect = yes
+			189 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			one_office_construction = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Bring_SSNP
+		icon = ssnp_coup
+		x = -31
+		y = 7
+		cost = 8
+		prerequisite = { focus = SYR_maher_al_assad }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Bring_SSNP"
+			add_war_support = 0.05
+			if = { limit = { NOT = { has_idea = SYR2_ssnp_idea } } add_ideas = SYR2_ssnp_idea }
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Crackdown_of_Freedom
+		icon = freedom_closed
+		x = -33
+		y = 8
+		cost = 5
+		prerequisite = { focus = SYR_Bring_SSNP }
+		prerequisite = { focus = SYR_empower_the_republican_guard }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Crackdown_of_Freedom"
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			add_popularity = { ideology = democratic popularity = -0.05 }
+			add_stability = 0.03
+			add_political_power = -25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Alawi_Dominance
+		icon = maher_alawi
+		x = -30
+		y = 8
+		cost = 8
+		prerequisite = { focus = SYR_Bring_SSNP }
+		prerequisite = { focus = SYR_empower_the_republican_guard }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Alawi_Dominance"
+			add_stability = 0.02
+			set_temp_variable = { syr_terror_delta = -2 }
+			SYR_terror_apply_delta = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_All_for_the_Nation
+		icon = syria_junta_mah
+		x = -37
+		y = 7
+		cost = 10
+		prerequisite = { focus = SYR_oil_must_flow }
+		mutually_exclusive = { focus = SYR_Personal_Deals }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_All_for_the_Nation"
+			add_political_power = 100
+			if = { limit = { NOT = { has_idea = SYR2_ssnp_economy_idea } } add_ideas = SYR2_ssnp_economy_idea }
+			one_random_arms_factory = yes
+			set_temp_variable = { temp_modify_social_con_government = 5 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Personal_Deals
+		icon = maher_deals
+		x = -35
+		y = 7
+		cost = 10
+		prerequisite = { focus = SYR_oil_must_flow }
+		mutually_exclusive = { focus = SYR_All_for_the_Nation }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Personal_Deals"
+			add_political_power = -50
+			if = { limit = { NOT = { has_idea = SYR2_maher_economy_idea } } add_ideas = SYR2_maher_economy_idea }
+			one_office_construction = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_oligarchs_opinion = yes
+			set_temp_variable = { temp_modify_social_con_government = -5 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_State_Propoganda
+		icon = ssnp_news
+		x = -33
+		y = 9
+		cost = 8
+		prerequisite = { focus = SYR_Crackdown_of_Freedom }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_State_Propoganda"
+			if = { limit = { NOT = { has_idea = SYR2_ssnp_propaganda_idea } } add_ideas = SYR2_ssnp_propaganda_idea }
+			set_temp_variable = { syr_terror_delta = -3 }
+			SYR_terror_apply_delta = yes
+			set_temp_variable = { treasury_change = -6 }
+			modify_treasury_effect = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_New_Cultural_Policy
+		icon = lion_of_asshur
+		x = -30
+		y = 9
+		cost = 8
+		prerequisite = { focus = SYR_Alawi_Dominance }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_New_Cultural_Policy"
+			add_political_power = -50
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			set_temp_variable = { temp_modify_social_con_government = -5 }
+			modify_social_conservatism_government = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Social_Militarism
+		icon = ssnp_thug
+		x = -37
+		y = 8
+		cost = 10
+		prerequisite = { focus = SYR_All_for_the_Nation }
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Social_Militarism"
+			add_stability = 0.05
+			add_war_support = 0.03
+			set_temp_variable = { temp_opinion = 5 }
+			change_the_military_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Contraband_Imports
+		icon = jack_daniels_cigs_syr
+		x = -35
+		y = 8
+		cost = 8
+		prerequisite = { focus = SYR_Personal_Deals }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Contraband_Imports"
+			add_political_power = 50
+			set_temp_variable = { treasury_change = 6 }
+			modify_treasury_effect = yes
+			add_stability = -0.02
+			increase_corruption = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Promote_the_Minorities
+		icon = ARM_assyrian_reletions
+		x = -31
+		y = 10
+		cost = 8
+		prerequisite = { focus = SYR_New_Cultural_Policy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Promote_the_Minorities"
+			set_temp_variable = { temp_modify_social_con_government = -5 }
+			modify_social_conservatism_government = yes
+			set_temp_variable = { treasury_change = -4 }
+			modify_treasury_effect = yes
+			add_stability = 0.02
+			add_popularity = { ideology = nationalist popularity = 0.03 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Stomp_Out_Islamists
+		icon = stop_neon_moon
+		x = -29
+		y = 10
+		cost = 8
+		prerequisite = { focus = SYR_New_Cultural_Policy }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Stomp_Out_Islamists"
+			set_temp_variable = { syr_terror_delta = -6 }
+			SYR_terror_apply_delta = yes
+			add_popularity = { ideology = fascism popularity = -0.05 }
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			add_stability = -0.01
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Oil_Concentrarion
+		icon = syr_oil_new
+		x = -33
+		y = 10
+		cost = 10
+		prerequisite = { focus = SYR_Contraband_Imports focus = SYR_Social_Militarism }
+		prerequisite = { focus = SYR_State_Propoganda }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Oil_Concentrarion"
+			995 = { add_resource = { type = oil amount = 15 } }
+			set_temp_variable = { treasury_change = -8 }
+			modify_treasury_effect = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_fossil_fuel_industry_opinion = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Syrian_Legacy
+		icon = greater_syr_ssnp
+		x = -31
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_Promote_the_Minorities }
+		prerequisite = { focus = SYR_Stomp_Out_Islamists }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Syrian_Legacy"
+			add_popularity = { ideology = nationalist popularity = 0.05 }
+			add_stability = 0.03
+			set_temp_variable = { syr_terror_delta = -2 }
+			SYR_terror_apply_delta = yes
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Crush_Gender_Prejudices
+		icon = syr_bursha_feminism
+		x = -11
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_bushra_al_assad }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Crush_Gender_Prejudices"
+			add_stability = -0.02
+			if = { limit = { NOT = { has_idea = SYR2_state_feminism_idea } } add_ideas = SYR2_state_feminism_idea }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Intelligence_Links
+		icon = syr_bursha_links
+		x = -10
+		y = 12
+		cost = 8
+		prerequisite = { focus = SYR_Crush_Gender_Prejudices }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Intelligence_Links"
+			two_radar_station = yes
+			set_temp_variable = { temp_opinion = 5 }
+			change_intelligence_community_opinion = yes
+			add_stability = 0.02
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Affordable_Social_Care
+		icon = syr_bursha_social_care
+		x = -15
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_invite_big_pharma focus = SYR_syrian_pharmaceuticals }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Affordable_Social_Care"
+			add_stability = 0.05
+			set_temp_variable = { temp_modify_social_con_government = -10 }
+			modify_social_conservatism_government = yes
+			increase_healthcare_budget = yes
+			add_political_power = 50
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Embrace_Secular_Thought
+		icon = bushr_plur_secul
+		x = -13
+		y = 11
+		cost = 8
+		prerequisite = { focus = SYR_eqalitarian_campaign }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Embrace_Secular_Thought"
+			set_temp_variable = { temp_modify_social_con_government = -5 }
+			modify_social_conservatism_government = yes
+			if = { limit = { NOT = { has_idea = SYR2_secular_syria_idea } } add_ideas = SYR2_secular_syria_idea }
+			add_popularity = { ideology = democratic popularity = 0.03 }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Conservative_Femenism
+		icon = syr_bursha_old_feminism
+		x = -12
+		y = 12
+		cost = 8
+		prerequisite = { focus = SYR_Crush_Gender_Prejudices }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Conservative_Femenism"
+			set_drafted_women_effect = yes
+			add_political_power = 30
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Partical_Economic_Liberalization
+		icon = POL_collective_ownership_agree
+		x = -16
+		y = 12
+		cost = 8
+		prerequisite = { focus = SYR_Affordable_Social_Care }
+		prerequisite = { focus = SYR_Embrace_Secular_Thought }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Partical_Economic_Liberalization"
+			increase_exports = yes
+			increase_economic_growth = yes
+			if = { limit = { NOT = { has_idea = SYR2_particle_liberal_idea } } add_ideas = SYR2_particle_liberal_idea }
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Judical_Fair_Reform
+		icon = syr_bursha_judicial
+		x = -14
+		y = 12
+		cost = 8
+		prerequisite = { focus = SYR_eqalitarian_campaign }
+		prerequisite = { focus = SYR_Affordable_Social_Care }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Judical_Fair_Reform"
+			decrease_corruption = yes
+			add_stability = 0.03
+			add_political_power = 25
+		}
+		ai_will_do = { base = 1 }
+	}
+
+	focus = {
+		id = SYR_Ensure_Women_Representation
+		icon = Generic_Woman2
+		x = -12
+		y = 13
+		cost = 8
+		prerequisite = { focus = SYR_Conservative_Femenism }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SYR_Ensure_Women_Representation"
+			add_popularity = { ideology = democratic popularity = 0.02 }
+			add_political_power = 50
+			add_stability = 0.02
 		}
 		ai_will_do = { base = 1 }
 	}
