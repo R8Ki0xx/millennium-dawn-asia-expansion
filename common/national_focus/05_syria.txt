@@ -7940,10 +7940,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INFLUENCE }
 
-		available = {
-			SYR_main_content_unlocked = yes
-		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SYR_concentrate_on_lebanon"
 			add_political_power = 100
@@ -7976,7 +7972,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = HEZ
 			NOT = { HEZ = { is_subject_of = ROOT } }
 		}
@@ -8024,7 +8019,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = LEB
 		}
 
@@ -8066,7 +8060,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = HEZ
 			HEZ = { NOT = { is_subject_of = ROOT } }
 		}
@@ -8122,7 +8115,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = LEB
 			LEB = { NOT = { is_subject_of = ROOT } }
 			NOT = { country_exists = HEZ }
@@ -8162,7 +8154,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = HEZ
 		}
 
@@ -8212,7 +8203,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_INFLUENCE }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = LEB
 		}
 
@@ -8251,7 +8241,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_INFLUENCE }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = LEB
 			LEB = { communism > 0.20 }
 		}
@@ -8324,7 +8313,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		available = {
-			SYR_main_content_unlocked = yes
 			country_exists = HEZ
 			NOT = { is_subject_of = PER }
 			HEZ = { is_subject = no }
@@ -16604,7 +16592,6 @@ shared_focus = {
 	available = {
 		has_government = nationalist
 		is_subject = no
-		SYR_main_content_unlocked = yes
 	}
 
 	completion_reward = {
@@ -19422,10 +19409,6 @@ shared_focus = {
 	cost = 10
 
 	search_filters = { FOCUS_FILTER_POLITICAL }
-
-	available = {
-		SYR_main_content_unlocked = yes
-	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SYR_diplomatic_effort"

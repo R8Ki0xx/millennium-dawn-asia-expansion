@@ -596,6 +596,7 @@
   · 第四阶段：继任者与阿萨德政治线。Rifaat / Maher / Bushra 三支各自补上 TDF 独有的国策共 36 个（Rifaat 15：走向民主化、赦免亲属、恢复西方关系、掩盖哈马事件、沙特 / 埃及 / 土耳其 / 英国线、地方选举委员会、贸易枢纽……；
     Maher 13：请回社会民族党、镇压自由、民族经济 / 私人交易二选一、叙利亚雄狮宣传、新文化政策、扶持少数群体、铲除伊斯兰主义者、集中石油产业……；Bushra 8：粉碎性别偏见、社会关怀、世俗思想、保守派女权主义、局部经济自由化、司法改革、妇女代表权……），
     放在各自领袖正下方的空地里（x -37…-9，y 7…13），千禧原有国策位置不动。Bashar 一支已有本模组的 SYRB 树（32 个），不重复移植；TDF 的 Mejd（玩笑支线）不移植。新增 9 个国家精神。
+  · 外交分支恒常解锁：外交这一整支（含“大叙利亚”）去掉了千禧的 SYR_main_content_unlocked 条件（原本要战后重建完成，或阿拉伯之春没打内战才解锁），现在任何时候都能选；黎巴嫩 / 真主党那几个国策自带的“对方国家存在”等条件保留。由 gen_syr2.py 里的 unlock 步骤完成。
   · 图标修复：第一版把图标定义文件 SYR2_icons.gfx / SYR2_icons_shine.gfx 写成了带 BOM 的 UTF-8，游戏报 Unexpected token 并整份忽略，所有 TDF 图标显示成“电脑”占位图。现在这两个文件不带 BOM（gfx 文件一律不能带 BOM）。
     同时修了 error.log 里查到的三处：VEL_flow_effects.txt 的括号（CHI 函数多一个“}”，USA 函数少一个“}”）、SYR_civil_war_effects.txt 里不存在的触发器 stability（改成 has_stability）、
     TAI_blue_water_idea / TAI_air_power_idea 的重复定义（删掉 v313 / v314 文件里被忽略的那两条）。
