@@ -59,6 +59,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = SYR_death_of_hafez_al_assad }
+		mutually_exclusive = { focus = SYR_bashar_al_assad focus = SYR_flowers_of_damascus_spring focus = SYR_maher_al_assad }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -192,6 +193,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SYR_healthcare_reform }
+		mutually_exclusive = { focus = SYR_syrian_pharmaceuticals }
 
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -247,6 +249,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SYR_healthcare_reform }
+		mutually_exclusive = { focus = SYR_invite_big_pharma }
 
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -469,6 +472,7 @@ focus_tree = {
 			focus = SYR_bashar_al_assad
 			focus = SYR_maher_al_assad
 		}
+		mutually_exclusive = { focus = SYRL_return_roots }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -714,6 +718,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = SYR_death_of_hafez_al_assad }
+		mutually_exclusive = { focus = SYR_bashar_al_assad focus = SYR_bushra_al_assad focus = SYR_flowers_of_damascus_spring }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -954,6 +959,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SYR_flowers_of_damascus_spring }
+		mutually_exclusive = { focus = SYR_kick_out_al_assads }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4343,6 +4349,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SYR_tartus_service_sector }
+		mutually_exclusive = { focus = SYR_service_sector_in_lacking_regions }
 
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4371,6 +4378,7 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = SYR_tartus_service_sector }
+		mutually_exclusive = { focus = SYR_expand_the_sector }
 
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5838,11 +5846,7 @@ focus_tree = {
 			focus = SYR_formalise_shia_militias
 			focus = SYR_disarm_militias
 		}
-		mutually_exclusive = {
-			focus = SYR_russian_tool
-			focus = SYR_iranian_puppet
-			focus = SYR_on_our_own
-		}
+		mutually_exclusive = { focus = SYRA_open_elections focus = SYR_iranian_puppet focus = SYR_on_our_own focus = SYR_russian_tool }
 
 		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
 
@@ -10605,6 +10609,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		prerequisite = { focus = SYRL_arab_socialism }
+		mutually_exclusive = { focus = SYRL_land_reform }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SYRL_public_sector"
@@ -10773,6 +10778,7 @@ focus_tree = {
 		y = 4
 		cost = 7
 		prerequisite = { focus = SYRL_baath_congress }
+		mutually_exclusive = { focus = SYRL_npf_pluralism }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SYRL_internal_democracy"
@@ -10927,6 +10933,7 @@ focus_tree = {
 		y = 8
 		cost = 7
 		prerequisite = { focus = SYRL_welfare_state }
+		mutually_exclusive = { focus = SYRL_arab_unity }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SYRL_nonaligned"
