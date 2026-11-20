@@ -328,13 +328,6 @@ ideas = {
 				stability_factor = -0.02
 			}
 		}
-		SYR2_ssnp_propaganda_idea = {
-			picture = propaganda
-			modifier = {
-				political_power_gain = 0.05
-				stability_factor = 0.02
-			}
-		}
 		SYR2_state_feminism_idea = {
 			picture = democratic_party
 			modifier = {

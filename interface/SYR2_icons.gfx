@@ -229,10 +229,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/poland_alt/condemn_aggression_of_states.dds"
 	}
 	spriteType = {
-		name = "const_ammendment"
-		texturefile = "gfx/interface/goals/syria_alt/const_ammendment.dds"
-	}
-	spriteType = {
 		name = "declare_caliphate"
 		texturefile = "gfx/interface/goals/gigil/declare_caliphate.dds"
 	}
@@ -325,10 +321,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/syria_alt/guardians_of_syrdem_rev.dds"
 	}
 	spriteType = {
-		name = "hafez_ded"
-		texturefile = "gfx/interface/goals/syria_alt/hafez_ded.dds"
-	}
-	spriteType = {
 		name = "hez_friend_lebanon"
 		texturefile = "gfx/interface/goals/hezbollah/hez_friend_lebanon.dds"
 	}
@@ -343,6 +335,10 @@ spriteTypes = {
 	spriteType = {
 		name = "homs_heavy_industry"
 		texturefile = "gfx/interface/goals/syria_alt/homs_heavy_industry.dds"
+	}
+	spriteType = {
+		name = "husband_minister"
+		texturefile = "gfx/interface/goals/syria_alt/husband_minister.dds"
 	}
 	spriteType = {
 		name = "jack_daniels_cigs_syr"
@@ -367,10 +363,6 @@ spriteTypes = {
 	spriteType = {
 		name = "lion_of_asshur"
 		texturefile = "gfx/interface/goals/syria_alt/lion_of_asshur.dds"
-	}
-	spriteType = {
-		name = "loyal_marriage"
-		texturefile = "gfx/interface/goals/syria_alt/loyal_marriage.dds"
 	}
 	spriteType = {
 		name = "maher_alawi"
@@ -407,10 +399,6 @@ spriteTypes = {
 	spriteType = {
 		name = "pres_in_lebanon"
 		texturefile = "gfx/interface/goals/syria_alt/pres_in_lebanon.dds"
-	}
-	spriteType = {
-		name = "purge_opposit_bash"
-		texturefile = "gfx/interface/goals/syria_alt/purge_opposit_bash.dds"
 	}
 	spriteType = {
 		name = "qatari_business"
@@ -483,6 +471,10 @@ spriteTypes = {
 	spriteType = {
 		name = "syr_bursha"
 		texturefile = "gfx/interface/goals/syria_alt/syr_bursha.dds"
+	}
+	spriteType = {
+		name = "syr_bursha_campaign"
+		texturefile = "gfx/interface/goals/syria_alt/syr_bursha_campaign.dds"
 	}
 	spriteType = {
 		name = "syr_bursha_feminism"
@@ -707,10 +699,6 @@ spriteTypes = {
 	spriteType = {
 		name = "syria_telecom"
 		texturefile = "gfx/interface/goals/syria_alt/syria_telecom.dds"
-	}
-	spriteType = {
-		name = "syrian_baath_officer"
-		texturefile = "gfx/interface/goals/syria_alt/syrian_baath_officer.dds"
 	}
 	spriteType = {
 		name = "syrian_dilemma"
