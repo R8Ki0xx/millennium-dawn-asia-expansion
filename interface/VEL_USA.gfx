@@ -2,7 +2,7 @@
 spriteTypes = {
 	spriteType = { name = "GFX_VEL_USA_bbg" texturefile = "gfx/interface/scripted_gui/VEL/USA_bbg.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_USA_card" texturefile = "gfx/interface/scripted_gui/VEL/USA_card.dds" noOfFrames = 5 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_USA_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_USA.dds" noOfFrames = 5 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_USA_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_USA.dds" noOfFrames = 6 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_USA_emb" texturefile = "gfx/interface/scripted_gui/VEL/USA_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_USA_fbmark" texturefile = "gfx/interface/scripted_gui/VEL/USA_fbmark.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_USA_ldr" texturefile = "gfx/interface/scripted_gui/VEL/USA_ldr.dds" noOfFrames = 44 legacy_lazy_load = no }

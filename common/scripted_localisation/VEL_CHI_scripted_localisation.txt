@@ -57,6 +57,166 @@ defined_text = {
 	text = { trigger = { check_variable = { VEL_CHI_main = 6 } } localization_key = VEL_CHI_issue_6 }
 	text = { localization_key = VEL_CHI_issue_none }
 }
+defined_text = {
+	name = VEL_CHI_occtt_1
+	text = { trigger = { check_variable = { VEL_CHI_occf^0 = 1 } } localization_key = VEL_CHI_occtt_txt_1 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_2
+	text = { trigger = { check_variable = { VEL_CHI_occf^1 = 1 } } localization_key = VEL_CHI_occtt_txt_2 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_3
+	text = { trigger = { check_variable = { VEL_CHI_occf^2 = 1 } } localization_key = VEL_CHI_occtt_txt_3 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_4
+	text = { trigger = { check_variable = { VEL_CHI_occf^3 = 1 } } localization_key = VEL_CHI_occtt_txt_4 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_5
+	text = { trigger = { check_variable = { VEL_CHI_occf^4 = 1 } } localization_key = VEL_CHI_occtt_txt_5 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_6
+	text = { trigger = { check_variable = { VEL_CHI_occf^5 = 1 } } localization_key = VEL_CHI_occtt_txt_6 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_7
+	text = { trigger = { check_variable = { VEL_CHI_occf^6 = 1 } } localization_key = VEL_CHI_occtt_txt_7 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_8
+	text = { trigger = { check_variable = { VEL_CHI_occf^7 = 1 } } localization_key = VEL_CHI_occtt_txt_8 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_9
+	text = { trigger = { check_variable = { VEL_CHI_occf^8 = 1 } } localization_key = VEL_CHI_occtt_txt_9 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_10
+	text = { trigger = { check_variable = { VEL_CHI_occf^9 = 1 } } localization_key = VEL_CHI_occtt_txt_10 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_11
+	text = { trigger = { check_variable = { VEL_CHI_occf^10 = 1 } } localization_key = VEL_CHI_occtt_txt_11 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_12
+	text = { trigger = { check_variable = { VEL_CHI_occf^11 = 1 } } localization_key = VEL_CHI_occtt_txt_12 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_13
+	text = { trigger = { check_variable = { VEL_CHI_occf^12 = 1 } } localization_key = VEL_CHI_occtt_txt_13 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_14
+	text = { trigger = { check_variable = { VEL_CHI_occf^13 = 1 } } localization_key = VEL_CHI_occtt_txt_14 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_15
+	text = { trigger = { check_variable = { VEL_CHI_occf^14 = 1 } } localization_key = VEL_CHI_occtt_txt_15 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_16
+	text = { trigger = { check_variable = { VEL_CHI_occf^15 = 1 } } localization_key = VEL_CHI_occtt_txt_16 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_17
+	text = { trigger = { check_variable = { VEL_CHI_occf^16 = 1 } } localization_key = VEL_CHI_occtt_txt_17 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_18
+	text = { trigger = { check_variable = { VEL_CHI_occf^17 = 1 } } localization_key = VEL_CHI_occtt_txt_18 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_19
+	text = { trigger = { check_variable = { VEL_CHI_occf^18 = 1 } } localization_key = VEL_CHI_occtt_txt_19 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_20
+	text = { trigger = { check_variable = { VEL_CHI_occf^19 = 1 } } localization_key = VEL_CHI_occtt_txt_20 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_21
+	text = { trigger = { check_variable = { VEL_CHI_occf^20 = 1 } } localization_key = VEL_CHI_occtt_txt_21 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_22
+	text = { trigger = { check_variable = { VEL_CHI_occf^21 = 1 } } localization_key = VEL_CHI_occtt_txt_22 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_23
+	text = { trigger = { check_variable = { VEL_CHI_occf^22 = 1 } } localization_key = VEL_CHI_occtt_txt_23 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_24
+	text = { trigger = { check_variable = { VEL_CHI_occf^23 = 1 } } localization_key = VEL_CHI_occtt_txt_24 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_25
+	text = { trigger = { check_variable = { VEL_CHI_occf^24 = 1 } } localization_key = VEL_CHI_occtt_txt_25 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_26
+	text = { trigger = { check_variable = { VEL_CHI_occf^25 = 1 } } localization_key = VEL_CHI_occtt_txt_26 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_27
+	text = { trigger = { check_variable = { VEL_CHI_occf^26 = 1 } } localization_key = VEL_CHI_occtt_txt_27 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_28
+	text = { trigger = { check_variable = { VEL_CHI_occf^27 = 1 } } localization_key = VEL_CHI_occtt_txt_28 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_29
+	text = { trigger = { check_variable = { VEL_CHI_occf^28 = 1 } } localization_key = VEL_CHI_occtt_txt_29 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_30
+	text = { trigger = { check_variable = { VEL_CHI_occf^29 = 1 } } localization_key = VEL_CHI_occtt_txt_30 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_31
+	text = { trigger = { check_variable = { VEL_CHI_occf^30 = 1 } } localization_key = VEL_CHI_occtt_txt_31 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
+defined_text = {
+	name = VEL_CHI_occtt_32
+	text = { trigger = { check_variable = { VEL_CHI_occf^31 = 1 } } localization_key = VEL_CHI_occtt_txt_32 }
+	text = { localization_key = VEL_CHI_occtt_none }
+}
 
 # MD ROC Return v3.36 —— CHI 选举界面的动态文字（由 gen_vel_gui3.py 生成）
 defined_text = {
@@ -626,6 +786,7 @@ defined_text = {
 }
 defined_text = {
 	name = VEL_CHI_lead_text
+	text = { trigger = { check_variable = { VEL_CHI_s_occf = 1 } } localization_key = VEL_CHI_leadtxt_occ }
 	text = { trigger = { check_variable = { VEL_CHI_s_lead = 1 } } localization_key = VEL_CHI_leadtxt_1 }
 	text = { trigger = { check_variable = { VEL_CHI_s_lead = 2 } } localization_key = VEL_CHI_leadtxt_2 }
 	text = { trigger = { check_variable = { VEL_CHI_s_lead = 3 } } localization_key = VEL_CHI_leadtxt_3 }
@@ -853,161 +1014,193 @@ defined_text = {
 }
 defined_text = {
 	name = VEL_CHI_lm_1
+	text = { trigger = { check_variable = { VEL_CHI_occf^0 = 1 } } localization_key = VEL_CHI_lmo_1 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^0 < 900 } } localization_key = VEL_CHI_lmv_1 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_2
+	text = { trigger = { check_variable = { VEL_CHI_occf^1 = 1 } } localization_key = VEL_CHI_lmo_2 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^1 < 900 } } localization_key = VEL_CHI_lmv_2 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_3
+	text = { trigger = { check_variable = { VEL_CHI_occf^2 = 1 } } localization_key = VEL_CHI_lmo_3 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^2 < 900 } } localization_key = VEL_CHI_lmv_3 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_4
+	text = { trigger = { check_variable = { VEL_CHI_occf^3 = 1 } } localization_key = VEL_CHI_lmo_4 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^3 < 900 } } localization_key = VEL_CHI_lmv_4 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_5
+	text = { trigger = { check_variable = { VEL_CHI_occf^4 = 1 } } localization_key = VEL_CHI_lmo_5 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^4 < 900 } } localization_key = VEL_CHI_lmv_5 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_6
+	text = { trigger = { check_variable = { VEL_CHI_occf^5 = 1 } } localization_key = VEL_CHI_lmo_6 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^5 < 900 } } localization_key = VEL_CHI_lmv_6 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_7
+	text = { trigger = { check_variable = { VEL_CHI_occf^6 = 1 } } localization_key = VEL_CHI_lmo_7 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^6 < 900 } } localization_key = VEL_CHI_lmv_7 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_8
+	text = { trigger = { check_variable = { VEL_CHI_occf^7 = 1 } } localization_key = VEL_CHI_lmo_8 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^7 < 900 } } localization_key = VEL_CHI_lmv_8 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_9
+	text = { trigger = { check_variable = { VEL_CHI_occf^8 = 1 } } localization_key = VEL_CHI_lmo_9 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^8 < 900 } } localization_key = VEL_CHI_lmv_9 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_10
+	text = { trigger = { check_variable = { VEL_CHI_occf^9 = 1 } } localization_key = VEL_CHI_lmo_10 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^9 < 900 } } localization_key = VEL_CHI_lmv_10 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_11
+	text = { trigger = { check_variable = { VEL_CHI_occf^10 = 1 } } localization_key = VEL_CHI_lmo_11 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^10 < 900 } } localization_key = VEL_CHI_lmv_11 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_12
+	text = { trigger = { check_variable = { VEL_CHI_occf^11 = 1 } } localization_key = VEL_CHI_lmo_12 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^11 < 900 } } localization_key = VEL_CHI_lmv_12 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_13
+	text = { trigger = { check_variable = { VEL_CHI_occf^12 = 1 } } localization_key = VEL_CHI_lmo_13 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^12 < 900 } } localization_key = VEL_CHI_lmv_13 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_14
+	text = { trigger = { check_variable = { VEL_CHI_occf^13 = 1 } } localization_key = VEL_CHI_lmo_14 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^13 < 900 } } localization_key = VEL_CHI_lmv_14 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_15
+	text = { trigger = { check_variable = { VEL_CHI_occf^14 = 1 } } localization_key = VEL_CHI_lmo_15 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^14 < 900 } } localization_key = VEL_CHI_lmv_15 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_16
+	text = { trigger = { check_variable = { VEL_CHI_occf^15 = 1 } } localization_key = VEL_CHI_lmo_16 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^15 < 900 } } localization_key = VEL_CHI_lmv_16 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_17
+	text = { trigger = { check_variable = { VEL_CHI_occf^16 = 1 } } localization_key = VEL_CHI_lmo_17 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^16 < 900 } } localization_key = VEL_CHI_lmv_17 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_18
+	text = { trigger = { check_variable = { VEL_CHI_occf^17 = 1 } } localization_key = VEL_CHI_lmo_18 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^17 < 900 } } localization_key = VEL_CHI_lmv_18 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_19
+	text = { trigger = { check_variable = { VEL_CHI_occf^18 = 1 } } localization_key = VEL_CHI_lmo_19 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^18 < 900 } } localization_key = VEL_CHI_lmv_19 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_20
+	text = { trigger = { check_variable = { VEL_CHI_occf^19 = 1 } } localization_key = VEL_CHI_lmo_20 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^19 < 900 } } localization_key = VEL_CHI_lmv_20 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_21
+	text = { trigger = { check_variable = { VEL_CHI_occf^20 = 1 } } localization_key = VEL_CHI_lmo_21 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^20 < 900 } } localization_key = VEL_CHI_lmv_21 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_22
+	text = { trigger = { check_variable = { VEL_CHI_occf^21 = 1 } } localization_key = VEL_CHI_lmo_22 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^21 < 900 } } localization_key = VEL_CHI_lmv_22 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_23
+	text = { trigger = { check_variable = { VEL_CHI_occf^22 = 1 } } localization_key = VEL_CHI_lmo_23 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^22 < 900 } } localization_key = VEL_CHI_lmv_23 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_24
+	text = { trigger = { check_variable = { VEL_CHI_occf^23 = 1 } } localization_key = VEL_CHI_lmo_24 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^23 < 900 } } localization_key = VEL_CHI_lmv_24 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_25
+	text = { trigger = { check_variable = { VEL_CHI_occf^24 = 1 } } localization_key = VEL_CHI_lmo_25 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^24 < 900 } } localization_key = VEL_CHI_lmv_25 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_26
+	text = { trigger = { check_variable = { VEL_CHI_occf^25 = 1 } } localization_key = VEL_CHI_lmo_26 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^25 < 900 } } localization_key = VEL_CHI_lmv_26 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_27
+	text = { trigger = { check_variable = { VEL_CHI_occf^26 = 1 } } localization_key = VEL_CHI_lmo_27 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^26 < 900 } } localization_key = VEL_CHI_lmv_27 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_28
+	text = { trigger = { check_variable = { VEL_CHI_occf^27 = 1 } } localization_key = VEL_CHI_lmo_28 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^27 < 900 } } localization_key = VEL_CHI_lmv_28 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_29
+	text = { trigger = { check_variable = { VEL_CHI_occf^28 = 1 } } localization_key = VEL_CHI_lmo_29 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^28 < 900 } } localization_key = VEL_CHI_lmv_29 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_30
+	text = { trigger = { check_variable = { VEL_CHI_occf^29 = 1 } } localization_key = VEL_CHI_lmo_30 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^29 < 900 } } localization_key = VEL_CHI_lmv_30 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_31
+	text = { trigger = { check_variable = { VEL_CHI_occf^30 = 1 } } localization_key = VEL_CHI_lmo_31 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^30 < 900 } } localization_key = VEL_CHI_lmv_31 }
 	text = { localization_key = VEL_CHI_name_blank }
 }
 defined_text = {
 	name = VEL_CHI_lm_32
+	text = { trigger = { check_variable = { VEL_CHI_occf^31 = 1 } } localization_key = VEL_CHI_lmo_32 }
 	text = { trigger = { check_variable = { VEL_CHI_mar^31 < 900 } } localization_key = VEL_CHI_lmv_32 }
 	text = { localization_key = VEL_CHI_name_blank }
 }

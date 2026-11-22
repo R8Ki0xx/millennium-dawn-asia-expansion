@@ -25,7 +25,7 @@ scripted_gui = {
 		visible = { has_country_flag = VEL_TAI_open }
 		ai_enabled = { always = no }
 		triggers = {
-			vb_tai_rally_click_enabled = { check_variable = { VEL_TAI_sel > 0 } check_variable = { VEL_TAI_phase = 1 } has_political_power > 24 }
+			vb_tai_rally_click_enabled = { check_variable = { VEL_TAI_sel > 0 } check_variable = { VEL_TAI_s_occf = 0 } check_variable = { VEL_TAI_phase = 1 } has_political_power > 24 }
 			vb_tai_issue_1_click_enabled = { check_variable = { VEL_TAI_phase = 1 } }
 			vb_tai_issue_2_click_enabled = { check_variable = { VEL_TAI_phase = 1 } }
 			vb_tai_issue_3_click_enabled = { check_variable = { VEL_TAI_phase = 1 } }

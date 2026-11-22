@@ -2,7 +2,7 @@
 spriteTypes = {
 	spriteType = { name = "GFX_VEL_CHI_bbg" texturefile = "gfx/interface/scripted_gui/VEL/CHI_bbg.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHI_card" texturefile = "gfx/interface/scripted_gui/VEL/CHI_card.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_CHI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_CHI.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_CHI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_CHI.dds" noOfFrames = 8 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHI_emb" texturefile = "gfx/interface/scripted_gui/VEL/CHI_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHI_fbmark" texturefile = "gfx/interface/scripted_gui/VEL/CHI_fbmark.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHI_ldr" texturefile = "gfx/interface/scripted_gui/VEL/CHI_ldr.dds" noOfFrames = 31 legacy_lazy_load = no }

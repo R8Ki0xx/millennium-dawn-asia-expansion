@@ -2,7 +2,7 @@
 spriteTypes = {
 	spriteType = { name = "GFX_VEL_TAI_bbg" texturefile = "gfx/interface/scripted_gui/VEL/TAI_bbg.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAI_card" texturefile = "gfx/interface/scripted_gui/VEL/TAI_card.dds" noOfFrames = 7 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_TAI.dds" noOfFrames = 7 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VEL_TAI_swatch" texturefile = "gfx/interface/scripted_gui/VEL/swatch_TAI.dds" noOfFrames = 8 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAI_emb" texturefile = "gfx/interface/scripted_gui/VEL/TAI_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAI_fbmark" texturefile = "gfx/interface/scripted_gui/VEL/TAI_fbmark.dds" legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAI_ldr" texturefile = "gfx/interface/scripted_gui/VEL/TAI_ldr.dds" noOfFrames = 17 legacy_lazy_load = no }

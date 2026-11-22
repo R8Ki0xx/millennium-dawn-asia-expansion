@@ -25,7 +25,7 @@ scripted_gui = {
 		visible = { has_country_flag = VEL_CHI_open }
 		ai_enabled = { always = no }
 		triggers = {
-			vb_chi_rally_click_enabled = { check_variable = { VEL_CHI_sel > 0 } check_variable = { VEL_CHI_phase = 1 } has_political_power > 24 }
+			vb_chi_rally_click_enabled = { check_variable = { VEL_CHI_sel > 0 } check_variable = { VEL_CHI_s_occf = 0 } check_variable = { VEL_CHI_phase = 1 } has_political_power > 24 }
 			vb_chi_issue_1_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
 			vb_chi_issue_2_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }
 			vb_chi_issue_3_click_enabled = { check_variable = { VEL_CHI_phase = 1 } }

@@ -519,6 +519,15 @@
     （执政党取计数器 −1，在野党取计数器所指的下一位）；没有领袖名单的新兴政党显示剪影。头像条由 _tools/v342/vel_leaders.py 解析千禧的 USA_political_leaders.txt、TAI_political_leaders.txt 与本模组的 TAI_roc_leaders.txt 生成。
   · 选举期自动弹窗：竞选开始（reset）与开票开始（run_result）时，选举大窗口会自动弹出（Esc 或右上角 X 关闭，可再从决议栏小窗口打开）。
   · 区域列表后面显示各区领先差距（百分点）；右侧栏选民构成条对齐加宽；窗口高度增加约 36 像素以放头像。选举结果写回时，新兴政党也会按得票调整千禧里的政党支持率。
+- 选举地图：被占领的区域不计票（三套选举系统 CHI / USA / TAI 都有；生成器 _tools/v345，补丁 _patch_occ.py）：
+  · 判定：每次民调 / 开票前扫描（VEL_xx_occ_scan），一个区域里“由选举国控制（controller）的州”不到一半，就算被占领；占领国取该区域第一个不受己方控制的州的控制者。
+    区域对应的州：中国、美国来自 regions_*.json 里的 states（中国“台湾”区 = 598~600 / 1155~1157 / 1158 等）；台湾（TAI）22 个县市按位置对应到台湾 6 个州 + 澎湖（金门、连江在千禧里属福建州，不会被判为占领）。
+    只看控制权，不看所有权：区域里的州被敌方控制，或本来属于别的国家（比如中共残余政权 PRC）控制，都算被占领；己方傀儡国控制的州也按“不是己方”处理。
+  · 不统计：被占领区域的得票、席位 / 选举人票全部清零，地图上用中性色；全国得票率只按未被占领的区域归一；各党席位总数（tot_eff）、过半线（live_need）、“领先区数”、摇摆区域榜都不含它们；开票动画里它们不计入已开票的权重。
+  · 显示：悬停提示末尾加“该地区已被 X 占领，不计入统计”；点开区域后，右侧栏“领先”一行改成“已被 X（国名）占领，不计入统计”，席位显示 0，且不能在该区举办集会；底部区域列表里该行显示占领国代码（如 PRC），色块换成深灰底红叉（swatch 的第 P+1 帧）。
+  · 结果写回：CHI 的“一党独占过半席次”按未被占领区域的席位总数的一半算；写回立法院时席次按 225 / 有效席位放大回 225 席（立法院其余机制都按 225 席算）；美国的国会支持度按选举人票占有效选举人票总数的比例算。
+  · 旧存档：数据版本号 data_v343 → data_v345，第一次计票前自动补上 occf / occ 数组与 tot_eff。
+  · 只做过静态检查和 Python 解释器上的引擎推演（_tools/v345/_test_occ.py：占领若干区域后席位总数 = 有效席位、全国得票率之和 = 1、被占领区域结果为 0）；未在游戏里验证 controller 作用域与悬停提示里的动态文字。
 - 叙利亚内战扩展 v2（common/scripted_effects/SYR_civil_war_effects.txt、SYR_terror_scan_effects.txt，on_actions/SYR_civil_war_on_actions.txt，events/SYR_civil_war_events.txt，decisions/SYR_terror_*，面板由 _tools/v342/gen_syr_gui.py 生成）：
   · 触发：SYR 有旗标 Syria_Hafez_dead（老阿萨已死）、出现了 original_tag = SYR 的叛军国家、且全局旗标 SYR_cw_handled 未设时，on_daily_SYR 调用 SYR_cw_dispatch。
     这覆盖千禧所有继位路线的内战：Damascus Spring / 里法特（叛军 neutrality）、巴沙尔被刺（nationalist，SSNP）、SSNP 政变（communism）、允许 / 禁止萨拉菲（fascism）。

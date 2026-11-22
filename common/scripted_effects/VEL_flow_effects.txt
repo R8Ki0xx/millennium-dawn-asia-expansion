@@ -15,7 +15,9 @@ VEL_CHI_apply_result = {
 				change_relative_party_popularity = yes
 		}
 	}
-	# 一党独占过半席次，由它组阁
+	# 一党独占过半席次（按未被占领的区域的席位总数算过半），由它组阁
+	set_temp_variable = { vel_half = VEL_CHI_tot_eff }
+	divide_temp_variable = { vel_half = 2 }
 	set_temp_variable = { vel_best = 0 }
 	set_temp_variable = { vel_bi = 0 }
 	for_loop_effect = {
@@ -24,7 +26,7 @@ VEL_CHI_apply_result = {
 		if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
 	}
 	if = {
-		limit = { check_variable = { vel_best > 112 } }
+		limit = { check_variable = { vel_best > vel_half } }
 		set_temp_variable = { vel_rp = VEL_CHI_pidx^vel_bi }
 		if = {
 			limit = { NOT = { check_variable = { ruling_party = vel_rp } } }
@@ -51,6 +53,17 @@ VEL_CHI_apply_roc_ly = {
 	# 新兴政党的席位并入“其他”（立法院沿用固定的五个席次变量）
 	add_to_variable = { TAI_ly_pfp = VEL_CHI_seat^5 }
 	add_to_variable = { TAI_ly_pfp = VEL_CHI_seat^6 }
+	# v3.45：被占领的区域没有立委，其余席次按比例放大回 225 席（立法院的其余机制都按 225 席算）
+	if = {
+		limit = { check_variable = { VEL_CHI_tot_eff > 0 } check_variable = { VEL_CHI_tot_eff < 225 } }
+		set_temp_variable = { vel_lk = 225 }
+		divide_temp_variable = { vel_lk = VEL_CHI_tot_eff }
+		multiply_variable = { TAI_ly_kmt = vel_lk } round_variable = TAI_ly_kmt
+		multiply_variable = { TAI_ly_dp = vel_lk } round_variable = TAI_ly_dp
+		multiply_variable = { TAI_ly_sd = vel_lk } round_variable = TAI_ly_sd
+		multiply_variable = { TAI_ly_cpc = vel_lk } round_variable = TAI_ly_cpc
+		multiply_variable = { TAI_ly_pfp = vel_lk } round_variable = TAI_ly_pfp
+	}
 	set_variable = { TAI_ly_next_election = global.num_days }
 	add_to_variable = { TAI_ly_next_election = 1095 }
 	add_to_variable = { TAI_ly_term = 1 }
@@ -95,7 +108,9 @@ VEL_USA_apply_result = {
 	if = {
 		limit = { has_variable = senators_total has_variable = representatives_total }
 		set_temp_variable = { vel_evw = vel_best }
-		divide_temp_variable = { vel_evw = 538 }
+		set_temp_variable = { vel_evt = VEL_USA_tot_eff }
+		if = { limit = { check_variable = { vel_evt < 1 } } set_temp_variable = { vel_evt = 538 } }
+		divide_temp_variable = { vel_evw = vel_evt }
 		subtract_from_temp_variable = { vel_evw = 0.5 }
 		multiply_temp_variable = { vel_evw = 0.6 }
 		add_to_temp_variable = { vel_evw = 0.5 }

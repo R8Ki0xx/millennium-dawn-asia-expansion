@@ -4,7 +4,7 @@ VEL_USA_init = {
 	if = {
 		limit = { NOT = { has_country_flag = VEL_USA_inited } }
 		set_country_flag = VEL_USA_inited
-		set_country_flag = VEL_USA_data_v343
+		set_country_flag = VEL_USA_data_v345
 		clear_array = VEL_USA_sal
 		add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 } add_to_array = { VEL_USA_sal = 1 }
 		clear_array = VEL_USA_pidx
@@ -319,6 +319,10 @@ VEL_USA_init = {
 		resize_array = { array = VEL_USA_bsw value = 0 size = 5 }
 		clear_array = VEL_USA_tsw
 		resize_array = { array = VEL_USA_tsw value = 0 size = 5 }
+		clear_array = VEL_USA_occf
+		resize_array = { array = VEL_USA_occf value = 0 size = 51 }
+		clear_array = VEL_USA_occ
+		resize_array = { array = VEL_USA_occ value = 0 size = 51 }
 		clear_array = VEL_USA_selfr
 		resize_array = { array = VEL_USA_selfr value = 1 size = 51 }
 		clear_array = VEL_USA_lead
@@ -329,6 +333,8 @@ VEL_USA_init = {
 		set_variable = { VEL_USA_sw_4_l = 1 } set_variable = { VEL_USA_sw_4_r = 0 }
 		set_variable = { VEL_USA_sw_5_l = 1 } set_variable = { VEL_USA_sw_5_r = 0 }
 		set_variable = { VEL_USA_sw_6_l = 1 } set_variable = { VEL_USA_sw_6_r = 0 }
+		set_variable = { VEL_USA_tot_eff = 538 }
+		set_variable = { VEL_USA_s_occf = 0 } set_variable = { VEL_USA_s_occ = 0 }
 		set_variable = { VEL_USA_news_i = 0 }
 		set_variable = { VEL_USA_run_w = 0 }
 		set_variable = { VEL_USA_news_t = 0 }
@@ -347,7 +353,7 @@ VEL_USA_init = {
 
 # 旧存档里的 sh / lean 是旧数据：第一次计票前重写，并补上新数组。新开局在 init 里已经写好并设了旗标。
 VEL_USA_migrate = {
-	set_country_flag = VEL_USA_data_v343
+	set_country_flag = VEL_USA_data_v345
 	clear_array = VEL_USA_sh
 	add_to_array = { VEL_USA_sh = 0.4503 } add_to_array = { VEL_USA_sh = 0.1873 } add_to_array = { VEL_USA_sh = 0.0913 } add_to_array = { VEL_USA_sh = 0.0147 } add_to_array = { VEL_USA_sh = 0.0119 } add_to_array = { VEL_USA_sh = 0.0178 }
 	add_to_array = { VEL_USA_sh = 0.0488 } add_to_array = { VEL_USA_sh = 0.178 } add_to_array = { VEL_USA_sh = 0.3443 } add_to_array = { VEL_USA_sh = 0.2673 } add_to_array = { VEL_USA_sh = 0.0831 } add_to_array = { VEL_USA_sh = 0.0156 }
@@ -475,11 +481,333 @@ VEL_USA_migrate = {
 	resize_array = { array = VEL_USA_bsw value = 0 size = 5 }
 	clear_array = VEL_USA_tsw
 	resize_array = { array = VEL_USA_tsw value = 0 size = 5 }
+	clear_array = VEL_USA_occf
+	resize_array = { array = VEL_USA_occf value = 0 size = 51 }
+	clear_array = VEL_USA_occ
+	resize_array = { array = VEL_USA_occ value = 0 size = 51 }
+	set_variable = { VEL_USA_tot_eff = 538 }
+	set_variable = { VEL_USA_s_occf = 0 } set_variable = { VEL_USA_s_occ = 0 }
+}
+
+# 作用域：选举国。扫描各区域的州：受己方控制的州不到一半 → occf = 1，occ = 占领国 id。
+VEL_USA_occ_scan = {
+	set_temp_variable = { vel_me = THIS.id }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	764 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^0 = 0 } set_variable = { VEL_USA_occ^0 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^0 = 1 } set_variable = { VEL_USA_occ^0 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	765 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^1 = 0 } set_variable = { VEL_USA_occ^1 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^1 = 1 } set_variable = { VEL_USA_occ^1 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	766 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^2 = 0 } set_variable = { VEL_USA_occ^2 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^2 = 1 } set_variable = { VEL_USA_occ^2 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	767 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^3 = 0 } set_variable = { VEL_USA_occ^3 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^3 = 1 } set_variable = { VEL_USA_occ^3 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	768 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^4 = 0 } set_variable = { VEL_USA_occ^4 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^4 = 1 } set_variable = { VEL_USA_occ^4 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	769 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^5 = 0 } set_variable = { VEL_USA_occ^5 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^5 = 1 } set_variable = { VEL_USA_occ^5 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	770 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^6 = 0 } set_variable = { VEL_USA_occ^6 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^6 = 1 } set_variable = { VEL_USA_occ^6 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	771 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^7 = 0 } set_variable = { VEL_USA_occ^7 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^7 = 1 } set_variable = { VEL_USA_occ^7 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	772 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^8 = 0 } set_variable = { VEL_USA_occ^8 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^8 = 1 } set_variable = { VEL_USA_occ^8 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	773 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^9 = 0 } set_variable = { VEL_USA_occ^9 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^9 = 1 } set_variable = { VEL_USA_occ^9 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	774 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^10 = 0 } set_variable = { VEL_USA_occ^10 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^10 = 1 } set_variable = { VEL_USA_occ^10 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	775 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^11 = 0 } set_variable = { VEL_USA_occ^11 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^11 = 1 } set_variable = { VEL_USA_occ^11 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	776 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^12 = 0 } set_variable = { VEL_USA_occ^12 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^12 = 1 } set_variable = { VEL_USA_occ^12 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	777 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^13 = 0 } set_variable = { VEL_USA_occ^13 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^13 = 1 } set_variable = { VEL_USA_occ^13 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	778 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^14 = 0 } set_variable = { VEL_USA_occ^14 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^14 = 1 } set_variable = { VEL_USA_occ^14 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	779 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^15 = 0 } set_variable = { VEL_USA_occ^15 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^15 = 1 } set_variable = { VEL_USA_occ^15 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	780 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^16 = 0 } set_variable = { VEL_USA_occ^16 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^16 = 1 } set_variable = { VEL_USA_occ^16 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	781 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^17 = 0 } set_variable = { VEL_USA_occ^17 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^17 = 1 } set_variable = { VEL_USA_occ^17 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	782 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^18 = 0 } set_variable = { VEL_USA_occ^18 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^18 = 1 } set_variable = { VEL_USA_occ^18 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	783 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^19 = 0 } set_variable = { VEL_USA_occ^19 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^19 = 1 } set_variable = { VEL_USA_occ^19 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	784 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^20 = 0 } set_variable = { VEL_USA_occ^20 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^20 = 1 } set_variable = { VEL_USA_occ^20 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	785 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^21 = 0 } set_variable = { VEL_USA_occ^21 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^21 = 1 } set_variable = { VEL_USA_occ^21 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	786 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^22 = 0 } set_variable = { VEL_USA_occ^22 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^22 = 1 } set_variable = { VEL_USA_occ^22 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	787 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^23 = 0 } set_variable = { VEL_USA_occ^23 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^23 = 1 } set_variable = { VEL_USA_occ^23 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	788 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^24 = 0 } set_variable = { VEL_USA_occ^24 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^24 = 1 } set_variable = { VEL_USA_occ^24 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	789 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^25 = 0 } set_variable = { VEL_USA_occ^25 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^25 = 1 } set_variable = { VEL_USA_occ^25 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	790 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^26 = 0 } set_variable = { VEL_USA_occ^26 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^26 = 1 } set_variable = { VEL_USA_occ^26 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	791 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^27 = 0 } set_variable = { VEL_USA_occ^27 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^27 = 1 } set_variable = { VEL_USA_occ^27 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	792 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^28 = 0 } set_variable = { VEL_USA_occ^28 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^28 = 1 } set_variable = { VEL_USA_occ^28 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	793 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^29 = 0 } set_variable = { VEL_USA_occ^29 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^29 = 1 } set_variable = { VEL_USA_occ^29 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	794 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^30 = 0 } set_variable = { VEL_USA_occ^30 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^30 = 1 } set_variable = { VEL_USA_occ^30 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	795 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^31 = 0 } set_variable = { VEL_USA_occ^31 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^31 = 1 } set_variable = { VEL_USA_occ^31 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	796 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^32 = 0 } set_variable = { VEL_USA_occ^32 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^32 = 1 } set_variable = { VEL_USA_occ^32 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	797 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^33 = 0 } set_variable = { VEL_USA_occ^33 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^33 = 1 } set_variable = { VEL_USA_occ^33 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	798 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^34 = 0 } set_variable = { VEL_USA_occ^34 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^34 = 1 } set_variable = { VEL_USA_occ^34 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	799 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^35 = 0 } set_variable = { VEL_USA_occ^35 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^35 = 1 } set_variable = { VEL_USA_occ^35 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	800 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^36 = 0 } set_variable = { VEL_USA_occ^36 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^36 = 1 } set_variable = { VEL_USA_occ^36 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	803 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^37 = 0 } set_variable = { VEL_USA_occ^37 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^37 = 1 } set_variable = { VEL_USA_occ^37 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	804 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^38 = 0 } set_variable = { VEL_USA_occ^38 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^38 = 1 } set_variable = { VEL_USA_occ^38 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	805 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^39 = 0 } set_variable = { VEL_USA_occ^39 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^39 = 1 } set_variable = { VEL_USA_occ^39 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	806 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^40 = 0 } set_variable = { VEL_USA_occ^40 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^40 = 1 } set_variable = { VEL_USA_occ^40 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	807 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^41 = 0 } set_variable = { VEL_USA_occ^41 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^41 = 1 } set_variable = { VEL_USA_occ^41 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	808 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^42 = 0 } set_variable = { VEL_USA_occ^42 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^42 = 1 } set_variable = { VEL_USA_occ^42 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	809 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^43 = 0 } set_variable = { VEL_USA_occ^43 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^43 = 1 } set_variable = { VEL_USA_occ^43 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	810 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^44 = 0 } set_variable = { VEL_USA_occ^44 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^44 = 1 } set_variable = { VEL_USA_occ^44 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	811 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^45 = 0 } set_variable = { VEL_USA_occ^45 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^45 = 1 } set_variable = { VEL_USA_occ^45 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	814 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^46 = 0 } set_variable = { VEL_USA_occ^46 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^46 = 1 } set_variable = { VEL_USA_occ^46 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	817 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^47 = 0 } set_variable = { VEL_USA_occ^47 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^47 = 1 } set_variable = { VEL_USA_occ^47 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	1083 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^48 = 0 } set_variable = { VEL_USA_occ^48 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^48 = 1 } set_variable = { VEL_USA_occ^48 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	1084 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^49 = 0 } set_variable = { VEL_USA_occ^49 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^49 = 1 } set_variable = { VEL_USA_occ^49 = vel_oc } }
+	set_temp_variable = { vel_nf = 0 } set_temp_variable = { vel_oc = -1 }
+	1182 = { controller = { set_variable = { global.VEL_occ_ct = THIS.id } } }
+	if = { limit = { check_variable = { global.VEL_occ_ct = vel_me } } add_to_temp_variable = { vel_nf = 1 } }
+	else_if = { limit = { check_variable = { vel_oc < 0 } } set_temp_variable = { vel_oc = global.VEL_occ_ct } }
+	set_variable = { VEL_USA_occf^50 = 0 } set_variable = { VEL_USA_occ^50 = 0 }
+	if = { limit = { check_variable = { vel_nf < 0.5 } } set_variable = { VEL_USA_occf^50 = 1 } set_variable = { VEL_USA_occ^50 = vel_oc } }
 }
 
 # 输入：temp vel_noise（1 = 开票带随机，0 = 民调）；temp vel_gov = 执政党在本系统里的序号(0..P-1)。输出：res / win / best / sr / nat / seat 数组。
 VEL_USA_compute = {
-	if = { limit = { NOT = { has_country_flag = VEL_USA_data_v343 } } VEL_USA_migrate = yes }
+	if = { limit = { NOT = { has_country_flag = VEL_USA_data_v345 } } VEL_USA_migrate = yes }
+	VEL_USA_occ_scan = yes
+	set_variable = { VEL_USA_tot_eff = 0 }
+	set_temp_variable = { vel_wsum = 0 }
+	for_loop_effect = { start = 0 end = 51 value = vr if = { limit = { check_variable = { VEL_USA_occf^vr = 0 } } add_to_variable = { VEL_USA_tot_eff = VEL_USA_seatsr^vr } add_to_temp_variable = { vel_wsum = VEL_USA_wp^vr } } }
+	if = { limit = { check_variable = { vel_wsum < 0.01 } } set_temp_variable = { vel_wsum = 100 } }
 	set_temp_variable = { vel_gov = VEL_USA_gov }
 	set_temp_variable = { vel_salsum = 0 }
 	for_loop_effect = { start = 0 end = 6 value = vi add_to_temp_variable = { vel_salsum = VEL_USA_sal^vi } }
@@ -568,10 +896,11 @@ VEL_USA_compute = {
 			divide_variable = { VEL_USA_res^vel_ir = vel_tot }
 			set_temp_variable = { vel_x = VEL_USA_res^vel_ir }
 			multiply_temp_variable = { vel_x = VEL_USA_wp^vr }
+			if = { limit = { check_variable = { VEL_USA_occf^vr = 1 } } set_temp_variable = { vel_x = 0 } }
 			add_to_variable = { VEL_USA_bsw^vp = vel_x }
 		}
 	}
-	for_loop_effect = { start = 0 end = 5 value = vp divide_variable = { VEL_USA_bsw^vp = 100 } }
+	for_loop_effect = { start = 0 end = 5 value = vp divide_variable = { VEL_USA_bsw^vp = vel_wsum } }
 	set_temp_variable = { vel_fsum = 0 }
 	for_loop_effect = { start = 0 end = 5 value = vp add_to_temp_variable = { vel_fsum = VEL_USA_f^vp } }
 	for_loop_effect = {
@@ -581,60 +910,73 @@ VEL_USA_compute = {
 	}
 	for_loop_effect = {
 		start = 0 end = 51 value = vr
-		set_temp_variable = { vel_tot = 0 }
-		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
-			set_temp_variable = { vel_v = VEL_USA_res^vel_ir }
-			subtract_from_temp_variable = { vel_v = VEL_USA_bsw^vp }
-			multiply_temp_variable = { vel_v = 1.0 }
-			add_to_temp_variable = { vel_v = VEL_USA_tsw^vp }
-			set_temp_variable = { vel_fl = VEL_USA_tsw^vp }
-			multiply_temp_variable = { vel_fl = 0.15 }
-			if = { limit = { check_variable = { vel_v < vel_fl } } set_temp_variable = { vel_v = vel_fl } }
-			if = {
-				limit = { check_variable = { vp = vel_gov } }
-				set_temp_variable = { vel_c = VEL_USA_camp^vr }
-				multiply_temp_variable = { vel_c = 0.04 }
-				add_to_temp_variable = { vel_c = 1 }
-				multiply_temp_variable = { vel_v = vel_c }
+		if = {
+			limit = { check_variable = { VEL_USA_occf^vr = 0 } }
+			set_temp_variable = { vel_tot = 0 }
+			for_loop_effect = {
+				start = 0 end = 5 value = vp
+				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+				set_temp_variable = { vel_v = VEL_USA_res^vel_ir }
+				subtract_from_temp_variable = { vel_v = VEL_USA_bsw^vp }
+				multiply_temp_variable = { vel_v = 1.0 }
+				add_to_temp_variable = { vel_v = VEL_USA_tsw^vp }
+				set_temp_variable = { vel_fl = VEL_USA_tsw^vp }
+				multiply_temp_variable = { vel_fl = 0.15 }
+				if = { limit = { check_variable = { vel_v < vel_fl } } set_temp_variable = { vel_v = vel_fl } }
+				if = {
+					limit = { check_variable = { vp = vel_gov } }
+					set_temp_variable = { vel_c = VEL_USA_camp^vr }
+					multiply_temp_variable = { vel_c = 0.04 }
+					add_to_temp_variable = { vel_c = 1 }
+					multiply_temp_variable = { vel_v = vel_c }
+				}
+				if = {
+					limit = { check_variable = { vel_noise = 1 } }
+					set_temp_variable_to_random = { var = vel_nr min = 0 max = 1 }
+					multiply_temp_variable = { vel_nr = 0.06 }
+					add_to_temp_variable = { vel_nr = 0.97 }
+					multiply_temp_variable = { vel_v = vel_nr }
+				}
+				set_variable = { VEL_USA_res^vel_ir = vel_v }
+				add_to_temp_variable = { vel_tot = vel_v }
 			}
-			if = {
-				limit = { check_variable = { vel_noise = 1 } }
-				set_temp_variable_to_random = { var = vel_nr min = 0 max = 1 }
-				multiply_temp_variable = { vel_nr = 0.06 }
-				add_to_temp_variable = { vel_nr = 0.97 }
-				multiply_temp_variable = { vel_v = vel_nr }
+			set_temp_variable = { vel_best = 0 } set_temp_variable = { vel_bi = 0 }
+			for_loop_effect = {
+				start = 0 end = 5 value = vp
+				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+				divide_variable = { VEL_USA_res^vel_ir = vel_tot }
+				set_temp_variable = { vel_cur = VEL_USA_res^vel_ir }
+				if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
 			}
-			set_variable = { VEL_USA_res^vel_ir = vel_v }
-			add_to_temp_variable = { vel_tot = vel_v }
+			set_variable = { VEL_USA_win^vr = vel_bi }
+			add_to_variable = { VEL_USA_win^vr = 1 }
+			set_variable = { VEL_USA_best^vr = vel_best }
+			set_temp_variable = { vel_sumseat = 0 }
+			for_loop_effect = {
+				start = 0 end = 5 value = vp
+				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+				set_temp_variable = { vel_x = VEL_USA_w^vr }
+				multiply_temp_variable = { vel_x = VEL_USA_res^vel_ir }
+				add_to_variable = { VEL_USA_nat^vp = vel_x }
+				set_variable = { VEL_USA_sr^vel_ir = 0 }
+			}
+			set_temp_variable = { vel_wi = VEL_USA_win^vr }
+			subtract_from_temp_variable = { vel_wi = 1 }
+			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vel_wi }
+			set_variable = { VEL_USA_sr^vel_ir = VEL_USA_seatsr^vr }
+			add_to_variable = { VEL_USA_seat^vel_wi = VEL_USA_seatsr^vr }
 		}
-		set_temp_variable = { vel_best = 0 } set_temp_variable = { vel_bi = 0 }
-		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
-			divide_variable = { VEL_USA_res^vel_ir = vel_tot }
-			set_temp_variable = { vel_cur = VEL_USA_res^vel_ir }
-			if = { limit = { check_variable = { vel_cur > vel_best } } set_temp_variable = { vel_best = vel_cur } set_temp_variable = { vel_bi = vp } }
+		else = {
+			for_loop_effect = {
+				start = 0 end = 5 value = vp
+				set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
+				set_variable = { VEL_USA_res^vel_ir = 0 } set_variable = { VEL_USA_sr^vel_ir = 0 }
+			}
+			set_variable = { VEL_USA_win^vr = 0 } set_variable = { VEL_USA_best^vr = 0 }
 		}
-		set_variable = { VEL_USA_win^vr = vel_bi }
-		add_to_variable = { VEL_USA_win^vr = 1 }
-		set_variable = { VEL_USA_best^vr = vel_best }
-		set_temp_variable = { vel_sumseat = 0 }
-		for_loop_effect = {
-			start = 0 end = 5 value = vp
-			set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vp }
-			set_temp_variable = { vel_x = VEL_USA_w^vr }
-			multiply_temp_variable = { vel_x = VEL_USA_res^vel_ir }
-			add_to_variable = { VEL_USA_nat^vp = vel_x }
-			set_variable = { VEL_USA_sr^vel_ir = 0 }
-		}
-		set_temp_variable = { vel_wi = VEL_USA_win^vr }
-		subtract_from_temp_variable = { vel_wi = 1 }
-		set_temp_variable = { vel_ir = vr } multiply_temp_variable = { vel_ir = 5 } add_to_temp_variable = { vel_ir = vel_wi }
-		set_variable = { VEL_USA_sr^vel_ir = VEL_USA_seatsr^vr }
-		add_to_variable = { VEL_USA_seat^vel_wi = VEL_USA_seatsr^vr }
 	}
+	set_temp_variable = { vel_wk = 100 } divide_temp_variable = { vel_wk = vel_wsum }
+	for_loop_effect = { start = 0 end = 5 value = vp multiply_variable = { VEL_USA_nat^vp = vel_wk } }
 }
 
 VEL_USA_calc_frames = {
@@ -646,6 +988,7 @@ VEL_USA_calc_frames = {
 		add_to_variable = { VEL_USA_fr_res^vr = 2 }
 		if = { limit = { check_variable = { VEL_USA_best^vr > 0.51 } } add_to_variable = { VEL_USA_fr_res^vr = 1 } }
 		if = { limit = { check_variable = { VEL_USA_best^vr > 0.58 } } add_to_variable = { VEL_USA_fr_res^vr = 1 } }
+		if = { limit = { check_variable = { VEL_USA_occf^vr = 1 } } set_variable = { VEL_USA_fr_res^vr = 1 } }
 	}
 }
 
@@ -1339,7 +1682,7 @@ VEL_USA_calc_rank = {
 	subtract_from_variable = { VEL_USA_fb_o = VEL_USA_fb_p_3 }
 	subtract_from_variable = { VEL_USA_fb_o = VEL_USA_fb_p_4 }
 	clamp_variable = { var = VEL_USA_fb_o min = 0 max = 100 }
-	set_variable = { VEL_USA_live_need = 270 }
+	set_variable = { VEL_USA_live_need = VEL_USA_tot_eff } add_to_variable = { VEL_USA_live_need = 1 } divide_variable = { VEL_USA_live_need = 2 } add_to_variable = { VEL_USA_live_need = 0.01 } round_variable = VEL_USA_live_need
 	subtract_from_variable = { VEL_USA_live_need = VEL_USA_fb_c_1 }
 	if = { limit = { check_variable = { VEL_USA_live_need < 0 } } set_variable = { VEL_USA_live_need = 0 } }
 	set_variable = { VEL_USA_live_state = 1 }
@@ -1412,7 +1755,7 @@ VEL_USA_reveal_step = {
 					add_to_variable = { VEL_USA_run_seat^vp = VEL_USA_sr^vel_ir }
 					set_temp_variable = { vel_rv = VEL_USA_res^vel_ir } multiply_temp_variable = { vel_rv = VEL_USA_w^vel_r } add_to_variable = { VEL_USA_run_nat^vp = vel_rv }
 				}
-				set_temp_variable = { vel_rw = VEL_USA_w^vel_r } add_to_variable = { VEL_USA_run_w = vel_rw }
+				set_temp_variable = { vel_rw = VEL_USA_w^vel_r } if = { limit = { check_variable = { VEL_USA_occf^vel_r = 1 } } set_temp_variable = { vel_rw = 0 } } add_to_variable = { VEL_USA_run_w = vel_rw }
 				add_to_variable = { VEL_USA_anim_n = 1 }
 			}
 		}
@@ -1469,6 +1812,7 @@ VEL_USA_refresh_all = {
 		set_variable = { VEL_USA_mar^vr = vel_m }
 		if = { limit = { check_variable = { vel_has = 0 } } set_variable = { VEL_USA_mar^vr = 999 } }
 		set_variable = { VEL_USA_lead^vr = vel_bi }
+		if = { limit = { check_variable = { VEL_USA_occf^vr = 1 } } set_variable = { VEL_USA_mar^vr = 999 } set_variable = { VEL_USA_lead^vr = 6 } }
 	}
 	for_loop_effect = { start = 0 end = 51 value = vr set_variable = { VEL_USA_mar2^vr = VEL_USA_mar^vr } }
 	set_temp_variable = { vel_bm = 998 } set_temp_variable = { vel_bj = -1 }
@@ -1786,6 +2130,8 @@ VEL_USA_refresh_sel = {
 		round_variable = VEL_USA_gb_8
 		clamp_variable = { var = VEL_USA_gb_8 min = 0 max = 100 }
 		set_variable = { VEL_USA_s_seats = VEL_USA_seatsr^vel_r }
+		set_variable = { VEL_USA_s_occf = VEL_USA_occf^vel_r } set_variable = { VEL_USA_s_occ = VEL_USA_occ^vel_r }
+		if = { limit = { check_variable = { VEL_USA_s_occf = 1 } } set_variable = { VEL_USA_s_seats = 0 } }
 		set_variable = { VEL_USA_s_camp = VEL_USA_camp^vel_r }
 	}
 }
