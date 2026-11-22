@@ -606,5 +606,8 @@
   · 图标总数：从 TDF 复制了约 190 个千禧里没有的自制图标（gfx/interface/goals/…）。致谢里把 TDF 的名字写成“The Digital Frontier (Millennium: Damaged Continuum)”。
   · 生成与检查：_tools/v344/gen_syr2.py（从 _tools/cache/05_syria.before_syr2.txt 重新生成，可重复运行；模块 syr2_econ / mil / diplo / opp / pol + syr2_layout 自动排版）、check_syr2.py。
     这一版叙利亚树共新增 157 个国策、48 个国家精神。只做过静态检查，没有进游戏测试。
+  · 光复后台湾的海外影响力全部归新 CHI：台湾在各国的影响力份额（上限由 80% 放宽到 100%，之后千禧会按总量重新归一）照旧写回各国的 CHI 条目；
+    新增：台湾“自动施加影响”的目标清单（auto_influence_array / auto_influence_users）也一并复制给新 CHI（目标是 CHI / TAI 自己或已不存在的国家则剔除），随后重算上限与费用。
+    效果在 TAI_roc_v319_effects.txt 的 TAI_roc_v344_copy_auto_influence，由 ROC_setup_new_chi 的“影响力”段调用。
 - 已知简化：界面没有候选人头像和分页；美国的选举日由开始日期起算的天数决定，不对应现实中的十一月。
 - 版本：3.36.0。

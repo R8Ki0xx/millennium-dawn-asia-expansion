@@ -176,6 +176,8 @@ ROC_setup_new_chi = {
 		add_to_array = { influence_array_val = TAI.influence_array_val^v }
 	}
 	recalculate_influence = yes
+	# v3.36 台湾对外的自动施加影响清单也给新 CHI
+	TAI_roc_v344_copy_auto_influence = yes
 
 	### 内部派系
 	set_temp_variable = { nation_to_copy_from = TAI.id }

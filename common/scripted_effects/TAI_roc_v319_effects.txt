@@ -36,7 +36,7 @@ TAI_roc_v319_restore_influence = {
 	every_country = {
 		limit = { NOT = { tag = CHI } has_variable = TAI_roc_infl_rec }
 		set_temp_variable = { roc_add = TAI_roc_infl_rec }
-		clamp_temp_variable = { var = roc_add min = 0 max = 80 }
+		clamp_temp_variable = { var = roc_add min = 0 max = 100 }
 		set_temp_variable = { roc_dst = -1 }
 		for_each_loop = {
 			array = influence_array
@@ -56,6 +56,34 @@ TAI_roc_v319_restore_influence = {
 		recalculate_influence = yes
 		clear_variable = TAI_roc_infl_rec
 	}
+}
+
+# Scope: 新 CHI（台湾仍存在时）。台湾正在“自动施加影响”的目标清单搬给新 CHI（千禧把这份清单存在施加影响的一方）
+TAI_roc_v344_copy_auto_influence = {
+	clear_array = auto_influence_array
+	for_loop_effect = {
+		end = TAI.auto_influence_array^num
+		value = v
+		add_to_array = { auto_influence_array = TAI.auto_influence_array^v }
+	}
+	resize_array = { array = auto_influence_array value = 0 size = 10 }
+	set_temp_variable = { roc_chi = THIS.id }
+	set_temp_variable = { roc_tai = TAI.id }
+	set_variable = { auto_influence_users = 0 }
+	for_each_loop = {
+		array = auto_influence_array
+		value = v
+		index = i
+		if = {
+			limit = { NOT = { check_variable = { v = 0 } } }
+			if = {
+				limit = { OR = { check_variable = { v = roc_chi } check_variable = { v = roc_tai } NOT = { country_exists = var:v } } }
+				set_variable = { auto_influence_array^i = 0 }
+			}
+			else = { add_to_variable = { auto_influence_users = 1 } }
+		}
+	}
+	update_auto_influence_array = yes
 }
 
 # Scope: 新 CHI。复制台湾影响力时带过来的“CHI/TAI 影响自己”，并入国内影响力
