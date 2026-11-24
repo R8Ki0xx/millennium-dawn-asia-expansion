@@ -7,7 +7,7 @@ shared_focus = {
 	icon = one_china_policy
 	x = 6
 	y = 18
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	available = { has_completed_focus = TAI_status_quo }
 	completion_reward = {
@@ -23,7 +23,7 @@ shared_focus = {
 	icon = diplomacy
 	x = 3
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_k0 }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -40,7 +40,7 @@ shared_focus = {
 	icon = economic_banks
 	x = 6
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_k0 }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -56,7 +56,7 @@ shared_focus = {
 	icon = Generic_Intelligence_Gathering
 	x = 9
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_k0 }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -72,7 +72,7 @@ shared_focus = {
 	icon = trade_with_china
 	x = 3
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k1a }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -89,7 +89,7 @@ shared_focus = {
 	icon = factory_planning
 	x = 6
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k1b }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -105,7 +105,7 @@ shared_focus = {
 	icon = national_sec_tai
 	x = 9
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k1c }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -121,7 +121,7 @@ shared_focus = {
 	icon = legislative_yuan
 	x = 6
 	y = 21
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k2a }
 	prerequisite = { focus = TAI_n_k2b }
 	prerequisite = { focus = TAI_n_k2c }
@@ -139,7 +139,7 @@ shared_focus = {
 	icon = peace
 	x = 4
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k3 }
 	mutually_exclusive = { focus = TAI_n_k4r }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
@@ -156,7 +156,7 @@ shared_focus = {
 	icon = taiwan_garrison_command
 	x = 8
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k3 }
 	mutually_exclusive = { focus = TAI_n_k4l }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
@@ -173,7 +173,7 @@ shared_focus = {
 	icon = border_patrol_increase
 	x = 6
 	y = 23
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_k4l focus = TAI_n_k4r }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -189,7 +189,7 @@ shared_focus = {
 	icon = constitution
 	x = 6
 	y = 24
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_k5 }
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -208,7 +208,7 @@ shared_focus = {
 	icon = home_defense
 	x = 16
 	y = 18
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_ARMY }
 	available = { has_completed_focus = TAI_porcupine_strategy }
 	completion_reward = {
@@ -224,7 +224,7 @@ shared_focus = {
 	icon = guided_missile2
 	x = 13
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_f0 }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -240,7 +240,7 @@ shared_focus = {
 	icon = drone2
 	x = 16
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_f0 }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -256,7 +256,7 @@ shared_focus = {
 	icon = army_mobilisation
 	x = 19
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_f0 }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -272,7 +272,7 @@ shared_focus = {
 	icon = SAM
 	x = 13
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f1a }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -288,7 +288,7 @@ shared_focus = {
 	icon = army_military_industryy
 	x = 16
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f1b }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -304,7 +304,7 @@ shared_focus = {
 	icon = army_recruting
 	x = 19
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f1c }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -320,7 +320,7 @@ shared_focus = {
 	icon = military_fort2
 	x = 16
 	y = 21
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f2a }
 	prerequisite = { focus = TAI_n_f2b }
 	prerequisite = { focus = TAI_n_f2c }
@@ -338,7 +338,7 @@ shared_focus = {
 	icon = taiwan_army_glory
 	x = 14
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f3 }
 	mutually_exclusive = { focus = TAI_n_f4r }
 	search_filters = { FOCUS_FILTER_ARMY }
@@ -355,7 +355,7 @@ shared_focus = {
 	icon = TAI_forces
 	x = 18
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f3 }
 	mutually_exclusive = { focus = TAI_n_f4l }
 	search_filters = { FOCUS_FILTER_ARMY }
@@ -372,7 +372,7 @@ shared_focus = {
 	icon = balance_buget
 	x = 16
 	y = 23
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_f4l focus = TAI_n_f4r }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -388,7 +388,7 @@ shared_focus = {
 	icon = roc_landarmy
 	x = 16
 	y = 24
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_f5 }
 	search_filters = { FOCUS_FILTER_ARMY }
 	completion_reward = {
@@ -407,7 +407,7 @@ shared_focus = {
 	icon = Focus_Parliament_Constitution
 	x = 26
 	y = 18
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	available = { has_completed_focus = TAI_civil_society }
 	completion_reward = {
@@ -423,7 +423,7 @@ shared_focus = {
 	icon = democracy_genericus
 	x = 23
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_m0 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -440,7 +440,7 @@ shared_focus = {
 	icon = pensions_increase
 	x = 26
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_m0 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -456,7 +456,7 @@ shared_focus = {
 	icon = judiciary
 	x = 29
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_m0 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -472,7 +472,7 @@ shared_focus = {
 	icon = family
 	x = 23
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m1a }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -488,7 +488,7 @@ shared_focus = {
 	icon = generic_healthcare
 	x = 26
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m1b }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -504,7 +504,7 @@ shared_focus = {
 	icon = generic_housing
 	x = 29
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m1c }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -520,7 +520,7 @@ shared_focus = {
 	icon = Generic_Religious_Unity
 	x = 26
 	y = 21
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m2a }
 	prerequisite = { focus = TAI_n_m2b }
 	prerequisite = { focus = TAI_n_m2c }
@@ -538,7 +538,7 @@ shared_focus = {
 	icon = focus_generic_education
 	x = 24
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m3 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -554,7 +554,7 @@ shared_focus = {
 	icon = economic_it
 	x = 28
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m3 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -570,7 +570,7 @@ shared_focus = {
 	icon = local_management
 	x = 26
 	y = 23
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_m4l }
 	prerequisite = { focus = TAI_n_m4r }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -587,7 +587,7 @@ shared_focus = {
 	icon = democracy3
 	x = 26
 	y = 24
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_m5 }
 	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -606,7 +606,7 @@ shared_focus = {
 	icon = economic_prosperity
 	x = 36
 	y = 18
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	available = { has_completed_focus = TAI_status_quo }
 	completion_reward = {
@@ -622,7 +622,7 @@ shared_focus = {
 	icon = trade
 	x = 33
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_e0 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -638,7 +638,7 @@ shared_focus = {
 	icon = generic_solar
 	x = 36
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_e0 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -654,7 +654,7 @@ shared_focus = {
 	icon = economic_water_supply
 	x = 39
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_e0 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -670,7 +670,7 @@ shared_focus = {
 	icon = trade_with_america
 	x = 33
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e1a }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -687,7 +687,7 @@ shared_focus = {
 	icon = wto
 	x = 36
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e1b }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -703,7 +703,7 @@ shared_focus = {
 	icon = align_to_japan
 	x = 39
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e1c }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -720,7 +720,7 @@ shared_focus = {
 	icon = TAI_tsmc
 	x = 36
 	y = 21
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e2a }
 	prerequisite = { focus = TAI_n_e2b }
 	prerequisite = { focus = TAI_n_e2c }
@@ -739,7 +739,7 @@ shared_focus = {
 	icon = industrialization
 	x = 34
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e3 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -755,7 +755,7 @@ shared_focus = {
 	icon = business_man
 	x = 38
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e3 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -771,7 +771,7 @@ shared_focus = {
 	icon = merge_plants
 	x = 36
 	y = 23
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_e4l }
 	prerequisite = { focus = TAI_n_e4r }
 	search_filters = { FOCUS_FILTER_ECONOMY }
@@ -789,7 +789,7 @@ shared_focus = {
 	icon = sustainable_development
 	x = 36
 	y = 24
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_e5 }
 	search_filters = { FOCUS_FILTER_ECONOMY }
 	completion_reward = {
@@ -807,7 +807,7 @@ shared_focus = {
 	icon = diplomacy
 	x = 46
 	y = 18
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	available = { has_completed_focus = TAI_values_diplomacy }
 	completion_reward = {
@@ -823,7 +823,7 @@ shared_focus = {
 	icon = align_to_europe
 	x = 43
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_i0 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -841,7 +841,7 @@ shared_focus = {
 	icon = align_to_japan2
 	x = 46
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_i0 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -857,7 +857,7 @@ shared_focus = {
 	icon = usa_taiwan_recognize
 	x = 49
 	y = 19
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_i0 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -874,7 +874,7 @@ shared_focus = {
 	icon = befriend_central_america
 	x = 43
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i1a }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -890,7 +890,7 @@ shared_focus = {
 	icon = pacific_islands_focus
 	x = 46
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i1b }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -907,7 +907,7 @@ shared_focus = {
 	icon = united_nations
 	x = 49
 	y = 20
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i1c }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -923,7 +923,7 @@ shared_focus = {
 	icon = Japan_Helping_Hand
 	x = 46
 	y = 21
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i2a }
 	prerequisite = { focus = TAI_n_i2b }
 	prerequisite = { focus = TAI_n_i2c }
@@ -942,7 +942,7 @@ shared_focus = {
 	icon = economic_internet
 	x = 44
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i3 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -958,7 +958,7 @@ shared_focus = {
 	icon = china_lighthouse_of_democracy
 	x = 48
 	y = 22
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i3 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -974,7 +974,7 @@ shared_focus = {
 	icon = USA_millennium_media
 	x = 46
 	y = 23
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_i4l }
 	prerequisite = { focus = TAI_n_i4r }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -991,7 +991,7 @@ shared_focus = {
 	icon = global_community
 	x = 46
 	y = 24
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_i5 }
 	search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 	completion_reward = {
@@ -1010,7 +1010,7 @@ shared_focus = {
 	icon = roc_kmt_china
 	x = 8
 	y = 27
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 1 } }
 	completion_reward = {
@@ -1026,7 +1026,7 @@ shared_focus = {
 	icon = export_economy
 	x = 5
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_b0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1042,7 +1042,7 @@ shared_focus = {
 	icon = trade_with_china
 	x = 8
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_b0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1058,7 +1058,7 @@ shared_focus = {
 	icon = balance_buget
 	x = 11
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_b0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1074,7 +1074,7 @@ shared_focus = {
 	icon = business_man
 	x = 5
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b1a }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1090,7 +1090,7 @@ shared_focus = {
 	icon = china_crh
 	x = 8
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b1b }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1107,7 +1107,7 @@ shared_focus = {
 	icon = pensions_increase
 	x = 11
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b1c }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1123,7 +1123,7 @@ shared_focus = {
 	icon = democracy_genericus
 	x = 8
 	y = 30
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b2a }
 	prerequisite = { focus = TAI_n_b2b }
 	prerequisite = { focus = TAI_n_b2c }
@@ -1141,7 +1141,7 @@ shared_focus = {
 	icon = diplomacy
 	x = 6
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b3 }
 	mutually_exclusive = { focus = TAI_n_b4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1158,7 +1158,7 @@ shared_focus = {
 	icon = military_fort2
 	x = 10
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b3 }
 	mutually_exclusive = { focus = TAI_n_b4l }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1175,7 +1175,7 @@ shared_focus = {
 	icon = asean_mutual_trade
 	x = 8
 	y = 32
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b4l focus = TAI_n_b4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1191,7 +1191,7 @@ shared_focus = {
 	icon = economic_prosperity
 	x = 8
 	y = 33
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_b5 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1210,7 +1210,7 @@ shared_focus = {
 	icon = TAI_dpp
 	x = 26
 	y = 27
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 2 } }
 	completion_reward = {
@@ -1226,7 +1226,7 @@ shared_focus = {
 	icon = Generic_Ripping_Papers
 	x = 23
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_g0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1243,7 +1243,7 @@ shared_focus = {
 	icon = generic_solar
 	x = 26
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_g0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1259,7 +1259,7 @@ shared_focus = {
 	icon = construction
 	x = 29
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_g0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1275,7 +1275,7 @@ shared_focus = {
 	icon = Generic_Submarine1
 	x = 23
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g1a }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1291,7 +1291,7 @@ shared_focus = {
 	icon = trade_with_asean
 	x = 26
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g1b }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1308,7 +1308,7 @@ shared_focus = {
 	icon = Generic_Working_Class_Family
 	x = 29
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g1c }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1325,7 +1325,7 @@ shared_focus = {
 	icon = focus_generic_freedom_council
 	x = 26
 	y = 30
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g2a }
 	prerequisite = { focus = TAI_n_g2b }
 	prerequisite = { focus = TAI_n_g2c }
@@ -1343,7 +1343,7 @@ shared_focus = {
 	icon = diplomatic_treaty
 	x = 24
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g3 }
 	mutually_exclusive = { focus = TAI_n_g4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1360,7 +1360,7 @@ shared_focus = {
 	icon = constitution
 	x = 28
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g3 }
 	mutually_exclusive = { focus = TAI_n_g4l }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1378,7 +1378,7 @@ shared_focus = {
 	icon = china_lighthouse_of_democracy
 	x = 26
 	y = 32
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_g4l focus = TAI_n_g4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1395,7 +1395,7 @@ shared_focus = {
 	icon = democracy3
 	x = 26
 	y = 33
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_g5 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1414,7 +1414,7 @@ shared_focus = {
 	icon = TAI_pfp
 	x = 44
 	y = 27
-	cost = 5
+	cost = 4
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	available = { has_completed_focus = TAI_status_quo check_variable = { ruling_party = 14 } }
 	completion_reward = {
@@ -1430,7 +1430,7 @@ shared_focus = {
 	icon = union_negotiations
 	x = 41
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_p0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1446,7 +1446,7 @@ shared_focus = {
 	icon = legislative_yuan
 	x = 44
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_p0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1462,7 +1462,7 @@ shared_focus = {
 	icon = economic_it
 	x = 47
 	y = 28
-	cost = 5
+	cost = 4
 	prerequisite = { focus = TAI_n_p0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1478,7 +1478,7 @@ shared_focus = {
 	icon = focus_generic_court
 	x = 41
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p1a }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1494,7 +1494,7 @@ shared_focus = {
 	icon = peace
 	x = 44
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p1b }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1510,7 +1510,7 @@ shared_focus = {
 	icon = nuclear_rector
 	x = 47
 	y = 29
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p1c }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1526,7 +1526,7 @@ shared_focus = {
 	icon = social_democracy
 	x = 44
 	y = 30
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p2a }
 	prerequisite = { focus = TAI_n_p2b }
 	prerequisite = { focus = TAI_n_p2c }
@@ -1544,7 +1544,7 @@ shared_focus = {
 	icon = local_management
 	x = 42
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p3 }
 	mutually_exclusive = { focus = TAI_n_p4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1561,7 +1561,7 @@ shared_focus = {
 	icon = focus_generic_improve_the_administration
 	x = 46
 	y = 31
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p3 }
 	mutually_exclusive = { focus = TAI_n_p4l }
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1578,7 +1578,7 @@ shared_focus = {
 	icon = treaty
 	x = 44
 	y = 32
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_p4l focus = TAI_n_p4r }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1594,7 +1594,7 @@ shared_focus = {
 	icon = roc21_szc_pan_the_non_party_cabine_c97b9992
 	x = 44
 	y = 33
-	cost = 10
+	cost = 7
 	prerequisite = { focus = TAI_n_p5 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1613,7 +1613,7 @@ shared_focus = {
 	icon = democratic_stability
 	x = 26
 	y = 35
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_b6 focus = TAI_n_g6 focus = TAI_n_p6 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1630,7 +1630,7 @@ shared_focus = {
 	icon = Election_graphics
 	x = 23
 	y = 36
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_z0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1647,7 +1647,7 @@ shared_focus = {
 	icon = democracy_genericus
 	x = 26
 	y = 36
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_z0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {
@@ -1663,7 +1663,7 @@ shared_focus = {
 	icon = welfare
 	x = 29
 	y = 36
-	cost = 7
+	cost = 5
 	prerequisite = { focus = TAI_n_z0 }
 	search_filters = { FOCUS_FILTER_POLITICAL }
 	completion_reward = {

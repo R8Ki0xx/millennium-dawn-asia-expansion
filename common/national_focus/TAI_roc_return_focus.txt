@@ -188,7 +188,7 @@ focus_tree = {
 		icon = TAI_tsmc
 		x = 6
 		y = 0
-		cost = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_silicon_island"
@@ -205,7 +205,7 @@ focus_tree = {
 		icon = TAI_umc
 		x = 3
 		y = 1
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_silicon_island }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -237,7 +237,7 @@ focus_tree = {
 		icon = TAI_tires
 		x = 9
 		y = 1
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_silicon_island }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
@@ -271,7 +271,7 @@ focus_tree = {
 		icon = TAI_tsmc
 		x = 1
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_hsinchu_expansion }
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -290,7 +290,7 @@ focus_tree = {
 		icon = TAI_dlink
 		x = 4
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_hsinchu_expansion }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -319,7 +319,7 @@ focus_tree = {
 		icon = TAI_auo
 		x = 0
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_sacred_mountain }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -342,7 +342,7 @@ focus_tree = {
 		icon = TAI_umc
 		x = 2
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_sacred_mountain }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -365,7 +365,7 @@ focus_tree = {
 		icon = computer
 		x = 4
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_broadband_island }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -383,7 +383,7 @@ focus_tree = {
 		icon = blr_foxcon
 		x = 0
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_panel_industry }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -411,7 +411,7 @@ focus_tree = {
 		icon = focus_chips
 		x = 2
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_foundry_alliance }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -428,7 +428,7 @@ focus_tree = {
 		icon = TAI_htc
 		x = 4
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_e_government }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -450,7 +450,7 @@ focus_tree = {
 		icon = pharma_drugs
 		x = 1
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_pc_kingdom focus = TAI_ic_design }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -469,7 +469,7 @@ focus_tree = {
 		icon = TAI_videocards
 		x = 3
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_ic_design focus = TAI_mobile_taiwan }
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		completion_reward = {
@@ -487,7 +487,7 @@ focus_tree = {
 		icon = TAI_videocards
 		x = 2
 		y = 6
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_biotech focus = TAI_digital_content }
 		prerequisite = { focus = TAI_foundry_alliance }
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -506,7 +506,7 @@ focus_tree = {
 		icon = prc_railroad
 		x = 6
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_ten_new_constructions }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -542,7 +542,7 @@ focus_tree = {
 		icon = tai_power_company
 		x = 8
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_ten_new_constructions }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -568,7 +568,7 @@ focus_tree = {
 		icon = Generic_Train
 		x = 10
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_ten_new_constructions }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -593,7 +593,7 @@ focus_tree = {
 		icon = civitavecchia_port
 		x = 7
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_high_speed_rail focus = TAI_fourth_nuclear_plant }
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TRADE }
 		completion_reward = {
@@ -616,7 +616,7 @@ focus_tree = {
 		icon = modern_refinery_industry
 		x = 9
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_fourth_nuclear_plant }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -644,7 +644,7 @@ focus_tree = {
 		icon = windmills
 		x = 11
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_mrt_networks }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -661,7 +661,7 @@ focus_tree = {
 		icon = chinese_glory
 		x = 8
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_port_expansion focus = TAI_petrochemical }
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		completion_reward = {
@@ -681,7 +681,7 @@ focus_tree = {
 		icon = economic_tourism
 		x = 11
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_renewables focus = TAI_mrt_networks }
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		completion_reward = {
@@ -700,7 +700,7 @@ focus_tree = {
 		icon = trade_with_taiwan
 		x = 6
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_second_financial_reform }
 		mutually_exclusive = { focus = TAI_go_south_policy }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
@@ -727,7 +727,7 @@ focus_tree = {
 		icon = south_asian_tiger
 		x = 10
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_second_financial_reform }
 		mutually_exclusive = { focus = TAI_three_links }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
@@ -747,7 +747,7 @@ focus_tree = {
 		icon = TAI_fruits
 		x = 12
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_tourism_doubling }
 		search_filters = { FOCUS_FILTER_ECONOMY }
 		completion_reward = {
@@ -766,7 +766,7 @@ focus_tree = {
 		icon = trade_with_china
 		x = 6
 		y = 6
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_three_links }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
 		completion_reward = {
@@ -792,7 +792,7 @@ focus_tree = {
 		icon = trade_with_asean
 		x = 10
 		y = 6
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_go_south_policy }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE }
 		completion_reward = {
@@ -811,7 +811,7 @@ focus_tree = {
 		icon = generic_healthcare
 		x = 12
 		y = 6
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_quality_agriculture }
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -829,7 +829,7 @@ focus_tree = {
 		icon = TAI_asus
 		x = 8
 		y = 7
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_cross_strait_ecfa focus = TAI_asean_fta }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -860,7 +860,7 @@ focus_tree = {
 		icon = economic_prosperity
 		x = 5
 		y = 8
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_asia_pacific_hub }
 		prerequisite = { focus = TAI_silicon_shield }
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_INDUSTRY }
@@ -888,7 +888,7 @@ focus_tree = {
 		icon = TAI_kmt
 		x = 22
 		y = 0
-		cost = 5
+		cost = 4
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_new_millennium_roc"
@@ -905,7 +905,7 @@ focus_tree = {
 		icon = one_china_policy_kmt
 		x = 20
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_new_millennium_roc }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -923,7 +923,7 @@ focus_tree = {
 		icon = judicial_yuan
 		x = 24
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_new_millennium_roc }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -943,7 +943,7 @@ focus_tree = {
 		icon = focus_CHI_restore_the_old_republic
 		x = 18
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_cross_strait_crossroads }
 		mutually_exclusive = { focus = TAI_taiwan_first }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -980,7 +980,7 @@ focus_tree = {
 		icon = TAI_dpp
 		x = 26
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_cross_strait_crossroads }
 		mutually_exclusive = { focus = TAI_constitutional_orthodoxy }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1007,7 +1007,7 @@ focus_tree = {
 		icon = legislative_yuan
 		x = 22
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_cross_strait_crossroads focus = TAI_judicial_reform }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1024,7 +1024,7 @@ focus_tree = {
 		icon = Focus_Parliament_Constitution
 		x = 22
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_legislative_reform }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1042,7 +1042,7 @@ focus_tree = {
 		icon = adopt_the_peoples_constitution
 		x = 22
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_legislative_halving }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1059,7 +1059,7 @@ focus_tree = {
 		icon = civil_service
 		x = 22
 		y = 6
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_seventh_amendment }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CORRUPTION }
 		completion_reward = {
@@ -1079,7 +1079,7 @@ focus_tree = {
 		icon = democratic_stability
 		x = 22
 		y = 7
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_sunshine_laws }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1096,7 +1096,7 @@ focus_tree = {
 		icon = focus_PRC_adopt_sun_yat_sens_principles
 		x = 16
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_constitutional_orthodoxy }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1116,7 +1116,7 @@ focus_tree = {
 		icon = TAI_pfp
 		x = 18
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_constitutional_orthodoxy }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1137,7 +1137,7 @@ focus_tree = {
 		icon = TAI_kmt
 		x = 20
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_constitutional_orthodoxy }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_CORRUPTION }
 		completion_reward = {
@@ -1162,7 +1162,7 @@ focus_tree = {
 		icon = TAI_kmt
 		x = 16
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_three_principles_revival }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1183,7 +1183,7 @@ focus_tree = {
 		icon = control_yuan
 		x = 18
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_three_principles_revival focus = TAI_lien_soong_alliance }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1202,7 +1202,7 @@ focus_tree = {
 		icon = legislative_yuan
 		x = 20
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_purge_black_gold }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1220,7 +1220,7 @@ focus_tree = {
 		icon = treasure_chest
 		x = 15
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_kmt_party_reform }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1243,7 +1243,7 @@ focus_tree = {
 		icon = focus_CHI_cradle_of_civilization
 		x = 17
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_kmt_party_reform focus = TAI_strengthen_unification_council }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1262,7 +1262,7 @@ focus_tree = {
 		icon = national_sec_tai
 		x = 20
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_five_yuan_reform }
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1280,7 +1280,7 @@ focus_tree = {
 		icon = focus_generic_improve_the_administration
 		x = 18
 		y = 6
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_strengthen_unification_council }
 		prerequisite = { focus = TAI_five_yuan_reform }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1301,7 +1301,7 @@ focus_tree = {
 		icon = national_sec_tai
 		x = 25
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_taiwan_first }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1319,7 +1319,7 @@ focus_tree = {
 		icon = TAI_np
 		x = 27
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_taiwan_first }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1341,7 +1341,7 @@ focus_tree = {
 		icon = Election_graphics
 		x = 29
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_taiwan_first }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1359,7 +1359,7 @@ focus_tree = {
 		icon = TAI_forces
 		x = 25
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_status_quo }
 		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
@@ -1382,7 +1382,7 @@ focus_tree = {
 		icon = align_to_taiwan
 		x = 27
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_transitional_justice }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -1400,7 +1400,7 @@ focus_tree = {
 		icon = democracy_genericus
 		x = 29
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_referendum_act }
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1417,7 +1417,7 @@ focus_tree = {
 		icon = home_defense
 		x = 25
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_porcupine_strategy }
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
@@ -1435,7 +1435,7 @@ focus_tree = {
 		icon = family
 		x = 29
 		y = 5
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_civil_society }
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
@@ -1452,7 +1452,7 @@ focus_tree = {
 		icon = TAI_soldier
 		x = 27
 		y = 6
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_whole_society_defense }
 		prerequisite = { focus = TAI_values_diplomacy }
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
@@ -1471,7 +1471,7 @@ focus_tree = {
 		icon = usa_taiwan_sb_oon
 		x = 18
 		y = 7
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_guidelines_for_unification }
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -1541,7 +1541,7 @@ focus_tree = {
 		icon = roc_marine_corps
 		x = 19
 		y = 8
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_national_glory_plan }
 		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -1711,7 +1711,7 @@ focus_tree = {
 		icon = roc_navyforce
 		x = 21
 		y = 9
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_amphibious_corps }
 		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -1766,7 +1766,7 @@ focus_tree = {
 		icon = one_china_policy
 		x = 13
 		y = 10
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_mainland_democracy_support }
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_FOREIGN_POLICY }
 		available = {
@@ -1798,7 +1798,7 @@ focus_tree = {
 		icon = focus_CHI_guerrilla_warfare
 		x = 15
 		y = 10
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_mainland_democracy_support }
 		prerequisite = { focus = TAI_overseas_mobilization }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1842,7 +1842,7 @@ focus_tree = {
 		icon = TAI_civilwar_legacy
 		x = 19
 		y = 10
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_kinmen_matsu_bastion }
 		prerequisite = { focus = TAI_air_sea_superiority }
 		will_lead_to_war_with = CHI
@@ -2268,7 +2268,7 @@ focus_tree = {
 		icon = focus_CHI_cradle_of_civilization
 		x = 15
 		y = 16
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_liberate_beiping focus = TAI_peaceful_unification_talks }
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 		available = {
@@ -2294,7 +2294,7 @@ focus_tree = {
 		icon = TAI_forces
 		x = 37
 		y = 0
-		cost = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_armed_forces_modernization"
@@ -2316,7 +2316,7 @@ focus_tree = {
 		icon = army_reform
 		x = 33
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_armed_forces_modernization }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2339,7 +2339,7 @@ focus_tree = {
 		icon = TAI_navy_forces
 		x = 37
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_armed_forces_modernization }
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2362,7 +2362,7 @@ focus_tree = {
 		icon = TAI_air_forces
 		x = 41
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_armed_forces_modernization }
 		search_filters = { FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -2385,7 +2385,7 @@ focus_tree = {
 		icon = taiwan_army_glory
 		x = 32
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_army_reform }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2411,7 +2411,7 @@ focus_tree = {
 		icon = TAI_trifle
 		x = 34
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_army_reform }
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
@@ -2432,7 +2432,7 @@ focus_tree = {
 		icon = roc_marine_corps
 		x = 31
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_han_kuang_exercise }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2459,7 +2459,7 @@ focus_tree = {
 		icon = Armored_Troops
 		x = 33
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_han_kuang_exercise focus = TAI_conscription_reform }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2483,7 +2483,7 @@ focus_tree = {
 		icon = Generic_Attack_Helicopter
 		x = 35
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_conscription_reform }
 		search_filters = { FOCUS_FILTER_ARMY FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -2507,7 +2507,7 @@ focus_tree = {
 		icon = vampu_academy
 		x = 32
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_marine_corps_expansion focus = TAI_armor_modernization }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2532,7 +2532,7 @@ focus_tree = {
 		icon = army_rzso
 		x = 34
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_armor_modernization focus = TAI_army_aviation }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2556,7 +2556,7 @@ focus_tree = {
 		icon = army_doctrine
 		x = 33
 		y = 5
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_whampoa_spirit }
 		prerequisite = { focus = TAI_special_forces }
 		search_filters = { FOCUS_FILTER_ARMY }
@@ -2580,7 +2580,7 @@ focus_tree = {
 		icon = Peoples_Liberation_Rocket_Force
 		x = 36
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_navy_modernization }
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2602,7 +2602,7 @@ focus_tree = {
 		icon = destroyers
 		x = 38
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_navy_modernization }
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2628,7 +2628,7 @@ focus_tree = {
 		icon = Generic_Submarine1
 		x = 36
 		y = 3
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_hsiung_feng_missiles }
 		search_filters = { FOCUS_FILTER_NAVY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -2659,7 +2659,7 @@ focus_tree = {
 		icon = frigates
 		x = 38
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_kidd_destroyers }
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2682,7 +2682,7 @@ focus_tree = {
 		icon = border_patrol_increase
 		x = 37
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_indigenous_submarine focus = TAI_stealth_corvettes }
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2706,7 +2706,7 @@ focus_tree = {
 		icon = naval_doctrine
 		x = 37
 		y = 5
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_coast_guard_administration }
 		search_filters = { FOCUS_FILTER_NAVY }
 		completion_reward = {
@@ -2731,7 +2731,7 @@ focus_tree = {
 		icon = taiwan_plane_upg
 		x = 40
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_air_force_modernization }
 		search_filters = { FOCUS_FILTER_AIRCRAFT FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -2755,7 +2755,7 @@ focus_tree = {
 		icon = F16
 		x = 42
 		y = 2
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_air_force_modernization }
 		search_filters = { FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -2781,7 +2781,7 @@ focus_tree = {
 		icon = TAI_air_forces
 		x = 39
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_idf_upgrade }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -2810,7 +2810,7 @@ focus_tree = {
 		icon = airforce_base_1
 		x = 41
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_idf_upgrade focus = TAI_f16_upgrade }
 		search_filters = { FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -2833,7 +2833,7 @@ focus_tree = {
 		icon = drone
 		x = 43
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_f16_upgrade }
 		search_filters = { FOCUS_FILTER_AIRCRAFT FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -2857,7 +2857,7 @@ focus_tree = {
 		icon = air_superiority
 		x = 41
 		y = 4
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_tien_kung_air_defense focus = TAI_air_base_hardening focus = TAI_drone_program }
 		search_filters = { FOCUS_FILTER_AIRCRAFT }
 		completion_reward = {
@@ -2881,7 +2881,7 @@ focus_tree = {
 		icon = guided_missile
 		x = 40
 		y = 5
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_air_superiority_doctrine }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -2898,7 +2898,7 @@ focus_tree = {
 		icon = TAI_forces
 		x = 37
 		y = 6
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_mobile_defense_doctrine }
 		prerequisite = { focus = TAI_sea_control_doctrine }
 		prerequisite = { focus = TAI_air_superiority_doctrine }
@@ -2925,7 +2925,7 @@ focus_tree = {
 		icon = military_fort2
 		x = 35
 		y = 7
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_joint_operations }
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -2961,7 +2961,7 @@ focus_tree = {
 		icon = industry_military
 		x = 39
 		y = 7
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_joint_operations }
 		prerequisite = { focus = TAI_long_range_strike }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2995,7 +2995,7 @@ focus_tree = {
 		icon = army_cyberwar
 		x = 35
 		y = 8
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_iron_bastion }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -3012,7 +3012,7 @@ focus_tree = {
 		icon = research
 		x = 39
 		y = 8
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_defense_autonomy }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -3031,7 +3031,7 @@ focus_tree = {
 		icon = diplomacy
 		x = 49
 		y = 0
-		cost = 7
+		cost = 5
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TAI_pragmatic_diplomacy"
@@ -3051,7 +3051,7 @@ focus_tree = {
 		icon = trade_with_taiwan
 		x = 46
 		y = 1
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_pragmatic_diplomacy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EQUIPMENT }
 		completion_reward = {
@@ -3081,7 +3081,7 @@ focus_tree = {
 		icon = align_to_japan
 		x = 49
 		y = 1
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_pragmatic_diplomacy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3100,7 +3100,7 @@ focus_tree = {
 		icon = major_alliance
 		x = 52
 		y = 1
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_pragmatic_diplomacy }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3120,7 +3120,7 @@ focus_tree = {
 		icon = align_to_america
 		x = 45
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_us_arms_sales }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3138,7 +3138,7 @@ focus_tree = {
 		icon = trade_with_america
 		x = 47
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_us_arms_sales }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_TRADE }
 		completion_reward = {
@@ -3157,7 +3157,7 @@ focus_tree = {
 		icon = goal_JAP_protect_science
 		x = 49
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_japan_partnership }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -3175,7 +3175,7 @@ focus_tree = {
 		icon = befriend_central_america
 		x = 51
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_secure_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3195,7 +3195,7 @@ focus_tree = {
 		icon = pacific_islands_focus
 		x = 53
 		y = 2
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_secure_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3214,7 +3214,7 @@ focus_tree = {
 		icon = military_deal
 		x = 46
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_taiwan_relations_act focus = TAI_us_trade_talks }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ARMY }
 		completion_reward = {
@@ -3240,7 +3240,7 @@ focus_tree = {
 		icon = chinese_nationalism
 		x = 48
 		y = 3
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_us_trade_talks focus = TAI_japan_tech }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3259,7 +3259,7 @@ focus_tree = {
 		icon = trade_with_europe
 		x = 50
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_japan_tech focus = TAI_central_america_aid }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3276,7 +3276,7 @@ focus_tree = {
 		icon = africa
 		x = 52
 		y = 3
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_central_america_aid focus = TAI_pacific_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3293,7 +3293,7 @@ focus_tree = {
 		icon = wto
 		x = 47
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_us_military_exchange focus = TAI_overseas_chinese_affairs }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_ECONOMY }
 		completion_reward = {
@@ -3315,7 +3315,7 @@ focus_tree = {
 		icon = focus_CHI_the_greater_game
 		x = 49
 		y = 4
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAI_overseas_chinese_affairs focus = TAI_europe_relations }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3335,7 +3335,7 @@ focus_tree = {
 		icon = united_nations
 		x = 51
 		y = 4
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_europe_relations focus = TAI_africa_allies }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3357,7 +3357,7 @@ focus_tree = {
 		icon = alliance_USA_CHI
 		x = 47
 		y = 5
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_wto_accession }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		available = {
@@ -3379,7 +3379,7 @@ focus_tree = {
 		icon = global_community
 		x = 51
 		y = 5
-		cost = 10
+		cost = 7
 		prerequisite = { focus = TAI_international_space focus = TAI_who_bid }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 		completion_reward = {
@@ -3411,7 +3411,7 @@ focus_tree = {
 		icon = roc29_usa_america_economic_miracle_75227451
 		x = 30
 		y = 6
-		cost = 5
+		cost = 4
 		prerequisite = { focus = TAI_status_quo }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3431,7 +3431,7 @@ focus_tree = {
 		icon = roc29_szc_ycp_from_party_to_govern_f7a6cbd9
 		x = 30
 		y = 7
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_root }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3451,7 +3451,7 @@ focus_tree = {
 		icon = roc29_focus_per_constitutional_mon_10cc9243
 		x = 27
 		y = 8
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e1 }
 		mutually_exclusive = { focus = TAIP_e1_kmt focus = TAIP_e1_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3472,7 +3472,7 @@ focus_tree = {
 		icon = roc29_kmt_the_party_state_ba27722c
 		x = 30
 		y = 8
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e1 }
 		mutually_exclusive = { focus = TAIP_e1_dpp focus = TAIP_e1_pfp }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -3496,7 +3496,7 @@ focus_tree = {
 		icon = TAI_pfp
 		x = 33
 		y = 8
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e1 }
 		mutually_exclusive = { focus = TAIP_e1_dpp focus = TAIP_e1_kmt }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3520,7 +3520,7 @@ focus_tree = {
 		icon = roc29_kmt_deepen_the_party_state_216709c1
 		x = 30
 		y = 9
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e1_dpp focus = TAIP_e1_kmt focus = TAIP_e1_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3541,7 +3541,7 @@ focus_tree = {
 		icon = roc29_jap_law_order_011b374a
 		x = 27
 		y = 10
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e2 }
 		mutually_exclusive = { focus = TAIP_e2_kmt focus = TAIP_e2_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3567,7 +3567,7 @@ focus_tree = {
 		icon = roc29_tourism_development_a6fba535
 		x = 30
 		y = 10
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e2 }
 		mutually_exclusive = { focus = TAIP_e2_dpp focus = TAIP_e2_pfp }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3593,7 +3593,7 @@ focus_tree = {
 		icon = TAI_pfp
 		x = 33
 		y = 10
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e2 }
 		mutually_exclusive = { focus = TAIP_e2_dpp focus = TAIP_e2_kmt }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3617,7 +3617,7 @@ focus_tree = {
 		icon = roc29_parliament_monarchism_two_pa_30ea34ba
 		x = 30
 		y = 11
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e2_dpp focus = TAIP_e2_kmt focus = TAIP_e2_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3638,7 +3638,7 @@ focus_tree = {
 		icon = roc29_asian_investment_966b8147
 		x = 27
 		y = 12
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e3 }
 		mutually_exclusive = { focus = TAIP_e3_kmt focus = TAIP_e3_pfp }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -3661,7 +3661,7 @@ focus_tree = {
 		icon = roc29_diplomacy_d34ee6f7
 		x = 30
 		y = 12
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e3 }
 		mutually_exclusive = { focus = TAIP_e3_dpp focus = TAIP_e3_pfp }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -3686,7 +3686,7 @@ focus_tree = {
 		icon = Focus_Parliament_Constitution
 		x = 33
 		y = 12
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e3 }
 		mutually_exclusive = { focus = TAIP_e3_dpp focus = TAIP_e3_kmt }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3711,7 +3711,7 @@ focus_tree = {
 		icon = Election_graphics
 		x = 30
 		y = 13
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e3_dpp focus = TAIP_e3_kmt focus = TAIP_e3_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3731,7 +3731,7 @@ focus_tree = {
 		icon = roc29_eng_silicon_glen_7a3f1ca3
 		x = 27
 		y = 14
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e4 }
 		mutually_exclusive = { focus = TAIP_e4_kmt focus = TAIP_e4_pfp }
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3753,7 +3753,7 @@ focus_tree = {
 		icon = roc29_meeting_27be1901
 		x = 30
 		y = 14
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e4 }
 		mutually_exclusive = { focus = TAIP_e4_dpp focus = TAIP_e4_pfp }
 		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
@@ -3779,7 +3779,7 @@ focus_tree = {
 		icon = roc29_ttm_nuclear_power_9b7c2c0e
 		x = 33
 		y = 14
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e4 }
 		mutually_exclusive = { focus = TAIP_e4_dpp focus = TAIP_e4_kmt }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3800,7 +3800,7 @@ focus_tree = {
 		icon = roc29_kmt_50s_taiwan_begin_seperat_1fb3d5d9
 		x = 30
 		y = 15
-		cost = 7
+		cost = 5
 		prerequisite = { focus = TAIP_e4_dpp focus = TAIP_e4_kmt focus = TAIP_e4_pfp }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
