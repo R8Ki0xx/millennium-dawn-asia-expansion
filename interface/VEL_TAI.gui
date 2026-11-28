@@ -124,98 +124,96 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 				size = { width = 800 height = 396 }
 		iconType = { name = "vb_tai_base" spriteType = "GFX_VEL_TAIX_base" position = { x = 0 y = 0 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_0" spriteType = "GFX_VEL_TAIX_1" position = { x = 489 y = 43 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_1" spriteType = "GFX_VEL_TAIX_2" position = { x = 474 y = 34 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_2" spriteType = "GFX_VEL_TAIX_3" position = { x = 507 y = 38 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_3" spriteType = "GFX_VEL_TAIX_4" position = { x = 448 y = 52 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_4" spriteType = "GFX_VEL_TAIX_5" position = { x = 437 y = 70 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_5" spriteType = "GFX_VEL_TAIX_6" position = { x = 448 y = 82 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_6" spriteType = "GFX_VEL_TAIX_7" position = { x = 412 y = 99 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_7" spriteType = "GFX_VEL_TAIX_8" position = { x = 402 y = 122 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_8" spriteType = "GFX_VEL_TAIX_9" position = { x = 380 y = 152 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_9" spriteType = "GFX_VEL_TAIX_10" position = { x = 416 y = 153 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_10" spriteType = "GFX_VEL_TAIX_11" position = { x = 366 y = 181 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_11" spriteType = "GFX_VEL_TAIX_12" position = { x = 366 y = 212 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_12" spriteType = "GFX_VEL_TAIX_13" position = { x = 366 y = 200 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_13" spriteType = "GFX_VEL_TAIX_14" position = { x = 361 y = 231 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_14" spriteType = "GFX_VEL_TAIX_15" position = { x = 373 y = 245 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_15" spriteType = "GFX_VEL_TAIX_16" position = { x = 385 y = 291 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_16" spriteType = "GFX_VEL_TAIX_17" position = { x = 475 y = 82 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_17" spriteType = "GFX_VEL_TAIX_18" position = { x = 462 y = 133 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_18" spriteType = "GFX_VEL_TAIX_19" position = { x = 427 y = 226 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_19" spriteType = "GFX_VEL_TAIX_20" position = { x = 280 y = 190 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_i_20" spriteType = "GFX_VEL_TAIX_21" position = { x = 191 y = 114 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_0" spriteType = "GFX_VEL_TAIX_1" position = { x = 496 y = 44 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_1" spriteType = "GFX_VEL_TAIX_2" position = { x = 480 y = 36 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_2" spriteType = "GFX_VEL_TAIX_3" position = { x = 512 y = 48 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_3" spriteType = "GFX_VEL_TAIX_4" position = { x = 450 y = 53 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_4" spriteType = "GFX_VEL_TAIX_5" position = { x = 440 y = 81 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_5" spriteType = "GFX_VEL_TAIX_6" position = { x = 444 y = 71 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_6" spriteType = "GFX_VEL_TAIX_7" position = { x = 416 y = 92 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_7" spriteType = "GFX_VEL_TAIX_8" position = { x = 403 y = 123 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_8" spriteType = "GFX_VEL_TAIX_9" position = { x = 381 y = 148 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_9" spriteType = "GFX_VEL_TAIX_10" position = { x = 417 y = 144 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_10" spriteType = "GFX_VEL_TAIX_11" position = { x = 370 y = 187 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_11" spriteType = "GFX_VEL_TAIX_12" position = { x = 393 y = 220 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_12" spriteType = "GFX_VEL_TAIX_13" position = { x = 361 y = 207 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_13" spriteType = "GFX_VEL_TAIX_14" position = { x = 362 y = 231 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_14" spriteType = "GFX_VEL_TAIX_15" position = { x = 373 y = 224 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_15" spriteType = "GFX_VEL_TAIX_16" position = { x = 397 y = 285 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_16" spriteType = "GFX_VEL_TAIX_17" position = { x = 482 y = 66 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_17" spriteType = "GFX_VEL_TAIX_18" position = { x = 451 y = 131 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_18" spriteType = "GFX_VEL_TAIX_19" position = { x = 428 y = 228 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_19" spriteType = "GFX_VEL_TAIX_20" position = { x = 308 y = 203 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_i_20" spriteType = "GFX_VEL_TAIX_21" position = { x = 195 y = 115 } alwaystransparent = yes }
 		iconType = { name = "vb_tai_i_21" spriteType = "GFX_VEL_TAIX_22" position = { x = 360 y = 10 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_0" spriteType = "GFX_VEL_TAIX_o_1" position = { x = 485 y = 39 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_1" spriteType = "GFX_VEL_TAIX_o_2" position = { x = 470 y = 30 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_2" spriteType = "GFX_VEL_TAIX_o_3" position = { x = 503 y = 34 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_3" spriteType = "GFX_VEL_TAIX_o_4" position = { x = 444 y = 48 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_4" spriteType = "GFX_VEL_TAIX_o_5" position = { x = 433 y = 66 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_5" spriteType = "GFX_VEL_TAIX_o_6" position = { x = 444 y = 78 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_6" spriteType = "GFX_VEL_TAIX_o_7" position = { x = 408 y = 95 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_7" spriteType = "GFX_VEL_TAIX_o_8" position = { x = 398 y = 118 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_8" spriteType = "GFX_VEL_TAIX_o_9" position = { x = 376 y = 148 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_9" spriteType = "GFX_VEL_TAIX_o_10" position = { x = 412 y = 149 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_10" spriteType = "GFX_VEL_TAIX_o_11" position = { x = 362 y = 177 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_11" spriteType = "GFX_VEL_TAIX_o_12" position = { x = 362 y = 208 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_12" spriteType = "GFX_VEL_TAIX_o_13" position = { x = 362 y = 196 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_13" spriteType = "GFX_VEL_TAIX_o_14" position = { x = 357 y = 227 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_14" spriteType = "GFX_VEL_TAIX_o_15" position = { x = 369 y = 241 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_15" spriteType = "GFX_VEL_TAIX_o_16" position = { x = 381 y = 287 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_16" spriteType = "GFX_VEL_TAIX_o_17" position = { x = 471 y = 78 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_17" spriteType = "GFX_VEL_TAIX_o_18" position = { x = 458 y = 129 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_18" spriteType = "GFX_VEL_TAIX_o_19" position = { x = 423 y = 222 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_19" spriteType = "GFX_VEL_TAIX_o_20" position = { x = 276 y = 186 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_o_20" spriteType = "GFX_VEL_TAIX_o_21" position = { x = 187 y = 110 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_0" spriteType = "GFX_VEL_TAIX_o_1" position = { x = 492 y = 40 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_1" spriteType = "GFX_VEL_TAIX_o_2" position = { x = 476 y = 32 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_2" spriteType = "GFX_VEL_TAIX_o_3" position = { x = 508 y = 44 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_3" spriteType = "GFX_VEL_TAIX_o_4" position = { x = 446 y = 49 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_4" spriteType = "GFX_VEL_TAIX_o_5" position = { x = 436 y = 77 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_5" spriteType = "GFX_VEL_TAIX_o_6" position = { x = 440 y = 67 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_6" spriteType = "GFX_VEL_TAIX_o_7" position = { x = 412 y = 88 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_7" spriteType = "GFX_VEL_TAIX_o_8" position = { x = 399 y = 119 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_8" spriteType = "GFX_VEL_TAIX_o_9" position = { x = 377 y = 144 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_9" spriteType = "GFX_VEL_TAIX_o_10" position = { x = 413 y = 140 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_10" spriteType = "GFX_VEL_TAIX_o_11" position = { x = 366 y = 183 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_11" spriteType = "GFX_VEL_TAIX_o_12" position = { x = 389 y = 216 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_12" spriteType = "GFX_VEL_TAIX_o_13" position = { x = 357 y = 203 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_13" spriteType = "GFX_VEL_TAIX_o_14" position = { x = 358 y = 227 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_14" spriteType = "GFX_VEL_TAIX_o_15" position = { x = 369 y = 220 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_15" spriteType = "GFX_VEL_TAIX_o_16" position = { x = 393 y = 281 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_16" spriteType = "GFX_VEL_TAIX_o_17" position = { x = 478 y = 62 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_17" spriteType = "GFX_VEL_TAIX_o_18" position = { x = 447 y = 127 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_18" spriteType = "GFX_VEL_TAIX_o_19" position = { x = 424 y = 224 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_19" spriteType = "GFX_VEL_TAIX_o_20" position = { x = 304 y = 199 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_o_20" spriteType = "GFX_VEL_TAIX_o_21" position = { x = 191 y = 111 } alwaystransparent = yes }
 		iconType = { name = "vb_tai_o_21" spriteType = "GFX_VEL_TAIX_o_22" position = { x = 356 y = 6 } alwaystransparent = yes }
 		iconType = { name = "vb_tai_labels" spriteType = "GFX_VEL_TAIX_labels" position = { x = 0 y = 0 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_0" spriteType = "GFX_VEL_TAIX_box_1" position = { x = 575 y = 44 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_2" spriteType = "GFX_VEL_TAIX_box_3" position = { x = 575 y = 76 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_3" spriteType = "GFX_VEL_TAIX_box_4" position = { x = 575 y = 108 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_4" spriteType = "GFX_VEL_TAIX_box_5" position = { x = 575 y = 140 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_5" spriteType = "GFX_VEL_TAIX_box_6" position = { x = 575 y = 172 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_8" spriteType = "GFX_VEL_TAIX_box_9" position = { x = 96 y = 158 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_9" spriteType = "GFX_VEL_TAIX_box_10" position = { x = 575 y = 204 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_10" spriteType = "GFX_VEL_TAIX_box_11" position = { x = 96 y = 190 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_11" spriteType = "GFX_VEL_TAIX_box_12" position = { x = 96 y = 254 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_14" spriteType = "GFX_VEL_TAIX_box_15" position = { x = 96 y = 286 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_19" spriteType = "GFX_VEL_TAIX_box_20" position = { x = 96 y = 222 } alwaystransparent = yes }
-		iconType = { name = "vb_tai_b_20" spriteType = "GFX_VEL_TAIX_box_21" position = { x = 96 y = 108 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_0" spriteType = "GFX_VEL_TAIX_box_1" position = { x = 575 y = 71 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_2" spriteType = "GFX_VEL_TAIX_box_3" position = { x = 575 y = 39 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_3" spriteType = "GFX_VEL_TAIX_box_4" position = { x = 575 y = 103 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_4" spriteType = "GFX_VEL_TAIX_box_5" position = { x = 575 y = 135 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_5" spriteType = "GFX_VEL_TAIX_box_6" position = { x = 575 y = 167 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_8" spriteType = "GFX_VEL_TAIX_box_9" position = { x = 96 y = 160 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_9" spriteType = "GFX_VEL_TAIX_box_10" position = { x = 575 y = 199 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_11" spriteType = "GFX_VEL_TAIX_box_12" position = { x = 96 y = 231 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_14" spriteType = "GFX_VEL_TAIX_box_15" position = { x = 96 y = 263 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_19" spriteType = "GFX_VEL_TAIX_box_20" position = { x = 96 y = 199 } alwaystransparent = yes }
+		iconType = { name = "vb_tai_b_20" spriteType = "GFX_VEL_TAIX_box_21" position = { x = 96 y = 107 } alwaystransparent = yes }
 		iconType = { name = "vb_tai_b_21" spriteType = "GFX_VEL_TAIX_box_22" position = { x = 96 y = 8 } alwaystransparent = yes }
-		buttonType = { name = "vb_tai_r_18" spriteType = "GFX_VEL_TAIX_19_hit" position = { x = 427 y = 226 } pdx_tooltip = "VEL_TAI_tt_r19" }
-		buttonType = { name = "vb_tai_r_17" spriteType = "GFX_VEL_TAIX_18_hit" position = { x = 462 y = 133 } pdx_tooltip = "VEL_TAI_tt_r18" }
-		buttonType = { name = "vb_tai_r_15" spriteType = "GFX_VEL_TAIX_16_hit" position = { x = 385 y = 291 } pdx_tooltip = "VEL_TAI_tt_r16" }
-		buttonType = { name = "vb_tai_r_12" spriteType = "GFX_VEL_TAIX_13_hit" position = { x = 366 y = 200 } pdx_tooltip = "VEL_TAI_tt_r13" }
-		buttonType = { name = "vb_tai_r_14" spriteType = "GFX_VEL_TAIX_15_hit" position = { x = 373 y = 245 } pdx_tooltip = "VEL_TAI_tt_r15" }
-		buttonType = { name = "vb_tai_r_1" spriteType = "GFX_VEL_TAIX_2_hit" position = { x = 474 y = 34 } pdx_tooltip = "VEL_TAI_tt_r2" }
-		buttonType = { name = "vb_tai_r_16" spriteType = "GFX_VEL_TAIX_17_hit" position = { x = 475 y = 82 } pdx_tooltip = "VEL_TAI_tt_r17" }
-		buttonType = { name = "vb_tai_r_9" spriteType = "GFX_VEL_TAIX_10_hit" position = { x = 416 y = 153 } pdx_tooltip = "VEL_TAI_tt_r10" }
-		buttonType = { name = "vb_tai_r_7" spriteType = "GFX_VEL_TAIX_8_hit" position = { x = 402 y = 122 } pdx_tooltip = "VEL_TAI_tt_r8" }
-		buttonType = { name = "vb_tai_r_13" spriteType = "GFX_VEL_TAIX_14_hit" position = { x = 361 y = 231 } pdx_tooltip = "VEL_TAI_tt_r14" }
-		buttonType = { name = "vb_tai_r_3" spriteType = "GFX_VEL_TAIX_4_hit" position = { x = 448 y = 52 } pdx_tooltip = "VEL_TAI_tt_r4" }
-		buttonType = { name = "vb_tai_r_19" spriteType = "GFX_VEL_TAIX_20_hit" position = { x = 280 y = 190 } pdx_tooltip = "VEL_TAI_tt_r20" }
-		buttonType = { name = "vb_tai_r_6" spriteType = "GFX_VEL_TAIX_7_hit" position = { x = 412 y = 99 } pdx_tooltip = "VEL_TAI_tt_r7" }
-		buttonType = { name = "vb_tai_r_5" spriteType = "GFX_VEL_TAIX_6_hit" position = { x = 448 y = 82 } pdx_tooltip = "VEL_TAI_tt_r6" }
-		buttonType = { name = "vb_tai_r_10" spriteType = "GFX_VEL_TAIX_11_hit" position = { x = 366 y = 181 } pdx_tooltip = "VEL_TAI_tt_r11" }
-		buttonType = { name = "vb_tai_r_8" spriteType = "GFX_VEL_TAIX_9_hit" position = { x = 380 y = 152 } pdx_tooltip = "VEL_TAI_tt_r9" }
-		buttonType = { name = "vb_tai_r_2" spriteType = "GFX_VEL_TAIX_3_hit" position = { x = 507 y = 38 } pdx_tooltip = "VEL_TAI_tt_r3" }
-		buttonType = { name = "vb_tai_r_0" spriteType = "GFX_VEL_TAIX_1_hit" position = { x = 489 y = 43 } pdx_tooltip = "VEL_TAI_tt_r1" }
-		buttonType = { name = "vb_tai_r_4" spriteType = "GFX_VEL_TAIX_5_hit" position = { x = 437 y = 70 } pdx_tooltip = "VEL_TAI_tt_r5" }
-		buttonType = { name = "vb_tai_r_11" spriteType = "GFX_VEL_TAIX_12_hit" position = { x = 366 y = 212 } pdx_tooltip = "VEL_TAI_tt_r12" }
-		buttonType = { name = "vb_tai_r_20" spriteType = "GFX_VEL_TAIX_21_hit" position = { x = 191 y = 114 } pdx_tooltip = "VEL_TAI_tt_r21" }
+		buttonType = { name = "vb_tai_r_18" spriteType = "GFX_VEL_TAIX_19_hit" position = { x = 428 y = 228 } pdx_tooltip = "VEL_TAI_tt_r19" }
+		buttonType = { name = "vb_tai_r_17" spriteType = "GFX_VEL_TAIX_18_hit" position = { x = 451 y = 131 } pdx_tooltip = "VEL_TAI_tt_r18" }
+		buttonType = { name = "vb_tai_r_14" spriteType = "GFX_VEL_TAIX_15_hit" position = { x = 373 y = 224 } pdx_tooltip = "VEL_TAI_tt_r15" }
+		buttonType = { name = "vb_tai_r_9" spriteType = "GFX_VEL_TAIX_10_hit" position = { x = 417 y = 144 } pdx_tooltip = "VEL_TAI_tt_r10" }
+		buttonType = { name = "vb_tai_r_15" spriteType = "GFX_VEL_TAIX_16_hit" position = { x = 397 y = 285 } pdx_tooltip = "VEL_TAI_tt_r16" }
+		buttonType = { name = "vb_tai_r_7" spriteType = "GFX_VEL_TAIX_8_hit" position = { x = 403 y = 123 } pdx_tooltip = "VEL_TAI_tt_r8" }
+		buttonType = { name = "vb_tai_r_1" spriteType = "GFX_VEL_TAIX_2_hit" position = { x = 480 y = 36 } pdx_tooltip = "VEL_TAI_tt_r2" }
+		buttonType = { name = "vb_tai_r_16" spriteType = "GFX_VEL_TAIX_17_hit" position = { x = 482 y = 66 } pdx_tooltip = "VEL_TAI_tt_r17" }
+		buttonType = { name = "vb_tai_r_12" spriteType = "GFX_VEL_TAIX_13_hit" position = { x = 361 y = 207 } pdx_tooltip = "VEL_TAI_tt_r13" }
+		buttonType = { name = "vb_tai_r_13" spriteType = "GFX_VEL_TAIX_14_hit" position = { x = 362 y = 231 } pdx_tooltip = "VEL_TAI_tt_r14" }
+		buttonType = { name = "vb_tai_r_6" spriteType = "GFX_VEL_TAIX_7_hit" position = { x = 416 y = 92 } pdx_tooltip = "VEL_TAI_tt_r7" }
+		buttonType = { name = "vb_tai_r_3" spriteType = "GFX_VEL_TAIX_4_hit" position = { x = 450 y = 53 } pdx_tooltip = "VEL_TAI_tt_r4" }
+		buttonType = { name = "vb_tai_r_5" spriteType = "GFX_VEL_TAIX_6_hit" position = { x = 444 y = 71 } pdx_tooltip = "VEL_TAI_tt_r6" }
+		buttonType = { name = "vb_tai_r_10" spriteType = "GFX_VEL_TAIX_11_hit" position = { x = 370 y = 187 } pdx_tooltip = "VEL_TAI_tt_r11" }
+		buttonType = { name = "vb_tai_r_8" spriteType = "GFX_VEL_TAIX_9_hit" position = { x = 381 y = 148 } pdx_tooltip = "VEL_TAI_tt_r9" }
+		buttonType = { name = "vb_tai_r_0" spriteType = "GFX_VEL_TAIX_1_hit" position = { x = 496 y = 44 } pdx_tooltip = "VEL_TAI_tt_r1" }
+		buttonType = { name = "vb_tai_r_19" spriteType = "GFX_VEL_TAIX_20_hit" position = { x = 308 y = 203 } pdx_tooltip = "VEL_TAI_tt_r20" }
+		buttonType = { name = "vb_tai_r_20" spriteType = "GFX_VEL_TAIX_21_hit" position = { x = 195 y = 115 } pdx_tooltip = "VEL_TAI_tt_r21" }
+		buttonType = { name = "vb_tai_r_4" spriteType = "GFX_VEL_TAIX_5_hit" position = { x = 440 y = 81 } pdx_tooltip = "VEL_TAI_tt_r5" }
 		buttonType = { name = "vb_tai_r_21" spriteType = "GFX_VEL_TAIX_22_hit" position = { x = 360 y = 10 } pdx_tooltip = "VEL_TAI_tt_r22" }
-		buttonType = { name = "vb_tai_bh_0" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 44 } pdx_tooltip = "VEL_TAI_tt_r1" }
-		buttonType = { name = "vb_tai_bh_2" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 76 } pdx_tooltip = "VEL_TAI_tt_r3" }
-		buttonType = { name = "vb_tai_bh_3" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 108 } pdx_tooltip = "VEL_TAI_tt_r4" }
-		buttonType = { name = "vb_tai_bh_4" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 140 } pdx_tooltip = "VEL_TAI_tt_r5" }
-		buttonType = { name = "vb_tai_bh_5" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 172 } pdx_tooltip = "VEL_TAI_tt_r6" }
-		buttonType = { name = "vb_tai_bh_8" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 158 } pdx_tooltip = "VEL_TAI_tt_r9" }
-		buttonType = { name = "vb_tai_bh_9" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 204 } pdx_tooltip = "VEL_TAI_tt_r10" }
-		buttonType = { name = "vb_tai_bh_10" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 190 } pdx_tooltip = "VEL_TAI_tt_r11" }
-		buttonType = { name = "vb_tai_bh_11" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 254 } pdx_tooltip = "VEL_TAI_tt_r12" }
-		buttonType = { name = "vb_tai_bh_14" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 286 } pdx_tooltip = "VEL_TAI_tt_r15" }
-		buttonType = { name = "vb_tai_bh_19" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 222 } pdx_tooltip = "VEL_TAI_tt_r20" }
-		buttonType = { name = "vb_tai_bh_20" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 108 } pdx_tooltip = "VEL_TAI_tt_r21" }
+		buttonType = { name = "vb_tai_r_2" spriteType = "GFX_VEL_TAIX_3_hit" position = { x = 512 y = 48 } pdx_tooltip = "VEL_TAI_tt_r3" }
+		buttonType = { name = "vb_tai_r_11" spriteType = "GFX_VEL_TAIX_12_hit" position = { x = 393 y = 220 } pdx_tooltip = "VEL_TAI_tt_r12" }
+		buttonType = { name = "vb_tai_bh_0" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 71 } pdx_tooltip = "VEL_TAI_tt_r1" }
+		buttonType = { name = "vb_tai_bh_2" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 39 } pdx_tooltip = "VEL_TAI_tt_r3" }
+		buttonType = { name = "vb_tai_bh_3" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 103 } pdx_tooltip = "VEL_TAI_tt_r4" }
+		buttonType = { name = "vb_tai_bh_4" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 135 } pdx_tooltip = "VEL_TAI_tt_r5" }
+		buttonType = { name = "vb_tai_bh_5" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 167 } pdx_tooltip = "VEL_TAI_tt_r6" }
+		buttonType = { name = "vb_tai_bh_8" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 160 } pdx_tooltip = "VEL_TAI_tt_r9" }
+		buttonType = { name = "vb_tai_bh_9" spriteType = "GFX_VEL_box_hit" position = { x = 575 y = 199 } pdx_tooltip = "VEL_TAI_tt_r10" }
+		buttonType = { name = "vb_tai_bh_11" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 231 } pdx_tooltip = "VEL_TAI_tt_r12" }
+		buttonType = { name = "vb_tai_bh_14" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 263 } pdx_tooltip = "VEL_TAI_tt_r15" }
+		buttonType = { name = "vb_tai_bh_19" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 199 } pdx_tooltip = "VEL_TAI_tt_r20" }
+		buttonType = { name = "vb_tai_bh_20" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 107 } pdx_tooltip = "VEL_TAI_tt_r21" }
 		buttonType = { name = "vb_tai_bh_21" spriteType = "GFX_VEL_box_hit" position = { x = 96 y = 8 } pdx_tooltip = "VEL_TAI_tt_r22" }
 			}
 		}
@@ -355,5 +353,297 @@ guiTypes = {
 		iconType = { name = "vb_tai_sws_6" spriteType = "GFX_VEL_TAI_swatch" position = { x = 844 y = 810 } alwaystransparent = yes frame = 1 }
 		instantTextBoxType = { name = "vb_tai_swt_6" position = { x = 868 y = 808 } font = "hoi_16mbs" text = "VEL_TAI_swrow_6" maxWidth = 410 maxHeight = 20 fixedsize = yes }
 		buttonType = { name = "vb_tai_swb_6" spriteType = "GFX_VEL_row_hit" position = { x = 864 y = 807 } pdx_tooltip = "VEL_TAI_tt_swing" }
+		buttonType = { name = "vb_tai_parlbtn" quadTextureSprite = "GFX_button_148x34" position = { x = 1185 y = 218 } buttonFont = "hoi_16mbs" buttonText = "VELP_btn_open" pdx_tooltip = "VELP_tt_open" }
+		buttonType = { name = "vb_tai_parlbg" spriteType = "GFX_VELP_bg" position = { x = 13 y = 218 } }
+		instantTextBoxType = { name = "vb_tai_pa_title" position = { x = 37 y = 229 } font = "hoi_18mbs" text = "VELP_TAI_a_title" maxWidth = 620 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_d0" spriteType = "GFX_VPX_dot" position = { x = 94 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d1" spriteType = "GFX_VPX_dot" position = { x = 119 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d2" spriteType = "GFX_VPX_dot" position = { x = 144 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d3" spriteType = "GFX_VPX_dot" position = { x = 169 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d4" spriteType = "GFX_VPX_dot" position = { x = 194 y = 490 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d5" spriteType = "GFX_VPX_dot" position = { x = 219 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d6" spriteType = "GFX_VPX_dot" position = { x = 244 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d7" spriteType = "GFX_VPX_dot" position = { x = 98 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d8" spriteType = "GFX_VPX_dot" position = { x = 124 y = 459 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d9" spriteType = "GFX_VPX_dot" position = { x = 149 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d10" spriteType = "GFX_VPX_dot" position = { x = 175 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d11" spriteType = "GFX_VPX_dot" position = { x = 106 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d12" spriteType = "GFX_VPX_dot" position = { x = 202 y = 456 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d13" spriteType = "GFX_VPX_dot" position = { x = 133 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d14" spriteType = "GFX_VPX_dot" position = { x = 160 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d15" spriteType = "GFX_VPX_dot" position = { x = 229 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d16" spriteType = "GFX_VPX_dot" position = { x = 118 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d17" spriteType = "GFX_VPX_dot" position = { x = 188 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d18" spriteType = "GFX_VPX_dot" position = { x = 256 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d19" spriteType = "GFX_VPX_dot" position = { x = 148 y = 398 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d20" spriteType = "GFX_VPX_dot" position = { x = 175 y = 401 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d21" spriteType = "GFX_VPX_dot" position = { x = 134 y = 371 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d22" spriteType = "GFX_VPX_dot" position = { x = 219 y = 425 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d23" spriteType = "GFX_VPX_dot" position = { x = 166 y = 370 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d24" spriteType = "GFX_VPX_dot" position = { x = 207 y = 400 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d25" spriteType = "GFX_VPX_dot" position = { x = 248 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d26" spriteType = "GFX_VPX_dot" position = { x = 154 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d27" spriteType = "GFX_VPX_dot" position = { x = 195 y = 375 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d28" spriteType = "GFX_VPX_dot" position = { x = 189 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d29" spriteType = "GFX_VPX_dot" position = { x = 242 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d30" spriteType = "GFX_VPX_dot" position = { x = 177 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d31" spriteType = "GFX_VPX_dot" position = { x = 277 y = 434 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d32" spriteType = "GFX_VPX_dot" position = { x = 231 y = 376 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d33" spriteType = "GFX_VPX_dot" position = { x = 219 y = 353 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d34" spriteType = "GFX_VPX_dot" position = { x = 215 y = 325 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d35" spriteType = "GFX_VPX_dot" position = { x = 202 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d36" spriteType = "GFX_VPX_dot" position = { x = 274 y = 406 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d37" spriteType = "GFX_VPX_dot" position = { x = 246 y = 336 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d38" spriteType = "GFX_VPX_dot" position = { x = 258 y = 357 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d39" spriteType = "GFX_VPX_dot" position = { x = 271 y = 379 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d40" spriteType = "GFX_VPX_dot" position = { x = 230 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d41" spriteType = "GFX_VPX_dot" position = { x = 243 y = 309 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d42" spriteType = "GFX_VPX_dot" position = { x = 306 y = 418 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d43" spriteType = "GFX_VPX_dot" position = { x = 275 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d44" spriteType = "GFX_VPX_dot" position = { x = 260 y = 275 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d45" spriteType = "GFX_VPX_dot" position = { x = 274 y = 297 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d46" spriteType = "GFX_VPX_dot" position = { x = 289 y = 344 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d47" spriteType = "GFX_VPX_dot" position = { x = 305 y = 392 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d48" spriteType = "GFX_VPX_dot" position = { x = 304 y = 366 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d49" spriteType = "GFX_VPX_dot" position = { x = 291 y = 267 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d50" spriteType = "GFX_VPX_dot" position = { x = 307 y = 315 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d51" spriteType = "GFX_VPX_dot" position = { x = 306 y = 289 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d52" spriteType = "GFX_VPX_dot" position = { x = 322 y = 338 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d53" spriteType = "GFX_VPX_dot" position = { x = 323 y = 263 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d54" spriteType = "GFX_VPX_dot" position = { x = 339 y = 387 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d55" spriteType = "GFX_VPX_dot" position = { x = 339 y = 412 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d56" spriteType = "GFX_VPX_dot" position = { x = 339 y = 312 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d57" spriteType = "GFX_VPX_dot" position = { x = 339 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d58" spriteType = "GFX_VPX_dot" position = { x = 339 y = 362 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d59" spriteType = "GFX_VPX_dot" position = { x = 355 y = 263 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d60" spriteType = "GFX_VPX_dot" position = { x = 356 y = 338 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d61" spriteType = "GFX_VPX_dot" position = { x = 372 y = 289 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d62" spriteType = "GFX_VPX_dot" position = { x = 371 y = 315 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d63" spriteType = "GFX_VPX_dot" position = { x = 387 y = 267 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d64" spriteType = "GFX_VPX_dot" position = { x = 374 y = 366 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d65" spriteType = "GFX_VPX_dot" position = { x = 373 y = 392 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d66" spriteType = "GFX_VPX_dot" position = { x = 389 y = 344 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d67" spriteType = "GFX_VPX_dot" position = { x = 404 y = 297 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d68" spriteType = "GFX_VPX_dot" position = { x = 418 y = 275 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d69" spriteType = "GFX_VPX_dot" position = { x = 403 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d70" spriteType = "GFX_VPX_dot" position = { x = 372 y = 418 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d71" spriteType = "GFX_VPX_dot" position = { x = 435 y = 309 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d72" spriteType = "GFX_VPX_dot" position = { x = 448 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d73" spriteType = "GFX_VPX_dot" position = { x = 407 y = 379 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d74" spriteType = "GFX_VPX_dot" position = { x = 420 y = 357 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d75" spriteType = "GFX_VPX_dot" position = { x = 432 y = 336 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d76" spriteType = "GFX_VPX_dot" position = { x = 404 y = 406 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d77" spriteType = "GFX_VPX_dot" position = { x = 476 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d78" spriteType = "GFX_VPX_dot" position = { x = 463 y = 325 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d79" spriteType = "GFX_VPX_dot" position = { x = 459 y = 353 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d80" spriteType = "GFX_VPX_dot" position = { x = 447 y = 376 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d81" spriteType = "GFX_VPX_dot" position = { x = 401 y = 434 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d82" spriteType = "GFX_VPX_dot" position = { x = 501 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d83" spriteType = "GFX_VPX_dot" position = { x = 436 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d84" spriteType = "GFX_VPX_dot" position = { x = 489 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d85" spriteType = "GFX_VPX_dot" position = { x = 483 y = 375 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d86" spriteType = "GFX_VPX_dot" position = { x = 524 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d87" spriteType = "GFX_VPX_dot" position = { x = 430 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d88" spriteType = "GFX_VPX_dot" position = { x = 471 y = 400 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d89" spriteType = "GFX_VPX_dot" position = { x = 512 y = 370 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d90" spriteType = "GFX_VPX_dot" position = { x = 459 y = 425 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d91" spriteType = "GFX_VPX_dot" position = { x = 544 y = 371 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d92" spriteType = "GFX_VPX_dot" position = { x = 503 y = 401 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d93" spriteType = "GFX_VPX_dot" position = { x = 422 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d94" spriteType = "GFX_VPX_dot" position = { x = 530 y = 397 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d95" spriteType = "GFX_VPX_dot" position = { x = 490 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d96" spriteType = "GFX_VPX_dot" position = { x = 560 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d97" spriteType = "GFX_VPX_dot" position = { x = 449 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d98" spriteType = "GFX_VPX_dot" position = { x = 518 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d99" spriteType = "GFX_VPX_dot" position = { x = 545 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d100" spriteType = "GFX_VPX_dot" position = { x = 476 y = 456 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d101" spriteType = "GFX_VPX_dot" position = { x = 572 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d102" spriteType = "GFX_VPX_dot" position = { x = 503 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d103" spriteType = "GFX_VPX_dot" position = { x = 529 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d104" spriteType = "GFX_VPX_dot" position = { x = 554 y = 459 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d105" spriteType = "GFX_VPX_dot" position = { x = 580 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d106" spriteType = "GFX_VPX_dot" position = { x = 434 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d107" spriteType = "GFX_VPX_dot" position = { x = 459 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d108" spriteType = "GFX_VPX_dot" position = { x = 484 y = 490 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d109" spriteType = "GFX_VPX_dot" position = { x = 509 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d110" spriteType = "GFX_VPX_dot" position = { x = 534 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d111" spriteType = "GFX_VPX_dot" position = { x = 559 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pa_d112" spriteType = "GFX_VPX_dot" position = { x = 584 y = 492 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_tot" position = { x = 267 y = 486 } font = "hoi_24header" text = "VELP_TAI_a_tot" maxWidth = 160 maxHeight = 28 fixedsize = yes format = centre }
+		instantTextBoxType = { name = "vb_tai_pa_sum" position = { x = 41 y = 548 } font = "hoi_18mbs" text = "VELP_TAI_a_sum" maxWidth = 612 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s0" spriteType = "GFX_VPX_dot" position = { x = 45 y = 597 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n0" position = { x = 71 y = 596 } font = "hoi_16mbs" text = "VELP_TAI_a_name0_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v0" position = { x = 493 y = 596 } font = "hoi_18mbs" text = "VELP_TAI_a_val0_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t0" position = { x = 583 y = 596 } font = "hoi_16mbs" text = "VELP_TAI_a_tag0_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s1" spriteType = "GFX_VPX_dot" position = { x = 45 y = 622 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n1" position = { x = 71 y = 621 } font = "hoi_16mbs" text = "VELP_TAI_a_name1_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v1" position = { x = 493 y = 621 } font = "hoi_18mbs" text = "VELP_TAI_a_val1_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t1" position = { x = 583 y = 621 } font = "hoi_16mbs" text = "VELP_TAI_a_tag1_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s2" spriteType = "GFX_VPX_dot" position = { x = 45 y = 647 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n2" position = { x = 71 y = 646 } font = "hoi_16mbs" text = "VELP_TAI_a_name2_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v2" position = { x = 493 y = 646 } font = "hoi_18mbs" text = "VELP_TAI_a_val2_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t2" position = { x = 583 y = 646 } font = "hoi_16mbs" text = "VELP_TAI_a_tag2_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s3" spriteType = "GFX_VPX_dot" position = { x = 45 y = 672 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n3" position = { x = 71 y = 671 } font = "hoi_16mbs" text = "VELP_TAI_a_name3_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v3" position = { x = 493 y = 671 } font = "hoi_18mbs" text = "VELP_TAI_a_val3_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t3" position = { x = 583 y = 671 } font = "hoi_16mbs" text = "VELP_TAI_a_tag3_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s4" spriteType = "GFX_VPX_dot" position = { x = 45 y = 697 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n4" position = { x = 71 y = 696 } font = "hoi_16mbs" text = "VELP_TAI_a_name4_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v4" position = { x = 493 y = 696 } font = "hoi_18mbs" text = "VELP_TAI_a_val4_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t4" position = { x = 583 y = 696 } font = "hoi_16mbs" text = "VELP_TAI_a_tag4_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s5" spriteType = "GFX_VPX_dot" position = { x = 45 y = 722 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n5" position = { x = 71 y = 721 } font = "hoi_16mbs" text = "VELP_TAI_a_name5_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v5" position = { x = 493 y = 721 } font = "hoi_18mbs" text = "VELP_TAI_a_val5_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t5" position = { x = 583 y = 721 } font = "hoi_16mbs" text = "VELP_TAI_a_tag5_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pa_s6" spriteType = "GFX_VPX_dot" position = { x = 45 y = 747 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pa_n6" position = { x = 71 y = 746 } font = "hoi_16mbs" text = "VELP_TAI_a_name6_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_v6" position = { x = 493 y = 746 } font = "hoi_18mbs" text = "VELP_TAI_a_val6_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pa_t6" position = { x = 583 y = 746 } font = "hoi_16mbs" text = "VELP_TAI_a_tag6_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_title" position = { x = 701 y = 229 } font = "hoi_18mbs" text = "VELP_TAI_b_title" maxWidth = 620 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_d0" spriteType = "GFX_VPX_dot" position = { x = 758 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d1" spriteType = "GFX_VPX_dot" position = { x = 783 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d2" spriteType = "GFX_VPX_dot" position = { x = 808 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d3" spriteType = "GFX_VPX_dot" position = { x = 833 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d4" spriteType = "GFX_VPX_dot" position = { x = 858 y = 490 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d5" spriteType = "GFX_VPX_dot" position = { x = 883 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d6" spriteType = "GFX_VPX_dot" position = { x = 908 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d7" spriteType = "GFX_VPX_dot" position = { x = 762 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d8" spriteType = "GFX_VPX_dot" position = { x = 788 y = 459 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d9" spriteType = "GFX_VPX_dot" position = { x = 813 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d10" spriteType = "GFX_VPX_dot" position = { x = 839 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d11" spriteType = "GFX_VPX_dot" position = { x = 770 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d12" spriteType = "GFX_VPX_dot" position = { x = 866 y = 456 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d13" spriteType = "GFX_VPX_dot" position = { x = 797 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d14" spriteType = "GFX_VPX_dot" position = { x = 824 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d15" spriteType = "GFX_VPX_dot" position = { x = 893 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d16" spriteType = "GFX_VPX_dot" position = { x = 782 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d17" spriteType = "GFX_VPX_dot" position = { x = 852 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d18" spriteType = "GFX_VPX_dot" position = { x = 920 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d19" spriteType = "GFX_VPX_dot" position = { x = 812 y = 398 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d20" spriteType = "GFX_VPX_dot" position = { x = 839 y = 401 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d21" spriteType = "GFX_VPX_dot" position = { x = 798 y = 371 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d22" spriteType = "GFX_VPX_dot" position = { x = 883 y = 425 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d23" spriteType = "GFX_VPX_dot" position = { x = 830 y = 370 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d24" spriteType = "GFX_VPX_dot" position = { x = 871 y = 400 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d25" spriteType = "GFX_VPX_dot" position = { x = 912 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d26" spriteType = "GFX_VPX_dot" position = { x = 818 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d27" spriteType = "GFX_VPX_dot" position = { x = 859 y = 375 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d28" spriteType = "GFX_VPX_dot" position = { x = 853 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d29" spriteType = "GFX_VPX_dot" position = { x = 906 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d30" spriteType = "GFX_VPX_dot" position = { x = 841 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d31" spriteType = "GFX_VPX_dot" position = { x = 941 y = 434 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d32" spriteType = "GFX_VPX_dot" position = { x = 895 y = 376 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d33" spriteType = "GFX_VPX_dot" position = { x = 883 y = 353 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d34" spriteType = "GFX_VPX_dot" position = { x = 879 y = 325 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d35" spriteType = "GFX_VPX_dot" position = { x = 866 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d36" spriteType = "GFX_VPX_dot" position = { x = 938 y = 406 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d37" spriteType = "GFX_VPX_dot" position = { x = 910 y = 336 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d38" spriteType = "GFX_VPX_dot" position = { x = 922 y = 357 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d39" spriteType = "GFX_VPX_dot" position = { x = 935 y = 379 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d40" spriteType = "GFX_VPX_dot" position = { x = 894 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d41" spriteType = "GFX_VPX_dot" position = { x = 907 y = 309 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d42" spriteType = "GFX_VPX_dot" position = { x = 970 y = 418 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d43" spriteType = "GFX_VPX_dot" position = { x = 939 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d44" spriteType = "GFX_VPX_dot" position = { x = 924 y = 275 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d45" spriteType = "GFX_VPX_dot" position = { x = 938 y = 297 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d46" spriteType = "GFX_VPX_dot" position = { x = 953 y = 344 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d47" spriteType = "GFX_VPX_dot" position = { x = 969 y = 392 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d48" spriteType = "GFX_VPX_dot" position = { x = 968 y = 366 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d49" spriteType = "GFX_VPX_dot" position = { x = 955 y = 267 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d50" spriteType = "GFX_VPX_dot" position = { x = 971 y = 315 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d51" spriteType = "GFX_VPX_dot" position = { x = 970 y = 289 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d52" spriteType = "GFX_VPX_dot" position = { x = 986 y = 338 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d53" spriteType = "GFX_VPX_dot" position = { x = 987 y = 263 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d54" spriteType = "GFX_VPX_dot" position = { x = 1003 y = 387 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d55" spriteType = "GFX_VPX_dot" position = { x = 1003 y = 412 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d56" spriteType = "GFX_VPX_dot" position = { x = 1003 y = 312 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d57" spriteType = "GFX_VPX_dot" position = { x = 1003 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d58" spriteType = "GFX_VPX_dot" position = { x = 1003 y = 362 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d59" spriteType = "GFX_VPX_dot" position = { x = 1019 y = 263 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d60" spriteType = "GFX_VPX_dot" position = { x = 1020 y = 338 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d61" spriteType = "GFX_VPX_dot" position = { x = 1036 y = 289 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d62" spriteType = "GFX_VPX_dot" position = { x = 1035 y = 315 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d63" spriteType = "GFX_VPX_dot" position = { x = 1051 y = 267 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d64" spriteType = "GFX_VPX_dot" position = { x = 1038 y = 366 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d65" spriteType = "GFX_VPX_dot" position = { x = 1037 y = 392 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d66" spriteType = "GFX_VPX_dot" position = { x = 1053 y = 344 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d67" spriteType = "GFX_VPX_dot" position = { x = 1068 y = 297 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d68" spriteType = "GFX_VPX_dot" position = { x = 1082 y = 275 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d69" spriteType = "GFX_VPX_dot" position = { x = 1067 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d70" spriteType = "GFX_VPX_dot" position = { x = 1036 y = 418 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d71" spriteType = "GFX_VPX_dot" position = { x = 1099 y = 309 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d72" spriteType = "GFX_VPX_dot" position = { x = 1112 y = 287 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d73" spriteType = "GFX_VPX_dot" position = { x = 1071 y = 379 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d74" spriteType = "GFX_VPX_dot" position = { x = 1084 y = 357 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d75" spriteType = "GFX_VPX_dot" position = { x = 1096 y = 336 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d76" spriteType = "GFX_VPX_dot" position = { x = 1068 y = 406 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d77" spriteType = "GFX_VPX_dot" position = { x = 1140 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d78" spriteType = "GFX_VPX_dot" position = { x = 1127 y = 325 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d79" spriteType = "GFX_VPX_dot" position = { x = 1123 y = 353 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d80" spriteType = "GFX_VPX_dot" position = { x = 1111 y = 376 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d81" spriteType = "GFX_VPX_dot" position = { x = 1065 y = 434 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d82" spriteType = "GFX_VPX_dot" position = { x = 1165 y = 323 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d83" spriteType = "GFX_VPX_dot" position = { x = 1100 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d84" spriteType = "GFX_VPX_dot" position = { x = 1153 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d85" spriteType = "GFX_VPX_dot" position = { x = 1147 y = 375 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d86" spriteType = "GFX_VPX_dot" position = { x = 1188 y = 346 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d87" spriteType = "GFX_VPX_dot" position = { x = 1094 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d88" spriteType = "GFX_VPX_dot" position = { x = 1135 y = 400 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d89" spriteType = "GFX_VPX_dot" position = { x = 1176 y = 370 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d90" spriteType = "GFX_VPX_dot" position = { x = 1123 y = 425 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d91" spriteType = "GFX_VPX_dot" position = { x = 1208 y = 371 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d92" spriteType = "GFX_VPX_dot" position = { x = 1167 y = 401 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d93" spriteType = "GFX_VPX_dot" position = { x = 1086 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d94" spriteType = "GFX_VPX_dot" position = { x = 1194 y = 397 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d95" spriteType = "GFX_VPX_dot" position = { x = 1154 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d96" spriteType = "GFX_VPX_dot" position = { x = 1224 y = 399 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d97" spriteType = "GFX_VPX_dot" position = { x = 1113 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d98" spriteType = "GFX_VPX_dot" position = { x = 1182 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d99" spriteType = "GFX_VPX_dot" position = { x = 1209 y = 427 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d100" spriteType = "GFX_VPX_dot" position = { x = 1140 y = 456 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d101" spriteType = "GFX_VPX_dot" position = { x = 1236 y = 429 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d102" spriteType = "GFX_VPX_dot" position = { x = 1167 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d103" spriteType = "GFX_VPX_dot" position = { x = 1193 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d104" spriteType = "GFX_VPX_dot" position = { x = 1218 y = 459 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d105" spriteType = "GFX_VPX_dot" position = { x = 1244 y = 460 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d106" spriteType = "GFX_VPX_dot" position = { x = 1098 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d107" spriteType = "GFX_VPX_dot" position = { x = 1123 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d108" spriteType = "GFX_VPX_dot" position = { x = 1148 y = 490 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d109" spriteType = "GFX_VPX_dot" position = { x = 1173 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d110" spriteType = "GFX_VPX_dot" position = { x = 1198 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d111" spriteType = "GFX_VPX_dot" position = { x = 1223 y = 491 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vb_tai_pb_d112" spriteType = "GFX_VPX_dot" position = { x = 1248 y = 492 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_tot" position = { x = 931 y = 486 } font = "hoi_24header" text = "VELP_TAI_b_tot" maxWidth = 160 maxHeight = 28 fixedsize = yes format = centre }
+		instantTextBoxType = { name = "vb_tai_pb_sum" position = { x = 705 y = 548 } font = "hoi_18mbs" text = "VELP_TAI_b_sum" maxWidth = 612 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s0" spriteType = "GFX_VPX_dot" position = { x = 709 y = 597 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n0" position = { x = 735 y = 596 } font = "hoi_16mbs" text = "VELP_TAI_b_name0_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v0" position = { x = 1157 y = 596 } font = "hoi_18mbs" text = "VELP_TAI_b_val0_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t0" position = { x = 1247 y = 596 } font = "hoi_16mbs" text = "VELP_TAI_b_tag0_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s1" spriteType = "GFX_VPX_dot" position = { x = 709 y = 622 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n1" position = { x = 735 y = 621 } font = "hoi_16mbs" text = "VELP_TAI_b_name1_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v1" position = { x = 1157 y = 621 } font = "hoi_18mbs" text = "VELP_TAI_b_val1_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t1" position = { x = 1247 y = 621 } font = "hoi_16mbs" text = "VELP_TAI_b_tag1_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s2" spriteType = "GFX_VPX_dot" position = { x = 709 y = 647 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n2" position = { x = 735 y = 646 } font = "hoi_16mbs" text = "VELP_TAI_b_name2_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v2" position = { x = 1157 y = 646 } font = "hoi_18mbs" text = "VELP_TAI_b_val2_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t2" position = { x = 1247 y = 646 } font = "hoi_16mbs" text = "VELP_TAI_b_tag2_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s3" spriteType = "GFX_VPX_dot" position = { x = 709 y = 672 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n3" position = { x = 735 y = 671 } font = "hoi_16mbs" text = "VELP_TAI_b_name3_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v3" position = { x = 1157 y = 671 } font = "hoi_18mbs" text = "VELP_TAI_b_val3_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t3" position = { x = 1247 y = 671 } font = "hoi_16mbs" text = "VELP_TAI_b_tag3_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s4" spriteType = "GFX_VPX_dot" position = { x = 709 y = 697 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n4" position = { x = 735 y = 696 } font = "hoi_16mbs" text = "VELP_TAI_b_name4_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v4" position = { x = 1157 y = 696 } font = "hoi_18mbs" text = "VELP_TAI_b_val4_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t4" position = { x = 1247 y = 696 } font = "hoi_16mbs" text = "VELP_TAI_b_tag4_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s5" spriteType = "GFX_VPX_dot" position = { x = 709 y = 722 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n5" position = { x = 735 y = 721 } font = "hoi_16mbs" text = "VELP_TAI_b_name5_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v5" position = { x = 1157 y = 721 } font = "hoi_18mbs" text = "VELP_TAI_b_val5_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t5" position = { x = 1247 y = 721 } font = "hoi_16mbs" text = "VELP_TAI_b_tag5_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vb_tai_pb_s6" spriteType = "GFX_VPX_dot" position = { x = 709 y = 747 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vb_tai_pb_n6" position = { x = 735 y = 746 } font = "hoi_16mbs" text = "VELP_TAI_b_name6_txt" maxWidth = 402 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_v6" position = { x = 1157 y = 746 } font = "hoi_18mbs" text = "VELP_TAI_b_val6_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pb_t6" position = { x = 1247 y = 746 } font = "hoi_16mbs" text = "VELP_TAI_b_tag6_txt" maxWidth = 80 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vb_tai_pnote" position = { x = 33 y = 784 } font = "hoi_16mbs" text = "VELP_TAI_note" maxWidth = 1132 maxHeight = 38 fixedsize = yes }
+		buttonType = { name = "vb_tai_parlback" quadTextureSprite = "GFX_button_148x34" position = { x = 1183 y = 784 } buttonFont = "hoi_16mbs" buttonText = "VELP_btn_back" }
 	}
 }

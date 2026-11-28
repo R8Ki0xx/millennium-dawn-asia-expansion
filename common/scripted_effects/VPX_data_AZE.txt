@@ -1,0 +1,115 @@
+# 阿塞拜疆：国民议会 125 席，MIXED
+vpx_init_AZE = {
+	set_variable = { vpx_R = 8 }
+	set_variable = { vpx_S = 125 }
+	set_variable = { vpx_P = 25 }
+	set_variable = { vpx_k = 3 }
+	set_variable = { vpx_thr = 6 }
+	set_variable = { vpx_bonus = 0 }
+	set_variable = { vpx_rm = 1.35 }
+	set_variable = { vpx_resn = 0 }
+	set_variable = { vpx_resgov = 0 }
+	set_variable = { vpx_resopp = 0 }
+	set_variable = { vpx_U = 0 }
+	set_variable = { vpx_um = 0 }
+	set_variable = { vpx_D = 125 }
+	set_variable = { vpx_nst = 11 }
+	clear_array = vpx_rw
+	add_to_array = { vpx_rw = 7.706 } add_to_array = { vpx_rw = 6.262 } add_to_array = { vpx_rw = 11.545 } add_to_array = { vpx_rw = 3.241 } add_to_array = { vpx_rw = 49.113 } add_to_array = { vpx_rw = 14.954 } add_to_array = { vpx_rw = 5.188 } add_to_array = { vpx_rw = 1.992 }
+	clear_array = vpx_rs
+	add_to_array = { vpx_rs = 8 } add_to_array = { vpx_rs = 6 } add_to_array = { vpx_rs = 12 } add_to_array = { vpx_rs = 3 } add_to_array = { vpx_rs = 49 } add_to_array = { vpx_rs = 15 } add_to_array = { vpx_rs = 5 } add_to_array = { vpx_rs = 2 }
+	clear_array = vpx_rd
+	add_to_array = { vpx_rd = 10 } add_to_array = { vpx_rd = 8 } add_to_array = { vpx_rd = 14 } add_to_array = { vpx_rd = 4 } add_to_array = { vpx_rd = 61 } add_to_array = { vpx_rd = 19 } add_to_array = { vpx_rd = 6 } add_to_array = { vpx_rd = 3 }
+	clear_array = vpx_ord
+	add_to_array = { vpx_ord = 4 } add_to_array = { vpx_ord = 7 } add_to_array = { vpx_ord = 1 } add_to_array = { vpx_ord = 3 } add_to_array = { vpx_ord = 5 } add_to_array = { vpx_ord = 0 } add_to_array = { vpx_ord = 2 } add_to_array = { vpx_ord = 6 }
+	clear_array = vpx_st
+	add_to_array = { vpx_st = 1206 } add_to_array = { vpx_st = 1206 } add_to_array = { vpx_st = 712 } add_to_array = { vpx_st = 712 } add_to_array = { vpx_st = 713 } add_to_array = { vpx_st = 713 } add_to_array = { vpx_st = 712 } add_to_array = { vpx_st = 713 } add_to_array = { vpx_st = 1038 } add_to_array = { vpx_st = 711 }
+	add_to_array = { vpx_st = 1038 }
+	clear_array = vpx_sr
+	add_to_array = { vpx_sr = 0 } add_to_array = { vpx_sr = 1 } add_to_array = { vpx_sr = 2 } add_to_array = { vpx_sr = 3 } add_to_array = { vpx_sr = 3 } add_to_array = { vpx_sr = 4 } add_to_array = { vpx_sr = 5 } add_to_array = { vpx_sr = 5 } add_to_array = { vpx_sr = 5 } add_to_array = { vpx_sr = 6 } add_to_array = { vpx_sr = 7 }
+	clear_array = vpx_lean
+	add_to_array = { vpx_lean = 0.997 } add_to_array = { vpx_lean = 0.994 } add_to_array = { vpx_lean = 0.887 } add_to_array = { vpx_lean = 0.821 } add_to_array = { vpx_lean = 0.738 } add_to_array = { vpx_lean = 0.839 } add_to_array = { vpx_lean = 1.069 } add_to_array = { vpx_lean = 1.068 } add_to_array = { vpx_lean = 1.011 } add_to_array = { vpx_lean = 1.073 } add_to_array = { vpx_lean = 1.081 } add_to_array = { vpx_lean = 1.027 }
+	add_to_array = { vpx_lean = 0.986 } add_to_array = { vpx_lean = 1.0 } add_to_array = { vpx_lean = 1.065 } add_to_array = { vpx_lean = 0.872 } add_to_array = { vpx_lean = 0.956 } add_to_array = { vpx_lean = 1.067 } add_to_array = { vpx_lean = 0.958 } add_to_array = { vpx_lean = 0.802 } add_to_array = { vpx_lean = 1.027 } add_to_array = { vpx_lean = 1.047 } add_to_array = { vpx_lean = 1.069 } add_to_array = { vpx_lean = 1.132 }
+	add_to_array = { vpx_lean = 0.977 } add_to_array = { vpx_lean = 1.035 } add_to_array = { vpx_lean = 0.81 } add_to_array = { vpx_lean = 0.883 } add_to_array = { vpx_lean = 0.811 } add_to_array = { vpx_lean = 0.834 } add_to_array = { vpx_lean = 1.068 } add_to_array = { vpx_lean = 0.978 } add_to_array = { vpx_lean = 1.111 } add_to_array = { vpx_lean = 1.135 } add_to_array = { vpx_lean = 1.081 } add_to_array = { vpx_lean = 1.122 }
+	add_to_array = { vpx_lean = 1.003 } add_to_array = { vpx_lean = 1.127 } add_to_array = { vpx_lean = 1.075 } add_to_array = { vpx_lean = 0.853 } add_to_array = { vpx_lean = 0.903 } add_to_array = { vpx_lean = 0.911 } add_to_array = { vpx_lean = 0.955 } add_to_array = { vpx_lean = 0.813 } add_to_array = { vpx_lean = 0.976 } add_to_array = { vpx_lean = 0.985 } add_to_array = { vpx_lean = 0.977 } add_to_array = { vpx_lean = 1.156 }
+	add_to_array = { vpx_lean = 1.044 } add_to_array = { vpx_lean = 1.245 } add_to_array = { vpx_lean = 0.827 } add_to_array = { vpx_lean = 0.882 } add_to_array = { vpx_lean = 0.919 } add_to_array = { vpx_lean = 0.947 } add_to_array = { vpx_lean = 0.997 } add_to_array = { vpx_lean = 1.066 } add_to_array = { vpx_lean = 0.999 } add_to_array = { vpx_lean = 1.016 } add_to_array = { vpx_lean = 1.076 } add_to_array = { vpx_lean = 0.938 }
+	add_to_array = { vpx_lean = 0.955 } add_to_array = { vpx_lean = 1.055 } add_to_array = { vpx_lean = 0.989 } add_to_array = { vpx_lean = 0.89 } add_to_array = { vpx_lean = 1.031 } add_to_array = { vpx_lean = 1.088 } add_to_array = { vpx_lean = 1.052 } add_to_array = { vpx_lean = 0.833 } add_to_array = { vpx_lean = 0.982 } add_to_array = { vpx_lean = 1.005 } add_to_array = { vpx_lean = 1.016 } add_to_array = { vpx_lean = 0.974 }
+	add_to_array = { vpx_lean = 1.004 } add_to_array = { vpx_lean = 1.402 } add_to_array = { vpx_lean = 0.919 } add_to_array = { vpx_lean = 0.996 } add_to_array = { vpx_lean = 0.969 } add_to_array = { vpx_lean = 0.876 } add_to_array = { vpx_lean = 1.159 } add_to_array = { vpx_lean = 0.989 } add_to_array = { vpx_lean = 1.118 } add_to_array = { vpx_lean = 1.21 } add_to_array = { vpx_lean = 1.156 } add_to_array = { vpx_lean = 1.108 }
+	add_to_array = { vpx_lean = 1.083 } add_to_array = { vpx_lean = 1.061 } add_to_array = { vpx_lean = 1.065 } add_to_array = { vpx_lean = 0.862 } add_to_array = { vpx_lean = 0.808 } add_to_array = { vpx_lean = 0.798 } add_to_array = { vpx_lean = 1.031 } add_to_array = { vpx_lean = 0.952 } add_to_array = { vpx_lean = 1.088 } add_to_array = { vpx_lean = 1.011 } add_to_array = { vpx_lean = 1.072 } add_to_array = { vpx_lean = 1.049 }
+	add_to_array = { vpx_lean = 1.051 } add_to_array = { vpx_lean = 0.865 } add_to_array = { vpx_lean = 1.152 } add_to_array = { vpx_lean = 1.16 } add_to_array = { vpx_lean = 1.175 } add_to_array = { vpx_lean = 1.155 } add_to_array = { vpx_lean = 0.987 } add_to_array = { vpx_lean = 0.961 } add_to_array = { vpx_lean = 1.011 } add_to_array = { vpx_lean = 0.897 } add_to_array = { vpx_lean = 0.903 } add_to_array = { vpx_lean = 0.949 }
+	add_to_array = { vpx_lean = 0.962 } add_to_array = { vpx_lean = 0.975 } add_to_array = { vpx_lean = 0.989 } add_to_array = { vpx_lean = 1.11 } add_to_array = { vpx_lean = 1.094 } add_to_array = { vpx_lean = 1.041 } add_to_array = { vpx_lean = 1.025 } add_to_array = { vpx_lean = 1.176 } add_to_array = { vpx_lean = 1.05 } add_to_array = { vpx_lean = 1.011 } add_to_array = { vpx_lean = 0.991 } add_to_array = { vpx_lean = 0.929 }
+	add_to_array = { vpx_lean = 1.002 } add_to_array = { vpx_lean = 1.365 } add_to_array = { vpx_lean = 1.051 } add_to_array = { vpx_lean = 0.931 } add_to_array = { vpx_lean = 0.957 } add_to_array = { vpx_lean = 0.936 } add_to_array = { vpx_lean = 1.141 } add_to_array = { vpx_lean = 1.064 } add_to_array = { vpx_lean = 1.075 } add_to_array = { vpx_lean = 1.185 } add_to_array = { vpx_lean = 1.135 } add_to_array = { vpx_lean = 1.106 }
+	add_to_array = { vpx_lean = 1.122 } add_to_array = { vpx_lean = 1.05 } add_to_array = { vpx_lean = 1.129 } add_to_array = { vpx_lean = 0.923 } add_to_array = { vpx_lean = 0.812 } add_to_array = { vpx_lean = 0.846 } add_to_array = { vpx_lean = 1.096 } add_to_array = { vpx_lean = 0.991 } add_to_array = { vpx_lean = 1.017 } add_to_array = { vpx_lean = 1.111 } add_to_array = { vpx_lean = 0.956 } add_to_array = { vpx_lean = 1.063 }
+	add_to_array = { vpx_lean = 1.021 } add_to_array = { vpx_lean = 0.945 } add_to_array = { vpx_lean = 0.937 } add_to_array = { vpx_lean = 0.968 } add_to_array = { vpx_lean = 0.916 } add_to_array = { vpx_lean = 0.992 } add_to_array = { vpx_lean = 0.927 } add_to_array = { vpx_lean = 0.952 } add_to_array = { vpx_lean = 0.966 } add_to_array = { vpx_lean = 0.924 } add_to_array = { vpx_lean = 0.987 } add_to_array = { vpx_lean = 1.032 }
+	add_to_array = { vpx_lean = 1.017 } add_to_array = { vpx_lean = 1.33 } add_to_array = { vpx_lean = 1.016 } add_to_array = { vpx_lean = 0.949 } add_to_array = { vpx_lean = 0.966 } add_to_array = { vpx_lean = 1.08 } add_to_array = { vpx_lean = 1.021 } add_to_array = { vpx_lean = 0.902 } add_to_array = { vpx_lean = 1.007 } add_to_array = { vpx_lean = 1.059 } add_to_array = { vpx_lean = 1.055 } add_to_array = { vpx_lean = 1.054 }
+	add_to_array = { vpx_lean = 0.982 } add_to_array = { vpx_lean = 1.132 } add_to_array = { vpx_lean = 0.732 } add_to_array = { vpx_lean = 0.933 } add_to_array = { vpx_lean = 0.909 } add_to_array = { vpx_lean = 0.856 } add_to_array = { vpx_lean = 1.21 } add_to_array = { vpx_lean = 1.058 } add_to_array = { vpx_lean = 1.169 } add_to_array = { vpx_lean = 1.216 } add_to_array = { vpx_lean = 1.159 } add_to_array = { vpx_lean = 1.076 }
+	add_to_array = { vpx_lean = 1.158 } add_to_array = { vpx_lean = 1.101 } add_to_array = { vpx_lean = 1.231 } add_to_array = { vpx_lean = 0.822 } add_to_array = { vpx_lean = 0.782 } add_to_array = { vpx_lean = 0.783 } add_to_array = { vpx_lean = 1.093 } add_to_array = { vpx_lean = 0.913 } add_to_array = { vpx_lean = 1.054 } add_to_array = { vpx_lean = 1.085 } add_to_array = { vpx_lean = 0.991 } add_to_array = { vpx_lean = 1.209 }
+	clear_array = vpx_xban
+	add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 }
+	add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 } add_to_array = { vpx_xban = 0 }
+	clear_array = vpx_fam
+	add_to_array = { vpx_fam = 8 } add_to_array = { vpx_fam = 1 } add_to_array = { vpx_fam = 2 } add_to_array = { vpx_fam = 3 } add_to_array = { vpx_fam = 5 } add_to_array = { vpx_fam = 5 } add_to_array = { vpx_fam = 10 } add_to_array = { vpx_fam = 8 } add_to_array = { vpx_fam = 6 } add_to_array = { vpx_fam = 6 } add_to_array = { vpx_fam = 6 } add_to_array = { vpx_fam = 6 }
+	add_to_array = { vpx_fam = 6 } add_to_array = { vpx_fam = 8 } add_to_array = { vpx_fam = 10 } add_to_array = { vpx_fam = 9 } add_to_array = { vpx_fam = 2 } add_to_array = { vpx_fam = 4 } add_to_array = { vpx_fam = 9 } add_to_array = { vpx_fam = 5 } add_to_array = { vpx_fam = 7 } add_to_array = { vpx_fam = 7 } add_to_array = { vpx_fam = 8 } add_to_array = { vpx_fam = 9 }
+	clear_array = vpx_spec
+	add_to_array = { vpx_spec = 5 } add_to_array = { vpx_spec = 4 } add_to_array = { vpx_spec = 19 } add_to_array = { vpx_spec = 17 } add_to_array = { vpx_spec = 18 } add_to_array = { vpx_spec = 3 } add_to_array = { vpx_spec = 2 } add_to_array = { vpx_spec = 16 } add_to_array = { vpx_spec = 15 } add_to_array = { vpx_spec = 0 } add_to_array = { vpx_spec = 13 } add_to_array = { vpx_spec = 7 }
+	add_to_array = { vpx_spec = 6 } add_to_array = { vpx_spec = 14 } add_to_array = { vpx_spec = 1 } add_to_array = { vpx_spec = 12 } add_to_array = { vpx_spec = 8 } add_to_array = { vpx_spec = 9 } add_to_array = { vpx_spec = 10 } add_to_array = { vpx_spec = 11 } add_to_array = { vpx_spec = 23 } add_to_array = { vpx_spec = 20 } add_to_array = { vpx_spec = 21 } add_to_array = { vpx_spec = 22 }
+	clear_array = vpx_mar2
+	add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 } add_to_array = { vpx_mar2 = 0 }
+	clear_array = vpx_sw_r
+	add_to_array = { vpx_sw_r = 0 } add_to_array = { vpx_sw_r = 0 } add_to_array = { vpx_sw_r = 0 } add_to_array = { vpx_sw_r = 0 } add_to_array = { vpx_sw_r = 0 } add_to_array = { vpx_sw_r = 0 }
+	clear_array = vpx_sw_m
+	add_to_array = { vpx_sw_m = 0 } add_to_array = { vpx_sw_m = 0 } add_to_array = { vpx_sw_m = 0 } add_to_array = { vpx_sw_m = 0 } add_to_array = { vpx_sw_m = 0 } add_to_array = { vpx_sw_m = 0 }
+	clear_array = vpx_sw_l
+	add_to_array = { vpx_sw_l = 1 } add_to_array = { vpx_sw_l = 1 } add_to_array = { vpx_sw_l = 1 } add_to_array = { vpx_sw_l = 1 } add_to_array = { vpx_sw_l = 1 } add_to_array = { vpx_sw_l = 1 }
+	clear_array = vpx_res resize_array = { array = vpx_res value = 0 size = 192 }
+	clear_array = vpx_lres resize_array = { array = vpx_lres value = 0 size = 192 }
+	clear_array = vpx_cres resize_array = { array = vpx_cres value = 0 size = 192 }
+	clear_array = vpx_win resize_array = { array = vpx_win value = 0 size = 8 }
+	clear_array = vpx_best resize_array = { array = vpx_best value = 0 size = 8 }
+	clear_array = vpx_camp resize_array = { array = vpx_camp value = 0 size = 8 }
+	clear_array = vpx_occf resize_array = { array = vpx_occf value = 0 size = 8 }
+	clear_array = vpx_occ resize_array = { array = vpx_occ value = 0 size = 8 }
+	clear_array = vpx_nf resize_array = { array = vpx_nf value = 0 size = 8 }
+	clear_array = vpx_nt resize_array = { array = vpx_nt value = 0 size = 8 }
+	clear_array = vpx_lwin resize_array = { array = vpx_lwin value = 0 size = 8 }
+	clear_array = vpx_cwin resize_array = { array = vpx_cwin value = 0 size = 8 }
+	clear_array = vpx_rev resize_array = { array = vpx_rev value = 0 size = 8 }
+	clear_array = vpx_frame resize_array = { array = vpx_frame value = 0 size = 8 }
+	clear_array = vpx_selfr resize_array = { array = vpx_selfr value = 0 size = 8 }
+	clear_array = vpx_mar resize_array = { array = vpx_mar value = 0 size = 8 }
+	clear_array = vpx_lead resize_array = { array = vpx_lead value = 0 size = 8 }
+	clear_array = vpx_nat resize_array = { array = vpx_nat value = 0 size = 26 }
+	clear_array = vpx_seat resize_array = { array = vpx_seat value = 0 size = 26 }
+	clear_array = vpx_up resize_array = { array = vpx_up value = 0 size = 26 }
+	clear_array = vpx_lnat resize_array = { array = vpx_lnat value = 0 size = 26 }
+	clear_array = vpx_lseat resize_array = { array = vpx_lseat value = 0 size = 26 }
+	clear_array = vpx_lup resize_array = { array = vpx_lup value = 0 size = 26 }
+	clear_array = vpx_cnat resize_array = { array = vpx_cnat value = 0 size = 26 }
+	clear_array = vpx_cseat resize_array = { array = vpx_cseat value = 0 size = 26 }
+	clear_array = vpx_cup resize_array = { array = vpx_cup value = 0 size = 26 }
+	clear_array = vpx_mnat resize_array = { array = vpx_mnat value = 0 size = 26 }
+	clear_array = vpx_mseat resize_array = { array = vpx_mseat value = 0 size = 26 }
+	clear_array = vpx_mup resize_array = { array = vpx_mup value = 0 size = 26 }
+	clear_array = vpx_gov resize_array = { array = vpx_gov value = 0 size = 26 }
+	clear_array = vpx_key resize_array = { array = vpx_key value = 0 size = 26 }
+	clear_array = vpx_ks resize_array = { array = vpx_ks value = 0 size = 26 }
+	clear_array = vpx_kv resize_array = { array = vpx_kv value = 0 size = 26 }
+	clear_array = vpx_ku resize_array = { array = vpx_ku value = 0 size = 26 }
+	clear_array = vpx_f resize_array = { array = vpx_f value = 0 size = 26 }
+	clear_array = vpx_o resize_array = { array = vpx_o value = 0 size = 26 }
+	clear_array = vpx_rem resize_array = { array = vpx_rem value = 0 size = 26 }
+	clear_array = vpx_dsf resize_array = { array = vpx_dsf value = 0 size = 26 }
+	clear_array = vpx_w resize_array = { array = vpx_w value = 0 size = 26 }
+	clear_array = vpx_dot resize_array = { array = vpx_dot value = 1 size = 125 }
+	vpx_setup = yes
+}
+
+# 第一次启用（每天的 on_action，或玩家直接点决议栏里的按钮）
+vpx_enable_AZE = {
+	if = {
+		limit = { NOT = { has_country_flag = vpx_on } }
+		set_country_flag = vpx_on
+		if = { limit = { NOT = { has_country_flag = vpx_inited } } vpx_init_AZE = yes }
+		else = { vpx_run_poll = yes }
+	}
+}

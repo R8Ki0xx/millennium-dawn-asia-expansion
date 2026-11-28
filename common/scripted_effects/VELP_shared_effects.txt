@@ -1,0 +1,136 @@
+# MD ROC Return v3.46 —— 议会概况页的半圆议席图填色（由 _tools/v345/vel_parl.py 生成）
+
+VELP_fill_a_150 = {
+	set_variable = { VELP_a_gov = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vi if = { limit = { check_variable = { VELP_a_g^vi = 1 } } add_to_variable = { VELP_a_gov = VELP_a_n^vi } } }
+	set_variable = { VELP_a_need = VELP_a_tot } add_to_variable = { VELP_a_need = 1 } divide_variable = { VELP_a_need = 2 } add_to_variable = { VELP_a_need = 0.01 } round_variable = VELP_a_need
+	set_temp_variable = { vcum = 0 } set_temp_variable = { vpos = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 7 value = vi
+			if = {
+				limit = { check_variable = { VELP_a_g^vi = vwant } check_variable = { VELP_a_n^vi > 0 } check_variable = { VELP_a_tot > 0 } }
+				add_to_temp_variable = { vcum = VELP_a_n^vi }
+				set_temp_variable = { vend = vcum } multiply_temp_variable = { vend = 150 } divide_temp_variable = { vend = VELP_a_tot } round_temp_variable = vend
+				if = { limit = { check_variable = { vend > 150 } } set_temp_variable = { vend = 150 } }
+				set_temp_variable = { vfr = VELP_a_c^vi }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = vpos end = vend value = vk set_variable = { VELP_a_dot^vk = vfr } }
+				if = { limit = { check_variable = { vend > vpos } } set_temp_variable = { vpos = vend } }
+			}
+		}
+	}
+	for_loop_effect = { start = vpos end = 150 value = vk set_variable = { VELP_a_dot^vk = 23 } }
+}
+
+VELP_fill_b_150 = {
+	set_variable = { VELP_b_gov = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vi if = { limit = { check_variable = { VELP_b_g^vi = 1 } } add_to_variable = { VELP_b_gov = VELP_b_n^vi } } }
+	set_variable = { VELP_b_need = VELP_b_tot } add_to_variable = { VELP_b_need = 1 } divide_variable = { VELP_b_need = 2 } add_to_variable = { VELP_b_need = 0.01 } round_variable = VELP_b_need
+	set_temp_variable = { vcum = 0 } set_temp_variable = { vpos = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 7 value = vi
+			if = {
+				limit = { check_variable = { VELP_b_g^vi = vwant } check_variable = { VELP_b_n^vi > 0 } check_variable = { VELP_b_tot > 0 } }
+				add_to_temp_variable = { vcum = VELP_b_n^vi }
+				set_temp_variable = { vend = vcum } multiply_temp_variable = { vend = 150 } divide_temp_variable = { vend = VELP_b_tot } round_temp_variable = vend
+				if = { limit = { check_variable = { vend > 150 } } set_temp_variable = { vend = 150 } }
+				set_temp_variable = { vfr = VELP_b_c^vi }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = vpos end = vend value = vk set_variable = { VELP_b_dot^vk = vfr } }
+				if = { limit = { check_variable = { vend > vpos } } set_temp_variable = { vpos = vend } }
+			}
+		}
+	}
+	for_loop_effect = { start = vpos end = 150 value = vk set_variable = { VELP_b_dot^vk = 23 } }
+}
+
+VELP_fill_a_100 = {
+	set_variable = { VELP_a_gov = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vi if = { limit = { check_variable = { VELP_a_g^vi = 1 } } add_to_variable = { VELP_a_gov = VELP_a_n^vi } } }
+	set_variable = { VELP_a_need = VELP_a_tot } add_to_variable = { VELP_a_need = 1 } divide_variable = { VELP_a_need = 2 } add_to_variable = { VELP_a_need = 0.01 } round_variable = VELP_a_need
+	set_temp_variable = { vcum = 0 } set_temp_variable = { vpos = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 7 value = vi
+			if = {
+				limit = { check_variable = { VELP_a_g^vi = vwant } check_variable = { VELP_a_n^vi > 0 } check_variable = { VELP_a_tot > 0 } }
+				add_to_temp_variable = { vcum = VELP_a_n^vi }
+				set_temp_variable = { vend = vcum } multiply_temp_variable = { vend = 100 } divide_temp_variable = { vend = VELP_a_tot } round_temp_variable = vend
+				if = { limit = { check_variable = { vend > 100 } } set_temp_variable = { vend = 100 } }
+				set_temp_variable = { vfr = VELP_a_c^vi }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = vpos end = vend value = vk set_variable = { VELP_a_dot^vk = vfr } }
+				if = { limit = { check_variable = { vend > vpos } } set_temp_variable = { vpos = vend } }
+			}
+		}
+	}
+	for_loop_effect = { start = vpos end = 100 value = vk set_variable = { VELP_a_dot^vk = 23 } }
+}
+
+VELP_fill_a_113 = {
+	set_variable = { VELP_a_gov = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vi if = { limit = { check_variable = { VELP_a_g^vi = 1 } } add_to_variable = { VELP_a_gov = VELP_a_n^vi } } }
+	set_variable = { VELP_a_need = VELP_a_tot } add_to_variable = { VELP_a_need = 1 } divide_variable = { VELP_a_need = 2 } add_to_variable = { VELP_a_need = 0.01 } round_variable = VELP_a_need
+	set_temp_variable = { vcum = 0 } set_temp_variable = { vpos = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 7 value = vi
+			if = {
+				limit = { check_variable = { VELP_a_g^vi = vwant } check_variable = { VELP_a_n^vi > 0 } check_variable = { VELP_a_tot > 0 } }
+				add_to_temp_variable = { vcum = VELP_a_n^vi }
+				set_temp_variable = { vend = vcum } multiply_temp_variable = { vend = 113 } divide_temp_variable = { vend = VELP_a_tot } round_temp_variable = vend
+				if = { limit = { check_variable = { vend > 113 } } set_temp_variable = { vend = 113 } }
+				set_temp_variable = { vfr = VELP_a_c^vi }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = vpos end = vend value = vk set_variable = { VELP_a_dot^vk = vfr } }
+				if = { limit = { check_variable = { vend > vpos } } set_temp_variable = { vpos = vend } }
+			}
+		}
+	}
+	for_loop_effect = { start = vpos end = 113 value = vk set_variable = { VELP_a_dot^vk = 23 } }
+}
+
+VELP_fill_b_113 = {
+	set_variable = { VELP_b_gov = 0 }
+	for_loop_effect = { start = 0 end = 7 value = vi if = { limit = { check_variable = { VELP_b_g^vi = 1 } } add_to_variable = { VELP_b_gov = VELP_b_n^vi } } }
+	set_variable = { VELP_b_need = VELP_b_tot } add_to_variable = { VELP_b_need = 1 } divide_variable = { VELP_b_need = 2 } add_to_variable = { VELP_b_need = 0.01 } round_variable = VELP_b_need
+	set_temp_variable = { vcum = 0 } set_temp_variable = { vpos = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 7 value = vi
+			if = {
+				limit = { check_variable = { VELP_b_g^vi = vwant } check_variable = { VELP_b_n^vi > 0 } check_variable = { VELP_b_tot > 0 } }
+				add_to_temp_variable = { vcum = VELP_b_n^vi }
+				set_temp_variable = { vend = vcum } multiply_temp_variable = { vend = 113 } divide_temp_variable = { vend = VELP_b_tot } round_temp_variable = vend
+				if = { limit = { check_variable = { vend > 113 } } set_temp_variable = { vend = 113 } }
+				set_temp_variable = { vfr = VELP_b_c^vi }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = vpos end = vend value = vk set_variable = { VELP_b_dot^vk = vfr } }
+				if = { limit = { check_variable = { vend > vpos } } set_temp_variable = { vpos = vend } }
+			}
+		}
+	}
+	for_loop_effect = { start = vpos end = 113 value = vk set_variable = { VELP_b_dot^vk = 23 } }
+}
+
+# 图例色点：政府一方用带白圈的帧
+VELP_swatches = {
+	if = { limit = { NOT = { has_variable = VELP_a_sw^6 } } resize_array = { array = VELP_a_sw value = 1 size = 7 } resize_array = { array = VELP_b_sw value = 1 size = 7 } }
+	for_loop_effect = { start = 0 end = 7 value = vi
+		set_variable = { VELP_a_sw^vi = VELP_a_c^vi }
+		if = { limit = { check_variable = { VELP_a_g^vi = 1 } } add_to_variable = { VELP_a_sw^vi = 1 } }
+		else = { add_to_variable = { VELP_a_sw^vi = 11 } }
+	}
+	for_loop_effect = { start = 0 end = 7 value = vi
+		set_variable = { VELP_b_sw^vi = VELP_b_c^vi }
+		if = { limit = { check_variable = { VELP_b_g^vi = 1 } } add_to_variable = { VELP_b_sw^vi = 1 } }
+		else = { add_to_variable = { VELP_b_sw^vi = 11 } }
+	}
+}

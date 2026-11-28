@@ -1,0 +1,585 @@
+# MD ROC Return v3.46 —— 议会与选举：只对玩家控制的国家启用；跟随千禧的选举
+on_actions = {
+	on_new_term_election = {
+		effect = {
+			if = { limit = { has_country_flag = vpx_on } set_country_flag = vpx_pending set_variable = { vpx_pdays = 0 } }
+		}
+	}
+	# 开局就给玩家控制的国家启用，决议栏一开始就有数据
+	on_startup = {
+		effect = {
+			if = { limit = { country_exists = ENG ENG = { is_ai = no } } ENG = { vpx_enable_ENG = yes } }
+			if = { limit = { country_exists = FRA FRA = { is_ai = no } } FRA = { vpx_enable_FRA = yes } }
+			if = { limit = { country_exists = GER GER = { is_ai = no } } GER = { vpx_enable_GER = yes } }
+			if = { limit = { country_exists = ITA ITA = { is_ai = no } } ITA = { vpx_enable_ITA = yes } }
+			if = { limit = { country_exists = POL POL = { is_ai = no } } POL = { vpx_enable_POL = yes } }
+			if = { limit = { country_exists = UKR UKR = { is_ai = no } } UKR = { vpx_enable_UKR = yes } }
+			if = { limit = { country_exists = BRA BRA = { is_ai = no } } BRA = { vpx_enable_BRA = yes } }
+			if = { limit = { country_exists = CAN CAN = { is_ai = no } } CAN = { vpx_enable_CAN = yes } }
+			if = { limit = { country_exists = AST AST = { is_ai = no } } AST = { vpx_enable_AST = yes } }
+			if = { limit = { country_exists = KOR KOR = { is_ai = no } } KOR = { vpx_enable_KOR = yes } }
+			if = { limit = { country_exists = JAP JAP = { is_ai = no } } JAP = { vpx_enable_JAP = yes } }
+			if = { limit = { country_exists = RAJ RAJ = { is_ai = no } } RAJ = { vpx_enable_RAJ = yes } }
+			if = { limit = { country_exists = TUR TUR = { is_ai = no } } TUR = { vpx_enable_TUR = yes } }
+			if = { limit = { country_exists = SPR SPR = { is_ai = no } } SPR = { vpx_enable_SPR = yes } }
+			if = { limit = { country_exists = POR POR = { is_ai = no } } POR = { vpx_enable_POR = yes } }
+			if = { limit = { country_exists = HOL HOL = { is_ai = no } } HOL = { vpx_enable_HOL = yes } }
+			if = { limit = { country_exists = BEL BEL = { is_ai = no } } BEL = { vpx_enable_BEL = yes } }
+			if = { limit = { country_exists = DEN DEN = { is_ai = no } } DEN = { vpx_enable_DEN = yes } }
+			if = { limit = { country_exists = NRY NRY = { is_ai = no } } NRY = { vpx_enable_NRY = yes } }
+			if = { limit = { country_exists = SWE SWE = { is_ai = no } } SWE = { vpx_enable_SWE = yes } }
+			if = { limit = { country_exists = FIN FIN = { is_ai = no } } FIN = { vpx_enable_FIN = yes } }
+			if = { limit = { country_exists = CZE CZE = { is_ai = no } } CZE = { vpx_enable_CZE = yes } }
+			if = { limit = { country_exists = SLO SLO = { is_ai = no } } SLO = { vpx_enable_SLO = yes } }
+			if = { limit = { country_exists = HUN HUN = { is_ai = no } } HUN = { vpx_enable_HUN = yes } }
+			if = { limit = { country_exists = SER SER = { is_ai = no } } SER = { vpx_enable_SER = yes } }
+			if = { limit = { country_exists = GRE GRE = { is_ai = no } } GRE = { vpx_enable_GRE = yes } }
+			if = { limit = { country_exists = GEO GEO = { is_ai = no } } GEO = { vpx_enable_GEO = yes } }
+			if = { limit = { country_exists = AZE AZE = { is_ai = no } } AZE = { vpx_enable_AZE = yes } }
+			if = { limit = { country_exists = PER PER = { is_ai = no } } PER = { vpx_enable_PER = yes } }
+			if = { limit = { country_exists = SYR SYR = { is_ai = no } } SYR = { vpx_enable_SYR = yes } }
+			if = { limit = { country_exists = IRQ IRQ = { is_ai = no } } IRQ = { vpx_enable_IRQ = yes } }
+			if = { limit = { country_exists = PAK PAK = { is_ai = no } } PAK = { vpx_enable_PAK = yes } }
+			if = { limit = { country_exists = BRM BRM = { is_ai = no } } BRM = { vpx_enable_BRM = yes } }
+			if = { limit = { country_exists = SIA SIA = { is_ai = no } } SIA = { vpx_enable_SIA = yes } }
+			if = { limit = { country_exists = IND IND = { is_ai = no } } IND = { vpx_enable_IND = yes } }
+			if = { limit = { country_exists = MAY MAY = { is_ai = no } } MAY = { vpx_enable_MAY = yes } }
+			if = { limit = { country_exists = PHI PHI = { is_ai = no } } PHI = { vpx_enable_PHI = yes } }
+			if = { limit = { country_exists = ARG ARG = { is_ai = no } } ARG = { vpx_enable_ARG = yes } }
+			if = { limit = { country_exists = MEX MEX = { is_ai = no } } MEX = { vpx_enable_MEX = yes } }
+			if = { limit = { country_exists = KAZ KAZ = { is_ai = no } } KAZ = { vpx_enable_KAZ = yes } }
+			if = { limit = { country_exists = EST EST = { is_ai = no } } EST = { vpx_enable_EST = yes } }
+			if = { limit = { country_exists = LAT LAT = { is_ai = no } } LAT = { vpx_enable_LAT = yes } }
+			if = { limit = { country_exists = LIT LIT = { is_ai = no } } LIT = { vpx_enable_LIT = yes } }
+			if = { limit = { country_exists = AUS AUS = { is_ai = no } } AUS = { vpx_enable_AUS = yes } }
+			if = { limit = { country_exists = BUL BUL = { is_ai = no } } BUL = { vpx_enable_BUL = yes } }
+			if = { limit = { country_exists = SAF SAF = { is_ai = no } } SAF = { vpx_enable_SAF = yes } }
+			if = { limit = { country_exists = ETH ETH = { is_ai = no } } ETH = { vpx_enable_ETH = yes } }
+			if = { limit = { country_exists = EGY EGY = { is_ai = no } } EGY = { vpx_enable_EGY = yes } }
+			if = { limit = { country_exists = ALG ALG = { is_ai = no } } ALG = { vpx_enable_ALG = yes } }
+			if = { limit = { country_exists = MOR MOR = { is_ai = no } } MOR = { vpx_enable_MOR = yes } }
+			if = { limit = { country_exists = TUN TUN = { is_ai = no } } TUN = { vpx_enable_TUN = yes } }
+			if = { limit = { country_exists = NIG NIG = { is_ai = no } } NIG = { vpx_enable_NIG = yes } }
+		}
+	}
+	on_daily_ENG = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_ENG = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_FRA = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_FRA = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_GER = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_GER = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_ITA = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_ITA = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_POL = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_POL = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_UKR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_UKR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_BRA = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_BRA = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_CAN = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_CAN = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_AST = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_AST = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_KOR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_KOR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_JAP = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_JAP = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_RAJ = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_RAJ = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_TUR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_TUR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SPR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SPR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_POR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_POR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_HOL = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_HOL = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_BEL = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_BEL = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_DEN = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_DEN = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_NRY = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_NRY = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SWE = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SWE = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_FIN = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_FIN = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_CZE = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_CZE = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SLO = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SLO = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_HUN = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_HUN = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SER = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SER = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_GRE = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_GRE = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_GEO = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_GEO = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_AZE = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_AZE = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_PER = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_PER = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SYR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SYR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_IRQ = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_IRQ = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_PAK = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_PAK = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_BRM = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_BRM = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SIA = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SIA = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_IND = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_IND = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_MAY = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_MAY = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_PHI = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_PHI = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_ARG = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_ARG = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_MEX = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_MEX = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_KAZ = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_KAZ = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_EST = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_EST = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_LAT = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_LAT = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_LIT = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_LIT = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_AUS = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_AUS = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_BUL = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_BUL = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_SAF = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_SAF = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_ETH = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_ETH = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_EGY = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_EGY = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_ALG = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_ALG = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_MOR = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_MOR = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_TUN = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_TUN = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+	on_daily_NIG = {
+		effect = {
+			if = {
+				limit = { is_ai = no }
+				vpx_enable_NIG = yes
+				vpx_daily = yes
+			}
+			else_if = { limit = { has_country_flag = vpx_on } vpx_shutdown = yes }
+		}
+	}
+}

@@ -40,6 +40,297 @@ scripted_gui = {
 			vb_tai_swb_4_click_enabled = { check_variable = { VEL_TAI_sw_4_r > 0 } }
 			vb_tai_swb_5_click_enabled = { check_variable = { VEL_TAI_sw_5_r > 0 } }
 			vb_tai_swb_6_click_enabled = { check_variable = { VEL_TAI_sw_6_r > 0 } }
+			vb_tai_pa_s0_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^0 > 0 } }
+			vb_tai_pa_s1_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^1 > 0 } }
+			vb_tai_pa_s2_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^2 > 0 } }
+			vb_tai_pa_s3_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^3 > 0 } }
+			vb_tai_pa_s4_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^4 > 0 } }
+			vb_tai_pa_s5_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^5 > 0 } }
+			vb_tai_pa_s6_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_a_n^6 > 0 } }
+			vb_tai_pb_s0_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^0 > 0 } }
+			vb_tai_pb_s1_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^1 > 0 } }
+			vb_tai_pb_s2_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^2 > 0 } }
+			vb_tai_pb_s3_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^3 > 0 } }
+			vb_tai_pb_s4_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^4 > 0 } }
+			vb_tai_pb_s5_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^5 > 0 } }
+			vb_tai_pb_s6_visible = { check_variable = { VELP_tab = 1 } check_variable = { VELP_b_n^6 > 0 } }
+			vb_tai_parlbg_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_title_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d7_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d8_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d9_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d10_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d11_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d12_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d13_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d14_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d15_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d16_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d17_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d18_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d19_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d20_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d21_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d22_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d23_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d24_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d25_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d26_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d27_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d28_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d29_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d30_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d31_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d32_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d33_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d34_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d35_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d36_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d37_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d38_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d39_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d40_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d41_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d42_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d43_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d44_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d45_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d46_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d47_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d48_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d49_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d50_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d51_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d52_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d53_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d54_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d55_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d56_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d57_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d58_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d59_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d60_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d61_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d62_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d63_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d64_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d65_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d66_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d67_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d68_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d69_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d70_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d71_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d72_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d73_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d74_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d75_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d76_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d77_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d78_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d79_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d80_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d81_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d82_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d83_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d84_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d85_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d86_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d87_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d88_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d89_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d90_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d91_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d92_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d93_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d94_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d95_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d96_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d97_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d98_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d99_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d100_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d101_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d102_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d103_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d104_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d105_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d106_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d107_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d108_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d109_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d110_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d111_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_d112_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_tot_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_sum_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_n6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_v6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pa_t6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_title_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d7_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d8_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d9_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d10_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d11_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d12_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d13_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d14_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d15_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d16_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d17_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d18_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d19_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d20_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d21_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d22_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d23_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d24_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d25_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d26_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d27_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d28_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d29_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d30_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d31_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d32_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d33_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d34_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d35_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d36_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d37_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d38_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d39_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d40_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d41_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d42_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d43_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d44_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d45_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d46_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d47_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d48_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d49_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d50_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d51_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d52_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d53_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d54_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d55_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d56_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d57_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d58_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d59_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d60_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d61_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d62_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d63_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d64_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d65_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d66_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d67_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d68_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d69_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d70_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d71_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d72_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d73_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d74_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d75_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d76_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d77_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d78_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d79_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d80_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d81_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d82_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d83_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d84_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d85_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d86_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d87_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d88_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d89_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d90_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d91_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d92_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d93_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d94_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d95_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d96_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d97_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d98_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d99_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d100_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d101_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d102_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d103_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d104_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d105_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d106_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d107_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d108_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d109_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d110_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d111_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_d112_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_tot_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_sum_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t0_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t1_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t2_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t3_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t4_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t5_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_n6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_v6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pb_t6_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_pnote_visible = { check_variable = { VELP_tab = 1 } }
+			vb_tai_parlback_visible = { check_variable = { VELP_tab = 1 } }
 		}
 		properties = {
 			vb_tai_i_0 = { frame = VEL_TAI_frame^0 }
@@ -71,7 +362,6 @@ scripted_gui = {
 			vb_tai_b_9 = { frame = VEL_TAI_frame^9 }
 			vb_tai_i_10 = { frame = VEL_TAI_frame^10 }
 			vb_tai_o_10 = { frame = VEL_TAI_selfr^10 }
-			vb_tai_b_10 = { frame = VEL_TAI_frame^10 }
 			vb_tai_i_11 = { frame = VEL_TAI_frame^11 }
 			vb_tai_o_11 = { frame = VEL_TAI_selfr^11 }
 			vb_tai_b_11 = { frame = VEL_TAI_frame^11 }
@@ -190,9 +480,249 @@ scripted_gui = {
 			vb_tai_sws_5 = { frame = VEL_TAI_sw_5_l }
 			vb_tai_sws_6 = { frame = VEL_TAI_sw_6_l }
 			vb_tai_prog = { frame = VEL_TAI_prog }
+			vb_tai_pa_d0 = { frame = VELP_a_dot^0 }
+			vb_tai_pa_d1 = { frame = VELP_a_dot^1 }
+			vb_tai_pa_d2 = { frame = VELP_a_dot^2 }
+			vb_tai_pa_d3 = { frame = VELP_a_dot^3 }
+			vb_tai_pa_d4 = { frame = VELP_a_dot^4 }
+			vb_tai_pa_d5 = { frame = VELP_a_dot^5 }
+			vb_tai_pa_d6 = { frame = VELP_a_dot^6 }
+			vb_tai_pa_d7 = { frame = VELP_a_dot^7 }
+			vb_tai_pa_d8 = { frame = VELP_a_dot^8 }
+			vb_tai_pa_d9 = { frame = VELP_a_dot^9 }
+			vb_tai_pa_d10 = { frame = VELP_a_dot^10 }
+			vb_tai_pa_d11 = { frame = VELP_a_dot^11 }
+			vb_tai_pa_d12 = { frame = VELP_a_dot^12 }
+			vb_tai_pa_d13 = { frame = VELP_a_dot^13 }
+			vb_tai_pa_d14 = { frame = VELP_a_dot^14 }
+			vb_tai_pa_d15 = { frame = VELP_a_dot^15 }
+			vb_tai_pa_d16 = { frame = VELP_a_dot^16 }
+			vb_tai_pa_d17 = { frame = VELP_a_dot^17 }
+			vb_tai_pa_d18 = { frame = VELP_a_dot^18 }
+			vb_tai_pa_d19 = { frame = VELP_a_dot^19 }
+			vb_tai_pa_d20 = { frame = VELP_a_dot^20 }
+			vb_tai_pa_d21 = { frame = VELP_a_dot^21 }
+			vb_tai_pa_d22 = { frame = VELP_a_dot^22 }
+			vb_tai_pa_d23 = { frame = VELP_a_dot^23 }
+			vb_tai_pa_d24 = { frame = VELP_a_dot^24 }
+			vb_tai_pa_d25 = { frame = VELP_a_dot^25 }
+			vb_tai_pa_d26 = { frame = VELP_a_dot^26 }
+			vb_tai_pa_d27 = { frame = VELP_a_dot^27 }
+			vb_tai_pa_d28 = { frame = VELP_a_dot^28 }
+			vb_tai_pa_d29 = { frame = VELP_a_dot^29 }
+			vb_tai_pa_d30 = { frame = VELP_a_dot^30 }
+			vb_tai_pa_d31 = { frame = VELP_a_dot^31 }
+			vb_tai_pa_d32 = { frame = VELP_a_dot^32 }
+			vb_tai_pa_d33 = { frame = VELP_a_dot^33 }
+			vb_tai_pa_d34 = { frame = VELP_a_dot^34 }
+			vb_tai_pa_d35 = { frame = VELP_a_dot^35 }
+			vb_tai_pa_d36 = { frame = VELP_a_dot^36 }
+			vb_tai_pa_d37 = { frame = VELP_a_dot^37 }
+			vb_tai_pa_d38 = { frame = VELP_a_dot^38 }
+			vb_tai_pa_d39 = { frame = VELP_a_dot^39 }
+			vb_tai_pa_d40 = { frame = VELP_a_dot^40 }
+			vb_tai_pa_d41 = { frame = VELP_a_dot^41 }
+			vb_tai_pa_d42 = { frame = VELP_a_dot^42 }
+			vb_tai_pa_d43 = { frame = VELP_a_dot^43 }
+			vb_tai_pa_d44 = { frame = VELP_a_dot^44 }
+			vb_tai_pa_d45 = { frame = VELP_a_dot^45 }
+			vb_tai_pa_d46 = { frame = VELP_a_dot^46 }
+			vb_tai_pa_d47 = { frame = VELP_a_dot^47 }
+			vb_tai_pa_d48 = { frame = VELP_a_dot^48 }
+			vb_tai_pa_d49 = { frame = VELP_a_dot^49 }
+			vb_tai_pa_d50 = { frame = VELP_a_dot^50 }
+			vb_tai_pa_d51 = { frame = VELP_a_dot^51 }
+			vb_tai_pa_d52 = { frame = VELP_a_dot^52 }
+			vb_tai_pa_d53 = { frame = VELP_a_dot^53 }
+			vb_tai_pa_d54 = { frame = VELP_a_dot^54 }
+			vb_tai_pa_d55 = { frame = VELP_a_dot^55 }
+			vb_tai_pa_d56 = { frame = VELP_a_dot^56 }
+			vb_tai_pa_d57 = { frame = VELP_a_dot^57 }
+			vb_tai_pa_d58 = { frame = VELP_a_dot^58 }
+			vb_tai_pa_d59 = { frame = VELP_a_dot^59 }
+			vb_tai_pa_d60 = { frame = VELP_a_dot^60 }
+			vb_tai_pa_d61 = { frame = VELP_a_dot^61 }
+			vb_tai_pa_d62 = { frame = VELP_a_dot^62 }
+			vb_tai_pa_d63 = { frame = VELP_a_dot^63 }
+			vb_tai_pa_d64 = { frame = VELP_a_dot^64 }
+			vb_tai_pa_d65 = { frame = VELP_a_dot^65 }
+			vb_tai_pa_d66 = { frame = VELP_a_dot^66 }
+			vb_tai_pa_d67 = { frame = VELP_a_dot^67 }
+			vb_tai_pa_d68 = { frame = VELP_a_dot^68 }
+			vb_tai_pa_d69 = { frame = VELP_a_dot^69 }
+			vb_tai_pa_d70 = { frame = VELP_a_dot^70 }
+			vb_tai_pa_d71 = { frame = VELP_a_dot^71 }
+			vb_tai_pa_d72 = { frame = VELP_a_dot^72 }
+			vb_tai_pa_d73 = { frame = VELP_a_dot^73 }
+			vb_tai_pa_d74 = { frame = VELP_a_dot^74 }
+			vb_tai_pa_d75 = { frame = VELP_a_dot^75 }
+			vb_tai_pa_d76 = { frame = VELP_a_dot^76 }
+			vb_tai_pa_d77 = { frame = VELP_a_dot^77 }
+			vb_tai_pa_d78 = { frame = VELP_a_dot^78 }
+			vb_tai_pa_d79 = { frame = VELP_a_dot^79 }
+			vb_tai_pa_d80 = { frame = VELP_a_dot^80 }
+			vb_tai_pa_d81 = { frame = VELP_a_dot^81 }
+			vb_tai_pa_d82 = { frame = VELP_a_dot^82 }
+			vb_tai_pa_d83 = { frame = VELP_a_dot^83 }
+			vb_tai_pa_d84 = { frame = VELP_a_dot^84 }
+			vb_tai_pa_d85 = { frame = VELP_a_dot^85 }
+			vb_tai_pa_d86 = { frame = VELP_a_dot^86 }
+			vb_tai_pa_d87 = { frame = VELP_a_dot^87 }
+			vb_tai_pa_d88 = { frame = VELP_a_dot^88 }
+			vb_tai_pa_d89 = { frame = VELP_a_dot^89 }
+			vb_tai_pa_d90 = { frame = VELP_a_dot^90 }
+			vb_tai_pa_d91 = { frame = VELP_a_dot^91 }
+			vb_tai_pa_d92 = { frame = VELP_a_dot^92 }
+			vb_tai_pa_d93 = { frame = VELP_a_dot^93 }
+			vb_tai_pa_d94 = { frame = VELP_a_dot^94 }
+			vb_tai_pa_d95 = { frame = VELP_a_dot^95 }
+			vb_tai_pa_d96 = { frame = VELP_a_dot^96 }
+			vb_tai_pa_d97 = { frame = VELP_a_dot^97 }
+			vb_tai_pa_d98 = { frame = VELP_a_dot^98 }
+			vb_tai_pa_d99 = { frame = VELP_a_dot^99 }
+			vb_tai_pa_d100 = { frame = VELP_a_dot^100 }
+			vb_tai_pa_d101 = { frame = VELP_a_dot^101 }
+			vb_tai_pa_d102 = { frame = VELP_a_dot^102 }
+			vb_tai_pa_d103 = { frame = VELP_a_dot^103 }
+			vb_tai_pa_d104 = { frame = VELP_a_dot^104 }
+			vb_tai_pa_d105 = { frame = VELP_a_dot^105 }
+			vb_tai_pa_d106 = { frame = VELP_a_dot^106 }
+			vb_tai_pa_d107 = { frame = VELP_a_dot^107 }
+			vb_tai_pa_d108 = { frame = VELP_a_dot^108 }
+			vb_tai_pa_d109 = { frame = VELP_a_dot^109 }
+			vb_tai_pa_d110 = { frame = VELP_a_dot^110 }
+			vb_tai_pa_d111 = { frame = VELP_a_dot^111 }
+			vb_tai_pa_d112 = { frame = VELP_a_dot^112 }
+			vb_tai_pa_s0 = { frame = VELP_a_sw^0 }
+			vb_tai_pa_s1 = { frame = VELP_a_sw^1 }
+			vb_tai_pa_s2 = { frame = VELP_a_sw^2 }
+			vb_tai_pa_s3 = { frame = VELP_a_sw^3 }
+			vb_tai_pa_s4 = { frame = VELP_a_sw^4 }
+			vb_tai_pa_s5 = { frame = VELP_a_sw^5 }
+			vb_tai_pa_s6 = { frame = VELP_a_sw^6 }
+			vb_tai_pb_d0 = { frame = VELP_b_dot^0 }
+			vb_tai_pb_d1 = { frame = VELP_b_dot^1 }
+			vb_tai_pb_d2 = { frame = VELP_b_dot^2 }
+			vb_tai_pb_d3 = { frame = VELP_b_dot^3 }
+			vb_tai_pb_d4 = { frame = VELP_b_dot^4 }
+			vb_tai_pb_d5 = { frame = VELP_b_dot^5 }
+			vb_tai_pb_d6 = { frame = VELP_b_dot^6 }
+			vb_tai_pb_d7 = { frame = VELP_b_dot^7 }
+			vb_tai_pb_d8 = { frame = VELP_b_dot^8 }
+			vb_tai_pb_d9 = { frame = VELP_b_dot^9 }
+			vb_tai_pb_d10 = { frame = VELP_b_dot^10 }
+			vb_tai_pb_d11 = { frame = VELP_b_dot^11 }
+			vb_tai_pb_d12 = { frame = VELP_b_dot^12 }
+			vb_tai_pb_d13 = { frame = VELP_b_dot^13 }
+			vb_tai_pb_d14 = { frame = VELP_b_dot^14 }
+			vb_tai_pb_d15 = { frame = VELP_b_dot^15 }
+			vb_tai_pb_d16 = { frame = VELP_b_dot^16 }
+			vb_tai_pb_d17 = { frame = VELP_b_dot^17 }
+			vb_tai_pb_d18 = { frame = VELP_b_dot^18 }
+			vb_tai_pb_d19 = { frame = VELP_b_dot^19 }
+			vb_tai_pb_d20 = { frame = VELP_b_dot^20 }
+			vb_tai_pb_d21 = { frame = VELP_b_dot^21 }
+			vb_tai_pb_d22 = { frame = VELP_b_dot^22 }
+			vb_tai_pb_d23 = { frame = VELP_b_dot^23 }
+			vb_tai_pb_d24 = { frame = VELP_b_dot^24 }
+			vb_tai_pb_d25 = { frame = VELP_b_dot^25 }
+			vb_tai_pb_d26 = { frame = VELP_b_dot^26 }
+			vb_tai_pb_d27 = { frame = VELP_b_dot^27 }
+			vb_tai_pb_d28 = { frame = VELP_b_dot^28 }
+			vb_tai_pb_d29 = { frame = VELP_b_dot^29 }
+			vb_tai_pb_d30 = { frame = VELP_b_dot^30 }
+			vb_tai_pb_d31 = { frame = VELP_b_dot^31 }
+			vb_tai_pb_d32 = { frame = VELP_b_dot^32 }
+			vb_tai_pb_d33 = { frame = VELP_b_dot^33 }
+			vb_tai_pb_d34 = { frame = VELP_b_dot^34 }
+			vb_tai_pb_d35 = { frame = VELP_b_dot^35 }
+			vb_tai_pb_d36 = { frame = VELP_b_dot^36 }
+			vb_tai_pb_d37 = { frame = VELP_b_dot^37 }
+			vb_tai_pb_d38 = { frame = VELP_b_dot^38 }
+			vb_tai_pb_d39 = { frame = VELP_b_dot^39 }
+			vb_tai_pb_d40 = { frame = VELP_b_dot^40 }
+			vb_tai_pb_d41 = { frame = VELP_b_dot^41 }
+			vb_tai_pb_d42 = { frame = VELP_b_dot^42 }
+			vb_tai_pb_d43 = { frame = VELP_b_dot^43 }
+			vb_tai_pb_d44 = { frame = VELP_b_dot^44 }
+			vb_tai_pb_d45 = { frame = VELP_b_dot^45 }
+			vb_tai_pb_d46 = { frame = VELP_b_dot^46 }
+			vb_tai_pb_d47 = { frame = VELP_b_dot^47 }
+			vb_tai_pb_d48 = { frame = VELP_b_dot^48 }
+			vb_tai_pb_d49 = { frame = VELP_b_dot^49 }
+			vb_tai_pb_d50 = { frame = VELP_b_dot^50 }
+			vb_tai_pb_d51 = { frame = VELP_b_dot^51 }
+			vb_tai_pb_d52 = { frame = VELP_b_dot^52 }
+			vb_tai_pb_d53 = { frame = VELP_b_dot^53 }
+			vb_tai_pb_d54 = { frame = VELP_b_dot^54 }
+			vb_tai_pb_d55 = { frame = VELP_b_dot^55 }
+			vb_tai_pb_d56 = { frame = VELP_b_dot^56 }
+			vb_tai_pb_d57 = { frame = VELP_b_dot^57 }
+			vb_tai_pb_d58 = { frame = VELP_b_dot^58 }
+			vb_tai_pb_d59 = { frame = VELP_b_dot^59 }
+			vb_tai_pb_d60 = { frame = VELP_b_dot^60 }
+			vb_tai_pb_d61 = { frame = VELP_b_dot^61 }
+			vb_tai_pb_d62 = { frame = VELP_b_dot^62 }
+			vb_tai_pb_d63 = { frame = VELP_b_dot^63 }
+			vb_tai_pb_d64 = { frame = VELP_b_dot^64 }
+			vb_tai_pb_d65 = { frame = VELP_b_dot^65 }
+			vb_tai_pb_d66 = { frame = VELP_b_dot^66 }
+			vb_tai_pb_d67 = { frame = VELP_b_dot^67 }
+			vb_tai_pb_d68 = { frame = VELP_b_dot^68 }
+			vb_tai_pb_d69 = { frame = VELP_b_dot^69 }
+			vb_tai_pb_d70 = { frame = VELP_b_dot^70 }
+			vb_tai_pb_d71 = { frame = VELP_b_dot^71 }
+			vb_tai_pb_d72 = { frame = VELP_b_dot^72 }
+			vb_tai_pb_d73 = { frame = VELP_b_dot^73 }
+			vb_tai_pb_d74 = { frame = VELP_b_dot^74 }
+			vb_tai_pb_d75 = { frame = VELP_b_dot^75 }
+			vb_tai_pb_d76 = { frame = VELP_b_dot^76 }
+			vb_tai_pb_d77 = { frame = VELP_b_dot^77 }
+			vb_tai_pb_d78 = { frame = VELP_b_dot^78 }
+			vb_tai_pb_d79 = { frame = VELP_b_dot^79 }
+			vb_tai_pb_d80 = { frame = VELP_b_dot^80 }
+			vb_tai_pb_d81 = { frame = VELP_b_dot^81 }
+			vb_tai_pb_d82 = { frame = VELP_b_dot^82 }
+			vb_tai_pb_d83 = { frame = VELP_b_dot^83 }
+			vb_tai_pb_d84 = { frame = VELP_b_dot^84 }
+			vb_tai_pb_d85 = { frame = VELP_b_dot^85 }
+			vb_tai_pb_d86 = { frame = VELP_b_dot^86 }
+			vb_tai_pb_d87 = { frame = VELP_b_dot^87 }
+			vb_tai_pb_d88 = { frame = VELP_b_dot^88 }
+			vb_tai_pb_d89 = { frame = VELP_b_dot^89 }
+			vb_tai_pb_d90 = { frame = VELP_b_dot^90 }
+			vb_tai_pb_d91 = { frame = VELP_b_dot^91 }
+			vb_tai_pb_d92 = { frame = VELP_b_dot^92 }
+			vb_tai_pb_d93 = { frame = VELP_b_dot^93 }
+			vb_tai_pb_d94 = { frame = VELP_b_dot^94 }
+			vb_tai_pb_d95 = { frame = VELP_b_dot^95 }
+			vb_tai_pb_d96 = { frame = VELP_b_dot^96 }
+			vb_tai_pb_d97 = { frame = VELP_b_dot^97 }
+			vb_tai_pb_d98 = { frame = VELP_b_dot^98 }
+			vb_tai_pb_d99 = { frame = VELP_b_dot^99 }
+			vb_tai_pb_d100 = { frame = VELP_b_dot^100 }
+			vb_tai_pb_d101 = { frame = VELP_b_dot^101 }
+			vb_tai_pb_d102 = { frame = VELP_b_dot^102 }
+			vb_tai_pb_d103 = { frame = VELP_b_dot^103 }
+			vb_tai_pb_d104 = { frame = VELP_b_dot^104 }
+			vb_tai_pb_d105 = { frame = VELP_b_dot^105 }
+			vb_tai_pb_d106 = { frame = VELP_b_dot^106 }
+			vb_tai_pb_d107 = { frame = VELP_b_dot^107 }
+			vb_tai_pb_d108 = { frame = VELP_b_dot^108 }
+			vb_tai_pb_d109 = { frame = VELP_b_dot^109 }
+			vb_tai_pb_d110 = { frame = VELP_b_dot^110 }
+			vb_tai_pb_d111 = { frame = VELP_b_dot^111 }
+			vb_tai_pb_d112 = { frame = VELP_b_dot^112 }
+			vb_tai_pb_s0 = { frame = VELP_b_sw^0 }
+			vb_tai_pb_s1 = { frame = VELP_b_sw^1 }
+			vb_tai_pb_s2 = { frame = VELP_b_sw^2 }
+			vb_tai_pb_s3 = { frame = VELP_b_sw^3 }
+			vb_tai_pb_s4 = { frame = VELP_b_sw^4 }
+			vb_tai_pb_s5 = { frame = VELP_b_sw^5 }
+			vb_tai_pb_s6 = { frame = VELP_b_sw^6 }
 		}
 		effects = {
-			vb_tai_close_click = { clr_country_flag = VEL_TAI_open }
+			vb_tai_close_click = { clr_country_flag = VEL_TAI_open set_variable = { VELP_tab = 0 } }
 			vb_tai_r_0_click = { set_variable = { VEL_TAI_sel = 1 } VEL_TAI_refresh_sel = yes }
 			vb_tai_bh_0_click = { set_variable = { VEL_TAI_sel = 1 } VEL_TAI_refresh_sel = yes }
 			vb_tai_r_1_click = { set_variable = { VEL_TAI_sel = 2 } VEL_TAI_refresh_sel = yes }
@@ -211,7 +741,6 @@ scripted_gui = {
 			vb_tai_r_9_click = { set_variable = { VEL_TAI_sel = 10 } VEL_TAI_refresh_sel = yes }
 			vb_tai_bh_9_click = { set_variable = { VEL_TAI_sel = 10 } VEL_TAI_refresh_sel = yes }
 			vb_tai_r_10_click = { set_variable = { VEL_TAI_sel = 11 } VEL_TAI_refresh_sel = yes }
-			vb_tai_bh_10_click = { set_variable = { VEL_TAI_sel = 11 } VEL_TAI_refresh_sel = yes }
 			vb_tai_r_11_click = { set_variable = { VEL_TAI_sel = 12 } VEL_TAI_refresh_sel = yes }
 			vb_tai_bh_11_click = { set_variable = { VEL_TAI_sel = 12 } VEL_TAI_refresh_sel = yes }
 			vb_tai_r_12_click = { set_variable = { VEL_TAI_sel = 13 } VEL_TAI_refresh_sel = yes }
@@ -265,6 +794,8 @@ scripted_gui = {
 			vb_tai_swb_4_click = { set_variable = { VEL_TAI_sel = VEL_TAI_sw_4_r } VEL_TAI_refresh_sel = yes }
 			vb_tai_swb_5_click = { set_variable = { VEL_TAI_sel = VEL_TAI_sw_5_r } VEL_TAI_refresh_sel = yes }
 			vb_tai_swb_6_click = { set_variable = { VEL_TAI_sel = VEL_TAI_sw_6_r } VEL_TAI_refresh_sel = yes }
+			vb_tai_parlbtn_click = { set_variable = { VELP_tab = 1 } VELP_TAI_refresh = yes VELP_swatches = yes }
+			vb_tai_parlback_click = { set_variable = { VELP_tab = 0 } }
 		}
 	}
 }

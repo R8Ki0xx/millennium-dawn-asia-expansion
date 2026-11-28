@@ -196,9 +196,9 @@ VEL_TAI_init = {
 		add_to_array = { VEL_TAI_wp = 1.025 } add_to_array = { VEL_TAI_wp = 0.401 } add_to_array = { VEL_TAI_wp = 0.267 } add_to_array = { VEL_TAI_wp = 0.045 }
 		clear_array = VEL_TAI_order
 		add_to_array = { VEL_TAI_order = 2 } add_to_array = { VEL_TAI_order = 1 } add_to_array = { VEL_TAI_order = 16 } add_to_array = { VEL_TAI_order = 0 } add_to_array = { VEL_TAI_order = 17 } add_to_array = { VEL_TAI_order = 3 }
-		add_to_array = { VEL_TAI_order = 5 } add_to_array = { VEL_TAI_order = 18 } add_to_array = { VEL_TAI_order = 4 } add_to_array = { VEL_TAI_order = 9 } add_to_array = { VEL_TAI_order = 6 } add_to_array = { VEL_TAI_order = 7 }
-		add_to_array = { VEL_TAI_order = 12 } add_to_array = { VEL_TAI_order = 15 } add_to_array = { VEL_TAI_order = 14 } add_to_array = { VEL_TAI_order = 8 } add_to_array = { VEL_TAI_order = 10 } add_to_array = { VEL_TAI_order = 13 }
-		add_to_array = { VEL_TAI_order = 11 } add_to_array = { VEL_TAI_order = 21 } add_to_array = { VEL_TAI_order = 19 } add_to_array = { VEL_TAI_order = 20 }
+		add_to_array = { VEL_TAI_order = 5 } add_to_array = { VEL_TAI_order = 18 } add_to_array = { VEL_TAI_order = 9 } add_to_array = { VEL_TAI_order = 7 } add_to_array = { VEL_TAI_order = 4 } add_to_array = { VEL_TAI_order = 6 }
+		add_to_array = { VEL_TAI_order = 15 } add_to_array = { VEL_TAI_order = 14 } add_to_array = { VEL_TAI_order = 12 } add_to_array = { VEL_TAI_order = 8 } add_to_array = { VEL_TAI_order = 10 } add_to_array = { VEL_TAI_order = 11 }
+		add_to_array = { VEL_TAI_order = 13 } add_to_array = { VEL_TAI_order = 21 } add_to_array = { VEL_TAI_order = 19 } add_to_array = { VEL_TAI_order = 20 }
 		clear_array = VEL_TAI_camp
 		resize_array = { array = VEL_TAI_camp value = 0 size = 22 }
 		clear_array = VEL_TAI_frame

@@ -1,0 +1,7 @@
+# MD ROC Return v3.46 —— 政府在议会中的实力给少量影响
+vpx_parliament_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_central_management
+	political_power_factor = vpx_mpp
+	stability_factor = vpx_mst
+}

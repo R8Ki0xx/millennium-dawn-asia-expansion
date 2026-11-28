@@ -1,0 +1,26 @@
+# MD ROC Return v3.46 —— 泰国 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_SIA_emb" texturefile = "gfx/interface/scripted_gui/VPX/SIA_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_overlay" texturefile = "gfx/interface/scripted_gui/VPX/SIA_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_1" texturefile = "gfx/interface/scripted_gui/VPX/SIA_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_2" texturefile = "gfx/interface/scripted_gui/VPX/SIA_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_3" texturefile = "gfx/interface/scripted_gui/VPX/SIA_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_4" texturefile = "gfx/interface/scripted_gui/VPX/SIA_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_5" texturefile = "gfx/interface/scripted_gui/VPX/SIA_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_6" texturefile = "gfx/interface/scripted_gui/VPX/SIA_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_6_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_6_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_6_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_6_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_7" texturefile = "gfx/interface/scripted_gui/VPX/SIA_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_7_sel" texturefile = "gfx/interface/scripted_gui/VPX/SIA_7_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_SIA_7_hit" texturefile = "gfx/interface/scripted_gui/VPX/SIA_7_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

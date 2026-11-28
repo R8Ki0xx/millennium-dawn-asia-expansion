@@ -48,7 +48,6 @@ spriteTypes = {
 	spriteType = { name = "GFX_VEL_TAIX_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_11.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_11.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_11_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_11_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_TAIX_box_11" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_box_11.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_12.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_o_12" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_o_12.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_TAIX_12_hit" texturefile = "gfx/interface/scripted_gui/VEL/TAIX_12_hit.dds" noOfFrames = 4 legacy_lazy_load = no }

@@ -1,0 +1,44 @@
+# MD ROC Return v3.46 —— 加拿大 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_CAN_emb" texturefile = "gfx/interface/scripted_gui/VPX/CAN_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_overlay" texturefile = "gfx/interface/scripted_gui/VPX/CAN_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_1" texturefile = "gfx/interface/scripted_gui/VPX/CAN_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_2" texturefile = "gfx/interface/scripted_gui/VPX/CAN_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_3" texturefile = "gfx/interface/scripted_gui/VPX/CAN_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_4" texturefile = "gfx/interface/scripted_gui/VPX/CAN_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_5" texturefile = "gfx/interface/scripted_gui/VPX/CAN_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_6" texturefile = "gfx/interface/scripted_gui/VPX/CAN_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_6_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_6_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_6_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_6_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_7" texturefile = "gfx/interface/scripted_gui/VPX/CAN_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_7_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_7_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_7_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_7_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_8" texturefile = "gfx/interface/scripted_gui/VPX/CAN_8.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_8_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_8_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_8_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_8_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_9" texturefile = "gfx/interface/scripted_gui/VPX/CAN_9.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_9_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_9_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_9_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_9_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_10" texturefile = "gfx/interface/scripted_gui/VPX/CAN_10.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_10_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_10_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_10_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_10_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_11" texturefile = "gfx/interface/scripted_gui/VPX/CAN_11.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_11_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_11_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_11_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_11_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_12" texturefile = "gfx/interface/scripted_gui/VPX/CAN_12.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_12_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_12_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_12_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_12_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_13" texturefile = "gfx/interface/scripted_gui/VPX/CAN_13.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_13_sel" texturefile = "gfx/interface/scripted_gui/VPX/CAN_13_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_CAN_13_hit" texturefile = "gfx/interface/scripted_gui/VPX/CAN_13_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

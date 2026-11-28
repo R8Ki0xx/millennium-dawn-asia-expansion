@@ -1,0 +1,21 @@
+# MD ROC Return v3.46 —— 议会与选举事件
+add_namespace = VPX
+
+country_event = {
+	id = VPX.1
+	hidden = yes
+	is_triggered_only = yes
+	immediate = { vpx_reveal_step = yes }
+	option = { name = VPX.1.a }
+}
+
+country_event = {
+	id = VPX.2
+	title = VPX.2.t
+	desc = VPX.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	trigger = { has_country_flag = vpx_on }
+	option = { name = VPX.2.a ai_chance = { base = 1 } }
+	option = { name = VPX.2.b set_variable = { vpx_tab = 2 } set_country_flag = vpx_open vpx_refresh_all = yes ai_chance = { base = 0 } }
+}

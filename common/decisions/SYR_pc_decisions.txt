@@ -115,7 +115,7 @@ SYR_people_council_category = {
 		icon = GFX_decision_generic_political_address
 		cost = 100
 		days_re_enable = 365
-		available = { date > 2001.1.1 }
+		available = { date > 2001.1.1 NOT = { has_country_flag = vpx_campaign } }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SYR_dec_pc_dissolve"
 			SYR_pc_hold_election = yes

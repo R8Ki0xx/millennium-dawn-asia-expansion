@@ -1,0 +1,53 @@
+# MD ROC Return v3.46 —— 菲律宾 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_PHI_emb" texturefile = "gfx/interface/scripted_gui/VPX/PHI_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_overlay" texturefile = "gfx/interface/scripted_gui/VPX/PHI_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_1" texturefile = "gfx/interface/scripted_gui/VPX/PHI_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_2" texturefile = "gfx/interface/scripted_gui/VPX/PHI_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_3" texturefile = "gfx/interface/scripted_gui/VPX/PHI_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_4" texturefile = "gfx/interface/scripted_gui/VPX/PHI_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_5" texturefile = "gfx/interface/scripted_gui/VPX/PHI_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_6" texturefile = "gfx/interface/scripted_gui/VPX/PHI_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_6_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_6_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_6_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_6_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_7" texturefile = "gfx/interface/scripted_gui/VPX/PHI_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_7_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_7_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_7_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_7_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_8" texturefile = "gfx/interface/scripted_gui/VPX/PHI_8.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_8_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_8_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_8_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_8_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_9" texturefile = "gfx/interface/scripted_gui/VPX/PHI_9.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_9_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_9_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_9_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_9_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_10" texturefile = "gfx/interface/scripted_gui/VPX/PHI_10.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_10_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_10_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_10_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_10_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_11" texturefile = "gfx/interface/scripted_gui/VPX/PHI_11.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_11_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_11_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_11_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_11_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_12" texturefile = "gfx/interface/scripted_gui/VPX/PHI_12.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_12_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_12_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_12_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_12_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_13" texturefile = "gfx/interface/scripted_gui/VPX/PHI_13.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_13_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_13_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_13_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_13_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_14" texturefile = "gfx/interface/scripted_gui/VPX/PHI_14.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_14_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_14_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_14_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_14_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_15" texturefile = "gfx/interface/scripted_gui/VPX/PHI_15.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_15_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_15_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_15_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_15_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_16" texturefile = "gfx/interface/scripted_gui/VPX/PHI_16.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_16_sel" texturefile = "gfx/interface/scripted_gui/VPX/PHI_16_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_PHI_16_hit" texturefile = "gfx/interface/scripted_gui/VPX/PHI_16_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

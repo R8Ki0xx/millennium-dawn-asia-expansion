@@ -106,7 +106,6 @@ spriteTypes = {
 	spriteType = { name = "GFX_VEL_CHIX_30" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_30.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHIX_o_30" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_o_30.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHIX_30_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_30_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
-	spriteType = { name = "GFX_VEL_CHIX_box_30" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_box_30.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHIX_31" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_31.dds" noOfFrames = 22 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHIX_o_31" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_o_31.dds" noOfFrames = 2 legacy_lazy_load = no }
 	spriteType = { name = "GFX_VEL_CHIX_31_hit" texturefile = "gfx/interface/scripted_gui/VEL/CHIX_31_hit.dds" noOfFrames = 4 legacy_lazy_load = no }
@@ -284,4 +283,5 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 		steps = 100
 	}
+	spriteType = { name = "GFX_VELP_bg" texturefile = "gfx/interface/scripted_gui/VEL/parl_bg.dds" legacy_lazy_load = no }
 }

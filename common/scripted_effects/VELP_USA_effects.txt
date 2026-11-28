@@ -1,0 +1,30 @@
+# MD ROC Return v3.46 —— USA 议会概况页的数据（由 _tools/v345/vel_parl.py 生成）
+
+VELP_USA_refresh = {
+	if = { limit = { NOT = { has_variable = VELP_a_n^6 } }
+		resize_array = { array = VELP_a_n value = 0 size = 7 }
+		resize_array = { array = VELP_a_c value = 8 size = 7 }
+		resize_array = { array = VELP_a_g value = 0 size = 7 }
+		resize_array = { array = VELP_a_dot value = 1 size = 150 }
+		resize_array = { array = VELP_a_pidx value = -1 size = 7 }
+		resize_array = { array = VELP_b_n value = 0 size = 7 }
+		resize_array = { array = VELP_b_c value = 8 size = 7 }
+		resize_array = { array = VELP_b_g value = 0 size = 7 }
+		resize_array = { array = VELP_b_dot value = 1 size = 150 }
+		resize_array = { array = VELP_b_pidx value = -1 size = 7 }
+	}
+	for_loop_effect = { start = 0 end = 7 value = vi set_variable = { VELP_a_n^vi = 0 } set_variable = { VELP_a_g^vi = 0 } set_variable = { VELP_a_c^vi = 8 } set_variable = { VELP_b_n^vi = 0 } set_variable = { VELP_b_g^vi = 0 } set_variable = { VELP_b_c^vi = 8 } }
+	set_temp_variable = { vrc = 8 } set_temp_variable = { voc = 8 }
+	if = { limit = { check_variable = { ruling_party = 1 } } set_temp_variable = { vrc = 3 } set_temp_variable = { voc = 1 } }
+	if = { limit = { check_variable = { ruling_party = 2 } } set_temp_variable = { vrc = 1 } set_temp_variable = { voc = 3 } }
+	set_variable = { VELP_a_tot = senators_total }
+	if = { limit = { check_variable = { VELP_a_tot < 1 } } set_variable = { VELP_a_tot = 100 } }
+	set_variable = { VELP_a_n^0 = senators_support } round_variable = VELP_a_n^0 set_variable = { VELP_a_c^0 = vrc } set_variable = { VELP_a_g^0 = 1 }
+	set_variable = { VELP_a_n^1 = VELP_a_tot } subtract_from_variable = { VELP_a_n^1 = VELP_a_n^0 } set_variable = { VELP_a_c^1 = voc }
+	set_variable = { VELP_b_tot = representatives_total }
+	if = { limit = { check_variable = { VELP_b_tot < 1 } } set_variable = { VELP_b_tot = 435 } }
+	set_variable = { VELP_b_n^0 = representatives_support } round_variable = VELP_b_n^0 set_variable = { VELP_b_c^0 = vrc } set_variable = { VELP_b_g^0 = 1 }
+	set_variable = { VELP_b_n^1 = VELP_b_tot } subtract_from_variable = { VELP_b_n^1 = VELP_b_n^0 } set_variable = { VELP_b_c^1 = voc }
+	VELP_fill_a_100 = yes
+	VELP_fill_b_150 = yes
+}

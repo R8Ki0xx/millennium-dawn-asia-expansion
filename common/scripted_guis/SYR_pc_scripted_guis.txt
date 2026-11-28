@@ -6,10 +6,14 @@ scripted_gui = {
 		visible = { original_tag = SYR }
 		ai_enabled = { always = no }
 		triggers = {
+			pc_vpx_map_visible = { has_country_flag = vpx_on }
 			pc_m33_on_visible = { check_variable = { SYR_pc_support > 0.333 } }
 			pc_m50_on_visible = { check_variable = { SYR_pc_support > 0.499 } }
 			pc_m66_on_visible = { check_variable = { SYR_pc_support > 0.666 } }
 			pc_warning_visible = { check_variable = { SYR_pc_support < 0.334 } }
+		}
+		effects = {
+			pc_vpx_map_click = { set_country_flag = vpx_open set_variable = { vpx_tab = 1 } vpx_refresh_all = yes }
 		}
 		properties = {
 			pc_isl_bar = { frame = SYR_pc_isl_pct }

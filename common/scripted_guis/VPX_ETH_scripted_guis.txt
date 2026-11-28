@@ -1,0 +1,798 @@
+# MD ROC Return v3.46 —— 埃塞俄比亚 议会与选举界面逻辑（gen_world.py 生成）
+scripted_gui = {
+	VPX_ETH_SMALL = {
+		context_type = decision_category
+		window_name = "VPX_ETH_small"
+		visible = { original_tag = ETH }
+		ai_enabled = { always = no }
+		properties = {
+			vpx_semb_1 = { frame = vpx_t_e_1 }
+			vpx_semb_2 = { frame = vpx_t_e_2 }
+			vpx_semb_3 = { frame = vpx_t_e_3 }
+			vpx_semb_4 = { frame = vpx_t_e_4 }
+		}
+		effects = {
+			vpx_sopen_click = { if = { limit = { has_country_flag = vpx_open } clr_country_flag = vpx_open } else = { vpx_enable_ETH = yes set_country_flag = vpx_open vpx_refresh_all = yes } }
+		}
+	}
+	VPX_ETH_BIG = {
+		context_type = player_context
+		window_name = "VPX_ETH_window"
+		visible = { has_country_flag = vpx_open has_country_flag = vpx_on original_tag = ETH }
+		ai_enabled = { always = no }
+		triggers = {
+			vpx_m_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_m_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_overlay_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_msel_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_r_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_ls_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lt_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_l_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_hsel_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_selinfo_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_emb_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_name_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sel_pct_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sbar_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_rally_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_rallynote_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_hsw_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_0_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sws_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_swt_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_sw_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_hlg_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_3_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_4_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_5_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_6_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_7_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_8_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_9_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgt_10_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_lgc_10_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_banner_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_bannertxt_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_parlname_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_0_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_11_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_12_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_13_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_14_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_15_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_16_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_17_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_18_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_19_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_20_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_21_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_22_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_23_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_24_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_25_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_26_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_27_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_28_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_29_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_30_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_31_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_32_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_33_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_34_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_35_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_36_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_37_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_38_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_39_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_40_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_41_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_42_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_43_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_44_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_45_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_46_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_47_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_48_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_49_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_50_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_51_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_52_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_53_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_54_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_55_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_56_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_57_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_58_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_59_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_60_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_61_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_62_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_63_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_64_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_65_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_66_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_67_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_68_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_69_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_70_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_71_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_72_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_73_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_74_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_75_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_76_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_77_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_78_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_79_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_80_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_81_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_82_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_83_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_84_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_85_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_86_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_87_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_88_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_89_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_90_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_91_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_92_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_93_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_94_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_95_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_96_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_97_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_98_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_99_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_100_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_101_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_102_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_103_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_104_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_105_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_106_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_107_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_108_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_109_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_110_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_111_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_112_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_113_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_114_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_115_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_116_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_117_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_118_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_119_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_120_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_121_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_122_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_123_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_124_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_125_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_126_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_127_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_128_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_129_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_130_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_131_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_132_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_133_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_134_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_135_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_136_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_137_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_138_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_139_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_140_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_141_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_142_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_143_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_144_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_145_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_146_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_147_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_148_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_dot_149_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_total_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_govline_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_effline_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_headline_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_termline_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_notehdr_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_desc_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_legend_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_htable_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_1_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_3_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_4_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_5_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_6_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_7_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_8_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_9_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_temb_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tname_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tseat_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tvote_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tup_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_tgov_10_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_vacrow_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_hupper_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_uppertext_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_bg1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_bg2_visible = { check_variable = { vpx_tab = 2 } }
+			vpx_view1_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_view2_visible = { check_variable = { vpx_tab = 1 } }
+			vpx_prog_visible = { check_variable = { vpx_phase = 2 } }
+			vpx_view1_click_enabled = { check_variable = { vpx_poll_ready = 1 } }
+			vpx_view2_click_enabled = { OR = { check_variable = { vpx_phase > 1 } check_variable = { vpx_ncount > 0 } } }
+			vpx_rally_click_enabled = { check_variable = { vpx_sel > 0 } check_variable = { vpx_s_occf = 0 } NOT = { check_variable = { vpx_phase = 2 } } NOT = { has_country_flag = vpx_rally_cd } has_political_power > 24 }
+			vpx_lgsw_1_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_1 > 0 } }
+			vpx_lgsw_2_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_2 > 0 } }
+			vpx_lgsw_3_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_3 > 0 } }
+			vpx_lgsw_4_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_4 > 0 } }
+			vpx_lgsw_5_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_5 > 0 } }
+			vpx_lgsw_6_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_6 > 0 } }
+			vpx_lgsw_7_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_7 > 0 } }
+			vpx_lgsw_8_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_8 > 0 } }
+			vpx_lgsw_9_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_9 > 0 } }
+			vpx_lgsw_10_visible = { check_variable = { vpx_tab = 1 } check_variable = { vpx_lg_s_10 > 0 } }
+			vpx_sw_0_click_enabled = { check_variable = { vpx_sw_r^0 > 0 } }
+			vpx_sw_1_click_enabled = { check_variable = { vpx_sw_r^1 > 0 } }
+			vpx_sw_2_click_enabled = { check_variable = { vpx_sw_r^2 > 0 } }
+			vpx_sw_3_click_enabled = { check_variable = { vpx_sw_r^3 > 0 } }
+			vpx_sw_4_click_enabled = { check_variable = { vpx_sw_r^4 > 0 } }
+			vpx_sw_5_click_enabled = { check_variable = { vpx_sw_r^5 > 0 } }
+		}
+		properties = {
+			vpx_m_0 = { frame = vpx_frame^0 }
+			vpx_msel_0 = { frame = vpx_selfr^0 }
+			vpx_ls_0 = { frame = vpx_lead^0 }
+			vpx_m_1 = { frame = vpx_frame^1 }
+			vpx_msel_1 = { frame = vpx_selfr^1 }
+			vpx_ls_1 = { frame = vpx_lead^1 }
+			vpx_m_2 = { frame = vpx_frame^2 }
+			vpx_msel_2 = { frame = vpx_selfr^2 }
+			vpx_ls_2 = { frame = vpx_lead^2 }
+			vpx_m_3 = { frame = vpx_frame^3 }
+			vpx_msel_3 = { frame = vpx_selfr^3 }
+			vpx_ls_3 = { frame = vpx_lead^3 }
+			vpx_m_4 = { frame = vpx_frame^4 }
+			vpx_msel_4 = { frame = vpx_selfr^4 }
+			vpx_ls_4 = { frame = vpx_lead^4 }
+			vpx_m_5 = { frame = vpx_frame^5 }
+			vpx_msel_5 = { frame = vpx_selfr^5 }
+			vpx_ls_5 = { frame = vpx_lead^5 }
+			vpx_m_6 = { frame = vpx_frame^6 }
+			vpx_msel_6 = { frame = vpx_selfr^6 }
+			vpx_ls_6 = { frame = vpx_lead^6 }
+			vpx_m_7 = { frame = vpx_frame^7 }
+			vpx_msel_7 = { frame = vpx_selfr^7 }
+			vpx_ls_7 = { frame = vpx_lead^7 }
+			vpx_m_8 = { frame = vpx_frame^8 }
+			vpx_msel_8 = { frame = vpx_selfr^8 }
+			vpx_ls_8 = { frame = vpx_lead^8 }
+			vpx_m_9 = { frame = vpx_frame^9 }
+			vpx_msel_9 = { frame = vpx_selfr^9 }
+			vpx_ls_9 = { frame = vpx_lead^9 }
+			vpx_dot_0 = { frame = vpx_dot^0 }
+			vpx_dot_1 = { frame = vpx_dot^1 }
+			vpx_dot_2 = { frame = vpx_dot^2 }
+			vpx_dot_3 = { frame = vpx_dot^3 }
+			vpx_dot_4 = { frame = vpx_dot^4 }
+			vpx_dot_5 = { frame = vpx_dot^5 }
+			vpx_dot_6 = { frame = vpx_dot^6 }
+			vpx_dot_7 = { frame = vpx_dot^7 }
+			vpx_dot_8 = { frame = vpx_dot^8 }
+			vpx_dot_9 = { frame = vpx_dot^9 }
+			vpx_dot_10 = { frame = vpx_dot^10 }
+			vpx_dot_11 = { frame = vpx_dot^11 }
+			vpx_dot_12 = { frame = vpx_dot^12 }
+			vpx_dot_13 = { frame = vpx_dot^13 }
+			vpx_dot_14 = { frame = vpx_dot^14 }
+			vpx_dot_15 = { frame = vpx_dot^15 }
+			vpx_dot_16 = { frame = vpx_dot^16 }
+			vpx_dot_17 = { frame = vpx_dot^17 }
+			vpx_dot_18 = { frame = vpx_dot^18 }
+			vpx_dot_19 = { frame = vpx_dot^19 }
+			vpx_dot_20 = { frame = vpx_dot^20 }
+			vpx_dot_21 = { frame = vpx_dot^21 }
+			vpx_dot_22 = { frame = vpx_dot^22 }
+			vpx_dot_23 = { frame = vpx_dot^23 }
+			vpx_dot_24 = { frame = vpx_dot^24 }
+			vpx_dot_25 = { frame = vpx_dot^25 }
+			vpx_dot_26 = { frame = vpx_dot^26 }
+			vpx_dot_27 = { frame = vpx_dot^27 }
+			vpx_dot_28 = { frame = vpx_dot^28 }
+			vpx_dot_29 = { frame = vpx_dot^29 }
+			vpx_dot_30 = { frame = vpx_dot^30 }
+			vpx_dot_31 = { frame = vpx_dot^31 }
+			vpx_dot_32 = { frame = vpx_dot^32 }
+			vpx_dot_33 = { frame = vpx_dot^33 }
+			vpx_dot_34 = { frame = vpx_dot^34 }
+			vpx_dot_35 = { frame = vpx_dot^35 }
+			vpx_dot_36 = { frame = vpx_dot^36 }
+			vpx_dot_37 = { frame = vpx_dot^37 }
+			vpx_dot_38 = { frame = vpx_dot^38 }
+			vpx_dot_39 = { frame = vpx_dot^39 }
+			vpx_dot_40 = { frame = vpx_dot^40 }
+			vpx_dot_41 = { frame = vpx_dot^41 }
+			vpx_dot_42 = { frame = vpx_dot^42 }
+			vpx_dot_43 = { frame = vpx_dot^43 }
+			vpx_dot_44 = { frame = vpx_dot^44 }
+			vpx_dot_45 = { frame = vpx_dot^45 }
+			vpx_dot_46 = { frame = vpx_dot^46 }
+			vpx_dot_47 = { frame = vpx_dot^47 }
+			vpx_dot_48 = { frame = vpx_dot^48 }
+			vpx_dot_49 = { frame = vpx_dot^49 }
+			vpx_dot_50 = { frame = vpx_dot^50 }
+			vpx_dot_51 = { frame = vpx_dot^51 }
+			vpx_dot_52 = { frame = vpx_dot^52 }
+			vpx_dot_53 = { frame = vpx_dot^53 }
+			vpx_dot_54 = { frame = vpx_dot^54 }
+			vpx_dot_55 = { frame = vpx_dot^55 }
+			vpx_dot_56 = { frame = vpx_dot^56 }
+			vpx_dot_57 = { frame = vpx_dot^57 }
+			vpx_dot_58 = { frame = vpx_dot^58 }
+			vpx_dot_59 = { frame = vpx_dot^59 }
+			vpx_dot_60 = { frame = vpx_dot^60 }
+			vpx_dot_61 = { frame = vpx_dot^61 }
+			vpx_dot_62 = { frame = vpx_dot^62 }
+			vpx_dot_63 = { frame = vpx_dot^63 }
+			vpx_dot_64 = { frame = vpx_dot^64 }
+			vpx_dot_65 = { frame = vpx_dot^65 }
+			vpx_dot_66 = { frame = vpx_dot^66 }
+			vpx_dot_67 = { frame = vpx_dot^67 }
+			vpx_dot_68 = { frame = vpx_dot^68 }
+			vpx_dot_69 = { frame = vpx_dot^69 }
+			vpx_dot_70 = { frame = vpx_dot^70 }
+			vpx_dot_71 = { frame = vpx_dot^71 }
+			vpx_dot_72 = { frame = vpx_dot^72 }
+			vpx_dot_73 = { frame = vpx_dot^73 }
+			vpx_dot_74 = { frame = vpx_dot^74 }
+			vpx_dot_75 = { frame = vpx_dot^75 }
+			vpx_dot_76 = { frame = vpx_dot^76 }
+			vpx_dot_77 = { frame = vpx_dot^77 }
+			vpx_dot_78 = { frame = vpx_dot^78 }
+			vpx_dot_79 = { frame = vpx_dot^79 }
+			vpx_dot_80 = { frame = vpx_dot^80 }
+			vpx_dot_81 = { frame = vpx_dot^81 }
+			vpx_dot_82 = { frame = vpx_dot^82 }
+			vpx_dot_83 = { frame = vpx_dot^83 }
+			vpx_dot_84 = { frame = vpx_dot^84 }
+			vpx_dot_85 = { frame = vpx_dot^85 }
+			vpx_dot_86 = { frame = vpx_dot^86 }
+			vpx_dot_87 = { frame = vpx_dot^87 }
+			vpx_dot_88 = { frame = vpx_dot^88 }
+			vpx_dot_89 = { frame = vpx_dot^89 }
+			vpx_dot_90 = { frame = vpx_dot^90 }
+			vpx_dot_91 = { frame = vpx_dot^91 }
+			vpx_dot_92 = { frame = vpx_dot^92 }
+			vpx_dot_93 = { frame = vpx_dot^93 }
+			vpx_dot_94 = { frame = vpx_dot^94 }
+			vpx_dot_95 = { frame = vpx_dot^95 }
+			vpx_dot_96 = { frame = vpx_dot^96 }
+			vpx_dot_97 = { frame = vpx_dot^97 }
+			vpx_dot_98 = { frame = vpx_dot^98 }
+			vpx_dot_99 = { frame = vpx_dot^99 }
+			vpx_dot_100 = { frame = vpx_dot^100 }
+			vpx_dot_101 = { frame = vpx_dot^101 }
+			vpx_dot_102 = { frame = vpx_dot^102 }
+			vpx_dot_103 = { frame = vpx_dot^103 }
+			vpx_dot_104 = { frame = vpx_dot^104 }
+			vpx_dot_105 = { frame = vpx_dot^105 }
+			vpx_dot_106 = { frame = vpx_dot^106 }
+			vpx_dot_107 = { frame = vpx_dot^107 }
+			vpx_dot_108 = { frame = vpx_dot^108 }
+			vpx_dot_109 = { frame = vpx_dot^109 }
+			vpx_dot_110 = { frame = vpx_dot^110 }
+			vpx_dot_111 = { frame = vpx_dot^111 }
+			vpx_dot_112 = { frame = vpx_dot^112 }
+			vpx_dot_113 = { frame = vpx_dot^113 }
+			vpx_dot_114 = { frame = vpx_dot^114 }
+			vpx_dot_115 = { frame = vpx_dot^115 }
+			vpx_dot_116 = { frame = vpx_dot^116 }
+			vpx_dot_117 = { frame = vpx_dot^117 }
+			vpx_dot_118 = { frame = vpx_dot^118 }
+			vpx_dot_119 = { frame = vpx_dot^119 }
+			vpx_dot_120 = { frame = vpx_dot^120 }
+			vpx_dot_121 = { frame = vpx_dot^121 }
+			vpx_dot_122 = { frame = vpx_dot^122 }
+			vpx_dot_123 = { frame = vpx_dot^123 }
+			vpx_dot_124 = { frame = vpx_dot^124 }
+			vpx_dot_125 = { frame = vpx_dot^125 }
+			vpx_dot_126 = { frame = vpx_dot^126 }
+			vpx_dot_127 = { frame = vpx_dot^127 }
+			vpx_dot_128 = { frame = vpx_dot^128 }
+			vpx_dot_129 = { frame = vpx_dot^129 }
+			vpx_dot_130 = { frame = vpx_dot^130 }
+			vpx_dot_131 = { frame = vpx_dot^131 }
+			vpx_dot_132 = { frame = vpx_dot^132 }
+			vpx_dot_133 = { frame = vpx_dot^133 }
+			vpx_dot_134 = { frame = vpx_dot^134 }
+			vpx_dot_135 = { frame = vpx_dot^135 }
+			vpx_dot_136 = { frame = vpx_dot^136 }
+			vpx_dot_137 = { frame = vpx_dot^137 }
+			vpx_dot_138 = { frame = vpx_dot^138 }
+			vpx_dot_139 = { frame = vpx_dot^139 }
+			vpx_dot_140 = { frame = vpx_dot^140 }
+			vpx_dot_141 = { frame = vpx_dot^141 }
+			vpx_dot_142 = { frame = vpx_dot^142 }
+			vpx_dot_143 = { frame = vpx_dot^143 }
+			vpx_dot_144 = { frame = vpx_dot^144 }
+			vpx_dot_145 = { frame = vpx_dot^145 }
+			vpx_dot_146 = { frame = vpx_dot^146 }
+			vpx_dot_147 = { frame = vpx_dot^147 }
+			vpx_dot_148 = { frame = vpx_dot^148 }
+			vpx_dot_149 = { frame = vpx_dot^149 }
+			vpx_card_1 = { frame = vpx_k_c_1 }
+			vpx_cemb_1 = { frame = vpx_k_e_1 }
+			vpx_card_2 = { frame = vpx_k_c_2 }
+			vpx_cemb_2 = { frame = vpx_k_e_2 }
+			vpx_card_3 = { frame = vpx_k_c_3 }
+			vpx_cemb_3 = { frame = vpx_k_e_3 }
+			vpx_card_4 = { frame = vpx_k_c_4 }
+			vpx_cemb_4 = { frame = vpx_k_e_4 }
+			vpx_temb_1 = { frame = vpx_t_e_1 }
+			vpx_temb_2 = { frame = vpx_t_e_2 }
+			vpx_temb_3 = { frame = vpx_t_e_3 }
+			vpx_temb_4 = { frame = vpx_t_e_4 }
+			vpx_temb_5 = { frame = vpx_t_e_5 }
+			vpx_temb_6 = { frame = vpx_t_e_6 }
+			vpx_temb_7 = { frame = vpx_t_e_7 }
+			vpx_temb_8 = { frame = vpx_t_e_8 }
+			vpx_temb_9 = { frame = vpx_t_e_9 }
+			vpx_temb_10 = { frame = vpx_t_e_10 }
+			vpx_sel_emb_1 = { frame = vpx_s_e_1 }
+			vpx_sbar_1 = { frame = vpx_s_b_1 }
+			vpx_sel_emb_2 = { frame = vpx_s_e_2 }
+			vpx_sbar_2 = { frame = vpx_s_b_2 }
+			vpx_sel_emb_3 = { frame = vpx_s_e_3 }
+			vpx_sbar_3 = { frame = vpx_s_b_3 }
+			vpx_sel_emb_4 = { frame = vpx_s_e_4 }
+			vpx_sbar_4 = { frame = vpx_s_b_4 }
+			vpx_sel_emb_5 = { frame = vpx_s_e_5 }
+			vpx_sbar_5 = { frame = vpx_s_b_5 }
+			vpx_sel_emb_6 = { frame = vpx_s_e_6 }
+			vpx_sbar_6 = { frame = vpx_s_b_6 }
+			vpx_sws_0 = { frame = vpx_sw_l^0 }
+			vpx_sws_1 = { frame = vpx_sw_l^1 }
+			vpx_sws_2 = { frame = vpx_sw_l^2 }
+			vpx_sws_3 = { frame = vpx_sw_l^3 }
+			vpx_sws_4 = { frame = vpx_sw_l^4 }
+			vpx_sws_5 = { frame = vpx_sw_l^5 }
+			vpx_prog = { frame = vpx_prog }
+			vpx_seg_0 = { frame = vpx_seg^0 }
+			vpx_seg_1 = { frame = vpx_seg^1 }
+			vpx_seg_2 = { frame = vpx_seg^2 }
+			vpx_seg_3 = { frame = vpx_seg^3 }
+			vpx_seg_4 = { frame = vpx_seg^4 }
+			vpx_seg_5 = { frame = vpx_seg^5 }
+			vpx_seg_6 = { frame = vpx_seg^6 }
+			vpx_seg_7 = { frame = vpx_seg^7 }
+			vpx_seg_8 = { frame = vpx_seg^8 }
+			vpx_seg_9 = { frame = vpx_seg^9 }
+			vpx_seg_10 = { frame = vpx_seg^10 }
+			vpx_seg_11 = { frame = vpx_seg^11 }
+			vpx_seg_12 = { frame = vpx_seg^12 }
+			vpx_seg_13 = { frame = vpx_seg^13 }
+			vpx_seg_14 = { frame = vpx_seg^14 }
+			vpx_seg_15 = { frame = vpx_seg^15 }
+			vpx_seg_16 = { frame = vpx_seg^16 }
+			vpx_seg_17 = { frame = vpx_seg^17 }
+			vpx_seg_18 = { frame = vpx_seg^18 }
+			vpx_seg_19 = { frame = vpx_seg^19 }
+			vpx_seg_20 = { frame = vpx_seg^20 }
+			vpx_seg_21 = { frame = vpx_seg^21 }
+			vpx_seg_22 = { frame = vpx_seg^22 }
+			vpx_seg_23 = { frame = vpx_seg^23 }
+			vpx_seg_24 = { frame = vpx_seg^24 }
+			vpx_seg_25 = { frame = vpx_seg^25 }
+			vpx_seg_26 = { frame = vpx_seg^26 }
+			vpx_seg_27 = { frame = vpx_seg^27 }
+			vpx_seg_28 = { frame = vpx_seg^28 }
+			vpx_seg_29 = { frame = vpx_seg^29 }
+			vpx_seg_30 = { frame = vpx_seg^30 }
+			vpx_seg_31 = { frame = vpx_seg^31 }
+			vpx_seg_32 = { frame = vpx_seg^32 }
+			vpx_seg_33 = { frame = vpx_seg^33 }
+			vpx_seg_34 = { frame = vpx_seg^34 }
+			vpx_seg_35 = { frame = vpx_seg^35 }
+			vpx_seg_36 = { frame = vpx_seg^36 }
+			vpx_seg_37 = { frame = vpx_seg^37 }
+			vpx_seg_38 = { frame = vpx_seg^38 }
+			vpx_seg_39 = { frame = vpx_seg^39 }
+			vpx_seg_40 = { frame = vpx_seg^40 }
+			vpx_seg_41 = { frame = vpx_seg^41 }
+			vpx_seg_42 = { frame = vpx_seg^42 }
+			vpx_seg_43 = { frame = vpx_seg^43 }
+			vpx_seg_44 = { frame = vpx_seg^44 }
+			vpx_seg_45 = { frame = vpx_seg^45 }
+			vpx_seg_46 = { frame = vpx_seg^46 }
+			vpx_seg_47 = { frame = vpx_seg^47 }
+			vpx_seg_48 = { frame = vpx_seg^48 }
+			vpx_seg_49 = { frame = vpx_seg^49 }
+			vpx_seg_50 = { frame = vpx_seg^50 }
+			vpx_seg_51 = { frame = vpx_seg^51 }
+			vpx_seg_52 = { frame = vpx_seg^52 }
+			vpx_seg_53 = { frame = vpx_seg^53 }
+			vpx_seg_54 = { frame = vpx_seg^54 }
+			vpx_seg_55 = { frame = vpx_seg^55 }
+			vpx_seg_56 = { frame = vpx_seg^56 }
+			vpx_seg_57 = { frame = vpx_seg^57 }
+			vpx_seg_58 = { frame = vpx_seg^58 }
+			vpx_seg_59 = { frame = vpx_seg^59 }
+			vpx_seg_60 = { frame = vpx_seg^60 }
+			vpx_seg_61 = { frame = vpx_seg^61 }
+			vpx_seg_62 = { frame = vpx_seg^62 }
+			vpx_seg_63 = { frame = vpx_seg^63 }
+			vpx_seg_64 = { frame = vpx_seg^64 }
+			vpx_seg_65 = { frame = vpx_seg^65 }
+			vpx_seg_66 = { frame = vpx_seg^66 }
+			vpx_seg_67 = { frame = vpx_seg^67 }
+			vpx_seg_68 = { frame = vpx_seg^68 }
+			vpx_seg_69 = { frame = vpx_seg^69 }
+			vpx_seg_70 = { frame = vpx_seg^70 }
+			vpx_seg_71 = { frame = vpx_seg^71 }
+			vpx_seg_72 = { frame = vpx_seg^72 }
+			vpx_seg_73 = { frame = vpx_seg^73 }
+			vpx_seg_74 = { frame = vpx_seg^74 }
+			vpx_seg_75 = { frame = vpx_seg^75 }
+			vpx_seg_76 = { frame = vpx_seg^76 }
+			vpx_seg_77 = { frame = vpx_seg^77 }
+			vpx_seg_78 = { frame = vpx_seg^78 }
+			vpx_seg_79 = { frame = vpx_seg^79 }
+			vpx_seg_80 = { frame = vpx_seg^80 }
+			vpx_seg_81 = { frame = vpx_seg^81 }
+			vpx_seg_82 = { frame = vpx_seg^82 }
+			vpx_seg_83 = { frame = vpx_seg^83 }
+			vpx_seg_84 = { frame = vpx_seg^84 }
+			vpx_seg_85 = { frame = vpx_seg^85 }
+			vpx_seg_86 = { frame = vpx_seg^86 }
+			vpx_seg_87 = { frame = vpx_seg^87 }
+			vpx_seg_88 = { frame = vpx_seg^88 }
+			vpx_seg_89 = { frame = vpx_seg^89 }
+			vpx_seg_90 = { frame = vpx_seg^90 }
+			vpx_seg_91 = { frame = vpx_seg^91 }
+			vpx_seg_92 = { frame = vpx_seg^92 }
+			vpx_seg_93 = { frame = vpx_seg^93 }
+			vpx_seg_94 = { frame = vpx_seg^94 }
+			vpx_seg_95 = { frame = vpx_seg^95 }
+			vpx_seg_96 = { frame = vpx_seg^96 }
+			vpx_seg_97 = { frame = vpx_seg^97 }
+			vpx_seg_98 = { frame = vpx_seg^98 }
+			vpx_seg_99 = { frame = vpx_seg^99 }
+			vpx_seg_100 = { frame = vpx_seg^100 }
+			vpx_seg_101 = { frame = vpx_seg^101 }
+			vpx_seg_102 = { frame = vpx_seg^102 }
+			vpx_seg_103 = { frame = vpx_seg^103 }
+			vpx_seg_104 = { frame = vpx_seg^104 }
+			vpx_seg_105 = { frame = vpx_seg^105 }
+			vpx_seg_106 = { frame = vpx_seg^106 }
+			vpx_seg_107 = { frame = vpx_seg^107 }
+			vpx_seg_108 = { frame = vpx_seg^108 }
+			vpx_seg_109 = { frame = vpx_seg^109 }
+			vpx_seg_110 = { frame = vpx_seg^110 }
+			vpx_seg_111 = { frame = vpx_seg^111 }
+			vpx_seg_112 = { frame = vpx_seg^112 }
+			vpx_seg_113 = { frame = vpx_seg^113 }
+			vpx_seg_114 = { frame = vpx_seg^114 }
+			vpx_seg_115 = { frame = vpx_seg^115 }
+			vpx_seg_116 = { frame = vpx_seg^116 }
+			vpx_seg_117 = { frame = vpx_seg^117 }
+			vpx_seg_118 = { frame = vpx_seg^118 }
+			vpx_seg_119 = { frame = vpx_seg^119 }
+			vpx_seg_120 = { frame = vpx_seg^120 }
+			vpx_seg_121 = { frame = vpx_seg^121 }
+			vpx_seg_122 = { frame = vpx_seg^122 }
+			vpx_seg_123 = { frame = vpx_seg^123 }
+			vpx_seg_124 = { frame = vpx_seg^124 }
+			vpx_seg_125 = { frame = vpx_seg^125 }
+			vpx_seg_126 = { frame = vpx_seg^126 }
+			vpx_seg_127 = { frame = vpx_seg^127 }
+			vpx_seg_128 = { frame = vpx_seg^128 }
+			vpx_seg_129 = { frame = vpx_seg^129 }
+			vpx_lgsw_1 = { frame = vpx_lg_c_1 }
+			vpx_lgsw_2 = { frame = vpx_lg_c_2 }
+			vpx_lgsw_3 = { frame = vpx_lg_c_3 }
+			vpx_lgsw_4 = { frame = vpx_lg_c_4 }
+			vpx_lgsw_5 = { frame = vpx_lg_c_5 }
+			vpx_lgsw_6 = { frame = vpx_lg_c_6 }
+			vpx_lgsw_7 = { frame = vpx_lg_c_7 }
+			vpx_lgsw_8 = { frame = vpx_lg_c_8 }
+			vpx_lgsw_9 = { frame = vpx_lg_c_9 }
+			vpx_lgsw_10 = { frame = vpx_lg_c_10 }
+			vpx_banner = { frame = vpx_banner }
+		}
+		effects = {
+			vpx_close_click = { clr_country_flag = vpx_open }
+			vpx_tabbtn1_click = { set_variable = { vpx_tab = 1 } vpx_refresh_all = yes }
+			vpx_tabbtn2_click = { set_variable = { vpx_tab = 2 } vpx_refresh_all = yes }
+			vpx_view1_click = { set_variable = { vpx_view = 1 } vpx_refresh_all = yes }
+			vpx_view2_click = { set_variable = { vpx_view = 2 } vpx_refresh_all = yes }
+			vpx_rally_click = { add_political_power = -25 vpx_rally = yes }
+			vpx_r_0_click = { set_variable = { vpx_sel = 1 } vpx_refresh_sel = yes }
+			vpx_l_0_click = { set_variable = { vpx_sel = 1 } vpx_refresh_sel = yes }
+			vpx_r_1_click = { set_variable = { vpx_sel = 2 } vpx_refresh_sel = yes }
+			vpx_l_1_click = { set_variable = { vpx_sel = 2 } vpx_refresh_sel = yes }
+			vpx_r_2_click = { set_variable = { vpx_sel = 3 } vpx_refresh_sel = yes }
+			vpx_l_2_click = { set_variable = { vpx_sel = 3 } vpx_refresh_sel = yes }
+			vpx_r_3_click = { set_variable = { vpx_sel = 4 } vpx_refresh_sel = yes }
+			vpx_l_3_click = { set_variable = { vpx_sel = 4 } vpx_refresh_sel = yes }
+			vpx_r_4_click = { set_variable = { vpx_sel = 5 } vpx_refresh_sel = yes }
+			vpx_l_4_click = { set_variable = { vpx_sel = 5 } vpx_refresh_sel = yes }
+			vpx_r_5_click = { set_variable = { vpx_sel = 6 } vpx_refresh_sel = yes }
+			vpx_l_5_click = { set_variable = { vpx_sel = 6 } vpx_refresh_sel = yes }
+			vpx_r_6_click = { set_variable = { vpx_sel = 7 } vpx_refresh_sel = yes }
+			vpx_l_6_click = { set_variable = { vpx_sel = 7 } vpx_refresh_sel = yes }
+			vpx_r_7_click = { set_variable = { vpx_sel = 8 } vpx_refresh_sel = yes }
+			vpx_l_7_click = { set_variable = { vpx_sel = 8 } vpx_refresh_sel = yes }
+			vpx_r_8_click = { set_variable = { vpx_sel = 9 } vpx_refresh_sel = yes }
+			vpx_l_8_click = { set_variable = { vpx_sel = 9 } vpx_refresh_sel = yes }
+			vpx_r_9_click = { set_variable = { vpx_sel = 10 } vpx_refresh_sel = yes }
+			vpx_l_9_click = { set_variable = { vpx_sel = 10 } vpx_refresh_sel = yes }
+			vpx_sw_0_click = { set_variable = { vpx_sel = vpx_sw_r^0 } vpx_refresh_sel = yes }
+			vpx_sw_1_click = { set_variable = { vpx_sel = vpx_sw_r^1 } vpx_refresh_sel = yes }
+			vpx_sw_2_click = { set_variable = { vpx_sel = vpx_sw_r^2 } vpx_refresh_sel = yes }
+			vpx_sw_3_click = { set_variable = { vpx_sel = vpx_sw_r^3 } vpx_refresh_sel = yes }
+			vpx_sw_4_click = { set_variable = { vpx_sel = vpx_sw_r^4 } vpx_refresh_sel = yes }
+			vpx_sw_5_click = { set_variable = { vpx_sel = vpx_sw_r^5 } vpx_refresh_sel = yes }
+		}
+	}
+}

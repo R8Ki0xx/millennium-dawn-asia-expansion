@@ -8,6 +8,22 @@ on_actions = {
 			}
 		}
 	}
+	# 开局就启用：否则要等游戏过完第一天，决议栏里的选举界面才有按钮和数据
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = TAI }
+				TAI = {
+					if = {
+						limit = { NOT = { has_country_flag = VEL_TAI_on } }
+						set_country_flag = VEL_TAI_on
+						set_country_flag = generic_election_killswitch
+						VEL_TAI_init = yes
+					}
+				}
+			}
+		}
+	}
 	on_daily_TAI = {
 		effect = {
 			if = {

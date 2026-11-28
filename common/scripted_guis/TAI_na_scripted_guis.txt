@@ -6,11 +6,15 @@ scripted_gui = {
 		visible = { has_country_flag = ROC_new_chi }
 		ai_enabled = { always = no }
 		triggers = {
+			na_vel_map_visible = { has_country_flag = VEL_CHI_on }
 			na_m33_on_visible = { check_variable = { TAI_na_support > 0.333 } }
 			na_m50_on_visible = { check_variable = { TAI_na_support > 0.499 } }
 			na_m66_on_visible = { check_variable = { TAI_na_support > 0.666 } }
 			na_recall_warning_visible = { check_variable = { TAI_na_support < 0.334 } }
 			na_term_info_visible = { check_variable = { TAI_na_support > 0.333 } }
+		}
+		effects = {
+			na_vel_map_click = { set_country_flag = VEL_CHI_open set_variable = { VELP_tab = 1 } VELP_CHI_refresh = yes VELP_swatches = yes }
 		}
 		properties = {
 			na_kmt_bar = { frame = TAI_na_kmt_pct }

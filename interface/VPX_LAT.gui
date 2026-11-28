@@ -1,0 +1,489 @@
+# MD ROC Return v3.46 —— 拉脱维亚 议会与选举界面（gen_world.py 生成）
+guiTypes = {
+	containerWindowType = {
+		name = "VPX_LAT_small"
+		size = { width = 500 height = 262 }
+		containerWindowType = {
+			name = "vpx_bgw"
+			position = { x = 0 y = 14 }
+			size = { width = 500 height = 248 }
+			background = { name = "Background" quadTextureSprite = "GFX_MD_tiled_window_politics_2" }
+		}
+		instantTextBoxType = { name = "vpx_stitle" position = { x = 18 y = 26 } font = "hoi_18mbs" text = "VPX_LAT_title" maxWidth = 464 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sstatus" position = { x = 18 y = 52 } font = "hoi_16mbs" text = "VPX_LAT_small_status" maxWidth = 464 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_semb_1" spriteType = "GFX_VPX_LAT_emb" position = { x = 18 y = 76 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sname_1" position = { x = 48 y = 79 } font = "hoi_16mbs" text = "VPX_LAT_tn_1" maxWidth = 300 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sseat_1" position = { x = 356 y = 79 } font = "hoi_16mbs" text = "VPX_tntxt_1" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sgov_1" position = { x = 428 y = 79 } font = "hoi_16mbs" text = "VPX_tgtxt_1" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_semb_2" spriteType = "GFX_VPX_LAT_emb" position = { x = 18 y = 104 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sname_2" position = { x = 48 y = 107 } font = "hoi_16mbs" text = "VPX_LAT_tn_2" maxWidth = 300 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sseat_2" position = { x = 356 y = 107 } font = "hoi_16mbs" text = "VPX_tntxt_2" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sgov_2" position = { x = 428 y = 107 } font = "hoi_16mbs" text = "VPX_tgtxt_2" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_semb_3" spriteType = "GFX_VPX_LAT_emb" position = { x = 18 y = 132 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sname_3" position = { x = 48 y = 135 } font = "hoi_16mbs" text = "VPX_LAT_tn_3" maxWidth = 300 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sseat_3" position = { x = 356 y = 135 } font = "hoi_16mbs" text = "VPX_tntxt_3" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sgov_3" position = { x = 428 y = 135 } font = "hoi_16mbs" text = "VPX_tgtxt_3" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_semb_4" spriteType = "GFX_VPX_LAT_emb" position = { x = 18 y = 160 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sname_4" position = { x = 48 y = 163 } font = "hoi_16mbs" text = "VPX_LAT_tn_4" maxWidth = 300 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sseat_4" position = { x = 356 y = 163 } font = "hoi_16mbs" text = "VPX_tntxt_4" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sgov_4" position = { x = 428 y = 163 } font = "hoi_16mbs" text = "VPX_tgtxt_4" maxWidth = 60 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sopen" spriteType = "GFX_button_221x34" position = { x = 18 y = 196 } buttonFont = "hoi_16mbs" buttonText = "VPX_btn_open" pdx_tooltip = "VPX_tt_open" }
+	}
+	containerWindowType = {
+		name = "VPX_LAT_window"
+		Orientation = upper_left
+		Origo = upper_left
+		position = { x = 30 y = 50 }
+		size = { width = 1355 height = 800 }
+		moveable = yes
+		background = { name = "Background" quadTextureSprite = "GFX_tiled_window_1b_border" }
+		iconType = { name = "vpx_bg1" spriteType = "GFX_VPX_bg_map" position = { x = 0 y = 0 } alwaystransparent = yes }
+		iconType = { name = "vpx_bg2" spriteType = "GFX_VPX_bg_parl" position = { x = 0 y = 0 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vpx_title" position = { x = 24 y = 8 } font = "hoi_36header" text = "VPX_LAT_title" maxWidth = 520 maxHeight = 40 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_phase" position = { x = 26 y = 46 } font = "hoi_16mbs" text = "VPX_phase_txt" maxWidth = 520 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_tabbtn1" spriteType = "GFX_VPX_tab" position = { x = 560 y = 20 } buttonFont = "hoi_18mbs" buttonText = "VPX_btn_tab1" pdx_tooltip = "VPX_tt_tab1" }
+		buttonType = { name = "vpx_tabbtn2" spriteType = "GFX_VPX_tab" position = { x = 716 y = 20 } buttonFont = "hoi_18mbs" buttonText = "VPX_btn_tab2" pdx_tooltip = "VPX_tt_tab2" }
+		buttonType = { name = "vpx_view1" spriteType = "GFX_VPX_tab" position = { x = 912 y = 20 } buttonFont = "hoi_16mbs" buttonText = "VPX_btn_view1" pdx_tooltip = "VPX_tt_view1" }
+		buttonType = { name = "vpx_view2" spriteType = "GFX_VPX_tab" position = { x = 1068 y = 20 } buttonFont = "hoi_16mbs" buttonText = "VPX_btn_view2" pdx_tooltip = "VPX_tt_view2" }
+		instantTextBoxType = { name = "vpx_viewlbl" position = { x = 912 y = 52 } font = "hoi_16mbs" text = "VPX_view_txt" maxWidth = 150 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_prog" quadTextureSprite = "GFX_VPX_prog" position = { x = 1068 y = 56 } alwaystransparent = yes }
+		buttonType = { name = "vpx_close" quadTextureSprite = "GFX_closebutton" position = { x = -46 y = 14 } Orientation = "UPPER_RIGHT" shortcut = "ESCAPE" clicksound = click_close }
+		instantTextBoxType = { name = "vpx_bgovtxt" position = { x = 24 y = 83 } font = "hoi_18mbs" text = "VPX_bgov_txt" maxWidth = 132 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_seg_0" spriteType = "GFX_VPX_seg" position = { x = 160 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_1" spriteType = "GFX_VPX_seg" position = { x = 168 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_2" spriteType = "GFX_VPX_seg" position = { x = 176 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_3" spriteType = "GFX_VPX_seg" position = { x = 184 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_4" spriteType = "GFX_VPX_seg" position = { x = 192 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_5" spriteType = "GFX_VPX_seg" position = { x = 200 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_6" spriteType = "GFX_VPX_seg" position = { x = 208 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_7" spriteType = "GFX_VPX_seg" position = { x = 216 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_8" spriteType = "GFX_VPX_seg" position = { x = 224 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_9" spriteType = "GFX_VPX_seg" position = { x = 232 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_10" spriteType = "GFX_VPX_seg" position = { x = 240 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_11" spriteType = "GFX_VPX_seg" position = { x = 248 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_12" spriteType = "GFX_VPX_seg" position = { x = 256 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_13" spriteType = "GFX_VPX_seg" position = { x = 264 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_14" spriteType = "GFX_VPX_seg" position = { x = 272 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_15" spriteType = "GFX_VPX_seg" position = { x = 280 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_16" spriteType = "GFX_VPX_seg" position = { x = 288 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_17" spriteType = "GFX_VPX_seg" position = { x = 296 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_18" spriteType = "GFX_VPX_seg" position = { x = 304 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_19" spriteType = "GFX_VPX_seg" position = { x = 312 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_20" spriteType = "GFX_VPX_seg" position = { x = 320 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_21" spriteType = "GFX_VPX_seg" position = { x = 328 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_22" spriteType = "GFX_VPX_seg" position = { x = 336 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_23" spriteType = "GFX_VPX_seg" position = { x = 344 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_24" spriteType = "GFX_VPX_seg" position = { x = 352 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_25" spriteType = "GFX_VPX_seg" position = { x = 360 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_26" spriteType = "GFX_VPX_seg" position = { x = 368 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_27" spriteType = "GFX_VPX_seg" position = { x = 376 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_28" spriteType = "GFX_VPX_seg" position = { x = 384 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_29" spriteType = "GFX_VPX_seg" position = { x = 392 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_30" spriteType = "GFX_VPX_seg" position = { x = 400 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_31" spriteType = "GFX_VPX_seg" position = { x = 408 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_32" spriteType = "GFX_VPX_seg" position = { x = 416 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_33" spriteType = "GFX_VPX_seg" position = { x = 424 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_34" spriteType = "GFX_VPX_seg" position = { x = 432 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_35" spriteType = "GFX_VPX_seg" position = { x = 440 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_36" spriteType = "GFX_VPX_seg" position = { x = 448 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_37" spriteType = "GFX_VPX_seg" position = { x = 456 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_38" spriteType = "GFX_VPX_seg" position = { x = 464 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_39" spriteType = "GFX_VPX_seg" position = { x = 472 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_40" spriteType = "GFX_VPX_seg" position = { x = 480 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_41" spriteType = "GFX_VPX_seg" position = { x = 488 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_42" spriteType = "GFX_VPX_seg" position = { x = 496 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_43" spriteType = "GFX_VPX_seg" position = { x = 504 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_44" spriteType = "GFX_VPX_seg" position = { x = 512 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_45" spriteType = "GFX_VPX_seg" position = { x = 520 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_46" spriteType = "GFX_VPX_seg" position = { x = 528 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_47" spriteType = "GFX_VPX_seg" position = { x = 536 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_48" spriteType = "GFX_VPX_seg" position = { x = 544 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_49" spriteType = "GFX_VPX_seg" position = { x = 552 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_50" spriteType = "GFX_VPX_seg" position = { x = 560 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_51" spriteType = "GFX_VPX_seg" position = { x = 568 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_52" spriteType = "GFX_VPX_seg" position = { x = 576 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_53" spriteType = "GFX_VPX_seg" position = { x = 584 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_54" spriteType = "GFX_VPX_seg" position = { x = 592 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_55" spriteType = "GFX_VPX_seg" position = { x = 600 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_56" spriteType = "GFX_VPX_seg" position = { x = 608 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_57" spriteType = "GFX_VPX_seg" position = { x = 616 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_58" spriteType = "GFX_VPX_seg" position = { x = 624 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_59" spriteType = "GFX_VPX_seg" position = { x = 632 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_60" spriteType = "GFX_VPX_seg" position = { x = 640 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_61" spriteType = "GFX_VPX_seg" position = { x = 648 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_62" spriteType = "GFX_VPX_seg" position = { x = 656 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_63" spriteType = "GFX_VPX_seg" position = { x = 664 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_64" spriteType = "GFX_VPX_seg" position = { x = 672 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_65" spriteType = "GFX_VPX_seg" position = { x = 680 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_66" spriteType = "GFX_VPX_seg" position = { x = 688 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_67" spriteType = "GFX_VPX_seg" position = { x = 696 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_68" spriteType = "GFX_VPX_seg" position = { x = 704 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_69" spriteType = "GFX_VPX_seg" position = { x = 712 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_70" spriteType = "GFX_VPX_seg" position = { x = 720 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_71" spriteType = "GFX_VPX_seg" position = { x = 728 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_72" spriteType = "GFX_VPX_seg" position = { x = 736 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_73" spriteType = "GFX_VPX_seg" position = { x = 744 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_74" spriteType = "GFX_VPX_seg" position = { x = 752 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_75" spriteType = "GFX_VPX_seg" position = { x = 760 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_76" spriteType = "GFX_VPX_seg" position = { x = 768 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_77" spriteType = "GFX_VPX_seg" position = { x = 776 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_78" spriteType = "GFX_VPX_seg" position = { x = 784 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_79" spriteType = "GFX_VPX_seg" position = { x = 792 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_80" spriteType = "GFX_VPX_seg" position = { x = 800 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_81" spriteType = "GFX_VPX_seg" position = { x = 808 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_82" spriteType = "GFX_VPX_seg" position = { x = 816 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_83" spriteType = "GFX_VPX_seg" position = { x = 824 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_84" spriteType = "GFX_VPX_seg" position = { x = 832 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_85" spriteType = "GFX_VPX_seg" position = { x = 840 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_86" spriteType = "GFX_VPX_seg" position = { x = 848 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_87" spriteType = "GFX_VPX_seg" position = { x = 856 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_88" spriteType = "GFX_VPX_seg" position = { x = 864 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_89" spriteType = "GFX_VPX_seg" position = { x = 872 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_90" spriteType = "GFX_VPX_seg" position = { x = 880 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_91" spriteType = "GFX_VPX_seg" position = { x = 888 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_92" spriteType = "GFX_VPX_seg" position = { x = 896 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_93" spriteType = "GFX_VPX_seg" position = { x = 904 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_94" spriteType = "GFX_VPX_seg" position = { x = 912 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_95" spriteType = "GFX_VPX_seg" position = { x = 920 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_96" spriteType = "GFX_VPX_seg" position = { x = 928 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_97" spriteType = "GFX_VPX_seg" position = { x = 936 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_98" spriteType = "GFX_VPX_seg" position = { x = 944 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_99" spriteType = "GFX_VPX_seg" position = { x = 952 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_100" spriteType = "GFX_VPX_seg" position = { x = 960 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_101" spriteType = "GFX_VPX_seg" position = { x = 968 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_102" spriteType = "GFX_VPX_seg" position = { x = 976 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_103" spriteType = "GFX_VPX_seg" position = { x = 984 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_104" spriteType = "GFX_VPX_seg" position = { x = 992 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_105" spriteType = "GFX_VPX_seg" position = { x = 1000 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_106" spriteType = "GFX_VPX_seg" position = { x = 1008 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_107" spriteType = "GFX_VPX_seg" position = { x = 1016 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_108" spriteType = "GFX_VPX_seg" position = { x = 1024 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_109" spriteType = "GFX_VPX_seg" position = { x = 1032 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_110" spriteType = "GFX_VPX_seg" position = { x = 1040 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_111" spriteType = "GFX_VPX_seg" position = { x = 1048 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_112" spriteType = "GFX_VPX_seg" position = { x = 1056 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_113" spriteType = "GFX_VPX_seg" position = { x = 1064 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_114" spriteType = "GFX_VPX_seg" position = { x = 1072 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_115" spriteType = "GFX_VPX_seg" position = { x = 1080 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_116" spriteType = "GFX_VPX_seg" position = { x = 1088 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_117" spriteType = "GFX_VPX_seg" position = { x = 1096 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_118" spriteType = "GFX_VPX_seg" position = { x = 1104 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_119" spriteType = "GFX_VPX_seg" position = { x = 1112 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_120" spriteType = "GFX_VPX_seg" position = { x = 1120 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_121" spriteType = "GFX_VPX_seg" position = { x = 1128 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_122" spriteType = "GFX_VPX_seg" position = { x = 1136 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_123" spriteType = "GFX_VPX_seg" position = { x = 1144 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_124" spriteType = "GFX_VPX_seg" position = { x = 1152 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_125" spriteType = "GFX_VPX_seg" position = { x = 1160 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_126" spriteType = "GFX_VPX_seg" position = { x = 1168 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_127" spriteType = "GFX_VPX_seg" position = { x = 1176 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_128" spriteType = "GFX_VPX_seg" position = { x = 1184 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_seg_129" spriteType = "GFX_VPX_seg" position = { x = 1192 y = 84 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_majmark" spriteType = "GFX_VPX_majmark" position = { x = 674 y = 74 } alwaystransparent = yes }
+		instantTextBoxType = { name = "vpx_bopptxt" position = { x = 1210 y = 83 } font = "hoi_16mbs" text = "VPX_bopp_txt" maxWidth = 128 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_card_1" spriteType = "GFX_VPX_card" position = { x = 18 y = 112 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_cemb_1" spriteType = "GFX_VPX_LAT_emb" position = { x = 30 y = 122 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_cname_1" position = { x = 84 y = 115 } font = "hoi_18mbs" text = "VPX_LAT_kn_1" maxWidth = 250 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cval_1" position = { x = 84 y = 141 } font = "hoi_24header" text = "VPX_cardval_txt_1" maxWidth = 190 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cgov_1" position = { x = 276 y = 148 } font = "hoi_16mbs" text = "VPX_cardgov_txt_1" maxWidth = 64 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vpx_card_2" spriteType = "GFX_VPX_card" position = { x = 349 y = 112 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_cemb_2" spriteType = "GFX_VPX_LAT_emb" position = { x = 361 y = 122 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_cname_2" position = { x = 415 y = 115 } font = "hoi_18mbs" text = "VPX_LAT_kn_2" maxWidth = 250 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cval_2" position = { x = 415 y = 141 } font = "hoi_24header" text = "VPX_cardval_txt_2" maxWidth = 190 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cgov_2" position = { x = 607 y = 148 } font = "hoi_16mbs" text = "VPX_cardgov_txt_2" maxWidth = 64 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vpx_card_3" spriteType = "GFX_VPX_card" position = { x = 680 y = 112 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_cemb_3" spriteType = "GFX_VPX_LAT_emb" position = { x = 692 y = 122 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_cname_3" position = { x = 746 y = 115 } font = "hoi_18mbs" text = "VPX_LAT_kn_3" maxWidth = 250 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cval_3" position = { x = 746 y = 141 } font = "hoi_24header" text = "VPX_cardval_txt_3" maxWidth = 190 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cgov_3" position = { x = 938 y = 148 } font = "hoi_16mbs" text = "VPX_cardgov_txt_3" maxWidth = 64 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vpx_card_4" spriteType = "GFX_VPX_card" position = { x = 1011 y = 112 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_cemb_4" spriteType = "GFX_VPX_LAT_emb" position = { x = 1023 y = 122 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_cname_4" position = { x = 1077 y = 115 } font = "hoi_18mbs" text = "VPX_LAT_kn_4" maxWidth = 250 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cval_4" position = { x = 1077 y = 141 } font = "hoi_24header" text = "VPX_cardval_txt_4" maxWidth = 190 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_cgov_4" position = { x = 1269 y = 148 } font = "hoi_16mbs" text = "VPX_cardgov_txt_4" maxWidth = 64 maxHeight = 18 fixedsize = yes }
+		iconType = { name = "vpx_m_0" spriteType = "GFX_VPX_LAT_1" position = { x = 445 y = 194 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_m_1" spriteType = "GFX_VPX_LAT_2" position = { x = 226 y = 208 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_m_2" spriteType = "GFX_VPX_LAT_3" position = { x = 83 y = 245 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_m_3" spriteType = "GFX_VPX_LAT_4" position = { x = 248 y = 395 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_m_4" spriteType = "GFX_VPX_LAT_5" position = { x = 540 y = 310 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_overlay" spriteType = "GFX_VPX_LAT_overlay" position = { x = 26 y = 188 } alwaystransparent = yes }
+		iconType = { name = "vpx_msel_0" spriteType = "GFX_VPX_LAT_1_sel" position = { x = 445 y = 194 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_msel_1" spriteType = "GFX_VPX_LAT_2_sel" position = { x = 226 y = 208 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_msel_2" spriteType = "GFX_VPX_LAT_3_sel" position = { x = 83 y = 245 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_msel_3" spriteType = "GFX_VPX_LAT_4_sel" position = { x = 248 y = 395 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		iconType = { name = "vpx_msel_4" spriteType = "GFX_VPX_LAT_5_sel" position = { x = 540 y = 310 } alwaystransparent = yes scale = 2.0 frame = 1 }
+		buttonType = { name = "vpx_r_1" spriteType = "GFX_VPX_LAT_2_hit" position = { x = 226 y = 208 } pdx_tooltip = "VPX_LAT_tt_2" }
+		buttonType = { name = "vpx_r_0" spriteType = "GFX_VPX_LAT_1_hit" position = { x = 445 y = 194 } pdx_tooltip = "VPX_LAT_tt_1" }
+		buttonType = { name = "vpx_r_4" spriteType = "GFX_VPX_LAT_5_hit" position = { x = 540 y = 310 } pdx_tooltip = "VPX_LAT_tt_5" }
+		buttonType = { name = "vpx_r_2" spriteType = "GFX_VPX_LAT_3_hit" position = { x = 83 y = 245 } pdx_tooltip = "VPX_LAT_tt_3" }
+		buttonType = { name = "vpx_r_3" spriteType = "GFX_VPX_LAT_4_hit" position = { x = 248 y = 395 } pdx_tooltip = "VPX_LAT_tt_4" }
+		iconType = { name = "vpx_ls_0" spriteType = "GFX_VPX_sw" position = { x = 24 y = 618 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lt_0" position = { x = 43 y = 616 } font = "hoi_16mbs" text = "VPX_LAT_li_1" maxWidth = 113 maxHeight = 21 fixedsize = yes }
+		buttonType = { name = "vpx_l_0" spriteType = "GFX_VPX_list_hit" position = { x = 22 y = 616 } pdx_tooltip = "VPX_LAT_tt_1" }
+		iconType = { name = "vpx_ls_1" spriteType = "GFX_VPX_sw" position = { x = 160 y = 618 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lt_1" position = { x = 179 y = 616 } font = "hoi_16mbs" text = "VPX_LAT_li_2" maxWidth = 113 maxHeight = 21 fixedsize = yes }
+		buttonType = { name = "vpx_l_1" spriteType = "GFX_VPX_list_hit" position = { x = 158 y = 616 } pdx_tooltip = "VPX_LAT_tt_2" }
+		iconType = { name = "vpx_ls_2" spriteType = "GFX_VPX_sw" position = { x = 296 y = 618 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lt_2" position = { x = 315 y = 616 } font = "hoi_16mbs" text = "VPX_LAT_li_3" maxWidth = 113 maxHeight = 21 fixedsize = yes }
+		buttonType = { name = "vpx_l_2" spriteType = "GFX_VPX_list_hit" position = { x = 294 y = 616 } pdx_tooltip = "VPX_LAT_tt_3" }
+		iconType = { name = "vpx_ls_3" spriteType = "GFX_VPX_sw" position = { x = 432 y = 618 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lt_3" position = { x = 451 y = 616 } font = "hoi_16mbs" text = "VPX_LAT_li_4" maxWidth = 113 maxHeight = 21 fixedsize = yes }
+		buttonType = { name = "vpx_l_3" spriteType = "GFX_VPX_list_hit" position = { x = 430 y = 616 } pdx_tooltip = "VPX_LAT_tt_4" }
+		iconType = { name = "vpx_ls_4" spriteType = "GFX_VPX_sw" position = { x = 568 y = 618 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lt_4" position = { x = 587 y = 616 } font = "hoi_16mbs" text = "VPX_LAT_li_5" maxWidth = 113 maxHeight = 21 fixedsize = yes }
+		buttonType = { name = "vpx_l_4" spriteType = "GFX_VPX_list_hit" position = { x = 566 y = 616 } pdx_tooltip = "VPX_LAT_tt_5" }
+		instantTextBoxType = { name = "vpx_hsel" position = { x = 862 y = 187 } font = "hoi_24header" text = "VPX_LAT_selname_txt" maxWidth = 470 maxHeight = 28 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_selinfo" position = { x = 858 y = 220 } font = "hoi_16mbs" text = "VPX_sel_info_txt" maxWidth = 470 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sel_emb_1" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 246 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_1" position = { x = 888 y = 249 } font = "hoi_16mbs" text = "VPX_LAT_sn_1" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_1" position = { x = 1120 y = 249 } font = "hoi_16mbs" text = "VPX_spct_txt_1" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_1" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 252 } alwaystransparent = yes }
+		iconType = { name = "vpx_sel_emb_2" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 274 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_2" position = { x = 888 y = 277 } font = "hoi_16mbs" text = "VPX_LAT_sn_2" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_2" position = { x = 1120 y = 277 } font = "hoi_16mbs" text = "VPX_spct_txt_2" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_2" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 280 } alwaystransparent = yes }
+		iconType = { name = "vpx_sel_emb_3" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 302 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_3" position = { x = 888 y = 305 } font = "hoi_16mbs" text = "VPX_LAT_sn_3" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_3" position = { x = 1120 y = 305 } font = "hoi_16mbs" text = "VPX_spct_txt_3" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_3" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 308 } alwaystransparent = yes }
+		iconType = { name = "vpx_sel_emb_4" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 330 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_4" position = { x = 888 y = 333 } font = "hoi_16mbs" text = "VPX_LAT_sn_4" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_4" position = { x = 1120 y = 333 } font = "hoi_16mbs" text = "VPX_spct_txt_4" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_4" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 336 } alwaystransparent = yes }
+		iconType = { name = "vpx_sel_emb_5" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 358 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_5" position = { x = 888 y = 361 } font = "hoi_16mbs" text = "VPX_LAT_sn_5" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_5" position = { x = 1120 y = 361 } font = "hoi_16mbs" text = "VPX_spct_txt_5" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_5" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 364 } alwaystransparent = yes }
+		iconType = { name = "vpx_sel_emb_6" spriteType = "GFX_VPX_LAT_emb" position = { x = 858 y = 386 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_sel_name_6" position = { x = 888 y = 389 } font = "hoi_16mbs" text = "VPX_LAT_sn_6" maxWidth = 226 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_sel_pct_6" position = { x = 1120 y = 389 } font = "hoi_16mbs" text = "VPX_spct_txt_6" maxWidth = 56 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_sbar_6" quadTextureSprite = "GFX_VPX_bar" position = { x = 1180 y = 392 } alwaystransparent = yes }
+		buttonType = { name = "vpx_rally" spriteType = "GFX_button_221x34" position = { x = 858 y = 424 } buttonFont = "hoi_16mbs" buttonText = "VPX_btn_rally" pdx_tooltip = "VPX_tt_rally" }
+		instantTextBoxType = { name = "vpx_rallynote" position = { x = 1090 y = 432 } font = "hoi_16mbs" text = "VPX_rally_note" maxWidth = 244 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_hsw" position = { x = 862 y = 469 } font = "hoi_18mbs" text = "VPX_h_swing" maxWidth = 470 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vpx_sws_0" spriteType = "GFX_VPX_sw" position = { x = 858 y = 498 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_0" position = { x = 880 y = 497 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_1" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_0" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 496 } pdx_tooltip = "VPX_tt_swing" }
+		iconType = { name = "vpx_sws_1" spriteType = "GFX_VPX_sw" position = { x = 858 y = 519 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_1" position = { x = 880 y = 518 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_2" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_1" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 517 } pdx_tooltip = "VPX_tt_swing" }
+		iconType = { name = "vpx_sws_2" spriteType = "GFX_VPX_sw" position = { x = 858 y = 540 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_2" position = { x = 880 y = 539 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_3" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_2" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 538 } pdx_tooltip = "VPX_tt_swing" }
+		iconType = { name = "vpx_sws_3" spriteType = "GFX_VPX_sw" position = { x = 858 y = 561 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_3" position = { x = 880 y = 560 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_4" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_3" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 559 } pdx_tooltip = "VPX_tt_swing" }
+		iconType = { name = "vpx_sws_4" spriteType = "GFX_VPX_sw" position = { x = 858 y = 582 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_4" position = { x = 880 y = 581 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_5" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_4" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 580 } pdx_tooltip = "VPX_tt_swing" }
+		iconType = { name = "vpx_sws_5" spriteType = "GFX_VPX_sw" position = { x = 858 y = 603 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_swt_5" position = { x = 880 y = 602 } font = "hoi_16mbs" text = "VPX_LAT_swn_txt_6" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		buttonType = { name = "vpx_sw_5" spriteType = "GFX_VPX_row_hit" position = { x = 856 y = 601 } pdx_tooltip = "VPX_tt_swing" }
+		instantTextBoxType = { name = "vpx_hlg" position = { x = 862 y = 631 } font = "hoi_18mbs" text = "VPX_h_legend" maxWidth = 470 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_1" spriteType = "GFX_VPX_sw" position = { x = 858 y = 663 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_1" position = { x = 880 y = 662 } font = "hoi_16mbs" text = "VPX_LAT_lgn_1" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_1" position = { x = 1058 y = 662 } font = "hoi_18mbs" text = "VPX_lgc_txt_1" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_2" spriteType = "GFX_VPX_sw" position = { x = 858 y = 688 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_2" position = { x = 880 y = 687 } font = "hoi_16mbs" text = "VPX_LAT_lgn_2" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_2" position = { x = 1058 y = 687 } font = "hoi_18mbs" text = "VPX_lgc_txt_2" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_3" spriteType = "GFX_VPX_sw" position = { x = 858 y = 713 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_3" position = { x = 880 y = 712 } font = "hoi_16mbs" text = "VPX_LAT_lgn_3" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_3" position = { x = 1058 y = 712 } font = "hoi_18mbs" text = "VPX_lgc_txt_3" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_4" spriteType = "GFX_VPX_sw" position = { x = 858 y = 738 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_4" position = { x = 880 y = 737 } font = "hoi_16mbs" text = "VPX_LAT_lgn_4" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_4" position = { x = 1058 y = 737 } font = "hoi_18mbs" text = "VPX_lgc_txt_4" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_5" spriteType = "GFX_VPX_sw" position = { x = 858 y = 763 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_5" position = { x = 880 y = 762 } font = "hoi_16mbs" text = "VPX_LAT_lgn_5" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_5" position = { x = 1058 y = 762 } font = "hoi_18mbs" text = "VPX_lgc_txt_5" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_6" spriteType = "GFX_VPX_sw" position = { x = 1098 y = 663 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_6" position = { x = 1120 y = 662 } font = "hoi_16mbs" text = "VPX_LAT_lgn_6" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_6" position = { x = 1298 y = 662 } font = "hoi_18mbs" text = "VPX_lgc_txt_6" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_7" spriteType = "GFX_VPX_sw" position = { x = 1098 y = 688 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_7" position = { x = 1120 y = 687 } font = "hoi_16mbs" text = "VPX_LAT_lgn_7" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_7" position = { x = 1298 y = 687 } font = "hoi_18mbs" text = "VPX_lgc_txt_7" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_8" spriteType = "GFX_VPX_sw" position = { x = 1098 y = 713 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_8" position = { x = 1120 y = 712 } font = "hoi_16mbs" text = "VPX_LAT_lgn_8" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_8" position = { x = 1298 y = 712 } font = "hoi_18mbs" text = "VPX_lgc_txt_8" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_9" spriteType = "GFX_VPX_sw" position = { x = 1098 y = 738 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_9" position = { x = 1120 y = 737 } font = "hoi_16mbs" text = "VPX_LAT_lgn_9" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_9" position = { x = 1298 y = 737 } font = "hoi_18mbs" text = "VPX_lgc_txt_9" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_lgsw_10" spriteType = "GFX_VPX_sw" position = { x = 1098 y = 763 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_lgt_10" position = { x = 1120 y = 762 } font = "hoi_16mbs" text = "VPX_LAT_lgn_10" maxWidth = 176 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_lgc_10" position = { x = 1298 y = 762 } font = "hoi_18mbs" text = "VPX_lgc_txt_10" maxWidth = 38 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_banner" spriteType = "GFX_VPX_banner" position = { x = 22 y = 188 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_bannertxt" position = { x = 34 y = 195 } font = "hoi_24header" text = "VPX_LAT_banner" maxWidth = 784 maxHeight = 28 fixedsize = yes format = centre }
+		instantTextBoxType = { name = "vpx_parlname" position = { x = 28 y = 232 } font = "hoi_18mbs" text = "VPX_LAT_parlname" maxWidth = 300 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vpx_dot_0" spriteType = "GFX_VPX_dot" position = { x = 151 y = 494 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_1" spriteType = "GFX_VPX_dot" position = { x = 179 y = 494 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_2" spriteType = "GFX_VPX_dot" position = { x = 208 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_3" spriteType = "GFX_VPX_dot" position = { x = 236 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_4" spriteType = "GFX_VPX_dot" position = { x = 265 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_5" spriteType = "GFX_VPX_dot" position = { x = 294 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_6" spriteType = "GFX_VPX_dot" position = { x = 156 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_7" spriteType = "GFX_VPX_dot" position = { x = 184 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_8" spriteType = "GFX_VPX_dot" position = { x = 214 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_9" spriteType = "GFX_VPX_dot" position = { x = 244 y = 455 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_10" spriteType = "GFX_VPX_dot" position = { x = 166 y = 422 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_11" spriteType = "GFX_VPX_dot" position = { x = 274 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_12" spriteType = "GFX_VPX_dot" position = { x = 195 y = 424 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_13" spriteType = "GFX_VPX_dot" position = { x = 227 y = 422 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_14" spriteType = "GFX_VPX_dot" position = { x = 306 y = 454 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_15" spriteType = "GFX_VPX_dot" position = { x = 180 y = 388 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_16" spriteType = "GFX_VPX_dot" position = { x = 260 y = 420 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_17" spriteType = "GFX_VPX_dot" position = { x = 211 y = 391 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_18" spriteType = "GFX_VPX_dot" position = { x = 291 y = 423 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_19" spriteType = "GFX_VPX_dot" position = { x = 245 y = 390 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_20" spriteType = "GFX_VPX_dot" position = { x = 199 y = 356 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_21" spriteType = "GFX_VPX_dot" position = { x = 231 y = 361 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_22" spriteType = "GFX_VPX_dot" position = { x = 283 y = 388 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_23" spriteType = "GFX_VPX_dot" position = { x = 223 y = 328 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_24" spriteType = "GFX_VPX_dot" position = { x = 329 y = 421 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_25" spriteType = "GFX_VPX_dot" position = { x = 269 y = 361 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_26" spriteType = "GFX_VPX_dot" position = { x = 256 y = 335 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_27" spriteType = "GFX_VPX_dot" position = { x = 316 y = 395 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_28" spriteType = "GFX_VPX_dot" position = { x = 250 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_29" spriteType = "GFX_VPX_dot" position = { x = 311 y = 362 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_30" spriteType = "GFX_VPX_dot" position = { x = 298 y = 337 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_31" spriteType = "GFX_VPX_dot" position = { x = 284 y = 312 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_32" spriteType = "GFX_VPX_dot" position = { x = 280 y = 281 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_33" spriteType = "GFX_VPX_dot" position = { x = 347 y = 374 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_34" spriteType = "GFX_VPX_dot" position = { x = 362 y = 398 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_35" spriteType = "GFX_VPX_dot" position = { x = 315 y = 294 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_36" spriteType = "GFX_VPX_dot" position = { x = 330 y = 319 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_37" spriteType = "GFX_VPX_dot" position = { x = 345 y = 343 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_38" spriteType = "GFX_VPX_dot" position = { x = 312 y = 264 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_39" spriteType = "GFX_VPX_dot" position = { x = 349 y = 281 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_40" spriteType = "GFX_VPX_dot" position = { x = 347 y = 252 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_41" spriteType = "GFX_VPX_dot" position = { x = 365 y = 306 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_42" spriteType = "GFX_VPX_dot" position = { x = 383 y = 360 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_43" spriteType = "GFX_VPX_dot" position = { x = 382 y = 331 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_44" spriteType = "GFX_VPX_dot" position = { x = 400 y = 386 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_45" spriteType = "GFX_VPX_dot" position = { x = 384 y = 273 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_46" spriteType = "GFX_VPX_dot" position = { x = 383 y = 245 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_47" spriteType = "GFX_VPX_dot" position = { x = 401 y = 300 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_48" spriteType = "GFX_VPX_dot" position = { x = 420 y = 327 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_49" spriteType = "GFX_VPX_dot" position = { x = 420 y = 270 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_50" spriteType = "GFX_VPX_dot" position = { x = 420 y = 242 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_51" spriteType = "GFX_VPX_dot" position = { x = 420 y = 356 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_52" spriteType = "GFX_VPX_dot" position = { x = 439 y = 300 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_53" spriteType = "GFX_VPX_dot" position = { x = 457 y = 245 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_54" spriteType = "GFX_VPX_dot" position = { x = 456 y = 273 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_55" spriteType = "GFX_VPX_dot" position = { x = 440 y = 386 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_56" spriteType = "GFX_VPX_dot" position = { x = 458 y = 331 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_57" spriteType = "GFX_VPX_dot" position = { x = 457 y = 360 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_58" spriteType = "GFX_VPX_dot" position = { x = 475 y = 306 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_59" spriteType = "GFX_VPX_dot" position = { x = 493 y = 252 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_60" spriteType = "GFX_VPX_dot" position = { x = 491 y = 281 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_61" spriteType = "GFX_VPX_dot" position = { x = 528 y = 264 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_62" spriteType = "GFX_VPX_dot" position = { x = 495 y = 343 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_63" spriteType = "GFX_VPX_dot" position = { x = 510 y = 319 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_64" spriteType = "GFX_VPX_dot" position = { x = 525 y = 294 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_65" spriteType = "GFX_VPX_dot" position = { x = 478 y = 398 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_66" spriteType = "GFX_VPX_dot" position = { x = 493 y = 374 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_67" spriteType = "GFX_VPX_dot" position = { x = 560 y = 281 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_68" spriteType = "GFX_VPX_dot" position = { x = 556 y = 312 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_69" spriteType = "GFX_VPX_dot" position = { x = 542 y = 337 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_70" spriteType = "GFX_VPX_dot" position = { x = 529 y = 362 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_71" spriteType = "GFX_VPX_dot" position = { x = 590 y = 303 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_72" spriteType = "GFX_VPX_dot" position = { x = 524 y = 395 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_73" spriteType = "GFX_VPX_dot" position = { x = 584 y = 335 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_74" spriteType = "GFX_VPX_dot" position = { x = 511 y = 421 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_75" spriteType = "GFX_VPX_dot" position = { x = 571 y = 361 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_76" spriteType = "GFX_VPX_dot" position = { x = 617 y = 328 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_77" spriteType = "GFX_VPX_dot" position = { x = 557 y = 388 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_78" spriteType = "GFX_VPX_dot" position = { x = 609 y = 361 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_79" spriteType = "GFX_VPX_dot" position = { x = 641 y = 356 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_80" spriteType = "GFX_VPX_dot" position = { x = 595 y = 390 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_81" spriteType = "GFX_VPX_dot" position = { x = 549 y = 423 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_82" spriteType = "GFX_VPX_dot" position = { x = 629 y = 391 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_83" spriteType = "GFX_VPX_dot" position = { x = 580 y = 420 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_84" spriteType = "GFX_VPX_dot" position = { x = 660 y = 388 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_85" spriteType = "GFX_VPX_dot" position = { x = 534 y = 454 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_86" spriteType = "GFX_VPX_dot" position = { x = 613 y = 422 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_87" spriteType = "GFX_VPX_dot" position = { x = 645 y = 424 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_88" spriteType = "GFX_VPX_dot" position = { x = 566 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_89" spriteType = "GFX_VPX_dot" position = { x = 674 y = 422 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_90" spriteType = "GFX_VPX_dot" position = { x = 596 y = 455 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_91" spriteType = "GFX_VPX_dot" position = { x = 626 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_92" spriteType = "GFX_VPX_dot" position = { x = 656 y = 458 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_93" spriteType = "GFX_VPX_dot" position = { x = 684 y = 457 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_94" spriteType = "GFX_VPX_dot" position = { x = 546 y = 492 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_95" spriteType = "GFX_VPX_dot" position = { x = 575 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_96" spriteType = "GFX_VPX_dot" position = { x = 604 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_97" spriteType = "GFX_VPX_dot" position = { x = 632 y = 493 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_98" spriteType = "GFX_VPX_dot" position = { x = 661 y = 494 } alwaystransparent = yes frame = 1 }
+		iconType = { name = "vpx_dot_99" spriteType = "GFX_VPX_dot" position = { x = 689 y = 494 } alwaystransparent = yes frame = 1 }
+		instantTextBoxType = { name = "vpx_total" position = { x = 308 y = 478 } font = "hoi_18mbs" text = "VPX_LAT_total" maxWidth = 240 maxHeight = 44 fixedsize = yes format = centre }
+		instantTextBoxType = { name = "vpx_govline" position = { x = 28 y = 538 } font = "hoi_24header" text = "VPX_LAT_gov" maxWidth = 800 maxHeight = 30 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_effline" position = { x = 28 y = 570 } font = "hoi_16mbs" text = "VPX_LAT_effect" maxWidth = 800 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_headline" position = { x = 28 y = 594 } font = "hoi_16mbs" text = "VPX_LAT_head" maxWidth = 800 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_termline" position = { x = 28 y = 618 } font = "hoi_16mbs" text = "VPX_LAT_term" maxWidth = 800 maxHeight = 36 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_notehdr" position = { x = 32 y = 657 } font = "hoi_18mbs" text = "VPX_h_upper" maxWidth = 300 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_desc" position = { x = 28 y = 684 } font = "hoi_16mbs" text = "VPX_LAT_desc" maxWidth = 800 maxHeight = 82 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_legend" position = { x = 28 y = 770 } font = "hoi_16mbs" text = "VPX_legend" maxWidth = 800 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_htable" position = { x = 862 y = 188 } font = "hoi_18mbs" text = "VPX_h_table" maxWidth = 480 maxHeight = 22 fixedsize = yes }
+		iconType = { name = "vpx_temb_1" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 221 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_1" position = { x = 886 y = 224 } font = "hoi_16mbs" text = "VPX_LAT_tn_1" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_1" position = { x = 1132 y = 224 } font = "hoi_18mbs" text = "VPX_tntxt_1" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_1" position = { x = 1186 y = 224 } font = "hoi_16mbs" text = "VPX_tvtxt_1" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_1" position = { x = 1248 y = 224 } font = "hoi_16mbs" text = "VPX_tutxt_1" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_1" position = { x = 1292 y = 224 } font = "hoi_16mbs" text = "VPX_tgtxt_1" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_2" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 251 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_2" position = { x = 886 y = 254 } font = "hoi_16mbs" text = "VPX_LAT_tn_2" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_2" position = { x = 1132 y = 254 } font = "hoi_18mbs" text = "VPX_tntxt_2" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_2" position = { x = 1186 y = 254 } font = "hoi_16mbs" text = "VPX_tvtxt_2" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_2" position = { x = 1248 y = 254 } font = "hoi_16mbs" text = "VPX_tutxt_2" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_2" position = { x = 1292 y = 254 } font = "hoi_16mbs" text = "VPX_tgtxt_2" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_3" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 281 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_3" position = { x = 886 y = 284 } font = "hoi_16mbs" text = "VPX_LAT_tn_3" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_3" position = { x = 1132 y = 284 } font = "hoi_18mbs" text = "VPX_tntxt_3" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_3" position = { x = 1186 y = 284 } font = "hoi_16mbs" text = "VPX_tvtxt_3" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_3" position = { x = 1248 y = 284 } font = "hoi_16mbs" text = "VPX_tutxt_3" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_3" position = { x = 1292 y = 284 } font = "hoi_16mbs" text = "VPX_tgtxt_3" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_4" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 311 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_4" position = { x = 886 y = 314 } font = "hoi_16mbs" text = "VPX_LAT_tn_4" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_4" position = { x = 1132 y = 314 } font = "hoi_18mbs" text = "VPX_tntxt_4" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_4" position = { x = 1186 y = 314 } font = "hoi_16mbs" text = "VPX_tvtxt_4" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_4" position = { x = 1248 y = 314 } font = "hoi_16mbs" text = "VPX_tutxt_4" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_4" position = { x = 1292 y = 314 } font = "hoi_16mbs" text = "VPX_tgtxt_4" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_5" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 341 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_5" position = { x = 886 y = 344 } font = "hoi_16mbs" text = "VPX_LAT_tn_5" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_5" position = { x = 1132 y = 344 } font = "hoi_18mbs" text = "VPX_tntxt_5" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_5" position = { x = 1186 y = 344 } font = "hoi_16mbs" text = "VPX_tvtxt_5" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_5" position = { x = 1248 y = 344 } font = "hoi_16mbs" text = "VPX_tutxt_5" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_5" position = { x = 1292 y = 344 } font = "hoi_16mbs" text = "VPX_tgtxt_5" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_6" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 371 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_6" position = { x = 886 y = 374 } font = "hoi_16mbs" text = "VPX_LAT_tn_6" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_6" position = { x = 1132 y = 374 } font = "hoi_18mbs" text = "VPX_tntxt_6" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_6" position = { x = 1186 y = 374 } font = "hoi_16mbs" text = "VPX_tvtxt_6" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_6" position = { x = 1248 y = 374 } font = "hoi_16mbs" text = "VPX_tutxt_6" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_6" position = { x = 1292 y = 374 } font = "hoi_16mbs" text = "VPX_tgtxt_6" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_7" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 401 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_7" position = { x = 886 y = 404 } font = "hoi_16mbs" text = "VPX_LAT_tn_7" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_7" position = { x = 1132 y = 404 } font = "hoi_18mbs" text = "VPX_tntxt_7" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_7" position = { x = 1186 y = 404 } font = "hoi_16mbs" text = "VPX_tvtxt_7" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_7" position = { x = 1248 y = 404 } font = "hoi_16mbs" text = "VPX_tutxt_7" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_7" position = { x = 1292 y = 404 } font = "hoi_16mbs" text = "VPX_tgtxt_7" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_8" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 431 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_8" position = { x = 886 y = 434 } font = "hoi_16mbs" text = "VPX_LAT_tn_8" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_8" position = { x = 1132 y = 434 } font = "hoi_18mbs" text = "VPX_tntxt_8" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_8" position = { x = 1186 y = 434 } font = "hoi_16mbs" text = "VPX_tvtxt_8" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_8" position = { x = 1248 y = 434 } font = "hoi_16mbs" text = "VPX_tutxt_8" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_8" position = { x = 1292 y = 434 } font = "hoi_16mbs" text = "VPX_tgtxt_8" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_9" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 461 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_9" position = { x = 886 y = 464 } font = "hoi_16mbs" text = "VPX_LAT_tn_9" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_9" position = { x = 1132 y = 464 } font = "hoi_18mbs" text = "VPX_tntxt_9" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_9" position = { x = 1186 y = 464 } font = "hoi_16mbs" text = "VPX_tvtxt_9" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_9" position = { x = 1248 y = 464 } font = "hoi_16mbs" text = "VPX_tutxt_9" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_9" position = { x = 1292 y = 464 } font = "hoi_16mbs" text = "VPX_tgtxt_9" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		iconType = { name = "vpx_temb_10" spriteType = "GFX_VPX_LAT_emb" position = { x = 856 y = 491 } alwaystransparent = yes frame = 1 scale = 0.55 }
+		instantTextBoxType = { name = "vpx_tname_10" position = { x = 886 y = 494 } font = "hoi_16mbs" text = "VPX_LAT_tn_10" maxWidth = 236 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tseat_10" position = { x = 1132 y = 494 } font = "hoi_18mbs" text = "VPX_tntxt_10" maxWidth = 48 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tvote_10" position = { x = 1186 y = 494 } font = "hoi_16mbs" text = "VPX_tvtxt_10" maxWidth = 54 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tup_10" position = { x = 1248 y = 494 } font = "hoi_16mbs" text = "VPX_tutxt_10" maxWidth = 40 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_tgov_10" position = { x = 1292 y = 494 } font = "hoi_16mbs" text = "VPX_tgtxt_10" maxWidth = 46 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_vacrow" position = { x = 862 y = 554 } font = "hoi_16mbs" text = "VPX_vac_txt" maxWidth = 440 maxHeight = 20 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_hupper" position = { x = 862 y = 593 } font = "hoi_18mbs" text = "VPX_LAT_upperhdr" maxWidth = 470 maxHeight = 22 fixedsize = yes }
+		instantTextBoxType = { name = "vpx_uppertext" position = { x = 858 y = 624 } font = "hoi_16mbs" text = "VPX_LAT_uppertext" maxWidth = 468 maxHeight = 150 fixedsize = yes }
+	}
+}

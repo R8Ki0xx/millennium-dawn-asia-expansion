@@ -1,0 +1,959 @@
+# MD ROC Return v3.46 —— 议会与选举：各国共用的动态文字（gen_world.py 生成）
+defined_text = {
+	name = vpx_phase_text
+	text = { trigger = { check_variable = { vpx_phase = 1 } } localization_key = VPX_phase_1 }
+	text = { trigger = { check_variable = { vpx_phase = 2 } } localization_key = VPX_phase_2 }
+	text = { trigger = { check_variable = { vpx_phase = 3 } } localization_key = VPX_phase_3 }
+	text = { localization_key = VPX_phase_0 }
+}
+defined_text = {
+	name = vpx_view_text
+	text = { trigger = { check_variable = { vpx_tab = 2 } } localization_key = VPX_view_parl }
+	text = { trigger = { check_variable = { vpx_view = 2 } } localization_key = VPX_view_res }
+	text = { localization_key = VPX_view_poll }
+}
+defined_text = {
+	name = vpx_status_text
+	text = { trigger = { check_variable = { vpx_status = 3 } } localization_key = VPX_status_3 }
+	text = { trigger = { check_variable = { vpx_status = 2 } } localization_key = VPX_status_2 }
+	text = { localization_key = VPX_status_1 }
+}
+defined_text = {
+	name = vpx_effect_text
+	text = { trigger = { has_country_flag = vpx_bound_syr } localization_key = VPX_effect_syr }
+	text = { trigger = { check_variable = { vpx_status = 3 } } localization_key = VPX_effect_3 }
+	text = { trigger = { check_variable = { vpx_status = 2 } } localization_key = VPX_effect_2 }
+	text = { localization_key = VPX_effect_1 }
+}
+defined_text = {
+	name = vpx_cardval_1
+	text = { trigger = { check_variable = { vpx_k_s_1 > 0 } } localization_key = VPX_cardval_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardgov_1
+	text = { trigger = { check_variable = { vpx_k_s_1 > 0 } check_variable = { vpx_k_g_1 = 1 } } localization_key = VPX_gov_yes }
+	text = { trigger = { check_variable = { vpx_k_s_1 > 0 } } localization_key = VPX_gov_no }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardval_2
+	text = { trigger = { check_variable = { vpx_k_s_2 > 0 } } localization_key = VPX_cardval_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardgov_2
+	text = { trigger = { check_variable = { vpx_k_s_2 > 0 } check_variable = { vpx_k_g_2 = 1 } } localization_key = VPX_gov_yes }
+	text = { trigger = { check_variable = { vpx_k_s_2 > 0 } } localization_key = VPX_gov_no }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardval_3
+	text = { trigger = { check_variable = { vpx_k_s_3 > 0 } } localization_key = VPX_cardval_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardgov_3
+	text = { trigger = { check_variable = { vpx_k_s_3 > 0 } check_variable = { vpx_k_g_3 = 1 } } localization_key = VPX_gov_yes }
+	text = { trigger = { check_variable = { vpx_k_s_3 > 0 } } localization_key = VPX_gov_no }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardval_4
+	text = { trigger = { check_variable = { vpx_k_s_4 > 0 } } localization_key = VPX_cardval_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_cardgov_4
+	text = { trigger = { check_variable = { vpx_k_s_4 > 0 } check_variable = { vpx_k_g_4 = 1 } } localization_key = VPX_gov_yes }
+	text = { trigger = { check_variable = { vpx_k_s_4 > 0 } } localization_key = VPX_gov_no }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_1
+	text = { trigger = { check_variable = { vpx_t_s_1 > 0 } } localization_key = VPX_tnv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_1
+	text = { trigger = { check_variable = { vpx_t_s_1 > 0 } } localization_key = VPX_tvv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_1
+	text = { trigger = { check_variable = { vpx_t_s_1 > 0 } } localization_key = VPX_tuv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_1
+	text = { trigger = { check_variable = { vpx_t_s_1 > 0 } check_variable = { vpx_t_g_1 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_1 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_2
+	text = { trigger = { check_variable = { vpx_t_s_2 > 0 } } localization_key = VPX_tnv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_2
+	text = { trigger = { check_variable = { vpx_t_s_2 > 0 } } localization_key = VPX_tvv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_2
+	text = { trigger = { check_variable = { vpx_t_s_2 > 0 } } localization_key = VPX_tuv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_2
+	text = { trigger = { check_variable = { vpx_t_s_2 > 0 } check_variable = { vpx_t_g_2 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_2 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_3
+	text = { trigger = { check_variable = { vpx_t_s_3 > 0 } } localization_key = VPX_tnv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_3
+	text = { trigger = { check_variable = { vpx_t_s_3 > 0 } } localization_key = VPX_tvv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_3
+	text = { trigger = { check_variable = { vpx_t_s_3 > 0 } } localization_key = VPX_tuv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_3
+	text = { trigger = { check_variable = { vpx_t_s_3 > 0 } check_variable = { vpx_t_g_3 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_3 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_4
+	text = { trigger = { check_variable = { vpx_t_s_4 > 0 } } localization_key = VPX_tnv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_4
+	text = { trigger = { check_variable = { vpx_t_s_4 > 0 } } localization_key = VPX_tvv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_4
+	text = { trigger = { check_variable = { vpx_t_s_4 > 0 } } localization_key = VPX_tuv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_4
+	text = { trigger = { check_variable = { vpx_t_s_4 > 0 } check_variable = { vpx_t_g_4 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_4 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_5
+	text = { trigger = { check_variable = { vpx_t_s_5 > 0 } } localization_key = VPX_tnv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_5
+	text = { trigger = { check_variable = { vpx_t_s_5 > 0 } } localization_key = VPX_tvv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_5
+	text = { trigger = { check_variable = { vpx_t_s_5 > 0 } } localization_key = VPX_tuv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_5
+	text = { trigger = { check_variable = { vpx_t_s_5 > 0 } check_variable = { vpx_t_g_5 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_5 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_6
+	text = { trigger = { check_variable = { vpx_t_s_6 > 0 } } localization_key = VPX_tnv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_6
+	text = { trigger = { check_variable = { vpx_t_s_6 > 0 } } localization_key = VPX_tvv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_6
+	text = { trigger = { check_variable = { vpx_t_s_6 > 0 } } localization_key = VPX_tuv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_6
+	text = { trigger = { check_variable = { vpx_t_s_6 > 0 } check_variable = { vpx_t_g_6 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_6 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_7
+	text = { trigger = { check_variable = { vpx_t_s_7 > 0 } } localization_key = VPX_tnv_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_7
+	text = { trigger = { check_variable = { vpx_t_s_7 > 0 } } localization_key = VPX_tvv_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_7
+	text = { trigger = { check_variable = { vpx_t_s_7 > 0 } } localization_key = VPX_tuv_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_7
+	text = { trigger = { check_variable = { vpx_t_s_7 > 0 } check_variable = { vpx_t_g_7 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_7 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_8
+	text = { trigger = { check_variable = { vpx_t_s_8 > 0 } } localization_key = VPX_tnv_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_8
+	text = { trigger = { check_variable = { vpx_t_s_8 > 0 } } localization_key = VPX_tvv_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_8
+	text = { trigger = { check_variable = { vpx_t_s_8 > 0 } } localization_key = VPX_tuv_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_8
+	text = { trigger = { check_variable = { vpx_t_s_8 > 0 } check_variable = { vpx_t_g_8 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_8 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_9
+	text = { trigger = { check_variable = { vpx_t_s_9 > 0 } } localization_key = VPX_tnv_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_9
+	text = { trigger = { check_variable = { vpx_t_s_9 > 0 } } localization_key = VPX_tvv_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_9
+	text = { trigger = { check_variable = { vpx_t_s_9 > 0 } } localization_key = VPX_tuv_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_9
+	text = { trigger = { check_variable = { vpx_t_s_9 > 0 } check_variable = { vpx_t_g_9 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_9 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tn_10
+	text = { trigger = { check_variable = { vpx_t_s_10 > 0 } } localization_key = VPX_tnv_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tv_10
+	text = { trigger = { check_variable = { vpx_t_s_10 > 0 } } localization_key = VPX_tvv_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tu_10
+	text = { trigger = { check_variable = { vpx_t_s_10 > 0 } } localization_key = VPX_tuv_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tg_10
+	text = { trigger = { check_variable = { vpx_t_s_10 > 0 } check_variable = { vpx_t_g_10 = 1 } } localization_key = VPX_gov_yes_s }
+	text = { trigger = { check_variable = { vpx_t_s_10 > 0 } } localization_key = VPX_gov_no_s }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_1
+	text = { trigger = { check_variable = { vpx_s_s_1 > 0 } } localization_key = VPX_spctv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_2
+	text = { trigger = { check_variable = { vpx_s_s_2 > 0 } } localization_key = VPX_spctv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_3
+	text = { trigger = { check_variable = { vpx_s_s_3 > 0 } } localization_key = VPX_spctv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_4
+	text = { trigger = { check_variable = { vpx_s_s_4 > 0 } } localization_key = VPX_spctv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_5
+	text = { trigger = { check_variable = { vpx_s_s_5 > 0 } } localization_key = VPX_spctv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_spct_6
+	text = { trigger = { check_variable = { vpx_s_s_6 > 0 } } localization_key = VPX_spctv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_0
+	text = { trigger = { check_variable = { vpx_sw_r^0 > 0 } } localization_key = VPX_swmv_0 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_1
+	text = { trigger = { check_variable = { vpx_sw_r^1 > 0 } } localization_key = VPX_swmv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_2
+	text = { trigger = { check_variable = { vpx_sw_r^2 > 0 } } localization_key = VPX_swmv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_3
+	text = { trigger = { check_variable = { vpx_sw_r^3 > 0 } } localization_key = VPX_swmv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_4
+	text = { trigger = { check_variable = { vpx_sw_r^4 > 0 } } localization_key = VPX_swmv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_swm_5
+	text = { trigger = { check_variable = { vpx_sw_r^5 > 0 } } localization_key = VPX_swmv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_0
+	text = { trigger = { check_variable = { vpx_occf^0 = 1 } } localization_key = VPX_lmo_0 }
+	text = { trigger = { check_variable = { vpx_mar^0 < 900 } } localization_key = VPX_lmv_0 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_0
+	text = { trigger = { check_variable = { vpx_occf^0 = 1 } } localization_key = VPX_ttov_0 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_1
+	text = { trigger = { check_variable = { vpx_occf^1 = 1 } } localization_key = VPX_lmo_1 }
+	text = { trigger = { check_variable = { vpx_mar^1 < 900 } } localization_key = VPX_lmv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_1
+	text = { trigger = { check_variable = { vpx_occf^1 = 1 } } localization_key = VPX_ttov_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_2
+	text = { trigger = { check_variable = { vpx_occf^2 = 1 } } localization_key = VPX_lmo_2 }
+	text = { trigger = { check_variable = { vpx_mar^2 < 900 } } localization_key = VPX_lmv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_2
+	text = { trigger = { check_variable = { vpx_occf^2 = 1 } } localization_key = VPX_ttov_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_3
+	text = { trigger = { check_variable = { vpx_occf^3 = 1 } } localization_key = VPX_lmo_3 }
+	text = { trigger = { check_variable = { vpx_mar^3 < 900 } } localization_key = VPX_lmv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_3
+	text = { trigger = { check_variable = { vpx_occf^3 = 1 } } localization_key = VPX_ttov_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_4
+	text = { trigger = { check_variable = { vpx_occf^4 = 1 } } localization_key = VPX_lmo_4 }
+	text = { trigger = { check_variable = { vpx_mar^4 < 900 } } localization_key = VPX_lmv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_4
+	text = { trigger = { check_variable = { vpx_occf^4 = 1 } } localization_key = VPX_ttov_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_5
+	text = { trigger = { check_variable = { vpx_occf^5 = 1 } } localization_key = VPX_lmo_5 }
+	text = { trigger = { check_variable = { vpx_mar^5 < 900 } } localization_key = VPX_lmv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_5
+	text = { trigger = { check_variable = { vpx_occf^5 = 1 } } localization_key = VPX_ttov_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_6
+	text = { trigger = { check_variable = { vpx_occf^6 = 1 } } localization_key = VPX_lmo_6 }
+	text = { trigger = { check_variable = { vpx_mar^6 < 900 } } localization_key = VPX_lmv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_6
+	text = { trigger = { check_variable = { vpx_occf^6 = 1 } } localization_key = VPX_ttov_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_7
+	text = { trigger = { check_variable = { vpx_occf^7 = 1 } } localization_key = VPX_lmo_7 }
+	text = { trigger = { check_variable = { vpx_mar^7 < 900 } } localization_key = VPX_lmv_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_7
+	text = { trigger = { check_variable = { vpx_occf^7 = 1 } } localization_key = VPX_ttov_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_8
+	text = { trigger = { check_variable = { vpx_occf^8 = 1 } } localization_key = VPX_lmo_8 }
+	text = { trigger = { check_variable = { vpx_mar^8 < 900 } } localization_key = VPX_lmv_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_8
+	text = { trigger = { check_variable = { vpx_occf^8 = 1 } } localization_key = VPX_ttov_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_9
+	text = { trigger = { check_variable = { vpx_occf^9 = 1 } } localization_key = VPX_lmo_9 }
+	text = { trigger = { check_variable = { vpx_mar^9 < 900 } } localization_key = VPX_lmv_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_9
+	text = { trigger = { check_variable = { vpx_occf^9 = 1 } } localization_key = VPX_ttov_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_10
+	text = { trigger = { check_variable = { vpx_occf^10 = 1 } } localization_key = VPX_lmo_10 }
+	text = { trigger = { check_variable = { vpx_mar^10 < 900 } } localization_key = VPX_lmv_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_10
+	text = { trigger = { check_variable = { vpx_occf^10 = 1 } } localization_key = VPX_ttov_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_11
+	text = { trigger = { check_variable = { vpx_occf^11 = 1 } } localization_key = VPX_lmo_11 }
+	text = { trigger = { check_variable = { vpx_mar^11 < 900 } } localization_key = VPX_lmv_11 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_11
+	text = { trigger = { check_variable = { vpx_occf^11 = 1 } } localization_key = VPX_ttov_11 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_12
+	text = { trigger = { check_variable = { vpx_occf^12 = 1 } } localization_key = VPX_lmo_12 }
+	text = { trigger = { check_variable = { vpx_mar^12 < 900 } } localization_key = VPX_lmv_12 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_12
+	text = { trigger = { check_variable = { vpx_occf^12 = 1 } } localization_key = VPX_ttov_12 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_13
+	text = { trigger = { check_variable = { vpx_occf^13 = 1 } } localization_key = VPX_lmo_13 }
+	text = { trigger = { check_variable = { vpx_mar^13 < 900 } } localization_key = VPX_lmv_13 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_13
+	text = { trigger = { check_variable = { vpx_occf^13 = 1 } } localization_key = VPX_ttov_13 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_14
+	text = { trigger = { check_variable = { vpx_occf^14 = 1 } } localization_key = VPX_lmo_14 }
+	text = { trigger = { check_variable = { vpx_mar^14 < 900 } } localization_key = VPX_lmv_14 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_14
+	text = { trigger = { check_variable = { vpx_occf^14 = 1 } } localization_key = VPX_ttov_14 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_15
+	text = { trigger = { check_variable = { vpx_occf^15 = 1 } } localization_key = VPX_lmo_15 }
+	text = { trigger = { check_variable = { vpx_mar^15 < 900 } } localization_key = VPX_lmv_15 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_15
+	text = { trigger = { check_variable = { vpx_occf^15 = 1 } } localization_key = VPX_ttov_15 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_16
+	text = { trigger = { check_variable = { vpx_occf^16 = 1 } } localization_key = VPX_lmo_16 }
+	text = { trigger = { check_variable = { vpx_mar^16 < 900 } } localization_key = VPX_lmv_16 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_16
+	text = { trigger = { check_variable = { vpx_occf^16 = 1 } } localization_key = VPX_ttov_16 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_17
+	text = { trigger = { check_variable = { vpx_occf^17 = 1 } } localization_key = VPX_lmo_17 }
+	text = { trigger = { check_variable = { vpx_mar^17 < 900 } } localization_key = VPX_lmv_17 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_17
+	text = { trigger = { check_variable = { vpx_occf^17 = 1 } } localization_key = VPX_ttov_17 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_18
+	text = { trigger = { check_variable = { vpx_occf^18 = 1 } } localization_key = VPX_lmo_18 }
+	text = { trigger = { check_variable = { vpx_mar^18 < 900 } } localization_key = VPX_lmv_18 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_18
+	text = { trigger = { check_variable = { vpx_occf^18 = 1 } } localization_key = VPX_ttov_18 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_19
+	text = { trigger = { check_variable = { vpx_occf^19 = 1 } } localization_key = VPX_lmo_19 }
+	text = { trigger = { check_variable = { vpx_mar^19 < 900 } } localization_key = VPX_lmv_19 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_19
+	text = { trigger = { check_variable = { vpx_occf^19 = 1 } } localization_key = VPX_ttov_19 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_20
+	text = { trigger = { check_variable = { vpx_occf^20 = 1 } } localization_key = VPX_lmo_20 }
+	text = { trigger = { check_variable = { vpx_mar^20 < 900 } } localization_key = VPX_lmv_20 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_20
+	text = { trigger = { check_variable = { vpx_occf^20 = 1 } } localization_key = VPX_ttov_20 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_21
+	text = { trigger = { check_variable = { vpx_occf^21 = 1 } } localization_key = VPX_lmo_21 }
+	text = { trigger = { check_variable = { vpx_mar^21 < 900 } } localization_key = VPX_lmv_21 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_21
+	text = { trigger = { check_variable = { vpx_occf^21 = 1 } } localization_key = VPX_ttov_21 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_22
+	text = { trigger = { check_variable = { vpx_occf^22 = 1 } } localization_key = VPX_lmo_22 }
+	text = { trigger = { check_variable = { vpx_mar^22 < 900 } } localization_key = VPX_lmv_22 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_22
+	text = { trigger = { check_variable = { vpx_occf^22 = 1 } } localization_key = VPX_ttov_22 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_23
+	text = { trigger = { check_variable = { vpx_occf^23 = 1 } } localization_key = VPX_lmo_23 }
+	text = { trigger = { check_variable = { vpx_mar^23 < 900 } } localization_key = VPX_lmv_23 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_23
+	text = { trigger = { check_variable = { vpx_occf^23 = 1 } } localization_key = VPX_ttov_23 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_24
+	text = { trigger = { check_variable = { vpx_occf^24 = 1 } } localization_key = VPX_lmo_24 }
+	text = { trigger = { check_variable = { vpx_mar^24 < 900 } } localization_key = VPX_lmv_24 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_24
+	text = { trigger = { check_variable = { vpx_occf^24 = 1 } } localization_key = VPX_ttov_24 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_25
+	text = { trigger = { check_variable = { vpx_occf^25 = 1 } } localization_key = VPX_lmo_25 }
+	text = { trigger = { check_variable = { vpx_mar^25 < 900 } } localization_key = VPX_lmv_25 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_25
+	text = { trigger = { check_variable = { vpx_occf^25 = 1 } } localization_key = VPX_ttov_25 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_26
+	text = { trigger = { check_variable = { vpx_occf^26 = 1 } } localization_key = VPX_lmo_26 }
+	text = { trigger = { check_variable = { vpx_mar^26 < 900 } } localization_key = VPX_lmv_26 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_26
+	text = { trigger = { check_variable = { vpx_occf^26 = 1 } } localization_key = VPX_ttov_26 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_27
+	text = { trigger = { check_variable = { vpx_occf^27 = 1 } } localization_key = VPX_lmo_27 }
+	text = { trigger = { check_variable = { vpx_mar^27 < 900 } } localization_key = VPX_lmv_27 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_27
+	text = { trigger = { check_variable = { vpx_occf^27 = 1 } } localization_key = VPX_ttov_27 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_28
+	text = { trigger = { check_variable = { vpx_occf^28 = 1 } } localization_key = VPX_lmo_28 }
+	text = { trigger = { check_variable = { vpx_mar^28 < 900 } } localization_key = VPX_lmv_28 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_28
+	text = { trigger = { check_variable = { vpx_occf^28 = 1 } } localization_key = VPX_ttov_28 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_29
+	text = { trigger = { check_variable = { vpx_occf^29 = 1 } } localization_key = VPX_lmo_29 }
+	text = { trigger = { check_variable = { vpx_mar^29 < 900 } } localization_key = VPX_lmv_29 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_29
+	text = { trigger = { check_variable = { vpx_occf^29 = 1 } } localization_key = VPX_ttov_29 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_30
+	text = { trigger = { check_variable = { vpx_occf^30 = 1 } } localization_key = VPX_lmo_30 }
+	text = { trigger = { check_variable = { vpx_mar^30 < 900 } } localization_key = VPX_lmv_30 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_30
+	text = { trigger = { check_variable = { vpx_occf^30 = 1 } } localization_key = VPX_ttov_30 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_31
+	text = { trigger = { check_variable = { vpx_occf^31 = 1 } } localization_key = VPX_lmo_31 }
+	text = { trigger = { check_variable = { vpx_mar^31 < 900 } } localization_key = VPX_lmv_31 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_31
+	text = { trigger = { check_variable = { vpx_occf^31 = 1 } } localization_key = VPX_ttov_31 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_32
+	text = { trigger = { check_variable = { vpx_occf^32 = 1 } } localization_key = VPX_lmo_32 }
+	text = { trigger = { check_variable = { vpx_mar^32 < 900 } } localization_key = VPX_lmv_32 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_32
+	text = { trigger = { check_variable = { vpx_occf^32 = 1 } } localization_key = VPX_ttov_32 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_33
+	text = { trigger = { check_variable = { vpx_occf^33 = 1 } } localization_key = VPX_lmo_33 }
+	text = { trigger = { check_variable = { vpx_mar^33 < 900 } } localization_key = VPX_lmv_33 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_33
+	text = { trigger = { check_variable = { vpx_occf^33 = 1 } } localization_key = VPX_ttov_33 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_34
+	text = { trigger = { check_variable = { vpx_occf^34 = 1 } } localization_key = VPX_lmo_34 }
+	text = { trigger = { check_variable = { vpx_mar^34 < 900 } } localization_key = VPX_lmv_34 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_34
+	text = { trigger = { check_variable = { vpx_occf^34 = 1 } } localization_key = VPX_ttov_34 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_35
+	text = { trigger = { check_variable = { vpx_occf^35 = 1 } } localization_key = VPX_lmo_35 }
+	text = { trigger = { check_variable = { vpx_mar^35 < 900 } } localization_key = VPX_lmv_35 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_35
+	text = { trigger = { check_variable = { vpx_occf^35 = 1 } } localization_key = VPX_ttov_35 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_36
+	text = { trigger = { check_variable = { vpx_occf^36 = 1 } } localization_key = VPX_lmo_36 }
+	text = { trigger = { check_variable = { vpx_mar^36 < 900 } } localization_key = VPX_lmv_36 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_36
+	text = { trigger = { check_variable = { vpx_occf^36 = 1 } } localization_key = VPX_ttov_36 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_37
+	text = { trigger = { check_variable = { vpx_occf^37 = 1 } } localization_key = VPX_lmo_37 }
+	text = { trigger = { check_variable = { vpx_mar^37 < 900 } } localization_key = VPX_lmv_37 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_37
+	text = { trigger = { check_variable = { vpx_occf^37 = 1 } } localization_key = VPX_ttov_37 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_38
+	text = { trigger = { check_variable = { vpx_occf^38 = 1 } } localization_key = VPX_lmo_38 }
+	text = { trigger = { check_variable = { vpx_mar^38 < 900 } } localization_key = VPX_lmv_38 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_38
+	text = { trigger = { check_variable = { vpx_occf^38 = 1 } } localization_key = VPX_ttov_38 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_39
+	text = { trigger = { check_variable = { vpx_occf^39 = 1 } } localization_key = VPX_lmo_39 }
+	text = { trigger = { check_variable = { vpx_mar^39 < 900 } } localization_key = VPX_lmv_39 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_39
+	text = { trigger = { check_variable = { vpx_occf^39 = 1 } } localization_key = VPX_ttov_39 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_40
+	text = { trigger = { check_variable = { vpx_occf^40 = 1 } } localization_key = VPX_lmo_40 }
+	text = { trigger = { check_variable = { vpx_mar^40 < 900 } } localization_key = VPX_lmv_40 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_40
+	text = { trigger = { check_variable = { vpx_occf^40 = 1 } } localization_key = VPX_ttov_40 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_41
+	text = { trigger = { check_variable = { vpx_occf^41 = 1 } } localization_key = VPX_lmo_41 }
+	text = { trigger = { check_variable = { vpx_mar^41 < 900 } } localization_key = VPX_lmv_41 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_41
+	text = { trigger = { check_variable = { vpx_occf^41 = 1 } } localization_key = VPX_ttov_41 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_42
+	text = { trigger = { check_variable = { vpx_occf^42 = 1 } } localization_key = VPX_lmo_42 }
+	text = { trigger = { check_variable = { vpx_mar^42 < 900 } } localization_key = VPX_lmv_42 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_42
+	text = { trigger = { check_variable = { vpx_occf^42 = 1 } } localization_key = VPX_ttov_42 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_43
+	text = { trigger = { check_variable = { vpx_occf^43 = 1 } } localization_key = VPX_lmo_43 }
+	text = { trigger = { check_variable = { vpx_mar^43 < 900 } } localization_key = VPX_lmv_43 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_43
+	text = { trigger = { check_variable = { vpx_occf^43 = 1 } } localization_key = VPX_ttov_43 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_44
+	text = { trigger = { check_variable = { vpx_occf^44 = 1 } } localization_key = VPX_lmo_44 }
+	text = { trigger = { check_variable = { vpx_mar^44 < 900 } } localization_key = VPX_lmv_44 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_44
+	text = { trigger = { check_variable = { vpx_occf^44 = 1 } } localization_key = VPX_ttov_44 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_45
+	text = { trigger = { check_variable = { vpx_occf^45 = 1 } } localization_key = VPX_lmo_45 }
+	text = { trigger = { check_variable = { vpx_mar^45 < 900 } } localization_key = VPX_lmv_45 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_45
+	text = { trigger = { check_variable = { vpx_occf^45 = 1 } } localization_key = VPX_ttov_45 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_46
+	text = { trigger = { check_variable = { vpx_occf^46 = 1 } } localization_key = VPX_lmo_46 }
+	text = { trigger = { check_variable = { vpx_mar^46 < 900 } } localization_key = VPX_lmv_46 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_46
+	text = { trigger = { check_variable = { vpx_occf^46 = 1 } } localization_key = VPX_ttov_46 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_47
+	text = { trigger = { check_variable = { vpx_occf^47 = 1 } } localization_key = VPX_lmo_47 }
+	text = { trigger = { check_variable = { vpx_mar^47 < 900 } } localization_key = VPX_lmv_47 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_47
+	text = { trigger = { check_variable = { vpx_occf^47 = 1 } } localization_key = VPX_ttov_47 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_48
+	text = { trigger = { check_variable = { vpx_occf^48 = 1 } } localization_key = VPX_lmo_48 }
+	text = { trigger = { check_variable = { vpx_mar^48 < 900 } } localization_key = VPX_lmv_48 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_48
+	text = { trigger = { check_variable = { vpx_occf^48 = 1 } } localization_key = VPX_ttov_48 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lm_49
+	text = { trigger = { check_variable = { vpx_occf^49 = 1 } } localization_key = VPX_lmo_49 }
+	text = { trigger = { check_variable = { vpx_mar^49 < 900 } } localization_key = VPX_lmv_49 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_tto_49
+	text = { trigger = { check_variable = { vpx_occf^49 = 1 } } localization_key = VPX_ttov_49 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_selinfo
+	text = { trigger = { check_variable = { vpx_sel = 0 } } localization_key = VPX_sel_none }
+	text = { trigger = { check_variable = { vpx_s_occf = 1 } } localization_key = VPX_sel_occ }
+	text = { trigger = { check_variable = { vpx_s_has = 0 } } localization_key = VPX_sel_wait }
+	text = { localization_key = VPX_sel_info }
+}
+defined_text = {
+	name = vpx_lgc_1
+	text = { trigger = { check_variable = { vpx_lg_s_1 > 0 } } localization_key = VPX_lgcv_1 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_2
+	text = { trigger = { check_variable = { vpx_lg_s_2 > 0 } } localization_key = VPX_lgcv_2 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_3
+	text = { trigger = { check_variable = { vpx_lg_s_3 > 0 } } localization_key = VPX_lgcv_3 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_4
+	text = { trigger = { check_variable = { vpx_lg_s_4 > 0 } } localization_key = VPX_lgcv_4 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_5
+	text = { trigger = { check_variable = { vpx_lg_s_5 > 0 } } localization_key = VPX_lgcv_5 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_6
+	text = { trigger = { check_variable = { vpx_lg_s_6 > 0 } } localization_key = VPX_lgcv_6 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_7
+	text = { trigger = { check_variable = { vpx_lg_s_7 > 0 } } localization_key = VPX_lgcv_7 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_8
+	text = { trigger = { check_variable = { vpx_lg_s_8 > 0 } } localization_key = VPX_lgcv_8 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_9
+	text = { trigger = { check_variable = { vpx_lg_s_9 > 0 } } localization_key = VPX_lgcv_9 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_lgc_10
+	text = { trigger = { check_variable = { vpx_lg_s_10 > 0 } } localization_key = VPX_lgcv_10 }
+	text = { localization_key = VPX_blank }
+}
+defined_text = {
+	name = vpx_banner_status
+	text = { trigger = { check_variable = { vpx_status = 3 } } localization_key = VPX_banner_3 }
+	text = { trigger = { check_variable = { vpx_status = 2 } } localization_key = VPX_banner_2 }
+	text = { localization_key = VPX_banner_1 }
+}
+defined_text = {
+	name = vpx_vacrow
+	text = { trigger = { check_variable = { vpx_mvac > 0.5 } } localization_key = VPX_vacv }
+	text = { localization_key = VPX_blank }
+}

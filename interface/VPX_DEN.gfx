@@ -1,0 +1,20 @@
+# MD ROC Return v3.46 —— 丹麦 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_DEN_emb" texturefile = "gfx/interface/scripted_gui/VPX/DEN_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_overlay" texturefile = "gfx/interface/scripted_gui/VPX/DEN_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_1" texturefile = "gfx/interface/scripted_gui/VPX/DEN_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/DEN_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/DEN_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_2" texturefile = "gfx/interface/scripted_gui/VPX/DEN_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/DEN_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/DEN_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_3" texturefile = "gfx/interface/scripted_gui/VPX/DEN_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/DEN_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/DEN_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_4" texturefile = "gfx/interface/scripted_gui/VPX/DEN_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/DEN_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/DEN_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_5" texturefile = "gfx/interface/scripted_gui/VPX/DEN_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/DEN_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_DEN_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/DEN_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

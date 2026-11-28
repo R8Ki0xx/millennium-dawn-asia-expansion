@@ -5,6 +5,12 @@ scripted_gui = {
 		window_name = "TAI_gov_decision_gui"
 		visible = { has_country_flag = ROC_new_chi }
 		ai_enabled = { always = no }
+		triggers = {
+			gov_vel_map_visible = { has_country_flag = VEL_CHI_on }
+		}
+		effects = {
+			gov_vel_map_click = { set_country_flag = VEL_CHI_open set_variable = { VELP_tab = 1 } VELP_CHI_refresh = yes VELP_swatches = yes }
+		}
 		properties = {
 			gov_premier_pic = { image = "[TAI_gov_premier_pic]" }
 			gov_legis_pic = { image = "[TAI_gov_legis_pic]" }

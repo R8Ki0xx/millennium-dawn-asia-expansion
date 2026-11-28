@@ -1,0 +1,38 @@
+# MD ROC Return v3.46 —— 比利时 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_BEL_emb" texturefile = "gfx/interface/scripted_gui/VPX/BEL_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_overlay" texturefile = "gfx/interface/scripted_gui/VPX/BEL_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_1" texturefile = "gfx/interface/scripted_gui/VPX/BEL_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_2" texturefile = "gfx/interface/scripted_gui/VPX/BEL_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_3" texturefile = "gfx/interface/scripted_gui/VPX/BEL_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_4" texturefile = "gfx/interface/scripted_gui/VPX/BEL_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_5" texturefile = "gfx/interface/scripted_gui/VPX/BEL_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_6" texturefile = "gfx/interface/scripted_gui/VPX/BEL_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_6_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_6_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_6_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_6_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_7" texturefile = "gfx/interface/scripted_gui/VPX/BEL_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_7_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_7_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_7_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_7_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_8" texturefile = "gfx/interface/scripted_gui/VPX/BEL_8.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_8_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_8_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_8_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_8_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_9" texturefile = "gfx/interface/scripted_gui/VPX/BEL_9.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_9_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_9_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_9_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_9_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_10" texturefile = "gfx/interface/scripted_gui/VPX/BEL_10.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_10_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_10_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_10_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_10_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_11" texturefile = "gfx/interface/scripted_gui/VPX/BEL_11.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_11_sel" texturefile = "gfx/interface/scripted_gui/VPX/BEL_11_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_BEL_11_hit" texturefile = "gfx/interface/scripted_gui/VPX/BEL_11_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

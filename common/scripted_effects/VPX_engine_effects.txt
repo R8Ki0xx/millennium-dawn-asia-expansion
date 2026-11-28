@@ -1,0 +1,1159 @@
+# MD ROC Return v3.46 —— 通用“议会与选举”引擎（由 _tools/v346/gen_engine.py 生成，不要手改）
+# 全部是国家变量；数组下标从 0 开始；政党槽 0~23 对应千禧的 party_pop_array。
+# 各国数据由 vpx_init_<TAG>（VPX_data_effects.txt）写入。
+
+# 作用域：国家。数据写好后建立工作数组、做第一次民调并据此组成开局议会
+vpx_setup = {
+	# 注意：单个 for_loop_effect 最多循环 1000 次，所以“地区×政党”的数组用两层循环
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_temp_variable = { vbase = vr } multiply_temp_variable = { vbase = 24 }
+		for_loop_effect = { start = 0 end = 24 value = vm set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm } set_variable = { vpx_res^vix = 0 } set_variable = { vpx_lres^vix = 0 } set_variable = { vpx_cres^vix = 0 } }
+	}
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_variable = { vpx_win^vr = 0 } set_variable = { vpx_best^vr = 0 } set_variable = { vpx_camp^vr = 0 }
+		set_variable = { vpx_occf^vr = 0 } set_variable = { vpx_occ^vr = 0 } set_variable = { vpx_nf^vr = 0 } set_variable = { vpx_nt^vr = 0 }
+		set_variable = { vpx_lwin^vr = 0 } set_variable = { vpx_cwin^vr = 0 } set_variable = { vpx_rev^vr = 0 }
+		set_variable = { vpx_frame^vr = 1 } set_variable = { vpx_selfr^vr = 1 } set_variable = { vpx_mar^vr = 999 } set_variable = { vpx_lead^vr = 1 }
+	}
+	for_loop_effect = { start = 0 end = 26 value = vm
+		set_variable = { vpx_nat^vm = 0 } set_variable = { vpx_seat^vm = 0 } set_variable = { vpx_up^vm = 0 }
+		set_variable = { vpx_lnat^vm = 0 } set_variable = { vpx_lseat^vm = 0 } set_variable = { vpx_lup^vm = 0 }
+		set_variable = { vpx_cnat^vm = 0 } set_variable = { vpx_cseat^vm = 0 } set_variable = { vpx_cup^vm = 0 }
+		set_variable = { vpx_mnat^vm = 0 } set_variable = { vpx_mseat^vm = 0 } set_variable = { vpx_mup^vm = 0 }
+		set_variable = { vpx_gov^vm = 0 } set_variable = { vpx_key^vm = 0 } set_variable = { vpx_ks^vm = 0 } set_variable = { vpx_kv^vm = 0 } set_variable = { vpx_ku^vm = 0 }
+		set_variable = { vpx_f^vm = 0 } set_variable = { vpx_o^vm = 0 } set_variable = { vpx_rem^vm = 0 } set_variable = { vpx_dsf^vm = 0 } set_variable = { vpx_w^vm = 0 }
+	}
+	for_loop_effect = { start = 0 end = vpx_D value = vi set_variable = { vpx_dot^vi = 1 } }
+	clear_array = vpx_seg resize_array = { array = vpx_seg value = 1 size = 130 }
+	clear_array = vpx_lc resize_array = { array = vpx_lc value = 0 size = 24 }
+	set_variable = { vpx_sel = 0 } set_variable = { vpx_tab = 1 } set_variable = { vpx_view = 1 } set_variable = { vpx_phase = 0 }
+	set_variable = { vpx_poll_ready = 0 } set_variable = { vpx_done = 0 } set_variable = { vpx_anim = 0 } set_variable = { vpx_prog = 0 }
+	set_variable = { vpx_runw = 0 } set_variable = { vpx_pdays = 0 } set_variable = { vpx_ncount = 0 } set_variable = { vpx_lrp = ruling_party }
+	vpx_gov_signature = yes
+	set_variable = { vpx_lsig = vpx_sig }
+	set_variable = { vpx_poll_due = global.num_days } add_to_variable = { vpx_poll_due = 30 }
+	set_country_flag = vpx_inited
+	set_temp_variable = { vpx_noise = 0 }
+	vpx_compute = yes
+	vpx_store_poll = yes
+	# 开局议会 = 按开局支持率推算
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_mseat^vm = vpx_seat^vm } set_variable = { vpx_mnat^vm = vpx_nat^vm } set_variable = { vpx_mup^vm = vpx_up^vm } }
+	set_variable = { vpx_mres = vpx_rout } set_variable = { vpx_mvac = vpx_vac }
+	vpx_update_gov = yes
+	vpx_refresh_all = yes
+}
+
+# 占领扫描：地区里受本国控制的州不到一半 = 被占领，不计票；占领国取第一个不受本国控制的州的控制者
+vpx_occ_scan = {
+	set_temp_variable = { vme = THIS.id }
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_nf^vr = 0 } set_variable = { vpx_nt^vr = 0 } set_variable = { vpx_occ^vr = -1 } }
+	for_loop_effect = { start = 0 end = vpx_nst value = vi
+		set_temp_variable = { vsid = vpx_st^vi }
+		set_temp_variable = { vrg = vpx_sr^vi }
+		var:vsid = { controller = { set_variable = { global.vpx_ct = THIS.id } } }
+		add_to_variable = { vpx_nt^vrg = 1 }
+		if = { limit = { check_variable = { global.vpx_ct = vme } } add_to_variable = { vpx_nf^vrg = 1 } }
+		else_if = { limit = { check_variable = { vpx_occ^vrg < 0 } } set_variable = { vpx_occ^vrg = global.vpx_ct } }
+	}
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_variable = { vpx_occf^vr = 0 }
+		set_temp_variable = { vhalf = vpx_nt^vr } multiply_temp_variable = { vhalf = 0.5 }
+		if = { limit = { check_variable = { vpx_nf^vr < vhalf } } set_variable = { vpx_occf^vr = 1 } }
+		else = { set_variable = { vpx_occ^vr = 0 } }
+	}
+}
+
+# 最大余数法：输入 vpx_f^0..n-1（理论值）、temp vlr_n（项数）、vlr_t（总数）；输出 vpx_o^*
+vpx_lr = {
+	set_temp_variable = { vlr_sum = 0 }
+	for_loop_effect = { start = 0 end = vlr_n value = vli
+		set_temp_variable = { vlr_x = vpx_f^vli }
+		set_temp_variable = { vlr_fl = vlr_x }
+		round_temp_variable = vlr_fl
+		if = { limit = { check_variable = { vlr_fl > vlr_x } } subtract_from_temp_variable = { vlr_fl = 1 } }
+		if = { limit = { check_variable = { vlr_fl < 0 } } set_temp_variable = { vlr_fl = 0 } }
+		set_variable = { vpx_o^vli = vlr_fl }
+		set_variable = { vpx_rem^vli = vlr_x }
+		subtract_from_variable = { vpx_rem^vli = vlr_fl }
+		if = { limit = { check_variable = { vlr_x < 0.001 } } set_variable = { vpx_rem^vli = -1 } }
+		add_to_temp_variable = { vlr_sum = vlr_fl }
+	}
+	set_temp_variable = { vlr_left = vlr_t }
+	subtract_from_temp_variable = { vlr_left = vlr_sum }
+	for_loop_effect = { start = 0 end = vlr_n value = vlk
+		if = {
+			limit = { check_variable = { vlr_left > 0.5 } }
+			set_temp_variable = { vlr_best = -0.5 } set_temp_variable = { vlr_bj = -1 }
+			for_loop_effect = { start = 0 end = vlr_n value = vli if = { limit = { check_variable = { vpx_rem^vli > vlr_best } } set_temp_variable = { vlr_best = vpx_rem^vli } set_temp_variable = { vlr_bj = vli } } }
+			if = { limit = { check_variable = { vlr_bj > -0.5 } } add_to_variable = { vpx_o^vlr_bj = 1 } set_variable = { vpx_rem^vlr_bj = -1 } subtract_from_temp_variable = { vlr_left = 1 } }
+		}
+	}
+	# 舍入误差剩下的席位给最大的一项
+	if = {
+		limit = { check_variable = { vlr_left > 0.5 } }
+		set_temp_variable = { vlr_best = 0 } set_temp_variable = { vlr_bj = -1 }
+		for_loop_effect = { start = 0 end = vlr_n value = vli if = { limit = { check_variable = { vpx_o^vli > vlr_best } } set_temp_variable = { vlr_best = vpx_o^vli } set_temp_variable = { vlr_bj = vli } } }
+		if = { limit = { check_variable = { vlr_bj > -0.5 } } add_to_variable = { vpx_o^vlr_bj = vlr_left } }
+	}
+}
+
+# 计票。输入 temp vpx_noise（1 = 开票带随机）。输出 res / win / best / nat / seat / up，vpx_rout（保留席位）vpx_vac（空缺）
+vpx_compute = {
+	vpx_occ_scan = yes
+	# 参选政党：支持率不低于 0.5% 或正在执政，且未被取缔 / 未被资格审查排除
+	clear_temp_array = vpx_a
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_temp_variable = { vok = 0 }
+		set_temp_variable = { vpv = party_pop_array^vm }
+		if = { limit = { OR = { check_variable = { vpv > 0.004 } check_variable = { ruling_party = vm } } } set_temp_variable = { vok = 1 } }
+		if = { limit = { OR = { check_variable = { party_banned_array^vm = 1 } check_variable = { vpx_xban^vm = 1 } } NOT = { check_variable = { ruling_party = vm } } } set_temp_variable = { vok = 0 } }
+		if = { limit = { check_variable = { vok = 1 } } add_to_temp_array = { vpx_a = vm } }
+		set_variable = { vpx_nat^vm = 0 } set_variable = { vpx_seat^vm = 0 } set_variable = { vpx_up^vm = 0 } set_variable = { vpx_dsf^vm = 0 }
+		set_variable = { vpx_gov^vm = 0 }
+		if = { limit = { OR = { check_variable = { ruling_party = vm } is_in_array = { gov_coalition_array = vm } } } set_variable = { vpx_gov^vm = 1 } }
+	}
+	set_temp_variable = { vdeff = 0 }
+	set_temp_variable = { vwsum = 0 }
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_temp_variable = { vbase = vr } multiply_temp_variable = { vbase = 24 }
+		for_loop_effect = { start = 0 end = 24 value = vm set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm } set_variable = { vpx_res^vix = 0 } }
+		set_variable = { vpx_win^vr = 0 } set_variable = { vpx_best^vr = 0 }
+		if = {
+			limit = { check_variable = { vpx_occf^vr = 0 } }
+			set_temp_variable = { vtot = 0 }
+			for_each_loop = {
+				array = vpx_a value = vm index = vj
+				set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm }
+				set_temp_variable = { vv = party_pop_array^vm }
+				multiply_temp_variable = { vv = 100 }
+				multiply_temp_variable = { vv = vpx_lean^vix }
+				if = { limit = { check_variable = { vpx_gov^vm = 1 } } multiply_temp_variable = { vv = vpx_rm } }
+				if = {
+					limit = { check_variable = { ruling_party = vm } }
+					set_temp_variable = { vcm = vpx_camp^vr } multiply_temp_variable = { vcm = 0.03 } add_to_temp_variable = { vcm = 1 }
+					multiply_temp_variable = { vv = vcm }
+				}
+				if = {
+					limit = { check_variable = { vpx_noise = 1 } }
+					set_temp_variable_to_random = { var = vnr min = 0 max = 1 }
+					multiply_temp_variable = { vnr = 0.1 } add_to_temp_variable = { vnr = 0.95 }
+					multiply_temp_variable = { vv = vnr }
+				}
+				set_variable = { vpx_res^vix = vv }
+				add_to_temp_variable = { vtot = vv }
+			}
+			if = { limit = { check_variable = { vtot < 0.01 } } set_temp_variable = { vtot = 0.01 } }
+			set_temp_variable = { vbst = 0 } set_temp_variable = { vbi = -1 }
+			for_each_loop = {
+				array = vpx_a value = vm index = vj
+				set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm }
+				multiply_variable = { vpx_res^vix = 100 }
+				divide_variable = { vpx_res^vix = vtot }
+				set_temp_variable = { vsh = vpx_res^vix }
+				set_temp_variable = { vnc = vsh } multiply_temp_variable = { vnc = vpx_rw^vr } divide_temp_variable = { vnc = 100 }
+				add_to_variable = { vpx_nat^vm = vnc }
+				if = { limit = { check_variable = { vsh > vbst } } set_temp_variable = { vbst = vsh } set_temp_variable = { vbi = vm } }
+			}
+			set_variable = { vpx_win^vr = vbi } add_to_variable = { vpx_win^vr = 1 }
+			set_variable = { vpx_best^vr = vbst }
+			# 单一选区部分：按得票的 k 次方分配本区席位
+			if = {
+				limit = { check_variable = { vpx_rs^vr > 0.5 } }
+				set_temp_variable = { vktot = 0 }
+				for_each_loop = {
+					array = vpx_a value = vm index = vj
+					set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm }
+					set_temp_variable = { vs = vpx_res^vix } divide_temp_variable = { vs = 10 }
+					set_temp_variable = { vkw = vs }
+					multiply_temp_variable = { vkw = vs }
+					if = { limit = { check_variable = { vpx_k > 2.5 } } multiply_temp_variable = { vkw = vs } }
+					if = { limit = { check_variable = { vs < 0.4 } } set_temp_variable = { vkw = 0 } }
+					set_variable = { vpx_w^vm = vkw }
+					add_to_temp_variable = { vktot = vkw }
+				}
+				if = {
+					limit = { check_variable = { vktot > 0.01 } }
+					for_each_loop = {
+						array = vpx_a value = vm index = vj
+						set_temp_variable = { vq = vpx_w^vm } divide_temp_variable = { vq = vktot } multiply_temp_variable = { vq = vpx_rs^vr }
+						add_to_variable = { vpx_dsf^vm = vq }
+					}
+				}
+				else = { add_to_variable = { vpx_dsf^vbi = vpx_rs^vr } }
+				add_to_temp_variable = { vdeff = vpx_rs^vr }
+			}
+			add_to_temp_variable = { vwsum = vpx_rw^vr }
+		}
+	}
+	# 全国得票只按未被占领的地区归一
+	if = {
+		limit = { check_variable = { vwsum > 0.01 } }
+		for_each_loop = { array = vpx_a value = vm index = vj multiply_variable = { vpx_nat^vm = 100 } divide_variable = { vpx_nat^vm = vwsum } }
+	}
+	# 比例席位（门槛 vpx_thr%，BONUS 制给第一大党奖励席次）
+	set_temp_variable = { vpeff = vpx_P } multiply_temp_variable = { vpeff = vwsum } divide_temp_variable = { vpeff = 100 } round_temp_variable = vpeff
+	set_temp_variable = { vthr = vpx_thr }
+	set_temp_variable = { vesum = 0 } set_temp_variable = { vemax = -1 } set_temp_variable = { vebest = 0 }
+	for_each_loop = {
+		array = vpx_a value = vm index = vj
+		if = {
+			limit = { NOT = { check_variable = { vpx_nat^vm < vthr } } }
+			add_to_temp_variable = { vesum = vpx_nat^vm }
+			if = { limit = { check_variable = { vpx_nat^vm > vebest } } set_temp_variable = { vebest = vpx_nat^vm } set_temp_variable = { vemax = vm } }
+		}
+	}
+	if = {
+		limit = { check_variable = { vesum < 0.5 } }
+		set_temp_variable = { vthr = 0 }
+		for_each_loop = { array = vpx_a value = vm index = vj add_to_temp_variable = { vesum = vpx_nat^vm } }
+	}
+	set_temp_variable = { vbon = vpx_bonus }
+	if = { limit = { check_variable = { vbon > vpeff } } set_temp_variable = { vbon = vpeff } }
+	set_temp_variable = { vpd = vpeff } subtract_from_temp_variable = { vpd = vbon }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_f^vm = vpx_dsf^vm } }
+	for_each_loop = {
+		array = vpx_a value = vm index = vj
+		if = {
+			limit = { NOT = { check_variable = { vpx_nat^vm < vthr } } check_variable = { vesum > 0.01 } }
+			set_temp_variable = { vq = vpx_nat^vm } divide_temp_variable = { vq = vesum } multiply_temp_variable = { vq = vpd }
+			add_to_variable = { vpx_f^vm = vq }
+		}
+	}
+	if = { limit = { check_variable = { vbon > 0.5 } check_variable = { vemax > -0.5 } } add_to_variable = { vpx_f^vemax = vbon } }
+	set_temp_variable = { vlr_n = 24 }
+	set_temp_variable = { vlr_t = vdeff } add_to_temp_variable = { vlr_t = vpeff }
+	set_temp_variable = { vtseats = vlr_t }
+	vpx_lr = yes
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_seat^vm = vpx_o^vm } }
+	# 保留席位：保障给反对党的按得票分给反对党，其余单列
+	set_variable = { vpx_rout = vpx_resn }
+	if = {
+		limit = { check_variable = { vpx_resopp = 1 } }
+		set_temp_variable = { vosum = 0 }
+		for_each_loop = { array = vpx_a value = vm index = vj if = { limit = { check_variable = { vpx_gov^vm = 0 } } add_to_temp_variable = { vosum = vpx_nat^vm } } }
+		if = {
+			limit = { check_variable = { vosum > 0.01 } }
+			for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_f^vm = 0 } }
+			for_each_loop = {
+				array = vpx_a value = vm index = vj
+				if = { limit = { check_variable = { vpx_gov^vm = 0 } } set_variable = { vpx_f^vm = vpx_nat^vm } divide_variable = { vpx_f^vm = vosum } multiply_variable = { vpx_f^vm = vpx_resn } }
+			}
+			set_temp_variable = { vlr_n = 24 } set_temp_variable = { vlr_t = vpx_resn }
+			vpx_lr = yes
+			for_loop_effect = { start = 0 end = 24 value = vm add_to_variable = { vpx_seat^vm = vpx_o^vm } }
+			set_variable = { vpx_rout = 0 }
+			add_to_temp_variable = { vtseats = vpx_resn }
+		}
+	}
+	set_variable = { vpx_vac = vpx_S }
+	subtract_from_variable = { vpx_vac = vtseats }
+	subtract_from_variable = { vpx_vac = vpx_rout }
+	if = { limit = { check_variable = { vpx_vac < 0 } } set_variable = { vpx_vac = 0 } }
+	vpx_alloc_upper = yes
+}
+
+# 上院：1 按比例；2 按地区胜负（六成按地区第一名，四成按得票）；3 任命（政府一方七成）
+vpx_alloc_upper = {
+	if = {
+		limit = { check_variable = { vpx_um > 0.5 } }
+		for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_f^vm = 0 } set_variable = { vpx_w^vm = 0 } }
+		if = {
+			limit = { check_variable = { vpx_um = 1 } }
+			set_temp_variable = { vusum = 0 }
+			for_each_loop = { array = vpx_a value = vm index = vj if = { limit = { check_variable = { vpx_nat^vm > 3 } } add_to_temp_variable = { vusum = vpx_nat^vm } } }
+			if = {
+				limit = { check_variable = { vusum > 0.5 } }
+				for_each_loop = { array = vpx_a value = vm index = vj if = { limit = { check_variable = { vpx_nat^vm > 3 } } set_variable = { vpx_f^vm = vpx_nat^vm } divide_variable = { vpx_f^vm = vusum } multiply_variable = { vpx_f^vm = vpx_U } } }
+			}
+		}
+		else_if = {
+			limit = { check_variable = { vpx_um = 2 } }
+			set_temp_variable = { vwin = 0 }
+			for_loop_effect = { start = 0 end = vpx_R value = vr
+				if = {
+					limit = { check_variable = { vpx_win^vr > 0.5 } }
+					set_temp_variable = { vwm = vpx_win^vr } subtract_from_temp_variable = { vwm = 1 }
+					add_to_variable = { vpx_w^vwm = vpx_rw^vr }
+					add_to_temp_variable = { vwin = vpx_rw^vr }
+				}
+			}
+			if = {
+				limit = { check_variable = { vwin > 0.01 } }
+				for_each_loop = {
+					array = vpx_a value = vm index = vj
+					set_variable = { vpx_f^vm = vpx_w^vm } multiply_variable = { vpx_f^vm = 60 } divide_variable = { vpx_f^vm = vwin }
+					set_temp_variable = { vq = vpx_nat^vm } multiply_temp_variable = { vq = 0.4 }
+					add_to_variable = { vpx_f^vm = vq }
+					multiply_variable = { vpx_f^vm = vpx_U }
+					divide_variable = { vpx_f^vm = 100 }
+				}
+			}
+		}
+		else = {
+			set_temp_variable = { vgsum = 0 } set_temp_variable = { vosum = 0 }
+			for_each_loop = { array = vpx_a value = vm index = vj
+				if = { limit = { check_variable = { vpx_gov^vm = 1 } } add_to_temp_variable = { vgsum = vpx_nat^vm } }
+				else = { add_to_temp_variable = { vosum = vpx_nat^vm } }
+			}
+			set_temp_variable = { vgsh = 0.7 }
+			if = { limit = { check_variable = { vosum < 0.5 } } set_temp_variable = { vgsh = 1 } }
+			set_temp_variable = { vosh = 1 } subtract_from_temp_variable = { vosh = vgsh }
+			for_each_loop = { array = vpx_a value = vm index = vj
+				if = {
+					limit = { check_variable = { vpx_gov^vm = 1 } check_variable = { vgsum > 0.01 } }
+					set_variable = { vpx_f^vm = vpx_nat^vm } divide_variable = { vpx_f^vm = vgsum } multiply_variable = { vpx_f^vm = vgsh } multiply_variable = { vpx_f^vm = vpx_U }
+				}
+				else_if = {
+					limit = { check_variable = { vpx_gov^vm = 0 } check_variable = { vosum > 0.01 } }
+					set_variable = { vpx_f^vm = vpx_nat^vm } divide_variable = { vpx_f^vm = vosum } multiply_variable = { vpx_f^vm = vosh } multiply_variable = { vpx_f^vm = vpx_U }
+				}
+			}
+		}
+		set_temp_variable = { vlr_n = 24 } set_temp_variable = { vlr_t = vpx_U }
+		vpx_lr = yes
+		for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_up^vm = vpx_o^vm } }
+	}
+}
+
+vpx_store_poll = {
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_temp_variable = { vbase = vr } multiply_temp_variable = { vbase = 24 }
+		for_loop_effect = { start = 0 end = 24 value = vm set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm } set_variable = { vpx_lres^vix = vpx_res^vix } }
+	}
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_lwin^vr = vpx_win^vr } }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_lnat^vm = vpx_nat^vm } set_variable = { vpx_lseat^vm = vpx_seat^vm } set_variable = { vpx_lup^vm = vpx_up^vm } }
+	set_variable = { vpx_lres_n = vpx_rout } set_variable = { vpx_lvac = vpx_vac }
+	set_variable = { vpx_poll_ready = 1 }
+}
+
+# 民调（不带随机）
+vpx_run_poll = {
+	set_temp_variable = { vpx_noise = 0 }
+	vpx_compute = yes
+	vpx_store_poll = yes
+	vpx_update_gov = yes
+	vpx_refresh_all = yes
+}
+
+# 千禧的选举结束：开票。叙利亚同时让人民议会换届（与决议面板是同一届议会）
+vpx_run_result = {
+	vpx_run_result_core = yes
+	if = { limit = { has_country_flag = vpx_bound_syr } set_temp_variable = { syr_counted = 1 } SYR_pc_election_core = yes }
+}
+
+# 开票核心：计票，各地区自东向西逐批揭晓
+vpx_run_result_core = {
+	set_temp_variable = { vpx_noise = 1 }
+	vpx_compute = yes
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_temp_variable = { vbase = vr } multiply_temp_variable = { vbase = 24 }
+		for_loop_effect = { start = 0 end = 24 value = vm set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm } set_variable = { vpx_cres^vix = vpx_res^vix } }
+	}
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_cwin^vr = vpx_win^vr } set_variable = { vpx_rev^vr = 0 } }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_cnat^vm = vpx_nat^vm } set_variable = { vpx_cseat^vm = vpx_seat^vm } set_variable = { vpx_cup^vm = vpx_up^vm } }
+	set_variable = { vpx_cres_n = vpx_rout } set_variable = { vpx_cvac = vpx_vac }
+	set_variable = { vpx_anim = 0 } set_variable = { vpx_done = 0 } set_variable = { vpx_runw = 0 }
+	set_variable = { vpx_view = 2 } set_variable = { vpx_phase = 2 } set_variable = { vpx_tab = 1 }
+	set_country_flag = vpx_open
+	vpx_refresh_all = yes
+	country_event = { id = VPX.1 hours = 6 }
+}
+
+# 揭晓下一批地区（每批约十分之一）
+vpx_reveal_step = {
+	if = {
+		limit = { check_variable = { vpx_phase = 2 } }
+		set_temp_variable = { vbatch = vpx_R } divide_temp_variable = { vbatch = 10 } add_to_temp_variable = { vbatch = 0.5 } round_temp_variable = vbatch
+		if = { limit = { check_variable = { vbatch < 1 } } set_temp_variable = { vbatch = 1 } }
+		for_loop_effect = { start = 0 end = vbatch value = vb
+			if = {
+				limit = { check_variable = { vpx_anim < vpx_R } }
+				set_temp_variable = { vrr = vpx_ord^vpx_anim }
+				set_variable = { vpx_rev^vrr = 1 }
+				if = { limit = { check_variable = { vpx_occf^vrr = 0 } } add_to_variable = { vpx_runw = vpx_rw^vrr } }
+				add_to_variable = { vpx_anim = 1 }
+			}
+		}
+		if = {
+			limit = { NOT = { check_variable = { vpx_anim < vpx_R } } }
+			set_variable = { vpx_done = 1 }
+			set_variable = { vpx_phase = 3 }
+			vpx_install_parliament = yes
+			vpx_refresh_all = yes
+			country_event = { id = VPX.2 days = 1 }
+		}
+		else = {
+			vpx_refresh_all = yes
+			country_event = { id = VPX.1 hours = 6 }
+		}
+	}
+}
+
+# 新一届议会就职
+vpx_install_parliament = {
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_mseat^vm = vpx_cseat^vm } set_variable = { vpx_mnat^vm = vpx_cnat^vm } set_variable = { vpx_mup^vm = vpx_cup^vm } }
+	set_variable = { vpx_mres = vpx_cres_n } set_variable = { vpx_mvac = vpx_cvac }
+	add_to_variable = { vpx_ncount = 1 }
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_camp^vr = 0 } }
+	vpx_update_gov = yes
+}
+
+# 政府与反对党：按千禧的执政党与联合政府标记议席，给数值影响，重画议席图
+vpx_update_gov = {
+	set_variable = { vpx_gseat = 0 }
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_variable = { vpx_gov^vm = 0 }
+		if = { limit = { OR = { check_variable = { ruling_party = vm } is_in_array = { gov_coalition_array = vm } } } set_variable = { vpx_gov^vm = 1 } add_to_variable = { vpx_gseat = vpx_mseat^vm } }
+	}
+	if = { limit = { check_variable = { vpx_resgov = 1 } } add_to_variable = { vpx_gseat = vpx_mres } }
+	set_variable = { vpx_syr_ally = 0 }
+	if = { limit = { has_country_flag = vpx_bound_syr } SYR_vpx_pull = yes }
+	set_variable = { vpx_need = vpx_S } add_to_variable = { vpx_need = 1 } divide_variable = { vpx_need = 2 } add_to_variable = { vpx_need = 0.01 } round_variable = vpx_need
+	set_temp_variable = { vsuper = vpx_S } multiply_temp_variable = { vsuper = 2 } divide_temp_variable = { vsuper = 3 }
+	set_variable = { vpx_status = 1 }
+	if = { limit = { NOT = { check_variable = { vpx_gseat < vpx_need } } } set_variable = { vpx_status = 2 } }
+	if = { limit = { NOT = { check_variable = { vpx_gseat < vsuper } } } set_variable = { vpx_status = 3 } }
+	set_variable = { vpx_mpp = -0.08 } set_variable = { vpx_mst = -0.02 }
+	if = { limit = { check_variable = { vpx_status = 2 } } set_variable = { vpx_mpp = 0.05 } set_variable = { vpx_mst = 0.02 } }
+	if = { limit = { check_variable = { vpx_status = 3 } } set_variable = { vpx_mpp = 0.08 } set_variable = { vpx_mst = 0.03 } }
+	if = {
+		limit = { has_country_flag = vpx_bound_syr }
+		# 叙利亚的议会影响由人民议会面板的修正结算，这里不重复给
+		set_variable = { vpx_mpp = 0 } set_variable = { vpx_mst = 0 }
+		if = { limit = { has_dynamic_modifier = { modifier = vpx_parliament_modifier } } remove_dynamic_modifier = { modifier = vpx_parliament_modifier } }
+	}
+	else = {
+		if = { limit = { NOT = { has_dynamic_modifier = { modifier = vpx_parliament_modifier } } } add_dynamic_modifier = { modifier = vpx_parliament_modifier } }
+		force_update_dynamic_modifier = yes
+	}
+	vpx_dots = yes
+	set_variable = { vpx_rpfam = 8 } set_variable = { vpx_rpe = 1 }
+	if = { limit = { check_variable = { ruling_party > -0.5 } check_variable = { ruling_party < 24 } } set_temp_variable = { vrp = ruling_party } set_variable = { vpx_rpfam = vpx_fam^vrp } set_variable = { vpx_rpe = vrp } add_to_variable = { vpx_rpe = 2 } }
+	set_variable = { vpx_banner = vpx_rpfam } add_to_variable = { vpx_banner = 1 }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_ks^vm = vpx_mseat^vm } set_variable = { vpx_kv^vm = vpx_mnat^vm } set_variable = { vpx_ku^vm = vpx_mup^vm } }
+	vpx_rank_table = yes
+}
+
+# 半圆议席图：按左→右排列各党，随后是保留席位与空缺
+vpx_dots = {
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_f^vm = vpx_mseat^vm } multiply_variable = { vpx_f^vm = vpx_D } divide_variable = { vpx_f^vm = vpx_S } }
+	set_variable = { vpx_f^24 = vpx_mres } multiply_variable = { vpx_f^24 = vpx_D } divide_variable = { vpx_f^24 = vpx_S }
+	set_variable = { vpx_f^25 = vpx_mvac } multiply_variable = { vpx_f^25 = vpx_D } divide_variable = { vpx_f^25 = vpx_S }
+	set_temp_variable = { vlr_n = 26 } set_temp_variable = { vlr_t = vpx_D }
+	vpx_lr = yes
+	set_temp_variable = { vdi = 0 }
+	for_loop_effect = { start = 0 end = 24 value = vsp
+		set_temp_variable = { vm = vpx_spec^vsp }
+		set_temp_variable = { vfr = vpx_fam^vm }
+		if = { limit = { check_variable = { vpx_gov^vm = 1 } } add_to_temp_variable = { vfr = 1 } }
+		else = { add_to_temp_variable = { vfr = 11 } }
+		for_loop_effect = { start = 0 end = vpx_o^vm value = vt
+			if = { limit = { check_variable = { vdi < vpx_D } } set_variable = { vpx_dot^vdi = vfr } add_to_temp_variable = { vdi = 1 } }
+		}
+	}
+	for_loop_effect = { start = 0 end = vpx_o^24 value = vt if = { limit = { check_variable = { vdi < vpx_D } } set_variable = { vpx_dot^vdi = 22 } add_to_temp_variable = { vdi = 1 } } }
+	for_loop_effect = { start = 0 end = vpx_o^25 value = vt if = { limit = { check_variable = { vdi < vpx_D } } set_variable = { vpx_dot^vdi = 23 } add_to_temp_variable = { vdi = 1 } } }
+	for_loop_effect = { start = vdi end = vpx_D value = vk set_variable = { vpx_dot^vk = 1 } }
+}
+
+# 刷新地图、列表、摇摆榜、前四名与选中地区
+vpx_refresh_all = {
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_variable = { vpx_frame^vr = 1 } set_variable = { vpx_mar^vr = 999 } set_variable = { vpx_lead^vr = 1 }
+		set_temp_variable = { vshow = 0 }
+		if = { limit = { check_variable = { vpx_view = 1 } check_variable = { vpx_poll_ready = 1 } } set_temp_variable = { vshow = 1 } }
+		else_if = { limit = { check_variable = { vpx_view = 2 } check_variable = { vpx_rev^vr = 1 } } set_temp_variable = { vshow = 2 } }
+		if = {
+			limit = { check_variable = { vshow > 0.5 } check_variable = { vpx_occf^vr = 0 } }
+			set_temp_variable = { vbase = vr } multiply_temp_variable = { vbase = 24 }
+			set_temp_variable = { vb1 = 0 } set_temp_variable = { vb2 = 0 } set_temp_variable = { vbi = -1 }
+			for_loop_effect = { start = 0 end = 24 value = vm
+				set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm }
+				set_temp_variable = { vv = vpx_lres^vix }
+				if = { limit = { check_variable = { vshow = 2 } } set_temp_variable = { vv = vpx_cres^vix } }
+				if = { limit = { check_variable = { vv > vb1 } } set_temp_variable = { vb2 = vb1 } set_temp_variable = { vb1 = vv } set_temp_variable = { vbi = vm } }
+				else_if = { limit = { check_variable = { vv > vb2 } } set_temp_variable = { vb2 = vv } }
+			}
+			if = {
+				limit = { check_variable = { vbi > -0.5 } }
+				set_variable = { vpx_frame^vr = vpx_fam^vbi } add_to_variable = { vpx_frame^vr = 1 }
+				set_variable = { vpx_lead^vr = vpx_frame^vr }
+				set_temp_variable = { vmg = vb1 } subtract_from_temp_variable = { vmg = vb2 }
+				set_variable = { vpx_mar^vr = vmg }
+			}
+		}
+		if = { limit = { check_variable = { vpx_occf^vr = 1 } } set_variable = { vpx_lead^vr = 12 } }
+	}
+	# 摇摆榜：差距最小的六个地区
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_mar2^vr = vpx_mar^vr } }
+	for_loop_effect = { start = 0 end = 6 value = vk
+		set_temp_variable = { vbm = 998 } set_temp_variable = { vbj = -1 }
+		for_loop_effect = { start = 0 end = vpx_R value = vr if = { limit = { check_variable = { vpx_mar2^vr < vbm } } set_temp_variable = { vbm = vpx_mar2^vr } set_temp_variable = { vbj = vr } } }
+		set_variable = { vpx_sw_r^vk = 0 } set_variable = { vpx_sw_m^vk = 0 } set_variable = { vpx_sw_l^vk = 1 }
+		if = {
+			limit = { check_variable = { vbj > -0.5 } }
+			set_variable = { vpx_sw_r^vk = vbj } add_to_variable = { vpx_sw_r^vk = 1 }
+			set_variable = { vpx_sw_m^vk = vbm } set_variable = { vpx_sw_l^vk = vpx_lead^vbj }
+			set_variable = { vpx_mar2^vbj = 1000 }
+		}
+	}
+	set_variable = { vpx_prog = vpx_anim } multiply_variable = { vpx_prog = 100 } divide_variable = { vpx_prog = vpx_R } round_variable = vpx_prog clamp_variable = { var = vpx_prog min = 0 max = 100 }
+	# 前四名卡片：议会页看现任议会，地图页看民调 / 开票
+	if = {
+		limit = { check_variable = { vpx_tab = 2 } }
+		for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_ks^vm = vpx_mseat^vm } set_variable = { vpx_kv^vm = vpx_mnat^vm } set_variable = { vpx_ku^vm = vpx_mup^vm } }
+	}
+	else_if = {
+		limit = { check_variable = { vpx_view = 2 } }
+		# 开票中：席位按已开票地区的人口比例逐步显示
+		set_temp_variable = { vfrac = 1 }
+		if = { limit = { check_variable = { vpx_done = 0 } } set_temp_variable = { vfrac = vpx_runw } divide_temp_variable = { vfrac = 100 } }
+		if = { limit = { check_variable = { vfrac > 1 } } set_temp_variable = { vfrac = 1 } }
+		for_loop_effect = { start = 0 end = 24 value = vm
+			set_variable = { vpx_ks^vm = vpx_cseat^vm } multiply_variable = { vpx_ks^vm = vfrac } round_variable = vpx_ks^vm
+			set_variable = { vpx_kv^vm = vpx_cnat^vm } set_variable = { vpx_ku^vm = vpx_cup^vm }
+		}
+	}
+	else = {
+		for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_ks^vm = vpx_lseat^vm } set_variable = { vpx_kv^vm = vpx_lnat^vm } set_variable = { vpx_ku^vm = vpx_lup^vm } }
+	}
+	vpx_rank_cards = yes
+	# 议席对比条：保留席位与空缺随当前视图
+	if = { limit = { check_variable = { vpx_tab = 2 } } set_variable = { vpx_bres = vpx_mres } set_variable = { vpx_bvac = vpx_mvac } }
+	else_if = { limit = { check_variable = { vpx_view = 2 } } set_variable = { vpx_bres = vpx_cres_n } set_variable = { vpx_bvac = vpx_cvac } }
+	else = { set_variable = { vpx_bres = vpx_lres_n } set_variable = { vpx_bvac = vpx_lvac } }
+	set_variable = { vpx_bally = 0 }
+	if = {
+		limit = { has_country_flag = vpx_bound_syr OR = { check_variable = { vpx_tab = 2 } check_variable = { vpx_view = 2 } } }
+		set_variable = { vpx_bally = vpx_syr_ally }
+		if = { limit = { check_variable = { vpx_bally > vpx_bres } } set_variable = { vpx_bally = vpx_bres } }
+	}
+	vpx_bar = yes
+	vpx_legend = yes
+	vpx_refresh_sel = yes
+}
+
+# 议席对比条（130 格）：政府一方（按席位从多到少）→ 指定席位 → 反对党 → 中立保留席 → 空缺。输入 vpx_ks / vpx_gov / vpx_bres / vpx_bvac
+vpx_bar = {
+	set_variable = { vpx_bgov = 0 } set_variable = { vpx_bopp = 0 }
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_variable = { vpx_f^vm = vpx_ks^vm } multiply_variable = { vpx_f^vm = 130 } divide_variable = { vpx_f^vm = vpx_S }
+		if = { limit = { check_variable = { vpx_gov^vm = 1 } } add_to_variable = { vpx_bgov = vpx_ks^vm } }
+		else = { add_to_variable = { vpx_bopp = vpx_ks^vm } }
+		set_variable = { vpx_key^vm = vpx_ks^vm }
+	}
+	if = { limit = { check_variable = { vpx_resgov = 1 } } set_variable = { vpx_bally = vpx_bres } }
+	add_to_variable = { vpx_bgov = vpx_bally }
+	set_variable = { vpx_f^24 = vpx_bres } multiply_variable = { vpx_f^24 = 130 } divide_variable = { vpx_f^24 = vpx_S }
+	set_variable = { vpx_f^25 = vpx_bvac } multiply_variable = { vpx_f^25 = 130 } divide_variable = { vpx_f^25 = vpx_S }
+	set_temp_variable = { vlr_n = 26 } set_temp_variable = { vlr_t = 130 }
+	vpx_lr = yes
+	set_temp_variable = { vgres = 0 }
+	if = { limit = { check_variable = { vpx_bres > 0 } } set_temp_variable = { vgres = vpx_o^24 } multiply_temp_variable = { vgres = vpx_bally } divide_temp_variable = { vgres = vpx_bres } round_temp_variable = vgres }
+	set_temp_variable = { vnres = vpx_o^24 } subtract_from_temp_variable = { vnres = vgres }
+	set_temp_variable = { vbi2 = 0 }
+	for_loop_effect = { start = 0 end = 2 value = vside
+		set_temp_variable = { vwant = 1 } subtract_from_temp_variable = { vwant = vside }
+		for_loop_effect = { start = 0 end = 24 value = vpick
+			set_temp_variable = { vbk = 0.5 } set_temp_variable = { vbj = -1 }
+			for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_gov^vm = vwant } check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+			if = {
+				limit = { check_variable = { vbj > -0.5 } }
+				set_variable = { vpx_key^vbj = -1 }
+				set_temp_variable = { vfr = vpx_fam^vbj }
+				if = { limit = { check_variable = { vwant = 1 } } add_to_temp_variable = { vfr = 1 } }
+				else = { add_to_temp_variable = { vfr = 11 } }
+				for_loop_effect = { start = 0 end = vpx_o^vbj value = vt if = { limit = { check_variable = { vbi2 < 130 } } set_variable = { vpx_seg^vbi2 = vfr } add_to_temp_variable = { vbi2 = 1 } } }
+			}
+		}
+		if = { limit = { check_variable = { vside = 0 } }
+			for_loop_effect = { start = 0 end = vgres value = vt if = { limit = { check_variable = { vbi2 < 130 } } set_variable = { vpx_seg^vbi2 = 22 } add_to_temp_variable = { vbi2 = 1 } } }
+		}
+	}
+	for_loop_effect = { start = 0 end = vnres value = vt if = { limit = { check_variable = { vbi2 < 130 } } set_variable = { vpx_seg^vbi2 = 22 } add_to_temp_variable = { vbi2 = 1 } } }
+	for_loop_effect = { start = 0 end = vpx_o^25 value = vt if = { limit = { check_variable = { vbi2 < 130 } } set_variable = { vpx_seg^vbi2 = 23 } add_to_temp_variable = { vbi2 = 1 } } }
+	for_loop_effect = { start = vbi2 end = 130 value = vk set_variable = { vpx_seg^vk = 1 } }
+}
+
+# 地图图例：按“领先地区数”（其次得票）排出前十个政党
+vpx_legend = {
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_lc^vm = 0 } }
+	for_loop_effect = { start = 0 end = vpx_R value = vr
+		set_temp_variable = { vw = 0 }
+		if = { limit = { check_variable = { vpx_view = 2 } check_variable = { vpx_rev^vr = 1 } } set_temp_variable = { vw = vpx_cwin^vr } }
+		else_if = { limit = { check_variable = { vpx_view = 1 } } set_temp_variable = { vw = vpx_lwin^vr } }
+		if = { limit = { check_variable = { vw > 0.5 } check_variable = { vpx_occf^vr = 0 } } subtract_from_temp_variable = { vw = 1 } add_to_variable = { vpx_lc^vw = 1 } }
+	}
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_variable = { vpx_key^vm = vpx_lc^vm } multiply_variable = { vpx_key^vm = 1000 }
+		set_temp_variable = { vv = vpx_lnat^vm } if = { limit = { check_variable = { vpx_view = 2 } } set_temp_variable = { vv = vpx_cnat^vm } }
+		add_to_variable = { vpx_key^vm = vv }
+		if = { limit = { check_variable = { vpx_lc^vm = 0 } check_variable = { vv < 5 } } set_variable = { vpx_key^vm = -1 } }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_1 = 0 } set_variable = { vpx_lg_n_1 = 0 } set_variable = { vpx_lg_c_1 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_1 = vbj } add_to_variable = { vpx_lg_s_1 = 1 } set_variable = { vpx_lg_n_1 = vpx_lc^vbj } set_variable = { vpx_lg_c_1 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_1 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_2 = 0 } set_variable = { vpx_lg_n_2 = 0 } set_variable = { vpx_lg_c_2 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_2 = vbj } add_to_variable = { vpx_lg_s_2 = 1 } set_variable = { vpx_lg_n_2 = vpx_lc^vbj } set_variable = { vpx_lg_c_2 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_2 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_3 = 0 } set_variable = { vpx_lg_n_3 = 0 } set_variable = { vpx_lg_c_3 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_3 = vbj } add_to_variable = { vpx_lg_s_3 = 1 } set_variable = { vpx_lg_n_3 = vpx_lc^vbj } set_variable = { vpx_lg_c_3 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_3 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_4 = 0 } set_variable = { vpx_lg_n_4 = 0 } set_variable = { vpx_lg_c_4 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_4 = vbj } add_to_variable = { vpx_lg_s_4 = 1 } set_variable = { vpx_lg_n_4 = vpx_lc^vbj } set_variable = { vpx_lg_c_4 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_4 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_5 = 0 } set_variable = { vpx_lg_n_5 = 0 } set_variable = { vpx_lg_c_5 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_5 = vbj } add_to_variable = { vpx_lg_s_5 = 1 } set_variable = { vpx_lg_n_5 = vpx_lc^vbj } set_variable = { vpx_lg_c_5 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_5 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_6 = 0 } set_variable = { vpx_lg_n_6 = 0 } set_variable = { vpx_lg_c_6 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_6 = vbj } add_to_variable = { vpx_lg_s_6 = 1 } set_variable = { vpx_lg_n_6 = vpx_lc^vbj } set_variable = { vpx_lg_c_6 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_6 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_7 = 0 } set_variable = { vpx_lg_n_7 = 0 } set_variable = { vpx_lg_c_7 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_7 = vbj } add_to_variable = { vpx_lg_s_7 = 1 } set_variable = { vpx_lg_n_7 = vpx_lc^vbj } set_variable = { vpx_lg_c_7 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_7 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_8 = 0 } set_variable = { vpx_lg_n_8 = 0 } set_variable = { vpx_lg_c_8 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_8 = vbj } add_to_variable = { vpx_lg_s_8 = 1 } set_variable = { vpx_lg_n_8 = vpx_lc^vbj } set_variable = { vpx_lg_c_8 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_8 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_9 = 0 } set_variable = { vpx_lg_n_9 = 0 } set_variable = { vpx_lg_c_9 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_9 = vbj } add_to_variable = { vpx_lg_s_9 = 1 } set_variable = { vpx_lg_n_9 = vpx_lc^vbj } set_variable = { vpx_lg_c_9 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_9 = 1 } set_variable = { vpx_key^vbj = -2 } }
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	set_variable = { vpx_lg_s_10 = 0 } set_variable = { vpx_lg_n_10 = 0 } set_variable = { vpx_lg_c_10 = 1 }
+	if = { limit = { check_variable = { vbj > -0.5 } } set_variable = { vpx_lg_s_10 = vbj } add_to_variable = { vpx_lg_s_10 = 1 } set_variable = { vpx_lg_n_10 = vpx_lc^vbj } set_variable = { vpx_lg_c_10 = vpx_fam^vbj } add_to_variable = { vpx_lg_c_10 = 1 } set_variable = { vpx_key^vbj = -2 } }
+}
+
+# 在选中地区造势：提高执政党在该区的得票（本系统内），并给执政党少量全国支持率（影响千禧的选举）
+vpx_rally = {
+	if = {
+		limit = { check_variable = { vpx_sel > 0 } }
+		set_temp_variable = { vsr = vpx_sel } subtract_from_temp_variable = { vsr = 1 }
+		if = { limit = { check_variable = { vpx_camp^vsr < 5 } } add_to_variable = { vpx_camp^vsr = 1 } }
+		set_temp_variable = { party_index = ruling_party }
+		set_temp_variable = { party_popularity_increase = 0.003 }
+		set_temp_variable = { temp_outlook_increase = 0.003 }
+		change_relative_party_popularity = yes
+		set_country_flag = { flag = vpx_rally_cd value = 1 days = 10 }
+		vpx_run_poll = yes
+	}
+}
+
+# 每天由 on_action 调用（只对玩家控制的国家）
+vpx_daily = {
+	if = {
+		limit = { has_country_flag = elections_in_progress NOT = { has_country_flag = vpx_campaign } }
+		set_country_flag = vpx_campaign
+		clr_country_flag = vpx_pending
+		if = { limit = { check_variable = { vpx_phase = 2 } } vpx_install_parliament = yes }
+		for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_camp^vr = 0 } }
+		set_variable = { vpx_phase = 1 } set_variable = { vpx_view = 1 } set_variable = { vpx_tab = 1 }
+		set_country_flag = vpx_open
+		vpx_run_poll = yes
+	}
+	else_if = {
+		limit = { has_country_flag = vpx_campaign NOT = { has_country_flag = elections_in_progress } }
+		clr_country_flag = vpx_campaign
+		clr_country_flag = vpx_pending
+		vpx_run_result = yes
+	}
+	if = {
+		limit = { has_country_flag = vpx_pending NOT = { has_country_flag = vpx_campaign } }
+		add_to_variable = { vpx_pdays = 1 }
+		if = { limit = { check_variable = { vpx_pdays > 45 } } clr_country_flag = vpx_pending vpx_run_result = yes }
+	}
+	if = {
+		limit = { check_variable = { global.num_days > vpx_poll_due } NOT = { check_variable = { vpx_phase = 2 } } }
+		set_variable = { vpx_poll_due = global.num_days } add_to_variable = { vpx_poll_due = 30 }
+		vpx_run_poll = yes
+	}
+	vpx_gov_signature = yes
+	if = {
+		limit = { OR = { NOT = { check_variable = { vpx_lrp = ruling_party } } NOT = { check_variable = { vpx_lsig = vpx_sig } } } }
+		set_variable = { vpx_lrp = ruling_party }
+		set_variable = { vpx_lsig = vpx_sig }
+		if = {
+			limit = { has_country_flag = vpx_bound_syr }
+			SYR_pc_recalc = yes
+		}
+		else_if = { limit = { NOT = { check_variable = { vpx_phase = 2 } } } vpx_update_gov = yes vpx_refresh_all = yes }
+	}
+}
+
+# 联合政府的“指纹”：成员数与成员槽号平方和，变了就说明联合政府换了人
+vpx_gov_signature = {
+	set_temp_variable = { vsig = 0 }
+	for_each_loop = {
+		array = gov_coalition_array
+		value = vcv
+		set_temp_variable = { vsq = vcv } add_to_temp_variable = { vsq = 1 } multiply_temp_variable = { vsq = vsq }
+		add_to_temp_variable = { vsig = vsq } add_to_temp_variable = { vsig = 1000 }
+	}
+	set_variable = { vpx_sig = vsig }
+}
+
+vpx_shutdown = {
+	clr_country_flag = vpx_on
+	clr_country_flag = vpx_open
+	clr_country_flag = vpx_campaign
+	clr_country_flag = vpx_pending
+	if = { limit = { has_dynamic_modifier = { modifier = vpx_parliament_modifier } } remove_dynamic_modifier = { modifier = vpx_parliament_modifier } }
+}
+
+# ---------------- 叙利亚：地图里的议会 = 决议面板的人民议会 ----------------
+# 议席组：0 复兴党　1 全国进步阵线　2 世俗组　3 伊斯兰主义组；独立人士记在保留席位（vpx_mres / vpx_cres_n）
+SYR_vpx_arrays = {
+	clear_array = vpx_sg
+	add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 0 }
+	add_to_array = { vpx_sg = 3 } add_to_array = { vpx_sg = 3 } add_to_array = { vpx_sg = 3 } add_to_array = { vpx_sg = 3 } add_to_array = { vpx_sg = 3 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = -1 }
+	add_to_array = { vpx_sg = -1 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 2 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 1 } add_to_array = { vpx_sg = 3 }
+	clear_array = vpx_sb resize_array = { array = vpx_sb value = 0 size = 24 }
+	clear_array = vpx_sa resize_array = { array = vpx_sa value = 0 size = 24 }
+	clear_array = vpx_sn resize_array = { array = vpx_sn value = 0 size = 24 }
+}
+
+# 把一个议席组的席位分给组内各党：按 vpx_sb（现有席位），没有则按 vpx_sa（得票），再没有则给默认党
+# 输入 temp sy_g（组号）sy_t（组内席位）sy_def（默认党）；输出 vpx_sn
+SYR_vpx_split = {
+	set_temp_variable = { sy_sum = 0 }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_f^vm = 0 } if = { limit = { check_variable = { vpx_sg^vm = sy_g } } set_variable = { vpx_f^vm = vpx_sb^vm } add_to_temp_variable = { sy_sum = vpx_sb^vm } } }
+	if = {
+		limit = { check_variable = { sy_sum < 0.5 } }
+		set_temp_variable = { sy_sum = 0 }
+		for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_sg^vm = sy_g } } set_variable = { vpx_f^vm = vpx_sa^vm } add_to_temp_variable = { sy_sum = vpx_sa^vm } } }
+	}
+	if = { limit = { check_variable = { sy_sum < 0.01 } } set_variable = { vpx_f^sy_def = 1 } set_temp_variable = { sy_sum = 1 } }
+	if = {
+		limit = { check_variable = { sy_t > 0.5 } }
+		for_loop_effect = { start = 0 end = 24 value = vm multiply_variable = { vpx_f^vm = sy_t } divide_variable = { vpx_f^vm = sy_sum } }
+		set_temp_variable = { vlr_n = 24 } set_temp_variable = { vlr_t = sy_t }
+		vpx_lr = yes
+		for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_sg^vm = sy_g } } set_variable = { vpx_sn^vm = vpx_o^vm } } }
+	}
+}
+
+# 按人民议会的四个组分配席位；顺便算出独立人士 sy_ind（250 − 各组取整之和）
+SYR_vpx_split_all = {
+	set_temp_variable = { sy_ind = 250 }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_sn^vm = 0 } }
+	set_temp_variable = { sy_g = 0 } set_temp_variable = { sy_def = 7 } set_temp_variable = { sy_t = SYR_pc_baath } round_temp_variable = sy_t
+	subtract_from_temp_variable = { sy_ind = sy_t }
+	SYR_vpx_split = yes
+	set_temp_variable = { sy_g = 1 } set_temp_variable = { sy_def = 20 } set_temp_variable = { sy_t = SYR_pc_npf } round_temp_variable = sy_t
+	subtract_from_temp_variable = { sy_ind = sy_t }
+	SYR_vpx_split = yes
+	set_temp_variable = { sy_g = 2 } set_temp_variable = { sy_def = 1 } set_temp_variable = { sy_t = SYR_pc_sec } round_temp_variable = sy_t
+	subtract_from_temp_variable = { sy_ind = sy_t }
+	SYR_vpx_split = yes
+	set_temp_variable = { sy_g = 3 } set_temp_variable = { sy_def = 12 } set_temp_variable = { sy_t = SYR_pc_isl } round_temp_variable = sy_t
+	subtract_from_temp_variable = { sy_ind = sy_t }
+	SYR_vpx_split = yes
+	if = { limit = { check_variable = { sy_ind < 0 } } set_temp_variable = { sy_ind = 0 } }
+}
+
+# Scope: SYR。现任议会照抄人民议会；政府一方按人民议会的规则（政权体制 = 复兴党 + 进步阵线，等等）
+SYR_vpx_pull = {
+	SYR_vpx_arrays = yes
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_sb^vm = vpx_mseat^vm } set_variable = { vpx_sa^vm = vpx_mnat^vm } }
+	# 第一次地图大选之前，组内按得票分（开局推算的席位会把整个阵线的席位挤给一个党）
+	if = { limit = { check_variable = { vpx_ncount = 0 } } for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_sb^vm = vpx_mnat^vm } } }
+	SYR_vpx_split_all = yes
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_mseat^vm = vpx_sn^vm } set_variable = { vpx_gov^vm = 0 } }
+	set_variable = { vpx_mres = sy_ind } set_variable = { vpx_mvac = 0 }
+	set_temp_variable = { sy_a = 2 } set_temp_variable = { sy_b = 2 }
+	if = { limit = { SYR_regime_mode = yes } set_temp_variable = { sy_a = 0 } set_temp_variable = { sy_b = 1 } }
+	else_if = { limit = { OR = { check_variable = { ruling_party = 12 } check_variable = { ruling_party = 11 } check_variable = { ruling_party = 9 } check_variable = { ruling_party = 8 } check_variable = { ruling_party = 10 } check_variable = { ruling_party = 23 } } } set_temp_variable = { sy_a = 3 } set_temp_variable = { sy_b = 3 } }
+	set_temp_variable = { sy_gsum = 0 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { OR = { check_variable = { vpx_sg^vm = sy_a } check_variable = { vpx_sg^vm = sy_b } } } set_variable = { vpx_gov^vm = 1 } add_to_temp_variable = { sy_gsum = vpx_mseat^vm } } }
+	set_variable = { vpx_gseat = SYR_pc_gov } round_variable = vpx_gseat
+	set_variable = { vpx_syr_ally = vpx_gseat } subtract_from_variable = { vpx_syr_ally = sy_gsum }
+	if = { limit = { check_variable = { vpx_syr_ally < 0 } } set_variable = { vpx_syr_ally = 0 } set_variable = { vpx_gseat = sy_gsum } }
+}
+
+# Scope: SYR。竞争性选举：人民议会各组 = 地图开票结果的组内席位 × 九成（其余一成归独立人士）
+SYR_pc_seats_from_vpx = {
+	SYR_vpx_arrays = yes
+	set_temp_variable = { sy_t = 0 } add_to_temp_variable = { sy_t = vpx_cseat^7 }
+	multiply_temp_variable = { sy_t = 0.9 } round_temp_variable = sy_t set_variable = { SYR_pc_baath = sy_t }
+	set_temp_variable = { sy_t = 0 } add_to_temp_variable = { sy_t = vpx_cseat^20 } add_to_temp_variable = { sy_t = vpx_cseat^4 } add_to_temp_variable = { sy_t = vpx_cseat^13 } add_to_temp_variable = { sy_t = vpx_cseat^5 } add_to_temp_variable = { sy_t = vpx_cseat^18 } add_to_temp_variable = { sy_t = vpx_cseat^21 } add_to_temp_variable = { sy_t = vpx_cseat^22 }
+	multiply_temp_variable = { sy_t = 0.9 } round_temp_variable = sy_t set_variable = { SYR_pc_npf = sy_t }
+	set_temp_variable = { sy_t = 0 } add_to_temp_variable = { sy_t = vpx_cseat^0 } add_to_temp_variable = { sy_t = vpx_cseat^1 } add_to_temp_variable = { sy_t = vpx_cseat^2 } add_to_temp_variable = { sy_t = vpx_cseat^3 } add_to_temp_variable = { sy_t = vpx_cseat^6 } add_to_temp_variable = { sy_t = vpx_cseat^14 } add_to_temp_variable = { sy_t = vpx_cseat^17 } add_to_temp_variable = { sy_t = vpx_cseat^19 }
+	multiply_temp_variable = { sy_t = 0.9 } round_temp_variable = sy_t set_variable = { SYR_pc_sec = sy_t }
+	set_temp_variable = { sy_t = 0 } add_to_temp_variable = { sy_t = vpx_cseat^8 } add_to_temp_variable = { sy_t = vpx_cseat^9 } add_to_temp_variable = { sy_t = vpx_cseat^10 } add_to_temp_variable = { sy_t = vpx_cseat^11 } add_to_temp_variable = { sy_t = vpx_cseat^12 } add_to_temp_variable = { sy_t = vpx_cseat^23 }
+	multiply_temp_variable = { sy_t = 0.9 } round_temp_variable = sy_t set_variable = { SYR_pc_isl = sy_t }
+}
+
+# Scope: SYR。让地图上的开票结果与换届后的人民议会一致
+SYR_vpx_push_c = {
+	SYR_vpx_arrays = yes
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_sb^vm = vpx_cseat^vm } set_variable = { vpx_sa^vm = vpx_cnat^vm } }
+	SYR_vpx_split_all = yes
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_cseat^vm = vpx_sn^vm } }
+	set_variable = { vpx_cres_n = sy_ind } set_variable = { vpx_cvac = 0 }
+}
+
+# 选中地区面板：该区得票前六名
+vpx_refresh_sel = {
+	set_variable = { vpx_s_occf = 0 } set_variable = { vpx_s_occ = 0 } set_variable = { vpx_s_seats = 0 } set_variable = { vpx_s_camp = 0 }
+	set_variable = { vpx_s_has = 0 }
+	for_loop_effect = { start = 0 end = vpx_R value = vr set_variable = { vpx_selfr^vr = 1 } }
+	for_loop_effect = { start = 0 end = 24 value = vm set_variable = { vpx_key^vm = 0 } }
+	if = {
+		limit = { check_variable = { vpx_sel > 0 } }
+		set_temp_variable = { vsr = vpx_sel } subtract_from_temp_variable = { vsr = 1 }
+		set_variable = { vpx_selfr^vsr = 2 }
+		set_variable = { vpx_s_occf = vpx_occf^vsr } set_variable = { vpx_s_occ = vpx_occ^vsr }
+		set_variable = { vpx_s_seats = vpx_rd^vsr } set_variable = { vpx_s_camp = vpx_camp^vsr }
+		if = { limit = { check_variable = { vpx_s_occf = 1 } } set_variable = { vpx_s_seats = 0 } }
+		set_temp_variable = { vbase = vsr } multiply_temp_variable = { vbase = 24 }
+		for_loop_effect = { start = 0 end = 24 value = vm
+			set_temp_variable = { vix = vbase } add_to_temp_variable = { vix = vm }
+			if = { limit = { check_variable = { vpx_view = 1 } check_variable = { vpx_poll_ready = 1 } } set_variable = { vpx_key^vm = vpx_lres^vix } set_variable = { vpx_s_has = 1 } }
+			else_if = { limit = { check_variable = { vpx_view = 2 } check_variable = { vpx_rev^vsr = 1 } } set_variable = { vpx_key^vm = vpx_cres^vix } set_variable = { vpx_s_has = 1 } }
+		}
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_1 = vbj } add_to_variable = { vpx_s_s_1 = 1 }
+		set_variable = { vpx_s_v_1 = vbk }
+		set_variable = { vpx_s_b_1 = vbk } round_variable = vpx_s_b_1 clamp_variable = { var = vpx_s_b_1 min = 0 max = 100 }
+		set_variable = { vpx_s_e_1 = vbj } add_to_variable = { vpx_s_e_1 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_1 = 0 } set_variable = { vpx_s_v_1 = 0 } set_variable = { vpx_s_b_1 = 0 } set_variable = { vpx_s_e_1 = 1 }
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_2 = vbj } add_to_variable = { vpx_s_s_2 = 1 }
+		set_variable = { vpx_s_v_2 = vbk }
+		set_variable = { vpx_s_b_2 = vbk } round_variable = vpx_s_b_2 clamp_variable = { var = vpx_s_b_2 min = 0 max = 100 }
+		set_variable = { vpx_s_e_2 = vbj } add_to_variable = { vpx_s_e_2 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_2 = 0 } set_variable = { vpx_s_v_2 = 0 } set_variable = { vpx_s_b_2 = 0 } set_variable = { vpx_s_e_2 = 1 }
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_3 = vbj } add_to_variable = { vpx_s_s_3 = 1 }
+		set_variable = { vpx_s_v_3 = vbk }
+		set_variable = { vpx_s_b_3 = vbk } round_variable = vpx_s_b_3 clamp_variable = { var = vpx_s_b_3 min = 0 max = 100 }
+		set_variable = { vpx_s_e_3 = vbj } add_to_variable = { vpx_s_e_3 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_3 = 0 } set_variable = { vpx_s_v_3 = 0 } set_variable = { vpx_s_b_3 = 0 } set_variable = { vpx_s_e_3 = 1 }
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_4 = vbj } add_to_variable = { vpx_s_s_4 = 1 }
+		set_variable = { vpx_s_v_4 = vbk }
+		set_variable = { vpx_s_b_4 = vbk } round_variable = vpx_s_b_4 clamp_variable = { var = vpx_s_b_4 min = 0 max = 100 }
+		set_variable = { vpx_s_e_4 = vbj } add_to_variable = { vpx_s_e_4 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_4 = 0 } set_variable = { vpx_s_v_4 = 0 } set_variable = { vpx_s_b_4 = 0 } set_variable = { vpx_s_e_4 = 1 }
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_5 = vbj } add_to_variable = { vpx_s_s_5 = 1 }
+		set_variable = { vpx_s_v_5 = vbk }
+		set_variable = { vpx_s_b_5 = vbk } round_variable = vpx_s_b_5 clamp_variable = { var = vpx_s_b_5 min = 0 max = 100 }
+		set_variable = { vpx_s_e_5 = vbj } add_to_variable = { vpx_s_e_5 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_5 = 0 } set_variable = { vpx_s_v_5 = 0 } set_variable = { vpx_s_b_5 = 0 } set_variable = { vpx_s_e_5 = 1 }
+	}
+	set_temp_variable = { vbk = 0.04 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_s_s_6 = vbj } add_to_variable = { vpx_s_s_6 = 1 }
+		set_variable = { vpx_s_v_6 = vbk }
+		set_variable = { vpx_s_b_6 = vbk } round_variable = vpx_s_b_6 clamp_variable = { var = vpx_s_b_6 min = 0 max = 100 }
+		set_variable = { vpx_s_e_6 = vbj } add_to_variable = { vpx_s_e_6 = 2 }
+		set_variable = { vpx_key^vbj = -2 }
+	}
+	else = {
+		set_variable = { vpx_s_s_6 = 0 } set_variable = { vpx_s_v_6 = 0 } set_variable = { vpx_s_b_6 = 0 } set_variable = { vpx_s_e_6 = 1 }
+	}
+}
+
+# 排名：输入数组 vpx_ks（席位）vpx_kv（得票%）vpx_ku（上院席位）；输出 vpx_k_*_1..4
+vpx_rank_cards = {
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_variable = { vpx_key^vm = vpx_ks^vm }
+		multiply_variable = { vpx_key^vm = 1000 }
+		add_to_variable = { vpx_key^vm = vpx_kv^vm }
+		if = { limit = { check_variable = { vpx_ks^vm < 0.5 } check_variable = { vpx_kv^vm < 0.05 } } set_variable = { vpx_key^vm = -1 } }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_k_s_1 = vbj } add_to_variable = { vpx_k_s_1 = 1 }
+		set_variable = { vpx_k_v_1 = vpx_kv^vbj }
+		set_variable = { vpx_k_n_1 = vpx_ks^vbj }
+		set_variable = { vpx_k_u_1 = vpx_ku^vbj }
+		set_variable = { vpx_k_g_1 = vpx_gov^vbj }
+		set_variable = { vpx_k_c_1 = vpx_fam^vbj } add_to_variable = { vpx_k_c_1 = 1 }
+		set_variable = { vpx_k_e_1 = vbj } add_to_variable = { vpx_k_e_1 = 2 }
+	}
+	else = {
+		set_variable = { vpx_k_s_1 = 0 } set_variable = { vpx_k_v_1 = 0 } set_variable = { vpx_k_n_1 = 0 } set_variable = { vpx_k_u_1 = 0 }
+		set_variable = { vpx_k_g_1 = 0 } set_variable = { vpx_k_c_1 = 1 } set_variable = { vpx_k_e_1 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_k_s_2 = vbj } add_to_variable = { vpx_k_s_2 = 1 }
+		set_variable = { vpx_k_v_2 = vpx_kv^vbj }
+		set_variable = { vpx_k_n_2 = vpx_ks^vbj }
+		set_variable = { vpx_k_u_2 = vpx_ku^vbj }
+		set_variable = { vpx_k_g_2 = vpx_gov^vbj }
+		set_variable = { vpx_k_c_2 = vpx_fam^vbj } add_to_variable = { vpx_k_c_2 = 1 }
+		set_variable = { vpx_k_e_2 = vbj } add_to_variable = { vpx_k_e_2 = 2 }
+	}
+	else = {
+		set_variable = { vpx_k_s_2 = 0 } set_variable = { vpx_k_v_2 = 0 } set_variable = { vpx_k_n_2 = 0 } set_variable = { vpx_k_u_2 = 0 }
+		set_variable = { vpx_k_g_2 = 0 } set_variable = { vpx_k_c_2 = 1 } set_variable = { vpx_k_e_2 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_k_s_3 = vbj } add_to_variable = { vpx_k_s_3 = 1 }
+		set_variable = { vpx_k_v_3 = vpx_kv^vbj }
+		set_variable = { vpx_k_n_3 = vpx_ks^vbj }
+		set_variable = { vpx_k_u_3 = vpx_ku^vbj }
+		set_variable = { vpx_k_g_3 = vpx_gov^vbj }
+		set_variable = { vpx_k_c_3 = vpx_fam^vbj } add_to_variable = { vpx_k_c_3 = 1 }
+		set_variable = { vpx_k_e_3 = vbj } add_to_variable = { vpx_k_e_3 = 2 }
+	}
+	else = {
+		set_variable = { vpx_k_s_3 = 0 } set_variable = { vpx_k_v_3 = 0 } set_variable = { vpx_k_n_3 = 0 } set_variable = { vpx_k_u_3 = 0 }
+		set_variable = { vpx_k_g_3 = 0 } set_variable = { vpx_k_c_3 = 1 } set_variable = { vpx_k_e_3 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_k_s_4 = vbj } add_to_variable = { vpx_k_s_4 = 1 }
+		set_variable = { vpx_k_v_4 = vpx_kv^vbj }
+		set_variable = { vpx_k_n_4 = vpx_ks^vbj }
+		set_variable = { vpx_k_u_4 = vpx_ku^vbj }
+		set_variable = { vpx_k_g_4 = vpx_gov^vbj }
+		set_variable = { vpx_k_c_4 = vpx_fam^vbj } add_to_variable = { vpx_k_c_4 = 1 }
+		set_variable = { vpx_k_e_4 = vbj } add_to_variable = { vpx_k_e_4 = 2 }
+	}
+	else = {
+		set_variable = { vpx_k_s_4 = 0 } set_variable = { vpx_k_v_4 = 0 } set_variable = { vpx_k_n_4 = 0 } set_variable = { vpx_k_u_4 = 0 }
+		set_variable = { vpx_k_g_4 = 0 } set_variable = { vpx_k_c_4 = 1 } set_variable = { vpx_k_e_4 = 1 }
+	}
+}
+
+# 排名：输入数组 vpx_ks（席位）vpx_kv（得票%）vpx_ku（上院席位）；输出 vpx_t_*_1..10
+vpx_rank_table = {
+	for_loop_effect = { start = 0 end = 24 value = vm
+		set_variable = { vpx_key^vm = vpx_ks^vm }
+		multiply_variable = { vpx_key^vm = 1000 }
+		add_to_variable = { vpx_key^vm = vpx_kv^vm }
+		if = { limit = { check_variable = { vpx_ks^vm < 0.5 } check_variable = { vpx_kv^vm < 0.05 } } set_variable = { vpx_key^vm = -1 } }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_1 = vbj } add_to_variable = { vpx_t_s_1 = 1 }
+		set_variable = { vpx_t_v_1 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_1 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_1 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_1 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_1 = vpx_fam^vbj } add_to_variable = { vpx_t_c_1 = 1 }
+		set_variable = { vpx_t_e_1 = vbj } add_to_variable = { vpx_t_e_1 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_1 = 0 } set_variable = { vpx_t_v_1 = 0 } set_variable = { vpx_t_n_1 = 0 } set_variable = { vpx_t_u_1 = 0 }
+		set_variable = { vpx_t_g_1 = 0 } set_variable = { vpx_t_c_1 = 1 } set_variable = { vpx_t_e_1 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_2 = vbj } add_to_variable = { vpx_t_s_2 = 1 }
+		set_variable = { vpx_t_v_2 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_2 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_2 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_2 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_2 = vpx_fam^vbj } add_to_variable = { vpx_t_c_2 = 1 }
+		set_variable = { vpx_t_e_2 = vbj } add_to_variable = { vpx_t_e_2 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_2 = 0 } set_variable = { vpx_t_v_2 = 0 } set_variable = { vpx_t_n_2 = 0 } set_variable = { vpx_t_u_2 = 0 }
+		set_variable = { vpx_t_g_2 = 0 } set_variable = { vpx_t_c_2 = 1 } set_variable = { vpx_t_e_2 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_3 = vbj } add_to_variable = { vpx_t_s_3 = 1 }
+		set_variable = { vpx_t_v_3 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_3 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_3 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_3 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_3 = vpx_fam^vbj } add_to_variable = { vpx_t_c_3 = 1 }
+		set_variable = { vpx_t_e_3 = vbj } add_to_variable = { vpx_t_e_3 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_3 = 0 } set_variable = { vpx_t_v_3 = 0 } set_variable = { vpx_t_n_3 = 0 } set_variable = { vpx_t_u_3 = 0 }
+		set_variable = { vpx_t_g_3 = 0 } set_variable = { vpx_t_c_3 = 1 } set_variable = { vpx_t_e_3 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_4 = vbj } add_to_variable = { vpx_t_s_4 = 1 }
+		set_variable = { vpx_t_v_4 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_4 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_4 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_4 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_4 = vpx_fam^vbj } add_to_variable = { vpx_t_c_4 = 1 }
+		set_variable = { vpx_t_e_4 = vbj } add_to_variable = { vpx_t_e_4 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_4 = 0 } set_variable = { vpx_t_v_4 = 0 } set_variable = { vpx_t_n_4 = 0 } set_variable = { vpx_t_u_4 = 0 }
+		set_variable = { vpx_t_g_4 = 0 } set_variable = { vpx_t_c_4 = 1 } set_variable = { vpx_t_e_4 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_5 = vbj } add_to_variable = { vpx_t_s_5 = 1 }
+		set_variable = { vpx_t_v_5 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_5 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_5 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_5 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_5 = vpx_fam^vbj } add_to_variable = { vpx_t_c_5 = 1 }
+		set_variable = { vpx_t_e_5 = vbj } add_to_variable = { vpx_t_e_5 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_5 = 0 } set_variable = { vpx_t_v_5 = 0 } set_variable = { vpx_t_n_5 = 0 } set_variable = { vpx_t_u_5 = 0 }
+		set_variable = { vpx_t_g_5 = 0 } set_variable = { vpx_t_c_5 = 1 } set_variable = { vpx_t_e_5 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_6 = vbj } add_to_variable = { vpx_t_s_6 = 1 }
+		set_variable = { vpx_t_v_6 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_6 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_6 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_6 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_6 = vpx_fam^vbj } add_to_variable = { vpx_t_c_6 = 1 }
+		set_variable = { vpx_t_e_6 = vbj } add_to_variable = { vpx_t_e_6 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_6 = 0 } set_variable = { vpx_t_v_6 = 0 } set_variable = { vpx_t_n_6 = 0 } set_variable = { vpx_t_u_6 = 0 }
+		set_variable = { vpx_t_g_6 = 0 } set_variable = { vpx_t_c_6 = 1 } set_variable = { vpx_t_e_6 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_7 = vbj } add_to_variable = { vpx_t_s_7 = 1 }
+		set_variable = { vpx_t_v_7 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_7 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_7 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_7 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_7 = vpx_fam^vbj } add_to_variable = { vpx_t_c_7 = 1 }
+		set_variable = { vpx_t_e_7 = vbj } add_to_variable = { vpx_t_e_7 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_7 = 0 } set_variable = { vpx_t_v_7 = 0 } set_variable = { vpx_t_n_7 = 0 } set_variable = { vpx_t_u_7 = 0 }
+		set_variable = { vpx_t_g_7 = 0 } set_variable = { vpx_t_c_7 = 1 } set_variable = { vpx_t_e_7 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_8 = vbj } add_to_variable = { vpx_t_s_8 = 1 }
+		set_variable = { vpx_t_v_8 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_8 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_8 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_8 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_8 = vpx_fam^vbj } add_to_variable = { vpx_t_c_8 = 1 }
+		set_variable = { vpx_t_e_8 = vbj } add_to_variable = { vpx_t_e_8 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_8 = 0 } set_variable = { vpx_t_v_8 = 0 } set_variable = { vpx_t_n_8 = 0 } set_variable = { vpx_t_u_8 = 0 }
+		set_variable = { vpx_t_g_8 = 0 } set_variable = { vpx_t_c_8 = 1 } set_variable = { vpx_t_e_8 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_9 = vbj } add_to_variable = { vpx_t_s_9 = 1 }
+		set_variable = { vpx_t_v_9 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_9 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_9 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_9 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_9 = vpx_fam^vbj } add_to_variable = { vpx_t_c_9 = 1 }
+		set_variable = { vpx_t_e_9 = vbj } add_to_variable = { vpx_t_e_9 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_9 = 0 } set_variable = { vpx_t_v_9 = 0 } set_variable = { vpx_t_n_9 = 0 } set_variable = { vpx_t_u_9 = 0 }
+		set_variable = { vpx_t_g_9 = 0 } set_variable = { vpx_t_c_9 = 1 } set_variable = { vpx_t_e_9 = 1 }
+	}
+	set_temp_variable = { vbk = -0.5 } set_temp_variable = { vbj = -1 }
+	for_loop_effect = { start = 0 end = 24 value = vm if = { limit = { check_variable = { vpx_key^vm > vbk } } set_temp_variable = { vbk = vpx_key^vm } set_temp_variable = { vbj = vm } } }
+	if = {
+		limit = { check_variable = { vbj > -0.5 } }
+		set_variable = { vpx_key^vbj = -2 }
+		set_variable = { vpx_t_s_10 = vbj } add_to_variable = { vpx_t_s_10 = 1 }
+		set_variable = { vpx_t_v_10 = vpx_kv^vbj }
+		set_variable = { vpx_t_n_10 = vpx_ks^vbj }
+		set_variable = { vpx_t_u_10 = vpx_ku^vbj }
+		set_variable = { vpx_t_g_10 = vpx_gov^vbj }
+		set_variable = { vpx_t_c_10 = vpx_fam^vbj } add_to_variable = { vpx_t_c_10 = 1 }
+		set_variable = { vpx_t_e_10 = vbj } add_to_variable = { vpx_t_e_10 = 2 }
+	}
+	else = {
+		set_variable = { vpx_t_s_10 = 0 } set_variable = { vpx_t_v_10 = 0 } set_variable = { vpx_t_n_10 = 0 } set_variable = { vpx_t_u_10 = 0 }
+		set_variable = { vpx_t_g_10 = 0 } set_variable = { vpx_t_c_10 = 1 } set_variable = { vpx_t_e_10 = 1 }
+	}
+}

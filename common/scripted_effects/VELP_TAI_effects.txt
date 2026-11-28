@@ -1,0 +1,132 @@
+# MD ROC Return v3.46 —— TAI 议会概况页的数据（由 _tools/v345/vel_parl.py 生成）
+
+VELP_TAI_refresh = {
+	if = { limit = { NOT = { has_variable = VELP_a_n^6 } }
+		resize_array = { array = VELP_a_n value = 0 size = 7 }
+		resize_array = { array = VELP_a_c value = 8 size = 7 }
+		resize_array = { array = VELP_a_g value = 0 size = 7 }
+		resize_array = { array = VELP_a_dot value = 1 size = 150 }
+		resize_array = { array = VELP_a_pidx value = -1 size = 7 }
+		resize_array = { array = VELP_b_n value = 0 size = 7 }
+		resize_array = { array = VELP_b_c value = 8 size = 7 }
+		resize_array = { array = VELP_b_g value = 0 size = 7 }
+		resize_array = { array = VELP_b_dot value = 1 size = 150 }
+		resize_array = { array = VELP_b_pidx value = -1 size = 7 }
+	}
+	for_loop_effect = { start = 0 end = 7 value = vi set_variable = { VELP_a_n^vi = 0 } set_variable = { VELP_a_g^vi = 0 } set_variable = { VELP_a_c^vi = 8 } set_variable = { VELP_b_n^vi = 0 } set_variable = { VELP_b_g^vi = 0 } set_variable = { VELP_b_c^vi = 8 } }
+	set_variable = { VELP_a_pidx^0 = VEL_TAI_pidx^0 }
+	set_variable = { VELP_a_n^0 = VEL_TAI_poll_seat^0 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^0 = VELP_TAI_seat^0 } set_variable = { VELP_a_pidx^0 = VELP_TAI_pidx^0 } }
+	set_variable = { VELP_b_n^0 = VEL_TAI_poll_seat^0 } set_variable = { VELP_b_pidx^0 = VEL_TAI_pidx^0 }
+	if = { limit = { check_variable = { VELP_a_pidx^0 = 1 } } set_variable = { VELP_a_c^0 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^0 = 2 } } set_variable = { VELP_a_c^0 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^0 = 3 } } set_variable = { VELP_a_c^0 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^0 = 4 } } set_variable = { VELP_a_c^0 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^0 = 14 } } set_variable = { VELP_a_c^0 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^0 } is_in_array = { gov_coalition_array = VELP_a_pidx^0 } } } set_variable = { VELP_a_g^0 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^0 = 1 } } set_variable = { VELP_b_c^0 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^0 = 2 } } set_variable = { VELP_b_c^0 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^0 = 3 } } set_variable = { VELP_b_c^0 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^0 = 4 } } set_variable = { VELP_b_c^0 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^0 = 14 } } set_variable = { VELP_b_c^0 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^0 } is_in_array = { gov_coalition_array = VELP_b_pidx^0 } } } set_variable = { VELP_b_g^0 = 1 } }
+	set_variable = { VELP_a_pidx^1 = VEL_TAI_pidx^1 }
+	set_variable = { VELP_a_n^1 = VEL_TAI_poll_seat^1 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^1 = VELP_TAI_seat^1 } set_variable = { VELP_a_pidx^1 = VELP_TAI_pidx^1 } }
+	set_variable = { VELP_b_n^1 = VEL_TAI_poll_seat^1 } set_variable = { VELP_b_pidx^1 = VEL_TAI_pidx^1 }
+	if = { limit = { check_variable = { VELP_a_pidx^1 = 1 } } set_variable = { VELP_a_c^1 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^1 = 2 } } set_variable = { VELP_a_c^1 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^1 = 3 } } set_variable = { VELP_a_c^1 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^1 = 4 } } set_variable = { VELP_a_c^1 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^1 = 14 } } set_variable = { VELP_a_c^1 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^1 } is_in_array = { gov_coalition_array = VELP_a_pidx^1 } } } set_variable = { VELP_a_g^1 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^1 = 1 } } set_variable = { VELP_b_c^1 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^1 = 2 } } set_variable = { VELP_b_c^1 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^1 = 3 } } set_variable = { VELP_b_c^1 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^1 = 4 } } set_variable = { VELP_b_c^1 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^1 = 14 } } set_variable = { VELP_b_c^1 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^1 } is_in_array = { gov_coalition_array = VELP_b_pidx^1 } } } set_variable = { VELP_b_g^1 = 1 } }
+	set_variable = { VELP_a_pidx^2 = VEL_TAI_pidx^2 }
+	set_variable = { VELP_a_n^2 = VEL_TAI_poll_seat^2 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^2 = VELP_TAI_seat^2 } set_variable = { VELP_a_pidx^2 = VELP_TAI_pidx^2 } }
+	set_variable = { VELP_b_n^2 = VEL_TAI_poll_seat^2 } set_variable = { VELP_b_pidx^2 = VEL_TAI_pidx^2 }
+	if = { limit = { check_variable = { VELP_a_pidx^2 = 1 } } set_variable = { VELP_a_c^2 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^2 = 2 } } set_variable = { VELP_a_c^2 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^2 = 3 } } set_variable = { VELP_a_c^2 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^2 = 4 } } set_variable = { VELP_a_c^2 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^2 = 14 } } set_variable = { VELP_a_c^2 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^2 } is_in_array = { gov_coalition_array = VELP_a_pidx^2 } } } set_variable = { VELP_a_g^2 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^2 = 1 } } set_variable = { VELP_b_c^2 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^2 = 2 } } set_variable = { VELP_b_c^2 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^2 = 3 } } set_variable = { VELP_b_c^2 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^2 = 4 } } set_variable = { VELP_b_c^2 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^2 = 14 } } set_variable = { VELP_b_c^2 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^2 } is_in_array = { gov_coalition_array = VELP_b_pidx^2 } } } set_variable = { VELP_b_g^2 = 1 } }
+	set_variable = { VELP_a_pidx^3 = VEL_TAI_pidx^3 }
+	set_variable = { VELP_a_n^3 = VEL_TAI_poll_seat^3 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^3 = VELP_TAI_seat^3 } set_variable = { VELP_a_pidx^3 = VELP_TAI_pidx^3 } }
+	set_variable = { VELP_b_n^3 = VEL_TAI_poll_seat^3 } set_variable = { VELP_b_pidx^3 = VEL_TAI_pidx^3 }
+	if = { limit = { check_variable = { VELP_a_pidx^3 = 1 } } set_variable = { VELP_a_c^3 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^3 = 2 } } set_variable = { VELP_a_c^3 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^3 = 3 } } set_variable = { VELP_a_c^3 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^3 = 4 } } set_variable = { VELP_a_c^3 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^3 = 14 } } set_variable = { VELP_a_c^3 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^3 } is_in_array = { gov_coalition_array = VELP_a_pidx^3 } } } set_variable = { VELP_a_g^3 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^3 = 1 } } set_variable = { VELP_b_c^3 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^3 = 2 } } set_variable = { VELP_b_c^3 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^3 = 3 } } set_variable = { VELP_b_c^3 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^3 = 4 } } set_variable = { VELP_b_c^3 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^3 = 14 } } set_variable = { VELP_b_c^3 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^3 } is_in_array = { gov_coalition_array = VELP_b_pidx^3 } } } set_variable = { VELP_b_g^3 = 1 } }
+	set_variable = { VELP_a_pidx^4 = VEL_TAI_pidx^4 }
+	set_variable = { VELP_a_n^4 = VEL_TAI_poll_seat^4 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^4 = VELP_TAI_seat^4 } set_variable = { VELP_a_pidx^4 = VELP_TAI_pidx^4 } }
+	set_variable = { VELP_b_n^4 = VEL_TAI_poll_seat^4 } set_variable = { VELP_b_pidx^4 = VEL_TAI_pidx^4 }
+	if = { limit = { check_variable = { VELP_a_pidx^4 = 1 } } set_variable = { VELP_a_c^4 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^4 = 2 } } set_variable = { VELP_a_c^4 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^4 = 3 } } set_variable = { VELP_a_c^4 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^4 = 4 } } set_variable = { VELP_a_c^4 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^4 = 14 } } set_variable = { VELP_a_c^4 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^4 } is_in_array = { gov_coalition_array = VELP_a_pidx^4 } } } set_variable = { VELP_a_g^4 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^4 = 1 } } set_variable = { VELP_b_c^4 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^4 = 2 } } set_variable = { VELP_b_c^4 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^4 = 3 } } set_variable = { VELP_b_c^4 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^4 = 4 } } set_variable = { VELP_b_c^4 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^4 = 14 } } set_variable = { VELP_b_c^4 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^4 } is_in_array = { gov_coalition_array = VELP_b_pidx^4 } } } set_variable = { VELP_b_g^4 = 1 } }
+	set_variable = { VELP_a_pidx^5 = VEL_TAI_pidx^5 }
+	set_variable = { VELP_a_n^5 = VEL_TAI_poll_seat^5 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^5 = VELP_TAI_seat^5 } set_variable = { VELP_a_pidx^5 = VELP_TAI_pidx^5 } }
+	set_variable = { VELP_b_n^5 = VEL_TAI_poll_seat^5 } set_variable = { VELP_b_pidx^5 = VEL_TAI_pidx^5 }
+	if = { limit = { check_variable = { VELP_a_pidx^5 = 1 } } set_variable = { VELP_a_c^5 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^5 = 2 } } set_variable = { VELP_a_c^5 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^5 = 3 } } set_variable = { VELP_a_c^5 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^5 = 4 } } set_variable = { VELP_a_c^5 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^5 = 14 } } set_variable = { VELP_a_c^5 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^5 } is_in_array = { gov_coalition_array = VELP_a_pidx^5 } } } set_variable = { VELP_a_g^5 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^5 = 1 } } set_variable = { VELP_b_c^5 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^5 = 2 } } set_variable = { VELP_b_c^5 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^5 = 3 } } set_variable = { VELP_b_c^5 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^5 = 4 } } set_variable = { VELP_b_c^5 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^5 = 14 } } set_variable = { VELP_b_c^5 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^5 } is_in_array = { gov_coalition_array = VELP_b_pidx^5 } } } set_variable = { VELP_b_g^5 = 1 } }
+	set_variable = { VELP_a_pidx^6 = VEL_TAI_pidx^6 }
+	set_variable = { VELP_a_n^6 = VEL_TAI_poll_seat^6 }
+	if = { limit = { has_country_flag = VELP_TAI_has } set_variable = { VELP_a_n^6 = VELP_TAI_seat^6 } set_variable = { VELP_a_pidx^6 = VELP_TAI_pidx^6 } }
+	set_variable = { VELP_b_n^6 = VEL_TAI_poll_seat^6 } set_variable = { VELP_b_pidx^6 = VEL_TAI_pidx^6 }
+	if = { limit = { check_variable = { VELP_a_pidx^6 = 1 } } set_variable = { VELP_a_c^6 = 1 } }
+	if = { limit = { check_variable = { VELP_a_pidx^6 = 2 } } set_variable = { VELP_a_c^6 = 4 } }
+	if = { limit = { check_variable = { VELP_a_pidx^6 = 3 } } set_variable = { VELP_a_c^6 = 10 } }
+	if = { limit = { check_variable = { VELP_a_pidx^6 = 4 } } set_variable = { VELP_a_c^6 = 5 } }
+	if = { limit = { check_variable = { VELP_a_pidx^6 = 14 } } set_variable = { VELP_a_c^6 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_a_pidx^6 } is_in_array = { gov_coalition_array = VELP_a_pidx^6 } } } set_variable = { VELP_a_g^6 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^6 = 1 } } set_variable = { VELP_b_c^6 = 1 } }
+	if = { limit = { check_variable = { VELP_b_pidx^6 = 2 } } set_variable = { VELP_b_c^6 = 4 } }
+	if = { limit = { check_variable = { VELP_b_pidx^6 = 3 } } set_variable = { VELP_b_c^6 = 10 } }
+	if = { limit = { check_variable = { VELP_b_pidx^6 = 4 } } set_variable = { VELP_b_c^6 = 5 } }
+	if = { limit = { check_variable = { VELP_b_pidx^6 = 14 } } set_variable = { VELP_b_c^6 = 9 } }
+	if = { limit = { OR = { check_variable = { ruling_party = VELP_b_pidx^6 } is_in_array = { gov_coalition_array = VELP_b_pidx^6 } } } set_variable = { VELP_b_g^6 = 1 } }
+	set_variable = { VELP_a_tot = 113 } set_variable = { VELP_b_tot = 113 }
+	VELP_fill_a_113 = yes
+	VELP_fill_b_113 = yes
+}

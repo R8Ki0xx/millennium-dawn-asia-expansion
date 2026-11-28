@@ -1,0 +1,43 @@
+# MD ROC Return v3.46 —— CHI 议会概况页的数据（由 _tools/v345/vel_parl.py 生成）
+
+VELP_CHI_refresh = {
+	if = { limit = { NOT = { has_variable = VELP_a_n^6 } }
+		resize_array = { array = VELP_a_n value = 0 size = 7 }
+		resize_array = { array = VELP_a_c value = 8 size = 7 }
+		resize_array = { array = VELP_a_g value = 0 size = 7 }
+		resize_array = { array = VELP_a_dot value = 1 size = 150 }
+		resize_array = { array = VELP_a_pidx value = -1 size = 7 }
+		resize_array = { array = VELP_b_n value = 0 size = 7 }
+		resize_array = { array = VELP_b_c value = 8 size = 7 }
+		resize_array = { array = VELP_b_g value = 0 size = 7 }
+		resize_array = { array = VELP_b_dot value = 1 size = 150 }
+		resize_array = { array = VELP_b_pidx value = -1 size = 7 }
+	}
+	for_loop_effect = { start = 0 end = 7 value = vi set_variable = { VELP_a_n^vi = 0 } set_variable = { VELP_a_g^vi = 0 } set_variable = { VELP_a_c^vi = 8 } set_variable = { VELP_b_n^vi = 0 } set_variable = { VELP_b_g^vi = 0 } set_variable = { VELP_b_c^vi = 8 } }
+	set_variable = { VELP_a_n^0 = TAI_ly_kmt } round_variable = VELP_a_n^0 set_variable = { VELP_a_c^0 = 1 }
+	set_variable = { VELP_a_n^1 = TAI_ly_dp } round_variable = VELP_a_n^1 set_variable = { VELP_a_c^1 = 4 }
+	set_variable = { VELP_a_n^2 = TAI_ly_sd } round_variable = VELP_a_n^2 set_variable = { VELP_a_c^2 = 3 }
+	set_variable = { VELP_a_n^3 = TAI_ly_pfp } round_variable = VELP_a_n^3 set_variable = { VELP_a_c^3 = 9 }
+	set_variable = { VELP_a_n^4 = TAI_ly_cpc } round_variable = VELP_a_n^4 set_variable = { VELP_a_c^4 = 5 }
+	set_variable = { VELP_a_n^5 = TAI_ly_other } round_variable = VELP_a_n^5 set_variable = { VELP_a_c^5 = 8 }
+	set_variable = { VELP_a_tot = 225 }
+	if = { limit = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } set_variable = { VELP_a_g^0 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } set_variable = { VELP_a_g^1 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } set_variable = { VELP_a_g^2 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } } set_variable = { VELP_a_g^3 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } set_variable = { VELP_a_g^4 = 1 } }
+	set_variable = { VELP_b_n^0 = TAI_na_kmt } round_variable = VELP_b_n^0 set_variable = { VELP_b_c^0 = 1 }
+	set_variable = { VELP_b_n^1 = TAI_na_dp } round_variable = VELP_b_n^1 set_variable = { VELP_b_c^1 = 4 }
+	set_variable = { VELP_b_n^2 = TAI_na_sd } round_variable = VELP_b_n^2 set_variable = { VELP_b_c^2 = 3 }
+	set_variable = { VELP_b_n^3 = TAI_na_pfp } round_variable = VELP_b_n^3 set_variable = { VELP_b_c^3 = 9 }
+	set_variable = { VELP_b_n^4 = TAI_na_cpc } round_variable = VELP_b_n^4 set_variable = { VELP_b_c^4 = 5 }
+	set_variable = { VELP_b_n^5 = TAI_na_other } round_variable = VELP_b_n^5 set_variable = { VELP_b_c^5 = 8 }
+	set_variable = { VELP_b_tot = 3000 }
+	if = { limit = { OR = { check_variable = { ruling_party = 1 } has_country_flag = TAI_na_ally_kmt has_country_flag = TAI_gov_coalition } } set_variable = { VELP_b_g^0 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 2 } has_country_flag = TAI_na_ally_dp has_country_flag = TAI_gov_coalition } } set_variable = { VELP_b_g^1 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 3 } has_country_flag = TAI_na_ally_sd has_country_flag = TAI_gov_coalition } } set_variable = { VELP_b_g^2 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 14 } has_country_flag = TAI_na_ally_pfp } } set_variable = { VELP_b_g^3 = 1 } }
+	if = { limit = { OR = { check_variable = { ruling_party = 4 } has_country_flag = TAI_na_ally_cpc } } set_variable = { VELP_b_g^4 = 1 } }
+	VELP_fill_a_150 = yes
+	VELP_fill_b_150 = yes
+}

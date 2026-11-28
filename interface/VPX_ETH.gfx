@@ -1,0 +1,35 @@
+# MD ROC Return v3.46 —— 埃塞俄比亚 议会与选举精灵图（gen_world.py 生成）
+spriteTypes = {
+	spriteType = { name = "GFX_VPX_ETH_emb" texturefile = "gfx/interface/scripted_gui/VPX/ETH_emb.dds" noOfFrames = 25 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_overlay" texturefile = "gfx/interface/scripted_gui/VPX/ETH_overlay.dds" legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_1" texturefile = "gfx/interface/scripted_gui/VPX/ETH_1.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_1_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_1_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_1_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_1_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_2" texturefile = "gfx/interface/scripted_gui/VPX/ETH_2.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_2_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_2_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_2_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_2_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_3" texturefile = "gfx/interface/scripted_gui/VPX/ETH_3.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_3_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_3_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_3_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_3_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_4" texturefile = "gfx/interface/scripted_gui/VPX/ETH_4.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_4_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_4_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_4_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_4_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_5" texturefile = "gfx/interface/scripted_gui/VPX/ETH_5.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_5_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_5_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_5_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_5_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_6" texturefile = "gfx/interface/scripted_gui/VPX/ETH_6.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_6_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_6_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_6_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_6_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_7" texturefile = "gfx/interface/scripted_gui/VPX/ETH_7.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_7_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_7_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_7_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_7_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_8" texturefile = "gfx/interface/scripted_gui/VPX/ETH_8.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_8_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_8_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_8_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_8_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_9" texturefile = "gfx/interface/scripted_gui/VPX/ETH_9.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_9_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_9_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_9_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_9_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_10" texturefile = "gfx/interface/scripted_gui/VPX/ETH_10.dds" noOfFrames = 11 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_10_sel" texturefile = "gfx/interface/scripted_gui/VPX/ETH_10_sel.dds" noOfFrames = 2 legacy_lazy_load = no }
+	spriteType = { name = "GFX_VPX_ETH_10_hit" texturefile = "gfx/interface/scripted_gui/VPX/ETH_10_hit.dds" noOfFrames = 2 legacy_lazy_load = no }
+}

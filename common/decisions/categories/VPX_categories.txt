@@ -1,0 +1,417 @@
+# MD ROC Return v3.46 —— 议会与选举（决议分类，挂各国的小窗口）
+VPX_ENG_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = ENG }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_ENG_SMALL
+}
+VPX_FRA_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = FRA }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_FRA_SMALL
+}
+VPX_GER_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = GER }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_GER_SMALL
+}
+VPX_ITA_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = ITA }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_ITA_SMALL
+}
+VPX_POL_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = POL }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_POL_SMALL
+}
+VPX_UKR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = UKR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_UKR_SMALL
+}
+VPX_BRA_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = BRA }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_BRA_SMALL
+}
+VPX_CAN_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = CAN }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_CAN_SMALL
+}
+VPX_AST_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = AST }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_AST_SMALL
+}
+VPX_KOR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = KOR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_KOR_SMALL
+}
+VPX_JAP_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = JAP }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_JAP_SMALL
+}
+VPX_RAJ_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = RAJ }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_RAJ_SMALL
+}
+VPX_TUR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = TUR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_TUR_SMALL
+}
+VPX_SPR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SPR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SPR_SMALL
+}
+VPX_POR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = POR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_POR_SMALL
+}
+VPX_HOL_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = HOL }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_HOL_SMALL
+}
+VPX_BEL_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = BEL }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_BEL_SMALL
+}
+VPX_DEN_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = DEN }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_DEN_SMALL
+}
+VPX_NRY_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = NRY }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_NRY_SMALL
+}
+VPX_SWE_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SWE }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SWE_SMALL
+}
+VPX_FIN_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = FIN }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_FIN_SMALL
+}
+VPX_CZE_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = CZE }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_CZE_SMALL
+}
+VPX_SLO_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SLO }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SLO_SMALL
+}
+VPX_HUN_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = HUN }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_HUN_SMALL
+}
+VPX_SER_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SER }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SER_SMALL
+}
+VPX_GRE_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = GRE }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_GRE_SMALL
+}
+VPX_GEO_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = GEO }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_GEO_SMALL
+}
+VPX_AZE_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = AZE }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_AZE_SMALL
+}
+VPX_PER_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = PER }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_PER_SMALL
+}
+VPX_SYR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SYR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SYR_SMALL
+}
+VPX_IRQ_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = IRQ }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_IRQ_SMALL
+}
+VPX_PAK_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = PAK }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_PAK_SMALL
+}
+VPX_BRM_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = BRM }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_BRM_SMALL
+}
+VPX_SIA_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SIA }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SIA_SMALL
+}
+VPX_IND_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = IND }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_IND_SMALL
+}
+VPX_MAY_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = MAY }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_MAY_SMALL
+}
+VPX_PHI_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = PHI }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_PHI_SMALL
+}
+VPX_ARG_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = ARG }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_ARG_SMALL
+}
+VPX_MEX_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = MEX }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_MEX_SMALL
+}
+VPX_KAZ_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = KAZ }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_KAZ_SMALL
+}
+VPX_EST_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = EST }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_EST_SMALL
+}
+VPX_LAT_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = LAT }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_LAT_SMALL
+}
+VPX_LIT_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = LIT }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_LIT_SMALL
+}
+VPX_AUS_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = AUS }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_AUS_SMALL
+}
+VPX_BUL_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = BUL }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_BUL_SMALL
+}
+VPX_SAF_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = SAF }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_SAF_SMALL
+}
+VPX_ETH_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = ETH }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_ETH_SMALL
+}
+VPX_EGY_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = EGY }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_EGY_SMALL
+}
+VPX_ALG_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = ALG }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_ALG_SMALL
+}
+VPX_MOR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = MOR }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_MOR_SMALL
+}
+VPX_TUN_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = TUN }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_TUN_SMALL
+}
+VPX_NIG_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 2090
+	allowed = { original_tag = NIG }
+	visible = { is_ai = no }
+	visible_when_empty = yes
+	scripted_gui = VPX_NIG_SMALL
+}

@@ -30,5 +30,9 @@ VEL_TAI_apply_result = {
 		set_temp_variable = { change_leader_temp = 1 }
 		change_ruling_party_effect = yes
 	}
+	# 记下这一届立法院，供“议会概况”页使用
+	if = { limit = { NOT = { has_variable = VELP_TAI_seat^6 } } resize_array = { array = VELP_TAI_seat value = 0 size = 7 } resize_array = { array = VELP_TAI_pidx value = -1 size = 7 } }
+	for_loop_effect = { start = 0 end = 7 value = vp set_variable = { VELP_TAI_seat^vp = VEL_TAI_seat^vp } set_variable = { VELP_TAI_pidx^vp = VEL_TAI_pidx^vp } }
+	set_country_flag = VELP_TAI_has
 	set_variable = { VEL_TAI_phase = 3 }
 }
